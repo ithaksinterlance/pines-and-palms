@@ -1,0 +1,81 @@
+export const produc = [
+  {
+    _id: "prod1",
+    image: "alternator.png",
+    title: "Alternator",
+    price: 500,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod2",
+    image: "battery.png",
+    title: "Battery",
+    price: 200,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod3",
+    image: "brake.png",
+    title: "Brakes",
+    price: 300,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod4",
+    image: "catalytic-converter.png",
+    title: "Catalytic Converter",
+    price: 500,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod5",
+    image: "engine.png",
+    title: "Engine",
+    price: 200,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod6",
+    image: "axle.png",
+    title: "Front Axle",
+    price: 400,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod7",
+    image: "tank.png",
+    title: "Fuel Tank",
+    price: 800,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod8",
+    image: "muffler.png",
+    title: "Muffler",
+    price: 800,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod9",
+    image: "radiator.png",
+    title: "Radiator",
+    price: 800,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod11",
+    image: "tailpipe.png",
+    title: "Tail Pipe",
+    price: 800,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+  {
+    _id: "prod12",
+    image: "transmission.png",
+    title: "GearBox",
+    price: 800,
+    description:"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+  },
+];
+
+export default produc;
