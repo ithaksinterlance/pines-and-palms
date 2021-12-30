@@ -16,8 +16,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@googlemaps/js-api-loader": "^1.12.11",
-    "axios": "^0.24.0",
-    "formik": "^2.2.9",
     "googleapis": "^39.2.0",
     "jquery": "^3.6.0",
     "marked": "^4.0.3",
