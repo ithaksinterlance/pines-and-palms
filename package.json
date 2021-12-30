@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel": "vercel --prod"
   },
   "dependencies": {
     "@craco/craco": "^6.3.0",
@@ -14,20 +15,20 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "@googlemaps/js-api-loader": "^1.12.11",
     "axios": "^0.24.0",
-    "google-spreadsheet": "^3.2.0",
-    "googleapi": "^1.0.2",
-    "googleapis": "^89.0.0",
+    "formik": "^2.2.9",
+    "googleapis": "^39.2.0",
     "jquery": "^3.6.0",
     "marked": "^4.0.3",
     "next": "^12.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-select": "^5.2.1",
     "react-slick": "^0.28.1",
-    "request": "^2.88.2",
     "slick-carousel": "^1.8.1",
-    "stream": "0.0.2",
-    "swr": "^1.0.1"
+    "swr": "^1.0.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",

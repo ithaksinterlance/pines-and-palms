@@ -41,7 +41,7 @@ export default function Navbar({ fixed }) {
             <li className="nav-item">
               <Link href="/">
                 <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
-                  <span className="ml-2 text-xl leading-xl text-white opacity-75">
+                  <span className="ml-2 text-base leading-xl text-white opacity-75">
                     Home
                   </span>
                 </a>
@@ -50,7 +50,7 @@ export default function Navbar({ fixed }) {
             <li className="nav-item">
               <Link href="/blog">
                 <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
-                  <span className="ml-2 text-xl leading-xl text-white opacity-75">
+                  <span className="ml-2 text-base leading-xl text-white opacity-75">
                     Blog
                   </span>
                 </a>
@@ -59,8 +59,44 @@ export default function Navbar({ fixed }) {
             <li className="nav-item">
               <Link href="/contact">
                 <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
-                  <span className="ml-2 text-xl leading-xl text-white opacity-75">
+                  <span className="ml-2 text-base leading-xl text-white opacity-75">
                     Contact
+                  </span>
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/search-by-make">
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <span className="ml-2 text-base leading-xl text-white opacity-75">
+                    Search parts by make
+                  </span>
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/choose">
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <span className="ml-2 text-base leading-xl text-white opacity-75">
+                    Search parts by Year
+                  </span>
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/search-by-dubai-cities">
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <span className="ml-2 text-base leading-xl text-white opacity-75">
+                    Search parts in your cities
+                  </span>
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/search-by-part-name">
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <span className="ml-2 text-base leading-xl text-white opacity-75">
+                    Search parts by Part name
                   </span>
                 </a>
               </Link>
@@ -70,7 +106,7 @@ export default function Navbar({ fixed }) {
             <li className="nav-item">
               <a
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="#"
+                href="https://www.facebook.com/autoparts.haks"
               >
                 <FontAwesomeIcon
                   icon={faFacebook}

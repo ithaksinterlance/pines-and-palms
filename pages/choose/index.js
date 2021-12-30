@@ -1,7 +1,7 @@
 import Nav from "../nav";
 import Link from "next/link";
 
-export default function Car({ posts, datas }) {
+export default function Car({ posts }) {
   return (
     <div>
       <Nav />
@@ -26,16 +26,13 @@ export default function Car({ posts, datas }) {
 export async function getStaticProps() {
   const res = await fetch(`https://rozy.vercel.app/api/pines`);
   const posts = await res.json();
-  let uniqueMake = [
-    ...new Map(posts.map((item) => [item["make"], item])).values(),
-  ];
+
   let uniqueObjectArray = [
     ...new Map(posts.map((item) => [item["year"], item])).values(),
   ];
 
   return {
-    props: { posts: uniqueObjectArray ,
-    datas: uniqueMake
+    props: { posts: uniqueObjectArray
     },
   };
 }

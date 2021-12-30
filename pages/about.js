@@ -5,11 +5,17 @@ export default class about extends Component {
   render() {
     return (
       <div>
-        <div className="grid grid-cols-6 xs:grid xs:grid-cols-2 2xs:grid 2xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 gap-1 shadow-2xl my-10 mx-5">
-          <AutoPartsImages />
-        </div>
         <div className="d-flex justify-center text-center pt-10 xs:pt-5 mx-8  xs:mx-1">
-          <h1 className="text-blue-600 font-extrabold xs:text-base 2xs:text-xl">
+          <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
+            FEATURED PARTS
+          </h1>
+          <div className="grid grid-cols-6 xs:grid xs:grid-cols-2 2xs:grid 2xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 gap-1 shadow-2xl my-10 mx-5">
+            <AutoPartsImages />
+          </div>
+        </div>
+
+        <div className="d-flex justify-center text-center pt-10 xs:pt-5 mx-8  xs:mx-1">
+          <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
             ABOUT BRAND NAME
           </h1>
           <p className="text-lg text-gray-400 py-4 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5 text-justify">
