@@ -4,9 +4,8 @@ import {
   fab,
   faFacebook,
   faInstagram,
-  faWhatsapp,
+  faWhatsapp
 } from "@fortawesome/free-brands-svg-icons";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import Link from "next/link";
 
 export default function Navbar({ fixed }) {
@@ -75,7 +74,7 @@ export default function Navbar({ fixed }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/choose">
+              <Link href="/search-by-year">
                 <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
                   <span className="ml-2 text-base leading-xl text-white opacity-75">
                     Search parts by Year
@@ -84,7 +83,7 @@ export default function Navbar({ fixed }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/search-by-dubai-cities">
+              <Link href="/search-by-cities-in-uae">
                 <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
                   <span className="ml-2 text-base leading-xl text-white opacity-75">
                     Search parts in your cities
@@ -102,8 +101,9 @@ export default function Navbar({ fixed }) {
               </Link>
             </li>
           </ul>
-          <ul className="flex flex-col xl:flex-row list-none xl:ml-auto">
+          <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
+              <Link href="https://www.facebook.com/autoparts.haks">
               <a
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 href="https://www.facebook.com/autoparts.haks"
@@ -113,8 +113,10 @@ export default function Navbar({ fixed }) {
                   className="ml-2 text-xl leading-xl text-white opacity-75"
                 />
               </a>
+              </Link>
             </li>
             <li className="nav-item">
+              <Link href="/blog">
               <a
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 href="#"
@@ -124,17 +126,20 @@ export default function Navbar({ fixed }) {
                   className="ml-2 text-xl leading-xl text-white opacity-75"
                 />
               </a>
+              </Link>
             </li>
             <li className="nav-item">
+              <Link href="/contact">
               <a
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="#"
+                href="https://api.whatsapp.com/send?phone=+971551478994&text=Hey%20Team!%I'm%20in%20need%20of%20____"
               >
                 <FontAwesomeIcon
                   icon={faWhatsapp}
                   className="ml-2 text-xl leading-xl text-white opacity-75"
                 />
               </a>
+              </Link>
             </li>
           </ul>
         </div>

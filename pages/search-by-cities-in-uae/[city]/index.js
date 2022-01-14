@@ -1,11 +1,10 @@
 import Nav from "../../nav";
-import Link from "next/link";
 import Footer from "../../footer";
-import Head from "next/head";
-import Script from "next/script";
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
+import Link from "next/link";
 
-export default function Car({ data, cities, make, pos, partspost, posts }) {
+export default function City({ data, partspost, posts }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -13,8 +12,8 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
   const [Whatsappno, setWhatsappno] = useState("");
   const [formPartname, setFormPartname] = useState([]);
   const [text, setText] = useState("");
+  const [City, setCity] = useState("");
   const [suggestion, setSuggestion] = useState([]);
-  const [Address, setAddress] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -45,7 +44,7 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
     setText(text);
   };
 
-  const mke = [
+  const make = [
     "Ford",
     "Chrysler",
     "Citroën",
@@ -144,21 +143,27 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
   ];
   function handleYearChange(event) {
     setYear(event.target.value);
+    console.log(Year);
   }
   function handleMakeChange(event) {
     setMake(event.target.value);
+    console.log(Make);
   }
   function handleModelChange(event) {
     setModel(event.target.value);
+    console.log(Model);
+  }
+  function handleCityChange(event) {
+    setCity(data.city);
+    console.log(data.city);
   }
   function handleWhatsAppNoChange(event) {
     setWhatsappno(event.target.value);
+    console.log(Whatsappno);
   }
   function handleEmailChange(event) {
     setEmail(event.target.value);
-  }
-  function handleAddressChange(event) {
-    setAddress(event.target.value);
+    console.log(Email);
   }
   async function handleSubmit(event) {
     event.preventDefault();
@@ -168,7 +173,7 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
     var model = Model;
     const partname = text;
     const whatsappno = Whatsappno;
-    const address =  Address;
+    const city = City;
 
     const today = new Date();
     const date =
@@ -191,7 +196,7 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
         year: year,
         partnumber: "___",
         partname: partname,
-        city: address,
+        city: city,
         refno: null,
       }),
       headers: {
@@ -218,7 +223,6 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
     setMake("");
     setModel("");
     setEmail("");
-    setAddress("");
     setText("");
     setWhatsappno("");
     window
@@ -228,56 +232,32 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
       )
       .focus();
   }
+
   return (
     <div>
       <Nav />
       <Head>
-        <title>{make} Auto Spare Parts in UAE</title>
+        <title>Auto spare parts in {data.city} UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
-          <main className="mx-10 xs:mx-4 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
-            <article>
-              <div>
-                <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5 text-justify">
-                  CHOOSE YOUR
-                  <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                    &nbsp;{make}{" "}
-                  </nobr>
-                  MODEL
-                </div>
-              </div>
-              <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {data.map((post) => (
-                  <div key={post.id}>
-                    <Link
-                      href="/search-by-make/[make]/[model]"
-                      as={"/search-by-make/" + post.make + "/" + post.model}
-                    >
-                      <a>
-                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
-                          {post.model.replace("%2F", "/")}
-                        </main>
-                      </a>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </article>
-            <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
-              **Model not found above?
-              <Link href="/get-in-touch">
-                <a>
-                  <nobr className="text-blue-500 text-sm underline">
-                    {" "}
-                    Get in touch with us {">>"}**
-                  </nobr>
-                </a>
-              </Link>{" "}
-            </div>
-            <div className="grid grid-cols-2 xs:grid-cols-1 xs:grid py-5">
+          <main className="mx-10 xs:mx-2  2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
+            <iframe
+              src={data.link}
+              height={300}
+              width="100%"
+              allowFullScreen="null"
+              loading="lazy"
+            ></iframe>
+            <div className="grid grid-cols-2 xs:grid xs:grid-cols-1">
               <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
+                <h1 className="text-md font-bold text-blue-500 py-5">
+                  SEARCH YOUR PARTS IN
+                  <nobr className="text-blue-700 text-xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
+                    &nbsp;{data.city}
+                  </nobr>{" "}
+                </h1>
                 UAE Automobile industry is slowly shifting towards a service
                 oriented business model based on consumer data and customer
                 experience. Now companies are trying to adapt to the current
@@ -293,16 +273,10 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
                 affordable comapared to vehicle running on diesel or petrol. By
                 this transition there is no difference in usage of irreversible
                 energy.
-                <p>
-                  We are dealing with auto spare parts for car, heavy truck,
-                  van, buses, coupe, SUV, prime, Petrol based vehicles, Diesel
-                  based vehicles, Used spare parts, After market parts, Genuine
-                  spare parts and New parts etc. Contact us for any inquiry.
-                </p>
               </p>
               <form
                 id="myForm"
-                className="w-full max-w-lg  shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+                className="w-full max-w-lg  shadow-xl px-8 py-8 xs:px-1 xs:py-3 2xs:px-4 sm:px-4"
                 method="POST"
                 onSubmit={handleSubmit}
                 target="hidden_iframe"
@@ -348,7 +322,7 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {mke.map((m) => (
+                        {make.map((m) => (
                           <option key={m}>{m}</option>
                         ))}
                       </select>
@@ -410,6 +384,24 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
                   <div className="w-full px-3 mb-6 xs:mb-0">
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      htmlFor="email"
+                    >
+                      City
+                    </label>
+                    <input
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="city"
+                      type="text"
+                      placeholder="We won't leak your mail id"
+                      onChange={handleCityChange}
+                      value={data.city}
+                      autoComplete="off"
+                      name="entry.113755516"
+                    />
+                  </div>
+                  <div className="w-full px-3 mb-6 xs:mb-0">
+                    <label
+                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="whatsappno"
                     >
                       WhatsApp No
@@ -446,26 +438,7 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
                   </div>
                 </div>
                 <div className="flex flex-wrap -mx-3">
-              <div className="w-full px-3 mb-6 xs:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="city"
-                >
-                  City
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="city"
-                  type="text"
-                  placeholder="Where do you live?"
-                  onChange={handleAddressChange}
-                  value={Address}
-                  autoComplete="off"
-                />
-              </div>
-              </div>
-                <div className="flex flex-wrap -mx-3">
-                  <div className="w-full xs:w-3/4 px-3 mb-6 xs:mb-0">
+                  <div className="w-full  px-3 mb-6 xs:mb-0">
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="partname"
@@ -496,56 +469,41 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
                       ))}
                   </div>
                 </div>
+                <div className="flex flex-wrap -mx-3 py-5">
+                  <div className="w-full  px-3 mb-6 xs:mb-0">
+                    <button
+                      type="submit"
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md xs:text-xs"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
 
-                <button
-                  type="submit"
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full xs:text-xs"
-                >
-                  Submit
-                </button>
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
                 </div>
               </form>
             </div>
           </main>
-
-          <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10 my-10">
-            SEARCH BY YEAR
-          </h1>
-          <div className="grid grid-cols-10 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10 font-mono">
-            {pos.map((post) => (
-              <div key={post.id}>
-                <Link
-                  href="/search-by-year/[year]"
-                  as={"/search-by-year/" + post.year}
-                >
-                  <a>
-                    <main className="border p-1 rounded-xl hover:border-blue-600 focus:border-blue-600">
-                      <p className="text-xs xs:text-center text-gray-500">
-                        {post.year}
-                      </p>
-                    </main>
-                  </a>
-                </Link>
-              </div>
-            ))}
-          </div>
         </div>
         <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
-          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
-            SEARCH PARTS BY COUNTRIES (U.A.E)
+          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  font-sans">
+            PARTS IN {data.city}
           </div>
-          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  font-sans">
-            {cities.map((post) => (
+          <div className="xs:grid xs:grid-cols-1 text-gray-600 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
+            SEARCH BY PART NAME
+          </div>
+          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 sm:mt-5 lg:mx-2 ">
+            {partspost.map((post) => (
               <div key={post.id}>
                 <Link
-                  href="/search-by-cities-in-uae/[city]"
-                  as={"/search-by-cities-in-uae/" + post.city}
+                  href="/search-by-part-name/[parts]"
+                  as={"/search-by-part-name/" + post.parts}
                 >
                   <a>
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
-                      <i className="far fa-compass"></i> {post.city}
+                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans">
+                      <i className="far fa-compass"></i> {post.parts}
                     </p>
                   </a>
                 </Link>
@@ -554,16 +512,17 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`https://rozy.vercel.app/api/palms`);
+  const res = await fetch(`https://rozy.vercel.app/api/cities`);
   const data = await res.json();
   const paths = data.map((post) => ({
-    params: { make: post.make },
+    params: { city: post.city },
   }));
 
   return {
@@ -573,28 +532,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const { make } = params;
+  const { city } = params;
 
-  const res = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
+  const res = await fetch(`https://rozy.vercel.app/api/cities/${city}`);
   const data = await res.json();
-  let uniqueObjectArray = [
-    ...new Map(data.map((item) => [item["model"], item])).values(),
-  ];
-  const resp = await fetch(`https://rozy.vercel.app/api/pines`);
-  const pos = await resp.json();
 
-  let uniqueYear = [
-    ...new Map(pos.map((item) => [item["year"], item])).values(),
-  ];
-  const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
-  const cities = await cityresponse.json();
+  const resp = await fetch(`https://rozy.vercel.app/api/palms`);
+  const posts = await resp.json();
 
-  const parts = await fetch(`https://rozy.vercel.app/api/parts`);
-  const partspost = await parts.json();
-
-  const response = await fetch(`https://rozy.vercel.app/api/palms`);
-  const posts = await response.json();
-
+  const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
+  const partspost = await partsres.json();
   if (!data) {
     return {
       notFound: true,
@@ -602,13 +549,6 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: {
-      data: uniqueObjectArray,
-      cities,
-      make,
-      pos: uniqueYear,
-      partspost,
-      posts,
-    },
+    props: { data, partspost, posts },
   };
 }

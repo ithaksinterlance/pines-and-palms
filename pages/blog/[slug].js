@@ -1,18 +1,28 @@
-import BLOG from "../../blog";
 import RelatedPost from "./relatedpost";
 import Navbar from "../nav";
 import Footer from "../footer";
+import Image from "next/image";
+import Head from "next/head";
 
 export default function Post({ data }) {
   return (
-    <div>
+    <div className="bg-gray-100">
+      <Head>
+        <title>{data.TITLE} | Emirates-car.com</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Navbar />
       <div className="container mx-auto w-full xs:m-0">
         <div className="w-full p-4">
           <div className="flex xs:grid xs:grid-cols-1 md:grid md:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
             <div className="w-3/4 xs:w-full sm:w-full md:w-full 2xs:w-full shadow-md xs:shadow-none p-5 xs:p-2">
               <div className="bg-blue-200 h-72 text-center rounded-xl text-white text-base font-extrabold flex items-center justify-center">
-                HEADER-IMAGES
+                <Image
+                  alt={data.ALT}
+                  src={"/img/blog/" + data.IMG}
+                  width={1000}
+                  height={350}
+                />
               </div>
               <h3 className="font-bold mb-2 text-5xl xs:text-md pt-10">
                 {data.TITLE}
@@ -20,7 +30,9 @@ export default function Post({ data }) {
               <p className="text-sm text-gray-400 font-semibold uppercase pb-5 xs:text-xs">
                 {data.TIME} - {data.DATE_PUBLISHED}
               </p>
-              <div className="text-base text-justify font-mono">{data.CONTENT}</div>
+              <div className="text-base text-justify font-mono">
+                <div dangerouslySetInnerHTML={{ __html: data.CONTENT }}></div>
+              </div>
               <div className="flex py-5">
                 <div className="h-10 w-10 rounded-full bg-gray-500"></div>
                 &nbsp;

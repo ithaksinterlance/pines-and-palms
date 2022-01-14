@@ -1,21 +1,21 @@
-import Nav from "../../../nav";
-import Footer from "../../../footer";
-import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import Slider from "react-slick";
-import avatar1 from "../../../../public/img/avatar1.jpeg";
-import avatar2 from "../../../../public/img/avatar2.jpg";
-import avatar3 from "../../../../public/img/avatar3.jpg";
+import React, {useState, useEffect} from "react";
+import Nav from "../../nav";
+import Footer from "../../footer";
 import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import Slider from "react-slick";
+import avatar1 from "../../../public/img/avatar1.jpeg";
+import avatar2 from "../../../public/img/avatar2.jpg";
+import avatar3 from "../../../public/img/avatar3.jpg";
 
-export default function Car({ data, posts, make, model, partspost, carLogos, uniqueMakeArray }) {
+export default function Parts({ data,  carLogos, cities }) {
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
   const [Email, setEmail] = useState("");
   const [Whatsappno, setWhatsappno] = useState("");
-  const [Partname, setPartname] = useState("");
   const [Address, setAddress] = useState("");
+  const [Partname, setPartname] = useState(data.parts);
 
   const settings = {
     autoplay: true,
@@ -58,7 +58,7 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
     var model = Model;
     var partname = Partname;
     var whatsappno = Whatsappno;
-    const address =  Address;
+    const address = Address;
 
     var today = new Date();
     var date =
@@ -104,12 +104,10 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
     alert("Form submitted. We will contact you shortly ;)");
     let messageURI = encodeURI(message);
 
-    setYear("");
     setMake("");
     setModel("");
     setAddress("");
     setEmail("");
-    setText("");
     setWhatsappno("");
     window
       .open(
@@ -118,20 +116,19 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
       )
       .focus();
   }
-
   return (
     <div>
       <Nav />
       <Head>
         <title>
-          {make} - {model} Auto Spare Parts
+          {data.parts} Auto Spare Parts in UAE
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
-        <div className="w-3/4 2xs:w-full xs:w-full s:w-full sm:w-full xs:grid xs:grid-cols-1">
+      <div className="flex xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
+        <div className="w-3/4 2xs:w-full xs:w-full sm:w-full s:w-full">
           <div className="container place-content-center mx-1 py-6">
-            <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl xs:w-screen xs:p-1 text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
+            <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl text-blue-900 font-extrabold xs:text-base s:hidden 2xs:text-base">
               &nbsp;
               <span>
                 <Link href="/search-by-part-name">
@@ -166,7 +163,7 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
               </span>
             </div>
             <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 ">
-              <div className="w-1/3 bg-blue-700 2xs:hidden xs:hidden sm:hidden">
+              <div className="w-1/3 bg-blue-700 s:hidden 2xs:hidden xs:py-5 xs:hidden">
                 <Slider {...settings} className="py-10 p-2">
                   <div>
                     <p className="text-xl font-bold text-center">
@@ -272,68 +269,68 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
                   ></iframe>
                 </div>
               </div>
-              <div className="w-2/3 xs:w-screen  s:w-full md:w-full 2xs:w-full sm:w-full">
+              <div className="w-2/3 s:w-full s:ml-5 xs:w-full md:w-full 2xs:w-full sm:w-full">
               <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
-                Searching for {make} - {model}  in U.A.E? Fill out the inquiry down below.
+                Searching for {data.parts} Auto Spare Parts in U.A.E? Fill out the inquiry down below.
               </p>
                 <form
                   onSubmit={handleSubmit}
-                  className="shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+                  className="shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4 s:py-4 s:px-1"
                   method="POST"
                 >
-                  <div className="flex flex-wrap -mx-3 mb-2">
-                    <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <div className="flex flex-wrap -mx-3 mb-2 s:mb-1">
+                    <div className="w-full px-3 mb-6 s:mb-1  xs:mb-0 md:mb-0">
                       <label
                         htmlFor="make"
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 s:mb-1 s:mt-1 xs:mt-3"
                       >
                         Make
                       </label>
                       <input
                         id="make"
                         name="entry.741646505"
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 s:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
                         type="text"
                         onChange={handleMakeChange}
                         placeholder="Your car Make"
-                        value={make}
+                        value={Make}
                         required
                       />
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap -mx-3 mb-2">
-                    <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <div className="flex flex-wrap -mx-3 mb-2 s:mb-1">
+                    <div className="w-full px-3 mb-6 s:mb-1 xs:mb-0 md:mb-0">
                       <label
                         htmlFor="model"
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 s:mb-1 s:mt-1 xs:mt-3"
                       >
                         Model
                       </label>
                       <input
                         id="model"
                         name="entry.44547744"
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 s:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
                         type="text"
                         placeholder="Your car Model"
                         onChange={handleModelChange}
-                        value={model}
+                        value={Model}
                         required
                       />
                     </div>
                   </div>
-                  <div className="flex flex-wrap -mx-3 mb-2">
-                    <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <div className="flex flex-wrap -mx-3 mb-2 s:mb-1">
+                    <div className="w-full px-3 mb-6 s:mb-1  xs:mb-0 md:mb-0">
                       <label
                         htmlFor="whatsappno"
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 s:mb-1 s:mt-1 xs:mt-3"
                       >
                         WhatsApp no
                       </label>
                       <input
                         id="whatsappno"
                         name="entry.902626710"
-                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 s:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
                         type="text"
                         placeholder="WhatsApp No"
                         onChange={handleWhatsAppNoChange}
@@ -343,18 +340,18 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap -mx-3 mb-2">
-                    <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <div className="flex flex-wrap -mx-3 mb-2 s:mb-1">
+                    <div className="w-full px-3 mb-6 s:mb-1  xs:mb-0 md:mb-0">
                       <label
                         htmlFor="email"
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 s:mb-1 s:mt-1 xs:mt-3"
                       >
                         Email Address
                       </label>
                       <input
                         id="email"
                         name="entry.113755516"
-                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 s:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
                         type="email"
                         placeholder="We won't leak your mail id"
                         onChange={handleEmailChange}
@@ -363,7 +360,6 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
                       />
                     </div>
                   </div>
-
                   <div className="flex flex-wrap -mx-3">
               <div className="w-full px-3 mb-6 xs:mb-0">
                 <label
@@ -384,18 +380,18 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
               </div>
               </div>
 
-                  <div className="flex flex-wrap -mx-3 mb-2">
-                    <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <div className="flex flex-wrap -mx-3 mb-2 s:mb-1">
+                    <div className="w-full px-3 mb-6 s:mb-1  xs:mb-0 md:mb-0">
                       <label
                         htmlFor="partname"
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 s:mb-1 s:mt-1 xs:mt-3"
                       >
                         Part Name
                       </label>
                       <textarea
                         id="partname"
                         name="entry.1660104041"
-                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 s:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
                         type="text"
                         rows={5}
                         placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
@@ -407,56 +403,34 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap -mx-3 mb-2">
-                    <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <div className="flex flex-wrap -mx-3 mb-2 s:mb-1">
+                    <div className="w-full px-3 mb-6 s:mb-1  xs:mb-0 md:mb-0">
                       <button
                         type="submit"
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full xs:text-xs"
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 s:py-1 px-4 rounded-full xs:text-xs"
                       >
                         Submit
                       </button>
                     </div>
                   </div>
 
-                  <div className="flex float-right text-xs text-gray-400 ">
+                  <div className="flex float-right text-xs text-gray-400">
                     100% secure and trusted
                   </div>
-                  <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
-                Other {make} Models:
-              </p>
-                <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-5">
-                {uniqueMakeArray.map((post) => (
-                  <div key={post.id}>
-                    <Link
-                      href="/search-by-make/[make]/[model]"
-                      as={"/search-by-make/" + post.make + "/" + post.model}
-                    >
-                      <a>
-
-                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
-                          {post.model.replace("%2F", "/")}
-                        </main>
-                      </a>
-                    </Link>
-                  </div>
-                ))}
-                </div>
                 </form>
-
-
               </div>
             </div>
-            <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 xs:hidden sm:hidden s:hidden 2xs:hidden">
+            <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 s:text-xs">
               WE DEAL IN ALMOST ANY BRANDS
             </h1>
-            <div className="grid grid-cols-12  md:mx-4 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 2xs:mx-4 md:ml-11 shadow-2xl my-10">
+            <div className="grid grid-cols-12  md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 s:grid s:grid-cols-4 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 md:ml-11 shadow-2xl xs:mx-2 s:ml-3">
               {carLogos.map((post) => (
                 <div key={post.id}>
                   <main className="border p-2">
                     <Image
                       alt={post.name}
                       src={"/img/car-logos/" + post.logo}
-                      className="object-scale-down xs:object-fit xs:ml-4"
+                      className="object-scale-down xs:object-fit"
                       height={60}
                       width={60}
                     />
@@ -469,39 +443,35 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
             </div>
           </div>
         </div>
-        <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
-          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 sm:mt-5 lg:mx-2 ">
-          <div className="xs:grid xs:grid-cols-1 text-gray-600 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
-            SEARCH BY PART NAME
+        <div className="w-1/4 text-sm font-sans s:w-full xs:w-full 2xs:w-full sm:w-full my-5">
+        <div className="xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 s:w-full 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xs s:text-xs  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
+            SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
-            {partspost.map((post) => (
-              <div key={post.id}>
-                <Link
-                  href="/search-by-part-name/[parts]"
-                  as={"/search-by-part-name/" + post.parts}
-                >
-                  <a>
-                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans underline">
-                      <i className="far fa-compass"></i> {post.parts}
-                    </p>
-                  </a>
-                </Link>
-              </div>
-            ))}
+          <div className="xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 2xs:w-full s:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 px-5 s:px-3">
+            {cities.map((post) => (
+            <div key={post.id}>
+              <Link href="/search-by-cities-in-uae/[city]" as={"/search-by-cities-in-uae/" + post.city}>
+                <a>
+                  <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
+                  <i className="far fa-compass"></i>{" "}{post.city}
+                  </p>
+                </a>
+              </Link>
+            </div>
+          ))}
           </div>
         </div>
       </div>
-
-      <Footer />
+      <Footer/>
     </div>
   );
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`https://rozy.vercel.app/api/palms`);
+  const res = await fetch(`https://rozy.vercel.app/api/parts`);
   const data = await res.json();
   const paths = data.map((post) => ({
-    params: { make: post.make.toString(), model: post.model.toString() },
+    params: { parts: post.parts },
   }));
 
   return {
@@ -511,28 +481,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const { make, model } = params;
+  const { parts } = params;
 
-  const response = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
-  const dat = await response.json();
-  let uniqueMakeArray = [
-    ...new Map(dat.map((item) => [item["model"], item])).values(),
-  ];
+  const res = await fetch(`https://rozy.vercel.app/api/parts/${parts}`);
+  const data = await res.json();
 
-  const res = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}`
-  );
-  const uniqueObjectArray = await res.json();
-
-  let data = [
-    ...new Map(uniqueObjectArray.map((item) => [item["model"], item])).values(),
-  ];
-
-  const resp = await fetch(`https://rozy.vercel.app/api/palms`);
-  const posts = await resp.json();
-
-  const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
-  const partspost = await partsres.json();
+  const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
+  const cities = await cityresponse.json();
 
   const carLogo = await fetch(`https://rozy.vercel.app/api/car-logos`);
   const carLogos = await carLogo.json();
@@ -544,6 +499,6 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: { data, posts, make, model, partspost, carLogos, uniqueMakeArray },
+    props: { data, carLogos, cities },
   };
 }

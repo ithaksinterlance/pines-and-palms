@@ -7,7 +7,7 @@ async function handler(req, res) {
     const whatsappno = req.body.whatsappno;
     const email = req.body.email;
     const make = req.body.make;
-    const model = req.body.model;
+    var model = req.body.model;
     const year = req.body.year;
     const partnumber = req.body.partnumber;
     const partname = req.body.partname;

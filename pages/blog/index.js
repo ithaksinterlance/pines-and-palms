@@ -2,51 +2,19 @@ import Link from "next/link";
 import Footer from "../footer";
 import RelatedPost from "./relatedpost";
 import Nav from "../nav";
+import Image from "next/image";
+import Head from "next/head";
 
 export default function Blog({ posts }) {
   return (
     <>
+      <Head>
+        <title>Blog | Emirates-car.com</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div>
         <Nav />
         <div className="container mx-auto w-full">
-          <div className="grid grid-cols-4 gap-3 p-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-2 2xs:grid 2xs:grid-cols-2 ">
-            <div className="shadow-md py-3 text-base p-3 text-center rounded-lg bg-gray-200">
-              <a href="#">
-                <i
-                  className="fa fa-2x fa-car text-blue-700"
-                  aria-hidden="true"
-                ></i>
-                <br /> Lorem Category 1
-              </a>
-            </div>
-            <div className="shadow-md py-3 text-base p-3 text-center rounded-lg bg-gray-200">
-              <a href="#">
-                <i
-                  className="fa fa-2x fa-car text-blue-700"
-                  aria-hidden="true"
-                ></i>
-                <br /> Lorem Category 2
-              </a>
-            </div>
-            <div className="shadow-md py-3 text-base p-3 text-center rounded-lg bg-gray-200">
-              <a href="#">
-                <i
-                  className="fa fa-2x fa-car text-blue-700"
-                  aria-hidden="true"
-                ></i>
-                <br /> Lorem Category 3
-              </a>
-            </div>
-            <div className="shadow-md py-3 text-base p-3 text-center rounded-lg bg-gray-200">
-              <a href="#">
-                <i
-                  className="fa fa-2x fa-car text-blue-700"
-                  aria-hidden="true"
-                ></i>
-                <br /> Lorem Category 4
-              </a>
-            </div>
-          </div>
           <div className="w-full p-4">
             <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
               <div className="w-3/4 xs:w-full sm:w-full 2xs:w-full">
@@ -57,7 +25,12 @@ export default function Blog({ posts }) {
                         <div className="py-3">
                           <div className="border border-gray-200 p-3 rounded-sm">
                             <div className="w-full bg-blue-200 h-80 rounded-xl text-white items-center text-center flex justify-center font-bold">
-                              BLOG-IMG 1
+                              <Image
+                                alt={post.ALT}
+                                src={"/img/blog/" + post.IMG}
+                                width={1000}
+                                height={350}
+                              />
                             </div>{" "}
                             <p className="text-4xl xs:text-lg sm:text-md md:text-lg font-bold font-sans pt-5 text-blue-500">
                               {post.TITLE}{" "}
@@ -68,7 +41,13 @@ export default function Blog({ posts }) {
                             </p>
                             <hr className="py-2" />
                             <div className="flex pb-5 xs:py-1">
-                              <div className="h-10 w-10 rounded-full bg-gray-400"></div>
+                              <Image
+                                alt="emirates car"
+                                className="rounded-full"
+                                src="/img/avatar.png"
+                                width={50}
+                                height={50}
+                              />
                               <p className="text-base xs:text-md font-normal pt-2 px-2">
                                 <b>Author:</b> {post.AUTHOR}
                               </p>
@@ -84,56 +63,49 @@ export default function Blog({ posts }) {
                   Popular Posts
                 </div>
                 <div className="grid grid-cols-2 gap-4 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 py-5">
-                  <div className="shadow-2xl rounded-sm">
-                    <div className="flex">
-                      <div className="w-1/2 bg-blue-300 flex items-center justify-center text-center">
-                        --IMG--
+                  <Link href="/blog/Ferrari%20Portofino%20M">
+                    <a>
+                      <div className="shadow-2xl rounded-sm">
+                        <div className="flex">
+                          <div className="w-1/2 bg-blue-300 flex items-center justify-center text-center">
+                            <Image
+                              alt="ferrari portofino m"
+                              src="/img/blog/popular_portofino.png"
+                              width={250}
+                              height={120}
+                            />
+                          </div>
+                          <div className="w-1/2 text-xs p-4 font-mono">
+                            The letter m stands for
+                            &quot;modificato&quot;(meaning nothing but modified
+                            version of ferrari). Its just a facelift of original
+                            ferrari...
+                          </div>
+                        </div>
                       </div>
-                      <div className="w-1/2 text-xs p-4 font-mono">
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested. Sections
-                        1.10.32 and 1.10.33 from
+                    </a>
+                  </Link>
+                  <Link href="/blog/Ferrari%20F8%20Spider%202022">
+                    <a>
+                      <div className="shadow-2xl rounded-sm">
+                        <div className="flex">
+                          <div className="w-1/2 bg-purple-300 flex items-center justify-center text-center">
+                            <Image
+                              alt="ferrari f8 spider"
+                              src="/img/blog/popular_f8_spider.png"
+                              width={250}
+                              height={120}
+                            />
+                          </div>
+                          <div className="w-1/2 text-xs p-4 font-mono">
+                            The price of f8 spider 2022 is $3,50,000 USD. 3.9L
+                            twin-turbo v8 engine. 710 HP and 568 LB-FT Torque.
+                            0-6 MPH in 2.9 Seconds. Top speed...
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="shadow-2xl rounded-sm">
-                    <div className="flex">
-                      <div className="w-1/2 bg-purple-300 flex items-center justify-center text-center">
-                        --IMG--
-                      </div>
-                      <div className="w-1/2 text-xs p-4 font-mono">
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested. Sections
-                        1.10.32 and 1.10.33 from
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 py-5">
-                  <div className="shadow-2xl rounded-sm">
-                    <div className="flex">
-                      <div className="w-1/2 bg-red-300 flex items-center justify-center text-center">
-                        --IMG--
-                      </div>
-                      <div className="w-1/2 text-xs p-4 font-mono">
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested. Sections
-                        1.10.32 and 1.10.33 from
-                      </div>
-                    </div>
-                  </div>
-                  <div className="shadow-2xl rounded-sm">
-                    <div className="flex">
-                      <div className="w-1/2 bg-indigo-300 flex items-center justify-center text-center">
-                        --IMG--
-                      </div>
-                      <div className="w-1/2 text-xs p-4 font-mono">
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested. Sections
-                        1.10.32 and 1.10.33 from
-                      </div>
-                    </div>
-                  </div>
+                    </a>
+                  </Link>
                 </div>
               </div>
 

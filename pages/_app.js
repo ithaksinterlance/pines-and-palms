@@ -7,10 +7,13 @@ import "../styles/slick/slick-theme.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
+
       <Head>
         <title>AutoSpares</title>
         <link rel="shortcut icon" href="/favicon.png" />
 
+        <script dangerouslySetInnerHTML={{
+            __html: `https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0-rc/js/adminlte.min.js`,}}integrity="sha512-pbrNMLSckfh8yEOr2o1RT+4zMU3Sj7+zP3BOY6nFVI/FLnjTRyubNppLbosEt4nvLCcdsEa8tmKhH3uqOYFXKg==" crossOrigin="anonymous" referrerPolicy="no-referrer"/>
         <script
           dangerouslySetInnerHTML={{
             __html: `https://script.google.com/macros/s/AKfycbxO_plCUSZsoR5WHZRt-hj-ES2IcF3DNnkSeUfNJwufgrOcuYNd84-qI5yRKBoe4wrU8w/exec`,
@@ -26,10 +29,7 @@ function MyApp({ Component, pageProps }) {
           src="https://polyfill.io/v3/polyfill.min.js?features=default"
           async
         ></script>
-        <script
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARE0OqZothvDLejGQc1qSQXUEyzbKyiCI"
-          async
-        ></script>
+
       </Head>
       <Component {...pageProps} />
     </>
