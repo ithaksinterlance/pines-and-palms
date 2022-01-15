@@ -1,10 +1,8 @@
 import Nav from "../nav";
 import Link from "next/link";
 import Footer from "../footer";
-import Featured from "../featured";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-
 
 export default function Make({ data, cities, posts, pos }) {
   const [Year, setYear] = useState("");
@@ -12,6 +10,7 @@ export default function Make({ data, cities, posts, pos }) {
   const [Model, setModel] = useState("");
   const [Email, setEmail] = useState("");
   const [Whatsappno, setWhatsappno] = useState("");
+
   const [formPartname, setFormPartname] = useState([]);
   const [text, setText] = useState("");
   const [suggestion, setSuggestion] = useState([]);
@@ -495,7 +494,6 @@ export default function Make({ data, cities, posts, pos }) {
             </form>
           </div>
           </main>
-          <Featured/>
         </div>
 
         <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">

@@ -1,7 +1,6 @@
 import Nav from "../../nav";
 import Link from "next/link";
 import Footer from "../../footer";
-import Featured from "../../featured";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
@@ -503,7 +502,6 @@ export default function Car({ data, brandpost, cities, year, partspost, pos }) {
               </div>
             </form>
           </div>
-          <Featured />
           <div className="grid grid-cols-10 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 shadow-2xl mx-10 my-6">
           {brandpost.map((post) => (
             <div key={post.id}>

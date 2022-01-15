@@ -2,7 +2,6 @@ import Nav from "../../nav";
 import Link from "next/link";
 import Footer from "../../footer";
 import Head from "next/head";
-import Script from "next/script";
 import React, { useState, useEffect } from "react";
 
 export default function Car({ data, cities, make, pos, partspost, posts }) {

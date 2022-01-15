@@ -1,7 +1,6 @@
 import Nav from "../nav";
 import Link from "next/link";
 import Footer from "../footer";
-import Featured from "../featured"
 import React, {useState, useEffect} from "react";
 import Head from "next/head";
 
@@ -499,7 +498,6 @@ export default function City({ cities, data, posts, pos }) {
             </div>
           </form>
             </div>
-            <Featured/>
             </article>
           </main>
         </div>

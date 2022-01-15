@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Footer from "../../../footer";
 import Image from "next/image";
-import Featured from "../../../featured";
 import React, { useState, useEffect } from "react";
 
 export default function Car({ data, year, make, pos, brandpost, posts, partspost }) {
@@ -541,9 +540,6 @@ export default function Car({ data, year, make, pos, brandpost, posts, partspost
               </div>
             </article>
           </main>
-
-
-          <Featured/>
         </div>
         <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
           <div className="xs:grid xs:grid-cols-1 text-gray-600 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
