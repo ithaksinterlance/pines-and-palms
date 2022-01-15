@@ -66,7 +66,7 @@ export default function Forms({ posts, pos }) {
   const make = [
     "Ford",
     "Chrysler",
-    "Citroën",
+    "Citroen",
     "Hillman",
     "Chevrolet",
     "Cadillac",

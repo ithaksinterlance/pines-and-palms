@@ -49,7 +49,7 @@ export default function Make({ posts, cities }) {
   const make = [
     "Ford",
     "Chrysler",
-    "Citroën",
+    "Citroen",
     "Hillman",
     "Chevrolet",
     "Cadillac",

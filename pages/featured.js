@@ -23,7 +23,7 @@ export default class about extends Component {
         }}
         delayedCall
       >
-        <div className="d-flex justify-center text-center pt-10 xs:pt-5 mx-8  xs:mx-1">
+        <div className="d-flex justify-center text-center pt-10 xs:pt-5 mx-8">
           <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
             FEATURED PARTS
           </h1>

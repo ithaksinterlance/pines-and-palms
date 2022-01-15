@@ -1,11 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  fab,
   faFacebook,
   faInstagram,
-  faWhatsapp
+  faWhatsapp,
+  fab
 } from "@fortawesome/free-brands-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import Link from "next/link";
 
 export default function Navbar({ fixed }) {

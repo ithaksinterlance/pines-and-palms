@@ -28,7 +28,7 @@ export default function Make({ data, cities, posts, pos }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  },[]);
 
   const onSuggestionHandler = (text) => {
     setText(text);
@@ -50,7 +50,7 @@ export default function Make({ data, cities, posts, pos }) {
   const make = [
     "Ford",
     "Chrysler",
-    "Citroën",
+    "Citroen",
     "Hillman",
     "Chevrolet",
     "Cadillac",

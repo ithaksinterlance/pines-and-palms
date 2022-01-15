@@ -11,16 +11,9 @@ import avatar3 from "../public/img/avatar3.jpg";
 import Image from "next/image";
 import Count from "./service-counter";
 import Head from "next/head";
+import CarLogos from "./carLogos";
 
-export default function Home({
-  posts,
-  post,
-  pos,
-  carLogos,
-  cities,
-  forms,
-  partsposts,
-}) {
+export default function Home({ forms, partsposts, posts, pos, cities }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -41,7 +34,7 @@ export default function Home({
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  },[]);
 
   const onSuggestionHandler = (text) => {
     setText(text);
@@ -78,7 +71,7 @@ export default function Home({
   const make = [
     "Ford",
     "Chrysler",
-    "Citroën",
+    "Citroen",
     "Hillman",
     "Chevrolet",
     "Cadillac",
@@ -266,7 +259,7 @@ export default function Home({
       </Head>
       <Nav />
       <Hero />
-      <div className="place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
+      <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 xs:py-0">
         <h1 className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
           ABOUT EMIRATES CAR
         </h1>
@@ -295,31 +288,35 @@ export default function Home({
         <Count />
       </div>
       <div className="place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
-        <div className="uppercase bg-blue-200 font-serif p-3 text-center text-3xl text-blue-900 font-extrabold xs:text-xl s:mx-3 xs:w-screen 2xs:w-screen s:w-screen s:text-2xl 2xs:text-2xl ">
+        <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 xs:mx-0 sm:mx-0 2xs:mx-0 p-3 text-center text-3xl text-blue-900 font-extrabold xs:text-xl s:mx-3 xs:w-screen 2xs:w-screen s:w-screen s:text-2xl 2xs:text-2xl ">
           <span>
             <Link href="/search-by-part-name">
               <a className="underline hover:text-blue-500">
                 SEARCH BY PART NAME
               </a>
-            </Link>{" "}&nbsp;|
+            </Link>{" "}
+            &nbsp;|
           </span>
           <span>
             <Link href="/search-by-part-name">
               <a className="underline hover:text-blue-500">SEARCH BY CITY </a>
-            </Link>{" "}&nbsp;|
+            </Link>{" "}
+            &nbsp;|
           </span>
           <span>
             <Link href="/search-by-part-name">
               <a className="underline hover:text-blue-500">SEARCH BY YEAR</a>
-            </Link>{" "}&nbsp;|
+            </Link>{" "}
+            &nbsp;|
           </span>
           <span>
             <Link href="/search-by-part-name">
               <a className="underline hover:text-blue-500">SEARCH BY MAKE</a>
-            </Link>{" "} &nbsp;
+            </Link>{" "}
+            &nbsp;
           </span>
         </div>
-        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1  xs:w-screen 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl">
+        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl">
           <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full xs:py-5 ">
             <Slider {...settings} className="py-10 p-2">
               <div>
@@ -642,35 +639,13 @@ export default function Home({
         </div>
       </div>
       <Featured />
-      <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10 ">
-        SEARCH BY MAKE
-      </h1>
-      <div className="grid grid-cols-10 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-3 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
-        {post.map((data) => (
-          <div key={data.id}>
-            <Link
-              href="/search-by-make/[make]"
-              as={"/search-by-make/" + data.make}
-            >
-              <a>
-                <main className="border p-1 rounded-xl hover:border-blue-600 hover:shadow-lg focus:border-blue-600">
-                  <p className="text-xs xs:text-center text-gray-500 hover:text-gray-800">
-                    {data.make}
-                  </p>
-                </main>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
-
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
         SEARCH BY YEAR
       </h1>
       <div className="grid grid-cols-10 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
         {pos.map((post) => (
           <div key={post.id}>
-            <Link href="/choose/[year]" as={"/choose/" + post.year}>
+            <Link href="/search-by-year/[year]" as={"/search-by-year/" + post.year}>
               <a>
                 <main className="border p-1 rounded-xl hover:border-blue-600 hover:shadow-lg focus:border-blue-600">
                   <p className="text-xs xs:text-center text-gray-500 hover:text-gray-800">
@@ -683,9 +658,30 @@ export default function Home({
         ))}
       </div>
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
+        SEARCH BY MAKE
+      </h1>
+      <div className="grid grid-cols-7 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
+        {posts.map((post) => (
+          <div key={post.id}>
+            <Link
+              href="/search-by-make/[make]"
+              as={"/search-by-make/" + post.make}
+            >
+              <a>
+                <main className="border p-1 rounded-xl xs:border-0 2xs:border-0 sm:border-0 hover:border-blue-600 hover:shadow-lg focus:border-blue-600">
+                  <p className="text-xs text-gray-600 px-3 font-medium hover:text-gray-800">
+                    <i className="fas fa-compass"></i> {post.make}
+                  </p>
+                </main>
+              </a>
+            </Link>
+          </div>
+        ))}
+      </div>
+      <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
         SEARCH BY CITIES IN U.A.E
       </h1>
-      <div className="grid grid-cols-8 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
+      <div className="grid grid-cols-7 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
         {cities.map((post) => (
           <div key={post.id}>
             <Link
@@ -703,68 +699,46 @@ export default function Home({
           </div>
         ))}
       </div>
+
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center">
         WE DEAL IN ALMOST ANY BRANDS
       </h1>
-      <div className="grid grid-cols-12 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10">
-        {carLogos.map((post) => (
-          <div key={post.id}>
-            <main className="border p-2">
-              <Image
-                alt={post.name}
-                src={"/img/car-logos/" + post.logo}
-                className="object-scale-down xs:object-fit xs:ml-4"
-                height={60}
-                width={60}
-              />
-              <p className="text-gray-400 text-center hover:text-blue-800 focus:text-blue-800 text-xs">
-                {post.name}
-              </p>
-            </main>
-          </div>
-        ))}
+      <div className="grid grid-cols-7 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
+        <CarLogos />
       </div>
       <Footer />
     </div>
   );
 }
 export async function getStaticProps() {
-  const response = await fetch(`https://rozy.vercel.app/api/grooves`);
-  const post = await response.json();
-  let uniqueMake = [
-    ...new Map(post.map((item) => [item["make"], item])).values(),
-  ];
-
-  const resp = await fetch(`https://rozy.vercel.app/api/pines`);
-  const pos = await resp.json();
-
-  let uniqueObjectArray = [
-    ...new Map(pos.map((item) => [item["year"], item])).values(),
-  ];
-  const res = await fetch(`https://rozy.vercel.app/api`);
-  const posts = await res.json();
-
-  const carLogo = await fetch(`https://rozy.vercel.app/api/car-logos`);
-  const carLogos = await carLogo.json();
-
-  const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
-  const cities = await cityresponse.json();
-
+  //forms
   const respo = await fetch(`https://rozy.vercel.app/api/palms`);
   const forms = await respo.json();
 
   const respnse = await fetch(`https://rozy.vercel.app/api/parts`);
   const partsposts = await respnse.json();
 
+  const res = await fetch(`https://rozy.vercel.app/api/pines`);
+  const posts = await res.json();
+
+  let uniqueObjectArray = [
+    ...new Map(posts.map((item) => [item["year"], item])).values(),
+  ];
+  const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const data = await resp.json();
+  let uniqueMakeArray = [
+    ...new Map(data.map((item) => [item["make"], item])).values(),
+  ];
+  const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
+  const cities = await cityresponse.json();
+
   return {
     props: {
+      pos:uniqueObjectArray,
       forms,
-      posts,
-      post: uniqueMake,
-      pos: uniqueObjectArray,
-      carLogos,
-      cities,
       partsposts,
+      posts:uniqueMakeArray,
+      cities
     },
   };
 }

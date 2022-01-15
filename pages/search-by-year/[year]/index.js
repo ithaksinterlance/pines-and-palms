@@ -49,7 +49,7 @@ export default function Car({ data, brandpost, cities, year, partspost, pos }) {
   const mke = [
     "Ford",
     "Chrysler",
-    "Citroën",
+    "Citroen",
     "Hillman",
     "Chevrolet",
     "Cadillac",
