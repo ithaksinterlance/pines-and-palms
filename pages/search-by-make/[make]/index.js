@@ -4,7 +4,7 @@ import Footer from "../../footer";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 
-export default function Car({ data, cities, make, pos, partspost, posts }) {
+export default function Car({ data, cities, make,  partspost, posts }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -508,28 +508,6 @@ export default function Car({ data, cities, make, pos, partspost, posts }) {
               </form>
             </div>
           </main>
-
-          <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10 my-10">
-            SEARCH BY YEAR
-          </h1>
-          <div className="grid grid-cols-10 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10 font-mono">
-            {pos.map((post) => (
-              <div key={post.id}>
-                <Link
-                  href="/search-by-year/[year]"
-                  as={"/search-by-year/" + post.year}
-                >
-                  <a>
-                    <main className="border p-1 rounded-xl hover:border-blue-600 focus:border-blue-600">
-                      <p className="text-xs xs:text-center text-gray-500">
-                        {post.year}
-                      </p>
-                    </main>
-                  </a>
-                </Link>
-              </div>
-            ))}
-          </div>
         </div>
         <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
@@ -579,12 +557,6 @@ export async function getStaticProps({ params }) {
   let uniqueObjectArray = [
     ...new Map(data.map((item) => [item["model"], item])).values(),
   ];
-  const resp = await fetch(`https://rozy.vercel.app/api/pines`);
-  const pos = await resp.json();
-
-  let uniqueYear = [
-    ...new Map(pos.map((item) => [item["year"], item])).values(),
-  ];
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
   const cities = await cityresponse.json();
 
@@ -605,7 +577,6 @@ export async function getStaticProps({ params }) {
       data: uniqueObjectArray,
       cities,
       make,
-      pos: uniqueYear,
       partspost,
       posts,
     },
