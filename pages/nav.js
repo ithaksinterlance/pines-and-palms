@@ -75,15 +75,6 @@ export default function Navbar({ fixed }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/search-by-year">
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
-                  <span className="ml-2 text-base leading-xl text-white opacity-75">
-                    Search parts by Year
-                  </span>
-                </a>
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link href="/search-by-cities-in-uae">
                 <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
                   <span className="ml-2 text-base leading-xl text-white opacity-75">
