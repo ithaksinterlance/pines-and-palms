@@ -4,7 +4,7 @@ import Footer from "../footer";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 
-export default function Make({ data, cities, posts, pos }) {
+export default function Make({ car, cities, posts, pos }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -246,7 +246,7 @@ export default function Make({ data, cities, posts, pos }) {
           <main className="mx-10 xs:mx-4 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm my-10">
             <article>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {data.map((post) => (
+                {car.map((post) => (
                   <div key={post.id}>
                     <Link
                       href="/search-by-make/[make]"
@@ -537,13 +537,7 @@ export async function getStaticProps() {
 const response = await fetch(`https://rozy.vercel.app/api/palms`);
 const pos = await response.json();
 
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
-
   return {
-    props: { data: uniqueObjectArray, cities, posts, pos },
+    props: { car: uniqueObjectArray, cities, posts, pos },
   };
 }

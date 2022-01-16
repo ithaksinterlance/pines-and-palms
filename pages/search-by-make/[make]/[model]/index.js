@@ -8,8 +8,9 @@ import avatar1 from "../../../../public/img/avatar1.jpeg";
 import avatar2 from "../../../../public/img/avatar2.jpg";
 import avatar3 from "../../../../public/img/avatar3.jpg";
 import Head from "next/head";
+import CarLogos from "../../../carLogos";
 
-export default function Car({ make, model, partspost, carLogos, uniqueMakeArray }) {
+export default function Car({ make, model, partspost, uniqueMakeArray }) {
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
   const [Email, setEmail] = useState("");
@@ -442,22 +443,8 @@ export default function Car({ make, model, partspost, carLogos, uniqueMakeArray 
               WE DEAL IN ALMOST ANY BRANDS
             </h1>
             <div className="grid grid-cols-12  md:mx-4 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 2xs:mx-4 md:ml-11 shadow-2xl my-10">
-              {carLogos.map((post) => (
-                <div key={post.id}>
-                  <main className="border p-2">
-                    <Image
-                      alt={post.name}
-                      src={"/img/car-logos/" + post.logo}
-                      className="object-scale-down xs:object-fit xs:ml-4"
-                      height={60}
-                      width={60}
-                    />
-                    <p className="text-gray-400 text-center hover:text-blue-800 focus:text-blue-800 text-xs">
-                      {post.name}
-                    </p>
-                  </main>
-                </div>
-              ))}
+              <CarLogos/>
+
             </div>
           </div>
         </div>
@@ -514,16 +501,7 @@ export async function getStaticProps({ params }) {
   const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
   const partspost = await partsres.json();
 
-  const carLogo = await fetch(`https://rozy.vercel.app/api/car-logos`);
-  const carLogos = await carLogo.json();
-
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
-
   return {
-    props: {  make, model, partspost, carLogos, uniqueMakeArray },
+    props: {  make, model, partspost, uniqueMakeArray },
   };
 }

@@ -8,8 +8,9 @@ import Slider from "react-slick";
 import avatar1 from "../../../public/img/avatar1.jpeg";
 import avatar2 from "../../../public/img/avatar2.jpg";
 import avatar3 from "../../../public/img/avatar3.jpg";
+import CarLogos from "../../carLogos";
 
-export default function Parts({ data,  carLogos, cities }) {
+export default function Parts({ data,  cities }) {
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
   const [Email, setEmail] = useState("");
@@ -416,22 +417,7 @@ export default function Parts({ data,  carLogos, cities }) {
               WE DEAL IN ALMOST ANY BRANDS
             </h1>
             <div className="grid grid-cols-12  md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 s:grid s:grid-cols-4 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 md:ml-11 shadow-2xl xs:mx-2 s:ml-3">
-              {carLogos.map((post) => (
-                <div key={post.id}>
-                  <main className="border p-2">
-                    <Image
-                      alt={post.name}
-                      src={"/img/car-logos/" + post.logo}
-                      className="object-scale-down xs:object-fit"
-                      height={60}
-                      width={60}
-                    />
-                    <p className="text-gray-400 text-center hover:text-blue-800 focus:text-blue-800 text-xs">
-                      {post.name}
-                    </p>
-                  </main>
-                </div>
-              ))}
+              <CarLogos/>
             </div>
           </div>
         </div>
@@ -481,9 +467,6 @@ export async function getStaticProps({ params }) {
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
   const cities = await cityresponse.json();
 
-  const carLogo = await fetch(`https://rozy.vercel.app/api/car-logos`);
-  const carLogos = await carLogo.json();
-
   if (!data) {
     return {
       notFound: true,
@@ -491,6 +474,6 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: { data, carLogos, cities },
+    props: { data, cities },
   };
 }
