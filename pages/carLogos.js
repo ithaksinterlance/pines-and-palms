@@ -12,7 +12,7 @@ export default class AutoPartImages extends Component {
   render() {
     return this.state.carlogos.map((post) => {
       return (
-        <main key={post.id} className="border p-2">
+        <main key={post.id} className="border p-5">
           <Image
             alt={post.name}
             src={"/img/car-logos/" + post.logo}
@@ -20,7 +20,7 @@ export default class AutoPartImages extends Component {
             height={60}
             width={60}
           />
-          <p className="text-gray-400 text-center hover:text-blue-800 focus:text-blue-800 text-xs">
+          <p className="text-gray-500 text-center hover:text-blue-800 focus:text-blue-800 text-xs">
             {post.name}
           </p>
         </main>

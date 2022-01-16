@@ -36,7 +36,7 @@ export default class Counter extends Component {
                   className={style.countup}
                   decimal=","
                   start={6}
-                  end={this.state.didViewCountUp ? 30000 : 0}
+                  end={this.state.didViewCountUp ? 10000 : 0}
                   suffix=" +"
                   separator=","
                   duration={2.75}
@@ -44,7 +44,7 @@ export default class Counter extends Component {
               </VisibilitySensor>
             </p>
             <h1 className="text-xl lg:text-xl sm:text-base xs:text-base 2xs:text-base md:text-sm font-extrabold">
-              Inquiries Completed</h1>
+              Inquiries Received</h1>
           </div>
           <div className="font-extrabold  uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:shadow-none sm:shadow-none xs:text-xs text-">
           <h1 className="text-2xl text-blue-800 lg:text-base sm:text-xs md:text-sm font-extrabold">
@@ -62,8 +62,7 @@ export default class Counter extends Component {
                   className={style.countup}
                   decimal=","
                   start={6}
-                  end={this.state.didViewCountUp ? 30000 : 0}
-                  suffix=" +"
+                  end={this.state.didViewCountUp ? 7536 : 0}
                   separator=","
                   duration={2.75}
                 />
@@ -88,7 +87,7 @@ export default class Counter extends Component {
                   className={style.countup}
                   decimal=","
                   start={6}
-                  end={this.state.didViewCountUp ? 30000 : 0}
+                  end={this.state.didViewCountUp ? 50000 : 0}
                   suffix=" +"
                   separator=","
                   duration={2.75}
@@ -114,8 +113,7 @@ export default class Counter extends Component {
                   className={style.countup}
                   decimal=","
                   start={6}
-                  end={this.state.didViewCountUp ? 30000 : 0}
-                  suffix=" +"
+                  end={this.state.didViewCountUp ? 7536 : 0}
                   separator=","
                   duration={2.75}
                 />

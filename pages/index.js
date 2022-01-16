@@ -13,7 +13,7 @@ import Count from "./service-counter";
 import Head from "next/head";
 import CarLogos from "./carLogos";
 
-export default function Home({ forms, partsposts, posts, pos, cities }) {
+export default function Home({ forms, partsposts, posts, cities }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -640,24 +640,6 @@ export default function Home({ forms, partsposts, posts, pos, cities }) {
       </div>
       <Featured />
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
-        SEARCH BY YEAR
-      </h1>
-      <div className="grid grid-cols-10 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
-        {pos.map((post) => (
-          <div key={post.id}>
-            <Link href="/search-by-year/[year]" as={"/search-by-year/" + post.year}>
-              <a>
-                <main className="border p-1 rounded-xl hover:border-blue-600 hover:shadow-lg focus:border-blue-600">
-                  <p className="text-xs xs:text-center text-gray-500 hover:text-gray-800">
-                    {post.year}
-                  </p>
-                </main>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
-      <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
         SEARCH BY MAKE
       </h1>
       <div className="grid grid-cols-7 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
@@ -703,7 +685,7 @@ export default function Home({ forms, partsposts, posts, pos, cities }) {
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center">
         WE DEAL IN ALMOST ANY BRANDS
       </h1>
-      <div className="grid grid-cols-7 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
+      <div className="grid grid-cols-12 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
         <CarLogos />
       </div>
       <Footer />
@@ -718,12 +700,6 @@ export async function getStaticProps() {
   const respnse = await fetch(`https://rozy.vercel.app/api/parts`);
   const partsposts = await respnse.json();
 
-  const res = await fetch(`https://rozy.vercel.app/api/pines`);
-  const posts = await res.json();
-
-  let uniqueObjectArray = [
-    ...new Map(posts.map((item) => [item["year"], item])).values(),
-  ];
   const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
   const data = await resp.json();
   let uniqueMakeArray = [
@@ -734,7 +710,6 @@ export async function getStaticProps() {
 
   return {
     props: {
-      pos:uniqueObjectArray,
       forms,
       partsposts,
       posts:uniqueMakeArray,
