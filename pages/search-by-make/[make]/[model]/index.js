@@ -9,7 +9,7 @@ import avatar2 from "../../../../public/img/avatar2.jpg";
 import avatar3 from "../../../../public/img/avatar3.jpg";
 import Head from "next/head";
 
-export default function Car({ data, posts, make, model, partspost, carLogos, uniqueMakeArray }) {
+export default function Car({ make, model, partspost, carLogos, uniqueMakeArray }) {
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
   const [Email, setEmail] = useState("");
@@ -124,7 +124,7 @@ export default function Car({ data, posts, make, model, partspost, carLogos, uni
       <Nav />
       <Head>
         <title>
-          {make} - {model} Auto Spare Parts
+          {make} - {model} Auto Spare Parts in UAE
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
@@ -498,7 +498,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
@@ -510,18 +510,6 @@ export async function getStaticProps({ params }) {
   let uniqueMakeArray = [
     ...new Map(dat.map((item) => [item["model"], item])).values(),
   ];
-
-  const res = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}`
-  );
-  const uniqueObjectArray = await res.json();
-
-  let data = [
-    ...new Map(uniqueObjectArray.map((item) => [item["model"], item])).values(),
-  ];
-
-  const resp = await fetch(`https://rozy.vercel.app/api/palms`);
-  const posts = await resp.json();
 
   const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
   const partspost = await partsres.json();
@@ -536,6 +524,6 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: { data, posts, make, model, partspost, carLogos, uniqueMakeArray },
+    props: {  make, model, partspost, carLogos, uniqueMakeArray },
   };
 }

@@ -289,7 +289,7 @@ export default function Car({ data, cities, make,  partspost, posts }) {
                 largest producer and diesel. Since the beginning era of electric
                 vehicle have started, many people are opting for electric
                 vehicles in spite of its shortcomings because it is more
-                affordable comapared to vehicle running on diesel or petrol. By
+                affordable compared to vehicle running on diesel or petrol. By
                 this transition there is no difference in usage of irreversible
                 energy.
                 <p>
