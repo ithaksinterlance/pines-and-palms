@@ -1,7 +1,7 @@
 import Nav from "../nav";
 import Footer from "../footer";
 import Image from "next/image";
-import parts from "../../public/img/car-spare-parts.png";
+import Spare from "../../public/img/car-spare-parts.png";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
@@ -241,7 +241,7 @@ export default function Make({ posts, cities }) {
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
           <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
             <Image
-              src={parts}
+              src={Spare}
               alt="auto spare parts in dubai"
               height={50}
               width={50}
