@@ -139,7 +139,7 @@ export default function Parts({ data,  carLogos, cities }) {
               </span>
               | &nbsp;
               <span>
-                <Link href="/search-by-part-name">
+                <Link href="/search-by-cities-in-uae">
                   <a className="underline hover:text-blue-500">
                     SEARCH BY CITY{" "}
                   </a>
@@ -147,15 +147,7 @@ export default function Parts({ data,  carLogos, cities }) {
               </span>
               | &nbsp;
               <span>
-                <Link href="/search-by-part-name">
-                  <a className="underline hover:text-blue-500">
-                    SEARCH BY YEAR
-                  </a>
-                </Link>{" "}
-              </span>
-              | &nbsp;
-              <span>
-                <Link href="/search-by-part-name">
+                <Link href="/search-by-make">
                   <a className="underline hover:text-blue-500">
                     SEARCH BY MAKE
                   </a>

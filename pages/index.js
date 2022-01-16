@@ -298,19 +298,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
             &nbsp;|
           </span>
           <span>
-            <Link href="/search-by-part-name">
+            <Link href="/search-by-cities-in-uae">
               <a className="underline hover:text-blue-500">SEARCH BY CITY </a>
             </Link>{" "}
             &nbsp;|
           </span>
           <span>
-            <Link href="/search-by-part-name">
-              <a className="underline hover:text-blue-500">SEARCH BY YEAR</a>
-            </Link>{" "}
-            &nbsp;|
-          </span>
-          <span>
-            <Link href="/search-by-part-name">
+            <Link href="/search-by-make">
               <a className="underline hover:text-blue-500">SEARCH BY MAKE</a>
             </Link>{" "}
             &nbsp;
