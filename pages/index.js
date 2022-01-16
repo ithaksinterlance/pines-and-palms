@@ -661,8 +661,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
         {cities.map((post) => (
           <div key={post.id}>
             <Link
-              href="/search-by-dubai-cities/[city]"
-              as={"/search-by-dubai-cities/" + post.city}
+              href="/search-by-cities-in-uae/[city]"
+              as={"/search-by-cities-in-uae/" + post.city}
             >
               <a>
                 <main className="border p-1 rounded-xl xs:border-0 2xs:border-0 sm:border-0 hover:border-blue-600 hover:shadow-lg focus:border-blue-600">
