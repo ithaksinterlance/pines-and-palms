@@ -231,7 +231,7 @@ export default function Car({ data, cities, make,  partspost, posts }) {
     <div>
       <Nav />
       <Head>
-        <title>{make} Auto Spare Parts in UAE</title>
+        <title>{make} - Auto Spare Parts in UAE</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
