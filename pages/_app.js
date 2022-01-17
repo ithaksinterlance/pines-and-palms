@@ -4,7 +4,7 @@ import "../styles/slick/slick.css";
 import "../styles/slick/slick-theme.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import * as ga from "./lib/ga";
+import * as ga from "../lib/analytics";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
