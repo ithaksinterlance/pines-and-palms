@@ -27,7 +27,7 @@ export default class about extends Component {
           <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
             FEATURED PARTS
           </h1>
-          <div className="grid grid-cols-6 xs:grid xs:grid-cols-2 2xs:grid 2xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 gap-1 shadow-2xl my-10 mx-5">
+          <div className="grid grid-cols-6 xs:grid xs:grid-cols-2 s:grid s:grid-cols-1 2xs:grid 2xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 gap-1 shadow-2xl my-10 mx-5 xs:mx-2 s:mx-2 sm:mx-3">
             <AutoPartsImages />
             <Link href="/search-by-part-name"><a>
             <main className="border-4 p-1 py-5 px-5 border-blue-700">

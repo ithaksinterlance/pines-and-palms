@@ -9,7 +9,7 @@ import avatar1 from "../public/img/avatar1.jpeg";
 import avatar2 from "../public/img/avatar2.jpg";
 import avatar3 from "../public/img/avatar3.jpg";
 import Image from "next/image";
-import Count from "./service-counter";
+import Count from "./service-countup";
 import Head from "next/head";
 import CarLogos from "./carLogos";
 
@@ -256,20 +256,21 @@ export default function Home({ forms, partsposts, posts, cities }) {
       <Head>
         <title>Search Auto Spare Parts in UAE</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Explore with us the wide range of Auto spare parts quality used, aftermarket, genuine and new products that caters Your vehicle's need in UAE"/>
       </Head>
       <Nav />
       <Hero />
-      <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 xs:py-0">
-        <h1 className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
+      <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2">
+        <h1 className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
           ABOUT EMIRATES CAR
         </h1>
-        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-xs 2xs:text-xs italic xs:ml-6">
+        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
           We are dealing with auto spare parts for car, heavy truck, van, buses,
           coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles, Used
           spare parts, After market parts, Genuine spare parts and New parts
           etc. Contact us for any inquiry.
         </p>
-        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-xs 2xs:text-xs italic xs:ml-6">
+        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
           The only goal we all work for to achieve is to give life to a car in
           need of its organ and keep it going. We all have worked for a while
           now and We can&apos;t be enough of the joy we put on people&apos;s
@@ -288,7 +289,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <Count />
       </div>
       <div className="place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
-        <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 xs:mx-0 sm:mx-0 2xs:mx-0 p-3 text-center text-3xl text-blue-900 font-extrabold xs:text-xl s:mx-3 xs:w-screen 2xs:w-screen s:w-screen s:text-2xl 2xs:text-2xl ">
+        <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 sm:mx-0 2xs:mx-0 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-screen 2xs:w-screen s:w-screen s:text-2xl 2xs:text-2xl p-3">
           <span>
             <Link href="/search-by-part-name">
               <a className="underline hover:text-blue-500">
@@ -310,8 +311,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
             &nbsp;
           </span>
         </div>
-        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl">
-          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full xs:py-5 ">
+        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl">
+          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full s:w-full xs:py-5 s:py-5">
             <Slider {...settings} className="py-10 p-2">
               <div>
                 <p className="text-xl font-bold text-center">
@@ -392,7 +393,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 </p>
               </div>
             </Slider>
-            <div className="py-5 p-10">
+            <div className="py-5 p-10 xs:p-3 s:p-3 sm:p-5">
               <h1 className="text-base font-bold text-blue-100 text-center pt-5">
                 EMIRATES-CAR
               </h1>
@@ -416,7 +417,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               ></iframe>
             </div>
           </div>
-          <div className="w-2/3 xs:w-full md:w-full 2xs:w-full sm:w-full">
+          <div className="w-2/3 xs:w-full md:w-full s:w-full 2xs:w-full sm:w-full">
             <form
               id="myForm"
               className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
@@ -633,10 +634,10 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </div>
       </div>
       <Featured />
-      <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
+      <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10">
         SEARCH BY MAKE
       </h1>
-      <div className="grid grid-cols-7 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
+      <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10">
         {posts.map((post) => (
           <div key={post.id}>
             <Link
@@ -657,7 +658,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
         SEARCH BY CITIES IN U.A.E
       </h1>
-      <div className="grid grid-cols-7 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
+      <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 shadow-2xl my-10">
         {cities.map((post) => (
           <div key={post.id}>
             <Link
@@ -679,7 +680,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center">
         WE DEAL IN ALMOST ANY BRANDS
       </h1>
-      <div className="grid grid-cols-12 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10 mx-10">
+      <div className="grid grid-cols-12 xs:mx-4 s:mx-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 s:grid s:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 shadow-2xl my-10 mx-10">
         <CarLogos />
       </div>
       <Footer />

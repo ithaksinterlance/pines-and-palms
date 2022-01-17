@@ -60,27 +60,33 @@ export default class footer extends Component {
             <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto">
               <Link href="/search-by-part-name">
                 <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                  <i className="fas fa-shopware    "></i> Search parts by part name in UAE
+                  Search parts by part name in UAE
                 </a>
               </Link>
               <br />
               <Link href="/search-by-make">
                 <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                 Search parts by Car make in UAE
+                  Search parts by Car make in UAE
                 </a>
               </Link>
               <br />
               <br />
               <Link href="/search-by-cities-in-uae">
                 <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                  <i className="fas fa-marker    "></i> Search parts by cities in UAE
+                  Search parts by cities in UAE
                 </a>
               </Link>
             </div>
           </div>
-          <div className="text-center text-purple-200">
-              <i className="fa fa-copyright" aria-hidden="true"></i>EMIRATES-CAR.COM
-            </div>
+          <div className="text-center text-purple-200 py-10">
+            <a
+              href="https://emirates-car.com"
+              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+            >
+              <i className="fa fa-copyright" aria-hidden="true"></i>
+              EMIRATES-CAR.COM
+            </a>
+          </div>
         </div>
       </div>
     );
