@@ -2,30 +2,15 @@ import "../styles/globals.css";
 import Head from "next/head";
 import "../styles/slick/slick.css";
 import "../styles/slick/slick-theme.css";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-import * as ga from "../lib/analytics";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      ga.pageview(url);
-    };
-    //When the component is mounted, subscribe to router changes
-    //and log those page views
-    router.events.on("routeChangeComplete", handleRouteChange);
-
-    // If the component is unmounted, unsubscribe
-    // from the event with the `off` method
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
   return (
-    <div>
+    <>
       <Head>
+        <meta
+          name="google-site-verification"
+          content="2dbXrKrxCBjzz1bLwaw_6nd4YEhhviwPLiGq6fLXPoU"
+        />
         <link rel="shortcut icon" href="/favicon.png" />
         <link
           rel="stylesheet"
@@ -52,7 +37,7 @@ function MyApp({ Component, pageProps }) {
         ></script>
       </Head>
       <Component {...pageProps} />
-    </div>
+    </>
   );
 }
 

@@ -700,6 +700,7 @@ export async function getStaticProps() {
   let uniqueMakeArray = [
     ...new Map(data.map((item) => [item["make"], item])).values(),
   ];
+
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
   const cities = await cityresponse.json();
 

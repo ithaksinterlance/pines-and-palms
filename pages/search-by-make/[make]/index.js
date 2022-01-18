@@ -4,7 +4,7 @@ import Footer from "../../footer";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 
-export default function Car({ car, cities, make,  partspost, posts }) {
+export default function Car({ car, cities, make, partspost, posts }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -167,7 +167,7 @@ export default function Car({ car, cities, make,  partspost, posts }) {
     var model = Model;
     const partname = text;
     const whatsappno = Whatsappno;
-    const address =  Address;
+    const address = Address;
 
     const today = new Date();
     const date =
@@ -246,6 +246,16 @@ export default function Car({ car, cities, make,  partspost, posts }) {
                   </nobr>
                   MODEL
                 </div>
+                <p className="text-gray-500 text-sm md:text-lg lg:text-2xl font-normal font-sans xs:text-base 2xs:text-xs mx-10 underline">
+                  <i className="fal fa-car-garage"></i> HOME {"/"}{" "}
+                    <Link
+                      href="/search-by-make/[make]"
+                      as={"/search-by-make/" + make}
+                    >
+                      <a><i className="fas fa-cog font-thin"></i> {make.toUpperCase()}</a>
+                    </Link>
+                  {"/"}
+                </p>
               </div>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
                 {car.map((post) => (
@@ -445,24 +455,24 @@ export default function Car({ car, cities, make,  partspost, posts }) {
                   </div>
                 </div>
                 <div className="flex flex-wrap -mx-3">
-              <div className="w-full px-3 mb-6 xs:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="city"
-                >
-                  City
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="city"
-                  type="text"
-                  placeholder="Where do you live?"
-                  onChange={handleAddressChange}
-                  value={Address}
-                  autoComplete="off"
-                />
-              </div>
-              </div>
+                  <div className="w-full px-3 mb-6 xs:mb-0">
+                    <label
+                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      htmlFor="city"
+                    >
+                      City
+                    </label>
+                    <input
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="city"
+                      type="text"
+                      placeholder="Where do you live?"
+                      onChange={handleAddressChange}
+                      value={Address}
+                      autoComplete="off"
+                    />
+                  </div>
+                </div>
                 <div className="flex flex-wrap -mx-3">
                   <div className="w-full xs:w-3/4 px-3 mb-6 xs:mb-0">
                     <label
