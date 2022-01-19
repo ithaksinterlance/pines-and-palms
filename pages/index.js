@@ -68,7 +68,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
     slidesToScroll: 1,
   };
 
-  const make = [
+  const mke = [
     "Ford",
     "Chrysler",
     "Citroen",
@@ -165,6 +165,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
     "Polestar",
     "Kandi",
   ];
+  const make = mke.sort();
   function handleYearChange(event) {
     setYear(event.target.value);
   }
@@ -268,7 +269,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           We are dealing with auto spare parts for car, heavy truck, van, buses,
           coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles, Used
           spare parts, After market parts, Genuine spare parts and New parts
-          etc. Contact us for any inquiry.
+          etc in UAE. Contact us for any inquiry.
         </p>
         <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
           The only goal we all work for to achieve is to give life to a car in

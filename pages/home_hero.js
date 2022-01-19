@@ -38,7 +38,7 @@ export default class home_hero extends Component {
                   </h1>
                   <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-sm xl:text-lg s:text-sm 2xs:text-sm font-serif">
                     We are the best dealer in Auto Spare parts for Cars, Trucks,
-                    Van, Buses, Excavators in UAE. If you are in need of any
+                    Van, Buses in UAE. If you are in need of any
                     Spare parts contact us.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start xs:pb-20 s:pb-20">
@@ -112,7 +112,7 @@ export default class home_hero extends Component {
               <div className="sm:text-center lg:text-left xs:text-center">
                 <h1 className="tracking-tight font-extrabold xl:text-6xl sm:text-3xl md:text-4xl lg:text-5xl xs:text-2xl 2xs:text-xl s:text-3xl">
                   <span className="block xl:inline">
-                    Get spare parts for any
+                    Get spare parts for any&nbsp;
                     <span className="block text-blue-600 xl:inline">
                       country vehicle
                     </span>
@@ -139,12 +139,12 @@ export default class home_hero extends Component {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-3 xs:grid xs:grid-cols-3 s:grid s:grid-cols-3 ml-8 xs:py-10 sm:py-10 s:py-10 2xs:py-10 s:mx-5 xs:mx-5 2xs:mx-5">
+            <div className="grid grid-cols-3 xs:grid xs:grid-cols-3 s:grid s:grid-cols-3 ml-8 xs:py-10 sm:py-10 s:py-10 2xs:py-10 s:mx-5 xs:mx-3 2xs:mx-5">
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:shadow-none s:border-none">
                 <Image
                   src={Britain}
                   alt="british car auto spare parts"
-                  className="object-scale-down h-40 w-full xs:object-fit s:object-fit"
+                  className="object-scale-down w-full xs:object-fit s:object-fit"
                   height={70}
                   width={70}
                 />
@@ -164,7 +164,7 @@ export default class home_hero extends Component {
                 <Image
                   src={Japan}
                   alt="japan car auto spare parts"
-                  className="object-scale-down h-40 w-full xs:object-fit"
+                  className="object-scale-down w-full xs:object-fit"
                   height={70}
                   width={70}
                 />
@@ -184,7 +184,7 @@ export default class home_hero extends Component {
                 <Image
                   src={USA}
                   alt="united state car auto spare parts"
-                  className="object-scale-down h-40 w-full xs:object-fit s:object-fit"
+                  className="object-scale-down w-full xs:object-fit s:object-fit"
                   height={70}
                   width={70}
                 />
@@ -194,7 +194,7 @@ export default class home_hero extends Component {
                 <Image
                   src={Germany}
                   alt="germany car auto spare parts"
-                  className="object-scale-down h-40 w-full xs:object-fit s:object-fit"
+                  className="object-scale-down w-full xs:object-fit s:object-fit"
                   height={70}
                   width={70}
                 />
@@ -204,7 +204,7 @@ export default class home_hero extends Component {
                 <Image
                   src={China}
                   alt="chinese car auto spare parts"
-                  className="object-scale-down h-40 w-full xs:object-fit s:object-fit"
+                  className="object-scale-down w-full xs:object-fit s:object-fit"
                   height={70}
                   width={70}
                 />
@@ -214,7 +214,7 @@ export default class home_hero extends Component {
                 <Image
                   src={France}
                   alt="france auto spare parts"
-                  className="object-scale-down h-40 w-full xs:object-fit s:object-fit"
+                  className="object-scale-down w-full xs:object-fit s:object-fit"
                   height={70}
                   width={70}
                 />

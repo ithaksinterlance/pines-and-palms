@@ -1,9 +1,8 @@
 import Nav from "../nav";
 import Link from "next/link";
 import Footer from "../footer";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
-
 
 export default function City({ cities, data, posts, pos }) {
   const [Year, setYear] = useState("");
@@ -45,7 +44,7 @@ export default function City({ cities, data, posts, pos }) {
     setText(text);
   };
 
-  const make = [
+  const ma = [
     "Ford",
     "Chrysler",
     "Citroen",
@@ -142,6 +141,7 @@ export default function City({ cities, data, posts, pos }) {
     "Polestar",
     "Kandi",
   ];
+  const make = ma.sort();
   function handleYearChange(event) {
     setYear(event.target.value);
   }
@@ -231,9 +231,7 @@ export default function City({ cities, data, posts, pos }) {
   return (
     <div>
       <Head>
-        <title>
-          Search Auto Spare Parts by Cities in UAE
-        </title>
+        <title>Search Auto Spare Parts by Cities in UAE</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Nav />
@@ -245,16 +243,16 @@ export default function City({ cities, data, posts, pos }) {
                 &nbsp;&nbsp;
                 <nobr className="text-blue-700 text-6xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
                   &nbsp;<i className="fa fa-map-pin" aria-hidden="true"></i>
-                </nobr>&nbsp;&nbsp;
-                SELECT YOUR PARTS BY CITY IN U.A.E
+                </nobr>
+                &nbsp;&nbsp; SELECT YOUR PARTS BY CITY IN U.A.E
               </h1>
               <p className="text-gray-500 text-sm md:text-lg lg:text-2xl font-normal font-sans xs:text-base 2xs:text-xs mx-10 underline">
-              <i className="fal fa-car-garage"></i>{" "}
-              <Link href="/">
-                <a>HOME</a>
-              </Link>
-              {"/"}
-            </p>
+                <i className="fal fa-car-garage"></i>{" "}
+                <Link href="/">
+                  <a>HOME</a>
+                </Link>
+                {"/"}
+              </p>
 
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
                 {cities.map((post) => (
@@ -273,244 +271,247 @@ export default function City({ cities, data, posts, pos }) {
                 ))}
               </div>
 
-              <div className="grid grid-cols-2">
-              <p className="text-base font-medium text-gray-500 p-5">
-                <h1 className="text-md font-bold text-blue-500 py-5">
-                  SEARCH YOUR PARTS IN
-                  <nobr className="text-blue-700 text-xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                    &nbsp;{data.city}
-                  </nobr>{" "}
-                </h1>
-                UAE Automobile industry is slowly shifting towards a service
-                oriented business model based on consumer data and customer
-                experience. Now companies are trying to adapt to the current
-                need of the trends Markets. They rely on consumer data for
-                knowing the sale interest of the customers based on the
-                experience through analytics software. Owners are now thinking
-                ways to accommodate the market through the trends analytics in
-                order to keep the company into their targetted level. Previously
-                there were cars running on petrol in which UAE is one of the
-                largest producer and diesel. Since the beginning era of electric
-                vehicle have started, many people are opting for electric
-                vehicles in spite of its shortcomings because it is more
-                affordable comapared to vehicle running on diesel or petrol. By
-                this transition there is no difference in usage of irreversible
-                energy.
-              </p>
-              <form
-            id="myForm"
-            className="w-full max-w-lg  shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
-            method="POST"
-            onSubmit={handleSubmit}
-            target="hidden_iframe"
-          >
-            <div className="flex flex-wrap -mx-3 mb-2">
-              <div className="w-1/2 md:w-1/2 px-3 mb-6 md:mb-0 xs:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="year"
+              <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 s:grid s:grid-cols-1">
+                <p className="text-base font-medium text-gray-500 p-5">
+                  <h1 className="text-md font-bold text-blue-500 py-5">
+                    SEARCH YOUR PARTS IN
+                    <nobr className="text-blue-700 text-xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
+                      &nbsp;{data.city}
+                    </nobr>{" "}
+                  </h1>
+                  UAE Automobile industry is slowly shifting towards a service
+                  oriented business model based on consumer data and customer
+                  experience. Now companies are trying to adapt to the current
+                  need of the trends Markets. They rely on consumer data for
+                  knowing the sale interest of the customers based on the
+                  experience through analytics software. Owners are now thinking
+                  ways to accommodate the market through the trends analytics in
+                  order to keep the company into their targetted level.
+                  Previously there were cars running on petrol in which UAE is
+                  one of the largest producer and diesel. Since the beginning
+                  era of electric vehicle have started, many people are opting
+                  for electric vehicles in spite of its shortcomings because it
+                  is more affordable comapared to vehicle running on diesel or
+                  petrol. By this transition there is no difference in usage of
+                  irreversible energy.
+                </p>
+                <form
+                  id="myForm"
+                  className="w-full max-w-lg  shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  target="hidden_iframe"
                 >
-                  Year
-                </label>
-                <div className="relative">
-                  <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="year"
-                    type="text"
-                    placeholder="Year"
-                    name="entry.902626710"
-                    onChange={handleYearChange}
-                    value={Year}
-                    autoComplete="off"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="w-1/2 md:w-1/2 px-3">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="make"
-                >
-                  Make
-                </label>
-                <div className="relative">
-                  <select
-                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 xs:py-1 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="make"
-                    name="entry.741646505"
-                    required="required"
-                    onChange={handleMakeChange}
-                    value={Make}
-                  >
-                    <option value="" disabled>
-                      Select your Make
-                    </option>
-                    {make.map((m) => (
-                      <option key={m}>{m}</option>
-                    ))}
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg
-                      className="fill-current h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap -mx-3 mb-2">
-              <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="model"
-                >
-                  Model
-                </label>
-                <div className="relative">
-                  <select
-                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="model"
-                    name="entry.402947466"
-                    required
-                    onChange={handleModelChange}
-                    value={Model}
-                  >
-                    <option value="" disabled>
-                      Select your Model
-                    </option>
-                    {posts
-                      .filter((s) => s.make === Make)
-                      .map((s) => (
-                        <option key={s.id} value={s.model}>
-                          {s.model}
-                        </option>
-                      ))}
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg
-                      className="fill-current h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap -mx-3">
-              <div className="w-full px-3 mb-6 xs:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="whatsappno"
-                >
-                  WhatsApp No
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="whatsappno"
-                  type="text"
-                  placeholder="WhatsApp No"
-                  onChange={handleWhatsAppNoChange}
-                  value={Whatsappno}
-                  autoComplete="off"
-                  required
-                />
-              </div>
-              <div className="w-full px-3 mb-6 xs:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="email"
-                >
-                  Email(Optional)
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="email"
-                  type="text"
-                  placeholder="We won't leak your mail id"
-                  onChange={handleEmailChange}
-                  value={Email}
-                  autoComplete="off"
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3">
-              <div className="w-full px-3 mb-6 xs:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="city"
-                >
-                  City
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="city"
-                  type="text"
-                  placeholder="Where do you live?"
-                  onChange={handleAddressChange}
-                  value={Address}
-                  autoComplete="off"
-                />
-              </div>
-              </div>
-            <div className="flex flex-wrap -mx-3">
-              <div className="w-full xs:w-3/4 px-3 mb-6 xs:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="partname"
-                >
-                  PART NAME
-                </label>
-                <textarea
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="partname"
-                  type="text"
-                  placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
-                  rows={5}
-                  name="entry.1660104041"
-                  onChange={(e) => onPartFormChange(e.target.value)}
-                  value={text}
-                  autoComplete="off"
-                  required
-                />
-                {suggestion &&
-                  suggestion.map((suggestion, i) => (
-                    <div
-                      key={i}
-                      className="cursor-pointer border-gray-400 p-4"
-                      onClick={() => onSuggestionHandler(suggestion)}
-                    >
-                      {suggestion}
+                  <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="w-1/2 md:w-1/2 px-3 mb-6 md:mb-0 xs:mb-0">
+                      <label
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        htmlFor="year"
+                      >
+                        Year
+                      </label>
+                      <div className="relative">
+                        <input
+                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          id="year"
+                          type="text"
+                          placeholder="Year"
+                          name="entry.902626710"
+                          onChange={handleYearChange}
+                          value={Year}
+                          autoComplete="off"
+                          required
+                        />
+                      </div>
                     </div>
-                  ))}
+                    <div className="w-1/2 md:w-1/2 px-3">
+                      <label
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        htmlFor="make"
+                      >
+                        Make
+                      </label>
+                      <div className="relative">
+                        <select
+                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 xs:py-1 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          id="make"
+                          name="entry.741646505"
+                          required="required"
+                          onChange={handleMakeChange}
+                          value={Make}
+                        >
+                          <option value="" disabled>
+                            Select your Make
+                          </option>
+                          {make.map((m) => (
+                            <option key={m}>{m}</option>
+                          ))}
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg
+                            className="fill-current h-4 w-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                      <label
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        htmlFor="model"
+                      >
+                        Model
+                      </label>
+                      <div className="relative">
+                        <select
+                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          id="model"
+                          name="entry.402947466"
+                          required
+                          onChange={handleModelChange}
+                          value={Model}
+                        >
+                          <option value="" disabled>
+                            Select your Model
+                          </option>
+                          {posts
+                            .filter((s) => s.make === Make)
+                            .map((s) => (
+                              <option key={s.id} value={s.model}>
+                                {s.model}
+                              </option>
+                            ))}
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg
+                            className="fill-current h-4 w-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap -mx-3">
+                    <div className="w-full px-3 mb-6 xs:mb-0">
+                      <label
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        htmlFor="whatsappno"
+                      >
+                        WhatsApp No
+                      </label>
+                      <input
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        id="whatsappno"
+                        type="text"
+                        placeholder="WhatsApp No"
+                        onChange={handleWhatsAppNoChange}
+                        value={Whatsappno}
+                        autoComplete="off"
+                        required
+                      />
+                    </div>
+                    <div className="w-full px-3 mb-6 xs:mb-0">
+                      <label
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        htmlFor="email"
+                      >
+                        Email(Optional)
+                      </label>
+                      <input
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        id="email"
+                        type="text"
+                        placeholder="We won't leak your mail id"
+                        onChange={handleEmailChange}
+                        value={Email}
+                        autoComplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap -mx-3">
+                    <div className="w-full px-3 mb-6 xs:mb-0">
+                      <label
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        htmlFor="city"
+                      >
+                        City
+                      </label>
+                      <input
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        id="city"
+                        type="text"
+                        placeholder="Where do you live?"
+                        onChange={handleAddressChange}
+                        value={Address}
+                        autoComplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap -mx-3">
+                    <div className="w-full px-3 mb-6 xs:mb-0 pb-3">
+                      <label
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        htmlFor="partname"
+                      >
+                        PART NAME
+                      </label>
+                      <textarea
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        id="partname"
+                        type="text"
+                        placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
+                        rows={5}
+                        name="entry.1660104041"
+                        onChange={(e) => onPartFormChange(e.target.value)}
+                        value={text}
+                        autoComplete="off"
+                        required
+                      />
+                      {suggestion &&
+                        suggestion.map((suggestion, i) => (
+                          <div
+                            key={i}
+                            className="cursor-pointer border-gray-400 p-4"
+                            onClick={() => onSuggestionHandler(suggestion)}
+                          >
+                            {suggestion}
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap -mx-3">
+                    <div className="w-full px-3 mb-6 xs:mb-0">
+                      <button
+                        type="submit"
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full xs:text-xs"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="flex float-right text-xs text-gray-400 ">
+                    100% secure and trusted
+                  </div>
+                </form>
               </div>
-            </div>
-
-
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full xs:text-xs"
-            >
-              Submit
-            </button>
-
-            <div className="flex float-right text-xs text-gray-400 ">
-              100% secure and trusted
-            </div>
-          </form>
-            </div>
             </article>
           </main>
         </div>
         <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
-        <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-600 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
-        SEARCH PART BY MAKE
+          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-600 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
+            SEARCH PART BY MAKE
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 pb-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  text-justify font-sans">
             {data.map((post) => (
@@ -520,8 +521,9 @@ export default function City({ cities, data, posts, pos }) {
                   as={"/search-by-make/" + post.make}
                 >
                   <a>
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700  xs:text-center text-gray-500">
-                      <i className="fa fa-mars-stroke" aria-hidden="true"></i> {post.make}
+                    <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 text-gray-500">
+                      <i className="fa fa-mars-stroke" aria-hidden="true"></i>{" "}
+                      {post.make}
                     </p>
                   </a>
                 </Link>

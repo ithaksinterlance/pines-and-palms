@@ -63,7 +63,7 @@ export default function Forms({ posts, pos }) {
     slidesToScroll: 1,
   };
 
-  const make = [
+  const ma = [
     "Ford",
     "Chrysler",
     "Citroen",
@@ -160,6 +160,7 @@ export default function Forms({ posts, pos }) {
     "Polestar",
     "Kandi",
   ];
+  const make = ma.sort();
   function handleYearChange(event) {
     setYear(event.target.value);
   }

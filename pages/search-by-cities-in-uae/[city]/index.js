@@ -44,7 +44,7 @@ export default function City({ data, partspost, posts }) {
     setText(text);
   };
 
-  const make = [
+  const ma = [
     "Ford",
     "Chrysler",
     "Citroen",
@@ -141,6 +141,8 @@ export default function City({ data, partspost, posts }) {
     "Polestar",
     "Kandi",
   ];
+
+  const make = ma.sort();
   function handleYearChange(event) {
     setYear(event.target.value);
     console.log(Year);

@@ -20,7 +20,7 @@ export default class about extends Component {
                   {">>"}
                 </p>
                 <p className="text-xs text-gray-500">
-                  We deal with almost any parts. In case if you dont find your
+                  We deal with almost any auto spare parts in UAE. In case if you dont find your
                   desired parts, you can contact us directly.
                 </p>
               </main>

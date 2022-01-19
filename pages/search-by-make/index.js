@@ -45,7 +45,7 @@ export default function Make({ car, cities, posts, pos }) {
     setText(text);
   };
 
-  const make = [
+  const ma = [
     "Ford",
     "Chrysler",
     "Citroen",
@@ -142,6 +142,7 @@ export default function Make({ car, cities, posts, pos }) {
     "Polestar",
     "Kandi",
   ];
+  const make = ma.sort();
   function handleYearChange(event) {
     setYear(event.target.value);
   }
