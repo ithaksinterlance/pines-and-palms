@@ -248,12 +248,15 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </div>
                 <p className="text-gray-500 text-sm md:text-lg lg:text-2xl font-normal font-sans xs:text-base 2xs:text-xs mx-10 underline">
                   <i className="fal fa-car-garage"></i> HOME {"/"}{" "}
-                    <Link
-                      href="/search-by-make/[make]"
-                      as={"/search-by-make/" + make}
-                    >
-                      <a><i className="fas fa-cog font-thin"></i> {make.toUpperCase()}</a>
-                    </Link>
+                  <Link
+                    href="/search-by-make/[make]"
+                    as={"/search-by-make/" + make}
+                  >
+                    <a>
+                      <i className="fas fa-cog font-thin"></i>{" "}
+                      {make.toUpperCase()}
+                    </a>
+                  </Link>
                   {"/"}
                 </p>
               </div>
@@ -474,7 +477,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   </div>
                 </div>
                 <div className="flex flex-wrap -mx-3">
-                  <div className="w-full xs:w-3/4 px-3 mb-6 xs:mb-0">
+                  <div className="w-full px-3 mb-6 xs:mb-0">
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="partname"
@@ -505,13 +508,17 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       ))}
                   </div>
                 </div>
+                <div className="flex flex-wrap -mx-3 py-2">
+                  <div className="w-full xs:w-3/4 px-3 mb-6 xs:mb-0">
+                    <button
+                      type="submit"
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full xs:text-xs"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
 
-                <button
-                  type="submit"
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full xs:text-xs"
-                >
-                  Submit
-                </button>
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
                 </div>

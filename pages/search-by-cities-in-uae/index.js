@@ -245,9 +245,16 @@ export default function City({ cities, data, posts, pos }) {
                 &nbsp;&nbsp;
                 <nobr className="text-blue-700 text-6xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
                   &nbsp;<i className="fa fa-map-pin" aria-hidden="true"></i>
-                </nobr>
+                </nobr>&nbsp;&nbsp;
                 SELECT YOUR PARTS BY CITY IN U.A.E
               </h1>
+              <p className="text-gray-500 text-sm md:text-lg lg:text-2xl font-normal font-sans xs:text-base 2xs:text-xs mx-10 underline">
+              <i className="fal fa-car-garage"></i>{" "}
+              <Link href="/">
+                <a>HOME</a>
+              </Link>
+              {"/"}
+            </p>
 
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
                 {cities.map((post) => (

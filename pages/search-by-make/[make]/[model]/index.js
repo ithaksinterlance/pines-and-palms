@@ -131,9 +131,9 @@ export default function Car({ make, model, partspost, uniqueMakeArray }) {
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
         <div className="w-3/4 2xs:w-full xs:w-full s:w-full sm:w-full xs:grid xs:grid-cols-1">
-          <main className="mx-10 xs:mx-4 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
+          <main className="mx-10 xs:mx-auto 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
             <div>
-              <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5 text-justify">
+              <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
                 FILL OUT THE INQUIRY FOR
                 <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
                   &nbsp;{make} - {model}{" "}
@@ -163,8 +163,8 @@ export default function Car({ make, model, partspost, uniqueMakeArray }) {
                 </Link>
               </p>
             </div>
-            <div className="container place-content-center mx-1 py-6">
-              <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl xs:w-screen xs:p-1 text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
+            <div className="container place-content-center mx-1 xs:mx-0 py-6">
+              <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl xs:w-screen  text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
                 &nbsp;
                 <span>
                   <Link href="/search-by-part-name">

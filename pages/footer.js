@@ -12,7 +12,7 @@ export default class footer extends Component {
   render() {
     return (
       <div className="py-6 bg-blue-500">
-        <div className="pb-6 xs:pb-3 sm:pb-3 2xs:pb-3">
+        <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
           <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
             COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{" "}
             <Link href="/contact">
@@ -57,7 +57,7 @@ export default class footer extends Component {
                 </a>
               </p>
             </div>
-            <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto">
+            <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto">
               <Link href="/search-by-part-name">
                 <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
                   Search parts by part name in UAE
@@ -69,7 +69,6 @@ export default class footer extends Component {
                   Search parts by Car make in UAE
                 </a>
               </Link>
-              <br />
               <br />
               <Link href="/search-by-cities-in-uae">
                 <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
