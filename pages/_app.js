@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import "../styles/slick/slick.css";
 import "../styles/slick/slick-theme.css";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -27,15 +28,14 @@ function MyApp({ Component, pageProps }) {
           referrerPolicy="no-referrer"
         />
         <script
-          dangerouslySetInnerHTML={{
-            __html: `https://script.google.com/macros/s/AKfycbxO_plCUSZsoR5WHZRt-hj-ES2IcF3DNnkSeUfNJwufgrOcuYNd84-qI5yRKBoe4wrU8w/exec`,
-          }}
-        ></script>
-        <script
           src="https://polyfill.io/v3/polyfill.min.js?features=default"
           async
         ></script>
       </Head>
+      <Script
+        strategy="afterInteractive"
+        src="https://script.google.com/macros/s/AKfycbxO_plCUSZsoR5WHZRt-hj-ES2IcF3DNnkSeUfNJwufgrOcuYNd84-qI5yRKBoe4wrU8w/exec"
+      />
       <Component {...pageProps} />
     </>
   );
