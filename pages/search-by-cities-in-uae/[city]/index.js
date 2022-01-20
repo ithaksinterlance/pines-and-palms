@@ -244,7 +244,7 @@ export default function City({ data, partspost, posts }) {
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
-          <main className="mx-10 xs:mx-2  2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
+          <main className="mx-10 xs:ml-3  2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
             <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
               FILL OUT THE INQUIRY FOR PARTS IN
               <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
@@ -252,17 +252,17 @@ export default function City({ data, partspost, posts }) {
               </nobr>
               BELOW
             </div>
-            <p className="text-gray-500 text-sm md:text-lg lg:text-2xl font-normal font-sans xs:text-base 2xs:text-xs mx-10 underline">
-              <i className="fal fa-car-garage"></i> HOME {"/"}{" "}
+            <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
+            <nobr className="text-blue-400 no-underline"><i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;</nobr>
+              home{"/"}
               <Link
                 href="/search-by-cities-in-uae/[city]"
                 as={"/search-by-cities-in-uae/" + data.city}
               >
                 <a>
-                  <i className="fas fa-city font-thin"></i> {" "}
-                  {data.city.toUpperCase()}
+                  search-by-cities-in-uae{"/"}{data.city}
                 </a>
-              </Link>
+              </Link>{"/"}
             </p>
             <iframe
               src={data.link}
@@ -523,7 +523,7 @@ export default function City({ data, partspost, posts }) {
                   as={"/search-by-part-name/" + post.parts}
                 >
                   <a>
-                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans">
+                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans underline">
                       <i className="far fa-compass"></i> {post.parts}
                     </p>
                   </a>

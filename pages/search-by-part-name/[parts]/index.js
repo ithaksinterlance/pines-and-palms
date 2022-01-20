@@ -135,17 +135,21 @@ export default function Parts({ data, cities }) {
                 </nobr>
                 BELOW
               </div>
-              <p className="text-gray-500 text-sm md:text-lg lg:text-2xl font-normal font-sans xs:text-base 2xs:text-xs mx-10 underline pb-3">
-                <i className="fal fa-car-garage"></i> HOME {"/"}{" "}
+              <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
+                <nobr className="text-blue-400 no-underline">
+                  <i className="fal fa-car-garage"></i> Current
+                  path:&nbsp;&nbsp;
+                </nobr>
+                home{"/"}
                 <Link
                   href="/search-by-parts/[parts]"
                   as={"/search-by-parts/" + data.parts}
                 >
                   <a>
-                    <i className="fas fa-cog font-thin"></i>{" "}
-                    {data.parts.toUpperCase()}
+                    {data.parts}
                   </a>
                 </Link>
+                {"/"}
               </p>
               <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl xs:w-screen  text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
                 &nbsp;

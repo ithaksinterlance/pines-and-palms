@@ -140,27 +140,26 @@ export default function Car({ make, model, partspost, uniqueMakeArray }) {
                 </nobr>
                 BELOW
               </div>
-              <p className="text-gray-500 text-sm md:text-lg lg:text-2xl font-normal font-sans xs:text-base 2xs:text-xs mx-10 underline">
-                <i className="fal fa-car-garage"></i> HOME {"/"}{" "}
+              <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
+                <nobr className="text-blue-400 no-underline">
+                  <i className="fal fa-car-garage"></i> Current
+                  path:&nbsp;&nbsp;
+                </nobr>
+                home{"/"}
                 <Link
                   href="/search-by-make/[make]"
                   as={"/search-by-make/" + make}
                 >
-                  <a>
-                    <i className="fas fa-cog font-thin"></i>{" "}
-                    {make.toUpperCase()}
-                  </a>
+                  <a>{make}</a>
                 </Link>
-                {"/"}{" "}
+                {"/"}
                 <Link
                   href="/search-by-make/[make]/[model]"
                   as={"/search-by-make/" + make + model}
                 >
-                  <a>
-                    <i className="fas fa-wrench font-thin   "></i> {" "}
-                    {model.toUpperCase()}
-                  </a>
+                  <a>{model}</a>
                 </Link>
+                {"/"}
               </p>
             </div>
             <div className="container place-content-center mx-1 xs:mx-0 py-6">
