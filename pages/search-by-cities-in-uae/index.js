@@ -14,6 +14,9 @@ export default function City({ cities, data, posts, pos }) {
   const [text, setText] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [Address, setAddress] = useState("");
+  const [searchMake, setSearcMake] = useState("");
+  const [recommend, setRecommend] = useState("");
+  const [formMakeChange, setFormMakeChange] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -42,6 +45,35 @@ export default function City({ cities, data, posts, pos }) {
     }
     setSuggestion(matches);
     setText(text);
+  };
+
+  useEffect(() => {
+    const loadPart = async () => {
+      var part = [];
+      for (var i in cities) {
+        var filtered = cities[i].city;
+        part.push(filtered);
+      }
+      setFormMakeChange(part);
+    };
+    loadPart();
+  }, []);
+
+  const onMakeSuggestionHandler = (searchMake) => {
+    setSearchMake(searchMake);
+    setRecommend([]);
+  };
+
+  const onMakeFormChange = (searchMake) => {
+    let matches = [];
+    if (searchMake.length > 0) {
+      matches = formMakeChange.filter((part) => {
+        const regex = new RegExp(`${searchMake}`, "gi");
+        return part.match(regex);
+      });
+    }
+    setRecommend(matches);
+    setSearcMake(searchMake);
   };
 
   const ma = [
@@ -246,10 +278,46 @@ export default function City({ cities, data, posts, pos }) {
                 </nobr>
                 &nbsp;&nbsp; SELECT YOUR PARTS BY CITY IN U.A.E
               </h1>
+              <div className="flex justify-center">
+                <div className="pt-3">
+                  <input
+                    className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
+                    id="partname"
+                    type="search"
+                    placeholder="Eg. Abu dhabi, Dubai, Ajman..."
+                    onChange={(e) => onMakeFormChange(e.target.value)}
+                    value={searchMake}
+                    autoComplete="off"
+                    required
+                  />
+                  <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
+                    {recommend &&
+                      recommend.map((recommend, i) => (
+                        <div
+                          key={i}
+                          className="cursor-pointer  text-base p-1 bg-white"
+                          onClick={() => onMakeSuggestionHandler(recommend)}
+                          width="100%"
+                        >
+                          <a
+                            href={`https://emirates-car.com/search-by-part-name/${recommend}`}
+                            rel="noopener noreferrer"
+                            target="_newtab"
+                          >
+                            {recommend}
+                          </a>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
               <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline">
-            <nobr className="text-blue-400 no-underline"><i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;</nobr>
-              home{"/"}
-            </p>
+                <nobr className="text-blue-400 no-underline">
+                  <i className="fal fa-car-garage"></i> Current
+                  path:&nbsp;&nbsp;
+                </nobr>
+                home{"/"}
+              </p>
 
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
                 {cities.map((post) => (
