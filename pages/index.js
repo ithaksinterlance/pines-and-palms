@@ -11,7 +11,6 @@ import avatar3 from "../public/img/avatar3.jpg";
 import Image from "next/image";
 import Count from "./service-countup";
 import Head from "next/head";
-import CarLogos from "./carLogos";
 
 export default function Home({ forms, partsposts, posts, cities }) {
   const [Year, setYear] = useState("");
@@ -34,7 +33,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       setFormPartname(part);
     };
     loadPart();
-  },[]);
+  }, []);
 
   const onSuggestionHandler = (text) => {
     setText(text);
@@ -257,21 +256,59 @@ export default function Home({ forms, partsposts, posts, cities }) {
       <Head>
         <title>Search Auto Spare Parts in UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Explore with us the wide range of Auto spare parts accessories quality used, aftermarket, genuine and new products that caters Your vehicle's need in UAE."/>
+        <meta
+          name="description"
+          content="Explore with us the wide range of Auto spare parts accessories quality used, aftermarket, genuine and new products that caters Your vehicle's need in UAE."
+        />
       </Head>
       <Nav />
+      <div className="flex justify-center">
+        <div className="pt-3">
+          <input
+            className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
+            id="partname"
+            type="search"
+            placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
+            onChange={(e) => onPartFormChange(e.target.value)}
+            value={text}
+            autoComplete="off"
+            required
+          />
+          <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
+          {suggestion &&
+            suggestion.map((suggestion, i) => (
+              <div
+                key={i}
+                className="cursor-pointer  text-base p-1 bg-white"
+                onClick={() => onSuggestionHandler(suggestion)}
+                width= "100%"
+              >
+                <a
+                  href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
+                  rel="noopener noreferrer"
+                  target="_newtab"
+                >
+                  {suggestion}
+                </a>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+
       <Hero />
-      <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2">
+      <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2">
         <h1 className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
           ABOUT EMIRATES CAR
         </h1>
-        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
+        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
           We are dealing with auto spare parts for car, heavy truck, van, buses,
           coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles, Used
-          spare parts, After market parts, Genuine spare parts and New parts
-          etc in UAE. Contact us for any inquiry.
+          spare parts, After market parts, Genuine spare parts and New parts etc
+          in UAE. Contact us for any inquiry.
         </p>
-        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
+        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
           The only goal we all work for to achieve is to give life to a car in
           need of its organ and keep it going. We all have worked for a while
           now and We can&apos;t be enough of the joy we put on people&apos;s
@@ -290,7 +327,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <Count />
       </div>
       <div className="place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
-        <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 sm:mx-0 2xs:mx-0 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-screen 2xs:w-screen s:w-screen s:text-2xl 2xs:text-2xl p-3">
+        <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
           <span>
             <Link href="/search-by-part-name">
               <a className="underline hover:text-blue-500">
@@ -312,8 +349,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
             &nbsp;
           </span>
         </div>
-        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl">
-          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full s:w-full xs:py-5 s:py-5">
+        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
+          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full s:w-full xs:py-5 s:py-5 xs:hidden">
             <Slider {...settings} className="py-10 p-2">
               <div>
                 <p className="text-xl font-bold text-center">
@@ -394,7 +431,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 </p>
               </div>
             </Slider>
-            <div className="py-5 p-10 xs:p-3 s:p-3 sm:p-5">
+            <div className="py-5 p-10 xs:p-3 s:p-3 sm:p-3">
               <h1 className="text-base font-bold text-blue-100 text-center pt-5">
                 EMIRATES-CAR
               </h1>
@@ -406,7 +443,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               </p>
             </div>
 
-            <div className="p-5 pt-10">
+            <div className="p-5 pt-10 sm:p-3">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722504.3860201286!2d51.71183150969869!3d24.337497293019872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1641654109734!5m2!1sen!2sin"
                 title="auto spare parts dubai"
@@ -418,10 +455,10 @@ export default function Home({ forms, partsposts, posts, cities }) {
               ></iframe>
             </div>
           </div>
-          <div className="w-2/3 xs:w-full md:w-full s:w-full 2xs:w-full sm:w-full">
+          <div className="w-2/3 xs:w-auto md:w-auto md:mx-5 s:w-auto s:mx-3 xs:mx-4 2xs:w-auto 2xs:mx-4">
             <form
               id="myForm"
-              className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+              className="w-full shadow-xl px-8 py-8 xs:px-2 xs:py-3 2xs:px-4 sm:px-4"
               method="POST"
               onSubmit={handleSubmit}
               target="hidden_iframe"
@@ -638,7 +675,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10">
         SEARCH BY MAKE
       </h1>
-      <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mr-3 shadow-2xl my-10">
+      <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
         {posts.map((post) => (
           <div key={post.id}>
             <Link
@@ -646,9 +683,19 @@ export default function Home({ forms, partsposts, posts, cities }) {
               as={"/search-by-make/" + post.make}
             >
               <a>
-                <main className="border p-1 rounded-xl xs:border-0 2xs:border-0 sm:border-0 hover:border-blue-600 hover:shadow-lg focus:border-blue-600">
-                  <p className="text-xs text-gray-600 px-3 font-medium hover:text-gray-800">
-                    <i className="fas fa-compass"></i> {post.make}
+                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                  <div className="flex justify-center">
+                    <Image
+                      alt={post.make}
+                      src={"/img/car-logos/" + post.img}
+                      className="object-scale-down shadow-xl"
+                      height={30}
+                      width={30}
+                    />
+                    <br />
+                  </div>
+                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                    {post.make.toUpperCase()}
                   </p>
                 </main>
               </a>
@@ -657,9 +704,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
         ))}
       </div>
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
-        SEARCH BY CITIES IN U.A.E
+        SEARCH BY LOCATION IN UAE
       </h1>
-      <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 shadow-2xl my-10">
+      <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
         {cities.map((post) => (
           <div key={post.id}>
             <Link
@@ -667,22 +714,15 @@ export default function Home({ forms, partsposts, posts, cities }) {
               as={"/search-by-cities-in-uae/" + post.city}
             >
               <a>
-                <main className="border p-1 rounded-xl xs:border-0 2xs:border-0 sm:border-0 hover:border-blue-600 hover:shadow-lg focus:border-blue-600">
-                  <p className="text-xs text-gray-600 px-3 font-medium hover:text-gray-800">
-                    <i className="fas fa-compass"></i> {post.city}
+                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                    {post.city.toUpperCase()}
                   </p>
                 </main>
               </a>
             </Link>
           </div>
         ))}
-      </div>
-
-      <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center">
-        WE DEAL IN ALMOST ANY BRANDS
-      </h1>
-      <div className="grid grid-cols-12 xs:mx-4 s:mx-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 s:grid s:grid-cols-5 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 2xs:mx-4 md:ml-11 shadow-2xl my-10 mx-10">
-        <CarLogos />
       </div>
       <Footer />
     </div>
@@ -709,8 +749,8 @@ export async function getStaticProps() {
     props: {
       forms,
       partsposts,
-      posts:uniqueMakeArray,
-      cities
+      posts: uniqueMakeArray,
+      cities,
     },
   };
 }

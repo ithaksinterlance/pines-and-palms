@@ -124,9 +124,55 @@ export default function Car({ make, model, partspost, uniqueMakeArray }) {
     <div>
       <Nav />
       <Head>
-        <title>
-          {make} - {model} Auto Spare Parts in UAE
-        </title>
+      <title>{make}- {model} Auto Spare Parts in UAE - Best Prices</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content={
+            make + model + "car Auto spare parts - New / Used / Genuine / Aftermarket parts"
+          }
+        />
+        <meta
+          name="keywords"
+          content={
+            make + model +
+            "spare parts," +
+            make + model +
+            "auto parts, " +
+            make + model +
+            "genuine spare parts," +
+            make + model +
+            "genuine auto parts," +
+            make + model +
+            "used spare parts," +
+            make + model +
+            "used auto parts," +
+            make + model +
+            "genuine spare parts dubai," +
+            make + model +
+            "genuine auto parts dubai," +
+            make + model +
+            "used spare parts dubai," +
+            make + model +
+            "used auto parts dubai," +
+            make + model +
+            "spare parts in uae," +
+            make + model +
+            "auto parts in uae," +
+            make + model +
+            "aftermarket spare parts in uae," +
+            make + model +
+            "aftermarket spare parts," +
+            make + model +
+            "car spares," +
+            make + model +
+            "car spares in uae," +
+            make + model +
+            "auto spares in uae, " +
+            make + model +
+            "auto spares"
+          }
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
@@ -298,7 +344,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray }) {
                 </div>
                 <div className="w-2/3 xs:w-screen  s:w-full md:w-full 2xs:w-full sm:w-full">
                   <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
-                    Searching for {make} - {model} in U.A.E? Fill out the
+                    Searching for {make} - {model} auto spare parts in U.A.E? Fill out the
                     inquiry down below.
                   </p>
                   <form

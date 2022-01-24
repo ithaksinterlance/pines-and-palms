@@ -26,7 +26,7 @@ export default class footer extends Component {
               <p className="pt-5 text-white font-extrabold">
                 ABOUT EMIRATES-CAR
               </p>
-              <p className="text-sm xs:text-xs pt-5 m-1 text-center font-medium">
+              <p className="text-sm xs:text-xs pt-5 m-1 text-center font-medium text-yellow-400">
                 We are dealing with auto spare parts for car, heavy truck, van,
                 buses, coupe, SUV, prime, Petrol based vehicles, Diesel based
                 vehicles, Used spare parts, After market parts, Genuine spare
@@ -34,6 +34,9 @@ export default class footer extends Component {
               </p>
             </div>
             <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto">
+            <p className="pt-5 text-white font-extrabold">
+                SOCIAL LINKS
+              </p>
               <p>
                 <a
                   className="text-xl leading-xl text-white"
@@ -58,6 +61,9 @@ export default class footer extends Component {
               </p>
             </div>
             <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto">
+            <p className="pt-5 text-white font-extrabold">
+                SHORTCUT LINKS
+              </p>
               <Link href="/search-by-part-name">
                 <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
                   Search parts by part name in UAE

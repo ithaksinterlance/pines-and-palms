@@ -255,11 +255,11 @@ export default function Forms({ posts, pos }) {
       </Head>
       <Nav />
       <div className="container place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
-        <div className="uppercase bg-blue-200 font-serif p-5 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-screen s:text-2xl 2xs:text-2xl ">
+        <div className="uppercase bg-blue-200 font-serif p-5 xl:mx-10 lg:mx-7 md:mx-5 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-auto s:text-2xl 2xs:text-2xl ">
           &nbsp;
           <span>
             <Link href="/search-by-part-name">
-              <a className="underline hover:text-blue-500">
+              <a className="underline xs:no-underline hover:text-blue-500">
                 SEARCH BY PART NAME
               </a>
             </Link>{" "}
@@ -267,18 +267,18 @@ export default function Forms({ posts, pos }) {
           | &nbsp;
           <span>
             <Link href="/search-by-cities-in-uae">
-              <a className="underline hover:text-blue-500">SEARCH BY CITY </a>
+              <a className="underline xs:no-underline hover:text-blue-500">SEARCH BY CITY </a>
             </Link>{" "}
           </span>
           | &nbsp;
           <span>
             <Link href="/search-by-make">
-              <a className="underline hover:text-blue-500">SEARCH BY MAKE</a>
+              <a className="underline xs:no-underline hover:text-blue-500">SEARCH BY MAKE</a>
             </Link>{" "}
           </span>
         </div>
-        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xs:w-screen 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl">
-          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full xs:py-5 ">
+        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-auto s:w-auto 2xs:w-auto sm:w-auto 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
+          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-auto s:w-auto s:py-5">
             <Slider {...settings} className="py-10 p-2">
               <div>
                 <p className="text-xl font-bold text-center">
@@ -383,7 +383,7 @@ export default function Forms({ posts, pos }) {
               ></iframe>
             </div>
           </div>
-          <div className="w-2/3 xs:w-full md:w-full 2xs:w-full sm:w-full">
+          <div className="w-2/3 xs:w-auto md:w-auto md:mx-5 s:w-auto 2xs:w-auto sm:w-auto ">
             <form
               id="myForm"
               className="w-full px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4 bg-white"
@@ -576,7 +576,7 @@ export default function Forms({ posts, pos }) {
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3">
-                <div className="w-full px-3 mb-6 xs:mb-0">
+                <div className="w-full px-3 mb-6 xs:mb-0 mt-2">
                   <button
                     type="submit"
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full xs:text-xs"

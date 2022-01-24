@@ -19,12 +19,12 @@ import Hand from "../public/img/hand-wave.png"
 export default class home_hero extends Component {
   render() {
     return (
-      <div className="py-10 xs:py-7 s:py-6">
+      <div className=" xs:py-7 s:py-6">
         <div className="bg-cover">
-          <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto sm:grid sm:grid-cols-1  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
+          <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
             <div>
               <div className="mt-10 ml-8 max-w-full sm:mt-12 sm:ml-6 md:mt-16 lg:mt-20 lg:ml-1 lg:px-8 xl:mt-28 md:ml-7 xl:ml-20 xs:mt-2 xs:text-left 2xs:mt-2 s:mt-2">
-                <div className="sm:text-center lg:text-left xs:text-center">
+                <div className="sm:ml-5 lg:text-left xs:text-center">
                   <h1 className="tracking-tight font-extrabold xl:text-6xl sm:text-3xl md:text-4xl lg:text-5xl xs:text-2xl s:text-xl xs:font-sans">
                     <p className="text-yellow-300 text-6xl font-sans pb-6">
                       Hi <Image src={Hand} alt="Auto Spare parts in UAE" height={53} width={53}/>
@@ -41,7 +41,7 @@ export default class home_hero extends Component {
                     Van, Buses in UAE. If you are in need of any
                     Spare parts contact us.
                   </p>
-                  <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start xs:pb-20 s:pb-20">
+                  <div className="mt-5 sm:mt-8 sm:flex lg:justify-start xs:pb-20 s:pb-20">
                     <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
                       <Link href="/#myForm">
                         <a className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125">
@@ -53,13 +53,13 @@ export default class home_hero extends Component {
                 </div>
               </div>
             </div>
-            <div className="mt-10 sm:mt-12 md:mt-16 lg:mt-5 hero_section_blob xs:hidden s:hidden 2xs:hidden sm:hidden">
+            <div className="mt-10 sm:mt-12 md:mt-16 lg:mt-5 hero_section_blob xs:hidden s:hidden 2xs:hidden">
               <Image src={Hero_img} alt="genuine auto spare parts" />
             </div>
           </div>
         </div>
-        <div className="container text-center mx-auto">
-          <div className="grid grid-cols-4 text-center gap-2 xs:grid xs:grid-cols-2 s:grid s:grid-cols-2  xs:gap-1 2xs:text-sm 2xs:mx-7 2xs:grid 2xs:grid-cols-2 md:px-2 xs:pb-10 s:pb-10 2xs:pb-10">
+        <div className="container text-center mx-auto pt-10">
+          <div className="grid grid-cols-4 text-center gap-2 xs:grid xs:grid-cols-2 s:grid s:grid-cols-2  xs:gap-1 2xs:text-sm 2xs:grid 2xs:grid-cols-2 md:px-2 xs:pb-10 s:pb-10 2xs:pb-10 mx-8 2xs:mx-5 s:mx-4 xs:mx-5">
             <div className="font-extrabold text-xl lg:text-base sm:text-xs md:text-sm uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:text-xs s:text-xs xs:shadow-none sm:shadow-none">
               <Image
                 src={NewCar}
@@ -107,9 +107,9 @@ export default class home_hero extends Component {
           </div>
         </div>
         <div className="bg-cover">
-          <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 2xs:mx-4 sm:grid sm:grid-cols-1 s:grid s:grid-cols-1 mt-20 s:mx-5  xs:mt-5 xl:ml-8 xs:text-xs xs:gap-1 s:mt-5 s:text-xs s:gap-1">
+          <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 2xs:mx-4 sm:grid sm:grid-cols-2 s:grid s:grid-cols-1 mt-20 s:mx-5  xs:mt-5 xl:ml-8 xs:text-xs xs:gap-1 s:mt-5 s:text-xs s:gap-1">
             <div className="mt-10 max-w-full sm:mt-12 sm:ml-6 md:mt-16 lg:mt-20 lg:ml-1 lg:px-8 xl:mt-28 md:ml-7 xl:ml-20  xs:mt-2 s:mt-2 xs:text-left 2xs:mt-2 2xs:ml-8">
-              <div className="sm:text-center lg:text-left xs:text-center">
+              <div className="sm:ml-5 lg:text-left xs:text-center">
                 <h1 className="tracking-tight font-extrabold xl:text-6xl sm:text-3xl md:text-4xl lg:text-5xl xs:text-2xl 2xs:text-xl s:text-3xl">
                   <span className="block xl:inline">
                     Get spare parts for any&nbsp;
@@ -128,10 +128,10 @@ export default class home_hero extends Component {
                   Wholesale spare parts, parts of the emirates, auto parts in
                   bulk from the UAE, truck parts wholesale.
                 </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-48 2xs:mx-auto sm:w-48 sm:mx-auto rounded-lg shadow-md">
+                <div className="mt-5 sm:mt-8 sm:flex lg:justify-start">
+                  <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-48 2xs:mx-auto sm:w-48 rounded-lg shadow-md">
                     <Link href="/#myForm">
-                      <a className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 s:py-2 s:text-xs s:my-2 2xs:text-sm 2xs:my-2 2xs:mb-10 focus:filter brightness-125">
+                      <a className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md lg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 s:py-2 s:text-xs s:my-2 2xs:text-sm 2xs:my-2 2xs:mb-10 focus:filter brightness-125">
                         Inquire Now
                       </a>
                     </Link>

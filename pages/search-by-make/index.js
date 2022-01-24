@@ -3,6 +3,7 @@ import Link from "next/link";
 import Footer from "../footer";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Make({ car, cities, posts, pos }) {
   const [Year, setYear] = useState("");
@@ -233,8 +234,16 @@ export default function Make({ car, cities, posts, pos }) {
     <div>
       <Nav />
       <Head>
-        <title>Search Auto Spare Parts by Car Make in UAE</title>
+        <title>Search Auto Spare Parts for any brands in UAE</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Explore the auto spare parts for your vehicles of high quality from high end manufacturer from our largest database that has wide variety of brands starting from the year 1909 to 2022. We deal with brands such as Ford, GMC, Chevrolet, Jeep, Hummer, Cadillac, Lincoln, Dodge, Chrysler, Mercury,Buick, RAM,Audi, Volkswagen, BMW, Mercedes Benz,Porsche, Opel, Toyota, Lexus, Nissan, Infinity,Honda,Mitsubishi,Mazda,Subaru,Suzuki,Daihatsu,Isuzu Datsun, Hyundai,KIA, Daewoo,Ssang Yong"
+        />
+        <meta
+          name="keywords"
+          content="spare parts, auto parts,  sapre parts in uae, auto parts in uae, genuine spare parts, genuine auto parts, used spare parts, used auto parts, genuine spare parts dubai, genuine auto parts dubai, used spare parts dubai, used auto parts dubai,spare parts in uae,auto parts in uae, aftermarket spare parts in uae, aftermarket spare parts,car spares, car spares in uae, auto spares in uae, auto spares"
+        />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
@@ -244,7 +253,9 @@ export default function Make({ car, cities, posts, pos }) {
               MAKES
             </h1>
             <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline">
-            <nobr className="text-blue-400 no-underline"><i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;</nobr>
+              <nobr className="text-blue-400 no-underline">
+                <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
+              </nobr>
               home{"/"}
             </p>
             <article>
@@ -257,7 +268,17 @@ export default function Make({ car, cities, posts, pos }) {
                     >
                       <a>
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
-                          {post.make}
+                          <div className="flex justify-center">
+                            <Image
+                              alt={post.make}
+                              src={"/img/car-logos/" + post.img}
+                              className="object-scale-down shadow-xl"
+                              height={30}
+                              width={30}
+                            />
+                            <br />
+                          </div>
+                          {post.make.toUpperCase()}
                         </main>
                       </a>
                     </Link>
@@ -523,8 +544,8 @@ export default function Make({ car, cities, posts, pos }) {
                   as={"/search-by-cities-in-uae/" + post.city}
                 >
                   <a>
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
-                      <i className="far fa-compass"></i> {post.city}
+                    <p className="text-base hover:text-blue-700 focus:text-blue-700 h-full text-gray-500">
+                      <i className="fas fa-map-marker-alt    "></i> {post.city}
                     </p>
                   </a>
                 </Link>

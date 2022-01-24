@@ -232,8 +232,57 @@ export default function Car({ car, cities, make, partspost, posts }) {
     <div>
       <Nav />
       <Head>
-        <title>{make} - Auto Spare Parts in UAE</title>
+        <title>{make}- Auto Spare Parts in UAE - Best Prices</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content={
+            "Explore with our team  the " +
+            make +
+            "spare parts of high quality with standards from our largest database that has wide variety of brands and its model starting from the year 1909 to 2022."
+          }
+        />
+        <meta
+          name="keywords"
+          content={
+            make +
+            "spare parts," +
+            make +
+            "auto parts, " +
+            make +
+            "genuine spare parts," +
+            make +
+            "genuine auto parts," +
+            make +
+            "used spare parts," +
+            make +
+            "used auto parts," +
+            make +
+            "genuine spare parts dubai," +
+            make +
+            "genuine auto parts dubai," +
+            make +
+            "used spare parts dubai," +
+            make +
+            "used auto parts dubai," +
+            make +
+            "spare parts in uae," +
+            make +
+            "auto parts in uae," +
+            make +
+            "aftermarket spare parts in uae," +
+            make +
+            "aftermarket spare parts," +
+            make +
+            "car spares," +
+            make +
+            "car spares in uae," +
+            make +
+            "auto spares in uae, " +
+            make +
+            "auto spares"
+          }
+        />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
@@ -250,8 +299,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
 
                 <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
                   <nobr className="text-blue-400 no-underline">
-                    <i className="fal fa-car-garage"></i> Current
-                    path:&nbsp;&nbsp;
+                    <i className="fal fa-car-garage"></i>
+                    Current path:&nbsp;&nbsp;
                   </nobr>
                   home{"/"}
                   <Link
@@ -260,7 +309,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   >
                     <a>{make}</a>
                   </Link>
-                  {"/"}
+                  {"/"}{" "}
                 </p>
               </div>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
@@ -271,13 +320,13 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       as={"/search-by-make/" + post.make + "/" + post.model}
                     >
                       <a>
-                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
-                          {post.model.replace("%2F", "/")}
+                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100 h-100">
+                          {post.model.replace("%2F", "/")}{" "}
                         </main>
                       </a>
                     </Link>
                   </div>
-                ))}
+                ))}{" "}
               </div>
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
@@ -365,7 +414,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                         </option>
                         {mke.map((m) => (
                           <option key={m}>{m}</option>
-                        ))}
+                        ))}{" "}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -404,9 +453,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                           .filter((s) => s.make === Make)
                           .map((s) => (
                             <option key={s.id} value={s.model}>
-                              {s.model}
+                              {s.model}{" "}
                             </option>
-                          ))}
+                          ))}{" "}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -498,7 +547,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       value={text}
                       autoComplete="off"
                       required
-                    />
+                    />{" "}
                     {suggestion &&
                       suggestion.map((suggestion, i) => (
                         <div
@@ -506,9 +555,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                           className="cursor-pointer border-gray-400 p-4"
                           onClick={() => onSuggestionHandler(suggestion)}
                         >
-                          {suggestion}
+                          {suggestion}{" "}
                         </div>
-                      ))}
+                      ))}{" "}
                   </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 py-2">
@@ -542,12 +591,13 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 >
                   <a>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
-                      <i className="far fa-compass"></i> {post.city}
+                      <i className="far fa-compass"></i>
+                      {post.city}{" "}
                     </p>
                   </a>
                 </Link>
               </div>
-            ))}
+            ))}{" "}
           </div>
         </div>
       </div>
@@ -560,13 +610,12 @@ export async function getStaticPaths() {
   const res = await fetch(`https://rozy.vercel.app/api/palms`);
   const data = await res.json();
   const paths = data.map((post) => ({
-    params: { make: post.make },
+    params: {
+      make: post.make,
+    },
   }));
 
-  return {
-    paths,
-    fallback: false,
-  };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {

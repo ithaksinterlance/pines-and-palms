@@ -518,7 +518,7 @@ export default function City({ cities, data, posts, pos }) {
                   as={"/search-by-make/" + post.make}
                 >
                   <a>
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 text-gray-500">
+                    <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
                       <i className="fa fa-mars-stroke" aria-hidden="true"></i>{" "}
                       {post.make}
                     </p>

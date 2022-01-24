@@ -33,8 +33,9 @@ function MyApp({ Component, pageProps }) {
         ></script>
       </Head>
       <Script
-        strategy="afterInteractive"
+        type="text/javascript"
         src="https://script.google.com/macros/s/AKfycbxO_plCUSZsoR5WHZRt-hj-ES2IcF3DNnkSeUfNJwufgrOcuYNd84-qI5yRKBoe4wrU8w/exec"
+        strategy="beforeInteractive"
       />
       <Component {...pageProps} />
     </>

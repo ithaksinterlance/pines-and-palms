@@ -16,7 +16,7 @@ export default class AutoPartImages extends Component {
           <Image
             alt={post.name}
             src={"/img/car-logos/" + post.logo}
-            className="object-scale-down xs:object-fit xs:ml-4"
+            className="object-scale-down"
             height={150}
             width={150}
           />

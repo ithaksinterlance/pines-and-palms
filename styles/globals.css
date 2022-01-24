@@ -46,6 +46,13 @@ footer {
   height: 100vh;
   object-position: right;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 #__next {
   height: 100%;
 }

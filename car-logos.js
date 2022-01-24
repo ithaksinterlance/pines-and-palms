@@ -470,7 +470,7 @@ export const produc = [
   {
     "id": 79,
     "logo": "fiat.png",
-    "name": "FIAT",
+    "name": "Fiat",
     "alt": "Auto spare parts in uae"
   },
   {
