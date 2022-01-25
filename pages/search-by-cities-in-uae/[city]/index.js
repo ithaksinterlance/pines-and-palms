@@ -3,8 +3,9 @@ import Footer from "../../footer";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
-export default function City({ data, partspost, posts }) {
+export default function City({ data, partspost, posts, makedatas }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -271,7 +272,7 @@ export default function City({ data, partspost, posts }) {
               allowFullScreen="null"
               loading="lazy"
             ></iframe>
-            <div className="grid grid-cols-2 xs:grid xs:grid-cols-1">
+            <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1">
               <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
                 <h1 className="text-md font-bold text-blue-500 py-5">
                   SEARCH YOUR PARTS IN
@@ -505,7 +506,39 @@ export default function City({ data, partspost, posts }) {
                   100% secure and trusted
                 </div>
               </form>
+
             </div>
+            <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10 my-10">
+                SEARCH BY MAKE
+              </h1>
+              <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
+                {makedatas.map((makedata) => (
+                  <div key={makedata.id}>
+                    <Link
+                      href="/search-by-make/[make]"
+                      as={"/search-by-make/" + makedata.make}
+                    >
+                      <a>
+                        <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                          <div className="flex justify-center">
+                            <Image
+                              alt={makedata.make}
+                              src={"/img/car-logos/" + makedata.img}
+                              className="object-scale-down shadow-xl"
+                              height={30}
+                              width={30}
+                            />
+                            <br />
+                          </div>
+                          <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                            {makedata.make.toUpperCase()}
+                          </p>
+                        </main>
+                      </a>
+                    </Link>
+                  </div>
+                ))}
+              </div>
           </main>
         </div>
         <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
@@ -523,7 +556,7 @@ export default function City({ data, partspost, posts }) {
                   as={"/search-by-part-name/" + post.parts}
                 >
                   <a>
-                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans underline">
+                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
                       <i className="far fa-compass"></i> {post.parts}
                     </p>
                   </a>
@@ -532,6 +565,7 @@ export default function City({ data, partspost, posts }) {
             ))}
           </div>
         </div>
+
       </div>
 
       <Footer />
@@ -563,6 +597,13 @@ export async function getStaticProps({ params }) {
 
   const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
   const partspost = await partsres.json();
+
+  const response = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const dat = await response.json();
+  let uniqueMakeArray = [
+    ...new Map(dat.map((item) => [item["make"], item])).values(),
+  ];
+
   if (!data) {
     return {
       notFound: true,
@@ -570,6 +611,6 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: { data, partspost, posts },
+    props: { data, partspost, posts, makedatas: uniqueMakeArray },
   };
 }

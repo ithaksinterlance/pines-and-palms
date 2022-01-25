@@ -10,7 +10,7 @@ import avatar2 from "../../../public/img/avatar2.jpg";
 import avatar3 from "../../../public/img/avatar3.jpg";
 import CarLogos from "../../carLogos";
 
-export default function Parts({ data, cities }) {
+export default function Parts({ data, cities, posts }) {
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
   const [Email, setEmail] = useState("");
@@ -135,7 +135,7 @@ export default function Parts({ data, cities }) {
                 </nobr>
                 BELOW
               </div>
-              <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
+              <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3 ">
                 <nobr className="text-blue-400 no-underline">
                   <i className="fal fa-car-garage"></i> Current
                   path:&nbsp;&nbsp;
@@ -145,13 +145,11 @@ export default function Parts({ data, cities }) {
                   href="/search-by-parts/[parts]"
                   as={"/search-by-parts/" + data.parts}
                 >
-                  <a>
-                    {data.parts}
-                  </a>
+                  <a>{data.parts}</a>
                 </Link>
                 {"/"}
               </p>
-              <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl xs:w-screen  text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
+              <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl xs:w-screen  text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10">
                 &nbsp;
                 <span>
                   <Link href="/search-by-part-name">
@@ -177,7 +175,7 @@ export default function Parts({ data, cities }) {
                   </Link>{" "}
                 </span>
               </div>
-              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 ">
+              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10">
                 <div className="w-1/3 bg-blue-700 s:hidden 2xs:hidden xs:py-5 xs:hidden">
                   <Slider {...settings} className="py-10 p-2">
                     <div>
@@ -436,11 +434,36 @@ export default function Parts({ data, cities }) {
                   </form>
                 </div>
               </div>
-              <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 s:text-xs">
-                WE DEAL IN ALMOST ANY BRANDS
+              <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10 my-10">
+                SEARCH BY MAKE
               </h1>
-              <div className="grid grid-cols-12  md:mx-4 sm:ml-0 xs:grid xs:grid-cols-5 s:grid s:grid-cols-4 sm:grid sm:grid-cols-5 2xs:grid 2xs:grid-cols-5 gap-1 md:ml-11 shadow-2xl xs:mx-2 s:ml-3">
-                <CarLogos />
+              <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
+                {posts.map((post) => (
+                  <div key={post.id}>
+                    <Link
+                      href="/search-by-make/[make]"
+                      as={"/search-by-make/" + post.make}
+                    >
+                      <a>
+                        <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                          <div className="flex justify-center">
+                            <Image
+                              alt={post.make}
+                              src={"/img/car-logos/" + post.img}
+                              className="object-scale-down shadow-xl"
+                              height={30}
+                              width={30}
+                            />
+                            <br />
+                          </div>
+                          <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                            {post.make.toUpperCase()}
+                          </p>
+                        </main>
+                      </a>
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
           </main>
@@ -494,6 +517,12 @@ export async function getStaticProps({ params }) {
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
   const cities = await cityresponse.json();
 
+  const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const dat = await resp.json();
+  let uniqueMakeArray = [
+    ...new Map(dat.map((item) => [item["make"], item])).values(),
+  ];
+
   if (!data) {
     return {
       notFound: true,
@@ -501,6 +530,6 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: { data, cities },
+    props: { data, cities, posts: uniqueMakeArray },
   };
 }
