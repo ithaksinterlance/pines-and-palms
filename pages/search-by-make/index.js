@@ -285,39 +285,38 @@ export default function Make({ car, cities, posts, pos }) {
               MAKES
             </h1>
             <div className="flex justify-center">
-        <div className="pt-3">
-          <input
-            className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
-            id="partname"
-            type="search"
-            placeholder="Eg. Toyota, Ford, BMW, Audi..."
-            onChange={(e) => onMakeFormChange(e.target.value)}
-            value={searchMake}
-            autoComplete="off"
-            required
-          />
-          <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
-          {recommend &&
-            recommend.map((recommend, i) => (
-              <div
-                key={i}
-                className="cursor-pointer  text-base p-1 bg-white"
-                onClick={() => onMakeSuggestionHandler(recommend)}
-                width= "100%"
-              >
-                <a
-                  href={`https://emirates-car.com/search-by-part-name/${recommend}`}
-                  rel="noopener noreferrer"
-                  target="_newtab"
-                >
-                  {recommend}
-                </a>
+              <div className="pt-3">
+                <input
+                  className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
+                  id="partname"
+                  type="search"
+                  placeholder="Eg. Toyota, Ford, BMW, Audi..."
+                  onChange={(e) => onMakeFormChange(e.target.value)}
+                  value={searchMake}
+                  autoComplete="off"
+                  required
+                />
+                <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
+                  {recommend &&
+                    recommend.map((recommend, i) => (
+                      <div
+                        key={i}
+                        className="cursor-pointer  text-base p-1 bg-white"
+                        onClick={() => onMakeSuggestionHandler(recommend)}
+                        width="100%"
+                      >
+                        <a
+                          href={`https://emirates-car.com/search-by-part-name/${recommend}`}
+                          rel="noopener noreferrer"
+                          target="_newtab"
+                        >
+                          {recommend}
+                        </a>
+                      </div>
+                    ))}
+                </div>
               </div>
-            ))}
-          </div>
-
-        </div>
-      </div>
+            </div>
             <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline">
               <nobr className="text-blue-400 no-underline">
                 <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
@@ -363,29 +362,26 @@ export default function Make({ car, cities, posts, pos }) {
               </Link>{" "}
             </div>
             <div className="grid grid-cols-2 xs:grid-cols-1 xs:grid py-5">
-              <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
-                UAE Automobile industry is slowly shifting towards a service
-                oriented business model based on consumer data and customer
-                experience. Now companies are trying to adapt to the current
-                need of the trends Markets. They rely on consumer data for
-                knowing the sale interest of the customers based on the
-                experience through analytics software. Owners are now thinking
-                ways to accommodate the market through the trends analytics in
-                order to keep the company into their targetted level. Previously
-                there were cars running on petrol in which UAE is one of the
-                largest producer and diesel. Since the beginning era of electric
-                vehicle have started, many people are opting for electric
-                vehicles in spite of its shortcomings because it is more
-                affordable comapared to vehicle running on diesel or petrol. By
-                this transition there is no difference in usage of irreversible
-                energy.
-                <p>
-                  We are dealing with auto spare parts for car, heavy truck,
-                  van, buses, coupe, SUV, prime, Petrol based vehicles, Diesel
-                  based vehicles, Used spare parts, After market parts, Genuine
-                  spare parts and New parts etc. Contact us for any inquiry.
-                </p>
+              <p className="text-xs font-medium text-gray-500 xs:text-sm md:text-base p-5">
+                We are dealing with auto spare parts for car, heavy truck, van,
+                buses, coupe, SUV, prime, Petrol based vehicles, Diesel based
+                vehicles, Used spare parts, After market parts, Genuine spare
+                parts and New parts etc. Contact us for any inquiry. We deal in
+                auto spare parts such as{" "}
+                {posts.map((p) => (
+                  <Link
+                    href="/search-by-part-name/[parts]"
+                    as={"/search-by-part-name/" + p.parts}
+                    key={p.id}
+                  >
+                    <a>
+                      {p.parts}
+                      {", "}
+                    </a>
+                  </Link>
+                ))}
               </p>
+              <div>
               <form
                 id="myForm"
                 className="w-full max-w-lg  shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
@@ -593,7 +589,7 @@ export default function Make({ car, cities, posts, pos }) {
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
                 </div>
-              </form>
+              </form></div>
             </div>
           </main>
         </div>

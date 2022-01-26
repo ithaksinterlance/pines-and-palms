@@ -10,7 +10,7 @@ import avatar3 from "../../../../public/img/avatar3.jpg";
 import Head from "next/head";
 import CarLogos from "../../../carLogos";
 
-export default function Car({ make, model, partspost, uniqueMakeArray }) {
+export default function Car({ make, model, partspost, uniqueMakeArray, makeArray }) {
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
   const [Email, setEmail] = useState("");
@@ -124,52 +124,74 @@ export default function Car({ make, model, partspost, uniqueMakeArray }) {
     <div>
       <Nav />
       <Head>
-      <title>{make}- {model} Auto Spare Parts in UAE - Best Prices</title>
+        <title>
+          {make}- {model} Auto Spare Parts in UAE - Best Prices
+        </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
           content={
-            make + model + "car Auto spare parts - New / Used / Genuine / Aftermarket parts"
+            make +
+            model +
+            "car Auto spare parts - New / Used / Genuine / Aftermarket parts"
           }
         />
         <meta
           name="keywords"
           content={
-            make + model +
+            make +
+            model +
             "spare parts," +
-            make + model +
+            make +
+            model +
             "auto parts, " +
-            make + model +
+            make +
+            model +
             "genuine spare parts," +
-            make + model +
+            make +
+            model +
             "genuine auto parts," +
-            make + model +
+            make +
+            model +
             "used spare parts," +
-            make + model +
+            make +
+            model +
             "used auto parts," +
-            make + model +
+            make +
+            model +
             "genuine spare parts dubai," +
-            make + model +
+            make +
+            model +
             "genuine auto parts dubai," +
-            make + model +
+            make +
+            model +
             "used spare parts dubai," +
-            make + model +
+            make +
+            model +
             "used auto parts dubai," +
-            make + model +
+            make +
+            model +
             "spare parts in uae," +
-            make + model +
+            make +
+            model +
             "auto parts in uae," +
-            make + model +
+            make +
+            model +
             "aftermarket spare parts in uae," +
-            make + model +
+            make +
+            model +
             "aftermarket spare parts," +
-            make + model +
+            make +
+            model +
             "car spares," +
-            make + model +
+            make +
+            model +
             "car spares in uae," +
-            make + model +
+            make +
+            model +
             "auto spares in uae, " +
-            make + model +
+            make +
+            model +
             "auto spares"
           }
         />
@@ -344,8 +366,8 @@ export default function Car({ make, model, partspost, uniqueMakeArray }) {
                 </div>
                 <div className="w-2/3 xs:w-screen  s:w-full md:w-full 2xs:w-full sm:w-full">
                   <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
-                    Searching for {make} - {model} auto spare parts in U.A.E? Fill out the
-                    inquiry down below.
+                    Searching for {make} - {model} auto spare parts in U.A.E?
+                    Fill out the inquiry down below.
                   </p>
                   <form
                     onSubmit={handleSubmit}
@@ -517,10 +539,36 @@ export default function Car({ make, model, partspost, uniqueMakeArray }) {
                 </div>
               </div>
               <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 xs:hidden sm:hidden s:hidden 2xs:hidden">
-                WE DEAL IN ALMOST ANY BRANDS
+                WE ALSO DEAL IN OTHER BRANDS
               </h1>
+              <p></p>
               <div className="grid grid-cols-12  md:mx-4 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 2xs:mx-4 md:ml-11 shadow-2xl my-10">
-                <CarLogos />
+                {makeArray.map((p) => (
+                  <div key={p.id}>
+                    <Link
+                      href="/search-by-make/[make]"
+                      as={"/search-by-make/" + p.make}
+                    >
+                      <a>
+                        <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                          <div className="flex justify-center">
+                            <Image
+                              alt={p.make}
+                              src={"/img/car-logos/" + p.img}
+                              className="object-scale-down shadow-xl"
+                              height={30}
+                              width={30}
+                            />
+                            <br />
+                          </div>
+                          <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                            {p.make.toUpperCase()}
+                          </p>
+                        </main>
+                      </a>
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
           </main>
@@ -575,10 +623,16 @@ export async function getStaticProps({ params }) {
     ...new Map(dat.map((item) => [item["model"], item])).values(),
   ];
 
+  const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const data = await resp.json();
+  let makeArray = [
+    ...new Map(data.map((item) => [item["make"], item])).values(),
+  ];
+
   const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
   const partspost = await partsres.json();
 
   return {
-    props: { make, model, partspost, uniqueMakeArray },
+    props: { make, model, partspost, uniqueMakeArray, makeArray },
   };
 }

@@ -237,9 +237,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
         <meta
           name="description"
           content={
-            "Explore with our team  the " +
+            "Explore with our dealer your " +
             make +
-            "spare parts of high quality with standards from our largest database that has wide variety of brands and its model starting from the year 1909 to 2022."
+            "spare parts of high quality with standards from our largest database that has wide variety of brands and its model starting from the year 1909 to 2022 with 10,000+ models."
           }
         />
         <meta
@@ -341,27 +341,28 @@ export default function Car({ car, cities, make, partspost, posts }) {
               </Link>{" "}
             </div>
             <div className="grid grid-cols-2 xs:grid-cols-1 xs:grid py-5">
-              <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
-                UAE Automobile industry is slowly shifting towards a service
-                oriented business model based on consumer data and customer
-                experience. Now companies are trying to adapt to the current
-                need of the trends Markets. They rely on consumer data for
-                knowing the sale interest of the customers based on the
-                experience through analytics software. Owners are now thinking
-                ways to accommodate the market through the trends analytics in
-                order to keep the company into their targetted level. Previously
-                there were cars running on petrol in which UAE is one of the
-                largest producer and diesel. Since the beginning era of electric
-                vehicle have started, many people are opting for electric
-                vehicles in spite of its shortcomings because it is more
-                affordable compared to vehicle running on diesel or petrol. By
-                this transition there is no difference in usage of irreversible
-                energy.
+              <p className="text-xs font-medium text-gray-500 xs:text-sm md:text-base p-5">
                 <p>
                   We are dealing with auto spare parts for car, heavy truck,
                   van, buses, coupe, SUV, prime, Petrol based vehicles, Diesel
                   based vehicles, Used spare parts, After market parts, Genuine
                   spare parts and New parts etc. Contact us for any inquiry.
+                </p>
+                <p>
+                  Look out for us in your location. We supply auto spare parts
+                  in any cities of UAE including{" "}
+                  {cities.map((post) => (
+                    <Link
+                      href="/search-by-cities-in-uae/[city]"
+                      as={"/search-by-cities-in-uae/" + post.city}
+                      key={post.id}
+                    >
+                      <a>
+                        {post.city}
+                        {","}
+                      </a>
+                    </Link>
+                  ))}
                 </p>
               </p>
               <form
