@@ -254,12 +254,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
   return (
     <div>
       <Head>
-        <title>Search Auto Spare Parts in UAE | Emirates-car.com</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          name="description"
-          content="Explore with us the wide range of Auto spare parts accessories quality used, aftermarket, genuine and new products that caters Your vehicle's need in UAE."
-        />
+<title>Search Auto Spare Parts in UAE | Emirates-car.com</title>
+<meta name="title" content="Search Auto Spare Parts in UAE | Emirates-car.com"/>
+<meta name="description" content="Explore with us the wide range of Auto spare parts accessories quality used, aftermarket, genuine and new products that caters Your vehicle's need in UAE."/>
       </Head>
       <Nav />
       <div className="flex justify-center">
