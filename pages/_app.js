@@ -9,8 +9,6 @@ function MyApp({Component, pageProps}) {
     <>
       <Head>
         <meta name="google-site-verification" content="2dbXrKrxCBjzz1bLwaw_6nd4YEhhviwPLiGq6fLXPoU"/>
-
-
         <link rel="shortcut icon" href="/favicon.png"/>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
         <script dangerouslySetInnerHTML={
@@ -21,7 +19,7 @@ function MyApp({Component, pageProps}) {
           referrerPolicy="no-referrer"/>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default" async></script>
       </Head>
-      <Script type="text/javascript" src="https://script.google.com/macros/s/AKfycbxO_plCUSZsoR5WHZRt-hj-ES2IcF3DNnkSeUfNJwufgrOcuYNd84-qI5yRKBoe4wrU8w/exec" strategy="beforeInteractive"/>
+      <Script type="text/javascript" src="https://script.google.com/macros/s/AKfycbxO_plCUSZsoR5WHZRt-hj-ES2IcF3DNnkSeUfNJwufgrOcuYNd84-qI5yRKBoe4wrU8w/exec" strategy="afterInteractive"/>
       <Component {...pageProps}/>
     </>
   );

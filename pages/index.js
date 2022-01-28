@@ -254,9 +254,43 @@ export default function Home({ forms, partsposts, posts, cities }) {
   return (
     <div>
       <Head>
-<title>Search Auto Spare Parts in UAE | Emirates-car.com</title>
-<meta name="title" content="Search Auto Spare Parts in UAE | Emirates-car.com"/>
-<meta name="description" content="Explore with us the wide range of Auto spare parts accessories quality used, aftermarket, genuine and new products that caters Your vehicle's need in UAE."/>
+        <title>Quick Auto Spare Part Hunt in UAE | Emirates-car.com</title>
+        <meta
+          name="title"
+          content="Quick Auto Spare Part Hunt in UAE | Emirates-car.com"
+        />
+        <meta
+          name="description"
+          content="Explore from our immensively large-scale database, your New/ Used/ Genuine/ Aftermarket auto spare parts for your Vehicle needs - Car/Jeep/Van/Truck/Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://emirates-car.com/" />
+        <meta
+          property="og:title"
+          content="Quick Auto Spare Part Hunt in UAE | Emirates-car.com"
+        />
+        <meta
+          property="og:description"
+          content="Explore from our immensively large-scale database, your New/ Used/ Genuine/ Aftermarket auto spare parts for your Vehicle needs - Car/Jeep/Van/Truck/Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
+        />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+
+        <meta property="twitter:url" content="https://emirates-car.com/" />
+        <meta
+          property="twitter:title"
+          content="Quick Auto Spare Part Hunt in UAE | Emirates-car.com"
+        />
+        <meta
+          property="twitter:description"
+          content="Explore from our immensively large-scale database, your New/ Used/ Genuine/ Aftermarket auto spare parts for your Vehicle needs - Car/Jeep/Van/Truck/Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
+        />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
       </Head>
       <Nav />
       <div className="flex justify-center">
@@ -272,25 +306,24 @@ export default function Home({ forms, partsposts, posts, cities }) {
             required
           />
           <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
-          {suggestion &&
-            suggestion.map((suggestion, i) => (
-              <div
-                key={i}
-                className="cursor-pointer  text-base p-1 bg-white"
-                onClick={() => onSuggestionHandler(suggestion)}
-                width= "100%"
-              >
-                <a
-                  href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
-                  rel="noopener noreferrer"
-                  target="_newtab"
+            {suggestion &&
+              suggestion.map((suggestion, i) => (
+                <div
+                  key={i}
+                  className="cursor-pointer  text-base p-1 bg-white"
+                  onClick={() => onSuggestionHandler(suggestion)}
+                  width="100%"
                 >
-                  {suggestion}
-                </a>
-              </div>
-            ))}
+                  <a
+                    href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
+                    rel="noopener noreferrer"
+                    target="_newtab"
+                  >
+                    {suggestion}{" "}
+                  </a>
+                </div>
+              ))}{" "}
           </div>
-
         </div>
       </div>
 
@@ -335,7 +368,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </span>
           <span>
             <Link href="/search-by-cities-in-uae">
-              <a className="underline hover:text-blue-500">SEARCH BY CITY </a>
+              <a className="underline hover:text-blue-500">SEARCH BY CITY</a>
             </Link>{" "}
             &nbsp;|
           </span>
@@ -503,7 +536,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       </option>
                       {make.map((m) => (
                         <option key={m}>{m}</option>
-                      ))}
+                      ))}{" "}
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                       <svg
@@ -542,9 +575,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
                         .filter((s) => s.make === Make)
                         .map((s) => (
                           <option key={s.id} value={s.model}>
-                            {s.model}
+                            {s.model}{" "}
                           </option>
-                        ))}
+                        ))}{" "}
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                       <svg
@@ -636,7 +669,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     value={text}
                     autoComplete="off"
                     required
-                  />
+                  />{" "}
                   {suggestion &&
                     suggestion.map((suggestion, i) => (
                       <div
@@ -644,9 +677,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
                         className="cursor-pointer border-gray-400 p-4"
                         onClick={() => onSuggestionHandler(suggestion)}
                       >
-                        {suggestion}
+                        {suggestion}{" "}
                       </div>
-                    ))}
+                    ))}{" "}
                 </div>
               </div>
 
@@ -692,13 +725,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     <br />
                   </div>
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                    {post.make.toUpperCase()}
+                    {post.make.toUpperCase()}{" "}
                   </p>
                 </main>
               </a>
             </Link>
           </div>
-        ))}
+        ))}{" "}
       </div>
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
         SEARCH BY LOCATION IN UAE
@@ -713,20 +746,20 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <a>
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                    {post.city.toUpperCase()}
+                    {post.city.toUpperCase()}{" "}
                   </p>
                 </main>
               </a>
             </Link>
           </div>
-        ))}
+        ))}{" "}
       </div>
       <Footer />
     </div>
   );
 }
 export async function getStaticProps() {
-  //forms
+  // forms
   const respo = await fetch(`https://rozy.vercel.app/api/palms`);
   const forms = await respo.json();
 
