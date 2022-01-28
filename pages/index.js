@@ -271,7 +271,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale database, your New/ Used/ Genuine/ Aftermarket auto spare parts for your Vehicle needs - Car/Jeep/Van/Truck/Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
         />
         <meta
           property="og:image"
@@ -285,7 +285,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         />
         <meta
           property="twitter:description"
-          content="Explore from our immensively large-scale database, your New/ Used/ Genuine/ Aftermarket auto spare parts for your Vehicle needs - Car/Jeep/Van/Truck/Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
         />
         <meta
           property="twitter:image"
