@@ -9,6 +9,7 @@ function MyApp({Component, pageProps}) {
     <>
       <Head>
         <meta name="google-site-verification" content="2dbXrKrxCBjzz1bLwaw_6nd4YEhhviwPLiGq6fLXPoU"/>
+        <meta name="yandex-verification" content="1a59e5a3d5ee0eeb" />
         <link rel="shortcut icon" href="/favicon.png"/>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
         <script dangerouslySetInnerHTML={

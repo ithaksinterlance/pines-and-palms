@@ -255,42 +255,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
     <div>
       <Head>
         <title>Quick Auto Spare Part Hunt in UAE | Emirates-car.com</title>
-        <meta
-          name="title"
-          content="Quick Auto Spare Part Hunt in UAE | Emirates-car.com"
-        />
-        <meta
-          name="description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://emirates-car.com/" />
-        <meta
-          property="og:title"
-          content="Quick Auto Spare Part Hunt in UAE | Emirates-car.com"
-        />
-        <meta
-          property="og:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
-        />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-
-        <meta property="twitter:url" content="https://emirates-car.com/" />
-        <meta
-          property="twitter:title"
-          content="Quick Auto Spare Part Hunt in UAE | Emirates-car.com"
-        />
-        <meta
-          property="twitter:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
-        />
-        <meta
-          property="twitter:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
       </Head>
       <Nav />
       <div className="flex justify-center">
@@ -328,10 +292,16 @@ export default function Home({ forms, partsposts, posts, cities }) {
       </div>
 
       <Hero />
-      <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2">
+      <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
         <h1 className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
           ABOUT EMIRATES CAR
         </h1>
+        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
+          Explore from our immensively large-scale database, your New / Used /
+          Genuine / Aftermarket auto spare parts for your Vehicle needs - Car /
+          Jeep / Van / Truck / Buses in Your city in UAE especially in the main
+          cities like Dubai, Sharjah, Abu dhabi, Ajman and other city.
+        </p>
         <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
           We are dealing with auto spare parts for car, heavy truck, van, buses,
           coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles, Used
@@ -355,6 +325,305 @@ export default function Home({ forms, partsposts, posts, cities }) {
       </div>
       <div className="mx-auto py-20">
         <Count />
+      </div>
+      <h1 className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
+          POPULAR BRANDS
+        </h1>
+      <div className="grid grid-cols-7 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
+        <div>
+          <Link href="https://emirates-car.com/search-by-make/Ford">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="toyota spare parts in uae"
+                    src="/img/car-logos/toyota.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Toyota
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Mitsubishi">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Mitsubishi spare parts in uae"
+                    src="/img/car-logos/mitsubishi.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Mitsubishi
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Mercedes-benz">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Mercedes-benz spare parts in uae"
+                    src="/img/car-logos/mercedesbenz.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Mercedes-benz
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Nissan">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="toyota spare parts in uae"
+                    src="/img/car-logos/nissan.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Nissan
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Ford">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Ford spare parts in uae"
+                    src="/img/car-logos/Ford.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Ford
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Hyundai">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Hyundai spare parts in uae"
+                    src="/img/car-logos/hyundai.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Hyundai
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Ford">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Volkswagon spare parts in uae"
+                    src="/img/car-logos/volkswagon.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Volkswagon
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Honda">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Honda spare parts in uae"
+                    src="/img/car-logos/honda.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Honda
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Lexus">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="toyota spare parts in uae"
+                    src="/img/car-logos/lexus.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Lexus
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Acura">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="toyota spare parts in uae"
+                    src="/img/car-logos/acura.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Acura
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Kia">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Kia spare parts in uae"
+                    src="/img/car-logos/kia.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Kia
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Porsche">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="porsche spare parts in uae"
+                    src="/img/car-logos/porsche.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Porsche
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Chevrolet">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Chevrolet spare parts in uae"
+                    src="/img/car-logos/chevrolet.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Chevrolet
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link href="/search-by-make/Land Rover">
+            <a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <div className="flex justify-center">
+                  <Image
+                    alt="Land Rover spare parts in uae"
+                    src="/img/car-logos/land_rover.png"
+                    className="object-scale-down shadow-xl"
+                    height={30}
+                    width={30}
+                  />
+                  <br />
+                </div>
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  Land Rover
+                </p>
+              </main>
+            </a>
+          </Link>
+        </div>
       </div>
       <div className="place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
         <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
@@ -703,7 +972,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       </div>
       <Featured />
       <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10">
-        SEARCH BY MAKE
+        SEARCH BY BRANDS
       </h1>
       <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
         {posts.map((post) => (

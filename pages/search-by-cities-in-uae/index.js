@@ -264,7 +264,6 @@ export default function City({ cities, data, posts, pos }) {
     <div>
       <Head>
         <title>Search Auto Spare Parts by Cities in UAE</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Nav />
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
@@ -276,7 +275,7 @@ export default function City({ cities, data, posts, pos }) {
                 <nobr className="text-blue-700 text-6xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
                   &nbsp;<i className="fa fa-map-pin" aria-hidden="true"></i>
                 </nobr>
-                &nbsp;&nbsp; SELECT YOUR PARTS BY CITY IN U.A.E
+                &nbsp;&nbsp; SELECT YOUR PARTS BY LOCATION IN U.A.E
               </h1>
               <div className="flex justify-center">
                 <div className="pt-3">
