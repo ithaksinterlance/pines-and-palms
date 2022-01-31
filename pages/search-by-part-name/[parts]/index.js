@@ -8,7 +8,6 @@ import Slider from "react-slick";
 import avatar1 from "../../../public/img/avatar1.jpeg";
 import avatar2 from "../../../public/img/avatar2.jpg";
 import avatar3 from "../../../public/img/avatar3.jpg";
-import CarLogos from "../../carLogos";
 
 export default function Parts({ data, cities, posts }) {
   const [Make, setMake] = useState("");
@@ -140,14 +139,9 @@ export default function Parts({ data, cities, posts }) {
                   <i className="fal fa-car-garage"></i> Current
                   path:&nbsp;&nbsp;
                 </nobr>
-                home{"/"}
-                <Link
-                  href="/search-by-parts/[parts]"
-                  as={"/search-by-parts/" + data.parts}
-                >
-                  <a>{data.parts}</a>
-                </Link>
-                {"/"}
+                index{">>>"}
+                  {data.parts}
+                {">>>"}
               </p>
               <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl xs:w-screen  text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10">
                 &nbsp;
@@ -258,9 +252,9 @@ export default function Parts({ data, cities, posts }) {
                     </div>
                   </Slider>
                   <div className="py-5 p-10">
-                    <h1 className="text-base font-bold text-blue-100 text-center pt-5">
+                    <p className="text-base font-bold text-blue-100 text-center pt-5">
                       EMIRATES-CAR
-                    </h1>
+                    </p>
                     <p className="text-sm text-white text-center pt-5">
                       We are dealing with auto spare parts for car, heavy truck,
                       van, buses, coupe, SUV, prime, Petrol based vehicles,
@@ -434,9 +428,9 @@ export default function Parts({ data, cities, posts }) {
                   </form>
                 </div>
               </div>
-              <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10 my-10">
+              <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10 my-10">
                 SEARCH BY MAKE
-              </h1>
+              </p>
               <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
                 {posts.map((post) => (
                   <div key={post.id}>
@@ -444,7 +438,7 @@ export default function Parts({ data, cities, posts }) {
                       href="/search-by-make/[make]"
                       as={"/search-by-make/" + post.make}
                     >
-                      <a>
+                      <a title={post.make +" "+ data.parts + " in uae"}>
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image
@@ -464,6 +458,42 @@ export default function Parts({ data, cities, posts }) {
                     </Link>
                   </div>
                 ))}
+              </div>
+              <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+                <h1 className="text-base font-medium text-gray-500 p-5">
+                  We deal with any country auto spare parts including japanese,
+                  american, german, chinese, indian, Korean, french, british in
+                  UAE. We also operate in main cities such as dubai, sharjah,
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc.
+                  We provide auto spare parts for any vehicles including :
+              <ul className="list-disc">
+                <li>{data.parts} New auto spare parts in uae</li>
+                <li>{data.parts} Used auto spare parts in uae</li>
+                <li>{data.parts} Genuine auto spare parts in uae</li>
+                <li>{data.parts} Aftermarket auto spare parts in uae</li>
+              </ul>
+                </h1>
+                <p className="text-base font-medium text-gray-500 p-5">
+                  UAE Automobile industry is slowly shifting towards a service
+                  oriented business model based on consumer data and customer
+                  experience. Now companies are trying to adapt to the current
+                  need of the trends Markets. They rely on consumer data for
+                  knowing the sale interest of the customers based on the
+                  experience through analytics software. Owners are now thinking
+                  ways to accommodate the market through the trends analytics in
+                  order to keep the company into their targeted level.
+                  Previously there were cars running on petrol in which UAE is
+                  one of the largest producer and diesel. Since the beginning
+                  era of electric vehicle have started, many people are opting
+                  for electric vehicles in spite of its shortcomings because it
+                  is more affordable comapared to vehicle running on diesel or
+                  petrol. By this transition there is no difference in usage of
+                  irreversible energy.
+                </p>
+                <p className="text-base font-medium text-gray-500 p-5">
+
+                </p>
+
               </div>
             </div>
           </main>

@@ -1,11 +1,13 @@
-import Nav from "../../nav";
-import Footer from "../../footer";
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
-import Link from "next/link";
+import Navbar from "../nav";
 import Image from "next/image";
+import Link from "next/link";
+import Germany from "../../public/img/icons/germany.png";
+import Footer from "../footer";
+import Head from "next/head";
+import Count from "../service-countup";
 
-export default function City({ data, partspost, posts, makedatas }) {
+export default function German({ partsposts, posts }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -13,14 +15,14 @@ export default function City({ data, partspost, posts, makedatas }) {
   const [Whatsappno, setWhatsappno] = useState("");
   const [formPartname, setFormPartname] = useState([]);
   const [text, setText] = useState("");
-  const [City, setCity] = useState("");
   const [suggestion, setSuggestion] = useState([]);
+  const [Address, setAddress] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
       var part = [];
-      for (var i in partspost) {
-        var filtered = partspost[i].parts;
+      for (var i in partsposts) {
+        var filtered = partsposts[i].parts;
         part.push(filtered);
       }
       setFormPartname(part);
@@ -44,8 +46,7 @@ export default function City({ data, partspost, posts, makedatas }) {
     setSuggestion(matches);
     setText(text);
   };
-
-  const ma = [
+  const mke = [
     "Ford",
     "Chrysler",
     "Citroen",
@@ -142,31 +143,24 @@ export default function City({ data, partspost, posts, makedatas }) {
     "Polestar",
     "Kandi",
   ];
-
-  const make = ma.sort();
+  const make = mke.sort();
   function handleYearChange(event) {
     setYear(event.target.value);
-    console.log(Year);
   }
   function handleMakeChange(event) {
     setMake(event.target.value);
-    console.log(Make);
   }
   function handleModelChange(event) {
     setModel(event.target.value);
-    console.log(Model);
-  }
-  function handleCityChange(event) {
-    setCity(data.city);
-    console.log(data.city);
   }
   function handleWhatsAppNoChange(event) {
     setWhatsappno(event.target.value);
-    console.log(Whatsappno);
   }
   function handleEmailChange(event) {
     setEmail(event.target.value);
-    console.log(Email);
+  }
+  function handleAddressChange(event) {
+    setAddress(event.target.value);
   }
   async function handleSubmit(event) {
     event.preventDefault();
@@ -176,7 +170,7 @@ export default function City({ data, partspost, posts, makedatas }) {
     var model = Model;
     const partname = text;
     const whatsappno = Whatsappno;
-    const city = City;
+    const address = Address;
 
     const today = new Date();
     const date =
@@ -199,7 +193,7 @@ export default function City({ data, partspost, posts, makedatas }) {
         year: year,
         partnumber: "___",
         partname: partname,
-        city: city,
+        city: address,
         refno: null,
       }),
       headers: {
@@ -225,6 +219,7 @@ export default function City({ data, partspost, posts, makedatas }) {
     setYear("");
     setMake("");
     setModel("");
+    setAddress("");
     setEmail("");
     setText("");
     setWhatsappno("");
@@ -235,53 +230,124 @@ export default function City({ data, partspost, posts, makedatas }) {
       )
       .focus();
   }
-
   return (
     <div>
-      <Nav />
       <Head>
-        <title>Auto spare parts in {data.city} UAE | Emirates-car.com</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>German Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
       </Head>
-      <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
-        <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
-          <main className="mx-10 xs:ml-3  2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
-            <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
-              FILL OUT THE INQUIRY FOR PARTS IN
-              <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                &nbsp;{data.city}{" "}
-              </nobr>
-              BELOW
+      <Navbar />
+      <div className="bg-cover">
+        <div className="grid grid-cols-1 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
+          <div>
+            <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+              <Image
+                src={Germany}
+                alt="genuine auto spare parts"
+                height={50}
+                width={50}
+              />
+              GERMAN VEHICLE AUTO SPARE PARTS
+            </h1>
+            <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
+              <div>
+                <Link href="/search-by-make/Hyundai">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="hyundai spare parts in uae"
+                          src="/img/car-logos/hyundai.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Hyundai
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Kia">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="kia spare parts in uae"
+                          src="/img/car-logos/kia.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Kia
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Daewoo">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="daewoo spare parts in uae"
+                          src="/img/car-logos/daewoo.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Daewoo
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
             </div>
-            <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
-              <nobr className="text-blue-400 no-underline">
-                <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
-              </nobr>
-              index{">>>"}
-              <a>
-                search-by-cities-in-uae{"/"}
-                {data.city}
-              </a>
-              {">>>"}
-            </p>
-            <iframe
-              src={data.link}
-              height={300}
-              width="100%"
-              allowFullScreen="null"
-              loading="lazy"
-            ></iframe>
-            <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1">
-              <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
-                <h1 className="text-md font-bold text-blue-500">
-                  SEARCH YOUR PARTS IN
-                  <nobr className="text-blue-700 text-xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                    &nbsp;{data.city}
-                  </nobr>{" "}
-                </h1>
-              </p>
+            <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
+              **Make not found above?
+              <Link href="/get-in-touch">
+                <a>
+                  <nobr className="text-blue-500 text-sm underline">
+                    {" "}
+                    Get in touch with us {">>"}**
+                  </nobr>
+                </a>
+              </Link>{" "}
             </div>
-            <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 mx-10">
+            <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
+              Explore from our immensively large-scale database, your GERMAN
+              auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck
+              / Buses in Your city in UAE especially in Abu al Bukhoosh,Abu
+              Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al Barsha,Al
+              Dhafra,Al Fujayrah,Al Hamriyah,Al Jazeera Port,Al Jeer Port,Al
+              Mafraq,Al Quoz,Al Sufouh,Ar Ruways,Arzanah Island,Das
+              Island,Deira,Dibba,Dubai,Dubai World Central Apt,Esnnad,Sea Port
+              (Fateh Terminal),Free Port,Habshan,Hail,Hamriya Free Zone Port,Al
+              Jarf (Hassyan),Hatta,Sea Port (Hulaylah Terminal),Sea Port
+              (Indooroodilly),Jebel Ali,Jebel Ali Free Zone,Jebel
+              Dhanna,Jumayrah,Kalba,Khalidia,Khor al Fakkan,Masfut,Khalid
+              Port,Khalifa City - Abu Dhabi,Mina Rashid Port,Mina Saqr,Mina
+              Zayed - Abu Dhabi, Minhad, Mirfa, Mubarek Terminal, Mubarras
+              Island,Musafa,Mussafah,Offshore Fujairah,Port Rashid,Rak Khor
+              Port, Rak Maritime City, Ras al Khaimah, Ras Al Khor,Al Ras,Reem
+              Island,Ruwais = Ar Ruways,Ruwais Port, Sadiyat
+              Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
+              Nar,Umm al Quwain, Al Qurayyah, Yas Island, Zirku Island in UAE.
+            </h1>
+            <div className="mx-auto">
+              <Count />
+            </div>
+            <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
               <form
                 id="myForm"
                 className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
@@ -416,10 +482,9 @@ export default function City({ data, partspost, posts, makedatas }) {
                       id="city"
                       type="text"
                       placeholder="Where do you live?"
-                      onChange={handleCityChange}
-                      value={data.city}
+                      onChange={handleAddressChange}
+                      value={Address}
                       autoComplete="off"
-                      name="entry.113755516"
                     />
                   </div>
                   <div>
@@ -487,150 +552,90 @@ export default function City({ data, partspost, posts, makedatas }) {
                 </div>
               </form>
             </div>
-            <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 mx-5">
-              <h1 className="text-base font-medium text-gray-500 p-5">
-                We deal with any country auto spare parts including japanese,
-                american, german, chinese, indian, Korean, french, british in
-                UAE. Looking for Auto spare parts in {data.city}?. We are
-                dealing with auto spare parts for car, heavy truck, van, buses,
-                coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles,
-                Used spare parts, After market parts, Genuine spare parts and
-                New parts etc. Contact us for any inquiry. We also deal in
-                brands such as{" "}
-                {makedatas.map((p) => (
-                  <a key={p.id}>
-                    {p.make}
-                    {" in " + data.city + ", "}
-                  </a>
-                ))}.<br/><br/>
-                We provide auto spare parts for any vehicles including :
-                <ul className="list-disc">
-                  <li>New auto spare parts in {data.city}</li>
-                  <li>Used auto spare parts in {data.city}</li>
-                  <li>Genuine auto spare parts in {data.city}</li>
-                  <li>Aftermarket auto spare parts in {data.city}</li>
-                </ul>
-              </h1>
-              <p className="text-base font-medium text-gray-500 p-5">
-                UAE Automobile industry is slowly shifting towards a service
-                oriented business model based on consumer data and customer
-                experience. Now companies are trying to adapt to the current
-                need of the trends Markets. They rely on consumer data for
-                knowing the sale interest of the customers based on the
-                experience through analytics software. Owners are now thinking
-                ways to accommodate the market through the trends analytics in
-                order to keep the company into their targetted level. Previously
-                there were cars running on petrol in which UAE is one of the
-                largest producer and diesel. Since the beginning era of electric
-                vehicle have started, many people are opting for electric
-                vehicles in spite of its shortcomings because it is more
-                affordable comapared to vehicle running on diesel or petrol. By
-                this transition there is no difference in usage of irreversible
-                energy.
-              </p>
-            </div>
-            <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10 my-10">
-              SEARCH BY MAKE
+            <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10 my-10">
+              {" "}
+              We provide auto spare parts for any German vehicles including :
+              <ul className="list-disc">
+                <li>New German vehicle auto spare parts</li>
+                <li>Used German vehicle auto spare parts</li>
+                <li>Genuine German vehicle auto spare parts</li>
+                <li>Aftermarket German vehicle auto spare parts</li>
+              </ul>
             </h1>
-            <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
-              {makedatas.map((makedata) => (
-                <div key={makedata.id}>
-                  <Link
-                    href="/search-by-make/[make]"
-                    as={"/search-by-make/" + makedata.make}
-                  >
-                    <a>
-                      <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                        <div className="flex justify-center">
-                          <Image
-                            alt={makedata.make}
-                            src={"/img/car-logos/" + makedata.img}
-                            className="object-scale-down shadow-xl"
-                            height={30}
-                            width={30}
-                          />
-                          <br />
-                        </div>
-                        <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                          {makedata.make.toUpperCase()}
-                        </p>
-                      </main>
-                    </a>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </main>
-        </div>
-        <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
-          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  font-sans">
-            PARTS IN {data.city}
-          </div>
-          <div className="xs:grid xs:grid-cols-1 text-gray-600 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
-            SEARCH BY PART NAME
-          </div>
-          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 sm:mt-5 lg:mx-2 ">
-            {partspost.map((post) => (
-              <div key={post.id}>
-                <Link
-                  href="/search-by-part-name/[parts]"
-                  as={"/search-by-part-name/" + post.parts}
-                >
-                  <a>
-                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
-                      <i className="far fa-compass"></i> {post.parts}
-                    </p>
-                  </a>
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </div>
 
+      <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+        SEARCH FOR AUTO SPARE PARTS IN UAE
+      </h1>
+      <div className="flex justify-center">
+        <div className="pt-3">
+          <input
+            className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
+            id="partname"
+            type="search"
+            placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
+            onChange={(e) => onPartFormChange(e.target.value)}
+            value={text}
+            autoComplete="off"
+            required
+          />
+          <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
+            {suggestion &&
+              suggestion.map((suggestion, i) => (
+                <div
+                  key={i}
+                  className="cursor-pointer  text-base p-1 bg-white"
+                  onClick={() => onSuggestionHandler(suggestion)}
+                  width="100%"
+                >
+                  <a
+                    href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
+                    rel="noopener noreferrer"
+                    target="_newtab"
+                  >
+                    {suggestion}{" "}
+                  </a>
+                </div>
+              ))}{" "}
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
+        {partsposts.map((post) => (
+          <div key={post.id}>
+            <Link
+              href="/search-by-cities-in-uae/[city]"
+              as={"/search-by-part-name/" + post.parts}
+            >
+              <a title={post.parts + " in uae"}>
+                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                    {post.parts.toUpperCase()}{" "}
+                  </p>
+                </main>
+              </a>
+            </Link>
+          </div>
+        ))}{" "}
+      </div>
       <Footer />
     </div>
   );
 }
 
-export async function getStaticPaths() {
-  const res = await fetch(`https://rozy.vercel.app/api/cities`);
-  const data = await res.json();
-  const paths = data.map((post) => ({
-    params: { city: post.city },
-  }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const { city } = params;
-
-  const res = await fetch(`https://rozy.vercel.app/api/cities/${city}`);
-  const data = await res.json();
+export async function getStaticProps() {
+  const respnse = await fetch(`https://rozy.vercel.app/api/parts`);
+  const partsposts = await respnse.json();
 
   const resp = await fetch(`https://rozy.vercel.app/api/palms`);
-  const posts = await resp.json();
-
-  const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
-  const partspost = await partsres.json();
-
-  const response = await fetch(`https://rozy.vercel.app/api/grooves`);
-  const dat = await response.json();
-  let uniqueMakeArray = [
-    ...new Map(dat.map((item) => [item["make"], item])).values(),
-  ];
-
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
+  const data = await resp.json();
 
   return {
-    props: { data, partspost, posts, makedatas: uniqueMakeArray },
+    props: {
+      partsposts,
+      posts: data,
+    },
   };
 }

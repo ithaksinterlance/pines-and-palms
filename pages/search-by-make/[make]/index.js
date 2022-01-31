@@ -234,55 +234,6 @@ export default function Car({ car, cities, make, partspost, posts }) {
       <Head>
         <title>{make}- Auto Spare Parts in UAE - Best Prices</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          name="description"
-          content={
-            "Explore with our dealer your " +
-            make +
-            "spare parts of high quality with standards from our largest database that has wide variety of brands and its model starting from the year 1909 to 2022 with 10,000+ models."
-          }
-        />
-        <meta
-          name="keywords"
-          content={
-            make +
-            "spare parts," +
-            make +
-            "auto parts, " +
-            make +
-            "genuine spare parts," +
-            make +
-            "genuine auto parts," +
-            make +
-            "used spare parts," +
-            make +
-            "used auto parts," +
-            make +
-            "genuine spare parts dubai," +
-            make +
-            "genuine auto parts dubai," +
-            make +
-            "used spare parts dubai," +
-            make +
-            "used auto parts dubai," +
-            make +
-            "spare parts in uae," +
-            make +
-            "auto parts in uae," +
-            make +
-            "aftermarket spare parts in uae," +
-            make +
-            "aftermarket spare parts," +
-            make +
-            "car spares," +
-            make +
-            "car spares in uae," +
-            make +
-            "auto spares in uae, " +
-            make +
-            "auto spares"
-          }
-        />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
@@ -302,14 +253,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                     <i className="fal fa-car-garage"></i>
                     Current path:&nbsp;&nbsp;
                   </nobr>
-                  home{"/"}
-                  <Link
-                    href="/search-by-make/[make]"
-                    as={"/search-by-make/" + make}
-                  >
-                    <a>{make}</a>
-                  </Link>
-                  {"/"}{" "}
+                  index{">>>"}
+                    {make}
+                  {">>>"}
                 </p>
               </div>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
@@ -319,7 +265,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       href="/search-by-make/[make]/[model]"
                       as={"/search-by-make/" + post.make + "/" + post.model}
                     >
-                      <a>
+                      <a title={post.make + "-" + post.model+" spare parts in uae"}>
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100 h-100">
                           {post.model.replace("%2F", "/")}{" "}
                         </main>
@@ -340,40 +286,16 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </a>
               </Link>{" "}
             </div>
-            <div className="grid grid-cols-2 xs:grid-cols-1 xs:grid py-5">
-              <p className="text-xs font-medium text-gray-500 xs:text-sm md:text-base p-5">
-                <p>
-                  We are dealing with auto spare parts for car, heavy truck,
-                  van, buses, coupe, SUV, prime, Petrol based vehicles, Diesel
-                  based vehicles, Used spare parts, After market parts, Genuine
-                  spare parts and New parts etc. Contact us for any inquiry.
-                </p>
-                <p>
-                  Look out for us in your location. We supply auto spare parts
-                  in any cities of UAE including{" "}
-                  {cities.map((post) => (
-                    <Link
-                      href="/search-by-cities-in-uae/[city]"
-                      as={"/search-by-cities-in-uae/" + post.city}
-                      key={post.id}
-                    >
-                      <a>
-                        {post.city}
-                        {","}
-                      </a>
-                    </Link>
-                  ))}
-                </p>
-              </p>
+            <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
               <form
                 id="myForm"
-                className="w-full max-w-lg  shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+                className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
                 method="POST"
                 onSubmit={handleSubmit}
                 target="hidden_iframe"
               >
-                <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-1/2 md:w-1/2 px-3 mb-6 md:mb-0 xs:mb-0">
+                <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
+                  <div>
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="year"
@@ -394,7 +316,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       />
                     </div>
                   </div>
-                  <div className="w-1/2 md:w-1/2 px-3">
+                  <div>
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="make"
@@ -428,10 +350,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       </div>
                     </div>
                   </div>
-                </div>
-
-                <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <div>
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="model"
@@ -470,9 +389,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
                     </div>
                   </div>
                 </div>
-
-                <div className="flex flex-wrap -mx-3">
-                  <div className="w-full px-3 mb-6 xs:mb-0">
+                <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
+                  <div>
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="whatsappno"
@@ -491,7 +409,24 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       required
                     />
                   </div>
-                  <div className="w-full px-3 mb-6 xs:mb-0">
+                  <div>
+                    <label
+                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      htmlFor="city"
+                    >
+                      City
+                    </label>
+                    <input
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="city"
+                      type="text"
+                      placeholder="Where do you live?"
+                      onChange={handleAddressChange}
+                      value={Address}
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div>
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="email"
@@ -510,27 +445,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
                     />
                   </div>
                 </div>
-                <div className="flex flex-wrap -mx-3">
-                  <div className="w-full px-3 mb-6 xs:mb-0">
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="city"
-                    >
-                      City
-                    </label>
-                    <input
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                      id="city"
-                      type="text"
-                      placeholder="Where do you live?"
-                      onChange={handleAddressChange}
-                      value={Address}
-                      autoComplete="off"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-wrap -mx-3">
-                  <div className="w-full px-3 mb-6 xs:mb-0">
+                <div className="grid grid-cols-1 pt-3">
+                  <div>
                     <label
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                       htmlFor="partname"
@@ -561,21 +477,64 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       ))}{" "}
                   </div>
                 </div>
-                <div className="flex flex-wrap -mx-3 py-2">
-                  <div className="w-full xs:w-3/4 px-3 mb-6 xs:mb-0">
-                    <button
-                      type="submit"
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full xs:text-xs"
-                    >
-                      Submit
-                    </button>
-                  </div>
+                <div className="grid grid-cols-1 pt-3">
+                  <button
+                    type="submit"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl xs:text-xs"
+                  >
+                    Submit
+                  </button>
                 </div>
 
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
                 </div>
               </form>
+            </div>
+            <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+              <h1 className="text-base font-medium text-gray-500 p-5">
+                We deal with any country auto spare parts including japanese,
+                american, german, chinese, indian, Korean, french, british in
+                UAE. We deal in auto spare parts such as{" "}
+                {partspost.map((p) => (
+                  <Link
+                    href="/search-by-part-name/[parts]"
+                    as={"/search-by-part-name/" + p.parts}
+                    key={p.id}
+                  >
+                    <a title={"Auto spare parts in " + p.parts}>
+                      {p.parts}
+                      {" in uae, "}
+                    </a>
+                  </Link>
+                ))}
+              </h1>
+              <p className="text-base font-medium text-gray-500 p-5">
+                UAE Automobile industry is slowly shifting towards a service
+                oriented business model based on consumer data and customer
+                experience. Now companies are trying to adapt to the current
+                need of the trends Markets. They rely on consumer data for
+                knowing the sale interest of the customers based on the
+                experience through analytics software. Owners are now thinking
+                ways to accommodate the market through the trends analytics in
+                order to keep the company into their targeted level. Previously
+                there were cars running on petrol in which UAE is one of the
+                largest producer and diesel. Since the beginning era of electric
+                vehicle have started, many people are opting for electric
+                vehicles in spite of its shortcomings because it is more
+                affordable comapared to vehicle running on diesel or petrol. By
+                this transition there is no difference in usage of irreversible
+                energy.
+              </p>
+              <p className="text-base font-medium text-gray-500 p-5">
+                We provide auto spare parts for any vehicles including :
+                <ul className="list-disc">
+                  <li>New auto spare parts</li>
+                  <li>Used auto spare parts</li>
+                  <li>Genuine auto spare parts</li>
+                  <li>Aftermarket auto spare parts</li>
+                </ul>
+              </p>
             </div>
           </main>
         </div>
@@ -590,9 +549,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   href="/search-by-cities-in-uae/[city]"
                   as={"/search-by-cities-in-uae/" + post.city}
                 >
-                  <a>
+                  <a title={make + " spare parts in "+ post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
-                      <i className="far fa-compass"></i>
+                      <i className="far fa-compass"></i>&nbsp;
                       {post.city}{" "}
                     </p>
                   </a>

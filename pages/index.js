@@ -293,9 +293,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
 
       <Hero />
       <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
-        <h1 className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
+        <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
           ABOUT EMIRATES CAR
-        </h1>
+        </p>
         <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
           Explore from our immensively large-scale database, your New / Used /
           Genuine / Aftermarket auto spare parts for your Vehicle needs - Car /
@@ -326,9 +326,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
       <div className="mx-auto py-20">
         <Count />
       </div>
-      <h1 className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
+      <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
           POPULAR BRANDS
-        </h1>
+        </p>
       <div className="grid grid-cols-7 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
         <div>
           <Link href="https://emirates-car.com/search-by-make/Ford">
@@ -731,9 +731,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
               </div>
             </Slider>
             <div className="py-5 p-10 xs:p-3 s:p-3 sm:p-3">
-              <h1 className="text-base font-bold text-blue-100 text-center pt-5">
+              <p className="text-base font-bold text-blue-100 text-center pt-5">
                 EMIRATES-CAR
-              </h1>
+              </p>
               <p className="text-sm text-white text-center pt-5">
                 We are dealing with auto spare parts for car, heavy truck, van,
                 buses, coupe, SUV, prime, Petrol based vehicles, Diesel based
@@ -971,9 +971,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </div>
       </div>
       <Featured />
-      <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10">
+      <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10">
         SEARCH BY BRANDS
-      </h1>
+      </p>
       <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
         {posts.map((post) => (
           <div key={post.id}>
@@ -1002,9 +1002,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         ))}{" "}
       </div>
-      <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
+      <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
         SEARCH BY LOCATION IN UAE
-      </h1>
+      </p>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
         {cities.map((post) => (
           <div key={post.id}>
@@ -1016,6 +1016,27 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                     {post.city.toUpperCase()}{" "}
+                  </p>
+                </main>
+              </a>
+            </Link>
+          </div>
+        ))}{" "}
+      </div>
+      <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
+        SEARCH AUTO SPARE PARTS BY NAME IN UAE
+      </p>
+      <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
+        {partsposts.map((post) => (
+          <div key={post.id}>
+            <Link
+              href="/search-by-cities-in-uae/[city]"
+              as={"/search-by-part-name/" + post.parts}
+            >
+              <a>
+                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                    {post.parts.toUpperCase()}{" "}
                   </p>
                 </main>
               </a>

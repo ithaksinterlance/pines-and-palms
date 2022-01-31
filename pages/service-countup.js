@@ -9,10 +9,10 @@ export default function Counter() {
             <i className="fab fa-wpforms fa-2x"></i>
           </h1>
           <p className="text-xl lg:text-base sm:text-xs xs:text-xs s:text-xs md:text-sm font-semibold font-mono py-3">
-            10,000&nbsp;+
+            STEP-1
           </p>
           <h1 className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold p-1">
-            Inquiries Received !
+            Send Inquiries
           </h1>
         </div>
         <div className="font-extrabold  uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:shadow-none sm:shadow-none xs:text-xs text-center">
@@ -21,21 +21,21 @@ export default function Counter() {
           </h1>
 
           <p className="text-xl lg:text-base sm:text-xs xs:text-xs s:text-xs md:text-sm font-semibold font-mono py-3">
-          7,536
+          STEP-2
           </p>
           <h1 className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
-            Dealings completed !
+            Get Quoted and Dealt
           </h1>
         </div>
         <div className="font-extrabold uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:shadow-none sm:shadow-none xs:text-xs text-center">
           <h1 className="text-2xl text-blue-800 lg:text-base  font-semibold font-mono">
-            <i className="fas fa-car-mechanic fa-2x"></i>
+            <i className="fas fa-truck fa-2x"></i>
           </h1>
           <p className="text-xl lg:text-base sm:text-xs md:text-sm xs:text-xs s:text-xs font-semibold font-mono py-3">
-            50000&nbsp;+
+            STEP-3
           </p>
           <h1 className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
-            Auto Parts Serviced !
+            Get parts Delivered
           </h1>
         </div>
         <div className="font-extrabold uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:shadow-none sm:shadow-none xs:text-xs text-center">
@@ -43,7 +43,7 @@ export default function Counter() {
             <i className="fas fa-smile fa-2x"></i>{" "}
           </h1>
           <p className="text-xl lg:text-base sm:text-xs md:text-sm xs:text-xs s:text-xs font-semibold font-mono py-3">
-          7,536&nbsp;+
+          STEP-4
           </p>
           <h1 className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
             Happy Customers !

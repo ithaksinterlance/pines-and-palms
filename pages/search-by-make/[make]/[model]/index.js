@@ -213,21 +213,11 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                   <i className="fal fa-car-garage"></i> Current
                   path:&nbsp;&nbsp;
                 </nobr>
-                home{"/"}
-                <Link
-                  href="/search-by-make/[make]"
-                  as={"/search-by-make/" + make}
-                >
-                  <a>{make}</a>
-                </Link>
-                {"/"}
-                <Link
-                  href="/search-by-make/[make]/[model]"
-                  as={"/search-by-make/" + make + model}
-                >
-                  <a>{model}</a>
-                </Link>
-                {"/"}
+                index{">>>"}
+                {make}
+                {">>>"}
+                {model}
+                {">>>"}
               </p>
             </div>
             <div className="container place-content-center mx-1 xs:mx-0 py-6">
