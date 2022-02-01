@@ -244,7 +244,7 @@ export default function City({ data, partspost, posts, makedatas }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
-        <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
+        <div className="w-3/4 2xs:w-full xs:w-full sm:w-full border border-1">
           <main className="mx-10 xs:ml-3  2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
             <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
               FILL OUT THE INQUIRY FOR PARTS IN

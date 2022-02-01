@@ -217,38 +217,35 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                 {make}
                 {">>>"}
                 {model}
-                {">>>"}
               </p>
             </div>
             <div className="container place-content-center mx-1 xs:mx-0 py-6">
-              <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl xs:w-screen  text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
-                &nbsp;
+            <div className="uppercase bg-blue-200 grid grid-cols-3 font-sans p-5 text-center text-sm xs:w-auto xs:mx-1  text-blue-900 font-extrabold xs:text-xs s:text-xs 2xs:text-xs">
                 <span>
                   <Link href="/search-by-part-name">
                     <a className="underline hover:text-blue-500">
                       SEARCH BY PART NAME
                     </a>
-                  </Link>{" "}
+                  </Link>
                 </span>
-                | &nbsp;
                 <span>
                   <Link href="/search-by-cities-in-uae">
                     <a className="underline hover:text-blue-500">
-                      SEARCH BY CITY{" "}
+                      SEARCH BY LOCATION
                     </a>
-                  </Link>{" "}
+                  </Link>
                 </span>
-                | &nbsp;
                 <span>
                   <Link href="/search-by-make">
                     <a className="underline hover:text-blue-500">
                       SEARCH BY MAKE
                     </a>
-                  </Link>{" "}
+                  </Link>
                 </span>
               </div>
-              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 ">
-                <div className="w-1/3 bg-blue-700 2xs:hidden xs:hidden sm:hidden">
+              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1">
+
+                <div className="w-1/3 bg-blue-700 2xs:hidden xs:hidden sm:hidden md:hidden">
                   <Slider {...settings} className="py-10 p-2">
                     <div>
                       <p className="text-xl font-bold text-center">
@@ -532,7 +529,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                 WE ALSO DEAL IN OTHER BRANDS
               </h1>
               <p></p>
-              <div className="grid grid-cols-12  md:mx-4 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 2xs:mx-4 md:ml-11 shadow-2xl my-10">
+              <div className="grid grid-cols-12 md:grid md:grid-cols-7 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 2xs:mx-4 md:mx-5 shadow-2xl my-10">
                 {makeArray.map((p) => (
                   <div key={p.id}>
                     <Link
