@@ -220,29 +220,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
               </p>
             </div>
             <div className="container place-content-center mx-1 xs:mx-0 py-6">
-            <div className="uppercase bg-blue-200 grid grid-cols-3 font-sans p-5 text-center text-sm xs:w-auto xs:mx-1  text-blue-900 font-extrabold xs:text-xs s:text-xs 2xs:text-xs">
-                <span>
-                  <Link href="/search-by-part-name">
-                    <a className="underline hover:text-blue-500">
-                      SEARCH BY PART NAME
-                    </a>
-                  </Link>
-                </span>
-                <span>
-                  <Link href="/search-by-cities-in-uae">
-                    <a className="underline hover:text-blue-500">
-                      SEARCH BY LOCATION
-                    </a>
-                  </Link>
-                </span>
-                <span>
-                  <Link href="/search-by-make">
-                    <a className="underline hover:text-blue-500">
-                      SEARCH BY MAKE
-                    </a>
-                  </Link>
-                </span>
-              </div>
+
               <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1">
 
                 <div className="w-1/3 bg-blue-700 2xs:hidden xs:hidden sm:hidden md:hidden">
