@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../nav";
 import Image from "next/image";
 import Link from "next/link";
-import French from "../../public/img/icons/french.png";
+import French from "../../public/img/icons/france.png";
 import Footer from "../footer";
 import Head from "next/head";
 import Count from "../service-countup";
