@@ -134,7 +134,7 @@ export default function Parts({ data, cities, posts }) {
                 </nobr>
                 BELOW
               </div>
-              <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3 ">
+              <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:m-3 underline pb-3 ">
                 <nobr className="text-blue-400 no-underline">
                   <i className="fal fa-car-garage"></i> Current
                   path:&nbsp;&nbsp;
@@ -250,7 +250,7 @@ export default function Parts({ data, cities, posts }) {
                     ></iframe>
                   </div>
                 </div>
-                <div className="w-2/3 s:w-full s:ml-5 xs:w-screen md:w-full 2xs:w-full sm:w-full">
+                <div className="w-2/3 s:w-full xs:w-screen md:w-full 2xs:w-full sm:w-full">
                   <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
                     Searching for {data.parts} Auto Spare Parts in U.A.E? Fill
                     out the inquiry down below.

@@ -383,7 +383,7 @@ export default function Forms({ posts, pos }) {
               ></iframe>
             </div>
           </div>
-          <div className="w-2/3 md:w-auto md:mx-5 s:w-auto 2xs:w-screen sm:w-screen xs:w-screen">
+          <div className="w-2/3 xs:w-auto md:w-auto md:mx-5 s:w-auto s:mx-3 xs:mx-4 2xs:w-auto 2xs:mx-4">
             <form
               id="myForm"
               className="w-full px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4 bg-white"

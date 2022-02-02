@@ -294,7 +294,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       <Hero />
       <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
         <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
-          ABOUT EMIRATES CAR
+          ABOUT Emirates-car
         </p>
         <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
           Explore from our immensively large-scale database, your New / Used /

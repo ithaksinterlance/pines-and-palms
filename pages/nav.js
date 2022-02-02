@@ -20,7 +20,7 @@ export default function Navbar() {
             className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1"
             href="#spare_parts"
           >
-            Emirates car
+            Emirates-car
           </a>
           <button
             className="cursor-pointer text-xl px-5 py-5 rounded bg-transparent block xl:hidden outline-none focus:outline-none bg-white text-black"

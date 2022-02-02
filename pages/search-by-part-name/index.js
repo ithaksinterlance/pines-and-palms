@@ -290,7 +290,7 @@ export default function Make({ posts, cities, post }) {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
+              <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 m-1 my-10">
                 {posts.map((post) => (
                   <div key={post.id}>
                     <Link
@@ -298,7 +298,7 @@ export default function Make({ posts, cities, post }) {
                       as={"/search-by-part-name/" + post.parts}
                     >
                       <a title={post.parts + " in uae"}>
-                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
+                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-200 h-full">
                           {post.parts}
                         </main>
                       </a>
@@ -307,23 +307,7 @@ export default function Make({ posts, cities, post }) {
                 ))}
               </div>
             </article>
-            <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {cities.map((post) => (
-                  <div key={post.id}>
-                    <Link
-                      href="/search-by-cities-in-uae/[city]"
-                      as={"/search-by-cities-in-uae/" + post.city}
-                    >
-                      <a>
-                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
-                          {post.city}
-                        </main>
-                      </a>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-              <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
                 <form
                   id="myForm"
                   className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
@@ -334,7 +318,7 @@ export default function Make({ posts, cities, post }) {
                   <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
                     <div>
                       <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 xs:mt-3"
                         htmlFor="year"
                       >
                         Year
@@ -355,7 +339,7 @@ export default function Make({ posts, cities, post }) {
                     </div>
                     <div>
                       <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 xs:mt-3"
                         htmlFor="make"
                       >
                         Make
@@ -389,7 +373,7 @@ export default function Make({ posts, cities, post }) {
                     </div>
                     <div>
                       <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 xs:mt-3"
                         htmlFor="model"
                       >
                         Model
@@ -429,7 +413,7 @@ export default function Make({ posts, cities, post }) {
                   <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
                     <div>
                       <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 xs:mt-3"
                         htmlFor="whatsappno"
                       >
                         WhatsApp No
@@ -448,7 +432,7 @@ export default function Make({ posts, cities, post }) {
                     </div>
                     <div>
                       <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 xs:mt-3"
                         htmlFor="city"
                       >
                         City
@@ -465,7 +449,7 @@ export default function Make({ posts, cities, post }) {
                     </div>
                     <div>
                       <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 xs:mt-3"
                         htmlFor="email"
                       >
                         Email(Optional)
@@ -485,7 +469,7 @@ export default function Make({ posts, cities, post }) {
                   <div className="grid grid-cols-1 pt-3">
                     <div>
                       <label
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 xs:mt-3"
                         htmlFor="partname"
                       >
                         PART NAME

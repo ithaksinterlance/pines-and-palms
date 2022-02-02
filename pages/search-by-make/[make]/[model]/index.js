@@ -221,7 +221,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
             </div>
             <div className="container place-content-center mx-1 xs:mx-0 py-6">
 
-              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1">
+              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
 
                 <div className="w-1/3 bg-blue-700 2xs:hidden xs:hidden sm:hidden md:hidden">
                   <Slider {...settings} className="py-10 p-2">
@@ -230,7 +230,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                         <div>
                           {" "}
                           <Image
-                            alt="emirates car"
+                            alt="spare parts market in uae"
                             className="rounded-full"
                             src={avatar1}
                             width={50}
@@ -503,10 +503,41 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                   </form>
                 </div>
               </div>
-              <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 xs:hidden sm:hidden s:hidden 2xs:hidden">
+              <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+                <h1 className="text-base font-medium text-gray-500 p-5">
+                  We deal with any country auto spare parts including japanese,
+                  american, german, chinese, indian, Korean, french, british in
+                  UAE. We also operate in main cities such as dubai, sharjah,
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc.
+                  We provide auto spare parts for any vehicles including :
+              <ul className="list-disc">
+                <li>New auto spare parts in uae</li>
+                <li>Used auto spare parts in uae</li>
+                <li>Genuine auto spare parts in uae</li>
+                <li>Aftermarket auto spare parts in uae</li>
+              </ul>
+                </h1>
+                <p className="text-base font-medium text-gray-500 p-5">
+                  UAE Automobile industry is slowly shifting towards a service
+                  oriented business model based on consumer data and customer
+                  experience. Now companies are trying to adapt to the current
+                  need of the trends Markets. They rely on consumer data for
+                  knowing the sale interest of the customers based on the
+                  experience through analytics software. Owners are now thinking
+                  ways to accommodate the market through the trends analytics in
+                  order to keep the company into their targeted level.
+                  Previously there were cars running on petrol in which UAE is
+                  one of the largest producer and diesel. Since the beginning
+                  era of electric vehicle have started, many people are opting
+                  for electric vehicles in spite of its shortcomings because it
+                  is more affordable comapared to vehicle running on diesel or
+                  petrol. By this transition there is no difference in usage of
+                  irreversible energy.
+                </p>
+              </div>
+              <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 xs:hidden sm:hidden s:hidden 2xs:hidden">
                 WE ALSO DEAL IN OTHER BRANDS
-              </h1>
-              <p></p>
+              </p>
               <div className="grid grid-cols-12 md:grid md:grid-cols-7 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 2xs:mx-4 md:mx-5 shadow-2xl my-10">
                 {makeArray.map((p) => (
                   <div key={p.id}>
@@ -518,7 +549,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image
-                              alt={p.make}
+                              alt={p.make + " in uae"}
                               src={"/img/car-logos/" + p.img}
                               className="object-scale-down shadow-xl"
                               height={30}
@@ -549,7 +580,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                   href="/search-by-part-name/[parts]"
                   as={"/search-by-part-name/" + post.parts}
                 >
-                  <a>
+                  <a title={post.parts + " parts in uae"}>
                     <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans underline">
                       <i className="far fa-compass"></i> {post.parts}
                     </p>

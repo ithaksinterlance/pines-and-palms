@@ -24,7 +24,7 @@ export default class footer extends Component {
           <div className="grid grid-cols-3 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 ">
             <div className="text-center">
               <p className="pt-5 text-white font-extrabold">
-                ABOUT EMIRATES-CAR
+                ABOUT Emirates-car
               </p>
               <p className="text-sm xs:text-xs pt-5 m-1 text-center font-medium text-yellow-400">
                 We are dealing with auto spare parts for car, heavy truck, van,
@@ -33,7 +33,7 @@ export default class footer extends Component {
                 parts and New parts etc. Contact us for any inquiry.
               </p>
             </div>
-            <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto">
+            <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
             <p className="pt-5 text-white font-extrabold">
                 SOCIAL LINKS
               </p>
@@ -60,7 +60,7 @@ export default class footer extends Component {
                 </a>
               </p>
             </div>
-            <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto">
+            <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
             <p className="pt-5 text-white font-extrabold">
                 SHORTCUT LINKS
               </p>
@@ -89,8 +89,7 @@ export default class footer extends Component {
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
             >
               <i className="fa fa-copyright" aria-hidden="true"></i>
-              EMIRATES-CAR.COM
-            </a>
+              Copyright © 2022 Emirates-car. All rights reserved.            </a>
           </div>
         </div>
       </div>

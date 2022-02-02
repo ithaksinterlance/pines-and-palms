@@ -19,9 +19,9 @@ import Hand from "../public/img/hand-wave.png"
 export default class home_hero extends Component {
   render() {
     return (
-      <div className=" xs:py-7 s:py-6">
+      <div className="xs:py-7 s:py-6">
         <div className="bg-cover">
-          <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
+          <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto xs:text-center sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
             <div>
               <div className="mt-10 ml-8 max-w-full sm:mt-12 sm:ml-6 md:mt-16 lg:mt-20 lg:ml-1 lg:px-8 xl:mt-28 md:ml-7 xl:ml-20 xs:mt-2 xs:text-left 2xs:mt-2 s:mt-2">
                 <div className="sm:ml-5 lg:text-left xs:text-center">
@@ -141,6 +141,7 @@ export default class home_hero extends Component {
             </div>
             <div className="grid grid-cols-3 xs:grid xs:grid-cols-3 s:grid s:grid-cols-3 ml-8 xs:py-10 sm:py-10 s:py-10 2xs:py-10 s:mx-5 xs:mx-3 2xs:mx-5">
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:shadow-none s:border-none">
+              <Link href="./country-vehicles-spare-parts/british-auto-spare-parts"><a>
                 <Image
                   src={Britain}
                   alt="british car auto spare parts"
@@ -148,7 +149,7 @@ export default class home_hero extends Component {
                   height={70}
                   width={70}
                 />
-                <p className="text-gray-500 text-sm">BRITAIN</p>
+                <p className="text-gray-500 text-sm">BRITAIN</p></a></Link>
               </div>
               <div className="text-center shadow-lg boder-r-2 border-b-2 border-gray-800 xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Image
@@ -161,6 +162,7 @@ export default class home_hero extends Component {
                 <p className="text-gray-500 text-sm">INDIAN</p>
               </div>
               <div className="text-center border-l-2 border-b-2 border-gray-800 xs:border-none shadow-lg xs:shadow-none s:border-none s:shadow-none">
+              <Link href="./country-vehicles-spare-parts/japanese-auto-spare-parts"><a>
                 <Image
                   src={Japan}
                   alt="japan car auto spare parts"
@@ -168,9 +170,10 @@ export default class home_hero extends Component {
                   height={70}
                   width={70}
                 />
-                <p className="text-gray-500 text-sm">JAPANESE</p>
+                <p className="text-gray-500 text-sm">JAPANESE</p></a></Link>
               </div>
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
+              <Link href="./country-vehicles-spare-parts/korean-auto-spare-parts"><a>
                 <Image
                   src={Korean}
                   alt="korean car auto spare parts"
@@ -178,9 +181,10 @@ export default class home_hero extends Component {
                   height={70}
                   width={70}
                 />
-                <p className="text-gray-500 text-sm">KOREAN</p>
+                <p className="text-gray-500 text-sm">KOREAN</p></a></Link>
               </div>
               <div className="text-center border-b-2 border-r-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
+              <Link href="./country-vehicles-spare-parts/american-auto-spare-parts"><a>
                 <Image
                   src={USA}
                   alt="united state car auto spare parts"
@@ -188,9 +192,10 @@ export default class home_hero extends Component {
                   height={70}
                   width={70}
                 />
-                <p className="text-gray-500 text-sm">USA</p>
+                <p className="text-gray-500 text-sm">USA</p></a></Link>
               </div>
               <div className="text-center border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
+              <Link href="./country-vehicles-spare-parts/german-auto-spare-parts"><a>
                 <Image
                   src={Germany}
                   alt="germany car auto spare parts"
@@ -198,7 +203,7 @@ export default class home_hero extends Component {
                   height={70}
                   width={70}
                 />
-                <p className="text-gray-500 text-sm">GERMAN</p>
+                <p className="text-gray-500 text-sm">GERMAN</p></a></Link>
               </div>
               <div className="text-center border-r-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Image
@@ -211,6 +216,8 @@ export default class home_hero extends Component {
                 <p className="text-gray-500 text-sm">CHINESE</p>
               </div>
               <div className="text-center shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
+              <Link href="./country-vehicles-spare-parts/french-auto-spare-parts">
+                <a>
                 <Image
                   src={France}
                   alt="france auto spare parts"
@@ -220,7 +227,7 @@ export default class home_hero extends Component {
                 />
                 <p className="text-gray-500 text-sm xs:text-xs s:text-xs">
                   FRANCE
-                </p>
+                </p></a></Link>
               </div>
             </div>
           </div>
