@@ -255,7 +255,7 @@ export default function Forms({ posts, pos }) {
       </Head>
       <Nav />
       <div className="container place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
-        <div className="uppercase bg-blue-200 font-serif p-5 xl:mx-10 lg:mx-7 md:mx-5 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-auto s:text-2xl 2xs:text-2xl ">
+        <div className="uppercase bg-blue-200 font-serif p-5 xl:mx-10 lg:mx-7 md:mx-5 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-screen s:text-2xl 2xs:text-2xl ">
           &nbsp;
           <span>
             <Link href="/search-by-part-name">
@@ -277,8 +277,8 @@ export default function Forms({ posts, pos }) {
             </Link>{" "}
           </span>
         </div>
-        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-auto s:w-auto 2xs:w-auto sm:w-auto 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
-          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-auto s:w-auto s:py-5">
+        <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:w-screen sm:w-screen 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
+          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-screen s:w-screen s:py-5">
             <Slider {...settings} className="py-10 p-2">
               <div>
                 <p className="text-xl font-bold text-center">
@@ -383,7 +383,7 @@ export default function Forms({ posts, pos }) {
               ></iframe>
             </div>
           </div>
-          <div className="w-2/3 xs:w-auto md:w-auto md:mx-5 s:w-auto 2xs:w-auto sm:w-auto ">
+          <div className="w-2/3 md:w-auto md:mx-5 s:w-auto 2xs:w-screen sm:w-screen xs:w-screen">
             <form
               id="myForm"
               className="w-full px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4 bg-white"

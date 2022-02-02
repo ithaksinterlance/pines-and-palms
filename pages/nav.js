@@ -122,7 +122,6 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/contact">
                 <a
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                   href="https://api.whatsapp.com/send?phone=+971551478994&text=Hey%20Team!%I'm%20in%20need%20of%20____"
@@ -132,7 +131,6 @@ export default function Navbar() {
                     className="ml-2 text-xl leading-xl text-white opacity-75"
                   />
                 </a>
-              </Link>
             </li>
           </ul>
         </div>
