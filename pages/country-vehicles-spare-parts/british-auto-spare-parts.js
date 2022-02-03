@@ -233,7 +233,36 @@ export default function British({ partsposts, posts }) {
   return (
     <div>
       <Head>
-        <title>British Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <title>Quick British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          property="og:title"
+          content="Quick British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/british-auto-spare-parts" />
+        <meta
+          property="og:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket British auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/british-auto-spare-parts" />
+        <meta
+          property="twitter:title"
+          content="Quick Auto Spare Part Hunt in UAE | Emirates-car.com"
+        />
+        <meta
+          property="twitter:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
+        />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
       </Head>
       <Navbar />
       <div className="bg-cover">

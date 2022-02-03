@@ -266,15 +266,35 @@ export default function Make({ car, cities, posts, pos }) {
     <div>
       <Nav />
       <Head>
-        <title>Search Auto Spare Parts for any brands in UAE</title>
+        <title>Quick Auto Spare Parts Hunt in UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
-          name="description"
-          content="Explore the auto spare parts for your vehicles of high quality from high end manufacturer from our largest database that has wide variety of brands starting from the year 1909 to 2022. We deal with brands such as Ford, GMC, Chevrolet, Jeep, Hummer, Cadillac, Lincoln, Dodge, Chrysler, Mercury,Buick, RAM,Audi, Volkswagen, BMW, Mercedes Benz,Porsche, Opel, Toyota, Lexus, Nissan, Infinity,Honda,Mitsubishi,Mazda,Subaru,Suzuki,Daihatsu,Isuzu Datsun, Hyundai,KIA, Daewoo,Ssang Yong"
+          property="og:title"
+          content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta property="og:url" content="https://www.emirates-car.com/search-by-make" />
+        <meta
+          property="og:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta property="twitter:url" content="https://www.emirates-car.com/search-by-make" />
+        <meta
+          property="twitter:title"
+          content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
         />
         <meta
-          name="keywords"
-          content="spare parts, auto parts,  sapre parts in uae, auto parts in uae, genuine spare parts, genuine auto parts, used spare parts, used auto parts, genuine spare parts dubai, genuine auto parts dubai, used spare parts dubai, used auto parts dubai,spare parts in uae,auto parts in uae, aftermarket spare parts in uae, aftermarket spare parts,car spares, car spares in uae, auto spares in uae, auto spares"
+          property="twitter:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+        />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
         />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">

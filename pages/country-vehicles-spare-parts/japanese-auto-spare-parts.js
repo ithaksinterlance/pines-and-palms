@@ -234,6 +234,34 @@ export default function Japan({ partsposts, posts }) {
     <div>
       <Head>
         <title>Japanese Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <meta
+          property="og:title"
+          content="Quick Japanese Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/japanese-auto-spare-parts" />
+        <meta
+          property="og:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket Japanese auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/japanese-auto-spare-parts" />
+        <meta
+          property="twitter:title"
+          content="Quick Japanese Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+        />
+        <meta
+          property="twitter:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket Japanese auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+        />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
       </Head>
       <Navbar />
       <div className="bg-cover">

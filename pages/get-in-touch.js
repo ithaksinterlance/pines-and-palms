@@ -7,6 +7,7 @@ import avatar3 from "../public/img/avatar3.jpg";
 import Nav from "./nav";
 import Slider from "react-slick";
 import Footer from "./footer";
+import Head from "next/head";
 
 export default function Forms() {
   const [Make, setMake] = useState("");
@@ -118,6 +119,37 @@ export default function Forms() {
   }
   return (
     <div>
+      <Head>
+        <title>Quick Auto Spare Part Hunt in UAE | Emirates-car.com</title>
+        <meta
+          property="og:title"
+          content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta property="og:url" content="https://www.emirates-car.com/get-in-touch" />
+        <meta
+          property="og:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta property="twitter:url" content="https://www.emirates-car.com/get-in-touch" />
+        <meta
+          property="twitter:title"
+          content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
+        />
+        <meta
+          property="twitter:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+        />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+      </Head>
       <Nav />
       <div className="container place-content-center mx-auto py-6">
         <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">

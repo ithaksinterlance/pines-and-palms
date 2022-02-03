@@ -9,7 +9,33 @@ export default function Post({ data }) {
     <div className="bg-gray-100">
       <Head>
         <title>{data.TITLE} | Emirates-car.com</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          property="og:title"
+          content={data.TITLE + " | Emirates-car.com"}
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta
+          property="og:url"
+          content={"https://www.emirates-car.com/" + data.TITLE}
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta
+          property="twitter:url"
+          content={"https://www.emirates-car.com/" + data.TITLE}
+        />
+        <meta
+          property="twitter:title"
+          content={data.TITLE + " | Emirates-car.com"}
+        />
+        <meta
+          property="twitter:image"
+          content={"https://emirates-car.com/img/" + data.IMG}
+        />
       </Head>
       <Navbar />
       <div className="container mx-auto w-full xs:m-0">

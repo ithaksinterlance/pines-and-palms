@@ -264,7 +264,36 @@ export default function City({ cities, data, posts, pos }) {
   return (
     <div>
       <Head>
-        <title>Search Auto Spare Parts by Cities in UAE</title>
+        <title>Quick Auto Spare Parts Hunt in all Cities of UAE</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          property="og:title"
+          content="Quick Auto Spare Parts Hunt in all Cities of UAE | Emirates-car.com"
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta property="og:url" content="https://www.emirates-car.com/search-by-cities-in-uae/" />
+        <meta
+          property="og:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta property="twitter:url" content="https://www.emirates-car.com/search-by-cities-in-uae/" />
+        <meta
+          property="twitter:title"
+          content="Quick Auto Spare Parts Hunt in all Cities of UAE | Emirates-car.com"
+        />
+        <meta
+          property="twitter:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+        />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
       </Head>
       <Nav />
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">

@@ -129,73 +129,33 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
-          name="description"
-          content={
-            make +
-            model +
-            "car Auto spare parts - New / Used / Genuine / Aftermarket parts"
-          }
+          property="og:title"
+          content={make + "-" + model + "Auto Spare Parts in UAE - Best Prices | Emirates-car.com"}
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta property="og:url" content={"https://www.emirates-car.com/search-by-make/" + make +"/"+ model} />
+        <meta
+          property="og:description"
+          content={"Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" + make + model + " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta property="twitter:url" content={"https://www.emirates-car.com/search-by-make/" + make +"/"+ model} />
+        <meta
+          property="twitter:title"
+          content={make + "-" + model + "Auto Spare Parts in UAE - Best Prices | Emirates-car.com"}
         />
         <meta
-          name="keywords"
-          content={
-            make +
-            model +
-            "spare parts," +
-            make +
-            model +
-            "auto parts, " +
-            make +
-            model +
-            "genuine spare parts," +
-            make +
-            model +
-            "genuine auto parts," +
-            make +
-            model +
-            "used spare parts," +
-            make +
-            model +
-            "used auto parts," +
-            make +
-            model +
-            "genuine spare parts dubai," +
-            make +
-            model +
-            "genuine auto parts dubai," +
-            make +
-            model +
-            "used spare parts dubai," +
-            make +
-            model +
-            "used auto parts dubai," +
-            make +
-            model +
-            "spare parts in uae," +
-            make +
-            model +
-            "auto parts in uae," +
-            make +
-            model +
-            "aftermarket spare parts in uae," +
-            make +
-            model +
-            "aftermarket spare parts," +
-            make +
-            model +
-            "car spares," +
-            make +
-            model +
-            "car spares in uae," +
-            make +
-            model +
-            "auto spares in uae, " +
-            make +
-            model +
-            "auto spares"
-          }
+          property="twitter:description"
+          content={"Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" + make + model + " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."}
         />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
         <div className="w-3/4 2xs:w-full xs:w-full s:w-full sm:w-full xs:grid xs:grid-cols-1">

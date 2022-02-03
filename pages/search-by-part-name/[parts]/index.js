@@ -120,8 +120,36 @@ export default function Parts({ data, cities, posts }) {
     <div>
       <Nav />
       <Head>
-        <title>{data.parts} Auto Spare Parts in UAE</title>
+        <title>{data.parts} Auto Spare Parts in UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          property="og:title"
+          content={data.parts + " Auto Spare Parts in UAE | Emirates-car.com"}
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta property="og:url" content={"https://www.emirates-car.com/search-by-part-name"+data.parts} />
+        <meta
+          property="og:description"
+          content={"Secure your " + data.parts + " from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta property="twitter:url" content={"https://www.emirates-car.com/search-by-part-name"+data.parts} />
+        <meta
+          property="twitter:title"
+          content={data.parts + " Auto Spare Parts in UAE | Emirates-car.com"}
+        />
+        <meta
+          property="twitter:description"
+          content={"Secure your " + data.parts + " from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."}
+        />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full s:w-full">
@@ -140,7 +168,7 @@ export default function Parts({ data, cities, posts }) {
                   path:&nbsp;&nbsp;
                 </nobr>
                 index{">>>"}
-                  {data.parts}
+                {data.parts}
                 {">>>"}
               </p>
               <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10">
@@ -412,15 +440,15 @@ export default function Parts({ data, cities, posts }) {
                       href="/search-by-make/[make]"
                       as={"/search-by-make/" + post.make}
                     >
-                      <a title={post.make +" "+ data.parts + " in uae"}>
+                      <a title={post.make + " " + data.parts + " in uae"}>
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image
                               alt={post.make}
                               src={"/img/car-logos/" + post.img}
                               className="object-scale-down shadow-xl"
-                              height={30}
-                              width={30}
+                              height={60}
+                              width={60}
                             />
                             <br />
                           </div>
@@ -438,14 +466,14 @@ export default function Parts({ data, cities, posts }) {
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
-                  abu dhabi, ajman, al quoz, jumeirah, deira etc.
-                  We provide auto spare parts for any vehicles including :
-              <ul className="list-disc">
-                <li>{data.parts} New auto spare parts in uae</li>
-                <li>{data.parts} Used auto spare parts in uae</li>
-                <li>{data.parts} Genuine auto spare parts in uae</li>
-                <li>{data.parts} Aftermarket auto spare parts in uae</li>
-              </ul>
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc. We provide
+                  auto spare parts for any vehicles including :
+                  <ul className="list-disc">
+                    <li>{data.parts} New auto spare parts in uae</li>
+                    <li>{data.parts} Used auto spare parts in uae</li>
+                    <li>{data.parts} Genuine auto spare parts in uae</li>
+                    <li>{data.parts} Aftermarket auto spare parts in uae</li>
+                  </ul>
                 </h1>
                 <p className="text-base font-medium text-gray-500 p-5">
                   UAE Automobile industry is slowly shifting towards a service
@@ -464,10 +492,7 @@ export default function Parts({ data, cities, posts }) {
                   petrol. By this transition there is no difference in usage of
                   irreversible energy.
                 </p>
-                <p className="text-base font-medium text-gray-500 p-5">
-
-                </p>
-
+                <p className="text-base font-medium text-gray-500 p-5"></p>
               </div>
             </div>
           </main>
@@ -483,7 +508,7 @@ export default function Parts({ data, cities, posts }) {
                   href="/search-by-cities-in-uae/[city]"
                   as={"/search-by-cities-in-uae/" + post.city}
                 >
-                  <a>
+                  <a title={"auto spare parts in " + post.city + " uae"}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
                       <i className="far fa-compass"></i> {post.city}
                     </p>

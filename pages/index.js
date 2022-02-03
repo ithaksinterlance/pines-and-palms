@@ -255,6 +255,34 @@ export default function Home({ forms, partsposts, posts, cities }) {
     <div>
       <Head>
         <title>Quick Auto Spare Part Hunt in UAE | Emirates-car.com</title>
+        <meta
+          property="og:title"
+          content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
+        />
+        <meta property="og:site_name" content="Emirates-car" />
+        <meta property="og:url" content="https://www.emirates-car.com" />
+        <meta
+          property="og:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <meta property="twitter:url" content="https://www.emirates-car.com" />
+        <meta
+          property="twitter:title"
+          content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
+        />
+        <meta
+          property="twitter:description"
+          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+        />
+        <meta
+          property="twitter:image"
+          content="https://emirates-car.com/img/car-spare-parts.png"
+        />
       </Head>
       <Nav />
       <div className="flex justify-center">
@@ -327,8 +355,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <Count />
       </div>
       <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
-          POPULAR BRANDS
-        </p>
+        POPULAR BRANDS
+      </p>
       <div className="grid grid-cols-7 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
         <div>
           <Link href="https://emirates-car.com/search-by-make/Ford">
