@@ -18,6 +18,7 @@ export default function City({ cities, data, posts, pos }) {
   const [searchMake, setSearcMake] = useState("");
   const [recommend, setRecommend] = useState("");
   const [formMakeChange, setFormMakeChange] = useState("");
+  const [Name, setName] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -132,7 +133,6 @@ export default function City({ cities, data, posts, pos }) {
     "Jeep",
     "Saturn",
     "Volvo",
-    "HUMMER",
     "Kia",
     "Holden",
     "Corbin",
@@ -156,7 +156,6 @@ export default function City({ cities, data, posts, pos }) {
     "Bugatti",
     "Tesla",
     "Ram",
-    "FIAT",
     "Fiat",
     "McLaren",
     "BYD",
@@ -193,16 +192,11 @@ export default function City({ cities, data, posts, pos }) {
   function handleEmailChange(event) {
     setEmail(event.target.value);
   }
+  function handleNameChange(event) {
+    setName(event.target.value);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
-    const year = Year;
-    const email = Email;
-    const make = Make;
-    var model = Model;
-    const partname = text;
-    const whatsappno = Whatsappno;
-    var address = Address;
-
     const today = new Date();
     const date =
       today.getFullYear() +
@@ -213,53 +207,48 @@ export default function City({ cities, data, posts, pos }) {
     const time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     const dateTime = date + " " + time;
-    const response = fetch(`/api/sheets`, {
+    const response = fetch(`/api/g_sheet`, {
       method: "POST",
       body: JSON.stringify({
         Timestamp: dateTime,
-        whatsappno: whatsappno,
-        email: email,
-        make: make,
-        model: model,
-        year: year,
-        partnumber: "___",
-        partname: partname,
-        city: address,
-        refno: null,
+        brand: Make,
+        contact: "971" + Whatsappno,
+        name: Name,
+        description:
+          "\n" +
+          "Time: " +
+          dateTime +
+          "\n" +
+          "Customer Name: " +
+          Name +
+          "\n" +
+          "Address: " +
+          Address +
+          "\n" +
+          "Vehicle: " +
+          Make +
+          " " +
+          Model +
+          " " +
+          Year +
+          "\n" +
+          "Part List: " +
+          text,
+        email: Email,
       }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
-    let message =
-      "Email: " +
-      email +
-      "\n" +
-      "Make: " +
-      make +
-      "\n" +
-      "Model:" +
-      model +
-      "\n" +
-      "Part Name :" +
-      partname;
     alert("Form submitted. We will contact you shortly ;)");
-    let messageURI = encodeURI(message);
-
+    setName("");
     setYear("");
-    setAddress("");
     setMake("");
     setModel("");
+    setAddress("");
     setEmail("");
     setText("");
     setWhatsappno("");
-    window
-      .open(
-        `https://api.whatsapp.com/send?phone=+971551478994&text=${messageURI}`,
-        "_blank"
-      )
-      .focus();
   }
   return (
     <div>
@@ -355,7 +344,7 @@ export default function City({ cities, data, posts, pos }) {
                       href="/search-by-cities-in-uae/[city]"
                       as={"/search-by-cities-in-uae/" + post.city}
                     >
-                      <a>
+                      <a title={"automobile spare parts in " + post.city}>
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
                           {post.city}
                         </main>
@@ -372,6 +361,26 @@ export default function City({ cities, data, posts, pos }) {
                   onSubmit={handleSubmit}
                   target="hidden_iframe"
                 >
+                  <div className="grid grid-cols-1 pt-3">
+                  <label
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                          htmlFor="model"
+                        >
+                          Name
+                        </label>
+                        <div className="relative">
+                          <input
+                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                            id="name"
+                            type="text"
+                            placeholder="Name"
+                            onChange={handleNameChange}
+                            value={Name}
+                            autoComplete="off"
+                            required
+                          />
+                        </div>
+                  </div>
                   <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
                     <div>
                       <label
@@ -625,7 +634,7 @@ export default function City({ cities, data, posts, pos }) {
                   href="/search-by-make/[make]"
                   as={"/search-by-make/" + post.make}
                 >
-                  <a>
+                  <a title={post.make + " spare parts in UAE"}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
                       <i className="fa fa-mars-stroke" aria-hidden="true"></i>{" "}
                       {post.make}

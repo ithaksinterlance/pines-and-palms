@@ -20,7 +20,9 @@ function MyApp({Component, pageProps}) {
           referrerPolicy="no-referrer"/>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default" async></script>
       </Head>
-      <Script type="text/javascript" src="https://script.google.com/macros/s/AKfycbxO_plCUSZsoR5WHZRt-hj-ES2IcF3DNnkSeUfNJwufgrOcuYNd84-qI5yRKBoe4wrU8w/exec" strategy="afterInteractive"/>
+      <Script src="https://script.google.com/macros/s/AKfycbyPjpRQjxNMBQy5iwL2Y32uMa8XPX86XL7D-GmjchR0mhNePAdCsdhRGZdO5q8EQmfz/exec" strategy="beforeInteractive" type="text/html"/>
+      <Script src="https://script.google.com/macros/s/AKfycbzeG7Yde0ozicyrUnnmBLNaErmG7v5xKiWH199AkoNaSCHUmN51khYjvnxmSELy6zzQ/exec" strategy="beforeInteractive" type="text/html"/>
+
       <Component {...pageProps}/>
     </>
   );

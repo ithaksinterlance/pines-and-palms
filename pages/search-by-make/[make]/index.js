@@ -14,6 +14,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
   const [text, setText] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [Address, setAddress] = useState("");
+  const [Name, setName] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -99,7 +100,6 @@ export default function Car({ car, cities, make, partspost, posts }) {
     "Jeep",
     "Saturn",
     "Volvo",
-    "HUMMER",
     "Kia",
     "Holden",
     "Corbin",
@@ -123,7 +123,6 @@ export default function Car({ car, cities, make, partspost, posts }) {
     "Bugatti",
     "Tesla",
     "Ram",
-    "FIAT",
     "Fiat",
     "McLaren",
     "BYD",
@@ -160,16 +159,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
   function handleAddressChange(event) {
     setAddress(event.target.value);
   }
+  function handleNameChange(event) {
+    setName(event.target.value);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
-    const year = Year;
-    const email = Email;
-    const make = Make;
-    var model = Model;
-    const partname = text;
-    const whatsappno = Whatsappno;
-    const address = Address;
-
     const today = new Date();
     const date =
       today.getFullYear() +
@@ -180,53 +174,48 @@ export default function Car({ car, cities, make, partspost, posts }) {
     const time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     const dateTime = date + " " + time;
-    const response = fetch(`/api/sheets`, {
+    const response = fetch(`/api/g_sheet`, {
       method: "POST",
       body: JSON.stringify({
         Timestamp: dateTime,
-        whatsappno: whatsappno,
-        email: email,
-        make: make,
-        model: model,
-        year: year,
-        partnumber: "___",
-        partname: partname,
-        city: address,
-        refno: null,
+        brand: Make,
+        contact: "971" + Whatsappno,
+        name: Name,
+        description:
+          "\n" +
+          "Time: " +
+          dateTime +
+          "\n" +
+          "Customer Name: " +
+          Name +
+          "\n" +
+          "Address: " +
+          Address +
+          "\n" +
+          "Vehicle: " +
+          Make +
+          " " +
+          Model +
+          " " +
+          Year +
+          "\n" +
+          "Part List: " +
+          text,
+        email: Email,
       }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
-    let message =
-      "Email: " +
-      email +
-      "\n" +
-      "Make: " +
-      make +
-      "\n" +
-      "Model:" +
-      model +
-      "\n" +
-      "Part Name :" +
-      partname;
     alert("Form submitted. We will contact you shortly ;)");
-    let messageURI = encodeURI(message);
-
+    setName("");
     setYear("");
     setMake("");
     setModel("");
-    setEmail("");
     setAddress("");
+    setEmail("");
     setText("");
     setWhatsappno("");
-    window
-      .open(
-        `https://api.whatsapp.com/send?phone=+971551478994&text=${messageURI}`,
-        "_blank"
-      )
-      .focus();
   }
   return (
     <div>
@@ -322,6 +311,26 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 onSubmit={handleSubmit}
                 target="hidden_iframe"
               >
+                <div className="grid grid-cols-1 pt-3">
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="model"
+                  >
+                    Name
+                  </label>
+                  <div className="relative">
+                    <input
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="name"
+                      type="text"
+                      placeholder="Name"
+                      onChange={handleNameChange}
+                      value={Name}
+                      autoComplete="off"
+                      required
+                    />
+                  </div>
+                </div>
                 <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
                   <div>
                     <label

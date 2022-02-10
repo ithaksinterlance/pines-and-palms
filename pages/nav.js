@@ -33,7 +33,7 @@ export default function Navbar() {
 
         <div
           className={
-            "xl:flex flex-grow items-center lg:flex" +
+            "xl:flex flex-grow items-center lg:flex 2xl:flex" +
             (navbarOpen ? "flex" : " hidden")
           }
           id="example-navbar-danger"

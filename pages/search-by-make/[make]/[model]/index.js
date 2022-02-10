@@ -1,6 +1,6 @@
 import Nav from "../../../nav";
 import Footer from "../../../footer";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
@@ -8,15 +8,54 @@ import avatar1 from "../../../../public/img/avatar1.jpeg";
 import avatar2 from "../../../../public/img/avatar2.jpg";
 import avatar3 from "../../../../public/img/avatar3.jpg";
 import Head from "next/head";
-import CarLogos from "../../../carLogos";
 
-export default function Car({ make, model, partspost, uniqueMakeArray, makeArray }) {
+export default function Car({
+  make,
+  model,
+  partspost,
+  uniqueMakeArray,
+  makeArray,
+}) {
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
   const [Email, setEmail] = useState("");
   const [Whatsappno, setWhatsappno] = useState("");
   const [Partname, setPartname] = useState("");
   const [Address, setAddress] = useState("");
+  const [Name, setName] = useState("");
+  const [Year, setYear] = useState("__");
+  const [text, setText] = useState("");
+  const [suggestion, setSuggestion] = useState("");
+  const [formPartname, setFormPartname] = useState("");
+
+  useEffect(() => {
+    const loadPart = async () => {
+      var part = [];
+      for (var i in partspost) {
+        var filtered = partspost[i].parts;
+        part.push(filtered);
+      }
+      setFormPartname(part);
+    };
+    loadPart();
+  }, []);
+
+  const onSuggestionHandler = (text) => {
+    setText(text);
+    setSuggestion([]);
+  };
+
+  const onPartFormChange = (text) => {
+    let matches = [];
+    if (text.length > 0) {
+      matches = formPartname.filter((part) => {
+        const regex = new RegExp(`${text}`, "gi");
+        return part.match(regex);
+      });
+    }
+    setSuggestion(matches);
+    setText(text);
+  };
 
   const settings = {
     autoplay: true,
@@ -51,60 +90,56 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
   function handlePartChange(event) {
     setPartname(event.target.value);
   }
+  function handleNameChange(event) {
+    setName(event.target.value);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
-
-    var email = Email;
-    var make = Make;
-    var model = Model;
-    var partname = Partname;
-    var whatsappno = Whatsappno;
-    const address = Address;
-
-    var today = new Date();
-    var date =
+    const today = new Date();
+    const date =
       today.getFullYear() +
       "-" +
       (today.getMonth() + 1) +
       "-" +
       today.getDate();
-    var time =
+    const time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date + " " + time;
-    var response = fetch(`/api/sheets`, {
+    const dateTime = date + " " + time;
+    const response = fetch(`/api/g_sheet`, {
       method: "POST",
       body: JSON.stringify({
         Timestamp: dateTime,
-        whatsappno: whatsappno,
-        email: email,
-        make: make,
-        model: model,
-        year: "___",
-        partnumber: "___",
-        partname: partname,
-        city: address,
-        refno: null,
+        brand: Make,
+        contact: "971" + Whatsappno,
+        name: Name,
+        description:
+          "\n" +
+          "Time: " +
+          dateTime +
+          "\n" +
+          "Customer Name: " +
+          Name +
+          "\n" +
+          "Address: " +
+          Address +
+          "\n" +
+          "Vehicle: " +
+          Make +
+          " " +
+          Model +
+          " " +
+          Year +
+          "\n" +
+          "Part List: " +
+          text,
+        email: Email,
       }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
-    let message =
-      "Email: " +
-      email +
-      "\n" +
-      "Make: " +
-      make +
-      "\n" +
-      "Model:" +
-      model +
-      "\n" +
-      "Part Name :" +
-      partname;
     alert("Form submitted. We will contact you shortly ;)");
-    let messageURI = encodeURI(message);
-
+    setName("");
     setYear("");
     setMake("");
     setModel("");
@@ -112,12 +147,6 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
     setEmail("");
     setText("");
     setWhatsappno("");
-    window
-      .open(
-        `https://api.whatsapp.com/send?phone=+971551478994&text=${messageURI}`,
-        "_blank"
-      )
-      .focus();
   }
 
   return (
@@ -130,27 +159,57 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
-          content={make + "-" + model + "Auto Spare Parts in UAE - Best Prices | Emirates-car.com"}
+          content={
+            make +
+            "-" +
+            model +
+            "Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+          }
         />
         <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content={"https://www.emirates-car.com/search-by-make/" + make +"/"+ model} />
+        <meta
+          property="og:url"
+          content={
+            "https://www.emirates-car.com/search-by-make/" + make + "/" + model
+          }
+        />
         <meta
           property="og:description"
-          content={"Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" + make + model + " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."}
+          content={
+            "Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" +
+            make +
+            model +
+            " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."
+          }
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
-        <meta property="twitter:url" content={"https://www.emirates-car.com/search-by-make/" + make +"/"+ model} />
+        <meta
+          property="twitter:url"
+          content={
+            "https://www.emirates-car.com/search-by-make/" + make + "/" + model
+          }
+        />
         <meta
           property="twitter:title"
-          content={make + "-" + model + "Auto Spare Parts in UAE - Best Prices | Emirates-car.com"}
+          content={
+            make +
+            "-" +
+            model +
+            "Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+          }
         />
         <meta
           property="twitter:description"
-          content={"Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" + make + model + " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."}
+          content={
+            "Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" +
+            make +
+            model +
+            " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."
+          }
         />
         <meta
           property="twitter:image"
@@ -159,7 +218,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
         <div className="w-3/4 2xs:w-full xs:w-full s:w-full sm:w-full xs:grid xs:grid-cols-1">
-          <main className="mx-10 xs:mx-auto 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
+          <main className="xs:mx-auto 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
             <div>
               <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
                 FILL OUT THE INQUIRY FOR
@@ -180,9 +239,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
               </p>
             </div>
             <div className="container place-content-center mx-1 xs:mx-0 py-6">
-
               <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
-
                 <div className="w-1/3 bg-blue-700 2xs:hidden xs:hidden sm:hidden md:hidden">
                   <Slider {...settings} className="py-10 p-2">
                     <div>
@@ -289,16 +346,38 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                     ></iframe>
                   </div>
                 </div>
-                <div className="w-2/3 xs:w-screen  s:w-full md:w-full 2xs:w-full sm:w-full">
+                <div className="w-2/3 xs:w-full s:w-full md:w-full 2xs:w-full sm:w-full">
                   <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
                     Searching for {make} - {model} auto spare parts in U.A.E?
                     Fill out the inquiry down below.
                   </p>
                   <form
                     onSubmit={handleSubmit}
-                    className="shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+                    className="shadow-xl px-8 py-8 xs:py-3 2xs:px-4 sm:px-4"
                     method="POST"
                   >
+                    <div className="flex flex-wrap -mx-3 mb-2">
+                      <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                          htmlFor="model"
+                        >
+                          Name
+                        </label>
+                        <div className="relative">
+                          <input
+                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                            id="name"
+                            type="text"
+                            placeholder="Name"
+                            onChange={handleNameChange}
+                            value={Name}
+                            autoComplete="off"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
@@ -404,25 +483,35 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
 
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="partname"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    <label
+                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      htmlFor="partname"
+                    >
+                      PART NAME
+                    </label>
+                    <textarea
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="partname"
+                      type="text"
+                      placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
+                      rows={5}
+                      name="entry.1660104041"
+                      onChange={(e) => onPartFormChange(e.target.value)}
+                      value={text}
+                      autoComplete="off"
+                      required
+                    />{" "}
+                    {suggestion &&
+                      suggestion.map((suggestion, i) => (
+                        <div
+                          key={i}
+                          className="cursor-pointer border-gray-400 p-4"
+                          onClick={() => onSuggestionHandler(suggestion)}
                         >
-                          Part Name
-                        </label>
-                        <textarea
-                          id="partname"
-                          name="entry.1660104041"
-                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                          type="text"
-                          rows={5}
-                          placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
-                          onChange={handlePartChange}
-                          value={Partname}
-                          required
-                          autoComplete="off"
-                        />
-                      </div>
+                          {suggestion}{" "}
+                        </div>
+                      ))}{" "}
+                  </div>
                     </div>
 
                     <div className="flex flex-wrap -mx-3 mb-2">
@@ -468,14 +557,14 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
-                  abu dhabi, ajman, al quoz, jumeirah, deira etc.
-                  We provide auto spare parts for any vehicles including :
-              <ul className="list-disc">
-                <li>New auto spare parts in uae</li>
-                <li>Used auto spare parts in uae</li>
-                <li>Genuine auto spare parts in uae</li>
-                <li>Aftermarket auto spare parts in uae</li>
-              </ul>
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc. We provide
+                  auto spare parts for any vehicles including :
+                  <ul className="list-disc">
+                    <li>New auto spare parts in uae</li>
+                    <li>Used auto spare parts in uae</li>
+                    <li>Genuine auto spare parts in uae</li>
+                    <li>Aftermarket auto spare parts in uae</li>
+                  </ul>
                 </h1>
                 <p className="text-base font-medium text-gray-500 p-5">
                   UAE Automobile industry is slowly shifting towards a service
@@ -498,7 +587,7 @@ export default function Car({ make, model, partspost, uniqueMakeArray, makeArray
               <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 xs:hidden sm:hidden s:hidden 2xs:hidden">
                 WE ALSO DEAL IN OTHER BRANDS
               </p>
-              <div className="grid grid-cols-12 md:grid md:grid-cols-7 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 2xs:mx-4 md:mx-5 shadow-2xl my-10">
+              <div className="grid grid-cols-12 md:grid md:grid-cols-7 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 mx-5 2xs:mx-4 md:mx-5 my-10">
                 {makeArray.map((p) => (
                   <div key={p.id}>
                     <Link

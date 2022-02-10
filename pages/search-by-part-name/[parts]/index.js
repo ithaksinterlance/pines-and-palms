@@ -16,6 +16,8 @@ export default function Parts({ data, cities, posts }) {
   const [Whatsappno, setWhatsappno] = useState("");
   const [Address, setAddress] = useState("");
   const [Partname, setPartname] = useState(data.parts);
+  const [Name, setName] = useState("");
+  const [Year, setYear] = useState("");
 
   const settings = {
     autoplay: true,
@@ -50,71 +52,63 @@ export default function Parts({ data, cities, posts }) {
   function handlePartChange(event) {
     setPartname(event.target.value);
   }
+  function handleNameChange(event) {
+    setName(event.target.value);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
-
-    var email = Email;
-    var make = Make;
-    var model = Model;
-    var partname = Partname;
-    var whatsappno = Whatsappno;
-    const address = Address;
-
-    var today = new Date();
-    var date =
+    const today = new Date();
+    const date =
       today.getFullYear() +
       "-" +
       (today.getMonth() + 1) +
       "-" +
       today.getDate();
-    var time =
+    const time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date + " " + time;
-    var response = fetch(`/api/sheets`, {
+    const dateTime = date + " " + time;
+    const response = fetch(`/api/g_sheet`, {
       method: "POST",
       body: JSON.stringify({
         Timestamp: dateTime,
-        whatsappno: whatsappno,
-        email: email,
-        make: make,
-        model: model,
-        year: "___",
-        partnumber: "___",
-        partname: partname,
-        city: address,
-        refno: null,
+        brand: Make,
+        contact: "971" + Whatsappno,
+        name: Name,
+        description:
+          "\n" +
+          "Time: " +
+          dateTime +
+          "\n" +
+          "Customer Name: " +
+          Name +
+          "\n" +
+          "Address: " +
+          Address +
+          "\n" +
+          "Vehicle: " +
+          Make +
+          " " +
+          Model +
+          " " +
+          Year +
+          "\n" +
+          "Part List: " +
+          Partname,
+        email: Email,
       }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
-    let message =
-      "Email: " +
-      email +
-      "\n" +
-      "Make: " +
-      make +
-      "\n" +
-      "Model:" +
-      model +
-      "\n" +
-      "Part Name :" +
-      partname;
     alert("Form submitted. We will contact you shortly ;)");
-    let messageURI = encodeURI(message);
-
+    setName("");
+    setYear("");
     setMake("");
     setModel("");
     setAddress("");
     setEmail("");
+    setPartname("");
     setWhatsappno("");
-    window
-      .open(
-        `https://api.whatsapp.com/send?phone=+971551478994&text=${messageURI}`,
-        "_blank"
-      )
-      .focus();
   }
   return (
     <div>
@@ -127,24 +121,42 @@ export default function Parts({ data, cities, posts }) {
           content={data.parts + " Auto Spare Parts in UAE | Emirates-car.com"}
         />
         <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content={"https://www.emirates-car.com/search-by-part-name"+data.parts} />
+        <meta
+          property="og:url"
+          content={
+            "https://www.emirates-car.com/search-by-part-name" + data.parts
+          }
+        />
         <meta
           property="og:description"
-          content={"Secure your " + data.parts + " from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."}
+          content={
+            "Secure your " +
+            data.parts +
+            " from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          }
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
-        <meta property="twitter:url" content={"https://www.emirates-car.com/search-by-part-name"+data.parts} />
+        <meta
+          property="twitter:url"
+          content={
+            "https://www.emirates-car.com/search-by-part-name" + data.parts
+          }
+        />
         <meta
           property="twitter:title"
           content={data.parts + " Auto Spare Parts in UAE | Emirates-car.com"}
         />
         <meta
           property="twitter:description"
-          content={"Secure your " + data.parts + " from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."}
+          content={
+            "Secure your " +
+            data.parts +
+            " from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          }
         />
         <meta
           property="twitter:image"
@@ -288,6 +300,28 @@ export default function Parts({ data, cities, posts }) {
                     className="shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4 s:py-4 s:px-1"
                     method="POST"
                   >
+                    <div className="flex flex-wrap -mx-3 mb-2">
+                      <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                          htmlFor="model"
+                        >
+                          Name
+                        </label>
+                        <div className="relative">
+                          <input
+                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                            id="name"
+                            type="text"
+                            placeholder="Name"
+                            onChange={handleNameChange}
+                            value={Name}
+                            autoComplete="off"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
                     <div className="flex flex-wrap -mx-3 mb-2 s:mb-1">
                       <div className="w-full px-3 mb-6 s:mb-1  xs:mb-0 md:mb-0">
                         <label

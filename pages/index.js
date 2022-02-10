@@ -20,6 +20,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
   const [Whatsappno, setWhatsappno] = useState("");
   const [formPartname, setFormPartname] = useState([]);
   const [text, setText] = useState("");
+  const [Name, setName] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [Address, setAddress] = useState("");
 
@@ -122,7 +123,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
     "Jeep",
     "Saturn",
     "Volvo",
-    "HUMMER",
     "Kia",
     "Holden",
     "Corbin",
@@ -146,7 +146,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
     "Bugatti",
     "Tesla",
     "Ram",
-    "FIAT",
     "Fiat",
     "McLaren",
     "BYD",
@@ -183,16 +182,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
   function handleAddressChange(event) {
     setAddress(event.target.value);
   }
+  function handleNameChange(event) {
+    setName(event.target.value);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
-    const year = Year;
-    const email = Email;
-    const make = Make;
-    var model = Model;
-    const partname = text;
-    const whatsappno = Whatsappno;
-    const address = Address;
-
     const today = new Date();
     const date =
       today.getFullYear() +
@@ -203,40 +197,41 @@ export default function Home({ forms, partsposts, posts, cities }) {
     const time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     const dateTime = date + " " + time;
-    const response = fetch(`/api/sheets`, {
+    const response = fetch(`/api/g_sheet`, {
       method: "POST",
       body: JSON.stringify({
         Timestamp: dateTime,
-        whatsappno: whatsappno,
-        email: email,
-        make: make,
-        model: model,
-        year: year,
-        partnumber: "___",
-        partname: partname,
-        city: address,
-        refno: null,
+        brand: Make,
+        contact: "971" + Whatsappno,
+        name: Name,
+        description:
+          "\n" +
+          "Time: " +
+          dateTime +
+          "\n" +
+          "Customer Name: " +
+          Name +
+          "\n" +
+          "Address: " +
+          Address +
+          "\n" +
+          "Vehicle: " +
+          Make +
+          " " +
+          Model +
+          " " +
+          Year +
+          "\n" +
+          "Part List: " +
+          text,
+        email: Email,
       }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
-    let message =
-      "Email: " +
-      email +
-      "\n" +
-      "Make: " +
-      make +
-      "\n" +
-      "Model:" +
-      model +
-      "\n" +
-      "Part Name :" +
-      partname;
     alert("Form submitted. We will contact you shortly ;)");
-    let messageURI = encodeURI(message);
-
+    setName("");
     setYear("");
     setMake("");
     setModel("");
@@ -244,17 +239,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
     setEmail("");
     setText("");
     setWhatsappno("");
-    window
-      .open(
-        `https://api.whatsapp.com/send?phone=+971551478994&text=${messageURI}`,
-        "_blank"
-      )
-      .focus();
   }
   return (
     <div>
       <Head>
-        <title>Quick Auto Spare Part Hunt in UAE | Emirates-car.com</title>
+        <title>Quick Auto Spare Parts Hunt in UAE | Emirates-car.com</title>
         <meta
           property="og:title"
           content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
@@ -786,10 +775,33 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <form
               id="myForm"
               className="w-full shadow-xl px-8 py-8 xs:px-2 xs:py-3 2xs:px-4 sm:px-4"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSeIJu3dIAVWI2YjuO2bv31unQiJf4frrpb3IyVObr_05fmxoA/formResponse"
               method="POST"
               onSubmit={handleSubmit}
               target="hidden_iframe"
             >
+              <div className="flex flex-wrap  mb-2">
+                <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="model"
+                  >
+                    Name
+                  </label>
+                  <div className="relative">
+                    <input
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="name"
+                      type="text"
+                      placeholder="Name"
+                      onChange={handleNameChange}
+                      value={Name}
+                      autoComplete="off"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
               <div className="flex flex-wrap  mb-2">
                 <div className="w-1/2 md:w-1/2 px-3 mb-6 md:mb-0 xs:mb-0">
                   <label
@@ -804,7 +816,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       id="year"
                       type="text"
                       placeholder="Year"
-                      name="entry.902626710"
+                      name="entry.44547744"
                       onChange={handleYearChange}
                       value={Year}
                       autoComplete="off"
@@ -940,6 +952,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
                     id="city"
                     type="text"
+                    name="entry.1212961542"
                     placeholder="Where do you live?"
                     onChange={handleAddressChange}
                     value={Address}
