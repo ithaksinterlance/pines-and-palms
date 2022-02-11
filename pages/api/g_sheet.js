@@ -43,7 +43,7 @@ async function handler(req, res) {
 
     const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
     const jwt = new google.auth.JWT(
-      "emirates-car-sheet@emirates-car-sheet.iam.gserviceaccount.com",
+      process.env.EMIRATES_CAR_CLIENT_EMAIL,
       null,
       process.env.EMIRATES_CAR_FORMS_PRIVATE_KEY.replace(/\\n/g, "\n"),
       scopes,
@@ -51,7 +51,7 @@ async function handler(req, res) {
     );
 
     const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: "1OU5-EXn66I30Xut49NBekkCDJ1BWXqiZyG-FdVslsi8",
+      spreadsheetId: process.env.EMIRATES_CAR_DATABASE_ID,
       range: "emirates-car-sheet",
       valueInputOption: "USER_ENTERED",
       auth: jwt,
