@@ -46,7 +46,7 @@ async function handler(req, res) {
     const jwt = new google.auth.JWT(
       "emirates-car-battery@emirates-car-sheet-340905.iam.gserviceaccount.com",
       null,
-      JSON.parse(process.env.EMIRATES_BATTERY_PRIVATE_KEY.replace(/\\n/g, "\n")),
+      process.env.EMIRATES_BATTERY_PRIVATE_KEY.replace(/\\n/g, "\n"),
       scopes,
       null
     );

@@ -202,34 +202,7 @@ export default function Forms({ forms, partsposts, posts, cities }) {
         "Content-Type": "application/json",
       },
     });
-
-    let message =
-      "Timestamp: " +
-      dateTime +
-      "\n" +
-      "Brand: " +
-      Make +
-      "\n" +
-      "Contact:" +
-      Whatsappno +
-      "\n" +
-      "Customer Name: " +
-      Name +
-      "\n" +
-      "Address: " +
-      Address +
-      "\n" +
-      "Part List: " +
-      text +
-      "\n" +
-      Make +
-      " " +
-      Model +
-      " " +
-      Year +
-      "\n";
     alert("Form submitted. We will contact you shortly ;)");
-    let messageURI = encodeURI(message);
     setName("");
     setYear("");
     setMake("");
@@ -238,12 +211,6 @@ export default function Forms({ forms, partsposts, posts, cities }) {
     setEmail("");
     setText("");
     setWhatsappno("");
-    window
-      .open(
-        `https://api.whatsapp.com/send?phone=+971551478994&text=${messageURI}`,
-        "_blank"
-      )
-      .focus();
   }
 
   return (
