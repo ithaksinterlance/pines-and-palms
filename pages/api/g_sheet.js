@@ -1,6 +1,7 @@
 import { google } from "googleapis";
 const sheets = google.sheets("v4");
 import nodemailer from "nodemailer";
+import { SMTPClient } from 'emailjs';
 
 async function handler(req, res) {
   if (req.method === "POST") {
@@ -34,7 +35,7 @@ async function handler(req, res) {
 
     const mailOptions = {
       from: email,
-      to: [ "it.haksinterlance@gmail.com", "haksinterlance@gmail.com"],
+      to: [ "it.haksinterlance@gmail.com","haksinterlance@gmail.com"],
       subject: `Emirates-car.com - Auto Spare Parts Inquiry Received`,
       html: `<div><h4>Hi Auto spare parts response received for</h4>
       <p>Timestamp: ${Timestamp}</p>
@@ -45,6 +46,31 @@ async function handler(req, res) {
     };
 
     transporter.sendMail(mailOptions);
+
+    const client = new SMTPClient({
+      user: "it.hakstime@gmail.com",
+      password: process.env.PASS,
+      host: 'smtp.gmail.com',
+      ssl: true,
+    });
+
+    client.send(
+      {
+        text:
+        `Hi Auto spare parts response received for
+        Timestamp: ${Timestamp}
+        Customer Name : ${name}
+        Description : ${description}
+        WhatsApp Link: https://api.whatsapp.com/send?phone=${contact}&text=${detailEncode}%0AWe%20received%20your%20enquiry%20for%20car%20battery%20for%20above%20vehicle`,
+        from: email,
+        to: [ "it.haksinterlance@gmail.com","haksinterlance@gmail.com"],
+        cc: ["jsafroze@gmail.com"],
+        subject: "Emirates-car.com - Auto Spare Parts Inquiry Received",
+      },
+      (err, message) => {
+        console.log(err || message);
+      }
+    );
 
 
     const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
