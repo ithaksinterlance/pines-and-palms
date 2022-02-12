@@ -154,7 +154,7 @@ export default function Car({
       <Nav />
       <Head>
         <title>
-          {make}- {model} Auto Spare Parts in UAE - Best Prices
+          {make} - {model}&nbsp; Auto Spare Parts in UAE - Best Prices
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta

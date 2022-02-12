@@ -44,7 +44,7 @@ async function handler(req, res) {
       </div>`,
     };
 
-      await transporter.sendMail(mailOptions);
+    transporter.sendMail(mailOptions);
 
 
     const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
