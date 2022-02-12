@@ -11,6 +11,41 @@ async function handler(req, res) {
     const description = req.body.description;
     const email = req.body.email;
 
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      service: "gmail",
+      port: 465,
+      auth: {
+        user: "it.hakstime@gmail.com",
+        pass: process.env.PASS,
+      },
+    });
+
+    var details =
+      "Timestamp : " +
+      Timestamp +
+      "\n" +
+      "Customer Name : " +
+      name +
+      "\n" +
+      "Description : " +
+      description;
+    var detailEncode = encodeURI(details);
+
+    const mailOptions = {
+      from: email,
+      to: [ "it.haksinterlance@gmail.com"],
+      subject: `Emirates-car.com - Auto Spare Parts Inquiry Received`,
+      html: `<div><h4>Hi Auto spare parts response received for</h4>
+      <p>Timestamp: ${Timestamp}</p>
+      <p>Customer Name : ${name}</p>
+      <p>Description : ${description}</p>
+      <p>WhatsApp Link: https://api.whatsapp.com/send?phone=${contact}&text=${detailEncode}%0AWe%20received%20your%20enquiry%20for%20car%20battery%20for%20above%20vehicle</p>
+      </div>`,
+    };
+
+    transporter.sendMail(mailOptions);
+
     const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
     const jwt = new google.auth.JWT(
       process.env.EMIRATES_CAR_CLIENT_EMAIL,
@@ -30,50 +65,6 @@ async function handler(req, res) {
       },
     });
     const data = JSON.stringify(response);
-
-    return new Promise((resolve, reject) => {
-      const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        service: "gmail",
-        port: 465,
-        auth: {
-          user: "it.hakstime@gmail.com",
-          pass: process.env.PASS,
-        },
-      });
-      var details =
-        "Timestamp : " +
-        Timestamp +
-        "\n" +
-        "Customer Name : " +
-        name +
-        "\n" +
-        "Description : " +
-        description;
-      var detailEncode = encodeURI(details);
-      const mailOptions = {
-        from: email,
-        to: ["haksinterlance@gmail.com", "it.haksinterlance@gmail.com"],
-        subject: `Emirates-car.com - Auto Spare Parts Inquiry Received`,
-        html: `<div><h4>Hi Auto spare parts response received for</h4>
-        <p>Timestamp: ${Timestamp}</p>
-        <p>Customer Name : ${name}</p>
-        <p>Description : ${description}</p>
-        <p>WhatsApp Link: https://api.whatsapp.com/send?phone=${contact}&text=${detailEncode}%0AWe%20received%20your%20enquiry%20for%20car%20battery%20for%20above%20vehicle</p>
-        </div>`,
-      };
-      let resp = false;
-
-      transporter.sendMail(mailOptions, function(error, info) {
-        if (error) {
-          console.log("error is " + error);
-          resolve(false); // or use rejcet(false) but then you will have to handle errors
-        } else {
-          console.log("Email sent: " + info.response);
-          resolve(true);
-        }
-      });
-    });
 
     res.status(201).json(data);
   } else {
