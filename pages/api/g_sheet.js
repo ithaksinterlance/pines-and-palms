@@ -34,7 +34,7 @@ async function handler(req, res) {
 
     const mailOptions = {
       from: email,
-      to: [ "it.haksinterlance@gmail.com"],
+      to: [ "it.haksinterlance@gmail.com", "haksinterlance@gmail.com"],
       subject: `Emirates-car.com - Auto Spare Parts Inquiry Received`,
       html: `<div><h4>Hi Auto spare parts response received for</h4>
       <p>Timestamp: ${Timestamp}</p>
