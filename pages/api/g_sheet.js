@@ -3,7 +3,7 @@ const sheets = google.sheets("v4");
 import nodemailer from "nodemailer";
 import { SMTPClient } from 'emailjs';
 
-export default function handler(req, res) {
+async function handler(req, res) {
   if (req.method === "POST") {
     const Timestamp = req.body.Timestamp;
     const name = req.body.name;
@@ -82,7 +82,7 @@ export default function handler(req, res) {
       null
     );
 
-    const response = sheets.spreadsheets.values.append({
+    const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.EMIRATES_CAR_DATABASE_ID,
       range: "emirates-car-sheet",
       valueInputOption: "USER_ENTERED",
@@ -98,3 +98,5 @@ export default function handler(req, res) {
     res.status(200).json({ message: "error" });
   }
 }
+
+export default handler;
