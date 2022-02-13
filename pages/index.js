@@ -197,7 +197,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
     const time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     const dateTime = date + " " + time;
-    const response = fetch(`/api/g_sheet`, {
+    fetch(`/api/g_sheet`, {
       method: "POST",
       body: JSON.stringify({
         Timestamp: dateTime,
@@ -260,6 +260,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         email: Email,
       }),
       headers: {
+        'Accept': "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
     });
@@ -272,8 +273,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
     setEmail("");
     setText("");
     setWhatsappno("");
-
-
   }
   return (
     <div>
