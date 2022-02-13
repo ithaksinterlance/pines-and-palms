@@ -16,8 +16,8 @@ export default function Forms() {
   const [Whatsappno, setWhatsappno] = useState("");
   const [Partname, setPartname] = useState("");
   const [Name, setName] = useState("");
-  const [Address, setAddress] = useState("__");
-  const [Year, setYear] = useState("__");
+  const [Address, setAddress] = useState("");
+  const [Year, setYear] = useState("");
 
   const settings = {
     autoplay: true,
