@@ -932,7 +932,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
                     id="email"
                     type="text"
-                    placeholder="We won't leak your mail id"
+                    placeholder="Mail ID"
                     onChange={handleEmailChange}
                     value={Email}
                     autoComplete="off"
@@ -946,14 +946,14 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                     htmlFor="city"
                   >
-                    City
+                    Location
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
                     id="city"
                     type="text"
                     name="entry.1212961542"
-                    placeholder="Where do you live?"
+                    placeholder="(Area, Emirates) or (City, Country)"
                     onChange={handleAddressChange}
                     value={Address}
                     autoComplete="off"
