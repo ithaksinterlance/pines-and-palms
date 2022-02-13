@@ -230,6 +230,39 @@ export default function Home({ forms, partsposts, posts, cities }) {
         "Content-Type": "application/json",
       },
     });
+    fetch(`/api/contact`, {
+      method: "POST",
+      body: JSON.stringify({
+        Timestamp: dateTime,
+        brand: Make,
+        contact: "971" + Whatsappno,
+        name: Name,
+        description:
+          "\n" +
+          "Time: " +
+          dateTime +
+          "\n" +
+          "Customer Name: " +
+          Name +
+          "\n" +
+          "Address: " +
+          Address +
+          "\n" +
+          "Vehicle: " +
+          Make +
+          " " +
+          Model +
+          " " +
+          Year +
+          "\n" +
+          "Part List: " +
+          text,
+        email: Email,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     alert("Form submitted. We will contact you shortly ;)");
     setName("");
     setYear("");
@@ -239,6 +272,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
     setEmail("");
     setText("");
     setWhatsappno("");
+
+
   }
   return (
     <div>
