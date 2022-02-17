@@ -20,6 +20,7 @@ export default function Forms({ posts, pos }) {
   const [suggestion, setSuggestion] = useState([]);
   const [Address, setAddress] = useState("");
   const [Name, setName] = useState("");
+  const [Code, setCode] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -183,6 +184,9 @@ export default function Forms({ posts, pos }) {
   function handleNameChange(event) {
     setName(event.target.value);
   }
+  function handleCodeChange(event){
+    setCode(event.target.value);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
     const today = new Date();
@@ -200,13 +204,9 @@ export default function Forms({ posts, pos }) {
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
-        contact: "971" + Whatsappno,
+        contact: Code + Whatsappno,
         name: Name,
         description:
-          "\n" +
-          "Time: " +
-          dateTime +
-          "\n" +
           "Customer Name: " +
           Name +
           "\n" +
@@ -229,6 +229,7 @@ export default function Forms({ posts, pos }) {
       },
     });
     alert("Form submitted. We will contact you shortly ;)");
+    setCode("");
     setName("");
     setYear("");
     setMake("");
@@ -538,43 +539,44 @@ export default function Forms({ posts, pos }) {
                 </div>
               </div>
 
-              <div className="flex flex-wrap -mx-3">
-                <div className="w-full px-3 mb-6 xs:mb-0">
-                  <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                    htmlFor="whatsappno"
-                  >
-                    WhatsApp No
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="whatsappno"
-                    type="text"
-                    placeholder="WhatsApp No"
-                    onChange={handleWhatsAppNoChange}
-                    value={Whatsappno}
-                    autoComplete="off"
-                    required
-                  />
-                </div>
-                <div className="w-full px-3 mb-6 xs:mb-0">
-                  <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                    htmlFor="email"
-                  >
-                    Email(Optional)
-                  </label>
-                  <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="email"
-                    type="text"
-                    placeholder="We won't leak your mail id"
-                    onChange={handleEmailChange}
-                    value={Email}
-                    autoComplete="off"
-                  />
-                </div>
-              </div>
+              <div className="flex flex-wrap -mx-3 mb-2">
+                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="Code"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          CODE
+                        </label>
+                        <input
+                          id="Code"
+                          name="entry.44547744"
+                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          type="text"
+                          placeholder="Eg. +971, +27 ..."
+                          onChange={handleCodeChange}
+                          value={Code}
+                          required
+                        />
+                      </div>
+                      <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="whatsappno"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          WhatsApp no
+                        </label>
+                        <input
+                          id="whatsappno"
+                          name="entry.902626710"
+                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                          type="text"
+                          placeholder="WhatsApp No"
+                          onChange={handleWhatsAppNoChange}
+                          value={Whatsappno}
+                          required
+                        />
+                      </div>
+                  </div>
               <div className="flex flex-wrap -mx-3">
                 <div className="w-full px-3 mb-6 xs:mb-0">
                   <label
@@ -590,6 +592,25 @@ export default function Forms({ posts, pos }) {
                     placeholder="(Area, Emirates) or (City, Country)"
                     onChange={handleAddressChange}
                     value={Address}
+                    autoComplete="off"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3">
+                <div className="w-full px-3 mb-6 xs:mb-0">
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="email"
+                  >
+                    Email
+                  </label>
+                  <input
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    id="city"
+                    type="text"
+                    placeholder="Mail ID"
+                    onChange={handleEmailChange}
+                    value={Email}
                     autoComplete="off"
                   />
                 </div>

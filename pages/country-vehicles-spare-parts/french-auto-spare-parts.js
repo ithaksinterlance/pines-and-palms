@@ -18,6 +18,7 @@ export default function France({ partsposts, posts }) {
   const [suggestion, setSuggestion] = useState([]);
   const [Address, setAddress] = useState("");
   const [Name, setName] = useState("");
+  const [Code, setCode] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -164,6 +165,9 @@ export default function France({ partsposts, posts }) {
   function handleNameChange(event) {
     setName(event.target.value);
   }
+  function handleCodeChange() {
+    setCode(event.target.value);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
     const today = new Date();
@@ -184,10 +188,6 @@ export default function France({ partsposts, posts }) {
         contact: "971" + Whatsappno,
         name: Name,
         description:
-          "\n" +
-          "Time: " +
-          dateTime +
-          "\n" +
           "Customer Name: " +
           Name +
           "\n" +
@@ -210,6 +210,7 @@ export default function France({ partsposts, posts }) {
       },
     });
     alert("Form submitted. We will contact you shortly ;)");
+    setCode("");
     setName("");
     setYear("");
     setMake("");
@@ -531,24 +532,43 @@ export default function France({ partsposts, posts }) {
                   </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-                  <div>
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="whatsappno"
-                    >
-                      WhatsApp No
-                    </label>
-                    <input
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                      id="whatsappno"
-                      type="text"
-                      placeholder="WhatsApp No"
-                      name="entry.902626710"
-                      onChange={handleWhatsAppNoChange}
-                      value={Whatsappno}
-                      autoComplete="off"
-                      required
-                    />
+                <div className="flex flex-wrap -mx-3 mb-2">
+                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="Code"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          CODE
+                        </label>
+                        <input
+                          id="Code"
+                          name="entry.44547744"
+                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          type="text"
+                          placeholder="Eg. +971, +27 ..."
+                          onChange={handleCodeChange}
+                          value={Code}
+                          required
+                        />
+                      </div>
+                      <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="whatsappno"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          WhatsApp no
+                        </label>
+                        <input
+                          id="whatsappno"
+                          name="entry.902626710"
+                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                          type="text"
+                          placeholder="WhatsApp No"
+                          onChange={handleWhatsAppNoChange}
+                          value={Whatsappno}
+                          required
+                        />
+                      </div>
                   </div>
                   <div>
                     <label

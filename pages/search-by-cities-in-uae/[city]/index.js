@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Count from "../../service-countup";
 
 export default function City({ data, partspost, posts, makedatas }) {
   const [Year, setYear] = useState("");
@@ -16,6 +17,7 @@ export default function City({ data, partspost, posts, makedatas }) {
   const [City, setCity] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [Name, setName] = useState("");
+  const [Code, setCode] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -170,6 +172,9 @@ export default function City({ data, partspost, posts, makedatas }) {
   function handleNameChange(event) {
     setName(event.target.value);
   }
+  function handleCodeChange(event) {
+    setCode(event.target.value);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
     const today = new Date();
@@ -187,13 +192,9 @@ export default function City({ data, partspost, posts, makedatas }) {
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
-        contact: "971" + Whatsappno,
+        contact: Code + Whatsappno,
         name: Name,
         description:
-          "\n" +
-          "Time: " +
-          dateTime +
-          "\n" +
           "Customer Name: " +
           Name +
           "\n" +
@@ -217,6 +218,7 @@ export default function City({ data, partspost, posts, makedatas }) {
     });
     alert("Form submitted. We will contact you shortly ;)");
     setName("");
+    setCode("");
     setYear("");
     setMake("");
     setModel("");
@@ -449,24 +451,43 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-                  <div>
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="whatsappno"
-                    >
-                      WhatsApp No
-                    </label>
-                    <input
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                      id="whatsappno"
-                      type="text"
-                      placeholder="WhatsApp No"
-                      name="entry.902626710"
-                      onChange={handleWhatsAppNoChange}
-                      value={Whatsappno}
-                      autoComplete="off"
-                      required
-                    />
+                <div className="flex flex-wrap -mx-3 mb-2">
+                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="Code"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          CODE
+                        </label>
+                        <input
+                          id="Code"
+                          name="entry.44547744"
+                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          type="text"
+                          placeholder="Eg. +971, +27 ..."
+                          onChange={handleCodeChange}
+                          value={Code}
+                          required
+                        />
+                      </div>
+                      <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="whatsappno"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          WhatsApp no
+                        </label>
+                        <input
+                          id="whatsappno"
+                          name="entry.902626710"
+                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                          type="text"
+                          placeholder="WhatsApp No"
+                          onChange={handleWhatsAppNoChange}
+                          value={Whatsappno}
+                          required
+                        />
+                      </div>
                   </div>
                   <div>
                     <label
@@ -551,6 +572,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                 </div>
               </form>
             </div>
+            <div><Count/></div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 mx-5">
               <h1 className="text-base font-medium text-gray-500 p-5">
                 We deal with any country auto spare parts including japanese,

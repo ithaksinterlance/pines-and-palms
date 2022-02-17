@@ -8,6 +8,7 @@ import avatar1 from "../../../../public/img/avatar1.jpeg";
 import avatar2 from "../../../../public/img/avatar2.jpg";
 import avatar3 from "../../../../public/img/avatar3.jpg";
 import Head from "next/head";
+import Count from "../../../service-countup";
 
 export default function Car({
   make,
@@ -16,17 +17,18 @@ export default function Car({
   uniqueMakeArray,
   makeArray,
 }) {
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
+  const [Make, setMake] = useState(make);
+  const [Model, setModel] = useState(model);
   const [Email, setEmail] = useState("");
   const [Whatsappno, setWhatsappno] = useState("");
   const [Partname, setPartname] = useState("");
   const [Address, setAddress] = useState("");
   const [Name, setName] = useState("");
-  const [Year, setYear] = useState("__");
+  const [Year, setYear] = useState("");
   const [text, setText] = useState("");
   const [suggestion, setSuggestion] = useState("");
   const [formPartname, setFormPartname] = useState("");
+  const [Code, setCode] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -73,10 +75,10 @@ export default function Car({
   };
 
   function handleMakeChange(event) {
-    setMake(event.target.value);
+    setMake(Make);
   }
   function handleModelChange(event) {
-    setModel(event.target.value);
+    setModel(Model);
   }
   function handleWhatsAppNoChange(event) {
     setWhatsappno(event.target.value);
@@ -92,6 +94,12 @@ export default function Car({
   }
   function handleNameChange(event) {
     setName(event.target.value);
+  }
+  function handleCodeChange(event) {
+    setCode(event.target.value);
+  }
+  function handleYearChange(event) {
+    setYear(event.target.value);
   }
   async function handleSubmit(event) {
     event.preventDefault();
@@ -110,13 +118,9 @@ export default function Car({
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
-        contact: "971" + Whatsappno,
+        contact: Code + Whatsappno,
         name: Name,
         description:
-          "\n" +
-          "Time: " +
-          dateTime +
-          "\n" +
           "Customer Name: " +
           Name +
           "\n" +
@@ -139,6 +143,7 @@ export default function Car({
       },
     });
     alert("Form submitted. We will contact you shortly ;)");
+    setCode("");
     setName("");
     setYear("");
     setMake("");
@@ -381,6 +386,28 @@ export default function Car({
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                          htmlFor="model"
+                        >
+                          Year
+                        </label>
+                        <div className="relative">
+                          <input
+                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                            id="name"
+                            type="text"
+                            placeholder="Year"
+                            onChange={handleYearChange}
+                            value={Year}
+                            autoComplete="off"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap -mx-3 mb-2">
+                      <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
                           htmlFor="make"
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                         >
@@ -393,7 +420,7 @@ export default function Car({
                           type="text"
                           onChange={handleMakeChange}
                           placeholder="Your car Make"
-                          value={make}
+                          value={Make}
                           required
                         />
                       </div>
@@ -414,13 +441,31 @@ export default function Car({
                           type="text"
                           placeholder="Your car Model"
                           onChange={handleModelChange}
-                          value={model}
+                          value={Model}
                           required
                         />
                       </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-2">
-                      <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                      <div className="w-1/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="Code"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          CODE
+                        </label>
+                        <input
+                          id="Code"
+                          name="entry.44547744"
+                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          type="text"
+                          placeholder="Eg. +971, +27 ..."
+                          onChange={handleCodeChange}
+                          value={Code}
+                          required
+                        />
+                      </div>
+                      <div className="w-4/5 px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           htmlFor="whatsappno"
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -483,35 +528,35 @@ export default function Car({
 
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="partname"
-                    >
-                      PART NAME
-                    </label>
-                    <textarea
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                      id="partname"
-                      type="text"
-                      placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
-                      rows={5}
-                      name="entry.1660104041"
-                      onChange={(e) => onPartFormChange(e.target.value)}
-                      value={text}
-                      autoComplete="off"
-                      required
-                    />{" "}
-                    {suggestion &&
-                      suggestion.map((suggestion, i) => (
-                        <div
-                          key={i}
-                          className="cursor-pointer border-gray-400 p-4"
-                          onClick={() => onSuggestionHandler(suggestion)}
+                        <label
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                          htmlFor="partname"
                         >
-                          {suggestion}{" "}
-                        </div>
-                      ))}{" "}
-                  </div>
+                          PART NAME
+                        </label>
+                        <textarea
+                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          id="partname"
+                          type="text"
+                          placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
+                          rows={5}
+                          name="entry.1660104041"
+                          onChange={(e) => onPartFormChange(e.target.value)}
+                          value={text}
+                          autoComplete="off"
+                          required
+                        />{" "}
+                        {suggestion &&
+                          suggestion.map((suggestion, i) => (
+                            <div
+                              key={i}
+                              className="cursor-pointer border-gray-400 p-4"
+                              onClick={() => onSuggestionHandler(suggestion)}
+                            >
+                              {suggestion}{" "}
+                            </div>
+                          ))}{" "}
+                      </div>
                     </div>
 
                     <div className="flex flex-wrap -mx-3 mb-2">
@@ -551,6 +596,9 @@ export default function Car({
                     </div>
                   </form>
                 </div>
+              </div>
+              <div>
+                <Count />
               </div>
               <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
                 <h1 className="text-base font-medium text-gray-500 p-5">
@@ -640,7 +688,6 @@ export default function Car({
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

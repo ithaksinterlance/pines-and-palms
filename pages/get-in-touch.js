@@ -18,6 +18,7 @@ export default function Forms() {
   const [Name, setName] = useState("");
   const [Address, setAddress] = useState("");
   const [Year, setYear] = useState("");
+  const [Code, setCode] = useState("");
 
   const settings = {
     autoplay: true,
@@ -57,6 +58,12 @@ export default function Forms() {
   function handleNameChange(event) {
     setName(event.target.value);
   }
+  function handleYearChange(event) {
+    setYear(event.target.value);
+  }
+  function handleCodeChange(event) {
+    setCode(event);
+  }
   async function handleSubmit(event) {
     event.preventDefault();
     const today = new Date();
@@ -74,12 +81,9 @@ export default function Forms() {
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
-        contact: "971" + Whatsappno,
+        contact: Code + Whatsappno,
         name: Name,
-        description: "\n" +
-          "Time: " +
-          dateTime +
-          "\n" +
+        description:
           "Customer Name: " +
           Name +
           "\n" +
@@ -102,6 +106,7 @@ export default function Forms() {
       },
     });
     alert("Form submitted. We will contact you shortly ;)");
+    setCode("");
     setName("");
     setYear("");
     setMake("");
@@ -305,6 +310,26 @@ export default function Forms() {
               <div className="flex flex-wrap -mx-3 mb-2">
                 <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                   <label
+                    htmlFor="model"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    Year
+                  </label>
+                  <input
+                    id="model"
+                    name="entry.44547744"
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    type="text"
+                    placeholder="Your car Year"
+                    onChange={handleYearChange}
+                    value={Year}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-2">
+                <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
                     htmlFor="make"
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
                   >
@@ -344,25 +369,43 @@ export default function Forms() {
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-2">
-                <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
-                  <label
-                    htmlFor="whatsappno"
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  >
-                    WhatsApp no
-                  </label>
-                  <input
-                    id="whatsappno"
-                    name="entry.902626710"
-                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                    type="text"
-                    placeholder="WhatsApp No"
-                    onChange={handleWhatsAppNoChange}
-                    value={Whatsappno}
-                    required
-                  />
-                </div>
-              </div>
+                  <div className="w-1/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="Code"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          CODE
+                        </label>
+                        <input
+                          id="Code"
+                          name="entry.44547744"
+                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                          type="text"
+                          placeholder="Eg. +971, +27 ..."
+                          onChange={handleCodeChange}
+                          value={Code}
+                          required
+                        />
+                      </div>
+                      <div className="w-4/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                        <label
+                          htmlFor="whatsappno"
+                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                        >
+                          WhatsApp no
+                        </label>
+                        <input
+                          id="whatsappno"
+                          name="entry.902626710"
+                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                          type="text"
+                          placeholder="WhatsApp No"
+                          onChange={handleWhatsAppNoChange}
+                          value={Whatsappno}
+                          required
+                        />
+                      </div>
+                  </div>
 
               <div className="flex flex-wrap -mx-3 mb-2">
                 <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
