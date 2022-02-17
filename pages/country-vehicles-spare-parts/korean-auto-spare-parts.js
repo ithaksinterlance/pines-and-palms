@@ -6,7 +6,6 @@ import Korea from "../../public/img/icons/korea.png";
 import Footer from "../footer";
 import Head from "next/head";
 import Count from "../service-countup";
-import { sendStatusCode } from "next/dist/server/api-utils";
 
 export default function Korean({ partsposts, posts }) {
   const [Year, setYear] = useState("");

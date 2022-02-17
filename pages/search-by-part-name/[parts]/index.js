@@ -8,7 +8,6 @@ import Slider from "react-slick";
 import avatar1 from "../../../public/img/avatar1.jpeg";
 import avatar2 from "../../../public/img/avatar2.jpg";
 import avatar3 from "../../../public/img/avatar3.jpg";
-import { sendStatusCode } from "next/dist/server/api-utils";
 
 export default function Parts({ data, cities, posts }) {
   const [Make, setMake] = useState("");
