@@ -269,7 +269,7 @@ export default function Make({ car, cities, posts, pos }) {
         />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -286,7 +286,7 @@ export default function Make({ car, cities, posts, pos }) {
         />
         <meta
           property="twitter:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
         />
         <meta
           property="twitter:image"

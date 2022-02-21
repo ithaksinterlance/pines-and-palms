@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
-  faWhatsapp,
+  faWhatsapp, faTwitter,
   fab,
 } from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -96,10 +96,10 @@ export default function Navbar() {
           </ul>
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
-              <Link href="https://www.facebook.com/autoparts.haks">
+              <Link href="https://www.facebook.com/Emirates-carcom-101113659165158/">
                 <a
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                  href="https://www.facebook.com/autoparts.haks"
+                  href="https://www.facebook.com/Emirates-carcom-101113659165158/"
                 >
                   <FontAwesomeIcon
                     icon={faFacebook}
@@ -109,13 +109,26 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="https://instagram.com/haksinterlance">
+              <Link href="https://www.instagram.com/emiratescar_parts/">
                 <a
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                  href="#"
+                  href="https://www.instagram.com/emiratescar_parts/"
                 >
                   <FontAwesomeIcon
                     icon={faInstagram}
+                    className="ml-2 text-xl leading-xl text-white opacity-75"
+                  />
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="https://twitter.com/uaeautoparts">
+                <a
+                  className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                  href="https://twitter.com/uaeautoparts"
+                >
+                  <FontAwesomeIcon
+                    icon={faTwitter}
                     className="ml-2 text-xl leading-xl text-white opacity-75"
                   />
                 </a>

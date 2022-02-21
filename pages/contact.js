@@ -184,7 +184,7 @@ export default function Forms({ posts, pos }) {
   function handleNameChange(event) {
     setName(event.target.value);
   }
-  function handleCodeChange(event){
+  function handleCodeChange(event) {
     setCode(event.target.value);
   }
   async function handleSubmit(event) {
@@ -255,7 +255,7 @@ export default function Forms({ posts, pos }) {
         />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -272,7 +272,7 @@ export default function Forms({ posts, pos }) {
         />
         <meta
           property="twitter:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
         />
         <meta
           property="twitter:image"
@@ -540,43 +540,43 @@ export default function Forms({ posts, pos }) {
               </div>
 
               <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="Code"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          CODE
-                        </label>
-                        <input
-                          id="Code"
-                          name="entry.44547744"
-                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                          type="text"
-                          placeholder="Eg. +971, +27 ..."
-                          onChange={handleCodeChange}
-                          value={Code}
-                          required
-                        />
-                      </div>
-                      <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="whatsappno"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          WhatsApp no
-                        </label>
-                        <input
-                          id="whatsappno"
-                          name="entry.902626710"
-                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                          type="text"
-                          placeholder="WhatsApp No"
-                          onChange={handleWhatsAppNoChange}
-                          value={Whatsappno}
-                          required
-                        />
-                      </div>
-                  </div>
+                <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="Code"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    CODE
+                  </label>
+                  <input
+                    id="Code"
+                    name="entry.44547744"
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    type="text"
+                    placeholder="Eg. +971, +27 ..."
+                    onChange={handleCodeChange}
+                    value={Code}
+                    required
+                  />
+                </div>
+                <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="whatsappno"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    WhatsApp no
+                  </label>
+                  <input
+                    id="whatsappno"
+                    name="entry.902626710"
+                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                    type="text"
+                    placeholder="WhatsApp No"
+                    onChange={handleWhatsAppNoChange}
+                    value={Whatsappno}
+                    required
+                  />
+                </div>
+              </div>
               <div className="flex flex-wrap -mx-3">
                 <div className="w-full px-3 mb-6 xs:mb-0">
                   <label

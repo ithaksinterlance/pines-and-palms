@@ -232,7 +232,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
         <meta property="og:url" content={"https://www.emirates-car.com/search-by-make/" + make} />
         <meta
           property="og:description"
-          content={"Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" + make +"'s needs - Car / Jeep / Van / Truck / Buses in Your city."}
+          content={"Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your" + make +"'s needs - Car / Jeep / Van / Truck / Buses in Your city."}
         />
         <meta property="og:type" content="website" />
         <meta
@@ -246,7 +246,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
         />
         <meta
           property="twitter:description"
-          content={"Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" + make +"'s needs - Car / Jeep / Van / Truck / Buses in Your city."}
+          content={"Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your" + make +"'s needs - Car / Jeep / Van / Truck / Buses in Your city."}
         />
         <meta
           property="twitter:image"

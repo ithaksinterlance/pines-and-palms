@@ -181,7 +181,7 @@ export default function Car({
         <meta
           property="og:description"
           content={
-            "Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" +
+            "Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your" +
             make +
             model +
             " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."
@@ -210,7 +210,7 @@ export default function Car({
         <meta
           property="twitter:description"
           content={
-            "Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your" +
+            "Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your" +
             make +
             model +
             " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."

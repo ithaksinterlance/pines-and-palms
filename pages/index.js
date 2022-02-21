@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./nav";
+import SearchByPartName from "./search-by-part-name";
+import SearchByCities from "./search-by-cities-in-uae";
+import SearchByMake from "./search-by-make";
 import Hero from "./home_hero";
 import Slider from "react-slick";
 import Featured from "./featured";
@@ -253,7 +256,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <meta property="og:url" content="https://www.emirates-car.com" />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -267,7 +270,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         />
         <meta
           property="twitter:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
         />
         <meta
           property="twitter:image"
@@ -310,38 +313,43 @@ export default function Home({ forms, partsposts, posts, cities }) {
       </div>
 
       <Hero />
-      <div className="place-content-center py-6 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+      <div className="place-content-center text-center pt-10 xl:mx-36 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
         <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
           ABOUT Emirates-car
         </p>
-        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
-          Explore from our immensively large-scale database, your New / Used /
-          Genuine / Aftermarket auto spare parts for your Vehicle needs - Car /
-          Jeep / Van / Truck / Buses in Your city in UAE especially in the main
-          cities like Dubai, Sharjah, Abu dhabi, Ajman and other city.
-        </p>
-        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
+        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
           We are dealing with auto spare parts for car, heavy truck, van, buses,
           coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles, Used
           spare parts, After market parts, Genuine spare parts and New parts etc
           in UAE. Contact us for any inquiry.
         </p>
-        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm italic xs:mx-2">
-          The only goal we all work for to achieve is to give life to a car in
-          need of its organ and keep it going. We all have worked for a while
-          now and We can&apos;t be enough of the joy we put on people&apos;s
-          face after getting their dead car moving. Our love and passion to
-          serve this joy is growing and growing as far as this people&apos;s joy
-          is increasing day by day. We thank our consumer for growing this love
-          and joy and raising hopes for this joy to be forever.
+        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
+          Explore from our immensively large-scale auto spare parts website,
+          your New / Used / Genuine / Aftermarket auto spare parts for your
+          Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE
+          especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman
+          and other city.
         </p>
-        <div className="flex float-right italic text-green-600 font-bold">
-          Yours Joyfully!
-          <br />
-          Emirates-car
-        </div>
+        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
+          You can search Your spare parts by:
+          <li className="text-blue-500 hover:text-blue-800 list-none underline">
+            {" "}
+            <i className="fas fa-car"></i>{" "}
+            <Link href="./search-by-make">Car Make Model</Link>
+          </li>
+          <li className="text-blue-500 hover:text-blue-800 list-none underline">
+            {" "}
+            <i className="fas fa-bolt"></i>{" "}
+            <Link href="./search-by-part-name">Car Spare parts</Link>
+          </li>
+          <li className="text-blue-500 hover:text-blue-800 list-none underline">
+            {" "}
+            <i className="fas fa-map-pin"></i> {" "}
+            <Link href="./search-by-cities-in-uae">Location in UAE</Link>
+          </li>
+        </p>
       </div>
-      <div className="mx-auto py-20">
+      <div className="mx-auto py-10">
         <Count />
       </div>
       <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
@@ -903,44 +911,44 @@ export default function Home({ forms, partsposts, posts, cities }) {
               </div>
 
               <div className="flex flex-wrap">
-                  <div className="w-1/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="Code"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          CODE
-                        </label>
-                        <input
-                          id="Code"
-                          name="entry.44547744"
-                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                          type="text"
-                          placeholder="Eg. +971, +27 ..."
-                          onChange={handleCodeChange}
-                          value={Code}
-                          required
-                        />
-                      </div>
-                      <div className="w-4/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="whatsappno"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          WhatsApp no
-                        </label>
-                        <input
-                          id="whatsappno"
-                          name="entry.902626710"
-                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                          type="text"
-                          placeholder="WhatsApp No"
-                          onChange={handleWhatsAppNoChange}
-                          value={Whatsappno}
-                          required
-                        />
-                      </div>
-                  </div>
-                  <div className="flex flex-wrap ">
+                <div className="w-1/5 xs:w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="Code"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    CODE
+                  </label>
+                  <input
+                    id="Code"
+                    name="entry.44547744"
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    type="text"
+                    placeholder="Eg. +971, +27 ..."
+                    onChange={handleCodeChange}
+                    value={Code}
+                    required
+                  />
+                </div>
+                <div className="w-4/5 xs:w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="whatsappno"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    WhatsApp no
+                  </label>
+                  <input
+                    id="whatsappno"
+                    name="entry.902626710"
+                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                    type="text"
+                    placeholder="WhatsApp No"
+                    onChange={handleWhatsAppNoChange}
+                    value={Whatsappno}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap ">
                 <div className="w-full px-3 mb-6 xs:mb-0">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"

@@ -3,8 +3,6 @@ const sheets = google.sheets("v4");
 
 async function handler(req, res) {
   if (req.method === "POST") {
-
-
     const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
     const jwt = new google.auth.JWT(
       process.env.EMIRATES_CAR_CLIENT_EMAIL,

@@ -233,7 +233,7 @@ export default function America({ partsposts, posts }) {
         <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/american-auto-spare-parts" />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket American auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket American auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -247,7 +247,7 @@ export default function America({ partsposts, posts }) {
         />
         <meta
           property="twitter:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman and other city."
         />
         <meta
           property="twitter:image"
@@ -534,7 +534,7 @@ export default function America({ partsposts, posts }) {
               </Link>{" "}
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
-              Explore from our immensively large-scale database, your American
+              Explore from our immensively large-scale auto spare parts website, your American
               auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck
               / Buses in Your city in UAE especially in Abu al Bukhoosh,Abu
               Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al Barsha,Al

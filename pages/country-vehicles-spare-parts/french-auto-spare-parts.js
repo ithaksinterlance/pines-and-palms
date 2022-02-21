@@ -232,7 +232,7 @@ export default function France({ partsposts, posts }) {
         <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/french-auto-spare-parts" />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket French auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+          content="Explore from our immensively large-scale auto spare part website, your New / Used / Genuine / Aftermarket French auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -246,7 +246,7 @@ export default function France({ partsposts, posts }) {
         />
         <meta
           property="twitter:description"
-          content="Explore from our immensively large-scale database, your New / Used / Genuine / Aftermarket French auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+          content="Explore from our immensively large-scale auto spare part website, your New / Used / Genuine / Aftermarket French auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
         />
         <meta
           property="twitter:image"
@@ -386,7 +386,7 @@ export default function France({ partsposts, posts }) {
               </Link>{" "}
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
-              Explore from our immensively large-scale database, your french
+              Explore from our immensively large-scale auto spare part website, your french
               auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck
               / Buses in Your city in UAE especially in Abu al Bukhoosh,Abu
               Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al Barsha,Al
