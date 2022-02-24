@@ -4,6 +4,7 @@ import Footer from "../footer";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Count from "../service-countup";
+import Social from "../Social";
 
 export default function City({ cities, data, posts, pos }) {
   const [Year, setYear] = useState("");
@@ -261,7 +262,10 @@ export default function City({ cities, data, posts, pos }) {
           content="Quick Auto Spare Parts Hunt in all Cities of UAE | Emirates-car.com"
         />
         <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content="https://www.emirates-car.com/search-by-cities-in-uae/" />
+        <meta
+          property="og:url"
+          content="https://www.emirates-car.com/search-by-cities-in-uae/"
+        />
         <meta
           property="og:description"
           content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
@@ -271,7 +275,10 @@ export default function City({ cities, data, posts, pos }) {
           property="og:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
-        <meta property="twitter:url" content="https://www.emirates-car.com/search-by-cities-in-uae/" />
+        <meta
+          property="twitter:url"
+          content="https://www.emirates-car.com/search-by-cities-in-uae/"
+        />
         <meta
           property="twitter:title"
           content="Quick Auto Spare Parts Hunt in all Cities of UAE | Emirates-car.com"
@@ -363,24 +370,24 @@ export default function City({ cities, data, posts, pos }) {
                   target="hidden_iframe"
                 >
                   <div className="grid grid-cols-1 pt-3">
-                  <label
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                          htmlFor="model"
-                        >
-                          Name
-                        </label>
-                        <div className="relative">
-                          <input
-                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                            id="name"
-                            type="text"
-                            placeholder="Name"
-                            onChange={handleNameChange}
-                            value={Name}
-                            autoComplete="off"
-                            required
-                          />
-                        </div>
+                    <label
+                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      htmlFor="model"
+                    >
+                      Name
+                    </label>
+                    <div className="relative">
+                      <input
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        id="name"
+                        type="text"
+                        placeholder="Name"
+                        onChange={handleNameChange}
+                        value={Name}
+                        autoComplete="off"
+                        required
+                      />
+                    </div>
                   </div>
                   <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
                     <div>
@@ -478,8 +485,8 @@ export default function City({ cities, data, posts, pos }) {
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-                  <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                    <div className="flex flex-wrap -mx-3 mb-2">
+                      <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           htmlFor="Code"
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -515,7 +522,7 @@ export default function City({ cities, data, posts, pos }) {
                           required
                         />
                       </div>
-                  </div>
+                    </div>
                     <div>
                       <label
                         className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -592,20 +599,54 @@ export default function City({ cities, data, posts, pos }) {
                       Submit
                     </button>
                   </div>
+                  <div className="flex float-left text-xs text-gray-400">
+                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
+              </div>
 
                   <div className="flex float-right text-xs text-gray-400 ">
                     100% secure and trusted
                   </div>
                 </form>
+                <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+                  <Social />
+                  <div>
+                    <span>
+                      <Link href="/search-by-part-name">
+                        <a className="underline hover:text-blue-500 xs:text-sm">
+                          SEARCH BY PART NAME
+                        </a>
+                      </Link>{" "}
+                      &nbsp;|
+                    </span>
+                    <span>
+                      <Link href="/search-by-cities-in-uae">
+                        <a className="underline hover:text-blue-500  xs:text-sm">
+                          SEARCH BY CITY
+                        </a>
+                      </Link>{" "}
+                      &nbsp;|
+                    </span>
+                    <span>
+                      <Link href="/search-by-make">
+                        <a className="underline hover:text-blue-500  xs:text-sm">
+                          SEARCH BY MAKE
+                        </a>
+                      </Link>{" "}
+                      &nbsp;
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div><Count/></div>
+              <div>
+                <Count />
+              </div>
               <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
                 <h1 className="text-base font-medium text-gray-500 p-5">
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
-                  abu dhabi, ajman, al quoz, jumeirah, deira etc. We also
-                  deal in brands such as{" "}
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc. We also deal
+                  in brands such as{" "}
                   {data.map((p) => (
                     <a key={p.id}>
                       {p.make}
@@ -631,15 +672,14 @@ export default function City({ cities, data, posts, pos }) {
                   irreversible energy.
                 </p>
                 <p className="text-base font-medium text-gray-500 p-5">
-                We provide auto spare parts for any vehicles including :
-              <ul className="list-disc">
-                <li>New auto spare parts</li>
-                <li>Used auto spare parts</li>
-                <li>Genuine auto spare parts</li>
-                <li>Aftermarket auto spare parts</li>
-              </ul>
+                  We provide auto spare parts for any vehicles including :
+                  <ul className="list-disc">
+                    <li>New auto spare parts</li>
+                    <li>Used auto spare parts</li>
+                    <li>Genuine auto spare parts</li>
+                    <li>Aftermarket auto spare parts</li>
+                  </ul>
                 </p>
-
               </div>
             </article>
           </main>

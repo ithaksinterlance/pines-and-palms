@@ -6,6 +6,7 @@ import Germany from "../../public/img/icons/germany.png";
 import Footer from "../footer";
 import Head from "next/head";
 import Count from "../service-countup";
+import Social from "../Social";
 
 export default function German({ partsposts, posts }) {
   const [Year, setYear] = useState("");
@@ -366,6 +367,30 @@ export default function German({ partsposts, posts }) {
               <Count />
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+            <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3"><Social />
+          <div>
+            <span>
+              <Link href="/search-by-part-name">
+                <a className="underline hover:text-blue-500 xs:text-sm">
+                  SEARCH BY PART NAME
+                </a>
+              </Link>{" "}
+              &nbsp;|
+            </span>
+            <span>
+              <Link href="/search-by-cities-in-uae">
+                <a className="underline hover:text-blue-500  xs:text-sm">SEARCH BY CITY</a>
+              </Link>{" "}
+              &nbsp;|
+            </span>
+            <span>
+              <Link href="/search-by-make">
+                <a className="underline hover:text-blue-500  xs:text-sm">SEARCH BY MAKE</a>
+              </Link>{" "}
+              &nbsp;
+            </span>
+          </div>
+        </div>
               <form
                 id="myForm"
                 className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
@@ -603,6 +628,9 @@ export default function German({ partsposts, posts }) {
                     Submit
                   </button>
                 </div>
+                <div className="flex float-left text-xs text-gray-400">
+                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
+              </div>
 
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted

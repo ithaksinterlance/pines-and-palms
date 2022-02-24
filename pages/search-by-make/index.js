@@ -4,6 +4,7 @@ import Footer from "../footer";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Social from "../Social";
 
 export default function Make({ car, cities, posts, pos }) {
   const [Year, setYear] = useState("");
@@ -378,6 +379,35 @@ export default function Make({ car, cities, posts, pos }) {
               </Link>{" "}
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+              <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+                <Social />
+                <div>
+                  <span>
+                    <Link href="/search-by-part-name">
+                      <a className="underline hover:text-blue-500 xs:text-sm">
+                        SEARCH BY PART NAME
+                      </a>
+                    </Link>{" "}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-cities-in-uae">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY CITY
+                      </a>
+                    </Link>{" "}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-make">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY MAKE
+                      </a>
+                    </Link>{" "}
+                    &nbsp;
+                  </span>
+                </div>
+              </div>
               <form
                 id="myForm"
                 className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
@@ -501,43 +531,43 @@ export default function Make({ car, cities, posts, pos }) {
                   </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-                <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="Code"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          CODE
-                        </label>
-                        <input
-                          id="Code"
-                          name="entry.44547744"
-                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                          type="text"
-                          placeholder="Eg. +971, +27 ..."
-                          onChange={handleCodeChange}
-                          value={Code}
-                          required
-                        />
-                      </div>
-                      <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="whatsappno"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          WhatsApp no
-                        </label>
-                        <input
-                          id="whatsappno"
-                          name="entry.902626710"
-                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                          type="text"
-                          placeholder="WhatsApp No"
-                          onChange={handleWhatsAppNoChange}
-                          value={Whatsappno}
-                          required
-                        />
-                      </div>
+                  <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <label
+                        htmlFor="Code"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      >
+                        CODE
+                      </label>
+                      <input
+                        id="Code"
+                        name="entry.44547744"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        type="text"
+                        placeholder="Eg. +971, +27 ..."
+                        onChange={handleCodeChange}
+                        value={Code}
+                        required
+                      />
+                    </div>
+                    <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <label
+                        htmlFor="whatsappno"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      >
+                        WhatsApp no
+                      </label>
+                      <input
+                        id="whatsappno"
+                        name="entry.902626710"
+                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                        type="text"
+                        placeholder="WhatsApp No"
+                        onChange={handleWhatsAppNoChange}
+                        value={Whatsappno}
+                        required
+                      />
+                    </div>
                   </div>
                   <div>
                     <label
@@ -615,7 +645,9 @@ export default function Make({ car, cities, posts, pos }) {
                     Submit
                   </button>
                 </div>
-
+                <div className="flex float-left text-xs text-gray-400">
+                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
+              </div>
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
                 </div>

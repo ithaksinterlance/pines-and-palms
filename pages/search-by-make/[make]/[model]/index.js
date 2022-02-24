@@ -569,6 +569,9 @@ export default function Car({
                         </button>
                       </div>
                     </div>
+                    <div className="flex float-left text-xs text-gray-400">
+                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
+              </div>
 
                     <div className="flex float-right text-xs text-gray-400 ">
                       100% secure and trusted

@@ -8,6 +8,7 @@ import Nav from "./nav";
 import Slider from "react-slick";
 import Footer from "./footer";
 import Head from "next/head";
+import Social from "./Social";
 
 export default function Forms() {
   const [Make, setMake] = useState("");
@@ -151,28 +152,36 @@ export default function Forms() {
       </Head>
       <Nav />
       <div className="container place-content-center mx-auto py-6">
-        <div className="uppercase bg-blue-200 font-sans p-5 text-center text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
-          &nbsp;
-          <span>
-            <Link href="/search-by-part-name">
-              <a className="underline hover:text-blue-500">
-                SEARCH BY PART NAME
-              </a>
-            </Link>{" "}
-          </span>
-          | &nbsp;
-          <span>
-            <Link href="/search-by-cities-in-uae">
-              <a className="underline hover:text-blue-500">SEARCH BY CITY </a>
-            </Link>{" "}
-          </span>
-          | &nbsp;
-          <span>
-            <Link href="/search-by-make">
-              <a className="underline hover:text-blue-500">SEARCH BY MAKE</a>
-            </Link>{" "}
-          </span>
+      <div className="uppercase bg-blue-200 font-serif p-5 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-screen s:text-2xl 2xs:text-2xl ">
+          <Social />
+          <div>
+            &nbsp;
+            <span>
+              <Link href="/search-by-part-name">
+                <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
+                  SEARCH BY PART NAME
+                </a>
+              </Link>{" "}
+            </span>
+            | &nbsp;
+            <span>
+              <Link href="/search-by-cities-in-uae">
+                <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
+                  SEARCH BY CITY{" "}
+                </a>
+              </Link>{" "}
+            </span>
+            | &nbsp;
+            <span>
+              <Link href="/search-by-make">
+                <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
+                  SEARCH BY MAKE
+                </a>
+              </Link>{" "}
+            </span>
+          </div>
         </div>
+
         <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl ">
           <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full xs:py-5 ">
             <Slider {...settings} className="py-10 p-2">
@@ -460,6 +469,9 @@ export default function Forms() {
                     Submit
                   </button>
                 </div>
+              </div>
+              <div className="flex float-left text-xs text-gray-400">
+                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
               </div>
 
               <div className="flex float-right text-xs text-gray-400 ">

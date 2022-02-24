@@ -37,8 +37,7 @@ export default class home_hero extends Component {
                     </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-sm xl:text-lg s:text-sm 2xs:text-sm font-serif">
-                    We are the best dealer in Auto Spare parts for Cars, Trucks,
-                    Van, Buses in UAE. If you are in need of any
+                    We are the best dealer in Auto Spare parts for Cars in UAE. If you are in need of any
                     Spare parts contact us.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex lg:justify-start xs:pb-20 s:pb-20">
@@ -122,9 +121,8 @@ export default class home_hero extends Component {
                   Emirates-car.com sells auto parts in bulk from the Emirates.
                   In the presence of popular parts for Japanese, Korean and
                   American cars. The main brands that we offer - spare parts
-                  hyundai, subaru, Suzuki, honda, toyota, HITACHI, suzuki,
-                  nissan, Mitsubishi, komatsu, Komatsu, Honda, Nissan, Toyota,
-                  trucks and buses spare parts from United Arab Emirates.
+                  hyundai, subaru, Suzuki, honda, toyota, suzuki,
+                  nissan, Mitsubishi, Honda, Nissan, Toyota United Arab Emirates.
                   Wholesale spare parts, parts of the emirates, auto parts in
                   bulk from the UAE, truck parts wholesale.
                 </p>

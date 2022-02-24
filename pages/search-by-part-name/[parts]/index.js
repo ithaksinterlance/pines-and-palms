@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import avatar1 from "../../../public/img/avatar1.jpeg";
 import avatar2 from "../../../public/img/avatar2.jpg";
 import avatar3 from "../../../public/img/avatar3.jpg";
+import Social from "../../Social";
 
 export default function Parts({ data, cities, posts }) {
   const [Make, setMake] = useState("");
@@ -18,7 +19,7 @@ export default function Parts({ data, cities, posts }) {
   const [Partname, setPartname] = useState(data.parts);
   const [Name, setName] = useState("");
   const [Year, setYear] = useState("");
-  const [Code, setCode] =useState("");
+  const [Code, setCode] = useState("");
 
   const settings = {
     autoplay: true,
@@ -184,6 +185,35 @@ export default function Parts({ data, cities, posts }) {
                 {data.parts}
                 {">>>"}
               </p>
+              <div className="uppercase xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10 bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+                <Social />
+                <div>
+                  <span>
+                    <Link href="/search-by-part-name">
+                      <a className="underline hover:text-blue-500 xs:text-sm">
+                        SEARCH BY PART NAME
+                      </a>
+                    </Link>{" "}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-cities-in-uae">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY CITY
+                      </a>
+                    </Link>{" "}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-make">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY MAKE
+                      </a>
+                    </Link>{" "}
+                    &nbsp;
+                  </span>
+                </div>
+              </div>
               <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10">
                 <div className="w-1/3 bg-blue-700 s:hidden 2xs:hidden xs:py-5 xs:hidden">
                   <Slider {...settings} className="py-10 p-2">
@@ -292,9 +322,9 @@ export default function Parts({ data, cities, posts }) {
                   </div>
                 </div>
                 <div className="w-2/3 s:w-full xs:w-screen md:w-full 2xs:w-full sm:w-full">
-                  <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
-                    Searching for {data.parts} Auto Spare Parts in U.A.E? Fill
-                    out the inquiry down below.
+                  <p className="text-base font-medium  xs:text-sm md:text-base p-5 s:p-2">
+                    Searching for {data.parts.toUpperCase()} Auto Spare Parts in
+                    U.A.E? Fill out the inquiry down below.
                   </p>
                   <form
                     onSubmit={handleSubmit}
@@ -365,7 +395,7 @@ export default function Parts({ data, cities, posts }) {
                       </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           htmlFor="Code"
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -401,7 +431,7 @@ export default function Parts({ data, cities, posts }) {
                           required
                         />
                       </div>
-                  </div>
+                    </div>
 
                     <div className="flex flex-wrap -mx-3 mb-2 s:mb-1">
                       <div className="w-full px-3 mb-6 s:mb-1  xs:mb-0 md:mb-0">
@@ -476,7 +506,27 @@ export default function Parts({ data, cities, posts }) {
                         </button>
                       </div>
                     </div>
-
+                    <div className="flex float-left text-xs text-gray-400">
+                      <Link href="./privacy-policy">
+                        <a
+                          href="./privacy-policy"
+                          className="underline"
+                          target="_newtab"
+                        >
+                          Privacy policy
+                        </a>
+                      </Link>
+                      &nbsp;
+                      <Link href="./terms-and-condition">
+                        <a
+                          href="./privacy-policy"
+                          className="underline"
+                          target="_newtab"
+                        >
+                          Terms and conditions
+                        </a>
+                      </Link>
+                    </div>
                     <div className="flex float-right text-xs text-gray-400">
                       100% secure and trusted
                     </div>

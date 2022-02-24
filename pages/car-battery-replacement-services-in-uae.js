@@ -6,6 +6,7 @@ import Footer from "./footer";
 import Slider from "react-slick";
 import Battery from "../public/img/car-auto-parts/battery.png";
 import Image from "next/image";
+import Social from "./Social";
 import "react-accessible-accordion/dist/fancy-example.css";
 
 import {
@@ -575,11 +576,53 @@ export default function CarBatteryDubai({ forms }) {
               </button>
             </div>
           </div>
+          <div className="flex float-left text-xs text-gray-400">
+            <Link href="./privacy-policy">
+              <a href="./privacy-policy" className="underline" target="_newtab">
+                Privacy policy
+              </a>
+            </Link>
+            &nbsp;
+            <Link href="./terms-and-condition">
+              <a href="./privacy-policy" className="underline" target="_newtab">
+                Terms and conditions
+              </a>
+            </Link>
+          </div>
 
           <div className="flex float-right text-xs text-gray-400 ">
             100% secure and trusted
           </div>
         </form>
+      </div>
+      <div className="uppercase bg-blue-300 font-serif p-5 xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-screen s:text-2xl 2xs:text-2xl my-10">
+        <Social />
+        <div>
+          &nbsp;
+          <span>
+            <Link href="/search-by-part-name">
+              <a className="underline xs:no-underline hover:text-blue-500">
+                SEARCH BY PART NAME
+              </a>
+            </Link>{" "}
+          </span>
+          | &nbsp;
+          <span>
+            <Link href="/search-by-cities-in-uae">
+              <a className="underline xs:no-underline hover:text-blue-500">
+                SEARCH BY CITY{" "}
+              </a>
+            </Link>{" "}
+          </span>
+          | &nbsp;
+          <span>
+            <Link href="/search-by-make">
+              <a className="underline xs:no-underline hover:text-blue-500">
+                SEARCH BY MAKE
+              </a>
+            </Link>{" "}
+          </span>
+        </div>
       </div>
       <div className="place-content-center text-center pt-10 xl:mx-36 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
         <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">

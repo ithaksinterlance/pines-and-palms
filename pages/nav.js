@@ -101,10 +101,7 @@ export default function Navbar() {
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                   href="https://www.facebook.com/Emirates-carcom-101113659165158/"
                 >
-                  <FontAwesomeIcon
-                    icon={faFacebook}
-                    className="ml-2 text-xl leading-xl text-white opacity-75"
-                  />
+                  <i className="fab fa-facebook ml-2 text-xl leading-xl text-white opacity-75"></i>
                 </a>
               </Link>
             </li>
@@ -114,10 +111,7 @@ export default function Navbar() {
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                   href="https://www.instagram.com/emiratescar_parts/"
                 >
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    className="ml-2 text-xl leading-xl text-white opacity-75"
-                  />
+                  <i className="fab fa-instagram ml-2 text-xl leading-xl text-white opacity-75 "></i>
                 </a>
               </Link>
             </li>
@@ -127,23 +121,20 @@ export default function Navbar() {
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                   href="https://twitter.com/uaeautoparts"
                 >
-                  <FontAwesomeIcon
-                    icon={faTwitter}
-                    className="ml-2 text-xl leading-xl text-white opacity-75"
-                  />
+                  <i className="fab fa-twitter ml-2 text-xl leading-xl text-white opacity-75 "></i>
+
                 </a>
               </Link>
             </li>
             <li className="nav-item">
+              <Link href="https://emirates-car.tumblr.com/">
                 <a
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                  href="https://api.whatsapp.com/send?phone=+971551478994&text=Hey%20Team!%I'm%20in%20need%20of%20____"
+                  href="https://emirates-car.tumblr.com/"
                 >
-                  <FontAwesomeIcon
-                    icon={faWhatsapp}
-                    className="ml-2 text-xl leading-xl text-white opacity-75"
-                  />
+                  <i className="fab fa-tumblr ml-2 text-xl leading-xl text-white opacity-75"></i>
                 </a>
+              </Link>
             </li>
           </ul>
         </div>

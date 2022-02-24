@@ -3370,5 +3370,6 @@ export const Links =
 {"links":"https://emirates-car.com/search-by-part-name/Wiper%20Motor%20(Front)",},
 {"links":"https://emirates-car.com/search-by-part-name/Wiper%20Motor%20(Rear)",},
 {"links":"https://emirates-car.com/search-by-part-name/Wiper%20Transmission",},
+{"links":"https://emirates-car.com/car-battery-replacement-services-in-uae",},
 ]
 export default Links;

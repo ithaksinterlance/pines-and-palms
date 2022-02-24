@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./nav";
-import SearchByPartName from "./search-by-part-name";
-import SearchByCities from "./search-by-cities-in-uae";
-import SearchByMake from "./search-by-make";
+import Hero_img from "../public/img/car-spare-parts.png";
 import Hero from "./home_hero";
 import Slider from "react-slick";
 import Featured from "./featured";
@@ -14,6 +12,7 @@ import avatar3 from "../public/img/avatar3.jpg";
 import Image from "next/image";
 import Count from "./service-countup";
 import Head from "next/head";
+import Social from "./Social";
 
 export default function Home({ forms, partsposts, posts, cities }) {
   const [Year, setYear] = useState("");
@@ -344,7 +343,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {" "}
-            <i className="fas fa-map-pin"></i> {" "}
+            <i className="fas fa-map-pin"></i>{" "}
             <Link href="./search-by-cities-in-uae">Location in UAE</Link>
           </li>
         </p>
@@ -653,26 +652,33 @@ export default function Home({ forms, partsposts, posts, cities }) {
       </div>
       <div className="place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
         <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
-          <span>
-            <Link href="/search-by-part-name">
-              <a className="underline hover:text-blue-500">
-                SEARCH BY PART NAME
-              </a>
-            </Link>{" "}
-            &nbsp;|
-          </span>
-          <span>
-            <Link href="/search-by-cities-in-uae">
-              <a className="underline hover:text-blue-500">SEARCH BY CITY</a>
-            </Link>{" "}
-            &nbsp;|
-          </span>
-          <span>
-            <Link href="/search-by-make">
-              <a className="underline hover:text-blue-500">SEARCH BY MAKE</a>
-            </Link>{" "}
-            &nbsp;
-          </span>
+          <Social />
+          <div>
+            <span>
+              <Link href="/search-by-part-name">
+                <a className="underline hover:text-blue-500 xs:text-sm">
+                  SEARCH BY PART NAME
+                </a>
+              </Link>{" "}
+              &nbsp;|
+            </span>
+            <span>
+              <Link href="/search-by-cities-in-uae">
+                <a className="underline hover:text-blue-500  xs:text-sm">
+                  SEARCH BY CITY
+                </a>
+              </Link>{" "}
+              &nbsp;|
+            </span>
+            <span>
+              <Link href="/search-by-make">
+                <a className="underline hover:text-blue-500  xs:text-sm">
+                  SEARCH BY MAKE
+                </a>
+              </Link>{" "}
+              &nbsp;
+            </span>
+          </div>
         </div>
         <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
           <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full s:w-full xs:py-5 s:py-5 xs:hidden">
@@ -1031,6 +1037,27 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   </button>
                 </div>
               </div>
+              <div className="flex float-left text-xs text-gray-400">
+                <Link href="./privacy-policy">
+                  <a
+                    href="./privacy-policy"
+                    className="underline"
+                    target="_newtab"
+                  >
+                    Privacy policy
+                  </a>
+                </Link>
+                &nbsp;
+                <Link href="./terms-and-condition">
+                  <a
+                    href="./privacy-policy"
+                    className="underline"
+                    target="_newtab"
+                  >
+                    Terms and conditions
+                  </a>
+                </Link>
+              </div>
 
               <div className="flex float-right text-xs text-gray-400 ">
                 100% secure and trusted
@@ -1113,7 +1140,120 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         ))}{" "}
       </div>
-      <Footer />
+      <div className="py-6 bg-blue-500">
+        <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
+          <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
+            COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{" "}
+            <Link href="/contact">
+              <a className="underline text-blue-900">CONTACT US NOW {">>"}</a>
+            </Link>
+          </h1>
+        </div>
+        {/*Footer*/}
+        <div className=" bg-purple-700 py-10 xs:py-5 2xs:py-5 sm:py-5">
+          <div className="grid grid-cols-3 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 ">
+            <div className="text-center">
+            <div className="items-center justify-center"><Image src={Hero_img} alt="spare parts in uae" height={50} width={50}/></div>
+              <p className="pt-5 text-white font-extrabold">
+                ABOUT Emirates-car
+              </p>
+              <p className="text-sm xs:text-xs pt-5 m-1 text-center font-medium text-purple-400">
+                We are dealing with auto spare parts for car, heavy truck, van,
+                buses, coupe, SUV, prime, Petrol based vehicles, Diesel based
+                vehicles, Used spare parts, After market parts, Genuine spare
+                parts and New parts etc. Contact us for any inquiry.
+              </p>
+            </div>
+            <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
+              <p className="pt-5 text-white font-extrabold">SOCIAL LINKS</p>
+              <p>
+                <a
+                  className="text-xl leading-xl text-blue-900"
+                  href="https://www.facebook.com/Emirates-carcom-101113659165158/"
+                >
+                  <i className="fab fa-2x fa-facebook"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-purple-900"
+                  href="https://www.instagram.com/haksinterlance/"
+                >
+                  <i className="fab fa-2x fa-instagram"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-black"
+                  href="https://emirates-car.tumblr.com/"
+                >
+                  <i className="fab fa-2x fa-tumblr"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-blue-300"
+                  href="https://twitter.com/uaeautoparts"
+                >
+                  <i className="fab fa-2x fa-twitter"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-red-700"
+                  href="https://in.pinterest.com/emiratesautomobileparts/"
+                >
+                  <i className="fab fa-2x fa-pinterest"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-blue-500"
+                  href="https://in.pinterest.com/emiratesautomobileparts/"
+                >
+                  <i className="fab fa-2x fa-linkedin"></i>
+                </a>
+              </p>
+            </div>
+
+            <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
+              <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
+              <Link href="/search-by-part-name">
+                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+                  Search parts by part name in UAE
+                </a>
+              </Link><br/>
+              <Link href="/search-by-make">
+                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+                  Search parts by Car make in UAE
+                </a>
+              </Link><br/>
+              <Link href="/search-by-cities-in-uae">
+                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+                  Search parts by cities in UAE
+                </a>
+              </Link>
+            </div>
+          </div>
+          <p className="pt-5 text-white font-extrabold text-center xs:hidden sm:hidden 2xs:hidden">Auto spare parts</p>
+          <div className="grid grid-cols-10 md:grid-cols-7 xs:hidden sm:hidden 2xs:hidden p-3">
+            {posts.map((post) => (
+              <div key={post.id}>
+                <Link
+                  href="/search-by-make/[make]"
+                  as={"/search-by-make/" + post.make}
+                >
+                  <a>
+                    <p className="text-xs text-white font-medium hover:text-gray-800 underline">
+                      {post.make + " spare parts"}{" "}
+                    </p>
+                  </a>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center text-purple-200 py-10">
+            <a
+              href="https://emirates-car.com"
+              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+            >
+              <i className="fa fa-copyright" aria-hidden="true"></i>
+              Copyright © 2022 Emirates-car. All rights reserved.
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

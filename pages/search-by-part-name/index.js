@@ -5,6 +5,7 @@ import Spare from "../../public/img/car-spare-parts.png";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import Social from "../Social";
 
 export default function Make({ posts, cities, post }) {
   const [Year, setYear] = useState("");
@@ -237,7 +238,7 @@ export default function Make({ posts, cities, post }) {
         />
         <meta
           property="og:description"
-          content="Explore from our immensively large automobile spare parts auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          content="Explore from our immensively large auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep  in Your city."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -333,6 +334,35 @@ export default function Make({ posts, cities, post }) {
               </div>
             </article>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+            <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+                <Social />
+                <div>
+                  <span>
+                    <Link href="/search-by-part-name">
+                      <a className="underline hover:text-blue-500 xs:text-sm">
+                        SEARCH BY PART NAME
+                      </a>
+                    </Link>{" "}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-cities-in-uae">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY CITY
+                      </a>
+                    </Link>{" "}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-make">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY MAKE
+                      </a>
+                    </Link>{" "}
+                    &nbsp;
+                  </span>
+                </div>
+              </div>
               <form
                 id="myForm"
                 className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
