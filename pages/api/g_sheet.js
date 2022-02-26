@@ -17,6 +17,7 @@ async function handler(req, res) {
       spreadsheetId: process.env.EMIRATES_CAR_DATABASE_ID,
       range: "emirates-car-sheet",
     });
+
     const today = new Date();
     const thisYear = today.getFullYear();
     const RefNo =
@@ -29,6 +30,18 @@ async function handler(req, res) {
     const contact = req.body.contact;
     const description = "Ref: " + RefNo + "\n" + req.body.description;
     const email = req.body.email;
+
+    let messageURIOne =
+      encodeURI(description) +
+      "%0AWe%20received%20your%20enquiry%20for%20car%20auto%20parts%20for%20above%20vehicle";
+    let messagetwo = `https://api.whatsapp.com/send?phone=${contact}&text=${messageURIOne}`;
+    let messageURITwo = encodeURI(messagetwo);
+
+    fetch(
+      `https://api.telegram.org/bot5137586694:AAGvlCWRZFA0drvxN4qO2ulQhPh5LdZmo0M/sendMessage?chat_id=-612050272&text=${messageURIOne +
+        "\n" +
+        messageURITwo}`
+    );
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.EMIRATES_CAR_DATABASE_ID,

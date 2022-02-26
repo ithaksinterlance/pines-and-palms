@@ -447,7 +447,7 @@ export default function Car({
                       </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-2">
-                      <div className="w-1/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           htmlFor="Code"
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -465,7 +465,7 @@ export default function Car({
                           required
                         />
                       </div>
-                      <div className="w-4/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           htmlFor="whatsappno"
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -680,7 +680,7 @@ export default function Car({
                   href="/search-by-part-name/[parts]"
                   as={"/search-by-part-name/" + post.parts}
                 >
-                  <a title={post.parts + " parts in uae"}>
+                  <a title={make +" "+ model+" " + post.parts + " parts in uae"}>
                     <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans underline">
                       <i className="far fa-compass"></i> {post.parts}
                     </p>

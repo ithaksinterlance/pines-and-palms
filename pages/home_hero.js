@@ -36,6 +36,9 @@ export default class home_hero extends Component {
                       </span>
                     </span>
                   </h1>
+                  <p className="mt-3 text-base text-black sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-sm xl:text-lg s:text-sm 2xs:text-sm font-serif">
+                    Dealt in UAE, delivered all over the world.
+                  </p>
                   <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-sm xl:text-lg s:text-sm 2xs:text-sm font-serif">
                     We are the best dealer in Auto Spare parts for Cars in UAE. If you are in need of any
                     Spare parts contact us.

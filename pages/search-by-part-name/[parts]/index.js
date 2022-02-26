@@ -312,7 +312,7 @@ export default function Parts({ data, cities, posts }) {
                   <div className="p-5 pt-10">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722504.3860201286!2d51.71183150969869!3d24.337497293019872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1641654109734!5m2!1sen!2sin"
-                      title="auto spare parts dubai"
+                      title={data.parts + " parts"}
                       width="100%"
                       height="100%"
                       style={{ border: "0" }}
@@ -543,11 +543,11 @@ export default function Parts({ data, cities, posts }) {
                       href="/search-by-make/[make]"
                       as={"/search-by-make/" + post.make}
                     >
-                      <a title={post.make + " " + data.parts + " in uae"}>
+                      <a title={data.parts +" for" + post.make}>
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image
-                              alt={post.make}
+                              alt={post.make + " spare parts"}
                               src={"/img/car-logos/" + post.img}
                               className="object-scale-down shadow-xl"
                               height={60}
@@ -611,7 +611,7 @@ export default function Parts({ data, cities, posts }) {
                   href="/search-by-cities-in-uae/[city]"
                   as={"/search-by-cities-in-uae/" + post.city}
                 >
-                  <a title={"auto spare parts in " + post.city + " uae"}>
+                  <a title={"spare parts delivery in " + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
                       <i className="far fa-compass"></i> {post.city}
                     </p>
