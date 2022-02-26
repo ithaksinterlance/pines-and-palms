@@ -34,13 +34,16 @@ async function handler(req, res) {
     let messageURIOne =
       encodeURI(description) +
       "%0AWe%20received%20your%20enquiry%20for%20car%20auto%20parts%20for%20above%20vehicle";
-    let messagetwo = `https://api.whatsapp.com/send?phone=${contact}&text=${messageURIOne}`;
-    let messageURITwo = encodeURI(messagetwo);
 
     fetch(
-      `https://api.telegram.org/bot5137586694:AAGvlCWRZFA0drvxN4qO2ulQhPh5LdZmo0M/sendMessage?chat_id=-612050272&text=${messageURIOne +
+      `https://api.telegram.org/bot${
+        process.env.TELEGRAM_BOT
+      }/sendMessage?chat_id=${process.env.CHAT_ID}&text=${messageURIOne +
         "\n" +
-        messageURITwo}`
+        "https://api.whatsapp.com/send?phone=" +
+        contact +
+        "&text=" +
+        messageURIOne}`
     );
 
     const response = await sheets.spreadsheets.values.append({
