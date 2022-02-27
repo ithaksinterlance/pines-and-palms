@@ -24,44 +24,46 @@ export default function footer() {
             </p>
           </div>
           <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
-            <p className="pt-5 text-white font-extrabold">SOCIAL LINKS</p>
-            <p>
-              <a
-                className="text-xl leading-xl text-white"
-                href="https://www.facebook.com/autoparts.haks"
-              >
-                <i className="fab fa-facebook    "></i>
-              </a>
-              <br />
-              <a
-                className="text-xl leading-xl text-white"
-                href="https://www.instagram.com/haksinterlance/"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
-              <br />
-              <a
-                className="text-xl leading-xl text-white"
-                href="https://emirates-car.tumblr.com/"
-              >
-                <i className="fab fa-tumblr"></i>
-              </a>
-              <br />
-              <a
-                className="text-xl leading-xl text-white"
-                href="https://twitter.com/uaeautoparts"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-              <br />
-              <a
-                className="text-xl leading-xl text-white"
-                href="https://in.pinterest.com/emiratesautomobileparts/"
-              >
-                <i className="fab fa-pinterest"></i>
-              </a>
-            </p>
-          </div>
+              <p className="pt-5 text-white font-extrabold">SOCIAL LINKS</p>
+              <p>
+                <a
+                  className="text-xl leading-xl text-blue-900"
+                  href="https://www.facebook.com/Emirates-carcom-101113659165158/"
+                >
+                  <i className="fab fa-2x fa-facebook"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-purple-900"
+                  href="https://www.instagram.com/haksinterlance/"
+                >
+                  <i className="fab fa-2x fa-instagram"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-black"
+                  href="https://emirates-car.tumblr.com/"
+                >
+                  <i className="fab fa-2x fa-tumblr"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-blue-300"
+                  href="https://twitter.com/uaeautoparts"
+                >
+                  <i className="fab fa-2x fa-twitter"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-red-700"
+                  href="https://in.pinterest.com/emiratesautomobileparts/"
+                >
+                  <i className="fab fa-2x fa-pinterest"></i>
+                </a>&nbsp;
+                <a
+                  className="text-xl leading-xl text-blue-500"
+                  href="https://in.pinterest.com/emiratesautomobileparts/"
+                >
+                  <i className="fab fa-2x fa-linkedin"></i>
+                </a>
+              </p>
+            </div>
           <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
             <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
             <Link href="/search-by-part-name">

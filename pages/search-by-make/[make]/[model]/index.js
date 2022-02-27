@@ -243,8 +243,8 @@ export default function Car({
                 {model}
               </p>
             </div>
-            <div className="container place-content-center mx-1 xs:mx-0 py-6">
-              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
+            <div className="container place-content-center py-6">
+              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5  2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
                 <div className="w-1/3 bg-blue-700 2xs:hidden xs:hidden sm:hidden md:hidden">
                   <Slider {...settings} className="py-10 p-2">
                     <div>
@@ -352,16 +352,16 @@ export default function Car({
                   </div>
                 </div>
                 <div className="w-2/3 xs:w-full s:w-full md:w-full 2xs:w-full sm:w-full">
-                  <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
+                  <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-8 ">
                     Searching for {make} - {model} auto spare parts in U.A.E?
                     Fill out the inquiry down below.
                   </p>
                   <form
                     onSubmit={handleSubmit}
-                    className="shadow-xl px-8 py-8 xs:py-3 2xs:px-4 sm:px-4"
+                    className="shadow-xl px-8 py-8 xs:py-3 xs:px-4 2xs:px-4 sm:px-4"
                     method="POST"
                   >
-                    <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="flex flex-wrap  mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -383,7 +383,7 @@ export default function Car({
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="flex flex-wrap mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -405,7 +405,7 @@ export default function Car({
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="flex flex-wrap mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           htmlFor="make"
@@ -426,7 +426,7 @@ export default function Car({
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="flex flex-wrap mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           htmlFor="model"
@@ -446,8 +446,9 @@ export default function Car({
                         />
                       </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="flex flex-wrap mb-2">
                       <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+
                         <label
                           htmlFor="Code"
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -485,7 +486,7 @@ export default function Car({
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="flex flex-wrap mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           htmlFor="email"
@@ -506,7 +507,7 @@ export default function Car({
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap -mx-3">
+                    <div className="flex flex-wrap">
                       <div className="w-full px-3 mb-6 xs:mb-0">
                         <label
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -526,7 +527,7 @@ export default function Car({
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="flex flex-wrap mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <label
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -559,7 +560,7 @@ export default function Car({
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="flex flex-wrap mb-2">
                       <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
                         <button
                           type="submit"
@@ -579,7 +580,7 @@ export default function Car({
                     <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
                       Other {make} Models:
                     </p>
-                    <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-5">
+                    <div className="grid grid-cols-4  md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 my-5">
                       {uniqueMakeArray.map((post) => (
                         <div key={post.id}>
                           <Link
@@ -589,7 +590,7 @@ export default function Car({
                             }
                           >
                             <a>
-                              <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
+                              <main className="text-center text-base xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
                                 {post.model.replace("%2F", "/")}
                               </main>
                             </a>
