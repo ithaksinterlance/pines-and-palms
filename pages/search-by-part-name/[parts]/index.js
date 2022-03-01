@@ -122,11 +122,30 @@ export default function Parts({ data, cities, posts }) {
           property="og:title"
           content={data.parts + " Auto Spare Parts in UAE | Emirates-car.com"}
         />
+        <meta
+          property="keywords"
+          content={
+            data.parts +
+            " in uae," +
+            "genuine " +
+            data.parts +
+            " in uae," +
+            "aftermarket " +
+            data.parts +
+            " in uae," +
+            "used " +
+            data.parts +
+            " in uae," +
+            "New " +
+            data.parts +
+            " in uae"
+          }
+        />
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
           content={
-            "https://www.emirates-car.com/search-by-part-name" + data.parts
+            "https://www.emirates-car.com/search-by-part-name/" + data.parts
           }
         />
         <meta
@@ -145,7 +164,7 @@ export default function Parts({ data, cities, posts }) {
         <meta
           property="twitter:url"
           content={
-            "https://www.emirates-car.com/search-by-part-name" + data.parts
+            "https://www.emirates-car.com/search-by-part-name/" + data.parts
           }
         />
         <meta
@@ -543,7 +562,7 @@ export default function Parts({ data, cities, posts }) {
                       href="/search-by-make/[make]"
                       as={"/search-by-make/" + post.make}
                     >
-                      <a title={data.parts +" for" + post.make}>
+                      <a title={data.parts + " for" + post.make}>
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image

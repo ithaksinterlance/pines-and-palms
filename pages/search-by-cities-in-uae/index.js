@@ -261,6 +261,7 @@ export default function City({ cities, data, posts, pos }) {
           property="og:title"
           content="Quick Auto Spare Parts Hunt in all Cities of UAE | Emirates-car.com"
         />
+        <meta name="keywords" content="car parts in uae, spare parts in dubai, spare parts sharjah"/>
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"

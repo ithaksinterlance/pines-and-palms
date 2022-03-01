@@ -251,6 +251,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           property="og:title"
           content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
         />
+        <meta name="keywords" content="car parts, spare parts, auto spare parts, best auto parts, auto spare parts in dubai"/>
         <meta property="og:site_name" content="Emirates-car" />
         <meta property="og:url" content="https://www.emirates-car.com" />
         <meta

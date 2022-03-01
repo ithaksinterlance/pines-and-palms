@@ -237,6 +237,7 @@ export default function City({ data, partspost, posts, makedatas }) {
           Quick Auto Spare Parts Hunt in {data.city} (UAE) | Emirates-car.com
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="keywords" content={"auto parts in "+ data.city + ", " +"car parts "+data.city + ", " + "Spare parts in " + data.city+", auto spare parts sharjah"  }/>
         <meta
           property="og:title"
           content={
@@ -656,11 +657,11 @@ export default function City({ data, partspost, posts, makedatas }) {
                     href="/search-by-make/[make]"
                     as={"/search-by-make/" + makedata.make}
                   >
-                    <a title={makedata.make + " spare parts in " + data.city}>
+                    <a title={makedata.make + " spare parts " + data.city}>
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                         <div className="flex justify-center">
                           <Image
-                            alt={makedata.make}
+                            alt={makedata.make + " spare parts " + data.city}
                             src={"/img/car-logos/" + makedata.img}
                             className="object-scale-down shadow-xl"
                             height={30}

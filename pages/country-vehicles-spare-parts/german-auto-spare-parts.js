@@ -225,6 +225,7 @@ export default function German({ partsposts, posts }) {
     <div>
       <Head>
         <title>German Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <meta name="keywords" content="german spare parts uae, german auto parts, german car parts"/>
         <meta
           property="og:title"
           content="Quick German Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"

@@ -225,6 +225,7 @@ export default function Japan({ partsposts, posts }) {
     <div>
       <Head>
         <title>Japanese Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <meta name="keywords" content="japan spare parts uae, japan auto parts, japan car parts"/>
         <meta
           property="og:title"
           content="Quick Japanese Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"

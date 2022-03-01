@@ -166,9 +166,31 @@ export default function Car({
           property="og:title"
           content={
             make +
-            "-" +
+            " - " +
             model +
-            "Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+            " Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+          }
+        />
+        <meta
+          name="keywords"
+          content={
+            make +
+            " " +
+            model +
+            " spare parts," +
+            model +
+            " auto parts," +
+            model +
+            " " +
+            " spares," +
+            model +
+            " auto parts," +
+            model +
+            " auto parts in uae," +
+            make +
+            " " +
+            model +
+            " auto parts in uae"
           }
         />
         <meta property="og:site_name" content="Emirates-car" />
@@ -202,16 +224,17 @@ export default function Car({
           property="twitter:title"
           content={
             make +
-            "-" +
+            " - " +
             model +
-            "Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+            " Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
           }
         />
         <meta
           property="twitter:description"
           content={
-            "Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your" +
+            "Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your " +
             make +
+            " " +
             model +
             " automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city."
           }
@@ -448,7 +471,6 @@ export default function Car({
                     </div>
                     <div className="flex flex-wrap mb-2">
                       <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
-
                         <label
                           htmlFor="Code"
                           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -571,8 +593,26 @@ export default function Car({
                       </div>
                     </div>
                     <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
-              </div>
+                      <Link href="./privacy-policy">
+                        <a
+                          href="./privacy-policy"
+                          className="underline"
+                          target="_newtab"
+                        >
+                          Privacy policy
+                        </a>
+                      </Link>
+                      &nbsp;
+                      <Link href="./terms-and-condition">
+                        <a
+                          href="./privacy-policy"
+                          className="underline"
+                          target="_newtab"
+                        >
+                          Terms and conditions
+                        </a>
+                      </Link>
+                    </div>
 
                     <div className="flex float-right text-xs text-gray-400 ">
                       100% secure and trusted
@@ -681,7 +721,11 @@ export default function Car({
                   href="/search-by-part-name/[parts]"
                   as={"/search-by-part-name/" + post.parts}
                 >
-                  <a title={make +" "+ model+" " + post.parts + " parts in uae"}>
+                  <a
+                    title={
+                      make + " " + model + " " + post.parts + " parts in uae"
+                    }
+                  >
                     <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans underline">
                       <i className="far fa-compass"></i> {post.parts}
                     </p>

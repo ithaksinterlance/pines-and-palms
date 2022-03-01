@@ -225,6 +225,7 @@ export default function Korean({ partsposts, posts }) {
     <div>
       <Head>
         <title>Korean Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <meta name="keywords" content="korean spare parts uae, korean auto parts, korean car parts"/>
         <meta
           property="og:title"
           content="Quick Korean Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"

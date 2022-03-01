@@ -230,6 +230,8 @@ export default function British({ partsposts, posts }) {
           property="og:title"
           content="Quick British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
+                <meta name="keywords" content="British spare parts uae, British auto parts, British car parts"/>
+
         <meta property="og:site_name" content="Emirates-car" />
         <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/british-auto-spare-parts" />
         <meta

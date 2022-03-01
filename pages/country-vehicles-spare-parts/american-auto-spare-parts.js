@@ -230,6 +230,7 @@ export default function America({ partsposts, posts }) {
           property="og:title"
           content="Quick AMERICAN Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
+        <meta name="keywords" content="american spare parts uae, american auto parts, american car parts"/>
         <meta property="og:site_name" content="Emirates-car" />
         <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/american-auto-spare-parts" />
         <meta

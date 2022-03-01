@@ -263,6 +263,7 @@ export default function Make({ car, cities, posts, pos }) {
           property="og:title"
           content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
         />
+        <meta name="keywords" content="emirates car, emirates auto parts, emirates car parts"/>
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"

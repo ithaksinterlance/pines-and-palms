@@ -225,6 +225,7 @@ export default function France({ partsposts, posts }) {
     <div>
       <Head>
         <title>France Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <meta name="keywords" content="french spare parts uae, french auto parts, french car parts"/>
         <meta
           property="og:title"
           content="Quick French Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"

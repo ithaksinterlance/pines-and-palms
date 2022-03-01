@@ -231,6 +231,7 @@ export default function Make({ posts, cities, post }) {
           property="og:title"
           content="Search Auto Spare Parts by Part Name in UAE | Emirates-car.com"
         />
+        <meta name="keywords" content="all spare parts, spares"/>
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
