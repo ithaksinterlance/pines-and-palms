@@ -22,7 +22,7 @@ export default function Post({ data }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
+          content={"https://emirates-car.com/img/blog/" + data.IMG}
         />
         <meta
           property="twitter:url"

@@ -40,6 +40,10 @@ export default function Forms() {
     setMake(event.target.value);
     console.log(Make);
   }
+  function handleAddressChange(event) {
+    setAddress(event.target.value);
+    console.log(Address);
+  }
   function handleModelChange(event) {
     setModel(event.target.value);
     console.log(Model);
@@ -77,7 +81,7 @@ export default function Forms() {
     const time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     const dateTime = date + " " + time;
-    const response = fetch(`/api/g_sheet`, {
+    fetch(`/api/g_sheet`, {
       method: "POST",
       body: JSON.stringify({
         Timestamp: dateTime,
@@ -126,7 +130,10 @@ export default function Forms() {
           content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
         />
         <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content="https://www.emirates-car.com/get-in-touch" />
+        <meta
+          property="og:url"
+          content="https://www.emirates-car.com/get-in-touch"
+        />
         <meta
           property="og:description"
           content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
@@ -136,7 +143,10 @@ export default function Forms() {
           property="og:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
-        <meta property="twitter:url" content="https://www.emirates-car.com/get-in-touch" />
+        <meta
+          property="twitter:url"
+          content="https://www.emirates-car.com/get-in-touch"
+        />
         <meta
           property="twitter:title"
           content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
@@ -152,7 +162,7 @@ export default function Forms() {
       </Head>
       <Nav />
       <div className="container place-content-center mx-auto py-6">
-      <div className="uppercase bg-blue-200 font-serif p-5 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-screen s:text-2xl 2xs:text-2xl ">
+        <div className="uppercase bg-blue-200 font-serif p-5 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-screen s:text-2xl 2xs:text-2xl ">
           <Social />
           <div>
             &nbsp;
@@ -378,43 +388,63 @@ export default function Forms() {
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-1/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="Code"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          CODE
-                        </label>
-                        <input
-                          id="Code"
-                          name="entry.44547744"
-                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                          type="text"
-                          placeholder="Eg. +971, +27 ..."
-                          onChange={handleCodeChange}
-                          value={Code}
-                          required
-                        />
-                      </div>
-                      <div className="w-4/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="whatsappno"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          WhatsApp no
-                        </label>
-                        <input
-                          id="whatsappno"
-                          name="entry.902626710"
-                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                          type="text"
-                          placeholder="WhatsApp No"
-                          onChange={handleWhatsAppNoChange}
-                          value={Whatsappno}
-                          required
-                        />
-                      </div>
-                  </div>
+                <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="address"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    Address
+                  </label>
+                  <input
+                    id="address"
+                    name="entry.44547744"
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    type="text"
+                    placeholder="(Area, City, Country)"
+                    onChange={handleAddressChange}
+                    value={Address}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-2">
+                <div className="w-1/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="Code"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    CODE
+                  </label>
+                  <input
+                    id="Code"
+                    name="entry.44547744"
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    type="text"
+                    placeholder="Eg. +971, +27 ..."
+                    onChange={handleCodeChange}
+                    value={Code}
+                    required
+                  />
+                </div>
+                <div className="w-4/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="whatsappno"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    WhatsApp no
+                  </label>
+                  <input
+                    id="whatsappno"
+                    name="entry.902626710"
+                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                    type="text"
+                    placeholder="WhatsApp No"
+                    onChange={handleWhatsAppNoChange}
+                    value={Whatsappno}
+                    required
+                  />
+                </div>
+              </div>
 
               <div className="flex flex-wrap -mx-3 mb-2">
                 <div className="w-full px-3 mb-6 xs:mb-0 md:mb-0">
@@ -471,7 +501,25 @@ export default function Forms() {
                 </div>
               </div>
               <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
+                <Link href="./privacy-policy">
+                  <a
+                    href="./privacy-policy"
+                    className="underline"
+                    target="_newtab"
+                  >
+                    Privacy policy
+                  </a>
+                </Link>
+                &nbsp;
+                <Link href="./terms-and-condition">
+                  <a
+                    href="./privacy-policy"
+                    className="underline"
+                    target="_newtab"
+                  >
+                    Terms and conditions
+                  </a>
+                </Link>
               </div>
 
               <div className="flex float-right text-xs text-gray-400 ">
@@ -481,7 +529,6 @@ export default function Forms() {
           </div>
         </div>
       </div>
-
 
       <Footer />
     </div>

@@ -30,6 +30,13 @@ async function handler(req, res) {
     const contact = req.body.contact;
     const description = "Ref: " + RefNo + "\n" + req.body.description;
     const email = req.body.email;
+    const WApp = null;
+    const SCnfD = null;
+    const Y = null;
+    const N = null;
+    const Q = null;
+    const Follow = null;
+    const S = null;
 
     let messageURIOne =
       encodeURI(description) +
@@ -52,7 +59,23 @@ async function handler(req, res) {
       valueInputOption: "USER_ENTERED",
       auth: jwt,
       requestBody: {
-        values: [[Timestamp, RefNo, email, brand, contact, description]],
+        values: [
+          [
+            Timestamp,
+            RefNo,
+            email,
+            brand,
+            contact,
+            description,
+            WApp,
+            SCnfD,
+            Y,
+            N,
+            Q,
+            Follow,
+            S,
+          ],
+        ],
       },
     });
     const data = JSON.stringify(response);
