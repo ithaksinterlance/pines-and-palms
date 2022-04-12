@@ -17,6 +17,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
   const [Address, setAddress] = useState("");
   const [Name, setName] = useState("");
   const [Code, setCode] = useState("");
+  const [searchModel, setSearchModel] = useState("");
+  const [recommend, setRecommend] = useState("");
+  const [formModelChange, setFormModelChange] = useState("");
 
   useEffect(() => {
     const loadPart = async () => {
@@ -45,6 +48,36 @@ export default function Car({ car, cities, make, partspost, posts }) {
     }
     setSuggestion(matches);
     setText(text);
+  };
+
+  useEffect(() => {
+    const loadPart = async () => {
+      var part = [];
+      for (var i in car) {
+        if (car[i].make === make) {
+          var filter = car[i].model;
+          part.push(filter);
+        }
+      }
+      setFormModelChange(part);
+    };
+    loadPart();
+  }, []);
+
+  const onModelSuggestionHandler = (searchModel) => {
+    setSearchModel(searchModel);
+    setRecommend([]);
+  };
+  const onModelFormChange = (searchModel) => {
+    let matches = [];
+    if (searchModel.length > 0) {
+      matches = formModelChange.filter((part) => {
+        const regex = new RegExp(`${searchModel}`, "gi");
+        return part.match(regex);
+      });
+    }
+    setRecommend(matches);
+    setSearchModel(searchModel);
   };
 
   const ma = [
@@ -310,6 +343,39 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   {make}
                   {">>>"}
                 </p>
+                <div className="flex justify-center">
+                  <div className="pt-3">
+                    <input
+                      className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
+                      id="partname"
+                      type="search"
+                      placeholder={"Search Your " + make + " Model"}
+                      onChange={(e) => onModelFormChange(e.target.value)}
+                      value={searchModel}
+                      autoComplete="off"
+                      required
+                    />
+                    <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
+                      {recommend &&
+                        recommend.map((recommend, i) => (
+                          <div
+                            key={i}
+                            className="cursor-pointer  text-base p-1 bg-white"
+                            onClick={() => onModelSuggestionHandler(recommend)}
+                            width="100%"
+                          >
+                            <a
+                              href={`https://emirates-car.com/search-by-make/${make}/${recommend}`}
+                              rel="noopener noreferrer"
+                              target="_newtab"
+                            >
+                              {recommend}
+                            </a>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
                 {car.map((post) => (
@@ -319,9 +385,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       as={"/search-by-make/" + post.make + "/" + post.model}
                     >
                       <a
-                        title={
-                          post.make + " - " + post.model + " spare parts"
-                        }
+                        title={post.make + " - " + post.model + " spare parts"}
                       >
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100 h-100">
                           {post.model.replace("%2F", "/")}{" "}
@@ -582,8 +646,26 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
-              </div>
+                  <Link href="./privacy-policy">
+                    <a
+                      href="./privacy-policy"
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Privacy policy
+                    </a>
+                  </Link>
+                  &nbsp;
+                  <Link href="./terms-and-condition">
+                    <a
+                      href="./privacy-policy"
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Terms and conditions
+                    </a>
+                  </Link>
+                </div>
 
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
@@ -638,8 +720,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 ))}
               </h1>
               <p className="text-base font-medium text-gray-500 p-5">
-                We deal in automobile in places such as sharjah, ajman, abu dhabi, umm al nar, umm al quwain, musaffah, al ain etc.
-                UAE Automobile industry is slowly shifting towards a service
+                We deal in automobile in places such as sharjah, ajman, abu
+                dhabi, umm al nar, umm al quwain, musaffah, al ain etc. UAE
+                Automobile industry is slowly shifting towards a service
                 oriented business model based on consumer data and customer
                 experience. Now companies are trying to adapt to the current
                 need of the trends Markets. They rely on consumer data for

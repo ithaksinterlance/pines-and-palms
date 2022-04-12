@@ -233,8 +233,8 @@ export default function Parts({ data, cities, posts }) {
                   </span>
                 </div>
               </div>
-              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10">
-                <div className="w-1/3 bg-blue-700 s:hidden 2xs:hidden xs:py-5 xs:hidden">
+              <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 xs:mx-4 s:mx-4 2xs:mx-4 md:mx-5 mx-10">
+                <div className="w-1/3 bg-blue-700 s:hidden md:hidden 2xs:hidden xs:py-5 xs:hidden">
                   <Slider {...settings} className="py-10 p-2">
                     <div>
                       <p className="text-xl font-bold text-center">
@@ -340,7 +340,7 @@ export default function Parts({ data, cities, posts }) {
                     ></iframe>
                   </div>
                 </div>
-                <div className="w-2/3 s:w-full xs:w-screen md:w-full 2xs:w-full sm:w-full">
+                <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 md:grid md:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-5 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2 mx-10">
                   <p className="text-base font-medium  xs:text-sm md:text-base p-5 s:p-2">
                     Searching for {data.parts.toUpperCase()} Auto Spare Parts in
                     U.A.E? Fill out the inquiry down below.
@@ -562,7 +562,7 @@ export default function Parts({ data, cities, posts }) {
                       href="/search-by-make/[make]"
                       as={"/search-by-make/" + post.make}
                     >
-                      <a title={data.parts + " for" + post.make}>
+                      <a title={ post.make + " "+ data.parts}>
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image
@@ -630,7 +630,7 @@ export default function Parts({ data, cities, posts }) {
                   href="/search-by-cities-in-uae/[city]"
                   as={"/search-by-cities-in-uae/" + post.city}
                 >
-                  <a title={"spare parts delivery in " + post.city}>
+                  <a title={"car spare parts in " + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
                       <i className="far fa-compass"></i> {post.city}
                     </p>

@@ -17,7 +17,7 @@ export default function Make({ car, cities, posts, pos }) {
   const [text, setText] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [Address, setAddress] = useState("");
-  const [searchMake, setSearcMake] = useState("");
+  const [searchMake, setSearchMake] = useState("");
   const [recommend, setRecommend] = useState("");
   const [formMakeChange, setFormMakeChange] = useState("");
   const [Name, setName] = useState("");
@@ -324,7 +324,7 @@ export default function Make({ car, cities, posts, pos }) {
                         width="100%"
                       >
                         <a
-                          href={`https://emirates-car.com/search-by-part-name/${recommend}`}
+                          href={`https://emirates-car.com/search-by-make/${recommend}`}
                           rel="noopener noreferrer"
                           target="_newtab"
                         >

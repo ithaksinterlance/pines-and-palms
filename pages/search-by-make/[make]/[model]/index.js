@@ -723,11 +723,11 @@ export default function Car({
                 >
                   <a
                     title={
-                      make + " " + model + " " + post.parts + " parts in uae"
+                      make + " " + model + " " + post.parts
                     }
                   >
                     <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-lg 2xs:text-xs px-5 font-sans underline">
-                      <i className="far fa-compass"></i> {post.parts}
+                      <i className="far fa-compass"></i>{" "+make} {" "+ model} {post.parts}
                     </p>
                   </a>
                 </Link>

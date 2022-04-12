@@ -654,7 +654,7 @@ export default function Make({ posts, cities, post }) {
                   href="/search-by-cities-in-uae/[city]"
                   as={"/search-by-cities-in-uae/" + post.city}
                 >
-                  <a title={"auto spare parts in " + post.city + " UAE"}>
+                  <a title={"car parts in " + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
                       <i className="far fa-compass"></i> {post.city}
                     </p>
