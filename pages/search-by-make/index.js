@@ -78,7 +78,7 @@ export default function Make({ car, cities, posts, pos }) {
       });
     }
     setRecommend(matches);
-    setSearcMake(searchMake);
+    setSearchMake(searchMake);
   };
 
   const ma = [
