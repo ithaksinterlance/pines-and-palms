@@ -96,10 +96,10 @@ export default function Navbar() {
           </ul>
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
-              <Link href="https://www.facebook.com/Emirates-carcom-101113659165158/">
+              <Link href="https://www.facebook.com/emirates.auto.parts/">
                 <a
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                  href="https://www.facebook.com/Emirates-carcom-101113659165158/"
+                  href="https://www.facebook.com/emirates.auto.parts/"
                 >
                   <i className="fab fa-facebook ml-2 text-xl leading-xl text-white opacity-75"></i>
                 </a>

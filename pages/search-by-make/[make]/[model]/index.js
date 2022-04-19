@@ -178,6 +178,10 @@ export default function Car({
             " " +
             model +
             " spare parts," +
+            make +
+            " " +
+            model +
+            " car spare parts," +
             model +
             " auto parts," +
             model +

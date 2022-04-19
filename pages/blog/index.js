@@ -52,10 +52,10 @@ export default function Blog({ posts }) {
                                 height={350}
                               />
                             </div>{" "}
-                            <p className="text-4xl xs:text-lg sm:text-md md:text-lg font-bold font-sans pt-5 text-blue-500">
+                            <h1 className="text-4xl xs:text-lg sm:text-md md:text-lg font-bold font-sans pt-5 text-blue-500">
                               {post.TITLE}{" "}
                               <i className="fa fa-link" aria-hidden="true"></i>{" "}
-                            </p>{" "}
+                            </h1>{" "}
                             <p className="text-sm text-gray-400 font-semibold uppercase pb-5 xs:pb-3 xs:text-xs">
                               {post.TIME} - {post.DATE_PUBLISHED}
                             </p>

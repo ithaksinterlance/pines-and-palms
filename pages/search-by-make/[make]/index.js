@@ -270,6 +270,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
             make +
             " spare parts," +
             make +
+            " car spare parts," +
+            make +
             " parts uae," +
             make +
             " " +
