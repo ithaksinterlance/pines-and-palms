@@ -87,6 +87,7 @@ export default function footer() {
         </div>
 
         <div className="text-center text-purple-200 py-10">
+
           <a
             href="https://emirates-car.com"
             className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
@@ -95,6 +96,7 @@ export default function footer() {
             Copyright © 2022 Emirates-car. All rights reserved.
           </a>
         </div>
+
       </div>
     </div>
   );

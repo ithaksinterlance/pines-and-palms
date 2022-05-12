@@ -1243,6 +1243,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               </div>
             ))}
           </div>
+          <div className="text-center underline text-xs"><a href="http://www.happal.com/">Happal Directory</a><a href="https://www.ontoplist.com/auto-services/" target="_blank" rel="noreferrer"><img src="https://www.ontoplist.com/images/ontoplist31.png?id=627cdc5911365" alt="Auto Services - OnToplist.com" border="0"/></a></div>
 
           <div className="text-center text-purple-200 py-10">
             <a
