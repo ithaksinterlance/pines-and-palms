@@ -1243,7 +1243,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               </div>
             ))}
           </div>
-          <div className="text-center underline text-xs"><a href="http://www.happal.com/">Happal Directory</a><a href="https://www.ontoplist.com/auto-services/" target="_blank" rel="noreferrer"><img src="https://www.ontoplist.com/images/ontoplist31.png?id=627cdc5911365" alt="Auto Services - OnToplist.com" border="0"/></a><a href="https://411freedirectory.com/">411 Free Directory.com</a><a href="http://www.lemon-directory.com/">Lemon Directory .com</a><a href="http://www.alive-directory.com/">Alive Directory</a><a href="http://www.canadawebdir.com/shopping/home_and_garden/">home_and_garden com</a></div>
+          <div className="text-center underline text-xs"><a href="http://www.happal.com/">Happal Directory</a><a href="https://www.ontoplist.com/auto-services/" target="_blank" rel="noreferrer"><img src="https://www.ontoplist.com/images/ontoplist31.png?id=627cdc5911365" alt="Auto Services - OnToplist.com" border="0"/></a><a href="https://411freedirectory.com/">411 Free Directory.com</a><a href="http://www.lemon-directory.com/">Lemon Directory .com</a><a href="http://www.alive-directory.com/">Alive Directory</a><a href="http://www.canadawebdir.com/shopping/home_and_garden/">home_and_garden com</a><a href="http://www.interesting-dir.com/">Interesting Dir</a><a href="https://ellysdirectory.com/submit-link/">Ellysdirectory</a></div>
 
           <div className="text-center text-purple-200 py-10">
             <a
