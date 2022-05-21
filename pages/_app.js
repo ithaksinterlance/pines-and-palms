@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
           content="2dbXrKrxCBjzz1bLwaw_6nd4YEhhviwPLiGq6fLXPoU"
         />
         <meta name="yandex-verification" content="1a59e5a3d5ee0eeb" />
+        <meta name="naver-site-verification" content="naver0db31bf474cde5117209785bc5c104ab.html" />
         <link rel="shortcut icon" href="/favicon.png" />
         <link
           rel="stylesheet"
