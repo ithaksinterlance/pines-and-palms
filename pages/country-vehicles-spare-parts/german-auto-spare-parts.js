@@ -228,7 +228,7 @@ export default function German({ partsposts, posts }) {
         <meta name="keywords" content="german spare parts uae, german auto parts, german car parts"/>
         <meta
           property="og:title"
-          content="Quick German Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online German Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta property="og:site_name" content="Emirates-car" />
         <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/german-auto-spare-parts" />
@@ -244,7 +244,7 @@ export default function German({ partsposts, posts }) {
         <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/german-auto-spare-parts" />
         <meta
           property="twitter:title"
-          content="Quick German Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online German Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta
           property="twitter:description"

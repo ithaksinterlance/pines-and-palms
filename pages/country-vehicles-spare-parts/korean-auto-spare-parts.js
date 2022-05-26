@@ -224,11 +224,11 @@ export default function Korean({ partsposts, posts }) {
   return (
     <div>
       <Head>
-        <title>Korean Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <title>Online Korean Car Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
         <meta name="keywords" content="korean spare parts uae, korean auto parts, korean car parts"/>
         <meta
           property="og:title"
-          content="Quick Korean Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online Korean Car Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta property="og:site_name" content="Emirates-car" />
         <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/korean-auto-spare-parts" />
@@ -244,7 +244,7 @@ export default function Korean({ partsposts, posts }) {
         <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/korean-auto-spare-parts" />
         <meta
           property="twitter:title"
-          content="Quick Korean Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online Korean Car Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta
           property="twitter:description"

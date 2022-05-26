@@ -257,11 +257,11 @@ export default function Make({ car, cities, posts, pos }) {
     <div>
       <Nav />
       <Head>
-        <title>Quick Auto Spare Parts Hunt in UAE | Emirates-car.com</title>
+        <title>Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
-          content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
+          content="Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com"
         />
         <meta name="keywords" content="emirates car, emirates auto parts, emirates car parts"/>
         <meta property="og:site_name" content="Emirates-car" />
@@ -284,7 +284,7 @@ export default function Make({ car, cities, posts, pos }) {
         />
         <meta
           property="twitter:title"
-          content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
+          content="Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com"
         />
         <meta
           property="twitter:description"

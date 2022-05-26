@@ -159,7 +159,7 @@ export default function Car({
       <Nav />
       <Head>
         <title>
-          {make} - {model}&nbsp; Auto Spare Parts in UAE - Best Prices
+          {make} - {model}&nbsp; Car Auto Spare Parts Order Online in UAE - Best Prices
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
@@ -168,7 +168,7 @@ export default function Car({
             make +
             " - " +
             model +
-            " Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+            " Car Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
           }
         />
         <meta
@@ -230,7 +230,7 @@ export default function Car({
             make +
             " - " +
             model +
-            " Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+            " Car Auto Spare Parts in UAE Order Online - Best Prices | Emirates-car.com"
           }
         />
         <meta

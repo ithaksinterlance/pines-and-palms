@@ -116,11 +116,11 @@ export default function Parts({ data, cities, posts }) {
     <div>
       <Nav />
       <Head>
-        <title>{data.parts} Auto Spare Parts in UAE | Emirates-car.com</title>
+        <title>{data.parts} Car Auto Spare Parts Order Online in UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
-          content={data.parts + " Auto Spare Parts in UAE | Emirates-car.com"}
+          content={data.parts + " Car Auto Spare Parts  Order Online in UAE | Emirates-car.com"}
         />
         <meta
           property="keywords"
@@ -169,7 +169,7 @@ export default function Parts({ data, cities, posts }) {
         />
         <meta
           property="twitter:title"
-          content={data.parts + " Auto Spare Parts in UAE | Emirates-car.com"}
+          content={data.parts + " Car Auto Spare Parts Order Online in UAE | Emirates-car.com"}
         />
         <meta
           property="twitter:description"
@@ -555,7 +555,7 @@ export default function Parts({ data, cities, posts }) {
               <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10 my-10">
                 SEARCH BY MAKE
               </p>
-              <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
+              <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
                 {posts.map((post) => (
                   <div key={post.id}>
                     <Link
@@ -575,7 +575,7 @@ export default function Parts({ data, cities, posts }) {
                             <br />
                           </div>
                           <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                            {post.make.toUpperCase()}
+                          {data.parts.toUpperCase()} for {post.make.toUpperCase()}
                           </p>
                         </main>
                       </a>
@@ -632,7 +632,7 @@ export default function Parts({ data, cities, posts }) {
                 >
                   <a title={"car spare parts in " + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
-                      <i className="far fa-compass"></i> {post.city}
+                      <i className="far fa-compass"></i> {data.parts} in {post.city}
                     </p>
                   </a>
                 </Link>

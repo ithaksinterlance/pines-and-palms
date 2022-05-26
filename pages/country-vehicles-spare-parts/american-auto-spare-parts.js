@@ -224,18 +224,18 @@ export default function America({ partsposts, posts }) {
   return (
     <div>
       <Head>
-        <title>Quick AMERICAN Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket</title>
+        <title>Online Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
-          content="Quick AMERICAN Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta name="keywords" content="american spare parts uae, american auto parts, american car parts"/>
         <meta property="og:site_name" content="Emirates-car" />
         <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/american-auto-spare-parts" />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket American auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket American car auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -245,7 +245,7 @@ export default function America({ partsposts, posts }) {
         <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/american-auto-spare-parts" />
         <meta
           property="twitter:title"
-          content="Quick AMERICAN Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online AMERICAN Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta
           property="twitter:description"

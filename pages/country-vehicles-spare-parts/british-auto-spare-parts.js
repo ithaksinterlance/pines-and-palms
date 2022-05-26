@@ -224,11 +224,11 @@ export default function British({ partsposts, posts }) {
   return (
     <div>
       <Head>
-        <title>Quick British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket</title>
+        <title>Online British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
-          content="Quick British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
                 <meta name="keywords" content="British spare parts uae, British auto parts, British car parts"/>
 
@@ -246,7 +246,7 @@ export default function British({ partsposts, posts }) {
         <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/british-auto-spare-parts" />
         <meta
           property="twitter:title"
-          content="Quick British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta
           property="twitter:description"

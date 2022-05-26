@@ -224,11 +224,11 @@ export default function France({ partsposts, posts }) {
   return (
     <div>
       <Head>
-        <title>France Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <title>Online France Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
         <meta name="keywords" content="french spare parts uae, french auto parts, french car parts"/>
         <meta
           property="og:title"
-          content="Quick French Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online French Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta property="og:site_name" content="Emirates-car" />
         <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/french-auto-spare-parts" />
@@ -244,7 +244,7 @@ export default function France({ partsposts, posts }) {
         <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/french-auto-spare-parts" />
         <meta
           property="twitter:title"
-          content="Quick French Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online French Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta
           property="twitter:description"

@@ -256,12 +256,12 @@ export default function Car({ car, cities, make, partspost, posts }) {
     <div>
       <Nav />
       <Head>
-        <title>{make} - Auto Spare Parts in UAE - Best Prices</title>
+        <title>{make} -  Car Auto Spare Parts Order Online in UAE - Best Prices</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
           content={
-            make + " - Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+            make + " - Auto Spare Parts Order Online in UAE - Best Prices | Emirates-car.com"
           }
         />
         <meta
@@ -307,7 +307,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
         <meta
           property="twitter:title"
           content={
-            make + "- Auto Spare Parts in UAE - Best Prices | Emirates-car.com"
+            make + " - Car Auto Spare Parts Order Online in UAE - Best Prices | Emirates-car.com"
           }
         />
         <meta

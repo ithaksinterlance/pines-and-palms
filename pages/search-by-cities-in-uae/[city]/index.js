@@ -234,14 +234,14 @@ export default function City({ data, partspost, posts, makedatas }) {
       <Nav />
       <Head>
         <title>
-          Quick Auto Spare Parts Hunt in {data.city} (UAE) | Emirates-car.com
+          Quick Car Auto Spare Parts Order Online in {data.city} (UAE) | Emirates-car.com
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="keywords" content={"auto parts in "+ data.city + ", " +"car parts "+data.city + ", " + "Spare parts in " + data.city+", auto spare parts sharjah"  }/>
         <meta
           property="og:title"
           content={
-            "Quick Auto Spare Parts Hunt in " +
+            "Quick Car Auto Spare Parts Order Online in " +
             data.city +
             " (UAE) | Emirates-car.com"
           }
@@ -274,7 +274,7 @@ export default function City({ data, partspost, posts, makedatas }) {
         <meta
           property="twitter:title"
           content={
-            "Quick Auto Spare Parts Hunt in " +
+            "Quick Car Auto Spare Parts Hunt in " +
             data.city +
             " (UAE) | Emirates-car.com"
           }

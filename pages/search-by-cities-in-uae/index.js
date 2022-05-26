@@ -255,11 +255,11 @@ export default function City({ cities, data, posts, pos }) {
   return (
     <div>
       <Head>
-        <title>Quick Auto Spare Parts Hunt in all Cities of UAE</title>
+        <title>Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
-          content="Quick Auto Spare Parts Hunt in all Cities of UAE | Emirates-car.com"
+          content="Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com"
         />
         <meta name="keywords" content="car parts in uae, spare parts in dubai, spare parts sharjah"/>
         <meta property="og:site_name" content="Emirates-car" />
@@ -269,7 +269,7 @@ export default function City({ cities, data, posts, pos }) {
         />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+          content="Online Car Auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Dubai, Ajman, Abu Dhabi, Jumeirah, Ajman, Al Quoz."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -282,7 +282,7 @@ export default function City({ cities, data, posts, pos }) {
         />
         <meta
           property="twitter:title"
-          content="Quick Auto Spare Parts Hunt in all Cities of UAE | Emirates-car.com"
+          content="Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com"
         />
         <meta
           property="twitter:description"
