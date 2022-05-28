@@ -1,24 +1,24 @@
-import Nav from "../../nav";
-import Footer from "../../footer";
-import React, { useState, useEffect } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import Count from "../../service-countup";
-import Social from "../../Social";
+import Nav from '../../nav';
+import Footer from '../../footer';
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
+import Count from '../../service-countup';
+import Social from '../../Social';
 
 export default function City({ data, partspost, posts, makedatas }) {
-  const [Year, setYear] = useState("");
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
+  const [Year, setYear] = useState('');
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
   const [formPartname, setFormPartname] = useState([]);
-  const [text, setText] = useState("");
-  const [City, setCity] = useState("");
+  const [text, setText] = useState('');
+  const [City, setCity] = useState('');
   const [suggestion, setSuggestion] = useState([]);
-  const [Name, setName] = useState("");
-  const [Code, setCode] = useState("");
+  const [Name, setName] = useState('');
+  const [Code, setCode] = useState('');
 
   useEffect(() => {
     const loadPart = async () => {
@@ -41,7 +41,7 @@ export default function City({ data, partspost, posts, makedatas }) {
     let matches = [];
     if (text.length > 0) {
       matches = formPartname.filter((part) => {
-        const regex = new RegExp(`${text}`, "gi");
+        const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
     }
@@ -50,99 +50,99 @@ export default function City({ data, partspost, posts, makedatas }) {
   };
 
   const ma = [
-    "Ford",
-    "Chrysler",
-    "Citroen",
-    "Hillman",
-    "Chevrolet",
-    "Cadillac",
-    "BMW",
-    "Austin",
-    "Fairthorpe",
-    "Fillmore",
-    "Pontiac",
-    "Studebaker",
-    "Buick",
-    "Rambler",
-    "Plymouth",
-    "Volkswagen",
-    "Jensen",
-    "Oldsmobile",
-    "Mercury",
-    "Dodge",
-    "Shelby",
-    "Porsche",
-    "Toyota",
-    "Mercedes-Benz",
-    "MG",
-    "Nissan",
-    "Honda",
-    "Mazda",
-    "Renault",
-    "Audi",
-    "Lincoln",
-    "Lotus",
-    "Maserati",
-    "Mitsubishi",
-    "Saab",
-    "Subaru",
-    "Suzuki",
-    "Lamborghini",
-    "Merkur",
-    "Land Rover",
-    "Acura",
-    "Lexus",
-    "Eagle",
-    "Alfa Romeo",
-    "Daihatsu",
-    "Geo",
-    "GMC",
-    "Hyundai",
-    "Infiniti",
-    "Isuzu",
-    "Jaguar",
-    "Jeep",
-    "Saturn",
-    "Volvo",
-    "Kia",
-    "Holden",
-    "Corbin",
-    "Daewoo",
-    "MINI",
-    "Maybach",
-    "Scion",
-    "Spyker",
-    "Aston Martin",
-    "Bentley",
-    "Panoz",
-    "Rolls-Royce",
-    "Spyker Cars",
-    "Ferrari",
-    "Hummer",
-    "Morgan",
-    "Peugeot",
-    "Foose",
-    "Aptera",
-    "Smart",
-    "Bugatti",
-    "Tesla",
-    "Ram",
-    "Fiat",
-    "McLaren",
-    "BYD",
-    "McLaren Automotive",
-    "Mobility Ventures LLC",
-    "Pagani",
-    "Roush Performance",
-    "smart",
-    "SRT",
-    "Genesis",
-    "Karma",
-    "Koenigsegg",
-    "RUF Automobile",
-    "STI",
-    "Polestar",
-    "Kandi",
+    'Ford',
+    'Chrysler',
+    'Citroen',
+    'Hillman',
+    'Chevrolet',
+    'Cadillac',
+    'BMW',
+    'Austin',
+    'Fairthorpe',
+    'Fillmore',
+    'Pontiac',
+    'Studebaker',
+    'Buick',
+    'Rambler',
+    'Plymouth',
+    'Volkswagen',
+    'Jensen',
+    'Oldsmobile',
+    'Mercury',
+    'Dodge',
+    'Shelby',
+    'Porsche',
+    'Toyota',
+    'Mercedes-Benz',
+    'MG',
+    'Nissan',
+    'Honda',
+    'Mazda',
+    'Renault',
+    'Audi',
+    'Lincoln',
+    'Lotus',
+    'Maserati',
+    'Mitsubishi',
+    'Saab',
+    'Subaru',
+    'Suzuki',
+    'Lamborghini',
+    'Merkur',
+    'Land Rover',
+    'Acura',
+    'Lexus',
+    'Eagle',
+    'Alfa Romeo',
+    'Daihatsu',
+    'Geo',
+    'GMC',
+    'Hyundai',
+    'Infiniti',
+    'Isuzu',
+    'Jaguar',
+    'Jeep',
+    'Saturn',
+    'Volvo',
+    'Kia',
+    'Holden',
+    'Corbin',
+    'Daewoo',
+    'MINI',
+    'Maybach',
+    'Scion',
+    'Spyker',
+    'Aston Martin',
+    'Bentley',
+    'Panoz',
+    'Rolls-Royce',
+    'Spyker Cars',
+    'Ferrari',
+    'Hummer',
+    'Morgan',
+    'Peugeot',
+    'Foose',
+    'Aptera',
+    'Smart',
+    'Bugatti',
+    'Tesla',
+    'Ram',
+    'Fiat',
+    'McLaren',
+    'BYD',
+    'McLaren Automotive',
+    'Mobility Ventures LLC',
+    'Pagani',
+    'Roush Performance',
+    'smart',
+    'SRT',
+    'Genesis',
+    'Karma',
+    'Koenigsegg',
+    'RUF Automobile',
+    'STI',
+    'Polestar',
+    'Kandi',
   ];
 
   const make = ma.sort();
@@ -181,52 +181,52 @@ export default function City({ data, partspost, posts, makedatas }) {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     const response = fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           City +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
+          ' ' +
           Year +
-          "\n" +
-          "Part List: " +
+          '\n' +
+          'Part List: ' +
           text,
         email: Email,
       }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
-    alert("Form submitted. We will contact you shortly ;)");
-    setName("");
-    setCode("");
-    setYear("");
-    setMake("");
-    setModel("");
-    setCity("");
-    setEmail("");
-    setText("");
-    setWhatsappno("");
+    alert('Form submitted. We will contact you shortly ;)');
+    setName('');
+    setCode('');
+    setYear('');
+    setMake('');
+    setModel('');
+    setCity('');
+    setEmail('');
+    setText('');
+    setWhatsappno('');
   }
 
   return (
@@ -234,29 +234,43 @@ export default function City({ data, partspost, posts, makedatas }) {
       <Nav />
       <Head>
         <title>
-          Quick Car Auto Spare Parts Order Online in {data.city} (UAE) | Emirates-car.com
+          Quick Car Auto Spare Parts Order Online in {data.city} (UAE) |
+          Emirates-car.com
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="keywords" content={"auto parts in "+ data.city + ", " +"car parts "+data.city + ", " + "Spare parts in " + data.city+", auto spare parts sharjah"  }/>
+        <meta
+          name="keywords"
+          content={
+            'auto parts in ' +
+            data.city +
+            ', ' +
+            'car parts ' +
+            data.city +
+            ', ' +
+            'Spare parts in ' +
+            data.city +
+            ', auto spare parts sharjah'
+          }
+        />
         <meta
           property="og:title"
           content={
-            "Quick Car Auto Spare Parts Order Online in " +
+            'Quick Car Auto Spare Parts Order Online in ' +
             data.city +
-            " (UAE) | Emirates-car.com"
+            ' (UAE) | Emirates-car.com'
           }
         />
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
           content={
-            "https://www.emirates-car.com/search-by-cities-in-uae/" + data.city
+            'https://www.emirates-car.com/search-by-cities-in-uae/' + data.city
           }
         />
         <meta
           property="og:description"
           content={
-            "Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in " +
+            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in ' +
             data.city
           }
         />
@@ -268,21 +282,21 @@ export default function City({ data, partspost, posts, makedatas }) {
         <meta
           property="twitter:url"
           content={
-            "https://www.emirates-car.com/search-by-cities-in-uae/" + data.city
+            'https://www.emirates-car.com/search-by-cities-in-uae/' + data.city
           }
         />
         <meta
           property="twitter:title"
           content={
-            "Quick Car Auto Spare Parts Hunt in " +
+            'Quick Car Auto Spare Parts Hunt in ' +
             data.city +
-            " (UAE) | Emirates-car.com"
+            ' (UAE) | Emirates-car.com'
           }
         />
         <meta
           property="twitter:description"
           content={
-            "Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in " +
+            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in ' +
             data.city
           }
         />
@@ -297,7 +311,7 @@ export default function City({ data, partspost, posts, makedatas }) {
             <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
               FILL OUT THE INQUIRY FOR PARTS IN
               <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                &nbsp;{data.city}{" "}
+                &nbsp;{data.city}{' '}
               </nobr>
               BELOW
             </div>
@@ -305,12 +319,16 @@ export default function City({ data, partspost, posts, makedatas }) {
               <nobr className="text-blue-400 no-underline">
                 <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
               </nobr>
-              index{">>>"}
+              index{'>>>'}
               <a>
-                search-by-cities-in-uae{"/"}
+                search-by-cities-in-uae{'/'}
                 {data.city}
               </a>
-              {">>>"}
+              {'>>>'}
+            </p>
+            <p className="text-gray-500 font-semibold text-xl md:text-lg lg:text-2xl font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 pb-3">
+              <a>{data.description}</a>
+              {'>>>'}
             </p>
             <iframe
               src={data.link}
@@ -319,14 +337,20 @@ export default function City({ data, partspost, posts, makedatas }) {
               allowFullScreen="null"
               loading="lazy"
             ></iframe>
-            <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1">
+            <div className="grid grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1">
               <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
                 <h1 className="text-md font-bold text-blue-500">
                   SEARCH YOUR PARTS IN
-                  <nobr className="text-blue-700 text-xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                    &nbsp;{data.city}
-                  </nobr>{" "}
+                  <nobr className="text-gray-500  text-2xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
+                    &nbsp;{data.city}.
+                  </nobr>{' '}
                 </h1>
+              </p>
+              <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
+                To buy Auto spare parts online near {data.city}. , fill in the
+                spare part forms below, get inquired through whatsapp and get
+                quote for your spare parts and we also offer delivery to your
+                convinient area.
               </p>
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 mx-10">
@@ -400,7 +424,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                         </option>
                         {make.map((m) => (
                           <option key={m}>{m}</option>
-                        ))}{" "}
+                        ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -436,9 +460,9 @@ export default function City({ data, partspost, posts, makedatas }) {
                           .filter((s) => s.make === Make)
                           .map((s) => (
                             <option key={s.id} value={s.model}>
-                              {s.model}{" "}
+                              {s.model}{' '}
                             </option>
-                          ))}{" "}
+                          ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -453,43 +477,43 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-                <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="Code"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          CODE
-                        </label>
-                        <input
-                          id="Code"
-                          name="entry.44547744"
-                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                          type="text"
-                          placeholder="Eg. +971, +27 ..."
-                          onChange={handleCodeChange}
-                          value={Code}
-                          required
-                        />
-                      </div>
-                      <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="whatsappno"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          WhatsApp no
-                        </label>
-                        <input
-                          id="whatsappno"
-                          name="entry.902626710"
-                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                          type="text"
-                          placeholder="WhatsApp No"
-                          onChange={handleWhatsAppNoChange}
-                          value={Whatsappno}
-                          required
-                        />
-                      </div>
+                  <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <label
+                        htmlFor="Code"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      >
+                        CODE
+                      </label>
+                      <input
+                        id="Code"
+                        name="entry.44547744"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        type="text"
+                        placeholder="Eg. +971, +27 ..."
+                        onChange={handleCodeChange}
+                        value={Code}
+                        required
+                      />
+                    </div>
+                    <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <label
+                        htmlFor="whatsappno"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      >
+                        WhatsApp no
+                      </label>
+                      <input
+                        id="whatsappno"
+                        name="entry.902626710"
+                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                        type="text"
+                        placeholder="WhatsApp No"
+                        onChange={handleWhatsAppNoChange}
+                        value={Whatsappno}
+                        required
+                      />
+                    </div>
                   </div>
                   <div>
                     <label
@@ -547,7 +571,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                       value={text}
                       autoComplete="off"
                       required
-                    />{" "}
+                    />{' '}
                     {suggestion &&
                       suggestion.map((suggestion, i) => (
                         <div
@@ -555,9 +579,9 @@ export default function City({ data, partspost, posts, makedatas }) {
                           className="cursor-pointer border-gray-400 p-4"
                           onClick={() => onSuggestionHandler(suggestion)}
                         >
-                          {suggestion}{" "}
+                          {suggestion}{' '}
                         </div>
-                      ))}{" "}
+                      ))}{' '}
                   </div>
                 </div>
                 <div className="grid grid-cols-1 pt-3">
@@ -569,39 +593,64 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
-              </div>
+                  <Link href="./privacy-policy">
+                    <a
+                      href="./privacy-policy"
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Privacy policy
+                    </a>
+                  </Link>
+                  &nbsp;
+                  <Link href="./terms-and-condition">
+                    <a
+                      href="./privacy-policy"
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Terms and conditions
+                    </a>
+                  </Link>
+                </div>
 
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
                 </div>
               </form>
-              <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3"><Social />
-          <div>
-            <span>
-              <Link href="/search-by-part-name">
-                <a className="underline hover:text-blue-500 xs:text-sm">
-                  SEARCH BY PART NAME
-                </a>
-              </Link>{" "}
-              &nbsp;|
-            </span>
-            <span>
-              <Link href="/search-by-cities-in-uae">
-                <a className="underline hover:text-blue-500  xs:text-sm">SEARCH BY CITY</a>
-              </Link>{" "}
-              &nbsp;|
-            </span>
-            <span>
-              <Link href="/search-by-make">
-                <a className="underline hover:text-blue-500  xs:text-sm">SEARCH BY MAKE</a>
-              </Link>{" "}
-              &nbsp;
-            </span>
-          </div>
-        </div>
+              <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+                <Social />
+                <div>
+                  <span>
+                    <Link href="/search-by-part-name">
+                      <a className="underline hover:text-blue-500 xs:text-sm">
+                        SEARCH BY PART NAME
+                      </a>
+                    </Link>{' '}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-cities-in-uae">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY CITY
+                      </a>
+                    </Link>{' '}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-make">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY MAKE
+                      </a>
+                    </Link>{' '}
+                    &nbsp;
+                  </span>
+                </div>
+              </div>
             </div>
-            <div><Count/></div>
+            <div>
+              <Count />
+            </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 mx-5">
               <h1 className="text-base font-medium text-gray-500 p-5">
                 We deal with any country auto spare parts including japanese,
@@ -611,11 +660,11 @@ export default function City({ data, partspost, posts, makedatas }) {
                 coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles,
                 Used spare parts, After market parts, Genuine spare parts and
                 New parts etc. Contact us for any inquiry. We also deal in
-                brands such as{" "}
+                brands such as{' '}
                 {makedatas.map((p) => (
                   <a key={p.id}>
                     {p.make}
-                    {" in " + data.city + ", "}
+                    {' in ' + data.city + ', '}
                   </a>
                 ))}
                 .<br />
@@ -654,14 +703,14 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <div key={makedata.id}>
                   <Link
                     href="/search-by-make/[make]"
-                    as={"/search-by-make/" + makedata.make}
+                    as={'/search-by-make/' + makedata.make}
                   >
-                    <a title={makedata.make + " spare parts " + data.city}>
+                    <a title={makedata.make + ' spare parts ' + data.city}>
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                         <div className="flex justify-center">
                           <Image
-                            alt={makedata.make + " spare parts " + data.city}
-                            src={"/img/car-logos/" + makedata.img}
+                            alt={makedata.make + ' spare parts ' + data.city}
+                            src={'/img/car-logos/' + makedata.img}
                             className="object-scale-down shadow-xl"
                             height={30}
                             width={30}
@@ -691,9 +740,9 @@ export default function City({ data, partspost, posts, makedatas }) {
               <div key={post.id}>
                 <Link
                   href="/search-by-part-name/[parts]"
-                  as={"/search-by-part-name/" + post.parts}
+                  as={'/search-by-part-name/' + post.parts}
                 >
-                  <a title={post.parts + " in " + data.city}>
+                  <a title={post.parts + ' in ' + data.city}>
                     <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
                       <i className="far fa-compass"></i> {post.parts}
                     </p>
@@ -738,7 +787,7 @@ export async function getStaticProps({ params }) {
   const response = await fetch(`https://rozy.vercel.app/api/grooves`);
   const dat = await response.json();
   let uniqueMakeArray = [
-    ...new Map(dat.map((item) => [item["make"], item])).values(),
+    ...new Map(dat.map((item) => [item['make'], item])).values(),
   ];
 
   if (!data) {
