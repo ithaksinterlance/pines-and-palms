@@ -50,7 +50,7 @@ export const Links =
 {"links":"https://emirates-car.com/search-by-cities-in-uae/Mina%20Rashid%20Port",},
 {"links":"https://emirates-car.com/search-by-cities-in-uae/Mina%20Saqr%20(Ras%20al%20Khaimah)",},
 {"links":"https://emirates-car.com/search-by-cities-in-uae/Mina%20Zayed%20(Abu%20Dhabi)",},
-{"links":"https://emirates-car.com/search-by-cities-in-uae/Minhaḑ%20(Dubai)",},
+{"links":"https://emirates-car.com/search-by-cities-in-uae/Minhad%20(Dubai)",},
 {"links":"https://emirates-car.com/search-by-cities-in-uae/Mirfa%20(Abu%20Dhabi)",},
 {"links":"https://emirates-car.com/search-by-cities-in-uae/Mubarek%20Tower%20(Sharjah)",},
 {"links":"https://emirates-car.com/search-by-cities-in-uae/Mubarraz%20Island%20(Abu%20Dhabi)",},
