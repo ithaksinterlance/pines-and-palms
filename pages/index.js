@@ -23,12 +23,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
   const [formPartname, setFormPartname] = useState([]);
   const [text, setText] = useState('');
   const [Name, setName] = useState('');
-  const [searchMake, setSearchMake] = useState("");
-  const [recommendmake, setRecommendmake] = useState("");
-  const [formMakeChange, setFormMakeChange] = useState("");
-  const [searchCity, setSearchCity] = useState("");
-  const [recommendcities, setRecommendCity] = useState("");
-  const [formCityChange, setFormCityChange] = useState("");
+  const [searchMake, setSearchMake] = useState('');
+  const [recommendmake, setRecommendmake] = useState('');
+  const [formMakeChange, setFormMakeChange] = useState('');
+  const [searchCity, setSearchCity] = useState('');
+  const [recommendcities, setRecommendCity] = useState('');
+  const [formCityChange, setFormCityChange] = useState('');
   const [suggestion, setSuggestion] = useState([]);
   const [Address, setAddress] = useState('');
   const [Code, setCode] = useState('');
@@ -110,15 +110,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
     let matches = [];
     if (searchMake.length > 0) {
       matches = formMakeChange.filter((part) => {
-        const regex = new RegExp(`${searchMake}`, "gi");
+        const regex = new RegExp(`${searchMake}`, 'gi');
         return part.match(regex);
       });
     }
     setRecommendmake(matches);
     setSearchMake(searchMake);
   };
-
-
 
   const settings = {
     autoplay: true,
@@ -310,7 +308,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
   return (
     <div>
       <Head>
-        <title>Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com</title>
+        <title>
+          Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com
+        </title>
         <meta
           property="og:title"
           content="Quick Auto Spare Part Order Online in UAE | Emirates-car.com"
@@ -384,18 +384,48 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
           ABOUT Emirates-car
         </p>
-        <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
-          We are dealing with auto spare parts for car, heavy truck, van, buses,
-          coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles, Used
-          spare parts, After market parts, Genuine spare parts and New parts etc
-          in UAE. Contact us for any inquiry.
+        <p className="text-lg py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
+          Emirates-car.com is Online platform to Buy/Order Auto spare parts
+          Online. We have spare parts for american brand car such as Ford, GMC,
+          Cadillac, Chevrolet, Dodge, Chysler and{' '}
+          <a className="text-blue-500 hover:text-blue-800 list-none underline">
+            <Link href="/country-vehicles-spare-parts/american-auto-spare-parts">
+              Other American Brands
+            </Link>
+          </a>
+          . Japanese brand cars Such as Toyota, Mitsubishi, Honda, Infinity,
+          Daihatsu, Nissan and{' '}
+          <a className="text-blue-500 hover:text-blue-800 list-none underline">
+            <Link href="/country-vehicles-spare-parts/japanese-auto-spare-parts">
+              Other Japanese car brands.
+            </Link>
+          </a>
+          We have spare parts for Korean car brands such as Hyundai, Kia and{' '}
+          <a className="text-blue-500 hover:text-blue-800 list-none underline">
+            <Link href="/country-vehicles-spare-parts/korean-auto-spare-parts">
+              Other Korean Car brands
+            </Link>
+          </a>
+          . We have spare parts for german brand car such as Mercedes-Benz, BMW,
+          Volkswagen, Land Rover, Porsche, Jaguar, Mini Cooper, and{' '}
+          <a className="text-blue-500 hover:text-blue-800 list-none underline">
+            <Link href="/country-vehicles-spare-parts/german-auto-spare-parts">
+              Other German Car brands.
+            </Link>{' '}
+          </a>
+          We became a prominent Auto spare parts Dealers Online.
         </p>
         <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
-          Explore from our immensively large-scale auto spare parts website,
-          your New / Used / Genuine / Aftermarket auto spare parts for your
-          Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city in UAE
-          especially in the main cities like Dubai, Sharjah, Abu dhabi, Ajman
-          and other city.
+          We deal in Used / New / Aftermarket / Genuine / OEM parts online. We
+          deliver to all over UAE like Dubai, Abu Dhabi, Ajman, Ras Al Khaimah,
+          Sharjah and{' '}
+          <a className="text-blue-500 hover:text-blue-800 list-none underline">
+            <Link href="/search-by-cities-in-uae">Other Cities in UAE</Link>{' '}
+          </a>
+          and also to other countries on demand. We offer Cash On delivery(COD)
+          in UAE. If you are looking for car spare parts, you can buy/Order to
+          us Online by submitting Inquiries on our website and Our team will get
+          back to you with best price quote through whatsapp.
         </p>
         <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
           You can search Your spare parts by:
@@ -1140,38 +1170,38 @@ export default function Home({ forms, partsposts, posts, cities }) {
       </p>
       {/*Search by make input box */}
       <div className="flex justify-center">
-              <div className="pt-3">
-                <input
-                  className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
-                  id="partname"
-                  type="search"
-                  placeholder="Eg. Toyota, Ford, BMW, Audi..."
-                  onChange={(e) => onMakeFormChange(e.target.value)}
-                  value={searchMake}
-                  autoComplete="off"
-                  required
-                />
-                <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
-                  {recommendmake &&
-                    recommendmake.map((recommendmake, i) => (
-                      <div
-                        key={i}
-                        className="cursor-pointer  text-base p-1 bg-white"
-                        onClick={() => onMakeSuggestionHandler(recommendmake)}
-                        width="100%"
-                      >
-                        <a
-                          href={`https://emirates-car.com/search-by-make/${recommendmake}`}
-                          rel="noopener noreferrer"
-                          target="_newtab"
-                        >
-                          {recommendmake}
-                        </a>
-                      </div>
-                    ))}
+        <div className="pt-3">
+          <input
+            className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
+            id="partname"
+            type="search"
+            placeholder="Eg. Toyota, Ford, BMW, Audi..."
+            onChange={(e) => onMakeFormChange(e.target.value)}
+            value={searchMake}
+            autoComplete="off"
+            required
+          />
+          <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
+            {recommendmake &&
+              recommendmake.map((recommendmake, i) => (
+                <div
+                  key={i}
+                  className="cursor-pointer  text-base p-1 bg-white"
+                  onClick={() => onMakeSuggestionHandler(recommendmake)}
+                  width="100%"
+                >
+                  <a
+                    href={`https://emirates-car.com/search-by-make/${recommendmake}`}
+                    rel="noopener noreferrer"
+                    target="_newtab"
+                  >
+                    {recommendmake}
+                  </a>
                 </div>
-              </div>
-            </div>
+              ))}
+          </div>
+        </div>
+      </div>
       <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
         {posts.map((post) => (
           <div key={post.id}>
@@ -1204,38 +1234,39 @@ export default function Home({ forms, partsposts, posts, cities }) {
         SEARCH BY LOCATION IN UAE
       </p>
       <div className="flex justify-center">
-                <div className="pt-3">
-                  <input
-                    className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
-                    id="partname"
-                    type="search"
-                    placeholder="Eg. Abu dhabi, Dubai, Ajman..."
-                    onChange={(e) => onCityFormChange(e.target.value)}
-                    value={searchCity}
-                    autoComplete="off"
-                    required
-                  />
-                  <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
-                    {recommendcities &&
-                      recommendcities.map((recommendcities, i) => (
-                        <div
-                          key={i}
-                          className="cursor-pointer  text-base p-1 bg-white"
-                          onClick={() => onCitySuggestionHandler(recommendcities)}
-                          width="100%"
-                        >
-                          <a
-                            href={`https://emirates-car.com/search-by-part-name/${recommendcities}`}
-                            rel="noopener noreferrer"
-                            target="_newtab"
-                          >
-                            {recommendcities}
-                          </a>
-                        </div>
-                      ))}
-                  </div>
+        <div className="pt-3">
+          <input
+            className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
+            id="partname"
+            type="search"
+            placeholder="Eg. Abu dhabi, Dubai, Ajman..."
+            onChange={(e) => onCityFormChange(e.target.value)}
+            value={searchCity}
+            autoComplete="off"
+            required
+          />
+          <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
+            {recommendcities &&
+              recommendcities.map((recommendcities, i) => (
+                <div
+                  key={i}
+                  className="cursor-pointer  text-base p-1 bg-white"
+                  onClick={() => onCitySuggestionHandler(recommendcities)}
+                  width="100%"
+                >
+                  <a
+                    href={`https://emirates-car.com/search-by-part-name/${recommendcities}`}
+                    rel="noopener noreferrer"
+                    title={"spare parts online in "+recommendcities}
+                    target="_newtab"
+                  >
+                    {recommendcities}
+                  </a>
                 </div>
-              </div>
+              ))}
+          </div>
+        </div>
+      </div>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
         {cities.map((post) => (
           <div key={post.id}>

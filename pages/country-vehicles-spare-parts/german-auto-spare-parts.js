@@ -270,13 +270,13 @@ export default function German({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="/search-by-make/Hyundai">
+                <Link href="/search-by-make/Mercedes-Benz">
                   <a>
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
-                          alt="hyundai spare parts in uae"
-                          src="/img/car-logos/hyundai.png"
+                          alt="Mercedes Benz spare parts in uae"
+                          src="/img/car-logos/mercedesbenz.png"
                           className="object-scale-down shadow-xl"
                           height={30}
                           width={30}
@@ -284,20 +284,20 @@ export default function German({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Hyundai
+                      Mercedes Benz
                       </p>
                     </main>
                   </a>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Kia">
+                <Link href="/search-by-make/BMW">
                   <a>
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
-                          alt="kia spare parts in uae"
-                          src="/img/car-logos/kia.png"
+                          alt="BMW spare parts in uae"
+                          src="/img/car-logos/BMW.png"
                           className="object-scale-down shadow-xl"
                           height={30}
                           width={30}
@@ -305,20 +305,20 @@ export default function German({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Kia
+                      BMW
                       </p>
                     </main>
                   </a>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Daewoo">
+                <Link href="/search-by-make/Volkswagen">
                   <a>
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
-                          alt="daewoo spare parts in uae"
-                          src="/img/car-logos/daewoo.png"
+                          alt="Volkswagen spare parts in uae"
+                          src="/img/car-logos/volkswagon.png"
                           className="object-scale-down shadow-xl"
                           height={30}
                           width={30}
@@ -326,7 +326,72 @@ export default function German({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Daewoo
+                      Volkswagen
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
+              <div>
+                <Link href="/search-by-make/Jaguar">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="Jaguar spare parts in uae"
+                          src="/img/car-logos/jaguar.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Jaguar
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Land%20Rover">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="land rover spare parts in uae"
+                          src="/img/car-logos/land_rover.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Land Rover
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Porsche">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="Porsche spare parts in uae"
+                          src="/img/car-logos/porsche.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Porsche
                       </p>
                     </main>
                   </a>
