@@ -1471,6 +1471,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 border="0"
               />
             </a>
+            <a href="https://list-directories.com/Niche-Directory/Outdoor-Recreation/" target="_blank" rel="noreferrer"> Directory List</a>
             <a href="https://411freedirectory.com/">411 Free Directory.com</a>
             <a href="http://www.lemon-directory.com/">Lemon Directory .com</a>
             <a href="http://www.alive-directory.com/">Alive Directory</a>
