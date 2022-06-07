@@ -1485,6 +1485,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <a href="http://www.yellowlinker.com/">
               YellowLinker - Free Link Directory
             </a>
+            <a href="http://www.qualityinternetdirectory.com/science_and_technology/information_technology/">qualityinternetdirectory</a>
             <a href="http://www.brownlinker.com/">
               BrownLinker - Seo Directory
             </a>
