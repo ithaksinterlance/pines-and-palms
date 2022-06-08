@@ -46,7 +46,7 @@ export default function Post({ data }) {
                 <Image
                   alt={data.ALT}
                   src={"/img/blog/" + data.IMG}
-                  width={1000}
+                  width={940}
                   height={350}
                 />
               </div>

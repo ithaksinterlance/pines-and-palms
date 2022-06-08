@@ -48,7 +48,7 @@ export default function Blog({ posts }) {
                               <Image
                                 alt={post.ALT}
                                 src={"/img/blog/" + post.IMG}
-                                width={1000}
+                                width={940}
                                 height={350}
                               />
                             </div>{" "}
