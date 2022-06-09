@@ -1494,7 +1494,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <a href="http://www.ranaf.com/">Ranaf Directory</a>
             <a href="http://www.addlinkzfree.com">Add Linkz Free</a>
             <a href="https://abstractdirectory.net/">Abstract Directory .net</a>
-            <a href="http://www.abstractdirectory.com">Abstract Directory</a>
+            <a href="http://www.abstractdirectory.com">Abstract Directory</a><a href="http://www.directorymaster.com.ar/">Directory Master</a>
             <a
               href="http://www.transfercases.com/
 "
