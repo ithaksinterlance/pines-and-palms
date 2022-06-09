@@ -1500,7 +1500,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
 "
             >
               <b>Transfer Cases for Four Wheel Drive</b>
-            </a>{' '}
+            </a>{' '}<a href="http://www.allsoldier.com/">Soldier Link Directory</a>
             • Transfercases for Chevy, Dodge, Ford, Hummer and more—Transfer
             Case Express.
             <a href="https://www.fruity-directory.com/">Fruity Directory.com</a>
