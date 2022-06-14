@@ -299,9 +299,9 @@ export default function Make({ car, cities, posts, pos }) {
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
           <main className="mx-10 xs:mx-4 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
             <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
-              <i className="fas fa-car-garage py-5"></i> GET CAR PARTS FOR YOUR
-              MAKES
+              <i className="fas fa-car-garage py-5"></i> AUTO SPARE PARTS ONLINE IN UAE
             </h1>
+
             <div className="flex justify-center">
               <div className="pt-3">
                 <input
@@ -353,7 +353,7 @@ export default function Make({ car, cities, posts, pos }) {
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
                           <div className="flex justify-center">
                             <Image
-                              alt={post.make}
+                              alt={post.make + " parts uae"}
                               src={"/img/car-logos/" + post.img}
                               className="object-scale-down shadow-xl"
                               height={30}
@@ -665,9 +665,8 @@ export default function Make({ car, cities, posts, pos }) {
                     as={"/search-by-part-name/" + p.parts}
                     key={p.id}
                   >
-                    <a title={"Auto spare parts in " + p.parts}>
+                    <a title={p.parts + " uae" }>
                       {p.parts}
-                      {" in uae, "}
                     </a>
                   </Link>
                 ))}
@@ -690,13 +689,7 @@ export default function Make({ car, cities, posts, pos }) {
                 energy.
               </p>
               <p className="text-base font-medium text-gray-500 p-5">
-                We provide auto spare parts for any vehicles including :
-                <ul className="list-disc">
-                  <li>New auto spare parts</li>
-                  <li>Used auto spare parts</li>
-                  <li>Genuine auto spare parts</li>
-                  <li>Aftermarket auto spare parts</li>
-                </ul>
+                We deal in used, new, genuine , aftermarket auto spare parts in area such as abu dhabi, ras al khaimah, ras al khor, umm al nar, dubai, sharjah, palm jumeirah in UAE. We are online and accept inquiries through our website and we will get back to you through whatsapp number.
               </p>
             </div>
           </main>
@@ -713,7 +706,7 @@ export default function Make({ car, cities, posts, pos }) {
                   href="/search-by-cities-in-uae/[city]"
                   as={"/search-by-cities-in-uae/" + post.city}
                 >
-                  <a title={"auto spare parts in " + post.city}>
+                  <a title={"car spare parts " + post.city+ " online"}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 h-full text-gray-500">
                       <i className="fas fa-map-marker-alt"></i> {post.city}
                     </p>
