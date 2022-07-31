@@ -12,6 +12,19 @@
     "links": "https://emirates-car.com/blog"
   },
   {
+    "links": "https://emirates-car.com/blog/New%20launch%20Pininfarina-Namx%20Hydrogen%20powered%20SUV"
+  },
+  {
+    "links": "https://emirates-car.com/blog/How%20to%20Buy%20Auto%20Parts%20Online"
+  },
+  {
+    "links":"https://emirates-car.com/blog/Ferrari%20Portofino%20M",
+  },
+  {
+    "links": "https://emirates-car.com/blog/Ferrari%20F8%20Spider%202021"
+  },
+
+  {
     "links": "https://emirates-car.com/search-by-cities-in-uae"
   },
   {
@@ -8847,6 +8860,7 @@
   {
     "links": "https://emirates-car.com/search-by-make/Foose/Hemisfear"
   },
+
   {
     "links": "https://emirates-car.com/search-by-make/Aptera"
   },
@@ -9094,19 +9108,13 @@
     "links": "https://emirates-car.com/search-by-make/Ram/1500%20TRX%204WD"
   },
   {
-    "links": "https://emirates-car.com/search-by-make/FIAT"
-  },
-  {
-    "links": "https://emirates-car.com/search-by-make/FIAT/500"
-  },
-  {
     "links": "https://emirates-car.com/search-by-make/Fiat"
   },
   {
-    "links": "https://emirates-car.com/search-by-make/Fiat/Nuova%20500"
+    "links": "https://emirates-car.com/search-by-make/Fiat/500"
   },
   {
-    "links": "https://emirates-car.com/search-by-make/Fiat/500"
+    "links": "https://emirates-car.com/search-by-make/Fiat/Nuova%20500"
   },
   {
     "links": "https://emirates-car.com/search-by-make/Fiat/500%20Abarth"
