@@ -1,7 +1,7 @@
-import "../styles/globals.css";
-import Head from "next/head";
-import "../styles/slick/slick.css";
-import "../styles/slick/slick-theme.css";
+import '../styles/globals.css';
+import Head from 'next/head';
+import '../styles/slick/slick.css';
+import '../styles/slick/slick-theme.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,8 +12,13 @@ function MyApp({ Component, pageProps }) {
           content="2dbXrKrxCBjzz1bLwaw_6nd4YEhhviwPLiGq6fLXPoU"
         />
         <meta name="yandex-verification" content="1a59e5a3d5ee0eeb" />
-        <meta name="naver-site-verification" content="naver0db31bf474cde5117209785bc5c104ab.html" />
+        <meta
+          name="naver-site-verification"
+          content="naver0db31bf474cde5117209785bc5c104ab.html"
+        />
+        <meta name="theme-color" content="#2563eb" />
         <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="manifest" href="/manifest.json" />
         <link
           rel="stylesheet"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -22,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0-rc/js/adminlte.min.js`,
+            __html: `https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0-rc/js/adminlte.min.js`
           }}
           integrity="sha512-pbrNMLSckfh8yEOr2o1RT+4zMU3Sj7+zP3BOY6nFVI/FLnjTRyubNppLbosEt4nvLCcdsEa8tmKhH3uqOYFXKg=="
           crossOrigin="anonymous"
@@ -45,7 +50,7 @@ function MyApp({ Component, pageProps }) {
               s1.setAttribute('crossorigin','*');
               s0.parentNode.insertBefore(s1,s0);
               })();
-              `,
+              `
           }}
         ></script>
       </Head>

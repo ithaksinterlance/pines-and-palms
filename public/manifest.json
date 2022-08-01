@@ -1,0 +1,31 @@
+{
+  "theme_color" : "#000000",
+  "background_color" : "#2563eb",
+  "display" : "standalone",
+  "start_url" : "./",
+  "name" : "Emirates-car.com | Auto spare parts for any car",
+  "short_name" : "Car Spare Parts",
+  "description" : "We specialize in New/ Used/ Aftermarket/ Genuine Auto spare parts in UAE. We deal in UAE, deliver globally. Our team provides genuine dealings, 24/7 support, Quick swift response, on time delivery, easy payments.",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+  }
