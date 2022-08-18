@@ -594,7 +594,18 @@ export default function CarBatteryDubai({ forms }) {
             100% secure and trusted
           </div>
         </form>
+        <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
+              **Make not found above?{" "}
+              <Link href="/get-in-touch">
+                <a>
+                  <nobr className="text-blue-500 text-sm underline">
+                    Get in touch with us {">>"}**
+                  </nobr>
+                </a>
+              </Link>{" "}
+            </div>
       </div>
+
       <div className="uppercase bg-blue-300 font-serif p-5 xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-screen s:text-2xl 2xs:text-2xl my-10">
         <Social />
         <div>

@@ -116,10 +116,10 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="https://twitter.com/uaeautoparts">
+              <Link href="https://twitter.com/emiratescarpart">
                 <a
                   className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                  href="https://twitter.com/uaeautoparts"
+                  href="https://twitter.com/emiratescarpart"
                 >
                   <i className="fab fa-twitter ml-2 text-xl leading-xl text-white opacity-75 "></i>
 

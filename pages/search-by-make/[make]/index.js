@@ -258,6 +258,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
       <Head>
         <title>{make} -  Car Auto Spare Parts Order Online in UAE - Best Prices</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={"Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket " + make + " auto spare parts Online in UAE"}/>
         <meta
           property="og:title"
           content={
@@ -268,18 +269,18 @@ export default function Car({ car, cities, make, partspost, posts }) {
           name="keywords"
           content={
             make +
-            " spare parts," +
+            " spare parts dubai" +
             make +
-            " car spare parts," +
+            " car spare parts" +
             make +
-            " parts uae," +
+            " parts uae" +
             make +
             " " +
-            " uae," +
+            " uae" +
             make +
-            " parts," +
+            " parts" +
             make +
-            " spare part prices in uae"
+            " spare part prices in uae, dubai, sharjah, ajman, ras al khaimah, abu dhabi"
           }
         />
         <meta property="og:site_name" content="Emirates-car" />
@@ -379,7 +380,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
+              <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
                 {car.map((post) => (
                   <div key={post.id}>
                     <Link
@@ -389,9 +390,12 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       <a
                         title={post.make + " - " + post.model + " spare parts"}
                       >
-                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100 h-100">
-                          {post.model.replace("%2F", "/")}{" "}
-                        </main>
+                        <main className="border border-blue-800 h-full p-3 ">
+                  <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
+                  {post.model.replace("%2F", "/")}{" "}
+                  </p>
+                </main>
+
                       </a>
                     </Link>
                   </div>
@@ -715,15 +719,14 @@ export default function Car({ car, cities, make, partspost, posts }) {
                     key={p.id}
                   >
                     <a title={"spare parts in " + p.parts}>
-                      {p.parts}
-                      {" in uae, "}
+                      {p.parts + " , "}
                     </a>
                   </Link>
                 ))}
               </h1>
               <p className="text-base font-medium text-gray-500 p-5">
                 We deal in automobile in places such as sharjah, ajman, abu
-                dhabi, umm al nar, umm al quwain, musaffah, al ain etc. UAE
+                dhabi, umm al nar, umm al quwain, musaffah, al ain etc. We deal in Used / New / Genuine / OEM / Aftermarket auto spare parts in area such as abu dhabi, ras al khaimah, ras al khor, umm al nar, dubai, sharjah, ajman, palm jumeirah in UAE. We are online and accept inquiries through our website and we will get back to you through whatsapp and give you our price list in our quotation. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. After you are satisfied with our price we will arrange delivery to your convinient locations mentioned. UAE
                 Automobile industry is slowly shifting towards a service
                 oriented business model based on consumer data and customer
                 experience. Now companies are trying to adapt to the current
@@ -736,7 +739,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 largest producer and diesel. Since the beginning era of electric
                 vehicle have started, many people are opting for electric
                 vehicles in spite of its shortcomings because it is more
-                affordable comapared to vehicle running on diesel or petrol. By
+                affordable compared to vehicle running on diesel or petrol. By
                 this transition there is no difference in usage of irreversible
                 energy.
               </p>

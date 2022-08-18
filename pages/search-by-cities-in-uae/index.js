@@ -1,26 +1,26 @@
-import Nav from "../nav";
-import Link from "next/link";
-import Footer from "../footer";
-import React, { useState, useEffect } from "react";
-import Head from "next/head";
-import Count from "../service-countup";
-import Social from "../Social";
+import Nav from '../nav';
+import Link from 'next/link';
+import Footer from '../footer';
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Count from '../service-countup';
+import Social from '../Social';
 
 export default function City({ cities, data, posts, pos }) {
-  const [Year, setYear] = useState("");
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
+  const [Year, setYear] = useState('');
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
   const [formPartname, setFormPartname] = useState([]);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [suggestion, setSuggestion] = useState([]);
-  const [Address, setAddress] = useState("");
-  const [searchMake, setSearcMake] = useState("");
-  const [recommend, setRecommend] = useState("");
-  const [formMakeChange, setFormMakeChange] = useState("");
-  const [Name, setName] = useState("");
-  const [Code, setCode] = useState("");
+  const [Address, setAddress] = useState('');
+  const [searchMake, setSearchMake] = useState('');
+  const [recommend, setRecommend] = useState('');
+  const [formMakeChange, setFormMakeChange] = useState('');
+  const [Name, setName] = useState('');
+  const [Code, setCode] = useState('');
 
   useEffect(() => {
     const loadPart = async () => {
@@ -34,16 +34,16 @@ export default function City({ cities, data, posts, pos }) {
     loadPart();
   }, []);
 
-  const onSuggestionHandler = (text) => {
+  const onSuggestionHandler = text => {
     setText(text);
     setSuggestion([]);
   };
 
-  const onPartFormChange = (text) => {
+  const onPartFormChange = text => {
     let matches = [];
     if (text.length > 0) {
-      matches = formPartname.filter((part) => {
-        const regex = new RegExp(`${text}`, "gi");
+      matches = formPartname.filter(part => {
+        const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
     }
@@ -63,117 +63,117 @@ export default function City({ cities, data, posts, pos }) {
     loadPart();
   }, []);
 
-  const onMakeSuggestionHandler = (searchMake) => {
+  const onMakeSuggestionHandler = searchMake => {
     setSearchMake(searchMake);
     setRecommend([]);
   };
 
-  const onMakeFormChange = (searchMake) => {
+  const onMakeFormChange = searchMake => {
     let matches = [];
     if (searchMake.length > 0) {
-      matches = formMakeChange.filter((part) => {
-        const regex = new RegExp(`${searchMake}`, "gi");
+      matches = formMakeChange.filter(part => {
+        const regex = new RegExp(`${searchMake}`, 'gi');
         return part.match(regex);
       });
     }
     setRecommend(matches);
-    setSearcMake(searchMake);
+    setSearchMake(searchMake);
   };
 
   const ma = [
-    "Ford",
-    "Chrysler",
-    "Citroen",
-    "Hillman",
-    "Chevrolet",
-    "Cadillac",
-    "BMW",
-    "Austin",
-    "Fairthorpe",
-    "Fillmore",
-    "Pontiac",
-    "Studebaker",
-    "Buick",
-    "Rambler",
-    "Plymouth",
-    "Volkswagen",
-    "Jensen",
-    "Oldsmobile",
-    "Mercury",
-    "Dodge",
-    "Shelby",
-    "Porsche",
-    "Toyota",
-    "Mercedes-Benz",
-    "MG",
-    "Nissan",
-    "Honda",
-    "Mazda",
-    "Renault",
-    "Audi",
-    "Lincoln",
-    "Lotus",
-    "Maserati",
-    "Mitsubishi",
-    "Saab",
-    "Subaru",
-    "Suzuki",
-    "Lamborghini",
-    "Merkur",
-    "Land Rover",
-    "Acura",
-    "Lexus",
-    "Eagle",
-    "Alfa Romeo",
-    "Daihatsu",
-    "Geo",
-    "GMC",
-    "Hyundai",
-    "Infiniti",
-    "Isuzu",
-    "Jaguar",
-    "Jeep",
-    "Saturn",
-    "Volvo",
-    "Kia",
-    "Holden",
-    "Corbin",
-    "Daewoo",
-    "MINI",
-    "Maybach",
-    "Scion",
-    "Spyker",
-    "Aston Martin",
-    "Bentley",
-    "Panoz",
-    "Rolls-Royce",
-    "Spyker Cars",
-    "Ferrari",
-    "Hummer",
-    "Morgan",
-    "Peugeot",
-    "Foose",
-    "Aptera",
-    "Smart",
-    "Bugatti",
-    "Tesla",
-    "Ram",
-    "Fiat",
-    "McLaren",
-    "BYD",
-    "McLaren Automotive",
-    "Mobility Ventures LLC",
-    "Pagani",
-    "Roush Performance",
-    "smart",
-    "SRT",
-    "Genesis",
-    "Karma",
-    "Koenigsegg",
-    "RUF Automobile",
-    "STI",
-    "Polestar",
-    "Kandi",
+    'Ford',
+    'Chrysler',
+    'Citroen',
+    'Hillman',
+    'Chevrolet',
+    'Cadillac',
+    'BMW',
+    'Austin',
+    'Fairthorpe',
+    'Fillmore',
+    'Pontiac',
+    'Studebaker',
+    'Buick',
+    'Rambler',
+    'Plymouth',
+    'Volkswagen',
+    'Jensen',
+    'Oldsmobile',
+    'Mercury',
+    'Dodge',
+    'Shelby',
+    'Porsche',
+    'Toyota',
+    'Mercedes-Benz',
+    'MG',
+    'Nissan',
+    'Honda',
+    'Mazda',
+    'Renault',
+    'Audi',
+    'Lincoln',
+    'Lotus',
+    'Maserati',
+    'Mitsubishi',
+    'Saab',
+    'Subaru',
+    'Suzuki',
+    'Lamborghini',
+    'Merkur',
+    'Land Rover',
+    'Acura',
+    'Lexus',
+    'Eagle',
+    'Alfa Romeo',
+    'Daihatsu',
+    'Geo',
+    'GMC',
+    'Hyundai',
+    'Infiniti',
+    'Isuzu',
+    'Jaguar',
+    'Jeep',
+    'Saturn',
+    'Volvo',
+    'Kia',
+    'Holden',
+    'Corbin',
+    'Daewoo',
+    'MINI',
+    'Maybach',
+    'Scion',
+    'Spyker',
+    'Aston Martin',
+    'Bentley',
+    'Panoz',
+    'Rolls-Royce',
+    'Spyker Cars',
+    'Ferrari',
+    'Hummer',
+    'Morgan',
+    'Peugeot',
+    'Foose',
+    'Aptera',
+    'Smart',
+    'Bugatti',
+    'Tesla',
+    'Ram',
+    'Fiat',
+    'McLaren',
+    'BYD',
+    'McLaren Automotive',
+    'Mobility Ventures LLC',
+    'Pagani',
+    'Roush Performance',
+    'smart',
+    'SRT',
+    'Genesis',
+    'Karma',
+    'Koenigsegg',
+    'RUF Automobile',
+    'STI',
+    'Polestar',
+    'Kandi'
   ];
   const make = ma.sort();
   function handleYearChange(event) {
@@ -205,63 +205,74 @@ export default function City({ cities, data, posts, pos }) {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     const response = fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           Address +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
+          ' ' +
           Year +
-          "\n" +
-          "Part List: " +
+          '\n' +
+          'Part List: ' +
           text,
-        email: Email,
+        email: Email
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
-    alert("Form submitted. We will contact you shortly ;)");
-    setName("");
-    setCode("");
-    setYear("");
-    setMake("");
-    setModel("");
-    setAddress("");
-    setEmail("");
-    setText("");
-    setWhatsappno("");
+    alert('Form submitted. We will contact you shortly ;)');
+    setName('');
+    setCode('');
+    setYear('');
+    setMake('');
+    setModel('');
+    setAddress('');
+    setEmail('');
+    setText('');
+    setWhatsappno('');
   }
   return (
     <div>
       <Head>
-        <title>Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com</title>
+        <title>
+          Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com
+        </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE'
+          }
+        />
         <meta
           property="og:title"
           content="Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com"
         />
-        <meta name="keywords" content="car parts in uae, spare parts in dubai, spare parts sharjah"/>
+        <meta
+          name="keywords"
+          content="car parts in uae, spare parts in dubai, spare parts sharjah, spare parts in ajman, spare parts in abu dhabi, spare parts in qusais"
+        />
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
@@ -312,7 +323,7 @@ export default function City({ cities, data, posts, pos }) {
                     id="partname"
                     type="search"
                     placeholder="Eg. Abu dhabi, Dubai, Ajman..."
-                    onChange={(e) => onMakeFormChange(e.target.value)}
+                    onChange={e => onMakeFormChange(e.target.value)}
                     value={searchMake}
                     autoComplete="off"
                     required
@@ -327,7 +338,7 @@ export default function City({ cities, data, posts, pos }) {
                           width="100%"
                         >
                           <a
-                            href={`https://emirates-car.com/search-by-part-name/${recommend}`}
+                            href={`https://emirates-car.com/search-by-cities-in-uae/${recommend}`}
                             rel="noopener noreferrer"
                             target="_newtab"
                           >
@@ -343,19 +354,21 @@ export default function City({ cities, data, posts, pos }) {
                   <i className="fal fa-car-garage"></i> Current
                   path:&nbsp;&nbsp;
                 </nobr>
-                index{">>>"}
+                index{'>>>'}
               </p>
 
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {cities.map((post) => (
+                {cities.map(post => (
                   <div key={post.id}>
                     <Link
                       href="/search-by-cities-in-uae/[city]"
-                      as={"/search-by-cities-in-uae/" + post.city}
+                      as={'/search-by-cities-in-uae/' + post.city}
                     >
-                      <a title={"car spare parts in " + post.city}>
-                        <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
-                          {post.city}
+                      <a title={'car spare parts in ' + post.city}>
+                        <main className="border border-blue-800 h-full p-3 ">
+                          <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
+                            {post.city}
+                          </p>
                         </main>
                       </a>
                     </Link>
@@ -431,9 +444,9 @@ export default function City({ cities, data, posts, pos }) {
                           <option value="" disabled>
                             Select your Make
                           </option>
-                          {make.map((m) => (
+                          {make.map(m => (
                             <option key={m}>{m}</option>
-                          ))}{" "}
+                          ))}{' '}
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                           <svg
@@ -466,12 +479,12 @@ export default function City({ cities, data, posts, pos }) {
                             Select your Model
                           </option>
                           {posts
-                            .filter((s) => s.make === Make)
-                            .map((s) => (
+                            .filter(s => s.make === Make)
+                            .map(s => (
                               <option key={s.id} value={s.model}>
-                                {s.model}{" "}
+                                {s.model}{' '}
                               </option>
-                            ))}{" "}
+                            ))}{' '}
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                           <svg
@@ -575,11 +588,11 @@ export default function City({ cities, data, posts, pos }) {
                         placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
                         rows={5}
                         name="entry.1660104041"
-                        onChange={(e) => onPartFormChange(e.target.value)}
+                        onChange={e => onPartFormChange(e.target.value)}
                         value={text}
                         autoComplete="off"
                         required
-                      />{" "}
+                      />{' '}
                       {suggestion &&
                         suggestion.map((suggestion, i) => (
                           <div
@@ -587,9 +600,9 @@ export default function City({ cities, data, posts, pos }) {
                             className="cursor-pointer border-gray-400 p-4"
                             onClick={() => onSuggestionHandler(suggestion)}
                           >
-                            {suggestion}{" "}
+                            {suggestion}{' '}
                           </div>
-                        ))}{" "}
+                        ))}{' '}
                     </div>
                   </div>
                   <div className="grid grid-cols-1 pt-3">
@@ -601,8 +614,26 @@ export default function City({ cities, data, posts, pos }) {
                     </button>
                   </div>
                   <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
-              </div>
+                    <Link href="./privacy-policy">
+                      <a
+                        href="./privacy-policy"
+                        className="underline"
+                        target="_newtab"
+                      >
+                        Privacy policy
+                      </a>
+                    </Link>
+                    &nbsp;
+                    <Link href="./terms-and-condition">
+                      <a
+                        href="./privacy-policy"
+                        className="underline"
+                        target="_newtab"
+                      >
+                        Terms and conditions
+                      </a>
+                    </Link>
+                  </div>
 
                   <div className="flex float-right text-xs text-gray-400 ">
                     100% secure and trusted
@@ -616,7 +647,7 @@ export default function City({ cities, data, posts, pos }) {
                         <a className="underline hover:text-blue-500 xs:text-sm">
                           SEARCH BY PART NAME
                         </a>
-                      </Link>{" "}
+                      </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
@@ -624,7 +655,7 @@ export default function City({ cities, data, posts, pos }) {
                         <a className="underline hover:text-blue-500  xs:text-sm">
                           SEARCH BY CITY
                         </a>
-                      </Link>{" "}
+                      </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
@@ -632,7 +663,7 @@ export default function City({ cities, data, posts, pos }) {
                         <a className="underline hover:text-blue-500  xs:text-sm">
                           SEARCH BY MAKE
                         </a>
-                      </Link>{" "}
+                      </Link>{' '}
                       &nbsp;
                     </span>
                   </div>
@@ -646,12 +677,19 @@ export default function City({ cities, data, posts, pos }) {
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
-                  abu dhabi, ajman, al quoz, jumeirah, deira etc. We also deal
-                  in brands such as{" "}
-                  {data.map((p) => (
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
+                  our catalogue at{' '}
+                  <a
+                    href="https://emirates-car.com/search-by-part-name"
+                    className="text-blue-400 underline"
+                  >
+                    https://emirates-car.com/search-by-part-name
+                  </a>
+                  .We also deal in brands such as{' '}
+                  {data.map(p => (
                     <a key={p.id}>
                       {p.make}
-                      {" in UAE, "}
+                      {' in UAE, '}
                     </a>
                   ))}
                 </h1>
@@ -690,15 +728,15 @@ export default function City({ cities, data, posts, pos }) {
             SEARCH PART BY MAKE
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 pb-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  text-justify font-sans">
-            {data.map((post) => (
+            {data.map(post => (
               <div key={post.id}>
                 <Link
                   href="/search-by-make/[make]"
-                  as={"/search-by-make/" + post.make}
+                  as={'/search-by-make/' + post.make}
                 >
-                  <a title={post.make + " spare parts in UAE"}>
+                  <a title={post.make + ' spare parts in UAE'}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
-                      <i className="fa fa-mars-stroke" aria-hidden="true"></i>{" "}
+                      <i className="fa fa-mars-stroke" aria-hidden="true"></i>{' '}
                       {post.make}
                     </p>
                   </a>
@@ -717,7 +755,7 @@ export async function getStaticProps() {
   const res = await fetch(`https://rozy.vercel.app/api/grooves`);
   const data = await res.json();
   let uniqueObjectArray = [
-    ...new Map(data.map((item) => [item["make"], item])).values(),
+    ...new Map(data.map(item => [item['make'], item])).values()
   ];
 
   const response = await fetch(`https://rozy.vercel.app/api/palms`);
@@ -731,11 +769,11 @@ export async function getStaticProps() {
 
   if (!cities) {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 
   return {
-    props: { cities, data: uniqueObjectArray, posts, pos },
+    props: { cities, data: uniqueObjectArray, posts, pos }
   };
 }

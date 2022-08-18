@@ -118,6 +118,7 @@ export default function Parts({ data, cities, posts }) {
       <Head>
         <title>{data.parts} Car Auto Spare Parts Order Online in UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={"Buy Online and Get delivered "+ data.parts +" Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE at best price."}/>
         <meta
           property="og:title"
           content={data.parts + " Car Auto Spare Parts  Order Online in UAE | Emirates-car.com"}
@@ -588,7 +589,7 @@ export default function Parts({ data, cities, posts }) {
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
-                  abu dhabi, ajman, al quoz, jumeirah, deira etc. We provide
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. We provide
                   auto spare parts for any vehicles including :
                   <ul className="list-disc">
                     <li>{data.parts} New auto spare parts in uae</li>

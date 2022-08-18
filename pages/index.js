@@ -4,7 +4,6 @@ import Hero_img from '../public/img/car-spare-parts.png';
 import Hero from './home_hero';
 import Slider from 'react-slick';
 import Featured from './featured';
-import Footer from './footer';
 import Link from 'next/link';
 import avatar1 from '../public/img/avatar1.jpeg';
 import avatar2 from '../public/img/avatar2.jpg';
@@ -315,9 +314,10 @@ export default function Home({ forms, partsposts, posts, cities }) {
           property="og:title"
           content="Quick Auto Spare Part Order Online in UAE | Emirates-car.com"
         />
+        <meta name="description" content={"Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE"}/>
         <meta
           name="keywords"
-          content="car parts, spare parts, auto spare parts online, best auto parts, auto spare parts in dubai, auto spare parts uae"
+          content="car parts, spare parts, auto spare parts online, best auto parts, auto spare parts in dubai, auto spare parts uae, dubai, sharjah, ajman, ras al khaimah, abu dhabi, car battery replacement"
         />
         <meta property="og:site_name" content="Emirates-car" />
         <meta property="og:url" content="https://www.emirates-car.com" />
@@ -1221,7 +1221,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     />
                     <br />
                   </div>
-                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  <p className="text-lg text-center text-gray-500 font-medium hover:text-gray-800">
                     {post.make.toUpperCase()}{' '}
                   </p>
                 </main>
@@ -1275,8 +1275,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
               as={'/search-by-cities-in-uae/' + post.city}
             >
               <a>
-                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
+                  <p className="text-lg text-center text-blue-600 font-medium hover:text-gray-800">
                     {post.city.toUpperCase()}{' '}
                   </p>
                 </main>
@@ -1330,8 +1330,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
               as={'/search-by-part-name/' + post.parts}
             >
               <a>
-                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
+                  <p className="text-lg text-center text-blue-500 font-medium hover:text-gray-800">
                     {post.parts.toUpperCase()}{' '}
                   </p>
                 </main>
@@ -1467,7 +1467,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             >
               <img
                 src="https://www.ontoplist.com/images/ontoplist31.png?id=627cdc5911365"
-                alt="Auto Services - OnToplist.com"
+                alt="Auto Services - OnToplist.com" width="50" height="50"
                 border="0"
               />
             </a>

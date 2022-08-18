@@ -13,6 +13,11 @@ class MyDocument extends Document {
         <Head>
           <script
             async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9568609421954654"
+            crossOrigin="anonymous"
+          ></script>
+          <script
+            async
             src={`https://www.googletagmanager.com/gtag/js?id=G-3E8C09YD12`}
           />
           <script
@@ -25,7 +30,7 @@ class MyDocument extends Document {
                 gtag('config', 'G-3E8C09YD12', {
                   page_path: window.location.pathname,
                 });
-              `,
+              `
             }}
           />
           <script
@@ -33,7 +38,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `
               (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "c2136u1t6f");
-              `,
+              `
             }}
           />
         </Head>

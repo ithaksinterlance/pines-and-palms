@@ -28,4 +28,13 @@ module.exports = {
     }
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/search-by-cities-in-uae/Dibba',
+        destination: 'https://emirates-car.com/search-by-cities-in-uae/Dibba Al Fujairah (Fujairah)',
+        permanent: true,
+      },
+    ]
+  }
 };

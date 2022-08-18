@@ -224,8 +224,13 @@ export default function British({ partsposts, posts }) {
   return (
     <div>
       <Head>
-        <title>Online British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket</title>
+        <title>Online Britain Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered Britain Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in uae'}
+        />
         <meta
           property="og:title"
           content="Online Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
@@ -233,7 +238,7 @@ export default function British({ partsposts, posts }) {
                 <meta name="keywords" content="British spare parts uae, British auto parts, British car parts"/>
 
         <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/british-auto-spare-parts" />
+        <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/British-auto-spare-parts" />
         <meta
           property="og:description"
           content="Explore from our immensively large-scale auto spare part website, your New / Used / Genuine / Aftermarket British auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
@@ -243,7 +248,7 @@ export default function British({ partsposts, posts }) {
           property="og:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
-        <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/british-auto-spare-parts" />
+        <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/British-auto-spare-parts" />
         <meta
           property="twitter:title"
           content="Online British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
@@ -268,7 +273,7 @@ export default function British({ partsposts, posts }) {
                 height={50}
                 width={50}
               />
-              BRITISH VEHICLE AUTO SPARE PARTS
+              British VEHICLE AUTO SPARE PARTS
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
@@ -460,9 +465,9 @@ export default function British({ partsposts, posts }) {
               Dhafra,Al Fujayrah,Al Hamriyah,Al Jazeera Port,Al Jeer Port,Al
               Mafraq,Al Quoz,Al Sufouh,Ar Ruways,Arzanah Island,Das
               Island,Deira,Dibba,Dubai,Dubai World Central Apt,Esnnad,Sea Port
-              (Fateh Terminal),Free Port,Habshan,Hail,Hamriya Free Zone Port,Al
-              Jarf (Hassyan),Hatta,Sea Port (Hulaylah Terminal),Sea Port
-              (Indooroodilly),Jebel Ali,Jebel Ali Free Zone,Jebel
+              ,Free Port,Habshan,Hail,Hamriya Free Zone Port,Al
+              Jarf Hassyan,Hatta,Sea Port Hulaylah Terminal,Sea Port
+              Indooroodilly,Jebel Ali,Jebel Ali Free Zone,Jebel
               Dhanna,Jumayrah,Kalba,Khalidia,Khor al Fakkan,Masfut,Khalid
               Port,Khalifa City - Abu Dhabi,Mina Rashid Port,Mina Saqr,Mina
               Zayed - Abu Dhabi,Minhad,Mirfa,Mubarek Terminal,Mubarras
@@ -470,7 +475,7 @@ export default function British({ partsposts, posts }) {
               Port,Rak Maritime City,Ras al Khaimah,Ras Al Khor,Al Ras,Reem
               Island,Ruwais = Ar Ruways,Ruwais Port,Sadiyat
               Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
-              Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE.
+              Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. Submit your inquiry to us, our dealer will get back to you based on stock availability.
             </h1>
             <div className="mx-auto">
         <Count />

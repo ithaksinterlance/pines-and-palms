@@ -225,6 +225,11 @@ export default function German({ partsposts, posts }) {
     <div>
       <Head>
         <title>German Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered German Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in uae'}
+        />
         <meta name="keywords" content="german spare parts uae, german auto parts, german car parts"/>
         <meta
           property="og:title"
@@ -427,7 +432,7 @@ export default function German({ partsposts, posts }) {
               Port, Rak Maritime City, Ras al Khaimah, Ras Al Khor,Al Ras,Reem
               Island,Ruwais = Ar Ruways,Ruwais Port, Sadiyat
               Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
-              Nar,Umm al Quwain, Al Qurayyah, Yas Island, Zirku Island in UAE.
+              Nar,Umm al Quwain, Al Qurayyah, Yas Island, Zirku Island in UAE. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. Submit your inquiry to us, our dealer will get back to you based on stock availability.
             </h1>
             <div className="mx-auto">
               <Count />

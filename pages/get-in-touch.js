@@ -67,7 +67,7 @@ export default function Forms() {
     setYear(event.target.value);
   }
   function handleCodeChange(event) {
-    setCode(event);
+    setCode(event.target.value);
   }
   async function handleSubmit(event) {
     event.preventDefault();
@@ -125,6 +125,11 @@ export default function Forms() {
     <div>
       <Head>
         <title>Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com</title>
+        <meta name="description" content={"Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE"}/>
+        <meta
+          name="keywords"
+          content="car parts, spare parts, auto spare parts online, best auto parts, auto spare parts in dubai, auto spare parts uae, dubai, sharjah, ajman, ras al khaimah, abu dhabi"
+        />
         <meta
           property="og:title"
           content="Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com"

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../nav";
 import Image from "next/image";
 import Link from "next/link";
-import French from "../../public/img/icons/france.png";
+import Japanese from "../../public/img/icons/japan.png";
 import Footer from "../footer";
 import Head from "next/head";
 import Count from "../service-countup";
 import Social from "../Social";
 
-export default function France({ partsposts, posts }) {
+export default function Japan({ partsposts, posts }) {
   const [Year, setYear] = useState("");
   const [Make, setMake] = useState("");
   const [Model, setModel] = useState("");
@@ -166,7 +166,7 @@ export default function France({ partsposts, posts }) {
   function handleNameChange(event) {
     setName(event.target.value);
   }
-  function handleCodeChange() {
+  function handleCodeChange(event) {
     setCode(event.target.value);
   }
   async function handleSubmit(event) {
@@ -186,7 +186,7 @@ export default function France({ partsposts, posts }) {
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
-        contact: "971" + Whatsappno,
+        contact: Code + Whatsappno,
         name: Name,
         description:
           "Customer Name: " +
@@ -211,8 +211,8 @@ export default function France({ partsposts, posts }) {
       },
     });
     alert("Form submitted. We will contact you shortly ;)");
-    setCode("");
     setName("");
+    setCode("");
     setYear("");
     setMake("");
     setModel("");
@@ -224,31 +224,36 @@ export default function France({ partsposts, posts }) {
   return (
     <div>
       <Head>
-        <title>Online France Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
-        <meta name="keywords" content="french spare parts uae, french auto parts, french car parts"/>
+        <title>Online Japanese Auto Spare Parts in UAE - New | Used | Genuine | Aftermarket</title>
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered Japanese Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in uae'}
+        />
+        <meta name="keywords" content="japan spare parts uae, japan auto parts, japan car parts"/>
         <meta
           property="og:title"
-          content="Online French Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online Japanese Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/french-auto-spare-parts" />
+        <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/japanese-auto-spare-parts" />
         <meta
           property="og:description"
-          content="Explore from our immensively large-scale auto spare part website, your New / Used / Genuine / Aftermarket French auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket Japanese auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
-        <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/french-auto-spare-parts" />
+        <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/japanese-auto-spare-parts" />
         <meta
           property="twitter:title"
-          content="Online French Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
+          content="Online Japanese Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
         <meta
           property="twitter:description"
-          content="Explore from our immensively large-scale auto spare part website, your New / Used / Genuine / Aftermarket French auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
+          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket Japanese auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
         />
         <meta
           property="twitter:image"
@@ -261,22 +266,22 @@ export default function France({ partsposts, posts }) {
           <div>
             <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
               <Image
-                src={French}
+                src={Japanese}
                 alt="genuine auto spare parts"
                 height={50}
                 width={50}
               />
-              FRANCE VEHICLE AUTO SPARE PARTS
+              JAPANESE VEHICLE AUTO SPARE PARTS
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Peugeot">
+                <Link href="https://emirates-car.com/search-by-make/Ford">
                   <a>
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
-                          alt="Peugeot spare parts in uae"
-                          src="/img/car-logos/peugeot.png"
+                          alt="toyota spare parts in uae"
+                          src="/img/car-logos/toyota.png"
                           className="object-scale-down shadow-xl"
                           height={30}
                           width={30}
@@ -284,20 +289,20 @@ export default function France({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Peugeot
+                        Toyota
                       </p>
                     </main>
                   </a>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Citroen">
+                <Link href="/search-by-make/Mitsubishi">
                   <a>
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
-                          alt="Citroen spare parts in uae"
-                          src="/img/car-logos/citroen.png"
+                          alt="Mitsubishi spare parts in uae"
+                          src="/img/car-logos/mitsubishi.png"
                           className="object-scale-down shadow-xl"
                           height={30}
                           width={30}
@@ -305,20 +310,20 @@ export default function France({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Citroen
+                        Mitsubishi
                       </p>
                     </main>
                   </a>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Renault">
+                <Link href="/search-by-make/Lexus">
                   <a>
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
-                          alt="Renault spare parts in uae"
-                          src="/img/car-logos/renault.png"
+                          alt="lexus spare parts in uae"
+                          src="/img/car-logos/lexus.png"
                           className="object-scale-down shadow-xl"
                           height={30}
                           width={30}
@@ -326,20 +331,20 @@ export default function France({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Renault
+                        Lexus
                       </p>
                     </main>
                   </a>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Mobility Ventures LLC">
+                <Link href="/search-by-make/Nissan">
                   <a>
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
-                          alt="venturi spare parts in uae"
-                          src="/img/car-logos/venturi.png"
+                          alt="toyota spare parts in uae"
+                          src="/img/car-logos/nissan.png"
                           className="object-scale-down shadow-xl"
                           height={30}
                           width={30}
@@ -347,20 +352,20 @@ export default function France({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Mobility Ventures LLC
+                        Nissan
                       </p>
                     </main>
                   </a>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Bugatti">
+                <Link href="/search-by-make/Infinity">
                   <a>
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
-                          alt="Bugatti spare parts in uae"
-                          src="/img/car-logos/bugatti.png"
+                          alt="infinity spare parts in uae"
+                          src="/img/car-logos/infiniti.png"
                           className="object-scale-down shadow-xl"
                           height={30}
                           width={30}
@@ -368,13 +373,139 @@ export default function France({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Bugatti
+                        Infinity
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Honda">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="Honda spare parts in uae"
+                          src="/img/car-logos/honda.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Honda
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Mazda">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="mazda spare parts in uae"
+                          src="/img/car-logos/mazda.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Mazda
                       </p>
                     </main>
                   </a>
                 </Link>
               </div>
 
+              <div>
+                <Link href="/search-by-make/Subaru">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="subaru spare parts in uae"
+                          src="/img/car-logos/subaru.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Subaru
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Suzuki">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="suzuki spare parts in uae"
+                          src="/img/car-logos/suzuki.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Suzuki
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Daihatsu">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="daihatsu spare parts in uae"
+                          src="/img/car-logos/daihat.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Daihatsu
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+              <div>
+                <Link href="/search-by-make/Isuzu">
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="isuzu spare parts in uae"
+                          src="/img/car-logos/isuzu.png"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Isuzu
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
@@ -388,7 +519,7 @@ export default function France({ partsposts, posts }) {
               </Link>{" "}
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
-              Explore from our immensively large-scale auto spare part website, your french
+              Explore from our immensively large-scale auto spare parts website, your japanese
               auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck
               / Buses in Your city in UAE especially in Abu al Bukhoosh,Abu
               Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al Barsha,Al
@@ -405,7 +536,7 @@ export default function France({ partsposts, posts }) {
               Port,Rak Maritime City,Ras al Khaimah,Ras Al Khor,Al Ras,Reem
               Island,Ruwais = Ar Ruways,Ruwais Port,Sadiyat
               Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
-              Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE.
+              Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. Submit your inquiry to us, our dealer will get back to you based on stock availability.
             </h1>
             <div className="mx-auto">
         <Count />
@@ -683,12 +814,12 @@ export default function France({ partsposts, posts }) {
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10 my-10">
               {" "}
-              We provide auto spare parts for any French vehicles including :
+              We provide auto spare parts for any japanese vehicles including :
               <ul className="list-disc">
-                <li>New French vehicle auto spare parts</li>
-                <li>Used French vehicle auto spare parts</li>
-                <li>Genuine French vehicle auto spare parts</li>
-                <li>Aftermarket French vehicle auto spare parts</li>
+                <li>New japanese vehicle auto spare parts</li>
+                <li>Used japanese vehicle auto spare parts</li>
+                <li>Genuine japanese vehicle auto spare parts</li>
+                <li>Aftermarket japanese vehicle auto spare parts</li>
               </ul>
             </h1>
           </div>

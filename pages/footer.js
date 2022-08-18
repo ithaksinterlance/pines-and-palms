@@ -28,14 +28,14 @@ export default function footer() {
             <p>
               <a
                 className="text-xl leading-xl text-blue-900"
-                href="https://www.facebook.com/Emirates-carcom-101113659165158/"
+                href="https://www.facebook.com/emirates.auto.parts"
               >
                 <i className="fab fa-2x fa-facebook"></i>
               </a>
               &nbsp;
               <a
                 className="text-xl leading-xl text-purple-900"
-                href="https://www.instagram.com/haksinterlance/"
+                href="https://www.instagram.com/emiratescar_parts/"
               >
                 <i className="fab fa-2x fa-instagram"></i>
               </a>

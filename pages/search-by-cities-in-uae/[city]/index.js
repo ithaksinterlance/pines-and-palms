@@ -15,7 +15,7 @@ export default function City({ data, partspost, posts, makedatas }) {
   const [Whatsappno, setWhatsappno] = useState('');
   const [formPartname, setFormPartname] = useState([]);
   const [text, setText] = useState('');
-  const [City, setCity] = useState('');
+  const [City, setCity] = useState(data.city);
   const [suggestion, setSuggestion] = useState([]);
   const [Name, setName] = useState('');
   const [Code, setCode] = useState('');
@@ -32,15 +32,15 @@ export default function City({ data, partspost, posts, makedatas }) {
     loadPart();
   }, []);
 
-  const onSuggestionHandler = (text) => {
+  const onSuggestionHandler = text => {
     setText(text);
     setSuggestion([]);
   };
 
-  const onPartFormChange = (text) => {
+  const onPartFormChange = text => {
     let matches = [];
     if (text.length > 0) {
-      matches = formPartname.filter((part) => {
+      matches = formPartname.filter(part => {
         const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
@@ -142,7 +142,7 @@ export default function City({ data, partspost, posts, makedatas }) {
     'RUF Automobile',
     'STI',
     'Polestar',
-    'Kandi',
+    'Kandi'
   ];
 
   const make = ma.sort();
@@ -211,11 +211,11 @@ export default function City({ data, partspost, posts, makedatas }) {
           '\n' +
           'Part List: ' +
           text,
-        email: Email,
+        email: Email
       }),
       headers: {
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json'
+      }
     });
     alert('Form submitted. We will contact you shortly ;)');
     setName('');
@@ -239,6 +239,14 @@ export default function City({ data, partspost, posts, makedatas }) {
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in ' +
+            data.city +
+            ' uae'
+          }
+        />
+        <meta
           name="keywords"
           content={
             'auto parts in ' +
@@ -249,7 +257,7 @@ export default function City({ data, partspost, posts, makedatas }) {
             ', ' +
             'Spare parts in ' +
             data.city +
-            ', auto spare parts sharjah'
+            ', auto spare parts, emirates auto parts'
           }
         />
         <meta
@@ -326,7 +334,7 @@ export default function City({ data, partspost, posts, makedatas }) {
               </a>
               {'>>>'}
             </p>
-            <p className="text-gray-500 font-semibold text-xl md:text-lg lg:text-2xl font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 pb-3">
+            <p className="text-gray-700 font-semibold text-xl md:text-lg lg:text-2xl font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 pb-3">
               <a>{data.description}</a>
               {'>>>'}
             </p>
@@ -338,15 +346,15 @@ export default function City({ data, partspost, posts, makedatas }) {
               loading="lazy"
             ></iframe>
             <div className="grid grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1">
-              <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
+              <p className="text-base font-medium text-gray-700 xs:text-sm md:text-base p-5">
                 <h1 className="text-md font-bold text-blue-500">
                   SEARCH YOUR PARTS IN
-                  <nobr className="text-gray-500  text-2xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
+                  <nobr className="text-gray-700  text-2xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
                     &nbsp;{data.city}.
                   </nobr>{' '}
                 </h1>
               </p>
-              <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5">
+              <p className="text-base font-medium text-gray-700 xs:text-sm md:text-base p-5">
                 To buy Auto spare parts online near {data.city}. , fill in the
                 spare part forms below, get inquired through whatsapp and get
                 quote for your spare parts and we also offer delivery to your
@@ -422,7 +430,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map((m) => (
+                        {make.map(m => (
                           <option key={m}>{m}</option>
                         ))}{' '}
                       </select>
@@ -457,8 +465,8 @@ export default function City({ data, partspost, posts, makedatas }) {
                           Select your Model
                         </option>
                         {posts
-                          .filter((s) => s.make === Make)
-                          .map((s) => (
+                          .filter(s => s.make === Make)
+                          .map(s => (
                             <option key={s.id} value={s.model}>
                               {s.model}{' '}
                             </option>
@@ -528,7 +536,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                       type="text"
                       placeholder="(Area, Emirates) or (City, Country)"
                       onChange={handleCityChange}
-                      value={data.city}
+                      value={City}
                       autoComplete="off"
                       name="entry.113755516"
                     />
@@ -567,7 +575,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                       placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
                       rows={5}
                       name="entry.1660104041"
-                      onChange={(e) => onPartFormChange(e.target.value)}
+                      onChange={e => onPartFormChange(e.target.value)}
                       value={text}
                       autoComplete="off"
                       required
@@ -652,19 +660,19 @@ export default function City({ data, partspost, posts, makedatas }) {
               <Count />
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 mx-5">
-              <h1 className="text-base font-medium text-gray-500 p-5">
+              <h1 className="text-base font-medium text-gray-700 p-5">
                 We deal with any country auto spare parts including japanese,
                 american, german, chinese, indian, Korean, french, british in
                 UAE. Looking for Auto spare parts in {data.city}?. We are
                 dealing with auto spare parts for car, heavy truck, van, buses,
                 coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles,
                 Used spare parts, After market parts, Genuine spare parts and
-                New parts etc. Contact us for any inquiry. We also deal in
+                New parts etc. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. Contact us for any inquiry. We also deal in
                 brands such as{' '}
-                {makedatas.map((p) => (
+                {makedatas.map(p => (
                   <a key={p.id}>
                     {p.make}
-                    {' in ' + data.city + ', '}
+                    {' spare parts in ' + data.city + ', '}
                   </a>
                 ))}
                 .<br />
@@ -677,7 +685,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                   <li>Aftermarket auto spare parts in {data.city}</li>
                 </ul>
               </h1>
-              <p className="text-base font-medium text-gray-500 p-5">
+              <p className="text-base font-medium text-gray-700 p-5">
                 UAE Automobile industry is slowly shifting towards a service
                 oriented business model based on consumer data and customer
                 experience. Now companies are trying to adapt to the current
@@ -699,7 +707,7 @@ export default function City({ data, partspost, posts, makedatas }) {
               SEARCH BY MAKE
             </h1>
             <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
-              {makedatas.map((makedata) => (
+              {makedatas.map(makedata => (
                 <div key={makedata.id}>
                   <Link
                     href="/search-by-make/[make]"
@@ -717,7 +725,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                           />
                           <br />
                         </div>
-                        <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        <p className="text-xs text-center text-gray-700 font-medium hover:text-gray-800">
                           {makedata.make.toUpperCase()}
                         </p>
                       </main>
@@ -736,15 +744,15 @@ export default function City({ data, partspost, posts, makedatas }) {
             SEARCH BY PART NAME
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 sm:mt-5 lg:mx-2 ">
-            {partspost.map((post) => (
+            {partspost.map(post => (
               <div key={post.id}>
                 <Link
                   href="/search-by-part-name/[parts]"
                   as={'/search-by-part-name/' + post.parts}
                 >
                   <a title={post.parts + ' in ' + data.city}>
-                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-500 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
-                      <i className="far fa-compass"></i> {post.parts}
+                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-700 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
+                      <i className="far fa-compass"></i> {post.parts + " in " + data.city}
                     </p>
                   </a>
                 </Link>
@@ -762,13 +770,13 @@ export default function City({ data, partspost, posts, makedatas }) {
 export async function getStaticPaths() {
   const res = await fetch(`https://rozy.vercel.app/api/cities`);
   const data = await res.json();
-  const paths = data.map((post) => ({
-    params: { city: post.city },
+  const paths = data.map(post => ({
+    params: { city: post.city }
   }));
 
   return {
     paths,
-    fallback: false,
+    fallback: false
   };
 }
 
@@ -787,16 +795,16 @@ export async function getStaticProps({ params }) {
   const response = await fetch(`https://rozy.vercel.app/api/grooves`);
   const dat = await response.json();
   let uniqueMakeArray = [
-    ...new Map(dat.map((item) => [item['make'], item])).values(),
+    ...new Map(dat.map(item => [item['make'], item])).values()
   ];
 
   if (!data) {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 
   return {
-    props: { data, partspost, posts, makedatas: uniqueMakeArray },
+    props: { data, partspost, posts, makedatas: uniqueMakeArray }
   };
 }

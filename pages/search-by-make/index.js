@@ -259,11 +259,12 @@ export default function Make({ car, cities, posts, pos }) {
       <Head>
         <title>Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={"Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE"}/>
         <meta
           property="og:title"
           content="Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com"
         />
-        <meta name="keywords" content="emirates car, emirates auto parts, emirates car parts"/>
+        <meta name="keywords" content="emirates car, emirates auto parts, emirates car parts, dubai, sharjah, ajman, ras al khaimah, abu dhabi"/>
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
@@ -655,10 +656,10 @@ export default function Make({ car, cities, posts, pos }) {
               </form>
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
-              <h1 className="text-base font-medium text-gray-500 p-5">
+              <p className="text-base font-medium text-gray-500 p-5">
                 We deal with any country auto spare parts including japanese,
                 american, german, chinese, indian, Korean, french, british in
-                UAE. We deal in auto spare parts such as{" "}
+                UAE.You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. We deal in auto spare parts such as{" "}
                 {posts.map((p) => (
                   <Link
                     href="/search-by-part-name/[parts]"
@@ -666,11 +667,11 @@ export default function Make({ car, cities, posts, pos }) {
                     key={p.id}
                   >
                     <a title={p.parts + " uae" }>
-                      {p.parts}
+                      {p.parts + " , "}
                     </a>
                   </Link>
                 ))}
-              </h1>
+              </p>
               <p className="text-base font-medium text-gray-500 p-5">
                 UAE Automobile industry is slowly shifting towards a service
                 oriented business model based on consumer data and customer
@@ -684,12 +685,12 @@ export default function Make({ car, cities, posts, pos }) {
                 largest producer and diesel. Since the beginning era of electric
                 vehicle have started, many people are opting for electric
                 vehicles in spite of its shortcomings because it is more
-                affordable comapared to vehicle running on diesel or petrol. By
+                affordable compared to vehicle running on diesel or petrol. By
                 this transition there is no difference in usage of irreversible
                 energy.
               </p>
               <p className="text-base font-medium text-gray-500 p-5">
-                We deal in used, new, genuine , aftermarket auto spare parts in area such as abu dhabi, ras al khaimah, ras al khor, umm al nar, dubai, sharjah, palm jumeirah in UAE. We are online and accept inquiries through our website and we will get back to you through whatsapp number.
+                We deal in Used / New / Genuine / OEM / Aftermarket auto spare parts in area such as abu dhabi, ras al khaimah, ras al khor, umm al nar, dubai, sharjah, ajman, palm jumeirah in UAE. We are online and accept inquiries through our website and we will get back to you through whatsapp and give you our price list in our quotation. After you are satisfied with our price we will arrange delivery to your convinient locations mentioned.
               </p>
             </div>
           </main>
