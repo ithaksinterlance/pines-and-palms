@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import Script from 'next/script';
 import Head from 'next/head';
 import '../styles/slick/slick.css';
 import '../styles/slick/slick-theme.css';
@@ -54,6 +55,13 @@ function MyApp({ Component, pageProps }) {
           }}
         ></script>
       </Head>
+      <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-9568609421954654"
+        async="true"
+        strategy="beforeInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
       <Component {...pageProps} />
     </>
   );
