@@ -3,17 +3,26 @@
   "version": "1.0",
   "name": "Emirates-car.com ",
   "short_name": "Car Spare Parts",
-  "description": "Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts in UAE ",
+  "description": "Best Car spare parts App to buy New / Used / Genuine / Aftermarket spare parts",
   "icons": {
     "32": "/favicon.png",
     "192": "/icon-192x192.png",
-    "256": "/icon-256x256.png"
+    "256": "/icon-256x256.png",
+    "384": "/icon-384x384.png",
+    "512": "/icon-512x512.png"
   },
   "action": {
     "default_icon": {
       "32": "/favicon.png",
       "192": "/icon-192x192.png",
-      "256": "/icon-256x256.png"
+      "256": "/icon-256x256.png",
+      "384": "/icon-384x384.png",
+      "512": "/icon-512x512.png"
     }
-  }
+  },
+  "theme_color": "#2563eb",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
 }
