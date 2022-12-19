@@ -454,7 +454,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       </p>
       <div className="grid grid-cols-7 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
         <div>
-          <Link href="https://emirates-car.com/search-by-make/Ford">
+          <Link href="https://emirates-car.com/search-by-make/Toyota">
             <a>
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
@@ -543,7 +543,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Ford spare parts in uae"
+                    alt="Ford spare parts dubai"
                     src="/img/car-logos/Ford.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -564,7 +564,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Hyundai spare parts in uae"
+                    alt="Hyundai parts dubai"
                     src="/img/car-logos/hyundai.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -580,12 +580,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </Link>
         </div>
         <div>
-          <Link href="/search-by-make/Ford">
+          <Link href="/search-by-make/Volkswagen">
             <a>
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Volkswagon spare parts in uae"
+                    alt="Volkswagen"
                     src="/img/car-logos/volkswagon.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -594,7 +594,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   <br />
                 </div>
                 <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                  Volkswagon
+                  Volkswagen spare parts sharjah
                 </p>
               </main>
             </a>
@@ -606,7 +606,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Honda spare parts in uae"
+                    alt="Honda"
                     src="/img/car-logos/honda.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -627,7 +627,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="toyota spare parts in uae"
+                    alt="lexus spare parts sharjah"
                     src="/img/car-logos/lexus.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -1326,7 +1326,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         {partsposts.map((post) => (
           <div key={post.id}>
             <Link
-              href="/search-by-cities-in-uae/[city]"
+              href="/search-by-part-name/[parts]"
               as={'/search-by-part-name/' + post.parts}
             >
               <a>
@@ -1376,7 +1376,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <p>
                 <a
                   className="text-xl leading-xl text-blue-900"
-                  href="https://www.facebook.com/Emirates-carcom-101113659165158/"
+                  href="https://www.facebook.com/emirates.auto.parts"
                 >
                   <i className="fab fa-2x fa-facebook"></i>
                 </a>
@@ -1397,7 +1397,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 &nbsp;
                 <a
                   className="text-xl leading-xl text-blue-300"
-                  href="https://twitter.com/uaeautoparts"
+                  href="https://twitter.com/emiratescarpart"
                 >
                   <i className="fab fa-2x fa-twitter"></i>
                 </a>
@@ -1458,7 +1458,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               </div>
             ))}
           </div>
-          <div className="text-center underline text-xs">
+          <div className="text-center underline text-xs px-3">
             <a href="http://www.happal.com/">Happal Directory</a>
             <a
               href="https://www.ontoplist.com/auto-services/"
