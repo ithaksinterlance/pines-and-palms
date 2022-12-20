@@ -4,22 +4,29 @@
   "name": "Emirates-car.com ",
   "short_name": "Car Spare Parts",
   "description": "Best Car spare parts App to buy New / Used / Genuine / Aftermarket spare parts",
-  "icons": {
-    "32": "/favicon.png",
-    "192": "/icon-192x192.png",
-    "256": "/icon-256x256.png",
-    "384": "/icon-384x384.png",
-    "512": "/icon-512x512.png"
-  },
-  "action": {
-    "default_icon": {
-      "32": "/favicon.png",
-      "192": "/icon-192x192.png",
-      "256": "/icon-256x256.png",
-      "384": "/icon-384x384.png",
-      "512": "/icon-512x512.png"
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  },
+  ],
   "theme_color": "#2563eb",
   "background_color": "#FFFFFF",
   "start_url": "/",

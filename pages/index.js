@@ -384,7 +384,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
           ABOUT Emirates-car
         </p>
-        <p className="text-lg py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
+        <p className="text-lg py-4 sm:mt-5 sm:text-base md:mt-5 md:text-base lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
           Emirates-car.com is Online platform to Buy/Order Auto spare parts
           Online. We have spare parts for american brand car such as Ford, GMC,
           Cadillac, Chevrolet, Dodge, Chysler and{' '}
