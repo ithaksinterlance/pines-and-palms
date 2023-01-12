@@ -1,14 +1,15 @@
-import React, { Component } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { Component } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   fab,
   faFacebook,
   faInstagram,
   faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
-import "@fortawesome/fontawesome-svg-core/styles.css";
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 export default class relatedpost extends Component {
   render() {
@@ -34,7 +35,7 @@ export default class relatedpost extends Component {
             <li className="nav-item">
               <a
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="https://www.facebook.com/autoparts.haks"
+                href="https://www.facebook.com/emirates.auto.parts"
               >
                 <FontAwesomeIcon
                   icon={faFacebook}
@@ -45,7 +46,7 @@ export default class relatedpost extends Component {
             <li className="nav-item">
               <a
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="#"
+                href="https://www.instagram.com/emiratescar_parts/"
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
@@ -56,10 +57,10 @@ export default class relatedpost extends Component {
             <li className="nav-item">
               <a
                 className="px-3 py-2 flex items-center text-xl leading-snug text-blue-700 hover:opacity-75"
-                href="#"
+                href="https://twitter.com/emiratescarpart"
               >
                 <FontAwesomeIcon
-                  icon={faWhatsapp}
+                  icon={faTwitter}
                   className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
                 />
               </a>
@@ -69,21 +70,21 @@ export default class relatedpost extends Component {
           <div className="text-xs text-center uppercase">RELATED POST</div>
           <ul>
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
-              <Link href="/blog/Ferrari%20F8%20Spider%202022">
+              <Link href="/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons">
                 <a>
-                  Ferrari F8 Spider 2022
+                  5 ways you can buy car spare parts
                   <p className="text-gray-300 text-xs font-bold uppercase pt-2">
-                    18 days ago - 10 min read
+                    12 days ago - 10 min read
                   </p>
                 </a>
               </Link>
             </li>
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
-              <Link href="/blog/Ferrari%20Portofino%20M">
+              <Link href="blog/How%20to%20Buy%20Auto%20Parts%20Online">
                 <a>
-                  Ferrari Portofino M
+                  How to Buy Car Spare Parts Online
                   <p className="text-gray-300 text-xs font-bold uppercase pt-2">
-                    3 days ago - 10 min read
+                    5 days ago - 10 min read
                   </p>
                 </a>
               </Link>

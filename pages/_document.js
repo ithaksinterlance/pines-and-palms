@@ -36,6 +36,7 @@ class MyDocument extends Document {
               `
             }}
           />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />
