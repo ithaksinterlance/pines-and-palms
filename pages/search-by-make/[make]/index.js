@@ -1,25 +1,25 @@
-import Nav from "../../nav";
-import Link from "next/link";
-import Footer from "../../footer";
-import Head from "next/head";
-import React, { useState, useEffect } from "react";
-import Social from "../../Social";
+import Nav from '../../nav';
+import Link from 'next/link';
+import Footer from '../../footer';
+import Head from 'next/head';
+import React, { useState, useEffect } from 'react';
+import Social from '../../Social';
 
 export default function Car({ car, cities, make, partspost, posts }) {
-  const [Year, setYear] = useState("");
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
+  const [Year, setYear] = useState('');
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
   const [formPartname, setFormPartname] = useState([]);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [suggestion, setSuggestion] = useState([]);
-  const [Address, setAddress] = useState("");
-  const [Name, setName] = useState("");
-  const [Code, setCode] = useState("");
-  const [searchModel, setSearchModel] = useState("");
-  const [recommend, setRecommend] = useState("");
-  const [formModelChange, setFormModelChange] = useState("");
+  const [Address, setAddress] = useState('');
+  const [Name, setName] = useState('');
+  const [Code, setCode] = useState('');
+  const [searchModel, setSearchModel] = useState('');
+  const [recommend, setRecommend] = useState('');
+  const [formModelChange, setFormModelChange] = useState('');
 
   useEffect(() => {
     const loadPart = async () => {
@@ -33,16 +33,16 @@ export default function Car({ car, cities, make, partspost, posts }) {
     loadPart();
   }, []);
 
-  const onSuggestionHandler = (text) => {
+  const onSuggestionHandler = text => {
     setText(text);
     setSuggestion([]);
   };
 
-  const onPartFormChange = (text) => {
+  const onPartFormChange = text => {
     let matches = [];
     if (text.length > 0) {
-      matches = formPartname.filter((part) => {
-        const regex = new RegExp(`${text}`, "gi");
+      matches = formPartname.filter(part => {
+        const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
     }
@@ -64,15 +64,15 @@ export default function Car({ car, cities, make, partspost, posts }) {
     loadPart();
   }, []);
 
-  const onModelSuggestionHandler = (searchModel) => {
+  const onModelSuggestionHandler = searchModel => {
     setSearchModel(searchModel);
     setRecommend([]);
   };
-  const onModelFormChange = (searchModel) => {
+  const onModelFormChange = searchModel => {
     let matches = [];
     if (searchModel.length > 0) {
-      matches = formModelChange.filter((part) => {
-        const regex = new RegExp(`${searchModel}`, "gi");
+      matches = formModelChange.filter(part => {
+        const regex = new RegExp(`${searchModel}`, 'gi');
         return part.match(regex);
       });
     }
@@ -81,99 +81,99 @@ export default function Car({ car, cities, make, partspost, posts }) {
   };
 
   const ma = [
-    "Ford",
-    "Chrysler",
-    "Citroen",
-    "Hillman",
-    "Chevrolet",
-    "Cadillac",
-    "BMW",
-    "Austin",
-    "Fairthorpe",
-    "Fillmore",
-    "Pontiac",
-    "Studebaker",
-    "Buick",
-    "Rambler",
-    "Plymouth",
-    "Volkswagen",
-    "Jensen",
-    "Oldsmobile",
-    "Mercury",
-    "Dodge",
-    "Shelby",
-    "Porsche",
-    "Toyota",
-    "Mercedes-Benz",
-    "MG",
-    "Nissan",
-    "Honda",
-    "Mazda",
-    "Renault",
-    "Audi",
-    "Lincoln",
-    "Lotus",
-    "Maserati",
-    "Mitsubishi",
-    "Saab",
-    "Subaru",
-    "Suzuki",
-    "Lamborghini",
-    "Merkur",
-    "Land Rover",
-    "Acura",
-    "Lexus",
-    "Eagle",
-    "Alfa Romeo",
-    "Daihatsu",
-    "Geo",
-    "GMC",
-    "Hyundai",
-    "Infiniti",
-    "Isuzu",
-    "Jaguar",
-    "Jeep",
-    "Saturn",
-    "Volvo",
-    "Kia",
-    "Holden",
-    "Corbin",
-    "Daewoo",
-    "MINI",
-    "Maybach",
-    "Scion",
-    "Spyker",
-    "Aston Martin",
-    "Bentley",
-    "Panoz",
-    "Rolls-Royce",
-    "Spyker Cars",
-    "Ferrari",
-    "Hummer",
-    "Morgan",
-    "Peugeot",
-    "Foose",
-    "Aptera",
-    "Smart",
-    "Bugatti",
-    "Tesla",
-    "Ram",
-    "Fiat",
-    "McLaren",
-    "BYD",
-    "McLaren Automotive",
-    "Mobility Ventures LLC",
-    "Pagani",
-    "Roush Performance",
-    "smart",
-    "SRT",
-    "Genesis",
-    "Karma",
-    "Koenigsegg",
-    "RUF Automobile",
-    "STI",
-    "Polestar",
-    "Kandi",
+    'Ford',
+    'Chrysler',
+    'Citroen',
+    'Hillman',
+    'Chevrolet',
+    'Cadillac',
+    'BMW',
+    'Austin',
+    'Fairthorpe',
+    'Fillmore',
+    'Pontiac',
+    'Studebaker',
+    'Buick',
+    'Rambler',
+    'Plymouth',
+    'Volkswagen',
+    'Jensen',
+    'Oldsmobile',
+    'Mercury',
+    'Dodge',
+    'Shelby',
+    'Porsche',
+    'Toyota',
+    'Mercedes-Benz',
+    'MG',
+    'Nissan',
+    'Honda',
+    'Mazda',
+    'Renault',
+    'Audi',
+    'Lincoln',
+    'Lotus',
+    'Maserati',
+    'Mitsubishi',
+    'Saab',
+    'Subaru',
+    'Suzuki',
+    'Lamborghini',
+    'Merkur',
+    'Land Rover',
+    'Acura',
+    'Lexus',
+    'Eagle',
+    'Alfa Romeo',
+    'Daihatsu',
+    'Geo',
+    'GMC',
+    'Hyundai',
+    'Infiniti',
+    'Isuzu',
+    'Jaguar',
+    'Jeep',
+    'Saturn',
+    'Volvo',
+    'Kia',
+    'Holden',
+    'Corbin',
+    'Daewoo',
+    'MINI',
+    'Maybach',
+    'Scion',
+    'Spyker',
+    'Aston Martin',
+    'Bentley',
+    'Panoz',
+    'Rolls-Royce',
+    'Spyker Cars',
+    'Ferrari',
+    'Hummer',
+    'Morgan',
+    'Peugeot',
+    'Foose',
+    'Aptera',
+    'Smart',
+    'Bugatti',
+    'Tesla',
+    'Ram',
+    'Fiat',
+    'McLaren',
+    'BYD',
+    'McLaren Automotive',
+    'Mobility Ventures LLC',
+    'Pagani',
+    'Roush Performance',
+    'smart',
+    'SRT',
+    'Genesis',
+    'Karma',
+    'Koenigsegg',
+    'RUF Automobile',
+    'STI',
+    'Polestar',
+    'Kandi'
   ];
   const mke = ma.sort();
   function handleYearChange(event) {
@@ -205,93 +205,103 @@ export default function Car({ car, cities, make, partspost, posts }) {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     const response = fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           Address +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
+          ' ' +
           Year +
-          "\n" +
-          "Part List: " +
+          '\n' +
+          'Part List: ' +
           text,
-        email: Email,
+        email: Email
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
-    alert("Form submitted. We will contact you shortly ;)");
-    setCode("");
-    setName("");
-    setYear("");
-    setMake("");
-    setModel("");
-    setAddress("");
-    setEmail("");
-    setText("");
-    setWhatsappno("");
+    alert('Form submitted. We will contact you shortly ;)');
+    setCode('');
+    setName('');
+    setYear('');
+    setMake('');
+    setModel('');
+    setAddress('');
+    setEmail('');
+    setText('');
+    setWhatsappno('');
   }
   return (
     <div>
       <Nav />
       <Head>
-        <title>{make} -  Car Auto Spare Parts Order Online in UAE - Best Prices</title>
+        <title>
+          {make} - Car Auto Spare Parts Order Online in UAE - Best Prices
+        </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content={"Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket " + make + " auto spare parts Online in UAE"}/>
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket ' +
+            make +
+            ' auto spare parts Online in UAE'
+          }
+        />
         <meta
           property="og:title"
           content={
-            make + " - Auto Spare Parts Order Online in UAE - Best Prices | Emirates-car.com"
+            make +
+            ' - Auto Spare Parts Order Online in UAE - Best Prices | Emirates-car.com'
           }
         />
         <meta
           name="keywords"
           content={
             make +
-            " spare parts dubai" +
+            ' spare parts dubai' +
             make +
-            " car spare parts" +
+            ' car spare parts' +
             make +
-            " parts uae" +
+            ' parts uae' +
             make +
-            " " +
-            " uae" +
+            ' ' +
+            ' uae' +
             make +
-            " parts" +
+            ' parts' +
             make +
-            " spare part prices in uae, dubai, sharjah, ajman, ras al khaimah, abu dhabi"
+            ' spare part prices in uae, dubai, sharjah, ajman, ras al khaimah, abu dhabi'
           }
         />
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
-          content={"https://www.emirates-car.com/search-by-make/" + make}
+          content={'https://www.emirates-car.com/search-by-make/' + make}
         />
         <meta
           property="og:description"
           content={
-            "Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your" +
+            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your' +
             make +
             "'s needs - Car / Jeep / Van / Truck / Buses in Your city."
           }
@@ -303,18 +313,19 @@ export default function Car({ car, cities, make, partspost, posts }) {
         />
         <meta
           property="twitter:url"
-          content={"https://www.emirates-car.com/search-by-make/" + make}
+          content={'https://www.emirates-car.com/search-by-make/' + make}
         />
         <meta
           property="twitter:title"
           content={
-            make + " - Car Auto Spare Parts Order Online in UAE - Best Prices | Emirates-car.com"
+            make +
+            ' - Car Auto Spare Parts Order Online in UAE - Best Prices | Emirates-car.com'
           }
         />
         <meta
           property="twitter:description"
           content={
-            "Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your" +
+            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your' +
             make +
             "'s needs - Car / Jeep / Van / Truck / Buses in Your city."
           }
@@ -332,7 +343,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5 text-justify">
                   CHOOSE YOUR
                   <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                    &nbsp;{make}{" "}
+                    &nbsp;{make}{' '}
                   </nobr>
                   MODEL
                 </div>
@@ -342,9 +353,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                     <i className="fal fa-car-garage"></i>
                     Current path:&nbsp;&nbsp;
                   </nobr>
-                  index{">>>"}
+                  index{'>>>'}
                   {make}
-                  {">>>"}
+                  {'>>>'}
                 </p>
                 <div className="flex justify-center">
                   <div className="pt-3">
@@ -352,8 +363,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
                       id="partname"
                       type="search"
-                      placeholder={"Search Your " + make + " Model"}
-                      onChange={(e) => onModelFormChange(e.target.value)}
+                      placeholder={'Search Your ' + make + ' Model'}
+                      onChange={e => onModelFormChange(e.target.value)}
                       value={searchModel}
                       autoComplete="off"
                       required
@@ -381,25 +392,24 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </div>
               </div>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {car.map((post) => (
+                {car.map(post => (
                   <div key={post.id}>
                     <Link
                       href="/search-by-make/[make]/[model]"
-                      as={"/search-by-make/" + post.make + "/" + post.model}
+                      as={'/search-by-make/' + post.make + '/' + post.model}
                     >
                       <a
-                        title={post.make + " - " + post.model + " spare parts"}
+                        title={post.make + ' - ' + post.model + ' spare parts'}
                       >
                         <main className="border border-blue-800 h-full p-3 ">
-                  <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
-                  {post.model.replace("%2F", "/")}{" "}
-                  </p>
-                </main>
-
+                          <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
+                            {post.model.replace('%2F', '/')}{' '}
+                          </p>
+                        </main>
                       </a>
                     </Link>
                   </div>
-                ))}{" "}
+                ))}{' '}
               </div>
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
@@ -407,11 +417,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
               <Link href="/get-in-touch">
                 <a>
                   <nobr className="text-blue-500 text-sm underline">
-                    {" "}
-                    Get in touch with us {">>"}**
+                    {' '}
+                    Get in touch with us {'>>'}**
                   </nobr>
                 </a>
-              </Link>{" "}
+              </Link>{' '}
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 md:grid md:grid-cols-1 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
               <form
@@ -482,9 +492,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {mke.map((m) => (
+                        {mke.map(m => (
                           <option key={m}>{m}</option>
-                        ))}{" "}
+                        ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -517,12 +527,12 @@ export default function Car({ car, cities, make, partspost, posts }) {
                           Select your Model
                         </option>
                         {posts
-                          .filter((s) => s.make === Make)
-                          .map((s) => (
+                          .filter(s => s.make === Make)
+                          .map(s => (
                             <option key={s.id} value={s.model}>
-                              {s.model}{" "}
+                              {s.model}{' '}
                             </option>
-                          ))}{" "}
+                          ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -626,11 +636,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
                       rows={5}
                       name="entry.1660104041"
-                      onChange={(e) => onPartFormChange(e.target.value)}
+                      onChange={e => onPartFormChange(e.target.value)}
                       value={text}
                       autoComplete="off"
                       required
-                    />{" "}
+                    />{' '}
                     {suggestion &&
                       suggestion.map((suggestion, i) => (
                         <div
@@ -638,9 +648,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                           className="cursor-pointer border-gray-400 p-4"
                           onClick={() => onSuggestionHandler(suggestion)}
                         >
-                          {suggestion}{" "}
+                          {suggestion}{' '}
                         </div>
-                      ))}{" "}
+                      ))}{' '}
                   </div>
                 </div>
                 <div className="grid grid-cols-1 pt-3">
@@ -685,7 +695,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       <a className="underline hover:text-blue-500 xs:text-sm">
                         SEARCH BY PART NAME
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
@@ -693,7 +703,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       <a className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY CITY
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
@@ -701,7 +711,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       <a className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY MAKE
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;
                   </span>
                 </div>
@@ -711,37 +721,48 @@ export default function Car({ car, cities, make, partspost, posts }) {
               <h1 className="text-base font-medium text-gray-500 p-5">
                 We deal with any country auto spare parts including japanese,
                 american, german, chinese, indian, Korean, french, british in
-                UAE. We deal in auto spare parts such as{" "}
-                {partspost.map((p) => (
+                UAE. We deal in auto spare parts such as{' '}
+                {partspost.map(p => (
                   <Link
                     href="/search-by-part-name/[parts]"
-                    as={"/search-by-part-name/" + p.parts}
+                    as={'/search-by-part-name/' + p.parts}
                     key={p.id}
                   >
-                    <a title={"spare parts in " + p.parts}>
-                      {p.parts + " , "}
-                    </a>
+                    <a title={'spare parts in ' + p.parts}>{p.parts + ' , '}</a>
                   </Link>
                 ))}
               </h1>
               <p className="text-base font-medium text-gray-500 p-5">
                 We deal in automobile in places such as sharjah, ajman, abu
-                dhabi, umm al nar, umm al quwain, musaffah, al ain etc. We deal in Used / New / Genuine / OEM / Aftermarket auto spare parts in area such as abu dhabi, ras al khaimah, ras al khor, umm al nar, dubai, sharjah, ajman, palm jumeirah in UAE. We are online and accept inquiries through our website and we will get back to you through whatsapp and give you our price list in our quotation. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. After you are satisfied with our price we will arrange delivery to your convinient locations mentioned. UAE
-                Automobile industry is slowly shifting towards a service
-                oriented business model based on consumer data and customer
-                experience. Now companies are trying to adapt to the current
-                need of the trends Markets. They rely on consumer data for
-                knowing the sale interest of the customers based on the
-                experience through analytics software. Owners are now thinking
-                ways to accommodate the market through the trends analytics in
-                order to keep the company into their targeted level. Previously
-                there were cars running on petrol in which UAE is one of the
-                largest producer and diesel. Since the beginning era of electric
-                vehicle have started, many people are opting for electric
-                vehicles in spite of its shortcomings because it is more
-                affordable compared to vehicle running on diesel or petrol. By
-                this transition there is no difference in usage of irreversible
-                energy.
+                dhabi, umm al nar, umm al quwain, musaffah, al ain etc. We deal
+                in Used / New / Genuine / OEM / Aftermarket auto spare parts in
+                area such as abu dhabi, ras al khaimah, ras al khor, umm al nar,
+                dubai, sharjah, ajman, palm jumeirah in UAE. We are online and
+                accept inquiries through our website and we will get back to you
+                through whatsapp and give you our price list in our quotation.
+                You can check our catalogue at{' '}
+                <a
+                  href="https://emirates-car.com/search-by-part-name"
+                  className="text-blue-400 underline"
+                >
+                  https://emirates-car.com/search-by-part-name
+                </a>
+                . After you are satisfied with our price we will arrange
+                delivery to your convinient locations mentioned. UAE Automobile
+                industry is slowly shifting towards a service oriented business
+                model based on consumer data and customer experience. Now
+                companies are trying to adapt to the current need of the trends
+                Markets. They rely on consumer data for knowing the sale
+                interest of the customers based on the experience through
+                analytics software. Owners are now thinking ways to accommodate
+                the market through the trends analytics in order to keep the
+                company into their targeted level. Previously there were cars
+                running on petrol in which UAE is one of the largest producer
+                and diesel. Since the beginning era of electric vehicle have
+                started, many people are opting for electric vehicles in spite
+                of its shortcomings because it is more affordable compared to
+                vehicle running on diesel or petrol. By this transition there is
+                no difference in usage of irreversible energy.
               </p>
               <p className="text-base font-medium text-gray-500 p-5">
                 We provide auto spare parts for any vehicles including :
@@ -760,21 +781,21 @@ export default function Car({ car, cities, make, partspost, posts }) {
             SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  font-sans">
-            {cities.map((post) => (
+            {cities.map(post => (
               <div key={post.id}>
                 <Link
                   href="/search-by-cities-in-uae/[city]"
-                  as={"/search-by-cities-in-uae/" + post.city}
+                  as={'/search-by-cities-in-uae/' + post.city}
                 >
-                  <a title={make + " spare parts in " + post.city}>
+                  <a title={make + ' spare parts in ' + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
                       <i className="far fa-compass"></i>&nbsp;
-                      {post.city}{" "}
+                      {post.city}{' '}
                     </p>
                   </a>
                 </Link>
               </div>
-            ))}{" "}
+            ))}{' '}
           </div>
         </div>
       </div>
@@ -786,10 +807,10 @@ export default function Car({ car, cities, make, partspost, posts }) {
 export async function getStaticPaths() {
   const res = await fetch(`https://rozy.vercel.app/api/palms`);
   const data = await res.json();
-  const paths = data.map((post) => ({
+  const paths = data.map(post => ({
     params: {
-      make: post.make,
-    },
+      make: post.make
+    }
   }));
 
   return { paths, fallback: false };
@@ -801,8 +822,9 @@ export async function getStaticProps({ params }) {
   const res = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
   const data = await res.json();
   let uniqueObjectArray = [
-    ...new Map(data.map((item) => [item["model"], item])).values(),
+    ...new Map(data.map(item => [item['model'], item])).values()
   ];
+  console.log(uniqueObjectArray);
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
   const cities = await cityresponse.json();
 
@@ -818,7 +840,7 @@ export async function getStaticProps({ params }) {
       cities,
       make,
       partspost,
-      posts,
-    },
+      posts
+    }
   };
 }

@@ -259,6 +259,7 @@ export default function Car({
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
       </Head>
+
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
         <div className="w-3/4 2xs:w-full xs:w-full s:w-full sm:w-full xs:grid xs:grid-cols-1">
           <main className="xs:mx-auto 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
@@ -270,16 +271,6 @@ export default function Car({
                 </nobr>
                 BELOW
               </div>
-              <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
-                <nobr className="text-blue-400 no-underline">
-                  <i className="fal fa-car-garage"></i> Current
-                  path:&nbsp;&nbsp;
-                </nobr>
-                index{'>>>'}
-                {make}
-                {'>>>'}
-                {model}
-              </p>
             </div>
             <div className="container place-content-center py-6">
               <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5  2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
@@ -632,40 +623,44 @@ export default function Car({
                     <div className="flex float-right text-xs text-gray-400 ">
                       100% secure and trusted
                     </div>
-                    <p className="text-base font-medium text-gray-500 xs:text-sm md:text-base p-5 s:p-2">
-                      Other {make} Models:
-                    </p>
-                    <div className="grid grid-cols-4  md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 my-5">
-                      {uniqueMakeArray.map(post => (
-                        <div key={post.id}>
-                          <Link
-                            href="/search-by-make/[make]/[model]"
-                            as={
-                              '/search-by-make/' + post.make + '/' + post.model
-                            }
-                          >
-                            <a>
-                              <main className="text-center text-base xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
-                                {post.model.replace('%2F', '/')}
-                              </main>
-                            </a>
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
                   </form>
                 </div>
               </div>
-              <div>
-                <Count />
+              <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10 shadow-xl">
+                <h1 className="text-center font-bold text-4xl">
+                  Spare parts for All {make} Models:
+                </h1>
+                <div className="grid grid-cols-4  md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 xs:text-base sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 my-5">
+                  {uniqueMakeArray.map(post => (
+                    <div key={post.id}>
+                      <Link
+                        href="/search-by-make/[make]/[model]"
+                        as={'/search-by-make/' + post.make + '/' + post.model}
+                      >
+                        <a>
+                          <main className="text-center text-base xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
+                            {post.make}&nbsp;{post.model.replace('%2F', '/')}
+                          </main>
+                        </a>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
                 <h1 className="text-base font-medium text-gray-500 p-5">
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
-                  abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. We provide
-                  auto spare parts for any vehicles including :
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
+                  our catalogue at{' '}
+                  <a
+                    href="https://emirates-car.com/search-by-part-name"
+                    className="text-blue-400 underline"
+                  >
+                    https://emirates-car.com/search-by-part-name
+                  </a>
+                  . We provide auto spare parts for any vehicles including :
                   <ul className="list-disc">
                     <li>New auto spare parts in uae</li>
                     <li>Used auto spare parts in uae</li>
@@ -712,7 +707,7 @@ export default function Car({
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image
-                              alt={p.make + ' in uae'}
+                              alt={p.make + ' parts'}
                               src={'/img/car-logos/' + p.img}
                               className="object-scale-down shadow-xl"
                               height={30}

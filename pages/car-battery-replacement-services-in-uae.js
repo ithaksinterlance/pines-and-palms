@@ -1,44 +1,44 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./nav";
-import Head from "next/head";
-import Link from "next/link";
-import Footer from "./footer";
-import Slider from "react-slick";
-import Battery from "../public/img/car-auto-parts/battery.png";
-import Image from "next/image";
-import Social from "./Social";
-import "react-accessible-accordion/dist/fancy-example.css";
+import React, { useState, useEffect } from 'react';
+import Navbar from './nav';
+import Head from 'next/head';
+import Link from 'next/link';
+import Footer from './footer';
+import Slider from 'react-slick';
+import Battery from '../public/img/car-auto-parts/battery.png';
+import Image from 'next/image';
+import Social from './Social';
+import 'react-accessible-accordion/dist/fancy-example.css';
 
 import {
   Accordion,
   AccordionItem,
   AccordionItemHeading,
   AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
+  AccordionItemPanel
+} from 'react-accessible-accordion';
 
 const settings = {
   autoplay: true,
   arrows: false,
   centerMode: true,
   autopalySpeed: 500,
-  dotsClass: "slick-dots",
-  pauseOnHover: "true",
+  dotsClass: 'slick-dots',
+  pauseOnHover: 'true',
   fade: true,
   dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1,
+  slidesToScroll: 1
 };
 
 export default function CarBatteryDubai({ forms }) {
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
-  const [Address, setAddress] = useState("");
-  const [Name, setName] = useState("");
-  const [Code, setCode] = useState("");
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
+  const [Address, setAddress] = useState('');
+  const [Name, setName] = useState('');
+  const [Code, setCode] = useState('');
 
   function handleMakeChange(event) {
     setMake(event.target.value);
@@ -59,101 +59,101 @@ export default function CarBatteryDubai({ forms }) {
     setCode(event.target.value);
   }
   const mke = [
-    "Ford",
-    "Chrysler",
-    "Citroen",
-    "Hillman",
-    "Chevrolet",
-    "Cadillac",
-    "BMW",
-    "Austin",
-    "Fairthorpe",
-    "Fillmore",
-    "Pontiac",
-    "Studebaker",
-    "Buick",
-    "Rambler",
-    "Plymouth",
-    "Volkswagen",
-    "Jensen",
-    "Oldsmobile",
-    "Mercury",
-    "Dodge",
-    "Shelby",
-    "Porsche",
-    "Toyota",
-    "Mercedes-Benz",
-    "MG",
-    "Nissan",
-    "Honda",
-    "Mazda",
-    "Renault",
-    "Audi",
-    "Lincoln",
-    "Lotus",
-    "Maserati",
-    "Mitsubishi",
-    "Saab",
-    "Subaru",
-    "Suzuki",
-    "Lamborghini",
-    "Merkur",
-    "Land Rover",
-    "Acura",
-    "Lexus",
-    "Eagle",
-    "Alfa Romeo",
-    "Daihatsu",
-    "Geo",
-    "GMC",
-    "Hyundai",
-    "Infiniti",
-    "Isuzu",
-    "Jaguar",
-    "Jeep",
-    "Saturn",
-    "Volvo",
-    "HUMMER",
-    "Kia",
-    "Holden",
-    "Corbin",
-    "Daewoo",
-    "MINI",
-    "Maybach",
-    "Scion",
-    "Spyker",
-    "Aston Martin",
-    "Bentley",
-    "Panoz",
-    "Rolls-Royce",
-    "Spyker Cars",
-    "Ferrari",
-    "Hummer",
-    "Morgan",
-    "Peugeot",
-    "Foose",
-    "Aptera",
-    "Smart",
-    "Bugatti",
-    "Tesla",
-    "Ram",
-    "FIAT",
-    "Fiat",
-    "McLaren",
-    "BYD",
-    "McLaren Automotive",
-    "Mobility Ventures LLC",
-    "Pagani",
-    "Roush Performance",
-    "smart",
-    "SRT",
-    "Genesis",
-    "Karma",
-    "Koenigsegg",
-    "RUF Automobile",
-    "STI",
-    "Polestar",
-    "Kandi",
+    'Ford',
+    'Chrysler',
+    'Citroen',
+    'Hillman',
+    'Chevrolet',
+    'Cadillac',
+    'BMW',
+    'Austin',
+    'Fairthorpe',
+    'Fillmore',
+    'Pontiac',
+    'Studebaker',
+    'Buick',
+    'Rambler',
+    'Plymouth',
+    'Volkswagen',
+    'Jensen',
+    'Oldsmobile',
+    'Mercury',
+    'Dodge',
+    'Shelby',
+    'Porsche',
+    'Toyota',
+    'Mercedes-Benz',
+    'MG',
+    'Nissan',
+    'Honda',
+    'Mazda',
+    'Renault',
+    'Audi',
+    'Lincoln',
+    'Lotus',
+    'Maserati',
+    'Mitsubishi',
+    'Saab',
+    'Subaru',
+    'Suzuki',
+    'Lamborghini',
+    'Merkur',
+    'Land Rover',
+    'Acura',
+    'Lexus',
+    'Eagle',
+    'Alfa Romeo',
+    'Daihatsu',
+    'Geo',
+    'GMC',
+    'Hyundai',
+    'Infiniti',
+    'Isuzu',
+    'Jaguar',
+    'Jeep',
+    'Saturn',
+    'Volvo',
+    'HUMMER',
+    'Kia',
+    'Holden',
+    'Corbin',
+    'Daewoo',
+    'MINI',
+    'Maybach',
+    'Scion',
+    'Spyker',
+    'Aston Martin',
+    'Bentley',
+    'Panoz',
+    'Rolls-Royce',
+    'Spyker Cars',
+    'Ferrari',
+    'Hummer',
+    'Morgan',
+    'Peugeot',
+    'Foose',
+    'Aptera',
+    'Smart',
+    'Bugatti',
+    'Tesla',
+    'Ram',
+    'FIAT',
+    'Fiat',
+    'McLaren',
+    'BYD',
+    'McLaren Automotive',
+    'Mobility Ventures LLC',
+    'Pagani',
+    'Roush Performance',
+    'smart',
+    'SRT',
+    'Genesis',
+    'Karma',
+    'Koenigsegg',
+    'RUF Automobile',
+    'STI',
+    'Polestar',
+    'Kandi'
   ];
   const make = mke.sort();
 
@@ -162,68 +162,68 @@ export default function CarBatteryDubai({ forms }) {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     const response = fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           Address +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
-          "Part List: " +
-          "Battery",
-        email: "Email",
+          ' ' +
+          'Part List: ' +
+          'Battery',
+        email: 'Email'
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
 
     let message =
-      "Timestamp: " +
+      'Timestamp: ' +
       dateTime +
-      "\n" +
-      "Brand: " +
+      '\n' +
+      'Brand: ' +
       Make +
-      "\n" +
-      "Model: " +
+      '\n' +
+      'Model: ' +
       Model +
-      "\n" +
-      "Customer Name: " +
+      '\n' +
+      'Customer Name: ' +
       Name +
-      "\n" +
-      "Address: " +
+      '\n' +
+      'Address: ' +
       Address;
-    alert("Form submitted. We will contact you shortly ;)");
+    alert('Form submitted. We will contact you shortly ;)');
     let messageURI = encodeURI(message);
-    setName("");
-    setMake("");
-    setCode("");
-    setModel("");
-    setAddress("");
-    setWhatsappno("");
+    setName('');
+    setMake('');
+    setCode('');
+    setModel('');
+    setAddress('');
+    setWhatsappno('');
     window
       .open(
         `https://api.whatsapp.com/send?phone=+971551478994&text=${messageURI}`,
-        "_blank"
+        '_blank'
       )
       .focus();
   }
@@ -298,7 +298,7 @@ export default function CarBatteryDubai({ forms }) {
             <div>
               <p className="text-4xl xs:text-base md:text-base lg:text-xl font-extrabold  text-center">
                 <div>
-                  {" "}
+                  {' '}
                   <div>AMARON</div>
                   <Image
                     alt="emirates car"
@@ -317,7 +317,7 @@ export default function CarBatteryDubai({ forms }) {
             <div>
               <p className="text-4xl xs:text-base md:text-base lg:text-xl font-extrabold  text-center">
                 <div>
-                  {" "}
+                  {' '}
                   <div>ACDELCO</div>
                   <Image
                     alt="emirates car"
@@ -328,7 +328,7 @@ export default function CarBatteryDubai({ forms }) {
                 </div>
               </p>
               <p className="text-sm font-bold font-serif text-center pt-5">
-                {" "}
+                {' '}
                 Acdelco battery replacement in UAE are a "on-highly-demanded
                 service" that we came across throughout our orders from
                 different customers.
@@ -337,7 +337,7 @@ export default function CarBatteryDubai({ forms }) {
             <div>
               <p className="text-4xl xs:text-base md:text-base lg:text-xl font-extrabold  text-center">
                 <div>
-                  {" "}
+                  {' '}
                   <div>SOLITE</div>
                   <Image
                     alt="emirates car"
@@ -348,7 +348,7 @@ export default function CarBatteryDubai({ forms }) {
                 </div>
               </p>
               <p className="text-sm font-bold font-serif text-center pt-5">
-                {" "}
+                {' '}
                 Solite automotive batteries in UAE at best price with us are
                 most reliable battery provided with best standards.
               </p>
@@ -356,7 +356,7 @@ export default function CarBatteryDubai({ forms }) {
             <div>
               <p className="text-4xl xs:text-base md:text-base lg:text-xl font-extrabold  text-center">
                 <div>
-                  {" "}
+                  {' '}
                   <div>VARTA</div>
                   <Image
                     alt="emirates car"
@@ -374,7 +374,7 @@ export default function CarBatteryDubai({ forms }) {
             <div>
               <p className="text-4xl font-extrabold  text-center">
                 <div>
-                  {" "}
+                  {' '}
                   <div>SEBANG</div>
                   <Image
                     alt="emirates car"
@@ -394,10 +394,10 @@ export default function CarBatteryDubai({ forms }) {
         </div>
       </div>
       <div className="container mx-auto xl:px-10 xs:px-3 md:px-5 lg:px-6 mt-10">
-        <div className=" brightness-200" style={{ backgroundColor: "yellow" }}>
+        <div className=" brightness-200" style={{ backgroundColor: 'yellow' }}>
           <p
             className="font-extrabold text-5xl xs:text-base md:text-2xl lg:text-2xl text-center p-2"
-            style={{ color: "red" }}
+            style={{ color: 'red' }}
           >
             QUICKLY FILL IN YOUR DETAILS TO GET IT REPLACED ON SPOT!
           </p>
@@ -450,9 +450,9 @@ export default function CarBatteryDubai({ forms }) {
                   <option value="" disabled>
                     Select your Make
                   </option>
-                  {make.map((m) => (
+                  {make.map(m => (
                     <option key={m}>{m}</option>
-                  ))}{" "}
+                  ))}{' '}
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
@@ -485,12 +485,12 @@ export default function CarBatteryDubai({ forms }) {
                     Select your Model
                   </option>
                   {forms
-                    .filter((s) => s.make === Make)
-                    .map((s) => (
+                    .filter(s => s.make === Make)
+                    .map(s => (
                       <option key={s.id} value={s.model}>
-                        {s.model}{" "}
+                        {s.model}{' '}
                       </option>
-                    ))}{" "}
+                    ))}{' '}
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
@@ -595,15 +595,15 @@ export default function CarBatteryDubai({ forms }) {
           </div>
         </form>
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
-              **Make not found above?{" "}
-              <Link href="/get-in-touch">
-                <a>
-                  <nobr className="text-blue-500 text-sm underline">
-                    Get in touch with us {">>"}**
-                  </nobr>
-                </a>
-              </Link>{" "}
-            </div>
+          **Make not found above?{' '}
+          <Link href="/get-in-touch">
+            <a>
+              <nobr className="text-blue-500 text-sm underline">
+                Get in touch with us {'>>'}**
+              </nobr>
+            </a>
+          </Link>{' '}
+        </div>
       </div>
 
       <div className="uppercase bg-blue-300 font-serif p-5 xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-base xs:w-screen s:text-2xl 2xs:text-2xl my-10">
@@ -615,15 +615,15 @@ export default function CarBatteryDubai({ forms }) {
               <a className="underline xs:no-underline hover:text-blue-500">
                 SEARCH BY PART NAME
               </a>
-            </Link>{" "}
+            </Link>{' '}
           </span>
           | &nbsp;
           <span>
             <Link href="/search-by-cities-in-uae">
               <a className="underline xs:no-underline hover:text-blue-500">
-                SEARCH BY CITY{" "}
+                SEARCH BY CITY{' '}
               </a>
-            </Link>{" "}
+            </Link>{' '}
           </span>
           | &nbsp;
           <span>
@@ -631,7 +631,7 @@ export default function CarBatteryDubai({ forms }) {
               <a className="underline xs:no-underline hover:text-blue-500">
                 SEARCH BY MAKE
               </a>
-            </Link>{" "}
+            </Link>{' '}
           </span>
         </div>
       </div>
@@ -804,18 +804,18 @@ export default function CarBatteryDubai({ forms }) {
         <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
           You can search Your spare parts by:
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
-            {" "}
-            <i className="fas fa-car"></i>{" "}
+            {' '}
+            <i className="fas fa-car"></i>{' '}
             <Link href="./search-by-make">Car Make Model</Link>
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
-            {" "}
-            <i className="fas fa-bolt"></i>{" "}
+            {' '}
+            <i className="fas fa-bolt"></i>{' '}
             <Link href="./search-by-part-name">Car Spare parts</Link>
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
-            {" "}
-            <i className="fas fa-map-pin"></i>{" "}
+            {' '}
+            <i className="fas fa-map-pin"></i>{' '}
             <Link href="./search-by-cities-in-uae">Location in UAE</Link>
           </li>
         </p>
@@ -832,13 +832,13 @@ export async function getStaticProps() {
   const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
   const data = await resp.json();
   let uniqueMakeArray = [
-    ...new Map(data.map((item) => [item["make"], item])).values(),
+    ...new Map(data.map(item => [item['make'], item])).values()
   ];
 
   return {
     props: {
       forms,
-      posts: uniqueMakeArray,
-    },
+      posts: uniqueMakeArray
+    }
   };
 }

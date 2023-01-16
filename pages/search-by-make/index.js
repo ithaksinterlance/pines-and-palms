@@ -1,27 +1,27 @@
-import Nav from "../nav";
-import Link from "next/link";
-import Footer from "../footer";
-import Head from "next/head";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import Social from "../Social";
+import Nav from '../nav';
+import Link from 'next/link';
+import Footer from '../footer';
+import Head from 'next/head';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Social from '../Social';
 
 export default function Make({ car, cities, posts, pos }) {
-  const [Year, setYear] = useState("");
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
+  const [Year, setYear] = useState('');
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
 
   const [formPartname, setFormPartname] = useState([]);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [suggestion, setSuggestion] = useState([]);
-  const [Address, setAddress] = useState("");
-  const [searchMake, setSearchMake] = useState("");
-  const [recommend, setRecommend] = useState("");
-  const [formMakeChange, setFormMakeChange] = useState("");
-  const [Name, setName] = useState("");
-  const [Code, setCode] = useState("");
+  const [Address, setAddress] = useState('');
+  const [searchMake, setSearchMake] = useState('');
+  const [recommend, setRecommend] = useState('');
+  const [formMakeChange, setFormMakeChange] = useState('');
+  const [Name, setName] = useState('');
+  const [Code, setCode] = useState('');
 
   useEffect(() => {
     const loadPart = async () => {
@@ -35,16 +35,16 @@ export default function Make({ car, cities, posts, pos }) {
     loadPart();
   }, []);
 
-  const onSuggestionHandler = (text) => {
+  const onSuggestionHandler = text => {
     setText(text);
     setSuggestion([]);
   };
 
-  const onPartFormChange = (text) => {
+  const onPartFormChange = text => {
     let matches = [];
     if (text.length > 0) {
-      matches = formPartname.filter((part) => {
-        const regex = new RegExp(`${text}`, "gi");
+      matches = formPartname.filter(part => {
+        const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
     }
@@ -64,16 +64,16 @@ export default function Make({ car, cities, posts, pos }) {
     loadPart();
   }, []);
 
-  const onMakeSuggestionHandler = (searchMake) => {
+  const onMakeSuggestionHandler = searchMake => {
     setSearchMake(searchMake);
     setRecommend([]);
   };
 
-  const onMakeFormChange = (searchMake) => {
+  const onMakeFormChange = searchMake => {
     let matches = [];
     if (searchMake.length > 0) {
-      matches = formMakeChange.filter((part) => {
-        const regex = new RegExp(`${searchMake}`, "gi");
+      matches = formMakeChange.filter(part => {
+        const regex = new RegExp(`${searchMake}`, 'gi');
         return part.match(regex);
       });
     }
@@ -82,99 +82,99 @@ export default function Make({ car, cities, posts, pos }) {
   };
 
   const ma = [
-    "Ford",
-    "Chrysler",
-    "Citroen",
-    "Hillman",
-    "Chevrolet",
-    "Cadillac",
-    "BMW",
-    "Austin",
-    "Fairthorpe",
-    "Fillmore",
-    "Pontiac",
-    "Studebaker",
-    "Buick",
-    "Rambler",
-    "Plymouth",
-    "Volkswagen",
-    "Jensen",
-    "Oldsmobile",
-    "Mercury",
-    "Dodge",
-    "Shelby",
-    "Porsche",
-    "Toyota",
-    "Mercedes-Benz",
-    "MG",
-    "Nissan",
-    "Honda",
-    "Mazda",
-    "Renault",
-    "Audi",
-    "Lincoln",
-    "Lotus",
-    "Maserati",
-    "Mitsubishi",
-    "Saab",
-    "Subaru",
-    "Suzuki",
-    "Lamborghini",
-    "Merkur",
-    "Land Rover",
-    "Acura",
-    "Lexus",
-    "Eagle",
-    "Alfa Romeo",
-    "Daihatsu",
-    "Geo",
-    "GMC",
-    "Hyundai",
-    "Infiniti",
-    "Isuzu",
-    "Jaguar",
-    "Jeep",
-    "Saturn",
-    "Volvo",
-    "Kia",
-    "Holden",
-    "Corbin",
-    "Daewoo",
-    "MINI",
-    "Maybach",
-    "Scion",
-    "Spyker",
-    "Aston Martin",
-    "Bentley",
-    "Panoz",
-    "Rolls-Royce",
-    "Spyker Cars",
-    "Ferrari",
-    "Hummer",
-    "Morgan",
-    "Peugeot",
-    "Foose",
-    "Aptera",
-    "Smart",
-    "Bugatti",
-    "Tesla",
-    "Ram",
-    "Fiat",
-    "McLaren",
-    "BYD",
-    "McLaren Automotive",
-    "Mobility Ventures LLC",
-    "Pagani",
-    "Roush Performance",
-    "smart",
-    "SRT",
-    "Genesis",
-    "Karma",
-    "Koenigsegg",
-    "RUF Automobile",
-    "STI",
-    "Polestar",
-    "Kandi",
+    'Ford',
+    'Chrysler',
+    'Citroen',
+    'Hillman',
+    'Chevrolet',
+    'Cadillac',
+    'BMW',
+    'Austin',
+    'Fairthorpe',
+    'Fillmore',
+    'Pontiac',
+    'Studebaker',
+    'Buick',
+    'Rambler',
+    'Plymouth',
+    'Volkswagen',
+    'Jensen',
+    'Oldsmobile',
+    'Mercury',
+    'Dodge',
+    'Shelby',
+    'Porsche',
+    'Toyota',
+    'Mercedes-Benz',
+    'MG',
+    'Nissan',
+    'Honda',
+    'Mazda',
+    'Renault',
+    'Audi',
+    'Lincoln',
+    'Lotus',
+    'Maserati',
+    'Mitsubishi',
+    'Saab',
+    'Subaru',
+    'Suzuki',
+    'Lamborghini',
+    'Merkur',
+    'Land Rover',
+    'Acura',
+    'Lexus',
+    'Eagle',
+    'Alfa Romeo',
+    'Daihatsu',
+    'Geo',
+    'GMC',
+    'Hyundai',
+    'Infiniti',
+    'Isuzu',
+    'Jaguar',
+    'Jeep',
+    'Saturn',
+    'Volvo',
+    'Kia',
+    'Holden',
+    'Corbin',
+    'Daewoo',
+    'MINI',
+    'Maybach',
+    'Scion',
+    'Spyker',
+    'Aston Martin',
+    'Bentley',
+    'Panoz',
+    'Rolls-Royce',
+    'Spyker Cars',
+    'Ferrari',
+    'Hummer',
+    'Morgan',
+    'Peugeot',
+    'Foose',
+    'Aptera',
+    'Smart',
+    'Bugatti',
+    'Tesla',
+    'Ram',
+    'Fiat',
+    'McLaren',
+    'BYD',
+    'McLaren Automotive',
+    'Mobility Ventures LLC',
+    'Pagani',
+    'Roush Performance',
+    'smart',
+    'SRT',
+    'Genesis',
+    'Karma',
+    'Koenigsegg',
+    'RUF Automobile',
+    'STI',
+    'Polestar',
+    'Kandi'
   ];
   const make = ma.sort();
   function handleYearChange(event) {
@@ -206,65 +206,75 @@ export default function Make({ car, cities, posts, pos }) {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     const response = fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           Address +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
+          ' ' +
           Year +
-          "\n" +
-          "Part List: " +
+          '\n' +
+          'Part List: ' +
           text,
-        email: Email,
+        email: Email
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
-    alert("Form submitted. We will contact you shortly ;)");
-    setName("");
-    setCode("");
-    setYear("");
-    setMake("");
-    setModel("");
-    setAddress("");
-    setEmail("");
-    setText("");
-    setWhatsappno("");
+    alert('Form submitted. We will contact you shortly ;)');
+    setName('');
+    setCode('');
+    setYear('');
+    setMake('');
+    setModel('');
+    setAddress('');
+    setEmail('');
+    setText('');
+    setWhatsappno('');
   }
   return (
     <div>
       <Nav />
       <Head>
-        <title>Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com</title>
+        <title>
+          Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com
+        </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content={"Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE"}/>
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE'
+          }
+        />
         <meta
           property="og:title"
           content="Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com"
         />
-        <meta name="keywords" content="emirates car, emirates auto parts, emirates car parts, dubai, sharjah, ajman, ras al khaimah, abu dhabi"/>
+        <meta
+          name="keywords"
+          content="emirates car, emirates auto parts, emirates car parts, dubai, sharjah, ajman, ras al khaimah, abu dhabi"
+        />
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
@@ -300,7 +310,8 @@ export default function Make({ car, cities, posts, pos }) {
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
           <main className="mx-10 xs:mx-4 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
             <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
-              <i className="fas fa-car-garage py-5"></i> AUTO SPARE PARTS ONLINE IN UAE
+              <i className="fas fa-car-garage py-5"></i> AUTO SPARE PARTS ONLINE
+              IN UAE
             </h1>
 
             <div className="flex justify-center">
@@ -310,7 +321,7 @@ export default function Make({ car, cities, posts, pos }) {
                   id="partname"
                   type="search"
                   placeholder="Eg. Toyota, Ford, BMW, Audi..."
-                  onChange={(e) => onMakeFormChange(e.target.value)}
+                  onChange={e => onMakeFormChange(e.target.value)}
                   value={searchMake}
                   autoComplete="off"
                   required
@@ -340,22 +351,22 @@ export default function Make({ car, cities, posts, pos }) {
               <nobr className="text-blue-400 no-underline">
                 <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
               </nobr>
-              index{">>>"}
+              index{'>>>'}
             </p>
             <article>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {car.map((post) => (
+                {car.map(post => (
                   <div key={post.id}>
                     <Link
                       href="/search-by-make/[make]"
-                      as={"/search-by-make/" + post.make}
+                      as={'/search-by-make/' + post.make}
                     >
                       <a>
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
                           <div className="flex justify-center">
                             <Image
-                              alt={post.make + " parts uae"}
-                              src={"/img/car-logos/" + post.img}
+                              alt={post.make + ' parts uae'}
+                              src={'/img/car-logos/' + post.img}
                               className="object-scale-down shadow-xl"
                               height={30}
                               width={30}
@@ -371,14 +382,14 @@ export default function Make({ car, cities, posts, pos }) {
               </div>
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
-              **Make not found above?{" "}
+              **Make not found above?{' '}
               <Link href="/get-in-touch">
                 <a>
                   <nobr className="text-blue-500 text-sm underline">
-                    Get in touch with us {">>"}**
+                    Get in touch with us {'>>'}**
                   </nobr>
                 </a>
-              </Link>{" "}
+              </Link>{' '}
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
               <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
@@ -389,7 +400,7 @@ export default function Make({ car, cities, posts, pos }) {
                       <a className="underline hover:text-blue-500 xs:text-sm">
                         SEARCH BY PART NAME
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
@@ -397,7 +408,7 @@ export default function Make({ car, cities, posts, pos }) {
                       <a className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY CITY
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
@@ -405,7 +416,7 @@ export default function Make({ car, cities, posts, pos }) {
                       <a className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY MAKE
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;
                   </span>
                 </div>
@@ -478,9 +489,9 @@ export default function Make({ car, cities, posts, pos }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map((m) => (
+                        {make.map(m => (
                           <option key={m}>{m}</option>
-                        ))}{" "}
+                        ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -513,12 +524,12 @@ export default function Make({ car, cities, posts, pos }) {
                           Select your Model
                         </option>
                         {pos
-                          .filter((s) => s.make === Make)
-                          .map((s) => (
+                          .filter(s => s.make === Make)
+                          .map(s => (
                             <option key={s.id} value={s.model}>
-                              {s.model}{" "}
+                              {s.model}{' '}
                             </option>
-                          ))}{" "}
+                          ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -622,11 +633,11 @@ export default function Make({ car, cities, posts, pos }) {
                       placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
                       rows={5}
                       name="entry.1660104041"
-                      onChange={(e) => onPartFormChange(e.target.value)}
+                      onChange={e => onPartFormChange(e.target.value)}
                       value={text}
                       autoComplete="off"
                       required
-                    />{" "}
+                    />{' '}
                     {suggestion &&
                       suggestion.map((suggestion, i) => (
                         <div
@@ -634,9 +645,9 @@ export default function Make({ car, cities, posts, pos }) {
                           className="cursor-pointer border-gray-400 p-4"
                           onClick={() => onSuggestionHandler(suggestion)}
                         >
-                          {suggestion}{" "}
+                          {suggestion}{' '}
                         </div>
-                      ))}{" "}
+                      ))}{' '}
                   </div>
                 </div>
                 <div className="grid grid-cols-1 pt-3">
@@ -648,8 +659,26 @@ export default function Make({ car, cities, posts, pos }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
-              </div>
+                  <Link href="./privacy-policy">
+                    <a
+                      href="./privacy-policy"
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Privacy policy
+                    </a>
+                  </Link>
+                  &nbsp;
+                  <Link href="./terms-and-condition">
+                    <a
+                      href="./privacy-policy"
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Terms and conditions
+                    </a>
+                  </Link>
+                </div>
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
                 </div>
@@ -659,16 +688,21 @@ export default function Make({ car, cities, posts, pos }) {
               <p className="text-base font-medium text-gray-500 p-5">
                 We deal with any country auto spare parts including japanese,
                 american, german, chinese, indian, Korean, french, british in
-                UAE.You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. We deal in auto spare parts such as{" "}
-                {posts.map((p) => (
+                UAE.You can check our catalogue at{' '}
+                <a
+                  href="https://emirates-car.com/search-by-part-name"
+                  className="text-blue-400 underline"
+                >
+                  https://emirates-car.com/search-by-part-name
+                </a>
+                . We deal in auto spare parts such as{' '}
+                {posts.map(p => (
                   <Link
                     href="/search-by-part-name/[parts]"
-                    as={"/search-by-part-name/" + p.parts}
+                    as={'/search-by-part-name/' + p.parts}
                     key={p.id}
                   >
-                    <a title={p.parts + " uae" }>
-                      {p.parts + " , "}
-                    </a>
+                    <a title={p.parts + ' uae'}>{p.parts + ' , '}</a>
                   </Link>
                 ))}
               </p>
@@ -690,7 +724,13 @@ export default function Make({ car, cities, posts, pos }) {
                 energy.
               </p>
               <p className="text-base font-medium text-gray-500 p-5">
-                We deal in Used / New / Genuine / OEM / Aftermarket auto spare parts in area such as abu dhabi, ras al khaimah, ras al khor, umm al nar, dubai, sharjah, ajman, palm jumeirah in UAE. We are online and accept inquiries through our website and we will get back to you through whatsapp and give you our price list in our quotation. After you are satisfied with our price we will arrange delivery to your convinient locations mentioned.
+                We deal in Used / New / Genuine / OEM / Aftermarket auto spare
+                parts in area such as abu dhabi, ras al khaimah, ras al khor,
+                umm al nar, dubai, sharjah, ajman, palm jumeirah in UAE. We are
+                online and accept inquiries through our website and we will get
+                back to you through whatsapp and give you our price list in our
+                quotation. After you are satisfied with our price we will
+                arrange delivery to your convinient locations mentioned.
               </p>
             </div>
           </main>
@@ -701,13 +741,13 @@ export default function Make({ car, cities, posts, pos }) {
             SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  font-sans">
-            {cities.map((post) => (
+            {cities.map(post => (
               <div key={post.id}>
                 <Link
                   href="/search-by-cities-in-uae/[city]"
-                  as={"/search-by-cities-in-uae/" + post.city}
+                  as={'/search-by-cities-in-uae/' + post.city}
                 >
-                  <a title={"car spare parts " + post.city+ " online"}>
+                  <a title={'car spare parts ' + post.city + ' online'}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 h-full text-gray-500">
                       <i className="fas fa-map-marker-alt"></i> {post.city}
                     </p>
@@ -727,7 +767,7 @@ export async function getStaticProps() {
   const res = await fetch(`https://rozy.vercel.app/api/grooves`);
   const data = await res.json();
   let uniqueObjectArray = [
-    ...new Map(data.map((item) => [item["make"], item])).values(),
+    ...new Map(data.map(item => [item['make'], item])).values()
   ];
 
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
@@ -740,6 +780,6 @@ export async function getStaticProps() {
   const pos = await response.json();
 
   return {
-    props: { car: uniqueObjectArray, cities, posts, pos },
+    props: { car: uniqueObjectArray, cities, posts, pos }
   };
 }
