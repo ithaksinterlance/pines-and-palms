@@ -12,6 +12,7 @@ import Image from 'next/image';
 import Count from './service-countup';
 import Head from 'next/head';
 import Social from './Social';
+import FeaturedHonda from './8th-gen-Honda';
 
 export default function Home({ forms, partsposts, posts, cities }) {
   const [Year, setYear] = useState('');
@@ -55,15 +56,15 @@ export default function Home({ forms, partsposts, posts, cities }) {
     loadPart();
   }, []);
 
-  const onSuggestionHandler = (text) => {
+  const onSuggestionHandler = text => {
     setText(text);
     setSuggestion([]);
   };
 
-  const onPartFormChange = (text) => {
+  const onPartFormChange = text => {
     let matches = [];
     if (text.length > 0) {
-      matches = formPartname.filter((part) => {
+      matches = formPartname.filter(part => {
         const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
@@ -71,10 +72,10 @@ export default function Home({ forms, partsposts, posts, cities }) {
     setSuggestion(matches);
     setText(text);
   };
-  const onCityFormChange = (text) => {
+  const onCityFormChange = text => {
     let matches = [];
     if (text.length > 0) {
-      matches = formCityChange.filter((part) => {
+      matches = formCityChange.filter(part => {
         const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
@@ -95,20 +96,20 @@ export default function Home({ forms, partsposts, posts, cities }) {
     loadPart();
   }, []);
 
-  const onMakeSuggestionHandler = (searchMake) => {
+  const onMakeSuggestionHandler = searchMake => {
     setSearchMake(searchMake);
     setRecommendmake([]);
   };
 
-  const onCitySuggestionHandler = (searchCity) => {
+  const onCitySuggestionHandler = searchCity => {
     setSearchCity(searchCity);
     setRecommendCity([]);
   };
 
-  const onMakeFormChange = (searchMake) => {
+  const onMakeFormChange = searchMake => {
     let matches = [];
     if (searchMake.length > 0) {
-      matches = formMakeChange.filter((part) => {
+      matches = formMakeChange.filter(part => {
         const regex = new RegExp(`${searchMake}`, 'gi');
         return part.match(regex);
       });
@@ -129,7 +130,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 1
   };
 
   const mke = [
@@ -225,7 +226,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
     'RUF Automobile',
     'STI',
     'Polestar',
-    'Kandi',
+    'Kandi'
   ];
   const make = mke.sort();
   function handleYearChange(event) {
@@ -287,11 +288,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
           '\n' +
           'Part List: ' +
           text,
-        email: Email,
+        email: Email
       }),
       headers: {
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json'
+      }
     });
     alert('Form submitted. We will contact you shortly ;)');
     setCode('');
@@ -314,7 +315,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
           property="og:title"
           content="Quick Auto Spare Part Order Online in UAE | Emirates-car.com"
         />
-        <meta name="description" content={"Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE"}/>
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE'
+          }
+        />
         <meta
           name="keywords"
           content="car parts, spare parts, auto spare parts online, best auto parts, auto spare parts in dubai, auto spare parts uae, dubai, sharjah, ajman, ras al khaimah, abu dhabi, car battery replacement"
@@ -352,7 +358,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             id="partname"
             type="search"
             placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
-            onChange={(e) => onPartFormChange(e.target.value)}
+            onChange={e => onPartFormChange(e.target.value)}
             value={text}
             autoComplete="off"
             required
@@ -459,7 +465,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="toyota spare parts in uae"
+                    alt="toyota spare parts sharjah"
                     src="/img/car-logos/toyota.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -480,7 +486,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Mitsubishi spare parts in uae"
+                    alt="Mitsubishi parts dubai"
                     src="/img/car-logos/mitsubishi.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -956,7 +962,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       <option value="" disabled>
                         Select your Make
                       </option>
-                      {make.map((m) => (
+                      {make.map(m => (
                         <option key={m}>{m}</option>
                       ))}{' '}
                     </select>
@@ -994,8 +1000,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
                         Select your Model
                       </option>
                       {forms
-                        .filter((s) => s.make === Make)
-                        .map((s) => (
+                        .filter(s => s.make === Make)
+                        .map(s => (
                           <option key={s.id} value={s.model}>
                             {s.model}{' '}
                           </option>
@@ -1107,7 +1113,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
                     rows={5}
                     name="entry.1660104041"
-                    onChange={(e) => onPartFormChange(e.target.value)}
+                    onChange={e => onPartFormChange(e.target.value)}
                     value={text}
                     autoComplete="off"
                     required
@@ -1176,7 +1182,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             id="partname"
             type="search"
             placeholder="Eg. Toyota, Ford, BMW, Audi..."
-            onChange={(e) => onMakeFormChange(e.target.value)}
+            onChange={e => onMakeFormChange(e.target.value)}
             value={searchMake}
             autoComplete="off"
             required
@@ -1203,7 +1209,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </div>
       </div>
       <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
-        {posts.map((post) => (
+        {posts.map(post => (
           <div key={post.id}>
             <Link
               href="/search-by-make/[make]"
@@ -1240,7 +1246,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             id="partname"
             type="search"
             placeholder="Eg. Abu dhabi, Dubai, Ajman..."
-            onChange={(e) => onCityFormChange(e.target.value)}
+            onChange={e => onCityFormChange(e.target.value)}
             value={searchCity}
             autoComplete="off"
             required
@@ -1257,7 +1263,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   <a
                     href={`https://emirates-car.com/search-by-part-name/${recommendcities}`}
                     rel="noopener noreferrer"
-                    title={"spare parts online in "+recommendcities}
+                    title={'spare parts online in ' + recommendcities}
                     target="_newtab"
                   >
                     {recommendcities}
@@ -1268,7 +1274,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </div>
       </div>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-        {cities.map((post) => (
+        {cities.map(post => (
           <div key={post.id}>
             <Link
               href="/search-by-cities-in-uae/[city]"
@@ -1296,7 +1302,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             id="partname"
             type="search"
             placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
-            onChange={(e) => onPartFormChange(e.target.value)}
+            onChange={e => onPartFormChange(e.target.value)}
             value={text}
             autoComplete="off"
             required
@@ -1323,7 +1329,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </div>
       </div>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-        {partsposts.map((post) => (
+        {partsposts.map(post => (
           <div key={post.id}>
             <Link
               href="/search-by-part-name/[parts]"
@@ -1339,6 +1345,16 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
         ))}{' '}
+      </div>
+
+      <div className="d-flex justify-center text-center pt-10 xs:pt-5 mx-8">
+        <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
+          Deals on Honda Accord 8th Generation Body kit for Sale !
+        </h1>
+        <p className="text-black text-2xl md:text-sm lg:text-lg font-extrabold xs:text-base 2xs:text-xs">
+          2008, 2009, 2010, 2011, 2012 Honda Accord
+        </p>
+        <FeaturedHonda />
       </div>
       <div className="py-6 bg-blue-500">
         <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
@@ -1443,7 +1459,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             Auto spare parts
           </p>
           <div className="grid grid-cols-10 md:grid-cols-7 xs:hidden sm:hidden 2xs:hidden p-3">
-            {posts.map((post) => (
+            {posts.map(post => (
               <div key={post.id}>
                 <Link
                   href="/search-by-make/[make]"
@@ -1457,88 +1473,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 </Link>
               </div>
             ))}
-          </div>
-          <div className="text-center underline text-xs px-3">
-            <a href="http://www.happal.com/">Happal Directory</a>
-            <a
-              href="https://www.ontoplist.com/auto-services/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="https://www.ontoplist.com/images/ontoplist31.png?id=627cdc5911365"
-                alt="Auto Services - OnToplist.com" width="50" height="50"
-                border="0"
-              />
-            </a>
-            <a href="https://list-directories.com/Niche-Directory/Outdoor-Recreation/" target="_blank" rel="noreferrer"> Directory List</a>
-            <a href="https://411freedirectory.com/">411 Free Directory.com</a>
-            <a href="http://www.lemon-directory.com/">Lemon Directory .com</a>
-            <a href="http://www.alive-directory.com/">Alive Directory</a>
-            <a href="http://www.canadawebdir.com/shopping/home_and_garden/">
-              home_and_garden com
-            </a>
-            <a href="http://www.interesting-dir.com/">Interesting Dir</a>
-            <a href="http://car.ellysdirectory.com">car</a>
-            <a href="https://huludirectory.com/">HuLu Directory .com</a>
-            <a href="https://activdirectory.net/">Activ Directory .net</a>
-            <a href="https://upsdirectory.com/">Ups Directory .com</a>
-            <a href="http://www.yellowlinker.com/">
-              YellowLinker - Free Link Directory
-            </a>
-            <a href="http://www.qualityinternetdirectory.com/science_and_technology/information_technology/">qualityinternetdirectory</a>
-            <a href="http://www.brownlinker.com/">
-              BrownLinker - Seo Directory
-            </a>
-            <a href="http://www.craigslistdir.org/">CraigsList Dir.org</a>
-            <a href="http://www.ranaf.com/">Ranaf Directory</a>
-            <a href="http://www.addlinkzfree.com">Add Linkz Free</a>
-            <a href="https://abstractdirectory.net/">Abstract Directory .net</a>
-            <a href="http://www.abstractdirectory.com">Abstract Directory</a>
-            <a
-              href="http://www.transfercases.com/
-"
-            >
-              <b>Transfer Cases for Four Wheel Drive</b>
-            </a>{' '}
-            • Transfercases for Chevy, Dodge, Ford, Hummer and more—Transfer
-            Case Express.
-            <a href="https://www.fruity-directory.com/">Fruity Directory.com</a>
-            <a href="http://www.gtawebdirectory.com">
-              Directory of Toronto and GTA
-            </a>
-            <a href="https://mydirectory.jksfinancial.info" id="R0">
-              Mydirectory Free Web Directory
-            </a>
-            <a href="http://www.addbusiness.net/">Business Directory</a>
-            <a href="https://www.1directory.org/">1Directory.org</a>
-            <a
-              href="http://www.webs.svirski.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              webs.svirski.com Welcome!
-            </a>
-            <a href="/">Quality Web Directory</a>
-            <a href="https://www.greenydirectory.com/">Greeny Directory.com</a>
-            <a href="https://www.sitepromotiondirectory.com/latest-links.html">
-              sitepromotiondirectory.com latest-links
-            </a>
-            <a href="http://www.usawebsitesdirectory.com/computers_and_internet/">
-              http://www.usawebsitesdirectory.com/computers_and_internet/
-            </a>
-            <a href="https://www.gmawebdirectory.com/computers_and_internet/">
-              Web Directory gma
-            </a>
-            <a href="https://www.searchenginelinks.co.uk/">
-              Search Engine Links - Directory of Search Engines
-            </a>
-            <a
-              href="http://www.irkawebpromotions.com/"
-              title="Website Promotion Guide"
-            >
-              Website Promotion Guide
-            </a>
           </div>
 
           <div className="text-center text-purple-200 py-10">
@@ -1566,7 +1500,7 @@ export async function getStaticProps() {
   const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
   const data = await resp.json();
   let uniqueMakeArray = [
-    ...new Map(data.map((item) => [item['make'], item])).values(),
+    ...new Map(data.map(item => [item['make'], item])).values()
   ];
 
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
@@ -1577,7 +1511,7 @@ export async function getStaticProps() {
       forms,
       partsposts,
       posts: uniqueMakeArray,
-      cities,
-    },
+      cities
+    }
   };
 }

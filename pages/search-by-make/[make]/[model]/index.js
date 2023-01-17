@@ -640,6 +640,7 @@ export default function Car({
                         <a>
                           <main className="text-center text-base xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
                             {post.make}&nbsp;{post.model.replace('%2F', '/')}
+                            &nbsp;Parts
                           </main>
                         </a>
                       </Link>
