@@ -5,15 +5,15 @@ const withPWA = require('next-pwa')({
   // scope: '/app',
   // sw: 'service-worker.js',
   //...
-})
+});
 module.exports = withPWA({
   reactStrictMode: true,
   swcMinify: true,
   serverRuntimeConfig: {
-    GOOGLE_MAPS_API_KEY: process.env.MAP_API_KEY,
+    GOOGLE_MAPS_API_KEY: process.env.MAP_API_KEY
   },
   publicRuntimeConfig: {
-    GOOGLE_MAPS_API_KEY: process.env.MAP_API_KEY,
+    GOOGLE_MAPS_API_KEY: process.env.MAP_API_KEY
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -29,7 +29,7 @@ module.exports = withPWA({
         zlib: false,
         net: false,
         tls: false,
-        http:false,
+        http: false,
         stream: false,
         request: false
       };
@@ -40,15 +40,24 @@ module.exports = withPWA({
     return [
       {
         source: '/search-by-cities-in-uae/Dibba',
-        destination: 'https://emirates-car.com/search-by-cities-in-uae/Dibba Al Fujairah (Fujairah)',
-        permanent: true,
-      },
-    ]
+        destination:
+          'https://emirates-car.com/search-by-cities-in-uae/Dibba Al Fujairah (Fujairah)',
+        permanent: true
+      }
+    ];
   },
+  redirects: async () => [
+    {
+      source: '/',
+      has: [{ type: 'host', value: 'www.emirates-car.com' }],
+      destination: 'https://emirates-car.com',
+      permanent: true
+    }
+  ],
   pwa: {
-    dest: "public",
+    dest: 'public',
     register: true,
     skipWaiting: true,
     disable: process.env.NODE_ENV === 'development'
   }
-})
+});
