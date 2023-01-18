@@ -507,7 +507,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Mercedes-benz spare parts in uae"
+                    alt="honda parts sharjah"
                     src="/img/car-logos/mercedesbenz.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -528,7 +528,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="toyota spare parts in uae"
+                    alt="honda parts dubai"
                     src="/img/car-logos/nissan.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -549,7 +549,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Ford spare parts dubai"
+                    alt="honda parts ajman"
                     src="/img/car-logos/Ford.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -570,7 +570,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Hyundai parts dubai"
+                    alt="honda accord spare parts dubai"
                     src="/img/car-logos/hyundai.png"
                     className="object-scale-down shadow-xl"
                     height={30}
@@ -591,7 +591,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <div className="flex justify-center">
                   <Image
-                    alt="Volkswagen"
+                    alt="honda spare parts sharjah"
                     src="/img/car-logos/volkswagon.png"
                     className="object-scale-down shadow-xl"
                     height={30}
