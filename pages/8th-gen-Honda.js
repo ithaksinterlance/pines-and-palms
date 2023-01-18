@@ -1,7 +1,5 @@
 import React from 'react';
-import Slider from 'react-slick';
-import Image from 'next/Image';
-import Link from 'next/link';
+import Image from 'next/image';
 import ABS from '../public/img/honda-eighth-gen/abs.jpg';
 import AirFilter from '../public/img/honda-eighth-gen/air_filter.jpg';
 import AirSuspension from '../public/img/honda-eighth-gen/air_suspension.jpg';
@@ -29,15 +27,6 @@ import SteeringWheel from '../public/img/honda-eighth-gen/steering_wheel.jpg';
 import Wheel from '../public/img/honda-eighth-gen/wheel.jpg';
 
 export default function Honda() {
-  const settings = {
-    arrows: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    speed: 500,
-    fade: true
-  };
-
   const images = [
     {
       images: ABS,
