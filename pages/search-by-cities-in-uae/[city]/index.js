@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Count from '../../service-countup';
 import Social from '../../Social';
+import HondaOfferButton from '../../HondaOfferButton';
 
 export default function City({ data, partspost, posts, makedatas }) {
   const [Year, setYear] = useState('');
@@ -656,8 +657,8 @@ export default function City({ data, partspost, posts, makedatas }) {
                 </div>
               </div>
             </div>
-            <div>
-              <Count />
+            <div className="text-center">
+              <HondaOfferButton />
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 mx-5">
               <h1 className="text-base font-medium text-gray-700 p-5">
@@ -667,8 +668,14 @@ export default function City({ data, partspost, posts, makedatas }) {
                 dealing with auto spare parts for car, heavy truck, van, buses,
                 coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles,
                 Used spare parts, After market parts, Genuine spare parts and
-                New parts etc. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. Contact us for any inquiry. We also deal in
-                brands such as{' '}
+                New parts etc. You can check our catalogue at{' '}
+                <a
+                  href="https://emirates-car.com/search-by-part-name"
+                  className="text-blue-400 underline"
+                >
+                  https://emirates-car.com/search-by-part-name
+                </a>
+                . Contact us for any inquiry. We also deal in brands such as{' '}
                 {makedatas.map(p => (
                   <a key={p.id}>
                     {p.make}
@@ -752,7 +759,8 @@ export default function City({ data, partspost, posts, makedatas }) {
                 >
                   <a title={post.parts + ' in ' + data.city}>
                     <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-700 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
-                      <i className="far fa-compass"></i> {post.parts + " in " + data.city}
+                      <i className="far fa-compass"></i>{' '}
+                      {post.parts + ' in ' + data.city}
                     </p>
                   </a>
                 </Link>

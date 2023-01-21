@@ -1,39 +1,40 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import avatar1 from "../public/img/avatar1.jpeg";
-import avatar2 from "../public/img/avatar2.jpg";
-import avatar3 from "../public/img/avatar3.jpg";
-import Nav from "./nav";
-import Slider from "react-slick";
-import Footer from "./footer";
-import Head from "next/head";
-import Social from "./Social";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import avatar1 from '../public/img/avatar1.jpeg';
+import avatar2 from '../public/img/avatar2.jpg';
+import avatar3 from '../public/img/avatar3.jpg';
+import Nav from './nav';
+import Slider from 'react-slick';
+import Footer from './footer';
+import Head from 'next/head';
+import Social from './Social';
+import HondaOfferButton from './HondaOfferButton';
 
 export default function Forms() {
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
-  const [Partname, setPartname] = useState("");
-  const [Name, setName] = useState("");
-  const [Address, setAddress] = useState("");
-  const [Year, setYear] = useState("");
-  const [Code, setCode] = useState("");
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
+  const [Partname, setPartname] = useState('');
+  const [Name, setName] = useState('');
+  const [Address, setAddress] = useState('');
+  const [Year, setYear] = useState('');
+  const [Code, setCode] = useState('');
 
   const settings = {
     autoplay: true,
     arrows: false,
     centerMode: true,
     autopalySpeed: 3000,
-    dotsClass: "slick-dots",
-    pauseOnHover: "true",
+    dotsClass: 'slick-dots',
+    pauseOnHover: 'true',
     fade: true,
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 1
   };
 
   function handleMakeChange(event) {
@@ -74,61 +75,68 @@ export default function Forms() {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           Address +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
+          ' ' +
           Year +
-          "\n" +
-          "Part List: " +
+          '\n' +
+          'Part List: ' +
           Partname,
-        email: Email,
+        email: Email
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
-    alert("Form submitted. We will contact you shortly ;)");
-    setCode("");
-    setName("");
-    setYear("");
-    setMake("");
-    setModel("");
-    setAddress("");
-    setEmail("");
-    setPartname("");
-    setWhatsappno("");
+    alert('Form submitted. We will contact you shortly ;)');
+    setCode('');
+    setName('');
+    setYear('');
+    setMake('');
+    setModel('');
+    setAddress('');
+    setEmail('');
+    setPartname('');
+    setWhatsappno('');
   }
   return (
     <div>
       <Head>
-        <title>Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com</title>
-        <meta name="description" content={"Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE"}/>
+        <title>
+          Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com
+        </title>
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE'
+          }
+        />
         <meta
           name="keywords"
-          content="car parts, spare parts, auto spare parts online, best auto parts, auto spare parts in dubai, auto spare parts uae, dubai, sharjah, ajman, ras al khaimah, abu dhabi"
+          content="honda accord spare parts sharjah, honda accord spare parts, honda accord 2008 brake pads, honda accord 2009 distributor, honda accord wheel, honda accord 2012 abs, honda accord engine, honda accord gearbox, honda accord axle, honda accord air filter, honda accord carburetor"
         />
         <meta
           property="og:title"
@@ -176,15 +184,15 @@ export default function Forms() {
                 <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
                   SEARCH BY PART NAME
                 </a>
-              </Link>{" "}
+              </Link>{' '}
             </span>
             | &nbsp;
             <span>
               <Link href="/search-by-cities-in-uae">
                 <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
-                  SEARCH BY CITY{" "}
+                  SEARCH BY CITY{' '}
                 </a>
-              </Link>{" "}
+              </Link>{' '}
             </span>
             | &nbsp;
             <span>
@@ -192,9 +200,12 @@ export default function Forms() {
                 <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
                   SEARCH BY MAKE
                 </a>
-              </Link>{" "}
+              </Link>{' '}
             </span>
           </div>
+        </div>
+        <div className="text-center">
+          <HondaOfferButton />
         </div>
 
         <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl ">
@@ -203,7 +214,7 @@ export default function Forms() {
               <div>
                 <p className="text-xl font-bold text-center">
                   <div>
-                    {" "}
+                    {' '}
                     <Image
                       alt="emirates car"
                       className="rounded-full"
@@ -222,7 +233,7 @@ export default function Forms() {
               <div>
                 <p className="text-xl font-bold text-center">
                   <div>
-                    {" "}
+                    {' '}
                     <Image
                       alt="emirates car"
                       className="rounded-full"
@@ -234,7 +245,7 @@ export default function Forms() {
                   Mohammed
                 </p>
                 <p className="text-sm text-center pt-5 text-white">
-                  {" "}
+                  {' '}
                   I replaced my Backup light with their Used backup light. It
                   was just as new and it was good quality too.
                 </p>
@@ -242,7 +253,7 @@ export default function Forms() {
               <div>
                 <p className="text-xl font-bold text-center">
                   <div>
-                    {" "}
+                    {' '}
                     <Image
                       alt="emirates car"
                       className="rounded-full"
@@ -254,7 +265,7 @@ export default function Forms() {
                   Abdul
                 </p>
                 <p className="text-sm text-center pt-5 text-white">
-                  {" "}
+                  {' '}
                   Got my Gearbox, AC Compressor, Battery, Radiator at best deal!
                   It was a very good rate and dealing.
                 </p>
@@ -262,7 +273,7 @@ export default function Forms() {
               <div>
                 <p className="text-xl font-bold text-center">
                   <div>
-                    {" "}
+                    {' '}
                     <Image
                       alt="emirates car"
                       className="rounded-full"
@@ -297,7 +308,7 @@ export default function Forms() {
                 title="auto spare parts dubai"
                 width="100%"
                 height="100%"
-                style={{ border: "0" }}
+                style={{ border: '0' }}
                 allowFullScreen=""
                 loading="lazy"
               ></iframe>

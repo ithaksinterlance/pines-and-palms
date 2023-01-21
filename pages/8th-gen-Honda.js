@@ -189,12 +189,12 @@ export default function Honda() {
   ];
 
   return (
-    <div className="grid grid-cols-5 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
-      <div className=" text-xl xs:text-base h-full bg-red-600 text-white font-sans font-bold">
-        <p className="my-auto">Deals On Honda Accord</p>
-      </div>
+    <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
       {images.map(i => (
-        <div key={i.name} className="border-2 p-5">
+        <div key={i.name} className="border-2 p-5 relative">
+          <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
+            Sale!
+          </sup>
           <p className="text-xl s:text-base xs:text-base font-bold">{i.name}</p>
           <hr className="py-4" />
           <Image src={i.images} alt={i.alt} height={300} width={250} />

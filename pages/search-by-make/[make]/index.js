@@ -4,6 +4,7 @@ import Footer from '../../footer';
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import Social from '../../Social';
+import HondaOfferButton from '../../HondaOfferButton';
 
 export default function Car({ car, cities, make, partspost, posts }) {
   const [Year, setYear] = useState('');
@@ -422,6 +423,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   </nobr>
                 </a>
               </Link>{' '}
+            </div>
+            <div className="text-center">
+              <HondaOfferButton />
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 md:grid md:grid-cols-1 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
               <form

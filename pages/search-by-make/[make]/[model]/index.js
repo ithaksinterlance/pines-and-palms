@@ -8,14 +8,15 @@ import avatar1 from '../../../../public/img/avatar1.jpeg';
 import avatar2 from '../../../../public/img/avatar2.jpg';
 import avatar3 from '../../../../public/img/avatar3.jpg';
 import Head from 'next/head';
-import Count from '../../../service-countup';
+import HondaOfferButton from '../../../HondaOfferButton';
 
 export default function Car({
   make,
   model,
   partspost,
   uniqueMakeArray,
-  makeArray
+  makeArray,
+  description
 }) {
   const [Make, setMake] = useState(make);
   const [Model, setModel] = useState(model);
@@ -727,10 +728,13 @@ export default function Car({
               </div>
             </div>
           </main>
+          <div className="text-center text-xl underline font-bold text-red-600">
+            <HondaOfferButton />
+          </div>
         </div>
         <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 sm:mt-5 lg:mx-2 ">
-            <div className="xs:grid xs:grid-cols-1 text-gray-600 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
+            <div className="xs:grid xs:grid-cols-1 text-gray-900 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
               SEARCH BY PART NAME
             </div>
             {partspost.map(post => (
@@ -782,10 +786,18 @@ export async function getStaticProps({ params }) {
   const data = await resp.json();
   let makeArray = [...new Map(data.map(item => [item['make'], item])).values()];
 
+  const res = await fetch(
+    `https://rozy.vercel.app/api/grooves/${make}/${model}`
+  );
+  const desc = await response.json();
+  const description = [
+    ...new Map(desc.map(item => [item['description'], item])).values()
+  ];
+
   const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
   const partspost = await partsres.json();
 
   return {
-    props: { make, model, partspost, uniqueMakeArray, makeArray }
+    props: { make, model, partspost, uniqueMakeArray, makeArray, description }
   };
 }

@@ -1170,6 +1170,19 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         </div>
       </div>
+      <div
+        className="d-flex justify-center text-center pt-10 xs:pt-5 mx-8"
+        id="honda"
+      >
+        <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
+          Deals on Honda Accord 8th Generation Body kit for
+          <p className="text-red-600 underline">Sale !</p>
+        </h1>
+        <p className="text-black text-2xl md:text-sm lg:text-lg font-extrabold xs:text-base 2xs:text-xs py-5">
+          2008, 2009, 2010, 2011, 2012 Honda Accord
+        </p>
+        <FeaturedHonda />
+      </div>
       <Featured />
       <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10">
         SEARCH BY BRANDS
@@ -1347,21 +1360,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
         ))}{' '}
       </div>
 
-      <div
-        className="d-flex justify-center text-center pt-10 xs:pt-5 mx-8"
-        id="honda"
-      >
-        <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
-          Deals on Honda Accord 8th Generation Body kit for Sale !
-        </h1>
-        <p className="text-black text-2xl md:text-sm lg:text-lg font-extrabold xs:text-base 2xs:text-xs py-5">
-          2008, 2009, 2010, 2011, 2012 Honda Accord
-        </p>
-        <FeaturedHonda />
-        <div className="sticky h-10 my-auto bg-red-600 text-white font-sans font-bold top-5 right-0 rounded-l-full">
-          Deals On Honda Accord
-        </div>
-      </div>
       <div className="py-6 bg-blue-500">
         <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
           <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
