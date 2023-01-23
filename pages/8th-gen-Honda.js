@@ -15,7 +15,6 @@ import GearBox from '../public/img/honda-eighth-gen/gearbox.jpg';
 import Grille from '../public/img/honda-eighth-gen/grille.jpg';
 import Headlight from '../public/img/honda-eighth-gen/headlight.jpg';
 import MasterCylinderKit from '../public/img/honda-eighth-gen/master_cylinder_kit.jpg';
-import MudFlap from '../public/img/honda-eighth-gen/mud_flap.jpg';
 import Radiator from '../public/img/honda-eighth-gen/radiator.jpg';
 import RearBumper from '../public/img/honda-eighth-gen/rear_bumper.jpg';
 import ReverseLight from '../public/img/honda-eighth-gen/reverse_light.jpg';
@@ -25,6 +24,7 @@ import ShockAbsorber from '../public/img/honda-eighth-gen/shock_absorber.jpg';
 import SideMirror from '../public/img/honda-eighth-gen/side_mirror.jpg';
 import SteeringWheel from '../public/img/honda-eighth-gen/steering_wheel.jpg';
 import Wheel from '../public/img/honda-eighth-gen/wheel.jpg';
+import MudFlap from '../public/img/honda-eighth-gen/mud_flap.jpg';
 
 export default function Honda() {
   const images = [
