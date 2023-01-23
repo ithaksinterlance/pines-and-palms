@@ -15,7 +15,7 @@ import GearBox from '../public/img/honda-eighth-gen/gearbox.jpg';
 import Grille from '../public/img/honda-eighth-gen/grille.jpg';
 import Headlight from '../public/img/honda-eighth-gen/headlight.jpg';
 import MasterCylinderKit from '../public/img/honda-eighth-gen/master_cylinder_kit.jpg';
-import MudFlap from '../public/img/honda-eighth-gen/mud_flap.png';
+import MudFlap from '../public/img/honda-eighth-gen/mud_flap.jpg';
 import Radiator from '../public/img/honda-eighth-gen/radiator.jpg';
 import RearBumper from '../public/img/honda-eighth-gen/rear_bumper.jpg';
 import ReverseLight from '../public/img/honda-eighth-gen/reverse_light.jpg';
