@@ -195,11 +195,20 @@ export default function Honda() {
           <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
             Sale!
           </sup>
-          <p className="text-xl s:text-base xs:text-base font-bold">{i.name}</p>
-          <hr className="py-4" />
-          <Image src={i.images} alt={i.alt} height={300} width={250} />
+          <h6>Honda accord {i.name}</h6>
+          <hr className="py-1" />
+          <Image
+            src={i.images}
+            alt={i.alt}
+            height={250}
+            width={250}
+            quality={75}
+            blurDataURL={i.images}
+            placeholder="blur"
+          />
           <a
             href={i.link}
+            title={'Honda accord ' + i.name}
             className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
           >
             Inquire Now

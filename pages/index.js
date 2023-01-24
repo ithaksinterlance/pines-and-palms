@@ -2,12 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Nav from './nav';
 import Hero_img from '../public/img/car-spare-parts.png';
 import Hero from './home_hero';
-import Slider from 'react-slick';
 import Featured from './featured';
 import Link from 'next/link';
-import avatar1 from '../public/img/avatar1.jpeg';
-import avatar2 from '../public/img/avatar2.jpg';
-import avatar3 from '../public/img/avatar3.jpg';
 import Image from 'next/image';
 import Count from './service-countup';
 import Head from 'next/head';
@@ -116,21 +112,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
     }
     setRecommendmake(matches);
     setSearchMake(searchMake);
-  };
-
-  const settings = {
-    autoplay: true,
-    arrows: false,
-    centerMode: true,
-    autopalySpeed: 3000,
-    dotsClass: 'slick-dots',
-    pauseOnHover: 'true',
-    fade: true,
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
   };
 
   const mke = [
@@ -467,10 +448,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="toyota spare parts sharjah"
-                    src="/img/car-logos/toyota.png"
+                    src="/img/car-logos/toyota.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/toyota.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -488,10 +472,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="Mitsubishi parts dubai"
-                    src="/img/car-logos/mitsubishi.png"
+                    src="/img/car-logos/mitsubishi.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/mitsubishi.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -509,10 +496,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="honda parts sharjah"
-                    src="/img/car-logos/mercedesbenz.png"
+                    src="/img/car-logos/mercedesbenz.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/mercedesbenz.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -530,10 +520,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="honda parts dubai"
-                    src="/img/car-logos/nissan.png"
+                    src="/img/car-logos/nissan.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/nissan.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -551,10 +544,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="honda parts ajman"
-                    src="/img/car-logos/Ford.png"
+                    src="/img/car-logos/Ford.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/Ford.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -572,10 +568,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="honda accord spare parts dubai"
-                    src="/img/car-logos/hyundai.png"
+                    src="/img/car-logos/hyundai.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/hyundai.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -593,10 +592,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="honda spare parts sharjah"
-                    src="/img/car-logos/volkswagon.png"
+                    src="/img/car-logos/volkswagon.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/volkswagon.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -614,10 +616,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="Honda"
-                    src="/img/car-logos/honda.png"
+                    src="/img/car-logos/honda.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/honda.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -635,10 +640,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="lexus spare parts sharjah"
-                    src="/img/car-logos/lexus.png"
+                    src="/img/car-logos/lexus.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/lexus.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -656,10 +664,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="toyota spare parts in uae"
-                    src="/img/car-logos/acura.png"
+                    src="/img/car-logos/acura.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/acura.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -677,10 +688,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="Kia spare parts in uae"
-                    src="/img/car-logos/kia.png"
+                    src="/img/car-logos/kia.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/kia.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -698,10 +712,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="porsche spare parts in uae"
-                    src="/img/car-logos/porsche.png"
+                    src="/img/car-logos/porsche.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/porsche.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -719,10 +736,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="Chevrolet spare parts in uae"
-                    src="/img/car-logos/chevrolet.png"
+                    src="/img/car-logos/chevrolet.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/chevrolet.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -740,10 +760,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <div className="flex justify-center">
                   <Image
                     alt="Land Rover spare parts in uae"
-                    src="/img/car-logos/land_rover.png"
+                    src="/img/car-logos/land_rover.jpg"
                     className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
+                    height={50}
+                    width={50}
+                    quality={75}
+                    blurDataURL={'/img/car-logos/land_rover.jpg'}
+                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -786,112 +809,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         </div>
         <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 xl:mx-10 lg:mx-7 md:mx-5 xs:w-screen s:w-screen 2xs:grid 2xs:grid-cols-1 sm:w-auto sm:mx-3 shadow-2xl xs:shadow-none 2xs:shadow-none sm:shadow-sm">
-          <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-full s:w-full xs:py-5 s:py-5 xs:hidden">
-            <Slider {...settings} className="py-10 p-2">
-              <div>
-                <p className="text-xl font-bold text-center">
-                  <div>
-                    {' '}
-                    <Image
-                      alt="emirates car"
-                      className="rounded-full"
-                      src={avatar1}
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  Jamal
-                </p>
-                <p className="text-sm text-center pt-5">
-                  Honestly a genuine dealing it was. The rate was so genuine. My
-                  order received on time.
-                </p>
-              </div>
-              <div>
-                <p className="text-xl font-bold text-center">
-                  <div>
-                    {' '}
-                    <Image
-                      alt="emirates car"
-                      className="rounded-full"
-                      src={avatar2}
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  Mohammed
-                </p>
-                <p className="text-sm text-center pt-5">
-                  {' '}
-                  I replaced my Backup light with their Used backup light. It
-                  was just as new and it was good quality too.
-                </p>
-              </div>
-              <div>
-                <p className="text-xl font-bold text-center">
-                  <div>
-                    {' '}
-                    <Image
-                      alt="emirates car"
-                      className="rounded-full"
-                      src={avatar3}
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  Abdul
-                </p>
-                <p className="text-sm text-center pt-5">
-                  {' '}
-                  Got my Gearbox, AC Compressor, Battery, Radiator at best deal!
-                  It was a very good rate and dealing.
-                </p>
-              </div>
-              <div>
-                <p className="text-xl font-bold text-center">
-                  <div>
-                    {' '}
-                    <Image
-                      alt="emirates car"
-                      className="rounded-full"
-                      src={avatar1}
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  Anonymous
-                </p>
-                <p className="text-sm text-center pt-5">
-                  The dealings was simply world-class. My parts were of good
-                  quality and was very genuine too.
-                </p>
-              </div>
-            </Slider>
-            <div className="py-5 p-10 xs:p-3 s:p-3 sm:p-3">
-              <p className="text-base font-bold text-blue-100 text-center pt-5">
-                EMIRATES-CAR
-              </p>
-              <p className="text-sm text-white text-center pt-5">
-                We are dealing with auto spare parts for car, heavy truck, van,
-                buses, coupe, SUV, prime, Petrol based vehicles, Diesel based
-                vehicles, Used spare parts, After market parts, Genuine spare
-                parts and New parts etc. Contact us for any inquiry.
-              </p>
-            </div>
-
-            <div className="p-5 pt-10 sm:p-3">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722504.3860201286!2d51.71183150969869!3d24.337497293019872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1641654109734!5m2!1sen!2sin"
-                title="auto spare parts dubai"
-                width="100%"
-                height="100%"
-                style={{ border: '0' }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-          <div className="w-2/3 xs:w-auto md:w-auto md:mx-5 s:w-auto s:mx-3 xs:mx-4 2xs:w-auto 2xs:mx-4">
+          <div className="w-full xs:w-auto md:w-auto md:mx-5 s:w-auto s:mx-3 xs:mx-4 2xs:w-auto 2xs:mx-4">
             <form
               id="myForm"
               className="w-full shadow-xl px-8 py-8 xs:px-2 xs:py-3 2xs:px-4 sm:px-4"
@@ -1222,7 +1140,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
+      <div className="grid grid-cols-12 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
         {posts.map(post => (
           <div key={post.id}>
             <Link
@@ -1236,12 +1154,15 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       alt={post.make}
                       src={'/img/car-logos/' + post.img}
                       className="object-scale-down shadow-xl"
-                      height={30}
-                      width={30}
+                      height={50}
+                      width={50}
+                      quality={75}
+                      blurDataURL={'/img/car-logos/' + post.img}
+                      placeholder="blur"
                     />
                     <br />
                   </div>
-                  <p className="text-lg text-center text-gray-500 font-medium hover:text-gray-800">
+                  <p className="text-center text-gray-500 font-medium hover:text-gray-800">
                     {post.make.toUpperCase()}{' '}
                   </p>
                 </main>
@@ -1286,6 +1207,24 @@ export default function Home({ forms, partsposts, posts, cities }) {
               ))}
           </div>
         </div>
+      </div>
+      <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
+        {cities.map(post => (
+          <div key={post.id}>
+            <Link
+              href="/search-by-cities-in-uae/[city]"
+              as={'/search-by-cities-in-uae/' + post.city}
+            >
+              <a>
+                <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
+                  <p className="text-lg text-center text-blue-600 font-medium hover:text-gray-800">
+                    {post.city.toUpperCase()}{' '}
+                  </p>
+                </main>
+              </a>
+            </Link>
+          </div>
+        ))}{' '}
       </div>
 
       <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
@@ -1332,7 +1271,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               href="/search-by-part-name/[parts]"
               as={'/search-by-part-name/' + post.parts}
             >
-              <a>
+              <a title={'Honda accord ' + post.parts}>
                 <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
                   <p className="text-lg text-center text-blue-500 font-medium hover:text-gray-800">
                     {post.parts.toUpperCase()}{' '}
@@ -1360,9 +1299,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <div className="items-center justify-center">
                 <Image
                   src={Hero_img}
-                  alt="spare parts in uae"
+                  alt="car parts uae"
                   height={50}
                   width={50}
+                  quality={75}
+                  blurDataURL={Hero_img}
+                  placeholder="blur"
                 />
               </div>
               <p className="pt-5 text-white font-extrabold">
