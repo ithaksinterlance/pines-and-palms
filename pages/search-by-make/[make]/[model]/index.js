@@ -15,8 +15,7 @@ export default function Car({
   model,
   partspost,
   uniqueMakeArray,
-  makeArray,
-  description
+  makeArray
 }) {
   const [Make, setMake] = useState(make);
   const [Model, setModel] = useState(model);
@@ -786,18 +785,10 @@ export async function getStaticProps({ params }) {
   const data = await resp.json();
   let makeArray = [...new Map(data.map(item => [item['make'], item])).values()];
 
-  const res = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}`
-  );
-  const desc = await response.json();
-  const description = [
-    ...new Map(desc.map(item => [item['description'], item])).values()
-  ];
-
   const partsres = await fetch(`https://rozy.vercel.app/api/parts`);
   const partspost = await partsres.json();
 
   return {
-    props: { make, model, partspost, uniqueMakeArray, makeArray, description }
+    props: { make, model, partspost, uniqueMakeArray, makeArray }
   };
 }
