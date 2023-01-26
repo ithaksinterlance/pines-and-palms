@@ -34,7 +34,7 @@ export default function Make({ car, cities, posts, pos }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onSuggestionHandler = text => {
     setText(text);
@@ -63,7 +63,7 @@ export default function Make({ car, cities, posts, pos }) {
       setFormMakeChange(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onMakeSuggestionHandler = searchMake => {
     setSearchMake(searchMake);
@@ -686,8 +686,8 @@ export default function Make({ car, cities, posts, pos }) {
               </form>
             </div>
             <div className="text-center">
-          <HondaOfferButton />
-        </div>
+              <HondaOfferButton />
+            </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
               <p className="text-base font-medium text-gray-500 p-5">
                 We deal with any country auto spare parts including japanese,

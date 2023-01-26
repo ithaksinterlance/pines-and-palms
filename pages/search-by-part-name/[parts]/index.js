@@ -1,39 +1,39 @@
-import React, { useState, useEffect } from "react";
-import Nav from "../../nav";
-import Footer from "../../footer";
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import Slider from "react-slick";
-import avatar1 from "../../../public/img/avatar1.jpeg";
-import avatar2 from "../../../public/img/avatar2.jpg";
-import avatar3 from "../../../public/img/avatar3.jpg";
-import Social from "../../Social";
+import React, { useState } from 'react';
+import Nav from '../../nav';
+import Footer from '../../footer';
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
+import Slider from 'react-slick';
+import avatar1 from '../../../public/img/avatar1.jpeg';
+import avatar2 from '../../../public/img/avatar2.jpg';
+import avatar3 from '../../../public/img/avatar3.jpg';
+import Social from '../../Social';
 
 export default function Parts({ data, cities, posts }) {
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
-  const [Address, setAddress] = useState("");
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
+  const [Address, setAddress] = useState('');
   const [Partname, setPartname] = useState(data.parts);
-  const [Name, setName] = useState("");
-  const [Year, setYear] = useState("");
-  const [Code, setCode] = useState("");
+  const [Name, setName] = useState('');
+  const [Year, setYear] = useState('');
+  const [Code, setCode] = useState('');
 
   const settings = {
     autoplay: true,
     arrows: false,
     centerMode: true,
     autopalySpeed: 3000,
-    dotsClass: "slick-dots",
-    pauseOnHover: "true",
+    dotsClass: 'slick-dots',
+    pauseOnHover: 'true',
     fade: true,
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 1
   };
 
   function handleMakeChange(event) {
@@ -65,96 +65,109 @@ export default function Parts({ data, cities, posts }) {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     const response = fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           Address +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
+          ' ' +
           Year +
-          "\n" +
-          "Part List: " +
+          '\n' +
+          'Part List: ' +
           Partname,
-        email: Email,
+        email: Email
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
-    alert("Form submitted. We will contact you shortly ;)");
-    setCode("");
-    setName("");
-    setYear("");
-    setMake("");
-    setModel("");
-    setAddress("");
-    setEmail("");
-    setPartname("");
-    setWhatsappno("");
+    alert('Form submitted. We will contact you shortly ;)');
+    setCode('');
+    setName('');
+    setYear('');
+    setMake('');
+    setModel('');
+    setAddress('');
+    setEmail('');
+    setPartname('');
+    setWhatsappno('');
   }
   return (
     <div>
       <Nav />
       <Head>
-        <title>{data.parts} Car Auto Spare Parts Order Online in UAE | Emirates-car.com</title>
+        <title>
+          {data.parts} Car Auto Spare Parts Order Online in UAE |
+          Emirates-car.com
+        </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content={"Buy Online and Get delivered "+ data.parts +" Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE at best price."}/>
+        <meta
+          name="description"
+          content={
+            'Buy Online and Get delivered ' +
+            data.parts +
+            ' Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE at best price.'
+          }
+        />
         <meta
           property="og:title"
-          content={data.parts + " Car Auto Spare Parts  Order Online in UAE | Emirates-car.com"}
+          content={
+            data.parts +
+            ' Car Auto Spare Parts  Order Online in UAE | Emirates-car.com'
+          }
         />
         <meta
           property="keywords"
           content={
             data.parts +
-            " in uae," +
-            "genuine " +
+            ' in uae,' +
+            'genuine ' +
             data.parts +
-            " in uae," +
-            "aftermarket " +
+            ' in uae,' +
+            'aftermarket ' +
             data.parts +
-            " in uae," +
-            "used " +
+            ' in uae,' +
+            'used ' +
             data.parts +
-            " in uae," +
-            "New " +
+            ' in uae,' +
+            'New ' +
             data.parts +
-            " in uae"
+            ' in uae'
           }
         />
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
           content={
-            "https://www.emirates-car.com/search-by-part-name/" + data.parts
+            'https://www.emirates-car.com/search-by-part-name/' + data.parts
           }
         />
         <meta
           property="og:description"
           content={
-            "Secure your " +
+            'Secure your ' +
             data.parts +
-            " from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+            ' from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city.'
           }
         />
         <meta property="og:type" content="website" />
@@ -165,19 +178,22 @@ export default function Parts({ data, cities, posts }) {
         <meta
           property="twitter:url"
           content={
-            "https://www.emirates-car.com/search-by-part-name/" + data.parts
+            'https://www.emirates-car.com/search-by-part-name/' + data.parts
           }
         />
         <meta
           property="twitter:title"
-          content={data.parts + " Car Auto Spare Parts Order Online in UAE | Emirates-car.com"}
+          content={
+            data.parts +
+            ' Car Auto Spare Parts Order Online in UAE | Emirates-car.com'
+          }
         />
         <meta
           property="twitter:description"
           content={
-            "Secure your " +
+            'Secure your ' +
             data.parts +
-            " from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
+            ' from us your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city.'
           }
         />
         <meta
@@ -192,7 +208,7 @@ export default function Parts({ data, cities, posts }) {
               <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
                 FILL OUT THE INQUIRY FOR
                 <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                  &nbsp;{data.parts}{" "}
+                  &nbsp;{data.parts}{' '}
                 </nobr>
                 BELOW
               </div>
@@ -201,9 +217,9 @@ export default function Parts({ data, cities, posts }) {
                   <i className="fal fa-car-garage"></i> Current
                   path:&nbsp;&nbsp;
                 </nobr>
-                index{">>>"}
+                index{'>>>'}
                 {data.parts}
-                {">>>"}
+                {'>>>'}
               </p>
               <div className="uppercase xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10 bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
                 <Social />
@@ -213,7 +229,7 @@ export default function Parts({ data, cities, posts }) {
                       <a className="underline hover:text-blue-500 xs:text-sm">
                         SEARCH BY PART NAME
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
@@ -221,7 +237,7 @@ export default function Parts({ data, cities, posts }) {
                       <a className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY CITY
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
@@ -229,7 +245,7 @@ export default function Parts({ data, cities, posts }) {
                       <a className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY MAKE
                       </a>
-                    </Link>{" "}
+                    </Link>{' '}
                     &nbsp;
                   </span>
                 </div>
@@ -240,7 +256,7 @@ export default function Parts({ data, cities, posts }) {
                     <div>
                       <p className="text-xl font-bold text-center">
                         <div>
-                          {" "}
+                          {' '}
                           <Image
                             alt="emirates car"
                             className="rounded-full"
@@ -259,7 +275,7 @@ export default function Parts({ data, cities, posts }) {
                     <div>
                       <p className="text-xl font-bold text-center">
                         <div>
-                          {" "}
+                          {' '}
                           <Image
                             alt="emirates car"
                             className="rounded-full"
@@ -271,7 +287,7 @@ export default function Parts({ data, cities, posts }) {
                         Mohammed
                       </p>
                       <p className="text-sm text-center pt-5 text-white">
-                        {" "}
+                        {' '}
                         I replaced my Backup light with their Used backup light.
                         It was just as new and it was good quality too.
                       </p>
@@ -279,7 +295,7 @@ export default function Parts({ data, cities, posts }) {
                     <div>
                       <p className="text-xl font-bold text-center">
                         <div>
-                          {" "}
+                          {' '}
                           <Image
                             alt="emirates car"
                             className="rounded-full"
@@ -291,7 +307,7 @@ export default function Parts({ data, cities, posts }) {
                         Abdul
                       </p>
                       <p className="text-sm text-center pt-5 text-white">
-                        {" "}
+                        {' '}
                         Got my Gearbox, AC Compressor, Battery, Radiator at best
                         deal! It was a very good rate and dealing.
                       </p>
@@ -299,7 +315,7 @@ export default function Parts({ data, cities, posts }) {
                     <div>
                       <p className="text-xl font-bold text-center">
                         <div>
-                          {" "}
+                          {' '}
                           <Image
                             alt="emirates car"
                             className="rounded-full"
@@ -332,10 +348,10 @@ export default function Parts({ data, cities, posts }) {
                   <div className="p-5 pt-10">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722504.3860201286!2d51.71183150969869!3d24.337497293019872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1641654109734!5m2!1sen!2sin"
-                      title={data.parts + " parts"}
+                      title={data.parts + ' parts'}
                       width="100%"
                       height="100%"
-                      style={{ border: "0" }}
+                      style={{ border: '0' }}
                       allowFullScreen=""
                       loading="lazy"
                     ></iframe>
@@ -557,18 +573,18 @@ export default function Parts({ data, cities, posts }) {
                 SEARCH BY MAKE
               </p>
               <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
-                {posts.map((post) => (
+                {posts.map(post => (
                   <div key={post.id}>
                     <Link
                       href="/search-by-make/[make]"
-                      as={"/search-by-make/" + post.make}
+                      as={'/search-by-make/' + post.make}
                     >
-                      <a title={ post.make + " "+ data.parts}>
+                      <a title={post.make + ' ' + data.parts}>
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image
-                              alt={post.make + " spare parts"}
-                              src={"/img/car-logos/" + post.img}
+                              alt={post.make + ' spare parts'}
+                              src={'/img/car-logos/' + post.img}
                               className="object-scale-down shadow-xl"
                               height={60}
                               width={60}
@@ -576,7 +592,8 @@ export default function Parts({ data, cities, posts }) {
                             <br />
                           </div>
                           <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                          {data.parts.toUpperCase()} for {post.make.toUpperCase()}
+                            {data.parts.toUpperCase()} for{' '}
+                            {post.make.toUpperCase()}
                           </p>
                         </main>
                       </a>
@@ -589,8 +606,15 @@ export default function Parts({ data, cities, posts }) {
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
-                  abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. We provide
-                  auto spare parts for any vehicles including :
+                  abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
+                  our catalogue at{' '}
+                  <a
+                    href="https://emirates-car.com/search-by-part-name"
+                    className="text-blue-400 underline"
+                  >
+                    https://emirates-car.com/search-by-part-name
+                  </a>
+                  . We provide auto spare parts for any vehicles including :
                   <ul className="list-disc">
                     <li>{data.parts} New auto spare parts in uae</li>
                     <li>{data.parts} Used auto spare parts in uae</li>
@@ -625,15 +649,16 @@ export default function Parts({ data, cities, posts }) {
             SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
           <div className="xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 2xs:w-full s:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 px-5 s:px-3">
-            {cities.map((post) => (
+            {cities.map(post => (
               <div key={post.id}>
                 <Link
                   href="/search-by-cities-in-uae/[city]"
-                  as={"/search-by-cities-in-uae/" + post.city}
+                  as={'/search-by-cities-in-uae/' + post.city}
                 >
-                  <a title={"car spare parts in " + post.city}>
+                  <a title={'car spare parts in ' + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
-                      <i className="far fa-compass"></i> {data.parts} in {post.city}
+                      <i className="far fa-compass"></i> {data.parts} in{' '}
+                      {post.city}
                     </p>
                   </a>
                 </Link>
@@ -650,13 +675,13 @@ export default function Parts({ data, cities, posts }) {
 export async function getStaticPaths() {
   const res = await fetch(`https://rozy.vercel.app/api/parts`);
   const data = await res.json();
-  const paths = data.map((post) => ({
-    params: { parts: post.parts },
+  const paths = data.map(post => ({
+    params: { parts: post.parts }
   }));
 
   return {
     paths,
-    fallback: false,
+    fallback: false
   };
 }
 
@@ -672,16 +697,16 @@ export async function getStaticProps({ params }) {
   const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
   const dat = await resp.json();
   let uniqueMakeArray = [
-    ...new Map(dat.map((item) => [item["make"], item])).values(),
+    ...new Map(dat.map(item => [item['make'], item])).values()
   ];
 
   if (!data) {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 
   return {
-    props: { data, cities, posts: uniqueMakeArray },
+    props: { data, cities, posts: uniqueMakeArray }
   };
 }

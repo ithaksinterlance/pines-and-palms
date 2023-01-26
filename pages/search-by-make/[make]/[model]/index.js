@@ -40,7 +40,7 @@ export default function Car({
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  }, [partspost]);
 
   const onSuggestionHandler = text => {
     setText(text);

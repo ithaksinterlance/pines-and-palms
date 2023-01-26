@@ -32,7 +32,7 @@ export default function City({ cities, data, posts, pos }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onSuggestionHandler = text => {
     setText(text);
@@ -61,7 +61,7 @@ export default function City({ cities, data, posts, pos }) {
       setFormMakeChange(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onMakeSuggestionHandler = searchMake => {
     setSearchMake(searchMake);

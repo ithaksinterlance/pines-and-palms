@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "../nav";
-import Image from "next/image";
-import Link from "next/link";
-import Britain from "../../public/img/icons/united-kingdom.png";
-import Footer from "../footer";
-import Head from "next/head";
-import Count from "../service-countup";
-import Social from "../Social";
+import React, { useState, useEffect } from 'react';
+import Navbar from '../nav';
+import Image from 'next/image';
+import Link from 'next/link';
+import Britain from '../../public/img/icons/united-kingdom.png';
+import Footer from '../footer';
+import Head from 'next/head';
+import Count from '../service-countup';
+import Social from '../Social';
 
 export default function British({ partsposts, posts }) {
-  const [Year, setYear] = useState("");
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
+  const [Year, setYear] = useState('');
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
   const [formPartname, setFormPartname] = useState([]);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [suggestion, setSuggestion] = useState([]);
-  const [Address, setAddress] = useState("");
-  const [Name, setName] = useState("");
-  const [Code, setCode] =useState("");
+  const [Address, setAddress] = useState('');
+  const [Name, setName] = useState('');
+  const [Code, setCode] = useState('');
 
   useEffect(() => {
     const loadPart = async () => {
@@ -31,18 +31,18 @@ export default function British({ partsposts, posts }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  });
 
-  const onSuggestionHandler = (text) => {
+  const onSuggestionHandler = text => {
     setText(text);
     setSuggestion([]);
   };
 
-  const onPartFormChange = (text) => {
+  const onPartFormChange = text => {
     let matches = [];
     if (text.length > 0) {
-      matches = formPartname.filter((part) => {
-        const regex = new RegExp(`${text}`, "gi");
+      matches = formPartname.filter(part => {
+        const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
     }
@@ -50,99 +50,99 @@ export default function British({ partsposts, posts }) {
     setText(text);
   };
   const mke = [
-    "Ford",
-    "Chrysler",
-    "Citroen",
-    "Hillman",
-    "Chevrolet",
-    "Cadillac",
-    "BMW",
-    "Austin",
-    "Fairthorpe",
-    "Fillmore",
-    "Pontiac",
-    "Studebaker",
-    "Buick",
-    "Rambler",
-    "Plymouth",
-    "Volkswagen",
-    "Jensen",
-    "Oldsmobile",
-    "Mercury",
-    "Dodge",
-    "Shelby",
-    "Porsche",
-    "Toyota",
-    "Mercedes-Benz",
-    "MG",
-    "Nissan",
-    "Honda",
-    "Mazda",
-    "Renault",
-    "Audi",
-    "Lincoln",
-    "Lotus",
-    "Maserati",
-    "Mitsubishi",
-    "Saab",
-    "Subaru",
-    "Suzuki",
-    "Lamborghini",
-    "Merkur",
-    "Land Rover",
-    "Acura",
-    "Lexus",
-    "Eagle",
-    "Alfa Romeo",
-    "Daihatsu",
-    "Geo",
-    "GMC",
-    "Hyundai",
-    "Infiniti",
-    "Isuzu",
-    "Jaguar",
-    "Jeep",
-    "Saturn",
-    "Volvo",
-    "Kia",
-    "Holden",
-    "Corbin",
-    "Daewoo",
-    "MINI",
-    "Maybach",
-    "Scion",
-    "Spyker",
-    "Aston Martin",
-    "Bentley",
-    "Panoz",
-    "Rolls-Royce",
-    "Spyker Cars",
-    "Ferrari",
-    "Hummer",
-    "Morgan",
-    "Peugeot",
-    "Foose",
-    "Aptera",
-    "Smart",
-    "Bugatti",
-    "Tesla",
-    "Ram",
-    "Fiat",
-    "McLaren",
-    "BYD",
-    "McLaren Automotive",
-    "Mobility Ventures LLC",
-    "Pagani",
-    "Roush Performance",
-    "smart",
-    "SRT",
-    "Genesis",
-    "Karma",
-    "Koenigsegg",
-    "RUF Automobile",
-    "STI",
-    "Polestar",
-    "Kandi",
+    'Ford',
+    'Chrysler',
+    'Citroen',
+    'Hillman',
+    'Chevrolet',
+    'Cadillac',
+    'BMW',
+    'Austin',
+    'Fairthorpe',
+    'Fillmore',
+    'Pontiac',
+    'Studebaker',
+    'Buick',
+    'Rambler',
+    'Plymouth',
+    'Volkswagen',
+    'Jensen',
+    'Oldsmobile',
+    'Mercury',
+    'Dodge',
+    'Shelby',
+    'Porsche',
+    'Toyota',
+    'Mercedes-Benz',
+    'MG',
+    'Nissan',
+    'Honda',
+    'Mazda',
+    'Renault',
+    'Audi',
+    'Lincoln',
+    'Lotus',
+    'Maserati',
+    'Mitsubishi',
+    'Saab',
+    'Subaru',
+    'Suzuki',
+    'Lamborghini',
+    'Merkur',
+    'Land Rover',
+    'Acura',
+    'Lexus',
+    'Eagle',
+    'Alfa Romeo',
+    'Daihatsu',
+    'Geo',
+    'GMC',
+    'Hyundai',
+    'Infiniti',
+    'Isuzu',
+    'Jaguar',
+    'Jeep',
+    'Saturn',
+    'Volvo',
+    'Kia',
+    'Holden',
+    'Corbin',
+    'Daewoo',
+    'MINI',
+    'Maybach',
+    'Scion',
+    'Spyker',
+    'Aston Martin',
+    'Bentley',
+    'Panoz',
+    'Rolls-Royce',
+    'Spyker Cars',
+    'Ferrari',
+    'Hummer',
+    'Morgan',
+    'Peugeot',
+    'Foose',
+    'Aptera',
+    'Smart',
+    'Bugatti',
+    'Tesla',
+    'Ram',
+    'Fiat',
+    'McLaren',
+    'BYD',
+    'McLaren Automotive',
+    'Mobility Ventures LLC',
+    'Pagani',
+    'Roush Performance',
+    'smart',
+    'SRT',
+    'Genesis',
+    'Karma',
+    'Koenigsegg',
+    'RUF Automobile',
+    'STI',
+    'Polestar',
+    'Kandi'
   ];
   const make = mke.sort();
   function handleYearChange(event) {
@@ -174,71 +174,81 @@ export default function British({ partsposts, posts }) {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     const response = fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           Address +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
+          ' ' +
           Year +
-          "\n" +
-          "Part List: " +
+          '\n' +
+          'Part List: ' +
           text,
-        email: Email,
+        email: Email
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
-    alert("Form submitted. We will contact you shortly ;)");
-    setName("");
-    setCode("");
-    setYear("");
-    setMake("");
-    setModel("");
-    setAddress("");
-    setEmail("");
-    setText("");
-    setWhatsappno("");
+    alert('Form submitted. We will contact you shortly ;)');
+    setName('');
+    setCode('');
+    setYear('');
+    setMake('');
+    setModel('');
+    setAddress('');
+    setEmail('');
+    setText('');
+    setWhatsappno('');
   }
   return (
     <div>
       <Head>
-        <title>Online Britain Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket</title>
+        <title>
+          Online Britain Auto Spare Parts Hunt in UAE - New | Used | Genuine |
+          Aftermarket
+        </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
           content={
-            'Buy Online and Get delivered Britain Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in uae'}
+            'Buy Online and Get delivered Britain Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in uae'
+          }
         />
         <meta
           property="og:title"
           content="Online Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
         />
-                <meta name="keywords" content="British spare parts uae, British auto parts, British car parts"/>
+        <meta
+          name="keywords"
+          content="British spare parts uae, British auto parts, British car parts"
+        />
 
         <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/British-auto-spare-parts" />
+        <meta
+          property="og:url"
+          content="https://www.emirates-car.com/country-vehicles-spare-parts/British-auto-spare-parts"
+        />
         <meta
           property="og:description"
           content="Explore from our immensively large-scale auto spare part website, your New / Used / Genuine / Aftermarket British auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in your city at best price"
@@ -248,7 +258,10 @@ export default function British({ partsposts, posts }) {
           property="og:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
-        <meta property="twitter:url" content="https://www.emirates-car.com/country-vehicles-spare-parts/British-auto-spare-parts" />
+        <meta
+          property="twitter:url"
+          content="https://www.emirates-car.com/country-vehicles-spare-parts/British-auto-spare-parts"
+        />
         <meta
           property="twitter:title"
           content="Online British Auto Spare Parts Hunt in UAE - New | Used | Genuine | Aftermarket"
@@ -291,7 +304,7 @@ export default function British({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Aston Martin
+                        Aston Martin
                       </p>
                     </main>
                   </a>
@@ -312,7 +325,7 @@ export default function British({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Bentley
+                        Bentley
                       </p>
                     </main>
                   </a>
@@ -333,7 +346,7 @@ export default function British({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Jaguar
+                        Jaguar
                       </p>
                     </main>
                   </a>
@@ -354,7 +367,7 @@ export default function British({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Land Rover
+                        Land Rover
                       </p>
                     </main>
                   </a>
@@ -375,7 +388,7 @@ export default function British({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Lotus
+                        Lotus
                       </p>
                     </main>
                   </a>
@@ -396,7 +409,7 @@ export default function British({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      McLaren
+                        McLaren
                       </p>
                     </main>
                   </a>
@@ -417,7 +430,7 @@ export default function British({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Mini
+                        Mini
                       </p>
                     </main>
                   </a>
@@ -438,35 +451,34 @@ export default function British({ partsposts, posts }) {
                         <br />
                       </div>
                       <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Rolls Royce
+                        Rolls Royce
                       </p>
                     </main>
                   </a>
                 </Link>
               </div>
-
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
               <Link href="/get-in-touch">
                 <a>
                   <nobr className="text-blue-500 text-sm underline">
-                    {" "}
-                    Get in touch with us {">>"}**
+                    {' '}
+                    Get in touch with us {'>>'}**
                   </nobr>
                 </a>
-              </Link>{" "}
+              </Link>{' '}
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
-              Explore from our immensively large-scale auto spare part website, your Britain
-              auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck
-              / Buses in Your city in UAE especially in Abu al Bukhoosh,Abu
-              Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al Barsha,Al
-              Dhafra,Al Fujayrah,Al Hamriyah,Al Jazeera Port,Al Jeer Port,Al
-              Mafraq,Al Quoz,Al Sufouh,Ar Ruways,Arzanah Island,Das
+              Explore from our immensively large-scale auto spare part website,
+              your Britain auto spare parts for your Vehicle needs - Car / Jeep
+              / Van / Truck / Buses in Your city in UAE especially in Abu al
+              Bukhoosh,Abu Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al
+              Barsha,Al Dhafra,Al Fujayrah,Al Hamriyah,Al Jazeera Port,Al Jeer
+              Port,Al Mafraq,Al Quoz,Al Sufouh,Ar Ruways,Arzanah Island,Das
               Island,Deira,Dibba,Dubai,Dubai World Central Apt,Esnnad,Sea Port
-              ,Free Port,Habshan,Hail,Hamriya Free Zone Port,Al
-              Jarf Hassyan,Hatta,Sea Port Hulaylah Terminal,Sea Port
+              ,Free Port,Habshan,Hail,Hamriya Free Zone Port,Al Jarf
+              Hassyan,Hatta,Sea Port Hulaylah Terminal,Sea Port
               Indooroodilly,Jebel Ali,Jebel Ali Free Zone,Jebel
               Dhanna,Jumayrah,Kalba,Khalidia,Khor al Fakkan,Masfut,Khalid
               Port,Khalifa City - Abu Dhabi,Mina Rashid Port,Mina Saqr,Mina
@@ -475,36 +487,50 @@ export default function British({ partsposts, posts }) {
               Port,Rak Maritime City,Ras al Khaimah,Ras Al Khor,Al Ras,Reem
               Island,Ruwais = Ar Ruways,Ruwais Port,Sadiyat
               Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
-              Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You can check our catalogue at <a href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">https://emirates-car.com/search-by-part-name</a>. Submit your inquiry to us, our dealer will get back to you based on stock availability.
+              Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
+              can check our catalogue at{' '}
+              <a
+                href="https://emirates-car.com/search-by-part-name"
+                className="text-blue-400 underline"
+              >
+                https://emirates-car.com/search-by-part-name
+              </a>
+              . Submit your inquiry to us, our dealer will get back to you based
+              on stock availability.
             </h1>
             <div className="mx-auto">
-        <Count />
-      </div>
+              <Count />
+            </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
-            <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3"><Social />
-          <div>
-            <span>
-              <Link href="/search-by-part-name">
-                <a className="underline hover:text-blue-500 xs:text-sm">
-                  SEARCH BY PART NAME
-                </a>
-              </Link>{" "}
-              &nbsp;|
-            </span>
-            <span>
-              <Link href="/search-by-cities-in-uae">
-                <a className="underline hover:text-blue-500  xs:text-sm">SEARCH BY CITY</a>
-              </Link>{" "}
-              &nbsp;|
-            </span>
-            <span>
-              <Link href="/search-by-make">
-                <a className="underline hover:text-blue-500  xs:text-sm">SEARCH BY MAKE</a>
-              </Link>{" "}
-              &nbsp;
-            </span>
-          </div>
-        </div>
+              <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+                <Social />
+                <div>
+                  <span>
+                    <Link href="/search-by-part-name">
+                      <a className="underline hover:text-blue-500 xs:text-sm">
+                        SEARCH BY PART NAME
+                      </a>
+                    </Link>{' '}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-cities-in-uae">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY CITY
+                      </a>
+                    </Link>{' '}
+                    &nbsp;|
+                  </span>
+                  <span>
+                    <Link href="/search-by-make">
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY MAKE
+                      </a>
+                    </Link>{' '}
+                    &nbsp;
+                  </span>
+                </div>
+              </div>
               <form
                 id="myForm"
                 className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
@@ -573,9 +599,9 @@ export default function British({ partsposts, posts }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map((m) => (
+                        {make.map(m => (
                           <option key={m}>{m}</option>
-                        ))}{" "}
+                        ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -608,12 +634,12 @@ export default function British({ partsposts, posts }) {
                           Select your Model
                         </option>
                         {posts
-                          .filter((s) => s.make === Make)
-                          .map((s) => (
+                          .filter(s => s.make === Make)
+                          .map(s => (
                             <option key={s.id} value={s.model}>
-                              {s.model}{" "}
+                              {s.model}{' '}
                             </option>
-                          ))}{" "}
+                          ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -628,43 +654,43 @@ export default function British({ partsposts, posts }) {
                   </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-                <div className="flex flex-wrap -mx-3 mb-2">
-                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="Code"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          CODE
-                        </label>
-                        <input
-                          id="Code"
-                          name="entry.44547744"
-                          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                          type="text"
-                          placeholder="Eg. +971, +27 ..."
-                          onChange={handleCodeChange}
-                          value={Code}
-                          required
-                        />
-                      </div>
-                      <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                        <label
-                          htmlFor="whatsappno"
-                          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                        >
-                          WhatsApp no
-                        </label>
-                        <input
-                          id="whatsappno"
-                          name="entry.902626710"
-                          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                          type="text"
-                          placeholder="WhatsApp No"
-                          onChange={handleWhatsAppNoChange}
-                          value={Whatsappno}
-                          required
-                        />
-                      </div>
+                  <div className="flex flex-wrap -mx-3 mb-2">
+                    <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <label
+                        htmlFor="Code"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      >
+                        CODE
+                      </label>
+                      <input
+                        id="Code"
+                        name="entry.44547744"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                        type="text"
+                        placeholder="Eg. +971, +27 ..."
+                        onChange={handleCodeChange}
+                        value={Code}
+                        required
+                      />
+                    </div>
+                    <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                      <label
+                        htmlFor="whatsappno"
+                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                      >
+                        WhatsApp no
+                      </label>
+                      <input
+                        id="whatsappno"
+                        name="entry.902626710"
+                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                        type="text"
+                        placeholder="WhatsApp No"
+                        onChange={handleWhatsAppNoChange}
+                        value={Whatsappno}
+                        required
+                      />
+                    </div>
                   </div>
                   <div>
                     <label
@@ -717,11 +743,11 @@ export default function British({ partsposts, posts }) {
                       placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
                       rows={5}
                       name="entry.1660104041"
-                      onChange={(e) => onPartFormChange(e.target.value)}
+                      onChange={e => onPartFormChange(e.target.value)}
                       value={text}
                       autoComplete="off"
                       required
-                    />{" "}
+                    />{' '}
                     {suggestion &&
                       suggestion.map((suggestion, i) => (
                         <div
@@ -729,9 +755,9 @@ export default function British({ partsposts, posts }) {
                           className="cursor-pointer border-gray-400 p-4"
                           onClick={() => onSuggestionHandler(suggestion)}
                         >
-                          {suggestion}{" "}
+                          {suggestion}{' '}
                         </div>
-                      ))}{" "}
+                      ))}{' '}
                   </div>
                 </div>
                 <div className="grid grid-cols-1 pt-3">
@@ -743,8 +769,26 @@ export default function British({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy" ><a href="./privacy-policy" className="underline" target="_newtab">Privacy policy</a></Link>&nbsp;<Link href="./terms-and-condition" ><a href="./privacy-policy" className="underline" target="_newtab">Terms and conditions</a></Link>
-              </div>
+                  <Link href="./privacy-policy">
+                    <a
+                      href="./privacy-policy"
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Privacy policy
+                    </a>
+                  </Link>
+                  &nbsp;
+                  <Link href="./terms-and-condition">
+                    <a
+                      href="./privacy-policy"
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Terms and conditions
+                    </a>
+                  </Link>
+                </div>
 
                 <div className="flex float-right text-xs text-gray-400 ">
                   100% secure and trusted
@@ -752,7 +796,7 @@ export default function British({ partsposts, posts }) {
               </form>
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10 my-10">
-              {" "}
+              {' '}
               We provide auto spare parts for any Britain vehicles including :
               <ul className="list-disc">
                 <li>New Britain vehicle auto spare parts</li>
@@ -775,7 +819,7 @@ export default function British({ partsposts, posts }) {
             id="partname"
             type="search"
             placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
-            onChange={(e) => onPartFormChange(e.target.value)}
+            onChange={e => onPartFormChange(e.target.value)}
             value={text}
             autoComplete="off"
             required
@@ -794,30 +838,30 @@ export default function British({ partsposts, posts }) {
                     rel="noopener noreferrer"
                     target="_newtab"
                   >
-                    {suggestion}{" "}
+                    {suggestion}{' '}
                   </a>
                 </div>
-              ))}{" "}
+              ))}{' '}
           </div>
         </div>
       </div>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-        {partsposts.map((post) => (
+        {partsposts.map(post => (
           <div key={post.id}>
             <Link
               href="/search-by-cities-in-uae/[city]"
-              as={"/search-by-part-name/" + post.parts}
+              as={'/search-by-part-name/' + post.parts}
             >
-              <a title={post.parts + " in uae"}>
+              <a title={post.parts + ' in uae'}>
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                    {post.parts.toUpperCase()}{" "}
+                    {post.parts.toUpperCase()}{' '}
                   </p>
                 </main>
               </a>
             </Link>
           </div>
-        ))}{" "}
+        ))}{' '}
       </div>
       <Footer />
     </div>
@@ -834,7 +878,7 @@ export async function getStaticProps() {
   return {
     props: {
       partsposts,
-      posts: data,
-    },
+      posts: data
+    }
   };
 }

@@ -39,7 +39,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  });
   useEffect(() => {
     const loadPart = async () => {
       var part = [];
@@ -50,7 +50,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       setFormCityChange(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onSuggestionHandler = text => {
     setText(text);
@@ -90,7 +90,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
       setFormMakeChange(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onMakeSuggestionHandler = searchMake => {
     setSearchMake(searchMake);

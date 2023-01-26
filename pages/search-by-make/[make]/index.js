@@ -32,7 +32,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onSuggestionHandler = text => {
     setText(text);
@@ -63,7 +63,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
       setFormModelChange(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onModelSuggestionHandler = searchModel => {
     setSearchModel(searchModel);

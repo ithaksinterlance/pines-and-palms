@@ -15,22 +15,6 @@ import China from '../public/img/icons/china.png';
 import France from '../public/img/icons/france.png';
 import Link from 'next/link';
 import Hand from '../public/img/hand-wave.png';
-import Slider from 'react-slick';
-
-const settings = {
-  autoplay: true,
-  arrows: false,
-  centerMode: true,
-  autopalySpeed: 500,
-  dotsClass: 'slick-dots',
-  pauseOnHover: 'true',
-  fade: true,
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
 
 export default class home_hero extends Component {
   render() {
@@ -173,7 +157,7 @@ export default class home_hero extends Component {
             </div>
             <div className="grid grid-cols-3 xs:grid xs:grid-cols-3 s:grid s:grid-cols-3 ml-8 xs:py-10 sm:py-10 s:py-10 2xs:py-10 s:mx-5 xs:mx-3 2xs:mx-5">
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:shadow-none s:border-none">
-                <Link href="./country-vehicles-spare-parts/british-auto-spare-parts">
+                <Link href="./spare-parts/british-auto-spare-parts">
                   <a>
                     <Image
                       src={Britain}
@@ -197,7 +181,7 @@ export default class home_hero extends Component {
                 <p className="text-gray-500 text-sm">INDIAN</p>
               </div>
               <div className="text-center border-l-2 border-b-2 border-gray-800 xs:border-none shadow-lg xs:shadow-none s:border-none s:shadow-none">
-                <Link href="./country-vehicles-spare-parts/japanese-auto-spare-parts">
+                <Link href="./spare-parts/japanese-auto-spare-parts">
                   <a>
                     <Image
                       src={Japan}
@@ -211,7 +195,7 @@ export default class home_hero extends Component {
                 </Link>
               </div>
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
-                <Link href="./country-vehicles-spare-parts/korean-auto-spare-parts">
+                <Link href="./spare-parts/korean-auto-spare-parts">
                   <a>
                     <Image
                       src={Korean}
@@ -225,7 +209,7 @@ export default class home_hero extends Component {
                 </Link>
               </div>
               <div className="text-center border-b-2 border-r-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
-                <Link href="./country-vehicles-spare-parts/american-auto-spare-parts">
+                <Link href="./spare-parts/american-auto-spare-parts">
                   <a>
                     <Image
                       src={USA}
@@ -239,11 +223,11 @@ export default class home_hero extends Component {
                 </Link>
               </div>
               <div className="text-center border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
-                <Link href="./country-vehicles-spare-parts/german-auto-spare-parts">
+                <Link href="./spare-parts/german-auto-spare-parts">
                   <a>
                     <Image
                       src={Germany}
-                      alt="germany car auto spare parts"
+                      alt="german car auto spare parts"
                       className="object-scale-down w-full xs:object-fit s:object-fit"
                       height={70}
                       width={70}
@@ -263,7 +247,7 @@ export default class home_hero extends Component {
                 <p className="text-gray-500 text-sm">CHINESE</p>
               </div>
               <div className="text-center shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
-                <Link href="./country-vehicles-spare-parts/french-auto-spare-parts">
+                <Link href="./spare-parts/french-auto-spare-parts">
                   <a>
                     <Image
                       src={France}

@@ -31,7 +31,7 @@ export default function City({ data, partspost, posts, makedatas }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onSuggestionHandler = text => {
     setText(text);

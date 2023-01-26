@@ -30,7 +30,7 @@ export default function Make({ posts, cities, post }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onSuggestionHandler = text => {
     setText(text);
