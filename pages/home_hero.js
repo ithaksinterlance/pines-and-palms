@@ -26,7 +26,7 @@ export default class home_hero extends Component {
               <div className="mt-10 ml-8 max-w-full sm:mt-12 sm:ml-6 md:mt-16 lg:mt-20 lg:ml-1 lg:px-8 xl:mt-28 md:ml-7 xl:ml-20 xs:mt-2 xs:text-left 2xs:mt-2 s:mt-2">
                 <div className="sm:ml-5 lg:text-left xs:text-center">
                   <h1 className="tracking-tight font-extrabold xl:text-6xl sm:text-3xl md:text-4xl lg:text-5xl xs:text-2xl s:text-xl xs:font-sans">
-                    <p className="text-yellow-300 text-6xl font-sans pb-6">
+                    <p className="text-yellow-500 text-6xl font-sans pb-6">
                       Hi{' '}
                       <Image
                         src={Hand}
@@ -45,7 +45,7 @@ export default class home_hero extends Component {
                   <p className="mt-3 text-base text-black sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-sm xl:text-lg s:text-sm 2xs:text-sm font-serif">
                     Dealt in UAE, delivered all over the world.
                   </p>
-                  <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-sm xl:text-lg s:text-sm 2xs:text-sm font-serif">
+                  <p className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-sm xl:text-lg s:text-sm 2xs:text-sm font-serif">
                     We are the best dealer in Auto Spare parts for Cars in UAE.
                     If you are in need of any Spare parts click on Inquire Now.
                   </p>
@@ -61,7 +61,7 @@ export default class home_hero extends Component {
                   <div className="mt-5 sm:mt-8 sm:flex lg:justify-start xs:pb-20 s:pb-20">
                     <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
                       <Link href="/#honda">
-                        <a className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 animate-pulse">
+                        <a className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-red-700 hover:bg-red-900 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 animate-pulse">
                           Best Deals On Honda !! {`>>`}
                         </a>
                       </Link>

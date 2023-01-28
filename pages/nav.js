@@ -22,9 +22,9 @@ export default function Navbar() {
           >
             Emirates-car
           </a>
-          <button
+          <button type="button"
             className="cursor-pointer text-xl px-5 py-5 rounded bg-transparent block xl:hidden outline-none focus:outline-none bg-white text-black"
-            type="button"
+
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
             <FontAwesomeIcon icon={fab} className="text-xl leading-xl" />

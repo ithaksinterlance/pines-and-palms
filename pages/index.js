@@ -337,7 +337,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <div className="pt-3">
           <input
             className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
-            id="partname"
             type="search"
             placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
             onChange={e => onPartFormChange(e.target.value)}
@@ -373,31 +372,42 @@ export default function Home({ forms, partsposts, posts, cities }) {
           ABOUT Emirates-car
         </p>
         <p className="text-lg py-4 sm:mt-5 sm:text-base md:mt-5 md:text-base lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
-          Emirates-car.com is Online platform to Buy/Order Auto spare parts
+          Emirates-car.com is Online platform to Buy / Order Auto spare parts
           Online. We have spare parts for american brand car such as Ford, GMC,
           Cadillac, Chevrolet, Dodge, Chysler and{' '}
-          <a className="text-blue-500 hover:text-blue-800 list-none underline">
-            <Link href="/country-vehicles-spare-parts/american-auto-spare-parts">
-              Other American Brands
-            </Link>
-          </a>
+          <Link
+            href="/spare-parts/american-auto-spare-parts"
+            className="text-blue-700 hover:text-blue-900 list-none underline"
+            title="american car parts"
+          >
+            Other American Brands
+          </Link>
           . Japanese brand cars Such as Toyota, Mitsubishi, Honda, Infinity,
           Daihatsu, Nissan and{' '}
-          <a className="text-blue-500 hover:text-blue-800 list-none underline">
-            <Link href="/country-vehicles-spare-parts/japanese-auto-spare-parts">
+          <a
+            className="text-blue-700 hover:text-blue-900 list-none underline"
+            title="japan car parts"
+          >
+            <Link href="/spare-parts/japanese-auto-spare-parts">
               Other Japanese car brands.
             </Link>
           </a>
           We have spare parts for Korean car brands such as Hyundai, Kia and{' '}
-          <a className="text-blue-500 hover:text-blue-800 list-none underline">
-            <Link href="/country-vehicles-spare-parts/korean-auto-spare-parts">
+          <a
+            className="text-blue-700 hover:text-blue-900 list-none underline"
+            title="korean car parts"
+          >
+            <Link href="/spare-parts/korean-auto-spare-parts">
               Other Korean Car brands
             </Link>
           </a>
           . We have spare parts for german brand car such as Mercedes-Benz, BMW,
           Volkswagen, Land Rover, Porsche, Jaguar, Mini Cooper, and{' '}
-          <a className="text-blue-500 hover:text-blue-800 list-none underline">
-            <Link href="/country-vehicles-spare-parts/german-auto-spare-parts">
+          <a
+            className="text-blue-700 hover:text-blue-900 list-none underline"
+            title="german car parts"
+          >
+            <Link href="/spare-parts/german-auto-spare-parts">
               Other German Car brands.
             </Link>{' '}
           </a>
@@ -417,21 +427,23 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </p>
         <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
           You can search Your spare parts by:
-          <li className="text-blue-500 hover:text-blue-800 list-none underline">
-            {' '}
-            <i className="fas fa-car"></i>{' '}
-            <Link href="./search-by-make">Car Make Model</Link>
-          </li>
-          <li className="text-blue-500 hover:text-blue-800 list-none underline">
-            {' '}
-            <i className="fas fa-bolt"></i>{' '}
-            <Link href="./search-by-part-name">Car Spare parts</Link>
-          </li>
-          <li className="text-blue-500 hover:text-blue-800 list-none underline">
-            {' '}
-            <i className="fas fa-map-pin"></i>{' '}
-            <Link href="./search-by-cities-in-uae">Location in UAE</Link>
-          </li>
+          <ul>
+            <li className="text-blue-700 hover:text-blue-900 list-none underline">
+              {' '}
+              <i className="fas fa-car"></i>{' '}
+              <Link href="./search-by-make">Car Make Model</Link>
+            </li>
+            <li className="text-blue-700 hover:text-blue-900 list-none underline">
+              {' '}
+              <i className="fas fa-bolt"></i>{' '}
+              <Link href="./search-by-part-name">Car Spare parts</Link>
+            </li>
+            <li className="text-blue-700 hover:text-blue-900 list-none underline">
+              {' '}
+              <i className="fas fa-map-pin"></i>{' '}
+              <Link href="./search-by-cities-in-uae">Location in UAE</Link>
+            </li>
+          </ul>
         </p>
       </div>
       <div className="mx-auto py-10">
@@ -455,7 +467,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Toyota
                 </p>
               </main>
@@ -476,7 +488,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Mitsubishi
                 </p>
               </main>
@@ -497,7 +509,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Mercedes-benz
                 </p>
               </main>
@@ -518,7 +530,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Nissan
                 </p>
               </main>
@@ -539,7 +551,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Ford
                 </p>
               </main>
@@ -560,7 +572,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Hyundai
                 </p>
               </main>
@@ -581,7 +593,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Volkswagen spare parts sharjah
                 </p>
               </main>
@@ -602,7 +614,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Honda
                 </p>
               </main>
@@ -623,7 +635,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Lexus
                 </p>
               </main>
@@ -644,7 +656,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Acura
                 </p>
               </main>
@@ -665,7 +677,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Kia
                 </p>
               </main>
@@ -686,7 +698,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Porsche
                 </p>
               </main>
@@ -707,7 +719,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Chevrolet
                 </p>
               </main>
@@ -728,7 +740,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   />
                   <br />
                 </div>
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                <p className="text-xs text-center text-blue-900 font-medium hover:text-gray-900">
                   Land Rover
                 </p>
               </main>
@@ -945,7 +957,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="city"
                     type="text"
                     name="entry.1212961542"
                     placeholder="Mail ID"
@@ -965,7 +976,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   </label>
                   <input
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="city"
                     type="text"
                     name="entry.1212961542"
                     placeholder="(Area, Emirates) or (City, Country)"
@@ -985,7 +995,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   </label>
                   <textarea
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="partname"
                     type="text"
                     placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
                     rows={5}
@@ -1069,7 +1078,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <div className="pt-3">
           <input
             className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
-            id="partname"
             type="search"
             placeholder="Eg. Toyota, Ford, BMW, Audi..."
             onChange={e => onMakeFormChange(e.target.value)}
@@ -1133,7 +1141,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <div className="pt-3">
           <input
             className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
-            id="partname"
             type="search"
             placeholder="Eg. Abu dhabi, Dubai, Ajman..."
             onChange={e => onCityFormChange(e.target.value)}
@@ -1190,7 +1197,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <div className="pt-3">
           <input
             className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
-            id="partname"
             type="search"
             placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
             onChange={e => onPartFormChange(e.target.value)}

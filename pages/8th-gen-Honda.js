@@ -195,7 +195,7 @@ export default function Honda() {
           <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
             Sale!
           </sup>
-          <h6>Honda accord {i.name}</h6>
+          <h1 className="text-base">Honda accord {i.name}</h1>
           <hr className="py-1" />
           <Image
             src={i.images}
