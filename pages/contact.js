@@ -33,7 +33,7 @@ export default function Forms({ posts, pos }) {
       setFormPartname(part);
     };
     loadPart();
-  }, []);
+  });
 
   const onSuggestionHandler = (text) => {
     setText(text);
