@@ -452,9 +452,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/toyota.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -476,9 +473,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/mitsubishi.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -500,9 +494,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/mercedesbenz.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -524,9 +515,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/nissan.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -548,9 +536,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/Ford.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -572,9 +557,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/hyundai.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -596,9 +578,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/volkswagon.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -620,9 +599,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/honda.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -644,9 +620,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/lexus.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -668,9 +641,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/acura.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -692,9 +662,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/kia.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -716,9 +683,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/porsche.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -740,9 +704,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/chevrolet.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -764,9 +725,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     className="object-scale-down shadow-xl"
                     height={50}
                     width={50}
-                    quality={75}
-                    blurDataURL={'/img/car-logos/land_rover.jpg'}
-                    placeholder="blur"
                   />
                   <br />
                 </div>
@@ -1156,9 +1114,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       className="object-scale-down shadow-xl"
                       height={50}
                       width={50}
-                      quality={75}
-                      blurDataURL={'/img/car-logos/' + post.img}
-                      placeholder="blur"
                     />
                     <br />
                   </div>
@@ -1299,12 +1254,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <div className="items-center justify-center">
                 <Image
                   src={Hero_img}
-                  alt="car parts uae"
+                  alt="car parts emirates"
                   height={50}
                   width={50}
-                  quality={75}
-                  blurDataURL={Hero_img}
-                  placeholder="blur"
                 />
               </div>
               <p className="pt-5 text-white font-extrabold">
@@ -1419,7 +1371,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
     </div>
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // forms
   const respo = await fetch(`https://rozy.vercel.app/api/palms`);
   const forms = await respo.json();

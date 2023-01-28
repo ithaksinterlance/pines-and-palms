@@ -71,7 +71,7 @@ export default class home_hero extends Component {
               </div>
             </div>
             <div className="mt-10 sm:mt-12 md:mt-16 lg:mt-5 hero_section_blob xs:hidden s:hidden 2xs:hidden">
-              <Image src={Hero_img} alt="genuine auto spare parts" />
+              <Image src={Hero_img} alt="used parts sharjah" />
             </div>
           </div>
         </div>
@@ -163,8 +163,8 @@ export default class home_hero extends Component {
                       src={Britain}
                       alt="british car auto spare parts"
                       className="object-scale-down w-full xs:object-fit s:object-fit"
-                      height={70}
-                      width={70}
+                      height={50}
+                      width={50}
                     />
                     <p className="text-gray-500 text-sm">BRITAIN</p>
                   </a>
@@ -175,8 +175,8 @@ export default class home_hero extends Component {
                   src={Indian}
                   alt="indian car auto spare parts"
                   className="object-scale-down h-40 w-full xs:object-fit s:object-fit"
-                  height={70}
-                  width={70}
+                  height={50}
+                  width={50}
                 />
                 <p className="text-gray-500 text-sm">INDIAN</p>
               </div>
@@ -187,8 +187,8 @@ export default class home_hero extends Component {
                       src={Japan}
                       alt="japan car auto spare parts"
                       className="object-scale-down w-full xs:object-fit"
-                      height={70}
-                      width={70}
+                      height={50}
+                      width={50}
                     />
                     <p className="text-gray-500 text-sm">JAPANESE</p>
                   </a>
@@ -201,8 +201,8 @@ export default class home_hero extends Component {
                       src={Korean}
                       alt="korean car auto spare parts"
                       className="object-scale-down h-40 w-full xs:object-fit s:object-fit"
-                      height={70}
-                      width={70}
+                      height={50}
+                      width={50}
                     />
                     <p className="text-gray-500 text-sm">KOREAN</p>
                   </a>
@@ -215,8 +215,8 @@ export default class home_hero extends Component {
                       src={USA}
                       alt="united state car auto spare parts"
                       className="object-scale-down w-full xs:object-fit s:object-fit"
-                      height={70}
-                      width={70}
+                      height={50}
+                      width={50}
                     />
                     <p className="text-gray-500 text-sm">USA</p>
                   </a>
@@ -229,8 +229,8 @@ export default class home_hero extends Component {
                       src={Germany}
                       alt="german car auto spare parts"
                       className="object-scale-down w-full xs:object-fit s:object-fit"
-                      height={70}
-                      width={70}
+                      height={50}
+                      width={50}
                     />
                     <p className="text-gray-500 text-sm">GERMAN</p>
                   </a>
@@ -241,8 +241,8 @@ export default class home_hero extends Component {
                   src={China}
                   alt="chinese car auto spare parts"
                   className="object-scale-down w-full xs:object-fit s:object-fit"
-                  height={70}
-                  width={70}
+                  height={50}
+                  width={50}
                 />
                 <p className="text-gray-500 text-sm">CHINESE</p>
               </div>
@@ -253,8 +253,8 @@ export default class home_hero extends Component {
                       src={France}
                       alt="france auto spare parts"
                       className="object-scale-down w-full xs:object-fit s:object-fit"
-                      height={70}
-                      width={70}
+                      height={50}
+                      width={50}
                     />
                     <p className="text-gray-500 text-sm xs:text-xs s:text-xs">
                       FRANCE
