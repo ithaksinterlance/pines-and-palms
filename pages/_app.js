@@ -8,6 +8,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
         <meta
           name="google-site-verification"
           content="2dbXrKrxCBjzz1bLwaw_6nd4YEhhviwPLiGq6fLXPoU"
@@ -50,22 +56,25 @@ function MyApp({ Component, pageProps }) {
         <link rel="shortcut icon" href="/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://emirates-car.com" />
-        <meta name="twitter:title" content="Car spare parts App" />
+        <meta
+          name="twitter:url"
+          content="https://twitter.com/emiratescarpart"
+        />
+        <meta name="twitter:title" content="Emirates Auto Parts" />
         <meta
           name="twitter:description"
-          content="Best App for Ordering Car spare parts"
+          content="We help people Find used , genuine, aftermarket spare parts for their car."
         />
         <meta
           name="twitter:image"
           content="https://emirates-car.com/icon-192x192.png"
         />
-        <meta name="twitter:creator" content="@DavidWShadow" />
+        <meta name="twitter:creator" content="@emiratescarpart" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Car spare parts App" />
         <meta
           property="og:description"
-          content="Best App for Ordering Car spare parts"
+          content="Quick Auto spare parts hunt for any vehicle's need."
         />
         <meta property="og:site_name" content="Emirates auto parts" />
         <meta property="og:url" content="https://emirates-car.com" />
@@ -91,6 +100,7 @@ function MyApp({ Component, pageProps }) {
           src="https://polyfill.io/v3/polyfill.min.js?features=default"
           async
         ></script>
+
         <script
           type="text/javascript" // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
@@ -108,13 +118,7 @@ function MyApp({ Component, pageProps }) {
           }}
         ></script>
       </Head>
-      <Script
-        id="Adsense-id"
-        data-ad-client="ca-pub-9568609421954654"
-        async="true"
-        strategy="beforeInteractive"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      />
+
       <Component {...pageProps} />
     </>
   );

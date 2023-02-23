@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-document-import-in-page */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -36,6 +37,11 @@ class MyDocument extends Document {
               `
             }}
           />
+          <Script
+            language="javascript"
+            src={`https://www.exactseek.com/remote-submit.js`}
+          />
+
           <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>

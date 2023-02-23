@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import Head from "next/head";
+import React, { Component } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
 export default class privacypolicy extends Component {
   render() {
@@ -22,14 +23,14 @@ export default class privacypolicy extends Component {
           We use Your Personal data to provide and improve the Service. By using
           the Service, You agree to the collection and use of information in
           accordance with this Privacy Policy. This Privacy Policy has been
-          created with the help of the{" "}
-          <a
-            href="https://www.termsfeed.com/blog/sample-privacy-policy-template/"
+          created with the help of the{' '}
+          <Link
+            href={`${'https://www.termsfeed.com/blog/sample-privacy-policy-template/'}`}
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
             Privacy Policy Template
-          </a>
+          </Link>
           .
         </p>
         <h1>Interpretation and Definitions</h1>
@@ -115,14 +116,14 @@ export default class privacypolicy extends Component {
           <li>
             <p>
               <strong>Website</strong> refers to Quick Auto Spare Parts Hunt in
-              UAE | Emirates-car.com, accessible from{" "}
-              <a
-                href="https://emirates-car.com"
+              UAE | Emirates-car.com, accessible from{' '}
+              <Link
+                href={`${'https://emirates-car.com'}`}
                 rel="nofollow noopener noreferrer"
                 target="_blank"
               >
                 https://emirates-car.com
-              </a>
+              </Link>
             </p>
           </li>
           <li>
@@ -230,14 +231,14 @@ export default class privacypolicy extends Component {
             Flash Cookies are not managed by the same browser settings as those
             used for Browser Cookies. For more information on how You can delete
             Flash Cookies, please read &quot;Where can I change the settings for
-            disabling, or deleting local shared objects?&quot; available at{" "}
-            <a
-              href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
+            disabling, or deleting local shared objects?&quot; available at{' '}
+            <Link
+              href={`${'https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_'}`}
               rel="nofollow noopener noreferrer"
               target="_blank"
             >
               https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
-            </a>
+            </Link>
           </li>
           <li>
             <strong>Web Beacons.</strong> Certain sections of our Service and
@@ -253,14 +254,14 @@ export default class privacypolicy extends Component {
           Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies.
           Persistent Cookies remain on Your personal computer or mobile device
           when You go offline, while Session Cookies are deleted as soon as You
-          close Your web browser. You can learn more about cookies here:{" "}
-          <a
-            href="https://www.termsfeed.com/privacy-policy-generator/#faq-8"
+          close Your web browser. You can learn more about cookies here:{' '}
+          <Link
+            href={`${'https://www.termsfeed.com/privacy-policy-generator/#faq-8'}`}
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
             Cookies by TermsFeed Generator
-          </a>
+          </Link>
           .
         </p>
         <p>
@@ -558,14 +559,14 @@ export default class privacypolicy extends Component {
           </li>
           <li>
             <p>
-              By visiting this page on our website:{" "}
-              <a
-                href="https://emirates-car.com/contact"
+              By visiting this page on our website:{' '}
+              <Link
+                href={`${'https://emirates-car.com/contact'}`}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
                 https://emirates-car.com/contact
-              </a>
+              </Link>
             </p>
           </li>
         </ul>

@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import Head from "next/head";
+import React, { Component } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
 export default class termsandcondition extends Component {
   render() {
@@ -36,12 +37,12 @@ export default class termsandcondition extends Component {
           "Parties", or "Us", refers to both the Client and ourselves. All terms
           refer to the offer, acceptance and consideration of payment necessary
           to undertake the process of our assistance to the Client in the most
-          appropriate manner for the express purpose of meeting the Client&apos;s
-          needs in respect of provision of the Company&apos;s stated services, in
-          accordance with and subject to, prevailing law of Netherlands. Any use
-          of the above terminology or other words in the singular, plural,
-          capitalization and/or he/she or they, are taken as interchangeable and
-          therefore as referring to same.
+          appropriate manner for the express purpose of meeting the
+          Client&apos;s needs in respect of provision of the Company&apos;s
+          stated services, in accordance with and subject to, prevailing law of
+          Netherlands. Any use of the above terminology or other words in the
+          singular, plural, capitalization and/or he/she or they, are taken as
+          interchangeable and therefore as referring to same.
         </p>
 
         <h3>
@@ -51,15 +52,15 @@ export default class termsandcondition extends Component {
         <p>
           We employ the use of cookies. By accessing Quick Auto Spare Parts Hunt
           in UAE, you agreed to use cookies in agreement with the
-          IT.HAKSINTERLANCE's Privacy Policy.{" "}
+          IT.HAKSINTERLANCE's Privacy Policy.{' '}
         </p>
 
         <p>
-          Most interactive websites use cookies to let us retrieve the user&apos;s
-          details for each visit. Cookies are used by our website to enable the
-          functionality of certain areas to make it easier for people visiting
-          our website. Some of our affiliate/advertising partners may also use
-          cookies.
+          Most interactive websites use cookies to let us retrieve the
+          user&apos;s details for each visit. Cookies are used by our website to
+          enable the functionality of certain areas to make it easier for people
+          visiting our website. Some of our affiliate/advertising partners may
+          also use cookies.
         </p>
 
         <h3>
@@ -91,10 +92,12 @@ export default class termsandcondition extends Component {
 
         <p>
           This Agreement shall begin on the date hereof. Our Terms and
-          Conditions were created with the help of the{" "}
-          <a href="https://www.privacypolicies.com/blog/sample-terms-conditions-template/">
+          Conditions were created with the help of the{' '}
+          <Link
+            href={`https://www.privacypolicies.com/blog/sample-terms-conditions-template/`}
+          >
             Terms And Conditions Template
-          </a>
+          </Link>
           .
         </p>
 
@@ -208,7 +211,8 @@ export default class termsandcondition extends Component {
           These organizations may link to our home page so long as the link: (a)
           is not in any way deceptive; (b) does not falsely imply sponsorship,
           endorsement or approval of the linking party and its products or
-          services; and (c) fits within the context of the linking party&apos;s site.
+          services; and (c) fits within the context of the linking party&apos;s
+          site.
         </p>
 
         <p>
@@ -275,8 +279,8 @@ export default class termsandcondition extends Component {
           We reserve the right to request that you remove all links or any
           particular link to our Website. You approve to immediately remove all
           links to our Website upon request. We also reserve the right to amen
-          these terms and conditions and it&apos;s linking policy at any time. By
-          continuously linking to our Website, you agree to be bound to and
+          these terms and conditions and it&apos;s linking policy at any time.
+          By continuously linking to our Website, you agree to be bound to and
           follow these linking terms and conditions.
         </p>
 

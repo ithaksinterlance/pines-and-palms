@@ -201,6 +201,9 @@ export default function Parts({ data, cities, posts }) {
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
       </Head>
+      <div className="container place-content-center">
+        <h1>{data.parts}</h1>
+      </div>
       <div className="flex xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full s:w-full">
           <main className="mx-10 xs:mx-auto 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
@@ -225,26 +228,29 @@ export default function Parts({ data, cities, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href="/search-by-part-name">
-                      <a className="underline hover:text-blue-500 xs:text-sm">
-                        SEARCH BY PART NAME
-                      </a>
+                    <Link
+                      href={`${'/search-by-part-name'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY PART NAME
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href="/search-by-cities-in-uae">
-                      <a className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY CITY
-                      </a>
+                    <Link
+                      href={`${'/search-by-cities-in-uae'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      Spare parts near me
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href="/search-by-make">
-                      <a className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY MAKE
-                      </a>
+                    <Link
+                      href={`${'/search-by-make'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY MAKE
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -543,24 +549,20 @@ export default function Parts({ data, cities, posts }) {
                       </div>
                     </div>
                     <div className="flex float-left text-xs text-gray-400">
-                      <Link href="./privacy-policy">
-                        <a
-                          href="./privacy-policy"
-                          className="underline"
-                          target="_newtab"
-                        >
-                          Privacy policy
-                        </a>
+                      <Link
+                        href={`${'./privacy-policy'}`}
+                        className="underline"
+                        target="_newtab"
+                      >
+                        Privacy policy
                       </Link>
                       &nbsp;
-                      <Link href="./terms-and-condition">
-                        <a
-                          href="./privacy-policy"
-                          className="underline"
-                          target="_newtab"
-                        >
-                          Terms and conditions
-                        </a>
+                      <Link
+                        href={`${'./terms-and-condition'}`}
+                        className="underline"
+                        target="_newtab"
+                      >
+                        Terms and conditions
                       </Link>
                     </div>
                     <div className="flex float-right text-xs text-gray-400">
@@ -576,44 +578,44 @@ export default function Parts({ data, cities, posts }) {
                 {posts.map(post => (
                   <div key={post.id}>
                     <Link
-                      href="/search-by-make/[make]"
-                      as={'/search-by-make/' + post.make}
+                      href={`${'/search-by-make/[make]'}`}
+                      as={`${'/search-by-make/' + post.make}`}
+                      title={data.parts + ' for ' + post.make}
+                      passHref
                     >
-                      <a title={post.make + ' ' + data.parts}>
-                        <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                          <div className="flex justify-center">
-                            <Image
-                              alt={post.make + ' spare parts'}
-                              src={'/img/car-logos/' + post.img}
-                              className="object-scale-down shadow-xl"
-                              height={60}
-                              width={60}
-                            />
-                            <br />
-                          </div>
-                          <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                            {data.parts.toUpperCase()} for{' '}
-                            {post.make.toUpperCase()}
-                          </p>
-                        </main>
-                      </a>
+                      <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                        <div className="flex justify-center">
+                          <Image
+                            alt={post.make + ' spare parts'}
+                            src={'/img/car-logos/' + post.img}
+                            className="object-scale-down shadow-xl"
+                            height={60}
+                            width={60}
+                          />
+                          <br />
+                        </div>
+                        <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                          {data.parts.toUpperCase()} for{' '}
+                          {post.make.toUpperCase()}
+                        </p>
+                      </main>
                     </Link>
                   </div>
                 ))}
               </div>
               <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
-                <h1 className="text-base font-medium text-gray-500 p-5">
+                <p className="text-base font-medium text-gray-500 p-5">
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
-                  <a
-                    href="https://emirates-car.com/search-by-part-name"
+                  <Link
+                    href={`${'https://emirates-car.com/search-by-part-name'}`}
                     className="text-blue-400 underline"
                   >
                     https://emirates-car.com/search-by-part-name
-                  </a>
+                  </Link>
                   . We provide auto spare parts for any vehicles including :
                   <ul className="list-disc">
                     <li>{data.parts} New auto spare parts in uae</li>
@@ -621,7 +623,7 @@ export default function Parts({ data, cities, posts }) {
                     <li>{data.parts} Genuine auto spare parts in uae</li>
                     <li>{data.parts} Aftermarket auto spare parts in uae</li>
                   </ul>
-                </h1>
+                </p>
                 <p className="text-base font-medium text-gray-500 p-5">
                   UAE Automobile industry is slowly shifting towards a service
                   oriented business model based on consumer data and customer
@@ -652,15 +654,15 @@ export default function Parts({ data, cities, posts }) {
             {cities.map(post => (
               <div key={post.id}>
                 <Link
-                  href="/search-by-cities-in-uae/[city]"
-                  as={'/search-by-cities-in-uae/' + post.city}
+                  href={`${'/search-by-cities-in-uae/[city]'}`}
+                  as={`${'/search-by-cities-in-uae/' + post.city}`}
+                  title={post.city}
+                  passHref
                 >
-                  <a title={'car spare parts in ' + post.city}>
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
-                      <i className="far fa-compass"></i> {data.parts} in{' '}
-                      {post.city}
-                    </p>
-                  </a>
+                  <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
+                    <i className="far fa-compass"></i> {data.parts} in{' '}
+                    {post.city}
+                  </p>
                 </Link>
               </div>
             ))}

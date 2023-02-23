@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import Nav from "./nav";
-import Slider from "react-slick";
-import Link from "next/link";
-import avatar1 from "../public/img/avatar1.jpeg";
-import avatar2 from "../public/img/avatar2.jpg";
-import avatar3 from "../public/img/avatar3.jpg";
-import Hero_img from "../public/img/car-spare-parts.png"
-import Image from "next/image";
-import Head from "next/head";
-import Social from "./Social";
+import React, { useState, useEffect } from 'react';
+import Nav from './nav';
+import Slider from 'react-slick';
+import Link from 'next/link';
+import avatar1 from '../public/img/avatar1.jpeg';
+import avatar2 from '../public/img/avatar2.jpg';
+import avatar3 from '../public/img/avatar3.jpg';
+import Hero_img from '../public/img/car-spare-parts.png';
+import Image from 'next/image';
+import Head from 'next/head';
+import Social from './Social';
 
-export default function Forms({ posts, pos }) {
-  const [Year, setYear] = useState("");
-  const [Make, setMake] = useState("");
-  const [Model, setModel] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Whatsappno, setWhatsappno] = useState("");
+export default function Forms({ posts, pos, po }) {
+  const [Year, setYear] = useState('');
+  const [Make, setMake] = useState('');
+  const [Model, setModel] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Whatsappno, setWhatsappno] = useState('');
   const [formPartname, setFormPartname] = useState([]);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [suggestion, setSuggestion] = useState([]);
-  const [Address, setAddress] = useState("");
-  const [Name, setName] = useState("");
-  const [Code, setCode] = useState("");
+  const [Address, setAddress] = useState('');
+  const [Name, setName] = useState('');
+  const [Code, setCode] = useState('');
 
   useEffect(() => {
     const loadPart = async () => {
@@ -35,16 +35,16 @@ export default function Forms({ posts, pos }) {
     loadPart();
   });
 
-  const onSuggestionHandler = (text) => {
+  const onSuggestionHandler = text => {
     setText(text);
     setSuggestion([]);
   };
 
-  const onPartFormChange = (text) => {
+  const onPartFormChange = text => {
     let matches = [];
     if (text.length > 0) {
-      matches = formPartname.filter((part) => {
-        const regex = new RegExp(`${text}`, "gi");
+      matches = formPartname.filter(part => {
+        const regex = new RegExp(`${text}`, 'gi');
         return part.match(regex);
       });
     }
@@ -56,112 +56,112 @@ export default function Forms({ posts, pos }) {
     arrows: false,
     centerMode: true,
     autopalySpeed: 3000,
-    dotsClass: "slick-dots",
-    pauseOnHover: "true",
+    dotsClass: 'slick-dots',
+    pauseOnHover: 'true',
     fade: true,
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 1
   };
 
   const ma = [
-    "Ford",
-    "Chrysler",
-    "Citroen",
-    "Hillman",
-    "Chevrolet",
-    "Cadillac",
-    "BMW",
-    "Austin",
-    "Fairthorpe",
-    "Fillmore",
-    "Pontiac",
-    "Studebaker",
-    "Buick",
-    "Rambler",
-    "Plymouth",
-    "Volkswagen",
-    "Jensen",
-    "Oldsmobile",
-    "Mercury",
-    "Dodge",
-    "Shelby",
-    "Porsche",
-    "Toyota",
-    "Mercedes-Benz",
-    "MG",
-    "Nissan",
-    "Honda",
-    "Mazda",
-    "Renault",
-    "Audi",
-    "Lincoln",
-    "Lotus",
-    "Maserati",
-    "Mitsubishi",
-    "Saab",
-    "Subaru",
-    "Suzuki",
-    "Lamborghini",
-    "Merkur",
-    "Land Rover",
-    "Acura",
-    "Lexus",
-    "Eagle",
-    "Alfa Romeo",
-    "Daihatsu",
-    "Geo",
-    "GMC",
-    "Hyundai",
-    "Infiniti",
-    "Isuzu",
-    "Jaguar",
-    "Jeep",
-    "Saturn",
-    "Volvo",
-    "HUMMER",
-    "Kia",
-    "Holden",
-    "Corbin",
-    "Daewoo",
-    "MINI",
-    "Maybach",
-    "Scion",
-    "Spyker",
-    "Aston Martin",
-    "Bentley",
-    "Panoz",
-    "Rolls-Royce",
-    "Spyker Cars",
-    "Ferrari",
-    "Hummer",
-    "Morgan",
-    "Peugeot",
-    "Foose",
-    "Aptera",
-    "Smart",
-    "Bugatti",
-    "Tesla",
-    "Ram",
-    "FIAT",
-    "Fiat",
-    "McLaren",
-    "BYD",
-    "McLaren Automotive",
-    "Mobility Ventures LLC",
-    "Pagani",
-    "Roush Performance",
-    "smart",
-    "SRT",
-    "Genesis",
-    "Karma",
-    "Koenigsegg",
-    "RUF Automobile",
-    "STI",
-    "Polestar",
-    "Kandi",
+    'Ford',
+    'Chrysler',
+    'Citroen',
+    'Hillman',
+    'Chevrolet',
+    'Cadillac',
+    'BMW',
+    'Austin',
+    'Fairthorpe',
+    'Fillmore',
+    'Pontiac',
+    'Studebaker',
+    'Buick',
+    'Rambler',
+    'Plymouth',
+    'Volkswagen',
+    'Jensen',
+    'Oldsmobile',
+    'Mercury',
+    'Dodge',
+    'Shelby',
+    'Porsche',
+    'Toyota',
+    'Mercedes-Benz',
+    'MG',
+    'Nissan',
+    'Honda',
+    'Mazda',
+    'Renault',
+    'Audi',
+    'Lincoln',
+    'Lotus',
+    'Maserati',
+    'Mitsubishi',
+    'Saab',
+    'Subaru',
+    'Suzuki',
+    'Lamborghini',
+    'Merkur',
+    'Land Rover',
+    'Acura',
+    'Lexus',
+    'Eagle',
+    'Alfa Romeo',
+    'Daihatsu',
+    'Geo',
+    'GMC',
+    'Hyundai',
+    'Infiniti',
+    'Isuzu',
+    'Jaguar',
+    'Jeep',
+    'Saturn',
+    'Volvo',
+    'HUMMER',
+    'Kia',
+    'Holden',
+    'Corbin',
+    'Daewoo',
+    'MINI',
+    'Maybach',
+    'Scion',
+    'Spyker',
+    'Aston Martin',
+    'Bentley',
+    'Panoz',
+    'Rolls-Royce',
+    'Spyker Cars',
+    'Ferrari',
+    'Hummer',
+    'Morgan',
+    'Peugeot',
+    'Foose',
+    'Aptera',
+    'Smart',
+    'Bugatti',
+    'Tesla',
+    'Ram',
+    'FIAT',
+    'Fiat',
+    'McLaren',
+    'BYD',
+    'McLaren Automotive',
+    'Mobility Ventures LLC',
+    'Pagani',
+    'Roush Performance',
+    'smart',
+    'SRT',
+    'Genesis',
+    'Karma',
+    'Koenigsegg',
+    'RUF Automobile',
+    'STI',
+    'Polestar',
+    'Kandi'
   ];
   const make = ma.sort();
   function handleYearChange(event) {
@@ -193,52 +193,52 @@ export default function Forms({ posts, pos }) {
     const today = new Date();
     const date =
       today.getFullYear() +
-      "-" +
+      '-' +
       (today.getMonth() + 1) +
-      "-" +
+      '-' +
       today.getDate();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + " " + time;
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
     const response = fetch(`/api/g_sheet`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         Timestamp: dateTime,
         brand: Make,
         contact: Code + Whatsappno,
         name: Name,
         description:
-          "Customer Name: " +
+          'Customer Name: ' +
           Name +
-          "\n" +
-          "Address: " +
+          '\n' +
+          'Address: ' +
           Address +
-          "\n" +
-          "Vehicle: " +
+          '\n' +
+          'Vehicle: ' +
           Make +
-          " " +
+          ' ' +
           Model +
-          " " +
+          ' ' +
           Year +
-          "\n" +
-          "Part List: " +
+          '\n' +
+          'Part List: ' +
           text,
-        email: Email,
+        email: Email
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
-    alert("Form submitted. We will contact you shortly ;)");
-    setCode("");
-    setName("");
-    setYear("");
-    setMake("");
-    setModel("");
-    setAddress("");
-    setEmail("");
-    setText("");
-    setWhatsappno("");
+    alert('Form submitted. We will contact you shortly ;)');
+    setCode('');
+    setName('');
+    setYear('');
+    setMake('');
+    setModel('');
+    setAddress('');
+    setEmail('');
+    setText('');
+    setWhatsappno('');
   }
   return (
     <div>
@@ -287,27 +287,30 @@ export default function Forms({ posts, pos }) {
           <div>
             &nbsp;
             <span>
-              <Link href="/search-by-part-name">
-                <a className="underline xs:no-underline hover:text-blue-500">
-                  SEARCH BY PART NAME
-                </a>
-              </Link>{" "}
+              <Link
+                href={`${'/search-by-part-name'}`}
+                className="underline xs:no-underline hover:text-blue-500"
+              >
+                SEARCH BY PART NAME
+              </Link>{' '}
             </span>
             | &nbsp;
             <span>
-              <Link href="/search-by-cities-in-uae">
-                <a className="underline xs:no-underline hover:text-blue-500">
-                  SEARCH BY CITY{" "}
-                </a>
-              </Link>{" "}
+              <Link
+                href={`${'/search-by-cities-in-uae'}`}
+                className="underline xs:no-underline hover:text-blue-500"
+              >
+                SEARCH BY CITY{' '}
+              </Link>{' '}
             </span>
             | &nbsp;
             <span>
-              <Link href="/search-by-make">
-                <a className="underline xs:no-underline hover:text-blue-500">
-                  SEARCH BY MAKE
-                </a>
-              </Link>{" "}
+              <Link
+                href={`${'/search-by-make'}`}
+                className="underline xs:no-underline hover:text-blue-500"
+              >
+                SEARCH BY MAKE
+              </Link>{' '}
             </span>
           </div>
         </div>
@@ -317,7 +320,7 @@ export default function Forms({ posts, pos }) {
               <div>
                 <p className="text-xl font-bold text-center">
                   <div>
-                    {" "}
+                    {' '}
                     <Image
                       alt="emirates car"
                       className="rounded-full"
@@ -336,7 +339,7 @@ export default function Forms({ posts, pos }) {
               <div>
                 <p className="text-xl font-bold text-center">
                   <div>
-                    {" "}
+                    {' '}
                     <Image
                       alt="emirates car"
                       className="rounded-full"
@@ -348,7 +351,7 @@ export default function Forms({ posts, pos }) {
                   Mohammed
                 </p>
                 <p className="text-sm text-center pt-5">
-                  {" "}
+                  {' '}
                   I replaced my Backup light with their Used backup light. It
                   was just as new and it was good quality too.
                 </p>
@@ -356,7 +359,7 @@ export default function Forms({ posts, pos }) {
               <div>
                 <p className="text-xl font-bold text-center">
                   <div>
-                    {" "}
+                    {' '}
                     <Image
                       alt="emirates car"
                       className="rounded-full"
@@ -368,7 +371,7 @@ export default function Forms({ posts, pos }) {
                   Abdul
                 </p>
                 <p className="text-sm text-center pt-5">
-                  {" "}
+                  {' '}
                   Got my Gearbox, AC Compressor, Battery, Radiator at best deal!
                   It was a very good rate and dealing.
                 </p>
@@ -376,7 +379,7 @@ export default function Forms({ posts, pos }) {
               <div>
                 <p className="text-xl font-bold text-center">
                   <div>
-                    {" "}
+                    {' '}
                     <Image
                       alt="emirates car"
                       className="rounded-full"
@@ -411,7 +414,7 @@ export default function Forms({ posts, pos }) {
                 title="auto spare parts dubai"
                 width="100%"
                 height="100%"
-                style={{ border: "0" }}
+                style={{ border: '0' }}
                 allowFullScreen=""
                 loading="lazy"
               ></iframe>
@@ -486,7 +489,7 @@ export default function Forms({ posts, pos }) {
                       <option value="" disabled>
                         Select your Make
                       </option>
-                      {make.map((m) => (
+                      {make.map(m => (
                         <option key={m}>{m}</option>
                       ))}
                     </select>
@@ -523,8 +526,8 @@ export default function Forms({ posts, pos }) {
                         Select your Model
                       </option>
                       {posts
-                        .filter((s) => s.make === Make)
-                        .map((s) => (
+                        .filter(s => s.make === Make)
+                        .map(s => (
                           <option key={s.id} value={s.model}>
                             {s.model}
                           </option>
@@ -634,7 +637,7 @@ export default function Forms({ posts, pos }) {
                     placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
                     rows={5}
                     name="entry.1660104041"
-                    onChange={(e) => onPartFormChange(e.target.value)}
+                    onChange={e => onPartFormChange(e.target.value)}
                     value={text}
                     autoComplete="off"
                     required
@@ -662,24 +665,20 @@ export default function Forms({ posts, pos }) {
                 </div>
               </div>
               <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy">
-                  <a
-                    href="./privacy-policy"
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Privacy policy
-                  </a>
+                <Link
+                  href={`${'./privacy-policy'}`}
+                  className="underline"
+                  target="_newtab"
+                >
+                  Privacy policy
                 </Link>
                 &nbsp;
-                <Link href="./terms-and-condition">
-                  <a
-                    href="./privacy-policy"
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Terms and conditions
-                  </a>
+                <Link
+                  href={`${'./terms-and-condition'}`}
+                  className="underline"
+                  target="_newtab"
+                >
+                  Terms and conditions
                 </Link>
               </div>
 
@@ -693,9 +692,9 @@ export default function Forms({ posts, pos }) {
       <div className="py-6 bg-blue-500">
         <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
           <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
-            COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{" "}
-            <Link href="/contact">
-              <a className="underline text-blue-900">CONTACT US NOW {">>"}</a>
+            COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
+            <Link href={`${'/contact'}`} className="underline text-blue-900">
+              CONTACT US NOW
             </Link>
           </h1>
         </div>
@@ -703,7 +702,14 @@ export default function Forms({ posts, pos }) {
         <div className=" bg-purple-700 py-10 xs:py-5 2xs:py-5 sm:py-5">
           <div className="grid grid-cols-3 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 ">
             <div className="text-center">
-            <div className="items-center justify-center"><Image src={Hero_img} alt="spare parts in uae" height={50} width={50}/></div>
+              <div className="items-center justify-center">
+                <Image
+                  src={Hero_img}
+                  alt="spare parts in uae"
+                  height={50}
+                  width={50}
+                />
+              </div>
               <p className="pt-5 text-white font-extrabold">
                 ABOUT Emirates-car
               </p>
@@ -722,31 +728,36 @@ export default function Forms({ posts, pos }) {
                   href="https://www.facebook.com/emirates.auto.parts"
                 >
                   <i className="fab fa-2x fa-facebook"></i>
-                </a>&nbsp;
+                </a>
+                &nbsp;
                 <a
                   className="text-xl leading-xl text-purple-900"
                   href="https://www.instagram.com/emiratescar_parts/"
                 >
                   <i className="fab fa-2x fa-instagram"></i>
-                </a>&nbsp;
+                </a>
+                &nbsp;
                 <a
                   className="text-xl leading-xl text-black"
                   href="https://emirates-car.tumblr.com/"
                 >
                   <i className="fab fa-2x fa-tumblr"></i>
-                </a>&nbsp;
+                </a>
+                &nbsp;
                 <a
                   className="text-xl leading-xl text-blue-300"
                   href="https://twitter.com/uaeautoparts"
                 >
                   <i className="fab fa-2x fa-twitter"></i>
-                </a>&nbsp;
+                </a>
+                &nbsp;
                 <a
                   className="text-xl leading-xl text-red-700"
                   href="https://in.pinterest.com/emiratesautomobileparts/"
                 >
                   <i className="fab fa-2x fa-pinterest"></i>
-                </a>&nbsp;
+                </a>
+                &nbsp;
                 <a
                   className="text-xl leading-xl text-blue-500"
                   href="https://in.pinterest.com/emiratesautomobileparts/"
@@ -758,49 +769,56 @@ export default function Forms({ posts, pos }) {
 
             <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
               <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
-              <Link href="/search-by-part-name">
-                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                  Search parts by part name in UAE
-                </a>
-              </Link><br/>
-              <Link href="/search-by-make">
-                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                  Search parts by Car make in UAE
-                </a>
-              </Link><br/>
-              <Link href="/search-by-cities-in-uae">
-                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                  Search parts by cities in UAE
-                </a>
+              <Link
+                href={`${'/search-by-part-name'}`}
+                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              >
+                Search parts by part name in UAE
+              </Link>
+              <br />
+              <Link
+                href={`${'/search-by-make'}`}
+                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              >
+                Search parts by Car make in UAE
+              </Link>
+              <br />
+              <Link
+                href={`${'/search-by-cities-in-uae'}`}
+                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              >
+                Search parts by cities in UAE
               </Link>
             </div>
           </div>
-          <p className="pt-5 text-white font-extrabold text-center xs:hidden sm:hidden 2xs:hidden">Auto spare parts</p>
+          <p className="pt-5 text-white font-extrabold text-center xs:hidden sm:hidden 2xs:hidden">
+            Auto spare parts
+          </p>
           <div className="grid grid-cols-10 md:grid-cols-7 xs:hidden sm:hidden 2xs:hidden p-3">
-            {posts.map((post) => (
+            {po.map(post => (
               <div key={post.id}>
                 <Link
-                  href="/search-by-make/[make]"
-                  as={"/search-by-make/" + post.make}
+                  href={`${'/search-by-make/[make]'}`}
+                  as={`${'/search-by-make/' + post.make}`}
+                  passHref
                 >
-                  <a>
-                    <p className="text-xs text-white font-medium hover:text-gray-800 underline">
-                      {post.make + " spare parts"}{" "}
-                    </p>
-                  </a>
+                  <p className="text-xs text-white font-medium hover:text-gray-800 underline">
+                    {post.make + ' spare parts'}{' '}
+                  </p>
                 </Link>
               </div>
             ))}
           </div>
 
           <div className="text-center text-purple-200 py-10">
-            <a
-              href="https://emirates-car.com"
+            <Link
+              href={`${'https://emirates-car.com'}`}
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              target="_newtab"
             >
               <i className="fa fa-copyright" aria-hidden="true"></i>
-              Copyright © 2022 Emirates-car. All rights reserved.
-            </a>
+              Copyright © 2023 Emirates-car. All rights reserved.
+            </Link>
           </div>
         </div>
       </div>
@@ -811,11 +829,14 @@ export default function Forms({ posts, pos }) {
 export async function getStaticProps() {
   const res = await fetch(`https://rozy.vercel.app/api/palms`);
   const posts = await res.json();
+  let uniqueMakeArray = [
+    ...new Map(posts.map(item => [item['make'], item])).values()
+  ];
 
   const resp = await fetch(`https://rozy.vercel.app/api/parts`);
   const pos = await resp.json();
 
   return {
-    props: { posts, pos },
+    props: { posts, pos, po: uniqueMakeArray }
   };
 }

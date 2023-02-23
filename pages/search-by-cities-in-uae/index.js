@@ -337,13 +337,13 @@ export default function City({ cities, data, posts, pos }) {
                           onClick={() => onMakeSuggestionHandler(recommend)}
                           width="100%"
                         >
-                          <a
+                          <Link
                             href={`https://emirates-car.com/search-by-cities-in-uae/${recommend}`}
                             rel="noopener noreferrer"
                             target="_newtab"
                           >
                             {recommend}
-                          </a>
+                          </Link>
                         </div>
                       ))}
                   </div>
@@ -361,16 +361,15 @@ export default function City({ cities, data, posts, pos }) {
                 {cities.map(post => (
                   <div key={post.id}>
                     <Link
-                      href="/search-by-cities-in-uae/[city]"
-                      as={'/search-by-cities-in-uae/' + post.city}
+                      href={`${'/search-by-cities-in-uae/[city]'}`}
+                      as={`${'/search-by-cities-in-uae/' + post.city}`}
+                      title={'car spare parts ' + post.city}
                     >
-                      <a title={'car spare parts in ' + post.city}>
-                        <main className="border border-blue-800 h-full p-3 ">
-                          <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
-                            {post.city}
-                          </p>
-                        </main>
-                      </a>
+                      <main className="border border-blue-800 h-full p-3 ">
+                        <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
+                          {post.city}
+                        </p>
+                      </main>
                     </Link>
                   </div>
                 ))}
@@ -614,24 +613,20 @@ export default function City({ cities, data, posts, pos }) {
                     </button>
                   </div>
                   <div className="flex float-left text-xs text-gray-400">
-                    <Link href="./privacy-policy">
-                      <a
-                        href="./privacy-policy"
-                        className="underline"
-                        target="_newtab"
-                      >
-                        Privacy policy
-                      </a>
+                    <Link
+                      href={`${'./privacy-policy'}`}
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Privacy policy
                     </Link>
                     &nbsp;
-                    <Link href="./terms-and-condition">
-                      <a
-                        href="./privacy-policy"
-                        className="underline"
-                        target="_newtab"
-                      >
-                        Terms and conditions
-                      </a>
+                    <Link
+                      href={`${'./terms-and-condition'}`}
+                      className="underline"
+                      target="_newtab"
+                    >
+                      Terms and conditions
                     </Link>
                   </div>
 
@@ -643,26 +638,29 @@ export default function City({ cities, data, posts, pos }) {
                   <Social />
                   <div>
                     <span>
-                      <Link href="/search-by-part-name">
-                        <a className="underline hover:text-blue-500 xs:text-sm">
-                          SEARCH BY PART NAME
-                        </a>
+                      <Link
+                        href={`${'/search-by-part-name'}`}
+                        className="underline hover:text-blue-500 xs:text-sm"
+                      >
+                        SEARCH BY PART NAME
                       </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
-                      <Link href="/search-by-cities-in-uae">
-                        <a className="underline hover:text-blue-500  xs:text-sm">
-                          SEARCH BY CITY
-                        </a>
+                      <Link
+                        href={`${'/search-by-cities-in-uae'}`}
+                        className="underline hover:text-blue-500  xs:text-sm"
+                      >
+                        SEARCH BY CITY
                       </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
-                      <Link href="/search-by-make">
-                        <a className="underline hover:text-blue-500  xs:text-sm">
-                          SEARCH BY MAKE
-                        </a>
+                      <Link
+                        href={`${'/search-by-make'}`}
+                        className="underline hover:text-blue-500  xs:text-sm"
+                      >
+                        SEARCH BY MAKE
                       </Link>{' '}
                       &nbsp;
                     </span>
@@ -679,18 +677,18 @@ export default function City({ cities, data, posts, pos }) {
                   UAE. We also operate in main cities such as dubai, sharjah,
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
-                  <a
-                    href="https://emirates-car.com/search-by-part-name"
+                  <Link
+                    href={`${'https://emirates-car.com/search-by-part-name'}`}
                     className="text-blue-400 underline"
                   >
                     https://emirates-car.com/search-by-part-name
-                  </a>
+                  </Link>
                   .We also deal in brands such as{' '}
                   {data.map(p => (
-                    <a key={p.id}>
+                    <Link key={p.id} passHref>
                       {p.make}
                       {' in UAE, '}
-                    </a>
+                    </Link>
                   ))}
                 </h1>
                 <p className="text-base font-medium text-gray-500 p-5">
@@ -731,15 +729,14 @@ export default function City({ cities, data, posts, pos }) {
             {data.map(post => (
               <div key={post.id}>
                 <Link
-                  href="/search-by-make/[make]"
-                  as={'/search-by-make/' + post.make}
+                  href={`${'/search-by-make/[make]'}`}
+                  as={`${'/search-by-make/' + post.make}`}
+                  title={post.make + ' spare parts sharjah'}
                 >
-                  <a title={post.make + ' spare parts in UAE'}>
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
-                      <i className="fa fa-mars-stroke" aria-hidden="true"></i>{' '}
-                      {post.make}
-                    </p>
-                  </a>
+                  <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
+                    <i className="fa fa-mars-stroke" aria-hidden="true"></i>{' '}
+                    {post.make}
+                  </p>
                 </Link>
               </div>
             ))}

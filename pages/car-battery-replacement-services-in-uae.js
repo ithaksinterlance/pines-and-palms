@@ -283,10 +283,11 @@ export default function CarBatteryDubai({ forms }) {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex lg:justify-start xs:pb-20 s:pb-20">
                 <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
-                  <Link href="/#myForm">
-                    <a className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125">
-                      Order Now
-                    </a>
+                  <Link
+                    href={`${'/#myForm'}`}
+                    className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                  >
+                    Order Now
                   </Link>
                 </div>
               </div>
@@ -577,16 +578,20 @@ export default function CarBatteryDubai({ forms }) {
             </div>
           </div>
           <div className="flex float-left text-xs text-gray-400">
-            <Link href="./privacy-policy">
-              <a href="./privacy-policy" className="underline" target="_newtab">
-                Privacy policy
-              </a>
+            <Link
+              href={`${'./privacy-policy'}`}
+              className="underline"
+              target="_newtab"
+            >
+              Privacy policy
             </Link>
             &nbsp;
-            <Link href="./terms-and-condition">
-              <a href="./privacy-policy" className="underline" target="_newtab">
-                Terms and conditions
-              </a>
+            <Link
+              href={`${'./terms-and-condition'}`}
+              className="underline"
+              target="_newtab"
+            >
+              Terms and conditions
             </Link>
           </div>
 
@@ -596,12 +601,10 @@ export default function CarBatteryDubai({ forms }) {
         </form>
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
           **Make not found above?{' '}
-          <Link href="/get-in-touch">
-            <a>
-              <nobr className="text-blue-500 text-sm underline">
-                Get in touch with us {'>>'}**
-              </nobr>
-            </a>
+          <Link href={`${'/get-in-touch'}`} passHref>
+            <nobr className="text-blue-500 text-sm underline">
+              Get in touch with us {'>>'}**
+            </nobr>
           </Link>{' '}
         </div>
       </div>
@@ -611,26 +614,30 @@ export default function CarBatteryDubai({ forms }) {
         <div>
           &nbsp;
           <span>
-            <Link href="/search-by-part-name">
-              <a className="underline xs:no-underline hover:text-blue-500">
-                SEARCH BY PART NAME
-              </a>
+            <Link
+              href={`${'/search-by-part-name'}`}
+              className="underline xs:no-underline hover:text-blue-500"
+            >
+              SEARCH BY PART NAME
             </Link>{' '}
           </span>
           | &nbsp;
           <span>
-            <Link href="/search-by-cities-in-uae">
-              <a className="underline xs:no-underline hover:text-blue-500">
-                SEARCH BY CITY{' '}
-              </a>
+            <Link
+              href={`${'/search-by-cities-in-uae'}`}
+              className="underline xs:no-underline hover:text-blue-500"
+              passHref
+            >
+              SEARCH BY CITY{' '}
             </Link>{' '}
           </span>
           | &nbsp;
           <span>
-            <Link href="/search-by-make">
-              <a className="underline xs:no-underline hover:text-blue-500">
-                SEARCH BY MAKE
-              </a>
+            <Link
+              href={`${'/search-by-make'}`}
+              className="underline xs:no-underline hover:text-blue-500"
+            >
+              SEARCH BY MAKE
             </Link>{' '}
           </span>
         </div>
@@ -806,17 +813,17 @@ export default function CarBatteryDubai({ forms }) {
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-car"></i>{' '}
-            <Link href="./search-by-make">Car Make Model</Link>
+            <Link href={`${'./search-by-make'}`}>Car Make Model</Link>
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-bolt"></i>{' '}
-            <Link href="./search-by-part-name">Car Spare parts</Link>
+            <Link href={`${'./search-by-part-name'}`}>Car Spare parts</Link>
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-map-pin"></i>{' '}
-            <Link href="./search-by-cities-in-uae">Location in UAE</Link>
+            <Link href={`${'./search-by-cities-in-uae'}`}>Location in UAE</Link>
           </li>
         </p>
       </div>

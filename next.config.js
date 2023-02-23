@@ -59,5 +59,16 @@ module.exports = withPWA({
     register: true,
     skipWaiting: true,
     disable: process.env.NODE_ENV === 'development'
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+        port: '',
+        pathname:
+          '/ithaksinterlance/pines-and-palms/blob/main/public/img/car-logos/**'
+      }
+    ]
   }
 });

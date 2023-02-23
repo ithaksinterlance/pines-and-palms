@@ -282,7 +282,7 @@ export default function Make({ posts, cities, post }) {
                 height={50}
                 width={50}
               />{' '}
-              SEARCH YOUR PARTS BY PART NAME
+              SEARCH YOUR PARTS BY CAR PART NAME
             </h1>
 
             <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pt-4">
@@ -313,13 +313,13 @@ export default function Make({ posts, cities, post }) {
                           onClick={() => onSuggestionHandler(suggestion)}
                           width="100%"
                         >
-                          <a
+                          <Link
                             href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                             rel="noopener noreferrer"
                             target="_newtab"
                           >
                             {suggestion}
-                          </a>
+                          </Link>
                         </div>
                       ))}
                   </div>
@@ -329,16 +329,16 @@ export default function Make({ posts, cities, post }) {
                 {posts.map(post => (
                   <div key={post.id}>
                     <Link
-                      href="/search-by-part-name/[parts]"
-                      as={'/search-by-part-name/' + post.parts}
+                      href={`${'/search-by-part-name/[parts]'}`}
+                      as={`${'/search-by-part-name/' + post.parts}`}
+                      title={post.parts + ' in uae'}
+                      passHref
                     >
-                      <a title={post.parts + ' in uae'}>
-                        <main className="border border-blue-800 h-full p-3 ">
-                          <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
-                            {post.parts}
-                          </p>
-                        </main>
-                      </a>
+                      <main className="border border-blue-800 h-full p-3 ">
+                        <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
+                          {post.parts}
+                        </p>
+                      </main>
                     </Link>
                   </div>
                 ))}
@@ -349,26 +349,29 @@ export default function Make({ posts, cities, post }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href="/search-by-part-name">
-                      <a className="underline hover:text-blue-500 xs:text-sm">
-                        SEARCH BY PART NAME
-                      </a>
+                    <Link
+                      href={`${'/search-by-part-name'}`}
+                      className="underline hover:text-blue-500  xs:text-sm"
+                    >
+                      SEARCH BY PART NAME
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href="/search-by-cities-in-uae">
-                      <a className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY CITY
-                      </a>
+                    <Link
+                      href={`${'/search-by-cities-in-uae'}`}
+                      className="underline hover:text-blue-500  xs:text-sm"
+                    >
+                      SEARCH BY CITY
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href="/search-by-make">
-                      <a className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY MAKE
-                      </a>
+                    <Link
+                      href={`${'/search-by-make'}`}
+                      className="underline hover:text-blue-500  xs:text-sm"
+                    >
+                      SEARCH BY MAKE
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -618,20 +621,20 @@ export default function Make({ posts, cities, post }) {
               </form>
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
-              <h1 className="text-base font-medium text-gray-500 p-5">
+              <p className="text-base font-medium text-gray-500 p-5">
                 We deal with any country auto spare parts including japanese,
                 american, german, chinese, indian, Korean, french, british in
                 UAE. We also operate in main cities such as dubai, sharjah, abu
                 dhabi, ajman, al quoz, jumeirah, deira etc. You can check our
                 catalogue at{' '}
-                <a
-                  href="https://emirates-car.com/search-by-part-name"
+                <Link
+                  href={`${'https://emirates-car.com/search-by-part-name'}`}
                   className="text-blue-400 underline"
                 >
                   https://emirates-car.com/search-by-part-name
-                </a>
+                </Link>
                 .
-              </h1>
+              </p>
               <p className="text-base font-medium text-gray-500 p-5">
                 UAE Automobile industry is slowly shifting towards a service
                 oriented business model based on consumer data and customer
@@ -669,14 +672,14 @@ export default function Make({ posts, cities, post }) {
             {cities.map(post => (
               <div key={post.id}>
                 <Link
-                  href="/search-by-cities-in-uae/[city]"
-                  as={'/search-by-cities-in-uae/' + post.city}
+                  href={`${'/search-by-cities-in-uae/[city]'}`}
+                  as={`${'/search-by-cities-in-uae/' + post.city}`}
+                  title={'car spare parts ' + post.city}
+                  passHref
                 >
-                  <a title={'car parts in ' + post.city}>
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
-                      <i className="far fa-compass"></i> {post.city}
-                    </p>
-                  </a>
+                  <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
+                    <i className="far fa-compass"></i> {post.city}
+                  </p>
                 </Link>
               </div>
             ))}

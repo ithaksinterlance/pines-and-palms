@@ -1,7 +1,7 @@
-import Nav from '../../nav';
-import Link from 'next/link';
-import Footer from '../../footer';
 import Head from 'next/head';
+import Link from 'next/link';
+import Nav from '../../nav';
+import Footer from '../../footer';
 import React, { useState, useEffect } from 'react';
 import Social from '../../Social';
 import HondaOfferButton from '../../HondaOfferButton';
@@ -379,13 +379,13 @@ export default function Car({ car, cities, make, partspost, posts }) {
                             onClick={() => onModelSuggestionHandler(recommend)}
                             width="100%"
                           >
-                            <a
+                            <Link
                               href={`https://emirates-car.com/search-by-make/${make}/${recommend}`}
                               rel="noopener noreferrer"
                               target="_newtab"
                             >
                               {recommend}
-                            </a>
+                            </Link>
                           </div>
                         ))}
                     </div>
@@ -396,18 +396,19 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 {car.map(post => (
                   <div key={post.id}>
                     <Link
-                      href="/search-by-make/[make]/[model]"
-                      as={'/search-by-make/' + post.make + '/' + post.model}
+                      href={`${'/search-by-make/[make]/[model]'}`}
+                      as={`${'/search-by-make/' +
+                        post.make +
+                        '/' +
+                        post.model}`}
+                      title={post.make + post.model + ' spare parts'}
+                      passHref
                     >
-                      <a
-                        title={post.make + ' - ' + post.model + ' spare parts'}
-                      >
-                        <main className="border border-blue-800 h-full p-3 ">
-                          <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
-                            {post.model.replace('%2F', '/')}{' '}
-                          </p>
-                        </main>
-                      </a>
+                      <main className="border border-blue-800 h-full p-3 ">
+                        <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
+                          {post.model.replace('%2F', '/')}{' '}
+                        </p>
+                      </main>
                     </Link>
                   </div>
                 ))}{' '}
@@ -415,13 +416,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Model not found above?
-              <Link href="/get-in-touch">
-                <a>
-                  <nobr className="text-blue-500 text-sm underline">
-                    {' '}
-                    Get in touch with us {'>>'}**
-                  </nobr>
-                </a>
+              <Link href={`${'/get-in-touch'}`} passHref>
+                <nobr className="text-blue-500 text-sm underline">
+                  {' '}
+                  Get in touch with us {'>>'}**
+                </nobr>
               </Link>{' '}
             </div>
             <div className="text-center">
@@ -666,24 +665,20 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link href="./privacy-policy">
-                    <a
-                      href="./privacy-policy"
-                      className="underline"
-                      target="_newtab"
-                    >
-                      Privacy policy
-                    </a>
+                  <Link
+                    href={`${'./privacy-policy'}`}
+                    className="underline"
+                    target="_newtab"
+                  >
+                    Privacy policy
                   </Link>
                   &nbsp;
-                  <Link href="./terms-and-condition">
-                    <a
-                      href="./privacy-policy"
-                      className="underline"
-                      target="_newtab"
-                    >
-                      Terms and conditions
-                    </a>
+                  <Link
+                    href={`${'./terms-and-condition'}`}
+                    className="underline"
+                    target="_newtab"
+                  >
+                    Terms and conditions
                   </Link>
                 </div>
 
@@ -695,26 +690,29 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href="/search-by-part-name">
-                      <a className="underline hover:text-blue-500 xs:text-sm">
-                        SEARCH BY PART NAME
-                      </a>
+                    <Link
+                      href={`${'/search-by-part-name'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY PART NAME
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href="/search-by-cities-in-uae">
-                      <a className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY CITY
-                      </a>
+                    <Link
+                      href={`${'/search-by-cities-in-uae'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY CITY
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href="/search-by-make">
-                      <a className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY MAKE
-                      </a>
+                    <Link
+                      href={`${'/search-by-make'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY MAKE
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -728,11 +726,13 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 UAE. We deal in auto spare parts such as{' '}
                 {partspost.map(p => (
                   <Link
-                    href="/search-by-part-name/[parts]"
-                    as={'/search-by-part-name/' + p.parts}
+                    href={`${'/search-by-part-name/[parts]'}`}
+                    as={`${'/search-by-part-name/' + p.parts}`}
                     key={p.id}
+                    title={p.parts}
+                    passHref
                   >
-                    <a title={'spare parts in ' + p.parts}>{p.parts + ' , '}</a>
+                    {p.parts + ' , '}
                   </Link>
                 ))}
               </h1>
@@ -745,12 +745,12 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 accept inquiries through our website and we will get back to you
                 through whatsapp and give you our price list in our quotation.
                 You can check our catalogue at{' '}
-                <a
-                  href="https://emirates-car.com/search-by-part-name"
+                <Link
+                  href={`${'https://emirates-car.com/search-by-part-name'}`}
                   className="text-blue-400 underline"
                 >
                   https://emirates-car.com/search-by-part-name
-                </a>
+                </Link>
                 . After you are satisfied with our price we will arrange
                 delivery to your convinient locations mentioned. UAE Automobile
                 industry is slowly shifting towards a service oriented business
@@ -788,15 +788,15 @@ export default function Car({ car, cities, make, partspost, posts }) {
             {cities.map(post => (
               <div key={post.id}>
                 <Link
-                  href="/search-by-cities-in-uae/[city]"
-                  as={'/search-by-cities-in-uae/' + post.city}
+                  href={`${'/search-by-cities-in-uae/[city]'}`}
+                  as={`${'/search-by-cities-in-uae/' + post.city}`}
+                  title={make + ' spare parts ' + post.city}
+                  passHref
                 >
-                  <a title={make + ' spare parts in ' + post.city}>
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
-                      <i className="far fa-compass"></i>&nbsp;
-                      {post.city}{' '}
-                    </p>
-                  </a>
+                  <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
+                    <i className="far fa-compass"></i>&nbsp;
+                    {post.city}{' '}
+                  </p>
                 </Link>
               </div>
             ))}{' '}

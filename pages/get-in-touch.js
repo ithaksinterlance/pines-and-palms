@@ -180,26 +180,30 @@ export default function Forms() {
           <div>
             &nbsp;
             <span>
-              <Link href="/search-by-part-name">
-                <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
-                  SEARCH BY PART NAME
-                </a>
+              <Link
+                href={`${'/search-by-part-name'}`}
+                className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base "
+              >
+                SEARCH BY PART NAME
               </Link>{' '}
             </span>
             | &nbsp;
             <span>
-              <Link href="/search-by-cities-in-uae">
-                <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
-                  SEARCH BY CITY{' '}
-                </a>
+              <Link
+                href={`${'/search-by-cities-in-uae'}`}
+                className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base "
+                passHref
+              >
+                SEARCH BY CITY{' '}
               </Link>{' '}
             </span>
             | &nbsp;
             <span>
-              <Link href="/search-by-make">
-                <a className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base ">
-                  SEARCH BY MAKE
-                </a>
+              <Link
+                href={`${'/search-by-make'}`}
+                className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base "
+              >
+                SEARCH BY MAKE
               </Link>{' '}
             </span>
           </div>
@@ -517,24 +521,20 @@ export default function Forms() {
                 </div>
               </div>
               <div className="flex float-left text-xs text-gray-400">
-                <Link href="./privacy-policy">
-                  <a
-                    href="./privacy-policy"
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Privacy policy
-                  </a>
+                <Link
+                  href={`${'./privacy-policy'}`}
+                  className="underline"
+                  target="_newtab"
+                >
+                  Privacy policy
                 </Link>
                 &nbsp;
-                <Link href="./terms-and-condition">
-                  <a
-                    href="./privacy-policy"
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Terms and conditions
-                  </a>
+                <Link
+                  href={`${'./terms-and-condition'}`}
+                  className="underline"
+                  target="_newtab"
+                >
+                  Terms and conditions
                 </Link>
               </div>
 

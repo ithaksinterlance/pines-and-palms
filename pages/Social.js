@@ -10,75 +10,68 @@ export default function Social() {
         </p>
         <div className="grid grid-cols-6 gap-4">
           <div>
-            <Link href="https://www.facebook.com/emirates.auto.parts">
-              <a
-                title="used car parts"
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="https://www.facebook.com/emirates.auto.parts"
-                target="_newtab"
-              >
-                <i className="fab fa-facebook text-blue-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+            <Link
+              href={`${'https://www.facebook.com/emirates.auto.parts'}`}
+              title="used car parts"
+              className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              passHref
+            >
+              <i className="fab fa-facebook text-blue-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
             </Link>
           </div>
           <div>
-            <Link href="https://www.instagram.com/emiratescar_parts/">
-              <a
-                title="car trends"
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="https://www.instagram.com/emiratescar_parts/"
-                target="_newtab"
-              >
-                <i className="fab fa-instagram text-purple-800 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+            <Link
+              href={`${'https://www.instagram.com/emiratescar_parts/'}`}
+              title="car trends"
+              className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              target="_newtab"
+              passHref
+            >
+              <i className="fab fa-instagram text-purple-800 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
             </Link>
           </div>
           <div>
-            <Link href="https://twitter.com/emiratescarpart">
-              <a
-                title="emirates car parts news"
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="https://twitter.com/emiratescarpart"
-                target="_newtab"
-              >
-                <i className="fab fa-twitter text-blue-400 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+            <Link
+              href={`${'https://twitter.com/emiratescarpart'}`}
+              title="emirates car parts news"
+              className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              target="_newtab"
+              passHref
+            >
+              <i className="fab fa-twitter text-blue-400 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
             </Link>
           </div>
           <div>
-            <Link href="https://emirates-car.tumblr.com/">
-              <a
-                title="emirates car parts"
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="https://emirates-car.tumblr.com/"
-                target="_newtab"
-              >
-                <i className="fab fa-tumblr text-black text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+            <Link
+              href={`${'https://emirates-car.tumblr.com/'}`}
+              title="emirates car parts"
+              className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              target="_newtab"
+              passHref
+            >
+              <i className="fab fa-tumblr text-black text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
             </Link>
           </div>
           <div>
-            <Link href="https://in.pinterest.com/emiratesautomobileparts/">
-              <a
-                title="emirates car parts"
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="https://in.pinterest.com/emiratesautomobileparts/"
-                target="_newtab"
-              >
-                <i className="fab fa-pinterest text-red-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+            <Link
+              href={`${'https://in.pinterest.com/emiratesautomobileparts/'}`}
+              title="emirates car parts"
+              className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              target="_newtab"
+              passHref
+            >
+              <i className="fab fa-pinterest text-red-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
             </Link>
           </div>
           <div>
-            <Link href="https://www.linkedin.com/in/emirates-car-771929232/">
-              <a
-                title="emirates car parts career"
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href="https://www.linkedin.com/in/emirates-car-771929232/"
-                target="_newtab"
-              >
-                <i className="fab fa-linkedin text-blue-500 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+            <Link
+              href={`${'https://www.linkedin.com/in/emirates-car-771929232/'}`}
+              title="emirates car parts career"
+              className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              target="_newtab"
+              passHref
+            >
+              <i className="fab fa-linkedin text-blue-500 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
             </Link>
           </div>
         </div>

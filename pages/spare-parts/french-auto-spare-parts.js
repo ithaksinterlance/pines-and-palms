@@ -288,120 +288,114 @@ export default function France({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Peugeot">
-                  <a>
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Peugeot spare parts in uae"
-                          src="/img/car-logos/peugeot.png"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Peugeot
-                      </p>
-                    </main>
-                  </a>
+                <Link
+                  href={`${'https://emirates-car.com/search-by-make/Peugeot'}`}
+                  passHref
+                >
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Peugeot spare parts in uae"
+                        src="/img/car-logos/peugeot.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Peugeot
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Citroen">
-                  <a>
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Citroen spare parts in uae"
-                          src="/img/car-logos/citroen.png"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Citroen
-                      </p>
-                    </main>
-                  </a>
+                <Link href={`${'/search-by-make/Citroen'}`} passHref>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Citroen spare parts in uae"
+                        src="/img/car-logos/citroen.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Citroen
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Renault">
-                  <a>
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Renault spare parts in uae"
-                          src="/img/car-logos/renault.png"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Renault
-                      </p>
-                    </main>
-                  </a>
+                <Link href={`${'/search-by-make/Renault'}`} passHref>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Renault spare parts in uae"
+                        src="/img/car-logos/renault.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Renault
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Mobility Ventures LLC">
-                  <a>
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="venturi spare parts in uae"
-                          src="/img/car-logos/venturi.png"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Mobility Ventures LLC
-                      </p>
-                    </main>
-                  </a>
+                <Link
+                  href={`${'/search-by-make/Mobility Ventures LLC'}`}
+                  passHref
+                >
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="venturi spare parts in uae"
+                        src="/img/car-logos/venturi.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Mobility Ventures LLC
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-make/Bugatti">
-                  <a>
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Bugatti spare parts in uae"
-                          src="/img/car-logos/bugatti.png"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Bugatti
-                      </p>
-                    </main>
-                  </a>
+                <Link href={`${'/search-by-make/Bugatti'}`} passHref>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Bugatti spare parts in uae"
+                        src="/img/car-logos/bugatti.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Bugatti
+                    </p>
+                  </main>
                 </Link>
               </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href="/get-in-touch">
-                <a>
-                  <nobr className="text-blue-500 text-sm underline">
-                    {' '}
-                    Get in touch with us {'>>'}**
-                  </nobr>
-                </a>
+              <Link href={`${'/get-in-touch'}`} passHref>
+                <nobr className="text-blue-500 text-sm underline">
+                  {' '}
+                  Get in touch with us {'>>'}**
+                </nobr>
               </Link>{' '}
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
@@ -424,12 +418,12 @@ export default function France({ partsposts, posts }) {
               Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
               Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
               can check our catalogue at{' '}
-              <a
-                href="https://emirates-car.com/search-by-part-name"
+              <Link
+                href={`${'https://emirates-car.com/search-by-part-name'}`}
                 className="text-blue-400 underline"
               >
                 https://emirates-car.com/search-by-part-name
-              </a>
+              </Link>
               . Submit your inquiry to us, our dealer will get back to you based
               on stock availability.
             </h1>
@@ -441,26 +435,29 @@ export default function France({ partsposts, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href="/search-by-part-name">
-                      <a className="underline hover:text-blue-500 xs:text-sm">
-                        SEARCH BY PART NAME
-                      </a>
+                    <Link
+                      href={`${'/search-by-part-name'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY PART NAME
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href="/search-by-cities-in-uae">
-                      <a className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY CITY
-                      </a>
+                    <Link
+                      href={`${'/search-by-cities-in-uae'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY CITY
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href="/search-by-make">
-                      <a className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY MAKE
-                      </a>
+                    <Link
+                      href={`${'/search-by-make'}`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY MAKE
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -704,24 +701,20 @@ export default function France({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link href="./privacy-policy">
-                    <a
-                      href="./privacy-policy"
-                      className="underline"
-                      target="_newtab"
-                    >
-                      Privacy policy
-                    </a>
+                  <Link
+                    href={`${'./privacy-policy'}`}
+                    className="underline"
+                    target="_newtab"
+                  >
+                    Privacy policy
                   </Link>
                   &nbsp;
-                  <Link href="./terms-and-condition">
-                    <a
-                      href="./privacy-policy"
-                      className="underline"
-                      target="_newtab"
-                    >
-                      Terms and conditions
-                    </a>
+                  <Link
+                    href={`${'./terms-and-condition'}`}
+                    className="underline"
+                    target="_newtab"
+                  >
+                    Terms and conditions
                   </Link>
                 </div>
 
@@ -768,13 +761,13 @@ export default function France({ partsposts, posts }) {
                   onClick={() => onSuggestionHandler(suggestion)}
                   width="100%"
                 >
-                  <a
+                  <Link
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
                   >
                     {suggestion}{' '}
-                  </a>
+                  </Link>
                 </div>
               ))}{' '}
           </div>
@@ -784,16 +777,16 @@ export default function France({ partsposts, posts }) {
         {partsposts.map(post => (
           <div key={post.id}>
             <Link
-              href="/search-by-cities-in-uae/[city]"
-              as={'/search-by-part-name/' + post.parts}
+              href={`${'/search-by-cities-in-uae/[city]'}`}
+              as={`${'/search-by-part-name/' + post.parts}`}
+              title={post.parts + ' in uae'}
+              passHref
             >
-              <a title={post.parts + ' in uae'}>
-                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                    {post.parts.toUpperCase()}{' '}
-                  </p>
-                </main>
-              </a>
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  {post.parts.toUpperCase()}{' '}
+                </p>
+              </main>
             </Link>
           </div>
         ))}{' '}
