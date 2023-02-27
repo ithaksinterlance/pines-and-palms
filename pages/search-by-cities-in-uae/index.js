@@ -769,6 +769,7 @@ export async function getStaticProps() {
 
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
   const cities = await cityresponse.json();
+  console.log(ma.sort());
 
   if (!cities) {
     return {

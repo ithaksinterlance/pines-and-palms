@@ -9,8 +9,7 @@ import avatar1 from '../../../../public/img/avatar1.jpeg';
 import avatar2 from '../../../../public/img/avatar2.jpg';
 import avatar3 from '../../../../public/img/avatar3.jpg';
 import HondaOfferButton from '../../../HondaOfferButton';
-import FeaturedHonda from '../../../8th-gen-Honda';
-import ABS from '../../../../public/img/honda-eighth-gen/Anti_Lock_Braking_System.webp';
+import ABS from '../../../../public/img/honda-eighth-gen/ABS.webp';
 import AirFilter from '../../../../public/img/honda-eighth-gen/Air_Filter.webp';
 import AirSuspension from '../../../../public/img/honda-eighth-gen/Air_Suspension_Module.webp';
 import AxleAssembly from '../../../../public/img/honda-eighth-gen/Axle_Assembly_Rear.webp';
@@ -1231,7 +1230,6 @@ export async function getStaticProps({ params }) {
   );
   const dayear = await res.json();
   let year = [...new Map(dayear.map(item => [item['year'], item])).values()];
-  console.log(year);
   let uniqueMkeArray = [
     ...new Map(reDat.map(item => [item['img'], item])).values()
   ];

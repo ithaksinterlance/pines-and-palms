@@ -60,5 +60,5 @@ module.exports = withPWA({
     skipWaiting: true,
     disable: process.env.NODE_ENV === 'development'
   },
-  staticPageGenerationTimeout: 1000
+  staticPageGenerationTimeout: 5000
 });
