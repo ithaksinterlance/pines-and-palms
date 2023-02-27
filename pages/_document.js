@@ -12,14 +12,30 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=G-3E8C09YD12`}
+          <link rel="manifest" href="/manifest.json" />
+          <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossOrigin="anonymous"
           />
-          <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: `
+        </Head>
+        <Script
+          language="javascript"
+          src={`https://www.exactseek.com/remote-submit.js`}
+        />
+        <Script
+          id="myscript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "c2136u1t6f");
+              `
+          }}
+        />
+        <Script
+          id="myscript2"
+          dangerouslySetInnerHTML={{
+            __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -27,23 +43,13 @@ class MyDocument extends Document {
                   page_path: window.location.pathname,
                 });
               `
-            }}
-          />
-          <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: `
-              (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "c2136u1t6f");
-              `
-            }}
-          />
-          <Script
-            language="javascript"
-            src={`https://www.exactseek.com/remote-submit.js`}
-          />
-
-          <link rel="manifest" href="/manifest.json" />
-        </Head>
+          }}
+        />
+        <Script
+          id="myscript3"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-3E8C09YD12`}
+        />
         <body>
           <Main />
           <NextScript />

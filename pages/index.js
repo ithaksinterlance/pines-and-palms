@@ -351,7 +351,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <link rel="canonical" href="https://www.emirates-car.com" />
       </Head>
       <Nav />
-      <h1 className="text-4xl font-bold font-sans text-center pt-5">
+      <h1 className="text-4xl font-bold font-sans text-center pt-5 mx-auto">
         Car spare Parts Online in UAE - Buy Premium High Quality Used, Genuine,
         OEM and Aftermarket from Dubai to all over UAE and World
       </h1>
@@ -427,7 +427,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div className="w-1/3 bg-blue-700 2xs:w-full xs:w-screen s:w-screen s:py-5">
             <Slider {...settings} className="py-10 p-2">
               <div>
-                <p className="text-xl font-bold text-center">
+                <div className="text-xl font-bold text-center">
                   <div>
                     {' '}
                     <Image
@@ -439,14 +439,14 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     />
                   </div>
                   Jamal
-                </p>
+                </div>
                 <p className="text-sm text-center pt-5">
                   Honestly a genuine dealing it was. The rate was so genuine. My
                   order received on time.
                 </p>
               </div>
               <div>
-                <p className="text-xl font-bold text-center">
+                <div className="text-xl font-bold text-center">
                   <div>
                     {' '}
                     <Image
@@ -458,7 +458,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     />
                   </div>
                   Mohammed
-                </p>
+                </div>
                 <p className="text-sm text-center pt-5">
                   {' '}
                   I replaced my Backup light with their Used backup light. It
@@ -466,7 +466,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 </p>
               </div>
               <div>
-                <p className="text-xl font-bold text-center">
+                <div className="text-xl font-bold text-center">
                   <div>
                     {' '}
                     <Image
@@ -478,7 +478,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     />
                   </div>
                   Abdul
-                </p>
+                </div>
                 <p className="text-sm text-center pt-5">
                   {' '}
                   Got my Gearbox, AC Compressor, Battery, Radiator at best deal!
@@ -486,7 +486,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 </p>
               </div>
               <div>
-                <p className="text-xl font-bold text-center">
+                <div className="text-xl font-bold text-center">
                   <div>
                     {' '}
                     <Image
@@ -498,7 +498,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     />
                   </div>
                   Anonymous
-                </p>
+                </div>
                 <p className="text-sm text-center pt-5">
                   The dealings was simply world-class. My parts were of good
                   quality and was very genuine too.
@@ -918,7 +918,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <div className="flex justify-center">
                 <Image
                   alt="Mitsubishi parts dubai"
-                  src="/img/car-logos/mitsubishi.jpg"
+                  src="/img/car-logos/mitsubishi.webp"
                   className="object-scale-down shadow-xl"
                   height={50}
                   width={50}
@@ -975,7 +975,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <div className="flex justify-center">
                 <Image
                   alt="honda parts ajman"
-                  src="/img/car-logos/Ford.webp"
+                  src="/img/car-logos/ford.webp"
                   className="object-scale-down shadow-xl"
                   height={50}
                   width={50}
@@ -1162,9 +1162,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
       </div>
 
       <Featured />
-      <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10">
+      <div className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10">
         SEARCH BY BRANDS
-      </p>
+      </div>
       {/*Search by make input box */}
       <div className="flex justify-center">
         <div className="pt-3">
@@ -1226,9 +1226,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         ))}{' '}
       </div>
-      <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
+      <div className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
         SEARCH BY LOCATION IN UAE
-      </p>
+      </div>
       <div className="flex justify-center">
         <div className="pt-3">
           <input
@@ -1280,9 +1280,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
         ))}{' '}
       </div>
 
-      <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
+      <div className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
         SEARCH AUTO SPARE PARTS BY NAME IN UAE
-      </p>
+      </div>
       {/*Search by parts input box */}
       <div className="flex justify-center">
         <div className="pt-3">
@@ -1354,7 +1354,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <div className="items-center justify-center">
                 <Image
                   src={Hero_img}
-                  alt="car parts emirates"
+                  alt="auto spare parts in uae"
                   height={50}
                   width={50}
                 />

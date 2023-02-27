@@ -30,6 +30,7 @@
     "react-accessible-accordion": "^4.0.0",
     "react-dom": "^18.2.0",
     "react-slick": "^0.28.1",
+    "sharp": "^0.31.3",
     "slick-carousel": "^1.8.1",
     "swr": "^1.0.1"
   },

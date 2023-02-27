@@ -132,7 +132,7 @@ export default function HondaAccord8thGen() {
                 <h3 className="text-xl font-bold font-sans">Front Bumper</h3>
                 <hr className="py-1" />
                 <Image
-                  src="/img/honda-accord-8th-gen/FrontBumper.png"
+                  src="/img/honda-accord-8th-gen/FrontBumper.webp"
                   alt="honda front bumper parts"
                   height={250}
                   width={250}
@@ -151,7 +151,7 @@ export default function HondaAccord8thGen() {
                 <h3 className="text-xl font-bold font-sans">Rear Bumper</h3>
                 <hr className="py-1" />
                 <Image
-                  src="/img/honda-accord-8th-gen/RearBumper.png"
+                  src="/img/honda-accord-8th-gen/RearBumper.webp"
                   alt="honda accord 8th gen body parts"
                   height={250}
                   width={250}
@@ -170,7 +170,7 @@ export default function HondaAccord8thGen() {
                 <h3 className="text-xl font-bold font-sans">Spoiler</h3>
                 <hr className="py-1" />
                 <Image
-                  src="/img/honda-accord-8th-gen/Spoiler.png"
+                  src="/img/honda-accord-8th-gen/Spoiler.webp"
                   alt="honda accord spoilers"
                   height={250}
                   width={250}
@@ -191,14 +191,14 @@ export default function HondaAccord8thGen() {
                 </h3>
                 <hr className="py-1" />
                 <Image
-                  src="/img/honda-accord-8th-gen/FrontBumperLips.png"
+                  src="/img/honda-accord-8th-gen/FrontBumperLips.webp"
                   alt="honda accord front bumper lips"
                   height={250}
                   width={250}
                 />
                 <Link
                   href="/get-in-touch"
-                  title="Honda accord side skirts"
+                  title="Honda accord front bumper"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
                 >
                   Inquire Now
@@ -212,7 +212,7 @@ export default function HondaAccord8thGen() {
                 </h3>
                 <hr className="py-1" />
                 <Image
-                  src="/img/honda-accord-8th-gen/RearBumperLips.png"
+                  src="/img/honda-accord-8th-gen/RearBumperLips.webp"
                   alt="honda accord rear bumper lips"
                   height={250}
                   width={250}
@@ -231,7 +231,7 @@ export default function HondaAccord8thGen() {
                 <h3 className="text-xl font-bold font-sans">Side skirts</h3>
                 <hr className="py-1" />
                 <Image
-                  src="/img/honda-accord-8th-gen/sideskirt.png"
+                  src="/img/honda-accord-8th-gen/sideskirt.webp"
                   alt="honda accord side skirts"
                   height={250}
                   width={250}

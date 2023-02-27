@@ -82,29 +82,27 @@ function MyApp({ Component, pageProps }) {
           property="og:image"
           content="https://emirates-car.com/icon-192x192.png"
         />
-        <link
-          rel="stylesheet"
-          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-          crossOrigin="anonymous"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0-rc/js/adminlte.min.js`
-          }}
-          integrity="sha512-pbrNMLSckfh8yEOr2o1RT+4zMU3Sj7+zP3BOY6nFVI/FLnjTRyubNppLbosEt4nvLCcdsEa8tmKhH3uqOYFXKg=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-        <script
-          src="https://polyfill.io/v3/polyfill.min.js?features=default"
-          async
-        ></script>
+      </Head>
+      <Script
+        id="myscript6"
+        dangerouslySetInnerHTML={{
+          __html: `https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0-rc/js/adminlte.min.js`
+        }}
+        integrity="sha512-pbrNMLSckfh8yEOr2o1RT+4zMU3Sj7+zP3BOY6nFVI/FLnjTRyubNppLbosEt4nvLCcdsEa8tmKhH3uqOYFXKg=="
+        crossOrigin="anonymous"
+        referrerPolicy="no-referrer"
+      />
+      <Script
+        id="myscript5"
+        src="https://polyfill.io/v3/polyfill.min.js?features=default"
+        async
+      ></Script>
 
-        <script
-          type="text/javascript" // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: `
+      <Script
+        id="myscript4"
+        type="text/javascript" // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
               (function(){
               var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -115,9 +113,8 @@ function MyApp({ Component, pageProps }) {
               s0.parentNode.insertBefore(s1,s0);
               })();
               `
-          }}
-        ></script>
-      </Head>
+        }}
+      ></Script>
 
       <Component {...pageProps} />
     </>

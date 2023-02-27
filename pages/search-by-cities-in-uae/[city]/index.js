@@ -329,14 +329,14 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
               </nobr>
               index{'>>>'}
-              <Link>
+              <Link href={`${'/search-by-cities-in-uae/' + data.city}`}>
                 search-by-cities-in-uae{'/'}
                 {data.city}
               </Link>
               {'>>>'}
             </p>
             <p className="text-gray-700 font-semibold text-xl md:text-lg lg:text-2xl font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 pb-3">
-              <Link>{data.description}</Link>
+              {data.description}
               {'>>>'}
             </p>
             <iframe
