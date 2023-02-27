@@ -329,7 +329,10 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
               </nobr>
               index{'>>>'}
-              <Link href={`${'/search-by-cities-in-uae/' + data.city}`}>
+              <Link
+                href={`${'/search-by-cities-in-uae/' + data.city}`}
+                passHref
+              >
                 search-by-cities-in-uae{'/'}
                 {data.city}
               </Link>
@@ -676,7 +679,11 @@ export default function City({ data, partspost, posts, makedatas }) {
                 </Link>
                 . Contact us for any inquiry. We also deal in brands such as{' '}
                 {makedatas.map(p => (
-                  <Link key={p.id}>
+                  <Link
+                    key={p.id}
+                    href={`${'https://emirates-car.com/search-by-cities-in-uae/' +
+                      p.make}`}
+                  >
                     {p.make}
                     {' spare parts in ' + data.city + ', '}
                   </Link>

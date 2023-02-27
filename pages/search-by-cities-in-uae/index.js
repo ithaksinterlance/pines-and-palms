@@ -338,7 +338,8 @@ export default function City({ cities, data, posts, pos }) {
                           width="100%"
                         >
                           <Link
-                            href={`https://emirates-car.com/search-by-cities-in-uae/${recommend}`}
+                            href={`${'https://emirates-car.com/search-by-cities-in-uae/' +
+                              recommend}`}
                             rel="noopener noreferrer"
                             target="_newtab"
                           >
@@ -685,7 +686,12 @@ export default function City({ cities, data, posts, pos }) {
                   </Link>
                   .We also deal in brands such as{' '}
                   {data.map(p => (
-                    <Link key={p.id} passHref>
+                    <Link
+                      key={p.id}
+                      href={`${'https://emirates-car.com/search-by-make/' +
+                        p.make}`}
+                      passHref
+                    >
                       {p.make}
                       {' in UAE, '}
                     </Link>
