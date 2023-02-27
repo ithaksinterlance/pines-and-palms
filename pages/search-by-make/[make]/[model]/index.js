@@ -1225,11 +1225,6 @@ export async function getStaticProps({ params }) {
     `https://rozy.vercel.app/api/grooves/${make}/${model}`
   );
   const reDat = await re.json();
-  const res = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}`
-  );
-  const dayear = await res.json();
-  let year = [...new Map(dayear.map(item => [item['year'], item])).values()];
   let uniqueMkeArray = [
     ...new Map(reDat.map(item => [item['img'], item])).values()
   ];
@@ -1258,7 +1253,7 @@ export async function getStaticProps({ params }) {
       partspost,
       uniqueMakeArray,
       makeArray,
-      imageMake,
+      imageMake: imageMake || null,
       description
     }
   };
