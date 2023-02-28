@@ -62,16 +62,16 @@ export default function HondaAccord8thGen() {
         />
       </Head>
       <Navbar />
-      <div className="d-flex justify-center text-center pt-10 xs:pt-5 mx-8">
-        <h1 className="text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs">
+      <div className="d-flex justify-center  pt-10 xs:pt-5 mx-8">
+        <h1 className="text-4xl md:text-lg lg:text-2xl text-center font-extrabold xs:text-base 2xs:text-xs">
           2008 - 2012 8TH Generation Honda Accord Spare Parts parts - Used /
           Genuine / OEM / Aftermarket - Body parts , Engine, Spoiler, and more
           Online
         </h1>
-        <p className="text-red-600 underline text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base">
+        <p className="text-red-600 text-center underline text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base">
           Sale !
         </p>
-        <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-base 2xs:text-xs py-5">
+        <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-xl 2xs:text-xs py-5">
           2008, 2009, 2010, 2011, 2012 Honda Accord
         </p>
         <p className="text-xl font-mono text-gray-700 mx-auto">
@@ -96,16 +96,16 @@ export default function HondaAccord8thGen() {
         </p>
         <Link
           href={`${'/#myForm'}`}
-          className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+          className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
           target="_newtab"
         >
           Inquire Now
         </Link>
         <div className="py-10 xs:py-5">
-          <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-base 2xs:text-xs py-5">
+          <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-xl 2xs:text-xs py-5 text-center">
             8th Gen Honda Accord Body parts Aerodynamics upgrades parts:
           </p>
-          <div className="grid grid-cols-5 xs:grid-cols-2">
+          <div className="grid grid-cols-5 xs:grid-cols-1">
             <div>
               <div className="border-2 p-5 relative text-center">
                 <h3 className="text-xl font-bold font-sans">
@@ -246,7 +246,7 @@ export default function HondaAccord8thGen() {
               </div>
             </div>
           </div>
-          <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-base 2xs:text-xs py-5">
+          <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-xl 2xs:text-xs py-5 text-center">
             8th Gen Honda Accord Body parts performance upgrades parts:
           </p>
           <div className="grid grid-cols-5 xs:grid-cols-2">
@@ -386,7 +386,7 @@ export default function HondaAccord8thGen() {
               </div>
             </div>
           </div>
-          <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-base 2xs:text-xs py-5">
+          <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-xl 2xs:text-xs py-5 text-center">
             8th Gen Honda Accord Body parts Suspension upgrades parts:
           </p>
           <div className="grid grid-cols-5 xs:grid-cols-2">
