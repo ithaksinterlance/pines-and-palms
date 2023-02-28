@@ -201,8 +201,10 @@ export default function Parts({ data, cities, posts }) {
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
       </Head>
-      <div className="container place-content-center">
-        <h1>{data.parts}</h1>
+      <div className="flex place-content-center mx-auto">
+        <h1 className="text-3xl font-extrabold mx-auto my-5 xs:text-xl">
+          {data.parts}
+        </h1>
       </div>
       <div className="flex xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full s:w-full">
@@ -215,7 +217,7 @@ export default function Parts({ data, cities, posts }) {
                 </nobr>
                 BELOW
               </div>
-              <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:m-3 underline pb-3 ">
+              <div className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:m-3 underline pb-3 ">
                 <nobr className="text-blue-400 no-underline">
                   <i className="fal fa-car-garage"></i> Current
                   path:&nbsp;&nbsp;
@@ -223,7 +225,7 @@ export default function Parts({ data, cities, posts }) {
                 index{'>>>'}
                 {data.parts}
                 {'>>>'}
-              </p>
+              </div>
               <div className="uppercase xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10 bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
                 <Social />
                 <div>
@@ -260,7 +262,7 @@ export default function Parts({ data, cities, posts }) {
                 <div className="w-1/3 bg-blue-700 s:hidden md:hidden 2xs:hidden xs:py-5 xs:hidden">
                   <Slider {...settings} className="py-10 p-2">
                     <div>
-                      <p className="text-xl font-bold text-center">
+                      <div className="text-xl font-bold text-center">
                         <div>
                           {' '}
                           <Image
@@ -272,14 +274,14 @@ export default function Parts({ data, cities, posts }) {
                           />
                         </div>
                         Jamal
-                      </p>
-                      <p className="text-sm text-center pt-5 text-white">
+                      </div>
+                      <div className="text-sm text-center pt-5 text-white">
                         Honestly a genuine dealing it was. The rate was so
                         genuine. My order received on time.
-                      </p>
+                      </div>
                     </div>
                     <div>
-                      <p className="text-xl font-bold text-center">
+                      <div className="text-xl font-bold text-center">
                         <div>
                           {' '}
                           <Image
@@ -291,15 +293,15 @@ export default function Parts({ data, cities, posts }) {
                           />
                         </div>
                         Mohammed
-                      </p>
-                      <p className="text-sm text-center pt-5 text-white">
+                      </div>
+                      <div className="text-sm text-center pt-5 text-white">
                         {' '}
                         I replaced my Backup light with their Used backup light.
                         It was just as new and it was good quality too.
-                      </p>
+                      </div>
                     </div>
                     <div>
-                      <p className="text-xl font-bold text-center">
+                      <div className="text-xl font-bold text-center">
                         <div>
                           {' '}
                           <Image
@@ -311,15 +313,15 @@ export default function Parts({ data, cities, posts }) {
                           />
                         </div>
                         Abdul
-                      </p>
-                      <p className="text-sm text-center pt-5 text-white">
+                      </div>
+                      <div className="text-sm text-center pt-5 text-white">
                         {' '}
                         Got my Gearbox, AC Compressor, Battery, Radiator at best
                         deal! It was a very good rate and dealing.
-                      </p>
+                      </div>
                     </div>
                     <div>
-                      <p className="text-xl font-bold text-center">
+                      <div className="text-xl font-bold text-center">
                         <div>
                           {' '}
                           <Image
@@ -331,24 +333,24 @@ export default function Parts({ data, cities, posts }) {
                           />
                         </div>
                         Anonymous
-                      </p>
-                      <p className="text-sm text-center pt-5 text-white">
+                      </div>
+                      <div className="text-sm text-center pt-5 text-white">
                         The dealings was simply world-class. My parts were of
                         good quality and was very genuine too.
-                      </p>
+                      </div>
                     </div>
                   </Slider>
                   <div className="py-5 p-10">
-                    <p className="text-base font-bold text-blue-100 text-center pt-5">
+                    <div className="text-base font-bold text-blue-100 text-center pt-5">
                       EMIRATES-CAR
-                    </p>
-                    <p className="text-sm text-white text-center pt-5">
+                    </div>
+                    <div className="text-sm text-white text-center pt-5">
                       We are dealing with auto spare parts for car, heavy truck,
                       van, buses, coupe, SUV, prime, Petrol based vehicles,
                       Diesel based vehicles, Used spare parts, After market
                       parts, Genuine spare parts and New parts etc. Contact us
                       for any inquiry.
-                    </p>
+                    </div>
                   </div>
 
                   <div className="p-5 pt-10">
@@ -364,10 +366,10 @@ export default function Parts({ data, cities, posts }) {
                   </div>
                 </div>
                 <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 md:grid md:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-5 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2 mx-10">
-                  <p className="text-base font-medium  xs:text-sm md:text-base p-5 s:p-2">
+                  <div className="text-base font-medium  xs:text-sm md:text-base p-5 s:p-2">
                     Searching for {data.parts.toUpperCase()} Auto Spare Parts in
                     U.A.E? Fill out the inquiry down below.
-                  </p>
+                  </div>
                   <form
                     onSubmit={handleSubmit}
                     className="shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4 s:py-4 s:px-1"
@@ -571,9 +573,9 @@ export default function Parts({ data, cities, posts }) {
                   </form>
                 </div>
               </div>
-              <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10 my-10">
+              <div className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs s:text-xs mx-10 my-10">
                 SEARCH BY MAKE
-              </p>
+              </div>
               <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
                 {posts.map(post => (
                   <div key={post.id}>
@@ -594,17 +596,17 @@ export default function Parts({ data, cities, posts }) {
                           />
                           <br />
                         </div>
-                        <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        <div className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                           {data.parts.toUpperCase()} for{' '}
                           {post.make.toUpperCase()}
-                        </p>
+                        </div>
                       </main>
                     </Link>
                   </div>
                 ))}
               </div>
               <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
-                <p className="text-base font-medium text-gray-500 p-5">
+                <div className="text-base font-medium text-gray-500 p-5">
                   We deal with any country auto spare parts including japanese,
                   american, german, chinese, indian, Korean, french, british in
                   UAE. We also operate in main cities such as dubai, sharjah,
@@ -623,8 +625,8 @@ export default function Parts({ data, cities, posts }) {
                     <li>{data.parts} Genuine auto spare parts in uae</li>
                     <li>{data.parts} Aftermarket auto spare parts in uae</li>
                   </ul>
-                </p>
-                <p className="text-base font-medium text-gray-500 p-5">
+                </div>
+                <div className="text-base font-medium text-gray-500 p-5">
                   UAE Automobile industry is slowly shifting towards a service
                   oriented business model based on consumer data and customer
                   experience. Now companies are trying to adapt to the current
@@ -640,8 +642,8 @@ export default function Parts({ data, cities, posts }) {
                   is more affordable comapared to vehicle running on diesel or
                   petrol. By this transition there is no difference in usage of
                   irreversible energy.
-                </p>
-                <p className="text-base font-medium text-gray-500 p-5"></p>
+                </div>
+                <div className="text-base font-medium text-gray-500 p-5"></div>
               </div>
             </div>
           </main>
@@ -659,10 +661,10 @@ export default function Parts({ data, cities, posts }) {
                   title={post.city}
                   passHref
                 >
-                  <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
+                  <div className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
                     <i className="far fa-compass"></i> {data.parts} in{' '}
                     {post.city}
-                  </p>
+                  </div>
                 </Link>
               </div>
             ))}

@@ -474,14 +474,14 @@ export default function Car({
         </Link>
         <p className="text-xl font-mono text-gray-700 mx-auto xs:text-base xl:text-lg 2xs:text-xs">
           Emirates-car.com is the online Dealers specialist in {make} {model}{' '}
-          and almost any car brands running on roads of UAE. We find pleasure is
-          finding the best genuine (otherwise called OEM parts) and aftermarket
-          parts for any cars. We have experienced professional who can find the
-          parts at affordable and reasonable price. We deal in genuine honda
-          parts and aftermarket honda parts such as engine parts, mechanical
-          parts, electrical and electronic parts, body parts and lights, AC
-          parts and service and maintenance parts. You can order Honda spare
-          parts by simply submitting the online inquiry form{' '}
+          and almost any car brands running on roads of UAE. We find pleasure in
+          finding the best used, genuine (otherwise called OEM parts) and
+          aftermarket parts for any cars. We have experienced professional who
+          can find the parts at affordable and reasonable price. We deal in
+          genuine honda parts and aftermarket honda parts such as engine parts,
+          mechanical parts, electrical and electronic parts, body parts and
+          lights, AC parts and service and maintenance parts. You can order
+          Honda spare parts by simply submitting the online inquiry form{' '}
           <Link
             href="https://emirates-car.com"
             className="text-blue-500 underline hover:text-blue-900"
@@ -947,10 +947,12 @@ export default function Car({
                 className="text-3xl font-extrabold mx-auto my-5"
                 id="oemvsaftermarket"
               >
-                Team Genuine {make} part VS Team Aftermarket {make} part
+                Team Genuine {make} {model}part VS Team Aftermarket {make}{' '}
+                {model} part
               </h3>
               <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-                {make} aftermarket parts are better to buy for many reasons:
+                {make} {model} aftermarket parts are better to buy for many
+                reasons:
               </p>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>It is more affordable than genuine parts</li>
@@ -965,7 +967,7 @@ export default function Car({
                 </li>
               </ol>
               <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-                {make} Genuine parts are better to buy for many reasons:
+                {make} {model} Genuine parts are better to buy for many reasons:
               </p>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
