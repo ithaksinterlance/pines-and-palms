@@ -27,10 +27,10 @@ export default class home_hero extends Component {
                 <div className="sm:ml-5 lg:text-left xs:text-center">
                   <div className="tracking-tight font-extrabold xl:text-6xl sm:text-3xl md:text-4xl lg:text-5xl xs:text-2xl s:text-xl xs:font-sans">
                     <p className="text-yellow-500 text-6xl font-sans pb-6">
-                      Hi <nobr />
+                      Hi
                       <Image
                         src={Hand}
-                        alt="Auto Spare parts in UAE"
+                        alt="automobile spare parts"
                         height={53}
                         width={53}
                         priority
@@ -54,19 +54,20 @@ export default class home_hero extends Component {
                     <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
                       <Link
                         href={`${'/#myForm'}`}
-                        className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                        title="vehicle parts online"
+                        className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-md xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
                       >
-                        Inquire Now
+                        Get Free Quote Now
                       </Link>
                     </div>
                   </div>
-                  <div className="mt-5 sm:mt-8 sm:flex lg:justify-start xs:pb-20 s:pb-20">
+                  <div className="mt-5 xs:mt-0 sm:flex lg:justify-start s:pb-20">
                     <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
                       <Link
                         href={`${'/honda-accord-8th-gen-parts'}`}
-                        className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-red-700 hover:bg-red-900 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 animate-pulse"
+                        className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-red-700 hover:bg-red-900 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-md 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 animate-pulse"
                       >
-                        Best Deals On Honda !! {`>>`}
+                        Best Deals On Honda !!
                       </Link>
                     </div>
                   </div>
@@ -74,7 +75,7 @@ export default class home_hero extends Component {
               </div>
             </div>
             <div className="mt-10 sm:mt-12 md:mt-16 lg:mt-5 hero_section_blob xs:hidden s:hidden 2xs:hidden">
-              <Image src={Hero_img} alt="used parts sharjah" priority />
+              <Image src={Hero_img} alt="automotive parts online" priority />
             </div>
           </div>
         </div>
@@ -84,7 +85,7 @@ export default class home_hero extends Component {
               <div>
                 <Image
                   src={NewCar}
-                  alt="auto spare parts in dubai"
+                  alt="automotive parts store"
                   priority
                   width={60}
                   height={60}
@@ -108,7 +109,7 @@ export default class home_hero extends Component {
               <div>
                 <Image
                   src={Genuine}
-                  alt="auto spare parts in dubai"
+                  alt="automobile spare parts"
                   priority
                   width={60}
                   height={60}
@@ -120,7 +121,7 @@ export default class home_hero extends Component {
               <div>
                 <Image
                   src={AfterMarket}
-                  alt="auto spare parts in dubai"
+                  alt="aftermarket auto body parts"
                   priority
                   width={60}
                   height={60}

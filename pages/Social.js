@@ -8,7 +8,7 @@ export default function Social() {
         <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl pb-5">
           FOLLOW US ON SOCIAL MEDIA
         </p>
-        <div className="grid grid-cols-6 gap-4">
+        <div className="grid grid-cols-6 gap-4 py-2">
           <div>
             <Link
               href={`${'https://www.facebook.com/emirates.auto.parts'}`}
