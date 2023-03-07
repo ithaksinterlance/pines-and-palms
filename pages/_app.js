@@ -47,6 +47,12 @@ function MyApp({ Component, pageProps }) {
           href="/icons/favicon-32x32.png"
         />
         <link
+          rel="apple-touch-icon"
+          type="image/png"
+          size="192x192"
+          href="/icons/icon-192x192.png"
+        />
+        <link
           rel="icon"
           type="image/png"
           sizes="16x16"
