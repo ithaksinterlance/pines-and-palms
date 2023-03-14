@@ -4,19 +4,20 @@ import Navbar from '../nav';
 import Footer from '../footer';
 import Link from 'next/link';
 import OtherHondaModels from '../OtherHondaModels';
+import Image from 'next/image';
+import FeaturedHonda from '../8th-gen-Honda';
 
 export default function HondaParts() {
   return (
     <div>
       <Head>
         <title>
-          Honda Car Spare Parts in UAE from Dubai dealers Online
-          | Emirates-car.com
+          Honda spare parts UAE from Dubai dealers Online | Emirates-car.com
         </title>
         <meta
           name="description"
           content={
-            'Used, Genuine, Aftermarket, OEM Honda Accord Auto parts Online delivered in UAE'
+            'Buy Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket Honda spare parts            from Dubai Dealer to all over UAE and world Online'
           }
         />
         <meta
@@ -59,28 +60,33 @@ export default function HondaParts() {
         />
       </Head>
       <Navbar />
-      <div className="w-3/4">
+      <div className="w-3/4 mx-auto">
         <h1 className="text-3xl font-extrabold mx-auto my-5 xs:text-xl">
-          Buy high Quality Used, Genuine, OEM and Aftermarket Honda spare parts
-          from Dubai to all over UAE and world
+          Buy Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket
+          Honda spare parts from Dubai Dealer to all over UAE and world Online
         </h1>
         <Link
           href={`${'/search-by-make/Honda'}`}
           className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
           target="_newtab"
         >
-          Inquire Now
+          Get Prices Now
         </Link>
 
         <p className="text-xl font-mono text-gray-700 mx-auto">
           Emirates-car.com is the online Dealers specialist in almost any car
-          brands running on roads of UAE. We find pleasure is finding the best
-          genuine (otherwise called OEM parts) and aftermarket parts for any
+          brands running on roads of UAE. Call it original parts or OEM parts or
+          Genuine parts or aftermarket parts, We are here to find the best parts
+          for you. We find pleasure is finding the best genuine (otherwise
+          called OEM parts or original parts) and aftermarket parts for any
           cars. We have experienced professional who can find the parts at
           affordable and reasonable price. We deal in genuine honda parts and
           aftermarket honda parts such as engine parts, mechanical parts,
-          electrical and electronic parts, body parts and lights, AC parts and
-          service and maintenance parts. You can order Honda spare parts by
+          performance parts, electrical and electronic parts, body parts and
+          lights, AC parts and service and maintenance parts. We supply honda
+          parts for all generation including 8th gen honda parts, 9th gen honda
+          parts, 10th gen honda parts, 11th gen honda parts. You can order and
+          buy japanese car parts Online. You can order Honda spare parts by
           simply submitting the online inquiry form{' '}
           <Link
             href="https://emirates-car.com"
@@ -106,30 +112,166 @@ export default function HondaParts() {
           looking for Honda spare parts dealer, Emirates-car.com is the end
           point to all your search.
         </p>
+        <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-xl 2xs:text-xs py-5 text-center">
+          Honda performance parts
+        </p>
+        <div className="grid grid-cols-5 xs:grid-cols-2">
+          <div>
+            <div className="border-2 p-5 relative text-center">
+              <h3 className="text-xl font-bold font-sans">Camshaft gear</h3>
+              <hr className="py-1" />
+              <Image
+                src="/img/honda-accord-8th-gen/camshaftgear.webp"
+                alt="cam gears"
+                height={250}
+                width={250}
+              />
+              <Link
+                href="/search-by-part-name/Ring%20Gear%20and%20Pinion"
+                title="Honda cam gear"
+                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+              >
+                Inquire Now
+              </Link>
+            </div>
+          </div>
+          <div>
+            <div className="border-2 p-5 relative text-center">
+              <h3 className="text-xl font-bold font-sans">Cold Air Intakes</h3>
+              <hr className="py-1" />
+              <Image
+                src="/img/honda-accord-8th-gen/coldairintake.webp"
+                alt="honda cold air intakes"
+                height={250}
+                width={250}
+              />
+              <Link
+                href="/search-by-part-name/Intake%20Manifold"
+                title="Honda cold air intakes"
+                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+              >
+                Inquire Now
+              </Link>
+            </div>
+          </div>
+          <div>
+            <div className="border-2 p-5 relative text-center">
+              <h3 className="text-xl font-bold font-sans">Exhaust System</h3>
+              <hr className="py-1" />
+              <Image
+                src="/img/honda-accord-8th-gen/Exhaust_Manifold.webp"
+                alt="honda exhaust system"
+                height={250}
+                width={250}
+              />
+              <Link
+                href="/search-by-make/Intake%20Manifold"
+                title="Honda intake manifold"
+                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+              >
+                Inquire Now
+              </Link>
+            </div>
+          </div>
+          <div>
+            <div className="border-2 p-5 relative text-center">
+              <h3 className="text-xl font-bold font-sans">Gaskets</h3>
+              <hr className="py-1" />
+              <Image
+                src="/img/honda-accord-8th-gen/Gasket.webp"
+                alt="honda body parts"
+                height={250}
+                width={250}
+              />
+              <Link
+                href="/search-by-make/Honda/CR-V"
+                title="Honda crv parts"
+                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+              >
+                Inquire Now
+              </Link>
+            </div>
+          </div>
+          <div>
+            <div className="border-2 p-5 relative text-center">
+              <h3 className="text-xl font-bold font-sans">Radiator Caps</h3>
+              <hr className="py-1" />
+              <Image
+                src="/img/honda-accord-8th-gen/RadiatorCap.webp"
+                alt="honda radiator cap"
+                height={250}
+                width={250}
+              />
+              <Link
+                href="/search-by-part-name/Radiator"
+                title="Honda radiator caps"
+                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+              >
+                Inquire Now
+              </Link>
+            </div>
+          </div>
+          <div>
+            <div className="border-2 p-5 relative text-center">
+              <h3 className="text-xl font-bold font-sans">Oxygen Sensors</h3>
+              <hr className="py-1" />
+              <Image
+                src="/img/honda-accord-8th-gen/Sensors.webp"
+                alt="honda oxygen sensors"
+                height={250}
+                width={250}
+              />
+              <Link
+                href="/get-in-touch"
+                title="honda oxygen sensors"
+                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+              >
+                Inquire Now
+              </Link>
+            </div>
+          </div>
+          <div>
+            <div className="border-2 p-5 relative text-center">
+              <h3 className="text-xl font-bold font-sans">Throttle Body</h3>
+              <hr className="py-1" />
+              <Image
+                src="/img/honda-accord-8th-gen/ThrottleBottle.webp"
+                alt="honda throttle body"
+                height={250}
+                width={250}
+              />
+              <Link
+                href="/search-by-part-name/Throttle%20Body%20Assembly"
+                title="throttle body"
+                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+              >
+                Inquire Now
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="d-flex  pt-10 xs:pt-5 mx-8">
+          <div>
+            <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center">
+              List of different Genuine and Aftermarket Honda spare parts in UAE
+            </p>
+
+            <FeaturedHonda />
+            <Link
+              href={`${'/get-in-touch'}`}
+              className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+              target="_newtab"
+            >
+              View All Parts
+            </Link>
+          </div>
+        </div>
         <h3
           className="text-3xl font-extrabold mx-auto my-5"
-          id="oemvsaftermarket"
+          id="oemvsaftermarket1"
         >
-          Team Genuine VS Team Aftermarket
+          Why choose Honda genuine parts ?
         </h3>
-        <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-          Honda aftermarket parts are better to buy for many reasons:
-        </p>
-        <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
-          <li>It is more affordable than genuine parts</li>
-          <li>Some genuine parts are similar to genuine parts itself.</li>
-          <li>
-            It is readily available because it is equivalently manufactured to
-            genuine parts.
-          </li>
-          <li>
-            Aftermarket parts can have more manufacturers than genuine parts
-            which can be only from one main manufacturer
-          </li>
-        </ol>
-        <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-          Honda Genuine parts are better to buy for many reasons:
-        </p>
         <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
           <li>
             Aftermarket parts are not regularized or standardized because it is
@@ -149,10 +291,36 @@ export default function HondaParts() {
         <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
           Availability of Honda parts in UAE:
         </p>
+        <h3
+          className="text-3xl font-extrabold mx-auto my-5"
+          id="oemvsaftermarket"
+        >
+          Why choose Honda aftermarket parts ?
+        </h3>
+        <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+          Honda aftermarket parts are better to buy for many reasons:
+        </p>
+        <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
+          <li>It is more affordable than genuine parts</li>
+          <li>Some genuine parts are similar to genuine parts itself.</li>
+          <li>
+            It is readily available because it is equivalently manufactured to
+            genuine parts.
+          </li>
+          <li>
+            Aftermarket parts can have more manufacturers than genuine parts
+            which can be only from one main manufacturer
+          </li>
+        </ol>
+        <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+          Honda Genuine parts are better to buy for many reasons:
+        </p>
+
         <div className="grid grid-cols-5 xs:grid-cols-1 gap-3 mx-auto p-5 border-2 border-gray-500">
           <div>
             <Link
               href="/honda-parts/dubai"
+              title="honda spare parts dubai sheikh zayed road"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
             >
               <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
@@ -163,6 +331,7 @@ export default function HondaParts() {
             {' '}
             <Link
               href="/honda-parts/sharjah"
+              title="honda spare parts sharjah"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
             >
               <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
@@ -173,6 +342,7 @@ export default function HondaParts() {
             {' '}
             <Link
               href="/honda-parts/ajman"
+              title="honda spare parts ajman"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
             >
               <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;AJMAN
@@ -182,6 +352,7 @@ export default function HondaParts() {
             {' '}
             <Link
               href="/honda-parts/ras-al-khaimah"
+              title="honda spare parts abu dhabi"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
             >
               <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;RAS
@@ -191,6 +362,7 @@ export default function HondaParts() {
           <div>
             <Link
               href="/honda-parts/al-quoz"
+              title="honda spare parts al quoz"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
             >
               <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Al
@@ -216,7 +388,10 @@ export default function HondaParts() {
           </div>
         </div>
         <p className="text-3xl font-extrabold mx-auto my-5">
-          List of different Genuine and Aftermarket Honda spare parts in UAE
+          Shop for Honda performance parts, honda genuine parts, honda
+          aftermarket parts, honda body parts, honda mechanical parts, honda
+          electrical parts, honda engine parts, honda replacement parts, honda
+          AC parts and more
         </p>
         <div className="grid grid-cols-3 xs:grid-cols-1">
           <div>

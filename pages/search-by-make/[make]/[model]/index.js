@@ -1187,7 +1187,7 @@ export default function Car({
                   >
                     <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                       <i className="far fa-compass"></i>
-                      {' ' + make} {' ' + model} {post.parts}
+                      {' ' + make} {' ' + model} {post.parts} price list
                     </p>
                   </Link>
                 </div>
