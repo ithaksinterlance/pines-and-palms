@@ -5,8 +5,187 @@ import Footer from '../../footer';
 import React, { useState, useEffect } from 'react';
 import Social from '../../Social';
 import HondaOfferButton from '../../HondaOfferButton';
+import Image from 'next/image';
+import ABS from '../../../public/img/honda-eighth-gen/Anti_Lock_Braking_System.webp';
+import AirFilter from '../../../public/img/honda-eighth-gen/Air_Filter.webp';
+import AirSuspension from '../../../public/img/honda-eighth-gen/Air_Suspension_Module.webp';
+import AxleAssembly from '../../../public/img/honda-eighth-gen/Axle_Assembly_Rear.webp';
+import BrakePads from '../../../public/img/honda-eighth-gen/Brake_Pads.webp';
+import CatalyticConverter from '../../../public/img/honda-eighth-gen/Catalytic_Converter.webp';
+import CylinderHead from '../../../public/img/honda-eighth-gen/Cylinder_Head.webp';
+import Distributor from '../../../public/img/honda-eighth-gen/Distributor.webp';
+import Engine from '../../../public/img/honda-eighth-gen/Engine.webp';
+import ExhaustManifold from '../../../public/img/honda-eighth-gen/Exhaust_Manifold.webp';
+import GearBox from '../../../public/img/honda-eighth-gen/Gearbox.webp';
+import Grille from '../../../public/img/honda-eighth-gen/Grille.webp';
+import Headlight from '../../../public/img/honda-eighth-gen/Headlight.webp';
+import MasterCylinderKit from '../../../public/img/honda-eighth-gen/Master_Cylinder.webp';
+import Radiator from '../../../public/img/honda-eighth-gen/Radiator.webp';
+import RearBumper from '../../../public/img/honda-eighth-gen/Rear_Bumper_Assembly.webp';
+import ReverseLight from '../../../public/img/honda-eighth-gen/Reverse_Light.webp';
+import Rim from '../../../public/img/honda-eighth-gen/Rim.webp';
+import SeatBelt from '../../../public/img/honda-eighth-gen/Seat_Belt.webp';
+import ShockAbsorber from '../../../public/img/honda-eighth-gen/Shock_Absorber.webp';
+import SideMirror from '../../../public/img/honda-eighth-gen/Side_Mirror.webp';
+import SteeringWheel from '../../../public/img/honda-eighth-gen/Steering_Wheel.webp';
+import Wheel from '../../../public/img/honda-eighth-gen/Wheel.webp';
+import MudFlap from '../../../public/img/honda-eighth-gen/Mud_Flap.webp';
 
 export default function Car({ car, cities, make, partspost, posts }) {
+  const images = [
+    {
+      images: ABS,
+      name: `${make} ABS`,
+      alt: `${make} anti lock braking system`,
+      link:
+        'https://emirates-car.com/search-by-part-name/Anti-Lock%20Brake%20Control%20Module%20(ABS)'
+    },
+    {
+      images: AirFilter,
+      name: `${make} Air Filter`,
+      alt: `${make} air filter`,
+      link: 'https://emirates-car.com/get-in-touch'
+    },
+
+    {
+      images: AirSuspension,
+      name: `${make} Air Suspension`,
+      alt: `${make} Air suspension`,
+      link: 'https://emirates-car.com/get-in-touch'
+    },
+
+    {
+      images: AxleAssembly,
+      name: `${make} Axle`,
+      alt: `${make} axle`,
+      link:
+        'https://emirates-car.com/search-by-part-name/Axle%20Assembly%20(Front,%204WD)'
+    },
+    {
+      images: BrakePads,
+      name: `${make} Brake Pads`,
+      alt: `${make} brake pads`,
+      link: 'https://emirates-car.com/get-in-touch'
+    },
+    {
+      images: CatalyticConverter,
+      name: `${make} Catalytic Convertor`,
+      alt: `${make} catalytic convertor`,
+      link: 'https://emirates-car.com/get-in-touch'
+    },
+    {
+      images: CylinderHead,
+      name: `${make} Cylinder Head`,
+      alt: `${make} cylinder`,
+      link: 'https://emirates-car.com/search-by-part-name/Cylinder%20Head)'
+    },
+    {
+      images: Distributor,
+      name: `${make} Distributor`,
+      alt: `${make} distributor`,
+      link: 'https://emirates-car.com/search-by-part-name/Distributor'
+    },
+    {
+      images: Engine,
+      name: `${make} Engine`,
+      alt: `${make} Engine`,
+      link: 'https://emirates-car.com/search-by-part-name/Engine%20Assembly'
+    },
+    {
+      images: ExhaustManifold,
+      name: `${make} Exhaust Manifold`,
+      alt: `${make} exhaust system`,
+      link: 'https://emirates-car.com/search-by-part-name/Exhaust%20Manifold'
+    },
+    {
+      images: GearBox,
+      name: `${make} Gearbox / Transmission`,
+      alt: `${make} gearbox`,
+      link:
+        'https://emirates-car.com/search-by-part-name/Transmission%20Control%20Module'
+    },
+    {
+      images: Grille,
+      name: `${make} grill`,
+      alt: `${make} grill`,
+      link: 'https://emirates-car.com/search-by-part-name/Grille'
+    },
+    {
+      images: Headlight,
+      name: `${make} Headlight`,
+      alt: `${make} headlight bulb`,
+      link: 'https://emirates-car.com/search-by-part-name/Headlight%20Assembly'
+    },
+    {
+      images: MasterCylinderKit,
+      name: `${make} Master Cylinder`,
+      alt: `${make} master cylinder`,
+      link:
+        'https://emirates-car.com/search-by-part-name/Master%20Cylinder%20(Clutch)'
+    },
+    {
+      images: MudFlap,
+      name: `${make} Mud Flaps`,
+      alt: `${make} mud flaps`,
+      link: 'https://emirates-car.com/get-in-touch'
+    },
+    {
+      images: Radiator,
+      name: `${make} Radiator`,
+      alt: `${make} radiator`,
+      link: 'https://emirates-car.com/search-by-part-name/Radiator'
+    },
+    {
+      images: RearBumper,
+      name: `${make} Rear Bumper`,
+      alt: `${make} rear bumper`,
+      link:
+        'https://emirates-car.com/search-by-part-name/Bumper%20Assembly%20(Rear)'
+    },
+    {
+      images: ReverseLight,
+      name: `${make} Reverse Light`,
+      alt: `${make} reverse light`,
+      link: 'https://emirates-car.com/search-by-part-name/Reverse%20Light'
+    },
+    {
+      images: Rim,
+      name: `${make} Rims`,
+      alt: `${make} Rims for sale`,
+      link: 'https://emirates-car.com/search-by-part-name/Rim'
+    },
+    {
+      images: SeatBelt,
+      name: `${make} Seat Belt`,
+      alt: `${make} seat belt`,
+      link: 'https://emirates-car.com/search-by-part-name/Seat%20Belt'
+    },
+    {
+      images: ShockAbsorber,
+      name: `${make} Shock Absorber`,
+      alt: `${make} shock absorber`,
+      link: 'https://emirates-car.com/search-by-part-name/Shock%20Absorber'
+    },
+    {
+      images: SideMirror,
+      name: `${make} Mirror`,
+      alt: `${make} mirrors`,
+      link:
+        'https://emirates-car.com/search-by-part-name/Mirror%20(Rear%20View)'
+    },
+    {
+      images: SteeringWheel,
+      name: `${make} Steering Wheel`,
+      alt: `${make} steering wheel`,
+      link: 'https://emirates-car.com/search-by-part-name/Steering%20Wheel'
+    },
+    {
+      images: Wheel,
+      name: `${make} wheels`,
+      alt: `${make} wheels`,
+      link: 'https://emirates-car.com/search-by-part-name/Wheel'
+    }
+  ];
   const [Year, setYear] = useState('');
   const [Make, setMake] = useState('');
   const [Model, setModel] = useState('');
@@ -258,15 +437,18 @@ export default function Car({ car, cities, make, partspost, posts }) {
       <Nav />
       <Head>
         <title>
-          {make} - Car Auto Spare Parts Order Online in UAE - Best Prices
+          {`${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE -
+          Best Prices`}
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
           content={
-            'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket ' +
+            'Buy ' +
             make +
-            ' auto spare parts Online in UAE'
+            ' Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket ' +
+            make +
+            ' spare parts from Dubai Dealer to all over UAE and world Online'
           }
         />
         <meta
@@ -291,7 +473,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
             make +
             ' parts' +
             make +
-            ' spare part prices in uae, dubai, sharjah, ajman, ras al khaimah, abu dhabi'
+            ' spare part prices in uae'
           }
         />
         <meta property="og:site_name" content="Emirates-car" />
@@ -336,10 +518,24 @@ export default function Car({ car, cities, make, partspost, posts }) {
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
       </Head>
-      <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
-        <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
-          <main className="mx-10 xs:mx-4 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
+
+          <main className="d-flex justify-center  pt-10 xs:pt-5 mx-8">
             <article>
+              <div>
+                <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center">
+                  Buy {make} Car Parts - Used, Genuine, OEM (Original parts) and
+                  Aftermarket {make} spare parts from Dubai Dealer to all over
+                  UAE and world Online - Body Parts, Performance Parts,
+                  Mechanical parts, Electronic parts, Engine parts and more..
+                </h1>
+                <Link
+                  href={`${'/search-by-make/'+make+'/#myForm'}`}
+                  className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+                >
+                  Inquire Now
+                </Link>
+              </div>
+
               <div>
                 <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5 text-justify">
                   CHOOSE YOUR
@@ -405,8 +601,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       passHref
                     >
                       <main className="border border-blue-800 h-full p-3 ">
-                        <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
-                          {post.model.replace('%2F', '/')}{' '}
+                        <p className="text-center text-lg xs:text-xl xs:text-center font-mono text-blue-800 underline hover:text-gray-800 focus:text-gray-800 font-bold ">
+                          {make +
+                            ' ' +
+                            post.model.replace('%2F', '/') +
+                            ' parts'}{' '}
                         </p>
                       </main>
                     </Link>
@@ -414,7 +613,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 ))}{' '}
               </div>
             </article>
-            <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
+            <div className="text-center mt-2 text-red-400 text-sm xs:text-xs py-5">
               **Model not found above?
               <Link href={`${'/get-in-touch'}`} passHref>
                 <nobr className="text-blue-500 text-sm underline">
@@ -427,6 +626,10 @@ export default function Car({ car, cities, make, partspost, posts }) {
               <HondaOfferButton />
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 md:grid md:grid-cols-1 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+              <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 text-red-600">
+                Want to Get Prices for {make} spare parts uae online? Submit your
+                inquiry here
+              </p>
               <form
                 id="myForm"
                 className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
@@ -719,90 +922,545 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </div>
               </div>
             </div>
-            <div className="place-content-center grid grid-cols-1 md:grid md:grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
-              <h1 className="text-base font-medium text-gray-500 p-5">
-                We deal with any country auto spare parts including japanese,
-                american, german, chinese, indian, Korean, french, british in
-                UAE. We deal in auto spare parts such as{' '}
-                {partspost.map(p => (
-                  <Link
-                    href={`${'/search-by-part-name/[parts]'}`}
-                    as={`${'/search-by-part-name/' + p.parts}`}
-                    key={p.id}
-                    title={p.parts}
-                    passHref
-                  >
-                    {p.parts + ' , '}
-                  </Link>
-                ))}
-              </h1>
-              <p className="text-base font-medium text-gray-500 p-5">
-                We deal in automobile in places such as sharjah, ajman, abu
-                dhabi, umm al nar, umm al quwain, musaffah, al ain etc. We deal
-                in Used / New / Genuine / OEM / Aftermarket auto spare parts in
-                area such as abu dhabi, ras al khaimah, ras al khor, umm al nar,
-                dubai, sharjah, ajman, palm jumeirah in UAE. We are online and
-                accept inquiries through our website and we will get back to you
-                through whatsapp and give you our price list in our quotation.
-                You can check our catalogue at{' '}
-                <Link
-                  href={`${'https://emirates-car.com/search-by-part-name'}`}
-                  className="text-blue-400 underline"
-                >
-                  https://emirates-car.com/search-by-part-name
-                </Link>
-                . After you are satisfied with our price we will arrange
-                delivery to your convinient locations mentioned. UAE Automobile
-                industry is slowly shifting towards a service oriented business
-                model based on consumer data and customer experience. Now
-                companies are trying to adapt to the current need of the trends
-                Markets. They rely on consumer data for knowing the sale
-                interest of the customers based on the experience through
-                analytics software. Owners are now thinking ways to accommodate
-                the market through the trends analytics in order to keep the
-                company into their targeted level. Previously there were cars
-                running on petrol in which UAE is one of the largest producer
-                and diesel. Since the beginning era of electric vehicle have
-                started, many people are opting for electric vehicles in spite
-                of its shortcomings because it is more affordable compared to
-                vehicle running on diesel or petrol. By this transition there is
-                no difference in usage of irreversible energy.
-              </p>
-              <p className="text-base font-medium text-gray-500 p-5">
-                We provide auto spare parts for any vehicles including :
-                <ul className="list-disc">
-                  <li>New auto spare parts</li>
-                  <li>Used auto spare parts</li>
-                  <li>Genuine auto spare parts</li>
-                  <li>Aftermarket auto spare parts</li>
-                </ul>
-              </p>
+            <div className="text-xl font-mono text-gray-700 mx-auto xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5">
+              Emirates-car.com is the online Dealers specialist in {make} spare
+              parts running on roads of UAE. We find pleasure is finding the
+              best genuine (otherwise called OEM parts) and aftermarket parts
+              for any cars. We have experienced professional who can find the
+              parts at affordable and reasonable price. We deal in genuine{' '}
+              {make}
+              parts and aftermarket {make} parts such as engine parts,
+              mechanical parts, electrical and electronic parts, body parts and
+              lights, AC parts and service and maintenance parts. You can order{' '}
+              {make} spare parts by simply submitting the online inquiry form{' '}
+              <Link
+                href="https://emirates-car.com"
+                className="underline text-blue-500 hover:text-blue-900"
+              >
+                here
+              </Link>
+              . You can get callback or whatsapp chat or email after submitting
+              your form inquiry.
             </div>
-          </main>
-        </div>
-        <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
-          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
-            SEARCH PARTS BY COUNTRIES (U.A.E)
-          </div>
-          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  font-sans">
-            {cities.map(post => (
-              <div key={post.id}>
+            <p className="text-xl font-mono text-gray-700 mx-auto font-extrabold xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10">
+              Availability of {make} parts in UAE:
+            </p>
+            <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+              <div>
                 <Link
-                  href={`${'/search-by-cities-in-uae/[city]'}`}
-                  as={`${'/search-by-cities-in-uae/' + post.city}`}
-                  title={make + ' spare parts ' + post.city}
-                  passHref
+                  href="/search-by-cities-in-uae/Dubai"
+                  title={make + ' spare parts dubai'}
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 >
-                  <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
-                    <i className="far fa-compass"></i>&nbsp;
-                    {post.city}{' '}
-                  </p>
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                  {make} Parts Dubai
                 </Link>
               </div>
-            ))}{' '}
+              <div>
+                {' '}
+                <Link
+                  href="/search-by-cities-in-uae/Sharjah"
+                  title={make + ' spare parts dubai'}
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                  {make} Parts Sharjah
+                </Link>
+              </div>
+              <div>
+                {' '}
+                <Link
+                  href="/search-by-cities-in-uae/Ajman"
+                  title={make + ' spare parts ajman'}
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  {make} Parts Ajman
+                </Link>
+              </div>
+              <div>
+                {' '}
+                <Link
+                  href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
+                  title={make + ' spare parts ras al khaimah'}
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  {make} Parts Ras Al Khaimah
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
+                  title={make + ' spare parts al quoz'}
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  {make} Parts Al Quoz
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
+                  title={make + ' spare parts dubai sheikh zayed road'}
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  {make} Parts Sheikh Zayed Road, Dubai
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="/search-by-cities-in-uae/Deira%20(Dubai)"
+                  title={make + ' spare parts deira'}
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  {make} Parts Deira
+                </Link>
+              </div>
+            </div>
+            <div className="d-flex justify-center pt-10 xs:pt-5 mx-8 xs:mx-3">
+              <div>
+                <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center">
+                  Popular Used, Genuine and Aftermarket {make} spare parts for sale in UAE
+                </p>
+
+                <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
+                  {images.map(i => (
+                    <div key={i.name} className="border-2 p-5 relative">
+                      <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
+                        Sale!
+                      </sup>
+                      <div className="h-50">
+                        <div className="text-xl font-bold font-sans xs:text-base">
+                          {i.name}
+                        </div>
+                      </div>
+
+                      <hr className="py-1" />
+                      <Image
+                        src={i.images}
+                        alt={i.alt}
+                        height={250}
+                        width={250}
+                        className="object-none object-center p-1"
+                        priority
+                      />
+
+                      <Link
+                        href={i.link}
+                        title={make + i.name}
+                        className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                      >
+                        Inquire Now
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href={`${'/get-in-touch'}`}
+                  className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+                  target="_newtab"
+                >
+                  View All Parts
+                </Link>
+              </div>
+            </div>
+            <p className="text-3xl font-extrabold mx-auto my-5 xs:text-xl md:text-2xl">
+          Shop for {make} performance parts, {make} genuine parts, {make+" "}
+          aftermarket parts, {make} body parts, {make} mechanical parts, {make+" "}
+          electrical parts, {make} engine parts, {make} replacement parts, {make+" "}
+          AC parts and more
+        </p>
+        <div className="grid grid-cols-3 xs:grid-cols-1">
+          <div>
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              {make} Engine parts
+            </p>
+            <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
+              <li>
+                <Link
+                  href="/search-by-part-name/Engine%20Assembly"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine Assembly
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Engine%20Block"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine Block
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Engine%20Mount"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine Mount
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Engine%20Block"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine Block
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Cylinder%20Head"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Cylinder Head
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Cylinder%20Block"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Cylinder Block
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Crankshaft"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Crankshaft
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Camshaft"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Camshaft
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Piston"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Piston
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Exhaust%20Manifold"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Exhaust Manifold
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Intake%20Manifold"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Intake Manifold
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Ignition%20Switch"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Ignition Switch
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Ignition%20Control%20Module"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Ignition Control Module
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Transmission%20Control%20Module"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  TCM
+                </Link>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              {make} Mechanical parts
+            </p>
+            <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
+              <li>
+                <Link
+                  href="/search-by-part-name/Engine%20Assembly"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Engine%20Assembly"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Battery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Engine%20Assembly"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Alternator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Brake%20Pads"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Brake Pads
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Radiator"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Radiator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Transmission%20Control%20Module"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Transmission
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Shock%20Absorber"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Shock Absorber
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Convertible%20Top%20Motor"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Catalytic Converter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Power%20Steering%20Box"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Power Steering
+                </Link>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              {make} Body Parts
+            </p>
+            <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
+              <li>
+                <Link
+                  href="/search-by-part-name/Bonnet"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Bonnet
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Fender%20(Front)"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Fender
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Decklid"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Decklid
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Grille"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Grille
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Wheel"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Wheel
+                </Link>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              {make} Electrical Parts
+            </p>
+            <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
+              <li>
+                <Link
+                  href="/search-by-part-name/Spark%20Plug"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Spark Plug
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Alternator"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Alternator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Battery"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Battery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/Ignition%20Switch"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Ignition Switch
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/get-in-touch"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Many more...
+                </Link>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              {make} AC Parts
+            </p>
+            <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
+              <li>
+                <Link
+                  href="/search-by-part-name/AC%20Compressor"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  AC Compressor
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/AC%20Condenser"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  AC Condenser
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/AC%20Selector"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  AC Selector
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search-by-part-name/AC%20Controls"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  AC Controls
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/get-in-touch"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Many more...
+                </Link>
+              </li>
+            </ol>
           </div>
         </div>
-      </div>
+            <div className="place-content-center ">
+              <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center">
+                List of Genuine and Aftermarket {make} spare parts in UAE
+              </p>
+              <div className="grid grid-cols-5 gap-2 s:grid-cols-1 xs:grid-cols-1 md:grid-cols-3 font-medium text-gray-500 p-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+                  {partspost.map(p => (
+                    <div key={p.id}>
+                      <Link
+                        href={`${'/search-by-part-name/[parts]'}`}
+                        as={`${'/search-by-part-name/' + p.parts}`}
+                        title={p.parts}
+                        className="text-blue-800 hover:text-gray-800 underline "
+                        passHref
+                      >
+                        {make + ' ' + p.parts + ' parts'}
+                      </Link>
+                    </div>
+                  ))}
+              </div>
+            </div>
+            <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-black font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
+            {make} spare parts Onine in UAE - Order Now and get best Quote
+            prices !
+          </div>
+            <div className="grid grid-cols-4 xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+              {cities.map(post => (
+                <div key={post.id}>
+                  <Link
+                    href={`${'/search-by-cities-in-uae/[city]'}`}
+                    as={`${'/search-by-cities-in-uae/' + post.city}`}
+                    title={make + ' spare parts ' + post.city}
+                    passHref
+                  >
+                    <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
+                      <i className="far fa-compass"></i>&nbsp;
+                      {post.city}{' '}
+                    </p>
+                  </Link>
+                </div>
+              ))}{' '}
+            </div>
+          </main>
+
       <Footer />
     </div>
   );
@@ -825,10 +1483,10 @@ export async function getStaticProps({ params }) {
 
   const res = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
   const data = await res.json();
+
   let uniqueObjectArray = [
     ...new Map(data.map(item => [item['model'], item])).values()
   ];
-  console.log(uniqueObjectArray);
   const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
   const cities = await cityresponse.json();
 

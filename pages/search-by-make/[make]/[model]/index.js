@@ -586,9 +586,9 @@ export default function Car({
                 </div>
               </Slider>
               <div className="py-5 p-10">
-                <h1 className="text-base font-bold text-blue-100 text-center pt-5">
+                <div className="text-base font-bold text-blue-100 text-center pt-5">
                   {make} {model} spare parts
-                </h1>
+                </div>
                 <p className="text-sm text-white text-center pt-5">
                   We are dealing with auto spare parts for car, heavy truck,
                   van, buses, coupe, SUV, prime, Petrol based vehicles, Diesel

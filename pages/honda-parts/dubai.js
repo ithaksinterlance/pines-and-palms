@@ -223,7 +223,7 @@ export default function Dubai() {
             </div>
           </div>
           <p className="text-4xl font-extrabold mx-auto my-5">
-            List of different Genuine and Aftermarket Honda spare parts in Dubai
+            List of Genuine and Aftermarket Honda spare parts in Dubai
             , UAE
           </p>
           <div className="grid grid-cols-3 xs:grid-cols-1">
