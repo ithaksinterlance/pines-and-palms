@@ -64,7 +64,7 @@ export default class home_hero extends Component {
                   <div className="mt-5 xs:mt-0 sm:flex lg:justify-start s:pb-20">
                     <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
                       <Link
-                        href={`${'/honda-accord-8th-gen-parts'}`}
+                        href={`${'/honda-accord-8th-gen-body-parts'}`}
                         className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-red-700 hover:bg-red-900 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-md 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 animate-pulse"
                       >
                         Best Deals On Honda !!

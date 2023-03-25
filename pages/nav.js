@@ -97,7 +97,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href={`${'/search-by-part-name'}`}
+                href="/search-by-part-name"
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
