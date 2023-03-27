@@ -329,8 +329,8 @@ export default function Make({ posts, cities, post }) {
                 {posts.map(post => (
                   <div key={post.id}>
                     <Link
-                      href={`${'/search-by-part-name/[parts]'}`}
-                      as={`${'/search-by-part-name/' + post.parts}`}
+                      href={`/search-by-part-name/[parts]`}
+                      as={`/search-by-part-name/${post.parts}`}
                       title={post.parts + ' in uae'}
                       passHref
                     >
@@ -350,7 +350,7 @@ export default function Make({ posts, cities, post }) {
                 <div>
                   <span>
                     <Link
-                      href={`${'/search-by-part-name'}`}
+                      href={`/search-by-part-name`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -359,7 +359,7 @@ export default function Make({ posts, cities, post }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-cities-in-uae'}`}
+                      href={`/search-by-cities-in-uae`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY CITY
@@ -368,7 +368,7 @@ export default function Make({ posts, cities, post }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-make'}`}
+                      href={`/search-by-make`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -628,7 +628,7 @@ export default function Make({ posts, cities, post }) {
                 dhabi, ajman, al quoz, jumeirah, deira etc. You can check our
                 catalogue at{' '}
                 <Link
-                  href={`${'https://emirates-car.com/search-by-part-name'}`}
+                  href={`https://emirates-car.com/search-by-part-name`}
                   className="text-blue-400 underline"
                 >
                   https://emirates-car.com/search-by-part-name
@@ -672,8 +672,8 @@ export default function Make({ posts, cities, post }) {
             {cities.map(post => (
               <div key={post.id}>
                 <Link
-                  href={`${'/search-by-cities-in-uae/[city]'}`}
-                  as={`${'/search-by-cities-in-uae/' + post.city}`}
+                  href={`/search-by-cities-in-uae/[city]`}
+                  as={`/search-by-cities-in-uae/${post.city}`}
                   title={'car spare parts ' + post.city}
                   passHref
                 >

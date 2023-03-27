@@ -7,7 +7,7 @@ export default function footer() {
       <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
         <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
           COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-          <Link href={`${'/contact'}`} className="underline text-blue-900">
+          <Link href={`/contact`} className="underline text-blue-900">
             CONTACT US NOW {'>>'}
           </Link>
         </h1>
@@ -28,7 +28,7 @@ export default function footer() {
             <p>
               <Link
                 className="text-xl leading-xl text-blue-900"
-                href={`${'https://www.facebook.com/emirates.auto.parts'}`}
+                href={`https://www.facebook.com/emirates.auto.parts`}
                 passHref
               >
                 <i className="fab fa-2x fa-facebook"></i>
@@ -73,21 +73,21 @@ export default function footer() {
           <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
             <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
             <Link
-              href={`${'/search-by-part-name'}`}
+              href={`/search-by-part-name`}
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
             >
               Search parts by part name in UAE
             </Link>
             <br />
             <Link
-              href={`${'/search-by-make'}`}
+              href={`/search-by-make`}
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
             >
               Search parts by Car make in UAE
             </Link>
             <br />
             <Link
-              href={`${'/search-by-cities-in-uae'}`}
+              href={`/search-by-cities-in-uae`}
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
             >
               Search parts by cities in UAE

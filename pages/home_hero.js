@@ -53,7 +53,7 @@ export default class home_hero extends Component {
                   <div className="mt-5 sm:mt-8 sm:flex lg:justify-start xs:pb-20 s:pb-20">
                     <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
                       <Link
-                        href={`${'/#myForm'}`}
+                        href={`/#myForm`}
                         title="vehicle parts online"
                         className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-md xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
                       >
@@ -64,7 +64,7 @@ export default class home_hero extends Component {
                   <div className="mt-5 xs:mt-0 sm:flex lg:justify-start s:pb-20">
                     <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
                       <Link
-                        href={`${'/honda-accord-8th-gen-body-parts'}`}
+                        href={`/honda-accord-8th-gen-body-parts`}
                         className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-red-700 hover:bg-red-900 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-md 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 animate-pulse"
                       >
                         Best Deals On Honda !!
@@ -155,7 +155,7 @@ export default class home_hero extends Component {
                 <div className="mt-5 sm:mt-8 sm:flex lg:justify-start">
                   <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-48 2xs:mx-auto sm:w-48 rounded-lg shadow-md">
                     <Link
-                      href={`${'/#myForm'}`}
+                      href={`/#myForm`}
                       className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md lg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 s:py-2 s:text-xs s:my-2 2xs:text-sm 2xs:my-2 2xs:mb-10 focus:filter brightness-125"
                     >
                       Inquire Now
@@ -167,7 +167,7 @@ export default class home_hero extends Component {
             <div className="grid grid-cols-3 xs:grid xs:grid-cols-3 s:grid s:grid-cols-3 ml-8 xs:py-10 sm:py-10 s:py-10 2xs:py-10 s:mx-5 xs:mx-3 2xs:mx-5">
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:shadow-none s:border-none">
                 <Link
-                  href={`${'./spare-parts/british-auto-spare-parts'}`}
+                  href={`/spare-parts/british-auto-spare-parts`}
                   passHref
                 >
                   <Image
@@ -194,7 +194,7 @@ export default class home_hero extends Component {
               </div>
               <div className="text-center border-l-2 border-b-2 border-gray-800 xs:border-none shadow-lg xs:shadow-none s:border-none s:shadow-none">
                 <Link
-                  href={`${'./spare-parts/japanese-auto-spare-parts'}`}
+                  href={`/spare-parts/japanese-auto-spare-parts`}
                   passHref
                 >
                   <Image
@@ -210,7 +210,7 @@ export default class home_hero extends Component {
               </div>
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Link
-                  href={`${'./spare-parts/korean-auto-spare-parts'}`}
+                  href={`/spare-parts/korean-auto-spare-parts`}
                   passHref
                 >
                   <Image
@@ -226,7 +226,7 @@ export default class home_hero extends Component {
               </div>
               <div className="text-center border-b-2 border-r-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Link
-                  href={`${'./spare-parts/american-auto-spare-parts'}`}
+                  href={`/spare-parts/american-auto-spare-parts`}
                   passHref
                 >
                   <Image
@@ -242,7 +242,7 @@ export default class home_hero extends Component {
               </div>
               <div className="text-center border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Link
-                  href={`${'./spare-parts/german-auto-spare-parts'}`}
+                  href={`/spare-parts/german-auto-spare-parts`}
                   passHref
                 >
                   <Image
@@ -269,7 +269,7 @@ export default class home_hero extends Component {
               </div>
               <div className="text-center shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Link
-                  href={`${'./spare-parts/french-auto-spare-parts'}`}
+                  href={`/spare-parts/french-auto-spare-parts`}
                   passHref
                 >
                   <Image

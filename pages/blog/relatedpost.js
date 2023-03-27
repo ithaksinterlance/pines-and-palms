@@ -35,7 +35,7 @@ export default class relatedpost extends Component {
             <li className="nav-item">
               <Link
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href={`${'https://www.facebook.com/emirates.auto.parts'}`}
+                href={`https://www.facebook.com/emirates.auto.parts`}
                 passHref
               >
                 <FontAwesomeIcon
@@ -47,7 +47,7 @@ export default class relatedpost extends Component {
             <li className="nav-item">
               <Link
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                href={`${'https://www.instagram.com/emiratescar_parts/'}`}
+                href={`https://www.instagram.com/emiratescar_parts/`}
                 passHref
               >
                 <FontAwesomeIcon
@@ -59,7 +59,7 @@ export default class relatedpost extends Component {
             <li className="nav-item">
               <Link
                 className="px-3 py-2 flex items-center text-xl leading-snug text-blue-700 hover:opacity-75"
-                href={`${'https://twitter.com/emiratescarpart'}`}
+                href={`https://twitter.com/emiratescarpart`}
                 passHref
               >
                 <FontAwesomeIcon
@@ -74,7 +74,7 @@ export default class relatedpost extends Component {
           <ul>
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
               <Link
-                href={`${'/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons'}`}
+                href={`/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons`}
                 passHref
               >
                 5 ways you can buy car spare parts
@@ -85,7 +85,7 @@ export default class relatedpost extends Component {
             </li>
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
               <Link
-                href={`${'/blog/How%20to%20Buy%20Auto%20Parts%20Online'}`}
+                href={`/blog/How%20to%20Buy%20Auto%20Parts%20Online`}
                 passHref
               >
                 How to Buy Car Spare Parts Online

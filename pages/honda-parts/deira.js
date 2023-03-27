@@ -65,7 +65,7 @@ export default function Deira() {
             and more models
           </h1>
           <Link
-            href={`${'/search-by-cities-in-uae/Deira%20(Dubai)'}`}
+            href={`/search-by-cities-in-uae/Deira%20(Dubai)`}
             className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
             target="_newtab"
           >

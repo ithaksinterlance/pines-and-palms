@@ -330,7 +330,7 @@ export default function City({ data, partspost, posts, makedatas }) {
               </nobr>
               index{'>>>'}
               <Link
-                href={`${'/search-by-cities-in-uae/' + data.city}`}
+                href={`/search-by-cities-in-uae/${data.city}`}
                 passHref
               >
                 search-by-cities-in-uae{'/'}
@@ -606,7 +606,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
-                    href={`${'./privacy-policy'}`}
+                    href={`/privacy-policy`}
                     className="underline"
                     target="_newtab"
                   >
@@ -614,7 +614,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </Link>
                   &nbsp;
                   <Link
-                    href={`${'./terms-and-condition'}`}
+                    href={`/terms-and-condition`}
                     className="underline"
                     target="_newtab"
                   >
@@ -631,7 +631,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <div>
                   <span>
                     <Link
-                      href={`${'/search-by-part-name'}`}
+                      href={`/search-by-part-name`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -640,7 +640,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-cities-in-uae'}`}
+                      href={`/search-by-cities-in-uae`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY CITY
@@ -649,7 +649,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-make'}`}
+                      href={`/search-by-make`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -672,7 +672,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                 Used spare parts, After market parts, Genuine spare parts and
                 New parts etc. You can check our catalogue at{' '}
                 <Link
-                  href={`${'https://emirates-car.com/search-by-part-name'}`}
+                  href={`https://emirates-car.com/search-by-part-name`}
                   className="text-blue-400 underline"
                 >
                   https://emirates-car.com/search-by-part-name
@@ -681,8 +681,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                 {makedatas.map(p => (
                   <Link
                     key={p.id}
-                    href={`${'https://emirates-car.com/search-by-cities-in-uae/' +
-                      p.make}`}
+                    href={`https://emirates-car.com/search-by-cities-in-uae/${p.make}`}
                   >
                     {p.make}
                     {' spare parts in ' + data.city + ', '}
@@ -723,8 +722,8 @@ export default function City({ data, partspost, posts, makedatas }) {
               {makedatas.map(makedata => (
                 <div key={makedata.id}>
                   <Link
-                    href={`${'/search-by-make/[make]'}`}
-                    as={`${'/search-by-make/' + makedata.make}`}
+                    href={`/search-by-make/[make]`}
+                    as={`/search-by-make/${makedata.make}`}
                     title={makedata.make + ' spare parts ' + data.city}
                     passHref
                   >
@@ -760,8 +759,8 @@ export default function City({ data, partspost, posts, makedatas }) {
             {partspost.map(post => (
               <div key={post.id}>
                 <Link
-                  href={`${'/search-by-part-name/[parts]'}`}
-                  as={'/search-by-part-name/' + post.parts}
+                  href={`/search-by-part-name/[parts]`}
+                  as={`/search-by-part-name/${post.parts}`}
                   title={post.parts + ' in ' + data.city}
                   passHref
                 >

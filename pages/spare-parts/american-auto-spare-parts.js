@@ -290,7 +290,7 @@ export default function America({ partsposts, posts }) {
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
                 <Link
-                  href={`${'https://emirates-car.com/search-by-make/Ford'}`}
+                  href={`https://emirates-car.com/search-by-make/Ford`}
                   passHref
                 >
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -311,7 +311,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/GMC'}`} passHref>
+                <Link href={`/search-by-make/GMC`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -330,7 +330,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Chevrolet'}`} passHref>
+                <Link href={`/search-by-make/Chevrolet`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -349,7 +349,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Jeep'}`} passHref>
+                <Link href={`/search-by-make/Jeep`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -368,7 +368,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Hummer'}`} passHref>
+                <Link href={`/search-by-make/Hummer`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -387,7 +387,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Cadillac'}`} passHref>
+                <Link href={`/search-by-make/Cadillac`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -406,7 +406,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Lincoln'}`} passHref>
+                <Link href={`/search-by-make/Lincoln`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -425,7 +425,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Dodge'}`} passHref>
+                <Link href={`/search-by-make/Dodge`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -444,7 +444,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Chrysler'}`} passHref>
+                <Link href={`/search-by-make/Chrysler`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -463,7 +463,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Mercury'}`} passHref>
+                <Link href={`/search-by-make/Mercury`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -482,7 +482,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Buick'}`} passHref>
+                <Link href={`/search-by-make/Buick`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -501,7 +501,7 @@ export default function America({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Ram'}`} passHref>
+                <Link href={`/search-by-make/Ram`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -522,7 +522,7 @@ export default function America({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`${'/get-in-touch'}`} passHref>
+              <Link href={`/get-in-touch`} passHref>
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**
@@ -550,7 +550,7 @@ export default function America({ partsposts, posts }) {
               Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
               can check our catalogue at{' '}
               <Link
-                href={`${'https://emirates-car.com/search-by-part-name'}`}
+                href={`https://emirates-car.com/search-by-part-name`}
                 className="text-blue-400 underline"
                 passHref
               >
@@ -568,7 +568,7 @@ export default function America({ partsposts, posts }) {
                 <div>
                   <span>
                     <Link
-                      href={`${'/search-by-part-name'}`}
+                      href={`/search-by-part-name`}
                       className="underline hover:text-blue-500 xs:text-sm"
                       passHref
                     >
@@ -578,7 +578,7 @@ export default function America({ partsposts, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-cities-in-uae'}`}
+                      href={`/search-by-cities-in-uae`}
                       className="underline hover:text-blue-500  xs:text-sm"
                       passHref
                     >
@@ -588,7 +588,7 @@ export default function America({ partsposts, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-make'}`}
+                      href={`/search-by-make`}
                       className="underline hover:text-blue-500  xs:text-sm"
                       passHref
                     >
@@ -837,7 +837,7 @@ export default function America({ partsposts, posts }) {
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
-                    href={`${'./privacy-policy'}`}
+                    href={`/privacy-policy`}
                     className="underline"
                     target="_newtab"
                     passHref
@@ -846,7 +846,7 @@ export default function America({ partsposts, posts }) {
                   </Link>
                   &nbsp;
                   <Link
-                    href={`${'./terms-and-condition'}`}
+                    href={`/terms-and-condition`}
                     className="underline"
                     target="_newtab"
                     passHref
@@ -915,8 +915,8 @@ export default function America({ partsposts, posts }) {
         {partsposts.map(post => (
           <div key={post.id}>
             <Link
-              href={`${'/search-by-cities-in-uae/[city]'}`}
-              as={`${'/search-by-part-name/' + post.parts}`}
+              href={`/search-by-cities-in-uae/[city]`}
+              as={`/search-by-part-name/${post.parts}`}
               title={post.parts + ' in uae'}
               passHref
             >

@@ -467,7 +467,7 @@ export default function Car({
           OEM and Aftermarket from Dubai to all over UAE and World
         </h1>
         <Link
-          href={`${'#makemodelform'}`}
+          href={`#makemodelform`}
           className="w-1/4 xs:w-4/5 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-base xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
         >
           Inquire Now
@@ -829,7 +829,7 @@ export default function Car({
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
-                    href={`${'./privacy-policy'}`}
+                    href={`/privacy-policy`}
                     className="underline"
                     target="_newtab"
                   >
@@ -837,7 +837,7 @@ export default function Car({
                   </Link>
                   &nbsp;
                   <Link
-                    href={`${'./terms-and-condition'}`}
+                    href={`/terms-and-condition`}
                     className="underline"
                     target="_newtab"
                   >
@@ -868,7 +868,7 @@ export default function Car({
                     {uniqueMakeArray.map(post => (
                       <div key={post.id}>
                         <Link
-                          href={`${'/search-by-make/[make]/[model]'}`}
+                          href={`/search-by-make/[make]/[model]`}
                           as={`${'/search-by-make/' +
                             post.make +
                             '/' +
@@ -892,7 +892,7 @@ export default function Car({
                     dubai, sharjah, abu dhabi, ajman, al quoz, jumeirah, deira
                     etc. You can check our catalogue at{' '}
                     <Link
-                      href={`${'https://emirates-car.com/search-by-part-name'}`}
+                      href={`https://emirates-car.com/search-by-part-name`}
                       className="text-blue-400 underline"
                     >
                       https://emirates-car.com/search-by-part-name
@@ -913,8 +913,8 @@ export default function Car({
                   {makeArray.map(p => (
                     <div key={p.id}>
                       <Link
-                        href={`${'/search-by-make/[make]'}`}
-                        as={`${'/search-by-make/' + p.make}`}
+                        href={`/search-by-make/[make]`}
+                        as={`/search-by-make/${p.make}`}
                         passHref
                       >
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -1180,8 +1180,8 @@ export default function Car({
               {partspost.map(post => (
                 <div key={post.id}>
                   <Link
-                    href={`${'/search-by-part-name/[parts]'}`}
-                    as={`${'/search-by-part-name/' + post.parts}`}
+                    href={`/search-by-part-name/[parts]`}
+                    as={`/search-by-part-name/${post.parts}`}
                     title={make + ' ' + model + ' ' + post.parts}
                     passHref
                   >

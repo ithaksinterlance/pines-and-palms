@@ -11,7 +11,7 @@ export default function Social() {
         <div className="grid grid-cols-6 gap-4 py-2">
           <div>
             <Link
-              href={`${'https://www.facebook.com/emirates.auto.parts'}`}
+              href={`https://www.facebook.com/emirates.auto.parts`}
               title="used car parts"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               passHref
@@ -21,7 +21,7 @@ export default function Social() {
           </div>
           <div>
             <Link
-              href={`${'https://www.instagram.com/emiratescar_parts/'}`}
+              href={`https://www.instagram.com/emiratescar_parts/`}
               title="car trends"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
@@ -32,7 +32,7 @@ export default function Social() {
           </div>
           <div>
             <Link
-              href={`${'https://twitter.com/emiratescarpart'}`}
+              href={`https://twitter.com/emiratescarpart`}
               title="emirates car parts news"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
@@ -43,7 +43,7 @@ export default function Social() {
           </div>
           <div>
             <Link
-              href={`${'https://emirates-car.tumblr.com/'}`}
+              href={`https://emirates-car.tumblr.com/`}
               title="emirates car parts"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
@@ -54,7 +54,7 @@ export default function Social() {
           </div>
           <div>
             <Link
-              href={`${'https://in.pinterest.com/emiratesautomobileparts/'}`}
+              href={`https://in.pinterest.com/emiratesautomobileparts/`}
               title="emirates car parts"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
@@ -65,7 +65,7 @@ export default function Social() {
           </div>
           <div>
             <Link
-              href={`${'https://www.linkedin.com/in/emirates-car-771929232/'}`}
+              href={`https://www.linkedin.com/in/emirates-car-771929232/`}
               title="emirates car parts career"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"

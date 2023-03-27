@@ -529,7 +529,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   Mechanical parts, Electronic parts, Engine parts and more..
                 </h1>
                 <Link
-                  href={`${'/search-by-make/'+make+'/#myForm'}`}
+                  href={`/search-by-make/${make}/#myForm}`}
                   className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
                 >
                   Inquire Now
@@ -592,11 +592,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 {car.map(post => (
                   <div key={post.id}>
                     <Link
-                      href={`${'/search-by-make/[make]/[model]'}`}
-                      as={`${'/search-by-make/' +
-                        post.make +
-                        '/' +
-                        post.model}`}
+                      href={`/search-by-make/[make]/[model]`}
+                      as={`/search-by-make/${post.make}/${post.model}`}
                       title={post.make + post.model + ' spare parts'}
                       passHref
                     >
@@ -615,7 +612,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs py-5">
               **Model not found above?
-              <Link href={`${'/get-in-touch'}`} passHref>
+              <Link href={`/get-in-touch`} passHref>
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**
@@ -869,7 +866,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
-                    href={`${'./privacy-policy'}`}
+                    href={`/privacy-policy}`}
                     className="underline"
                     target="_newtab"
                   >
@@ -877,7 +874,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   </Link>
                   &nbsp;
                   <Link
-                    href={`${'./terms-and-condition'}`}
+                    href={`/terms-and-condition`}
                     className="underline"
                     target="_newtab"
                   >
@@ -894,7 +891,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 <div>
                   <span>
                     <Link
-                      href={`${'/search-by-part-name'}`}
+                      href={`/search-by-part-name`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -903,7 +900,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-cities-in-uae'}`}
+                      href={`/search-by-cities-in-uae`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY CITY
@@ -912,7 +909,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-make'}`}
+                      href={`/search-by-make`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -935,7 +932,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               {make} spare parts by simply submitting the online inquiry form{' '}
               <Link
                 href="https://emirates-car.com"
-                className="underline text-blue-500 hover:text-blue-900"
+                className="underline text-blue-500 hover:text-blue-900" title="auto spare parts"
               >
                 here
               </Link>
@@ -1059,7 +1056,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   ))}
                 </div>
                 <Link
-                  href={`${'/get-in-touch'}`}
+                  href={`/get-in-touch`}
                   className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
                   target="_newtab"
                 >
@@ -1426,8 +1423,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   {partspost.map(p => (
                     <div key={p.id}>
                       <Link
-                        href={`${'/search-by-part-name/[parts]'}`}
-                        as={`${'/search-by-part-name/' + p.parts}`}
+                        href={`/search-by-part-name/[parts]`}
+                        as={`/search-by-part-name/${p.parts}`}
                         title={p.parts}
                         className="text-blue-800 hover:text-gray-800 underline "
                         passHref
@@ -1446,8 +1443,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
               {cities.map(post => (
                 <div key={post.id}>
                   <Link
-                    href={`${'/search-by-cities-in-uae/[city]'}`}
-                    as={`${'/search-by-cities-in-uae/' + post.city}`}
+                    href={`/search-by-cities-in-uae/[city]`}
+                    as={`/search-by-cities-in-uae/${post.city}`}
                     title={make + ' spare parts ' + post.city}
                     passHref
                   >

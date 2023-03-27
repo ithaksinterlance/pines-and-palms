@@ -231,7 +231,7 @@ export default function Parts({ data, cities, posts }) {
                 <div>
                   <span>
                     <Link
-                      href={`${'/search-by-part-name'}`}
+                      href={`/search-by-part-name`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -240,7 +240,7 @@ export default function Parts({ data, cities, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-cities-in-uae'}`}
+                      href={`/search-by-cities-in-uae`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       Spare parts near me
@@ -249,7 +249,7 @@ export default function Parts({ data, cities, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-make'}`}
+                      href={`/search-by-make`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -552,7 +552,7 @@ export default function Parts({ data, cities, posts }) {
                     </div>
                     <div className="flex float-left text-xs text-gray-400">
                       <Link
-                        href={`${'./privacy-policy'}`}
+                        href={`/privacy-policy`}
                         className="underline"
                         target="_newtab"
                       >
@@ -560,7 +560,7 @@ export default function Parts({ data, cities, posts }) {
                       </Link>
                       &nbsp;
                       <Link
-                        href={`${'./terms-and-condition'}`}
+                        href={`/terms-and-condition`}
                         className="underline"
                         target="_newtab"
                       >
@@ -580,8 +580,8 @@ export default function Parts({ data, cities, posts }) {
                 {posts.map(post => (
                   <div key={post.id}>
                     <Link
-                      href={`${'/search-by-make/[make]'}`}
-                      as={`${'/search-by-make/' + post.make}`}
+                      href={`/search-by-make/[make]`}
+                      as={`/search-by-make/${post.make}`}
                       title={data.parts + ' for ' + post.make}
                       passHref
                     >
@@ -613,7 +613,7 @@ export default function Parts({ data, cities, posts }) {
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
                   <Link
-                    href={`${'https://emirates-car.com/search-by-part-name'}`}
+                    href={`https://emirates-car.com/search-by-part-name`}
                     className="text-blue-400 underline"
                   >
                     https://emirates-car.com/search-by-part-name
@@ -656,8 +656,8 @@ export default function Parts({ data, cities, posts }) {
             {cities.map(post => (
               <div key={post.id}>
                 <Link
-                  href={`${'/search-by-cities-in-uae/[city]'}`}
-                  as={`${'/search-by-cities-in-uae/' + post.city}`}
+                  href={`/search-by-cities-in-uae/[city]'}`}
+                  as={`/search-by-cities-in-uae/${post.city}`}
                   title={post.city}
                   passHref
                 >

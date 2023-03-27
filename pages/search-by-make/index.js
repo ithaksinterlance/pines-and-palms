@@ -359,8 +359,8 @@ export default function Make({ car, cities, posts, pos }) {
                 {car.map(post => (
                   <div key={post.id}>
                     <Link
-                      href={`${'/search-by-make/[make]'}`}
-                      as={`${'/search-by-make/' + post.make}`}
+                      href={`/search-by-make/[make]`}
+                      as={`/search-by-make/${post.make}`}
                       passHref
                     >
                       <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
@@ -383,7 +383,7 @@ export default function Make({ car, cities, posts, pos }) {
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?{' '}
-              <Link href={`${'/get-in-touch'}`}>
+              <Link href={`/get-in-touch`}>
                 <nobr className="text-blue-500 text-sm underline">
                   Get in touch with us {'>>'}**
                 </nobr>
@@ -395,7 +395,7 @@ export default function Make({ car, cities, posts, pos }) {
                 <div>
                   <span>
                     <Link
-                      href={`${'/search-by-part-name'}`}
+                      href={`/search-by-part-name`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -404,7 +404,7 @@ export default function Make({ car, cities, posts, pos }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-cities-in-uae'}`}
+                      href={`/search-by-cities-in-uae`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY CITY
@@ -413,7 +413,7 @@ export default function Make({ car, cities, posts, pos }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-make'}`}
+                      href={`/search-by-make`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -661,7 +661,7 @@ export default function Make({ car, cities, posts, pos }) {
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
-                    href={`${'./privacy-policy'}`}
+                    href={`/privacy-policy`}
                     className="underline"
                     target="_newtab"
                   >
@@ -669,7 +669,7 @@ export default function Make({ car, cities, posts, pos }) {
                   </Link>
                   &nbsp;
                   <Link
-                    href={`${'./terms-and-condition'}`}
+                    href={`/terms-and-condition`}
                     className="underline"
                     target="_newtab"
                   >
@@ -698,8 +698,8 @@ export default function Make({ car, cities, posts, pos }) {
                 . We deal in auto spare parts such as{' '}
                 {posts.map(p => (
                   <Link
-                    href={`${'/search-by-part-name/[parts]'}`}
-                    as={`${'/search-by-part-name/' + p.parts}`}
+                    href={`/search-by-part-name/[parts]`}
+                    as={`/search-by-part-name/${p.parts}`}
                     key={p.id}
                     title={p.parts}
                   >
@@ -745,9 +745,9 @@ export default function Make({ car, cities, posts, pos }) {
             {cities.map(post => (
               <div key={post.id}>
                 <Link
-                  href={`${'/search-by-cities-in-uae/[city]'}`}
-                  as={`${'/search-by-cities-in-uae/' + post.city}`}
-                  title={'car spare parts ' + post.city + ' online'}
+                  href={`/search-by-cities-in-uae/[city]`}
+                  as={`/search-by-cities-in-uae/${post.city}`}
+                  title={'car parts ' + post.city}
                   passHref
                 >
                   <p className="text-base hover:text-blue-700 focus:text-blue-700 h-full text-gray-500">

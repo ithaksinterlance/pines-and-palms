@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="w-full flex justify-between">
           <Link
             className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1"
-            href={`${'/#spare_parts'}`}
+            href={`/#spare_parts`}
           >
             Emirates-car
           </Link>
@@ -42,7 +42,7 @@ export default function Navbar() {
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
               <Link
-                href={`${'/'}`}
+                href={`/`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
@@ -53,7 +53,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href={`${'/blog'}`}
+                href={`/blog`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
@@ -64,7 +64,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href={`${'/contact'}`}
+                href={`/contact`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
@@ -75,7 +75,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href={`${'/search-by-make'}`}
+                href={`/search-by-make`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
@@ -86,7 +86,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href={`${'/search-by-cities-in-uae'}`}
+                href={`/search-by-cities-in-uae`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
@@ -97,20 +97,20 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href="/search-by-part-name"
+                href={`/search-by-part-name`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
-              >
-                <span className="ml-2 text-base leading-xl text-white opacity-75">
-                  Search parts by Part name
-                </span>
+              ><span className="ml-2 text-base leading-xl text-white opacity-75">
+              Search parts by Part name
+            </span>
+
               </Link>
             </li>
           </ul>
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
               <Link
-                href={`${'https://www.facebook.com/emirates.auto.parts/'}`}
+                href={`https://www.facebook.com/emirates.auto.parts/`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
@@ -119,7 +119,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href={`${'https://www.instagram.com/emiratescar_parts/'}`}
+                href={`https://www.instagram.com/emiratescar_parts/`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
@@ -128,7 +128,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href={`${'https://twitter.com/emiratescarpart'}`}
+                href={`https://twitter.com/emiratescarpart`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >
@@ -137,7 +137,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                href={`${'https://emirates-car.tumblr.com/'}`}
+                href={`https://emirates-car.tumblr.com/`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 passHref
               >

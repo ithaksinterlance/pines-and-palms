@@ -291,7 +291,7 @@ export default function British({ partsposts, posts }) {
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
                 <Link
-                  href={`${'https://emirates-car.com/search-by-make/Aston Martin'}`}
+                  href={`https://emirates-car.com/search-by-make/Aston Martin`}
                   passHref
                 >
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -312,7 +312,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Bentley'}`} passHref>
+                <Link href={`/search-by-make/Bentley`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -331,7 +331,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Jaguar'}`} passHref>
+                <Link href={`/search-by-make/Jaguar`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -350,7 +350,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Land Rover'}`} passHref>
+                <Link href={`/search-by-make/Land Rover`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -369,7 +369,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Lotus'}`} passHref>
+                <Link href={`/search-by-make/Lotus`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -388,7 +388,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/McLaren'}`} passHref>
+                <Link href={`/search-by-make/McLaren`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -407,7 +407,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Mini'}`} passHref>
+                <Link href={`/search-by-make/Mini`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -426,7 +426,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`${'/search-by-make/Rolls-Royce'}`} passHref>
+                <Link href={`/search-by-make/Rolls-Royce`} passHref>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -447,7 +447,7 @@ export default function British({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`${'/get-in-touch'}`} passHref>
+              <Link href={`/get-in-touch`} passHref>
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**
@@ -475,7 +475,7 @@ export default function British({ partsposts, posts }) {
               Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
               can check our catalogue at{' '}
               <Link
-                href={`${'https://emirates-car.com/search-by-part-name'}`}
+                href={`https://emirates-car.com/search-by-part-name`}
                 className="text-blue-400 underline"
               >
                 https://emirates-car.com/search-by-part-name
@@ -492,7 +492,7 @@ export default function British({ partsposts, posts }) {
                 <div>
                   <span>
                     <Link
-                      href={`${'/search-by-part-name'}`}
+                      href={`/search-by-part-name`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -501,7 +501,7 @@ export default function British({ partsposts, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-cities-in-uae'}`}
+                      href={`/search-by-cities-in-uae`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY CITY
@@ -510,7 +510,7 @@ export default function British({ partsposts, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`${'/search-by-make'}`}
+                      href={`/search-by-make`}
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -758,7 +758,7 @@ export default function British({ partsposts, posts }) {
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
-                    href={`${'./privacy-policy'}`}
+                    href={`/privacy-policy`}
                     className="underline"
                     target="_newtab"
                   >
@@ -766,7 +766,7 @@ export default function British({ partsposts, posts }) {
                   </Link>
                   &nbsp;
                   <Link
-                    href={`${'./terms-and-condition'}`}
+                    href={`/terms-and-condition`}
                     className="underline"
                     target="_newtab"
                   >
@@ -834,8 +834,8 @@ export default function British({ partsposts, posts }) {
         {partsposts.map(post => (
           <div key={post.id}>
             <Link
-              href={`${'/search-by-cities-in-uae/[city]'}`}
-              as={`${'/search-by-part-name/' + post.parts}`}
+              href={`/search-by-cities-in-uae/[city]`}
+              as={`/search-by-part-name/${post.parts}`}
               title={post.parts + ' in uae'}
               passHref
             >

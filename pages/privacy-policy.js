@@ -25,7 +25,7 @@ export default class privacypolicy extends Component {
           accordance with this Privacy Policy. This Privacy Policy has been
           created with the help of the{' '}
           <Link
-            href={`${'https://www.termsfeed.com/blog/sample-privacy-policy-template/'}`}
+            href={`https://www.termsfeed.com/blog/sample-privacy-policy-template/`}
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
@@ -118,7 +118,7 @@ export default class privacypolicy extends Component {
               <strong>Website</strong> refers to Quick Auto Spare Parts Hunt in
               UAE | Emirates-car.com, accessible from{' '}
               <Link
-                href={`${'https://emirates-car.com'}`}
+                href={`https://emirates-car.com`}
                 rel="nofollow noopener noreferrer"
                 target="_blank"
               >
@@ -233,7 +233,7 @@ export default class privacypolicy extends Component {
             Flash Cookies, please read &quot;Where can I change the settings for
             disabling, or deleting local shared objects?&quot; available at{' '}
             <Link
-              href={`${'https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_'}`}
+              href={`https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_`}
               rel="nofollow noopener noreferrer"
               target="_blank"
             >
@@ -256,7 +256,7 @@ export default class privacypolicy extends Component {
           when You go offline, while Session Cookies are deleted as soon as You
           close Your web browser. You can learn more about cookies here:{' '}
           <Link
-            href={`${'https://www.termsfeed.com/privacy-policy-generator/#faq-8'}`}
+            href={`https://www.termsfeed.com/privacy-policy-generator/#faq-8`}
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
@@ -561,7 +561,7 @@ export default class privacypolicy extends Component {
             <p>
               By visiting this page on our website:{' '}
               <Link
-                href={`${'https://emirates-car.com/contact'}`}
+                href={`https://emirates-car.com/contact`}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
