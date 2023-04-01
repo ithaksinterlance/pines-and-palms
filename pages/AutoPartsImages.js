@@ -15,6 +15,7 @@ export default class AutoPartImages extends Component {
       return (
         <main key={image.title} className="border p-1 py-5 px-5">
           <Link href={image.href} passHref>
+            <a>
             <Image
               alt={image.title}
               src={'/img/car-auto-parts/' + image.image}
@@ -26,7 +27,7 @@ export default class AutoPartImages extends Component {
             <p className="text-base  text-blue-600 py-2 font-semibold underline">
               {image.title + '>>'}
             </p>
-            <p className="text-xs text-gray-500">{image.description}</p>
+            <p className="text-xs text-gray-500">{image.description}</p></a>
           </Link>
         </main>
       );

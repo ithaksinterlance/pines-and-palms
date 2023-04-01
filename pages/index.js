@@ -378,7 +378,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       rel="noopener noreferrer"
                       target="_newtab"
                     >
-                      {suggestion}{' '}
+                      {suggestion}
                     </Link>
                   </div>
                 ))}{' '}
@@ -395,7 +395,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Ford`}
-              passHref
+              
             >
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -415,7 +415,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/GMC`} passHref>
+            <Link href={`/search-by-make/GMC`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -431,10 +432,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   GMC
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Chevrolet`} passHref>
+            <Link href={`/search-by-make/Chevrolet`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -450,10 +453,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Chevrolet
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Jeep`} passHref>
+            <Link href={`/search-by-make/Jeep`} >
+
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -469,10 +475,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Jeep
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Hummer`} passHref>
+            <Link href={`/search-by-make/Hummer`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -488,10 +496,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Hummer
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Cadillac`} passHref>
+            <Link href={`/search-by-make/Cadillac`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -507,10 +517,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Cadillac
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Lincoln`} passHref>
+            <Link href={`/search-by-make/Lincoln`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -526,10 +538,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Lincoln
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Dodge`} passHref>
+            <Link href={`/search-by-make/Dodge`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -545,10 +559,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Dodge
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Chrysler`} passHref>
+            <Link href={`/search-by-make/Chrysler`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -564,10 +580,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Chrysler
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mercury`} passHref>
+            <Link href={`/search-by-make/Mercury`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -582,11 +600,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Mercury
                 </p>
-              </main>
+                </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Buick`} passHref>
+            <Link href={`/search-by-make/Buick`} ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -602,10 +621,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Buick
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Ram`} passHref>
+            <Link href={`/search-by-make/Ram`} ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -620,7 +640,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Ram
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
         </div>
@@ -632,7 +652,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Ford`}
-              passHref
+              
             >
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -652,7 +672,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mitsubishi`} passHref>
+            <Link href={`/search-by-make/Mitsubishi`} ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -667,11 +687,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Mitsubishi
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Lexus`} passHref>
+            <Link href={`/search-by-make/Lexus`} ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -686,11 +706,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Lexus
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Nissan`} passHref>
+            <Link href={`/search-by-make/Nissan`} ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -705,11 +725,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Nissan
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Infiniti`} passHref>
+            <Link href={`/search-by-make/Infiniti`} ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -724,11 +744,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Infinity
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Honda`} passHref>
+            <Link href={`/search-by-make/Honda`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -744,10 +765,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Honda
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mazda`} passHref>
+            <Link href={`/search-by-make/Mazda`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -763,11 +786,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Mazda
                 </p>
               </main>
+              </a>
             </Link>
           </div>
 
           <div>
-            <Link href={`/search-by-make/Subaru`} passHref>
+            <Link href={`/search-by-make/Subaru`} >
+<a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -783,10 +808,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Subaru
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Suzuki`} passHref>
+            <Link href={`/search-by-make/Suzuki`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -801,11 +828,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Suzuki
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Daihatsu`} passHref>
+            <Link href={`/search-by-make/Daihatsu`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -821,10 +849,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Daihatsu
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Isuzu`} passHref>
+            <Link href={`/search-by-make/Isuzu`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -840,6 +870,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Isuzu
                 </p>
               </main>
+              </a>
             </Link>
           </div>
         </div>
@@ -852,7 +883,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Aston Martin`}
-              passHref
+              
             >
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -872,7 +903,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Bentley`} passHref>
+            <Link href={`/search-by-make/Bentley`} >
+            <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -887,11 +919,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Bentley
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Jaguar`} passHref>
+            <Link href={`/search-by-make/Jaguar`} ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -907,10 +939,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Jaguar
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Land Rover`} passHref>
+            <Link href={`/search-by-make/Land Rover`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -925,11 +959,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Land Rover
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Lotus`} passHref>
+            <Link href={`/search-by-make/Lotus`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -944,11 +979,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Lotus
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/McLaren`} passHref>
+            <Link href={`/search-by-make/McLaren`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -964,10 +1000,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   McLaren
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mini`} passHref>
+            <Link href={`/search-by-make/Mini`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -983,10 +1021,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Mini
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Rolls-Royce`} passHref>
+            <Link href={`/search-by-make/Rolls-Royce`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1002,6 +1042,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Rolls Royce
                 </p>
               </main>
+              </a>
             </Link>
           </div>
         </div>
@@ -1013,8 +1054,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Peugeot`}
-              passHref
-            >
+              
+            ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1029,11 +1070,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Peugeot
                 </p>
-              </main>
-            </Link>
+                </main>
+                </a>
+                </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Citroen`} passHref>
+            <Link href={`/search-by-make/Citroen`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1049,10 +1092,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Citroen
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Renault`} passHref>
+            <Link href={`/search-by-make/Renault`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1068,10 +1113,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Renault
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mobility Ventures LLC`} passHref>
+            <Link href={`/search-by-make/Mobility Ventures LLC`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1087,10 +1134,11 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Mobility Ventures LLC
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Bugatti`} passHref>
+            <Link href={`/search-by-make/Bugatti`} ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1105,7 +1153,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <p className="text-center m-1 bg-blue-500 hover:bg-blue-400 text-white font-medium hover:text-gray-800 rounded-lg">
                   Bugatti
                 </p>
-              </main>
+              </main></a>
             </Link>
           </div>
         </div>
@@ -1115,7 +1163,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href={`/search-by-make/Mercedes-Benz`} passHref>
+            <Link href={`/search-by-make/Mercedes-Benz`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1131,10 +1180,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Mercedes Benz
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/BMW`} passHref>
+            <Link href={`/search-by-make/BMW`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1150,10 +1201,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   BMW
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Volkswagen`} passHref>
+            <Link href={`/search-by-make/Volkswagen`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1169,12 +1222,14 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Volkswagen
                 </p>
               </main>
+              </a>
             </Link>
           </div>
         </div>
         <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href={`/search-by-make/Jaguar`} passHref>
+            <Link href={`/search-by-make/Jaguar`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1190,10 +1245,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Jaguar
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Land%20Rover`} passHref>
+            <Link href={`/search-by-make/Land%20Rover`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1209,10 +1266,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Land Rover
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Porsche`} passHref>
+            <Link href={`/search-by-make/Porsche`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1228,6 +1287,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Porsche
                 </p>
               </main>
+              </a>
             </Link>
           </div>
         </div>
@@ -1237,7 +1297,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href={`/search-by-make/Hyundai`} passHref>
+            <Link href={`/search-by-make/Hyundai`} >
+            <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1253,10 +1314,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Hyundai
                 </p>
               </main>
+              </a>
             </Link>
+
           </div>
           <div>
-            <Link href={`/search-by-make/Kia`} passHref>
+            <Link href={`/search-by-make/Kia`} >
+            <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1272,10 +1336,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Kia
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Daewoo`} passHref>
+            <Link href={`/search-by-make/Daewoo`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1291,6 +1357,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Daewoo
                 </p>
               </main>
+              </a>
             </Link>
           </div>
         </div>
@@ -1800,8 +1867,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Toyota`}
-              passHref
-            >
+              
+            ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1817,10 +1884,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Toyota
                 </p>
               </main>
+              </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mitsubishi`} passHref>
+            <Link href={`/search-by-make/Mitsubishi`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1836,10 +1905,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Mitsubishi
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mercedes-benz`} passHref>
+            <Link href={`/search-by-make/Mercedes-benz`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1855,10 +1926,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Mercedes-benz
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Nissan`} passHref>
+            <Link href={`/search-by-make/Nissan`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1874,10 +1947,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Nissan
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Ford`} passHref>
+            <Link href={`/search-by-make/Ford`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1893,10 +1968,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Ford
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Hyundai`} passHref>
+            <Link href={`/search-by-make/Hyundai`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1912,10 +1989,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Hyundai
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Volkswagen`} passHref>
+            <Link href={`/search-by-make/Volkswagen`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1931,10 +2010,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Volkswagen spare parts sharjah
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Honda`} passHref>
+            <Link href={`/search-by-make/Honda`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1950,10 +2031,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Honda
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Lexus`} passHref>
+            <Link href={`/search-by-make/Lexus`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1969,10 +2052,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Lexus
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Acura`} passHref>
+            <Link href={`/search-by-make/Acura`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1988,10 +2073,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Acura
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Kia`} passHref>
+            <Link href={`/search-by-make/Kia`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -2007,10 +2094,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Kia
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Porsche`} passHref>
+            <Link href={`/search-by-make/Porsche`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -2026,10 +2115,13 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Porsche
                 </p>
               </main>
+
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Chevrolet`} passHref>
+            <Link href={`/search-by-make/Chevrolet`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -2045,10 +2137,12 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Chevrolet
                 </p>
               </main>
+                </a>
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Land Rover`} passHref>
+            <Link href={`/search-by-make/Land Rover`} >
+              <a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -2064,6 +2158,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                   Land Rover
                 </p>
               </main>
+                </a>
             </Link>
           </div>
         </div>
@@ -2111,7 +2206,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <Link
                 href={`/search-by-make/[make]`}
                 as={`/search-by-make/${post.make}`}
-                passHref
+                
               >
                 <main className="border h-full  hover:border-blue-600 py-3 ">
                   <div className="flex justify-center">
@@ -2175,7 +2270,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <Link
                 href="/search-by-cities-in-uae/[city]"
                 as={`${'/search-by-cities-in-uae/' + post.city}`}
-                passHref
+                
               >
                 <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
                   <p className="text-center text-blue-600 font-medium hover:text-gray-800">
@@ -2309,9 +2404,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <Link
             href="/search-by-make/Honda"
             className="text-blue-500 underline hover:text-blue-900"
-          ></Link>
+          ><a>
           other honda models, Infiniti models, BMW models, Audi models and many
-          other brands. Visit to search parts you need.
+          other brands. Visit to search parts you need.</a></Link>
         </div>
         <div>
           <p className="text-3xl font-extrabold mx-auto my-5">
@@ -2403,9 +2498,9 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <Link
               href={`/contact`}
               className="underline text-blue-900"
-              passHref
+              
             >
-              CONTACT US NOW {'>>'}
+             <a> CONTACT US NOW {'>>'}</a>
             </Link>
           </h3>
         </div>
@@ -2511,7 +2606,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <Link
                   href={`/search-by-make/[make]`}
                   as={'/search-by-make/' + post.make}
-                  passHref
+                  
                 >
                   <p className="text-xs text-white font-medium hover:text-gray-800 underline">
                     {post.make + ' spare parts'}{' '}
@@ -2525,10 +2620,10 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <Link
               href={`https://emirates-car.com`}
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-              passHref
-            >
+              
+            ><a>
               <i className="fa fa-copyright" aria-hidden="true"></i>
-              Copyright © 2023 Emirates-car. All rights reserved.
+              Copyright © 2023 Emirates-car. All rights reserved.</a>
             </Link>
           </div>
         </div>

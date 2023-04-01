@@ -5,12 +5,12 @@ export default function footer() {
   return (
     <div className="py-6 bg-blue-500">
       <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
-        <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
+        <h3 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
           COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-          <Link href={`/contact`} className="underline text-blue-900">
-            CONTACT US NOW {'>>'}
+          <Link href={`/contact`} >
+            <a className="underline text-blue-900">CONTACT US NOW {'>>'}</a>
           </Link>
-        </h1>
+        </h3>
       </div>
       <div className=" bg-purple-700 py-10 xs:py-5 2xs:py-5 sm:py-5">
         <div className="grid grid-cols-3 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 ">
@@ -74,42 +74,40 @@ export default function footer() {
             <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
             <Link
               href={`/search-by-part-name`}
-              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-            >
-              Search parts by part name in UAE
+
+            ><a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+              Search parts by part name in UAE</a>
             </Link>
             <br />
             <Link
               href={`/search-by-make`}
-              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-            >
-              Search parts by Car make in UAE
+
+            ><a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+            Search parts by car brands in uae</a>
             </Link>
             <br />
             <Link
               href={`/search-by-cities-in-uae`}
-              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-            >
-              Search parts by cities in UAE
+              >
+                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+              Search parts by cities in UAE</a>
             </Link>
           </div>
         </div>
         <div className="grid grid-cols-3 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 ">
           <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
             <p className="pt-5 text-white font-extrabold">Email Address</p>
-            <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+            <p className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
               emiratesautomobileparts@gmail.com
-            </a>
+            </p>
           </div>
         </div>
 
         <div className="text-center text-purple-200 py-10">
-          <Link
-            href="https://emirates-car.com"
-            className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-          >
-            <i className="fa fa-copyright" aria-hidden="true"></i>
-            Copyright © 2022 Emirates-car. All rights reserved.
+          <Link href={`https://emirates-car.com`}>
+            <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+              <i className="fa fa-copyright" aria-hidden="true"></i>
+            </a>
           </Link>
         </div>
       </div>

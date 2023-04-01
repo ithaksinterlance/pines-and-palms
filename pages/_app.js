@@ -5,6 +5,7 @@ import '../styles/slick/slick.css';
 import '../styles/slick/slick-theme.css';
 
 function MyApp({ Component, pageProps }) {
+
   return (
     <>
       <Head>
@@ -122,12 +123,9 @@ function MyApp({ Component, pageProps }) {
         }}
       ></Script>
 
-      <Component {...pageProps} />
+      <Component {...pageProps}/>
     </>
   );
-}
-export function reportWebVitals(metric) {
-  console.log(metric);
 }
 
 export default MyApp;

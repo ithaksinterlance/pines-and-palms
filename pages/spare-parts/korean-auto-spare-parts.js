@@ -288,7 +288,8 @@ export default function Korean({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href={`/search-by-make/Hyundai`} passHref>
+                <Link href={`/search-by-make/Hyundai`} >
+                  <a>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -303,11 +304,11 @@ export default function Korean({ partsposts, posts }) {
                     <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                       Hyundai
                     </p>
-                  </main>
+                  </main></a>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Kia`} passHref>
+                <Link href={`/search-by-make/Kia`} >
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -326,7 +327,8 @@ export default function Korean({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Daewoo`} passHref>
+                <Link href={`/search-by-make/Daewoo`} >
+                  <a>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -342,16 +344,19 @@ export default function Korean({ partsposts, posts }) {
                       Daewoo
                     </p>
                   </main>
+                  </a>
                 </Link>
               </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`} passHref>
+              <Link href={`/get-in-touch`} >
+                <a>
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**
                 </nobr>
+                </a>
               </Link>{' '}
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
@@ -378,7 +383,7 @@ export default function Korean({ partsposts, posts }) {
                 href={`https://emirates-car.com/search-by-part-name`}
                 className="text-blue-400 underline"
               >
-                https://emirates-car.com/search-by-part-name
+                <a>https://emirates-car.com/search-by-part-name</a>
               </Link>
               . Submit your inquiry to us, our dealer will get back to you based
               on stock availability.
@@ -395,7 +400,7 @@ export default function Korean({ partsposts, posts }) {
                       href={`/search-by-part-name`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
-                      SEARCH BY PART NAME
+                     <a> SEARCH BY PART NAME</a>
                     </Link>{' '}
                     &nbsp;|
                   </span>
@@ -404,7 +409,7 @@ export default function Korean({ partsposts, posts }) {
                       href={`/search-by-cities-in-uae`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
-                      SEARCH BY CITY
+                      <a>SEARCH BY CITY</a>
                     </Link>{' '}
                     &nbsp;|
                   </span>
@@ -413,7 +418,7 @@ export default function Korean({ partsposts, posts }) {
                       href={`/search-by-make`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
-                      SEARCH BY MAKE
+                      <a>SEARCH BY MAKE</a>
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -699,7 +704,7 @@ export default function Korean({ partsposts, posts }) {
                     className="underline"
                     target="_newtab"
                   >
-                    Privacy policy
+                    <a>Privacy policy</a>
                   </Link>
                   &nbsp;
                   <Link
@@ -707,7 +712,7 @@ export default function Korean({ partsposts, posts }) {
                     className="underline"
                     target="_newtab"
                   >
-                    Terms and conditions
+                    <a>Terms and conditions</a>
                   </Link>
                 </div>
 
@@ -758,9 +763,9 @@ export default function Korean({ partsposts, posts }) {
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
-                    passHref
+
                   >
-                    {suggestion}{' '}
+                    {suggestion}
                   </Link>
                 </div>
               ))}{' '}
@@ -774,13 +779,15 @@ export default function Korean({ partsposts, posts }) {
               href={`/search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/${post.parts}`}
               title={post.parts + ' in uae'}
-              passHref
-            >
+
+            ><a>
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                   {post.parts.toUpperCase()}{' '}
                 </p>
               </main>
+            </a>
+
             </Link>
           </div>
         ))}{' '}

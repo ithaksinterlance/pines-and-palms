@@ -5,18 +5,18 @@ export default function Social() {
   return (
     <div>
       <div className="container mx-auto">
-        <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl pb-5">
+        <div className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl pb-5">
           FOLLOW US ON SOCIAL MEDIA
-        </p>
+        </div>
         <div className="grid grid-cols-6 gap-4 py-2">
           <div>
-            <Link
-              href={`https://www.facebook.com/emirates.auto.parts`}
-              title="used car parts"
-              className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-              passHref
-            >
-              <i className="fab fa-facebook text-blue-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+            <Link href={`https://www.facebook.com/emirates.auto.parts`}>
+              <a
+                title="used car parts"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+                <i className="fab fa-facebook text-blue-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              </a>
             </Link>
           </div>
           <div>
@@ -25,9 +25,10 @@ export default function Social() {
               title="car trends"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
-              passHref
             >
-              <i className="fab fa-instagram text-purple-800 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              <a>
+                <i className="fab fa-instagram text-purple-800 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              </a>
             </Link>
           </div>
           <div>
@@ -36,9 +37,10 @@ export default function Social() {
               title="emirates car parts news"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
-              passHref
             >
-              <i className="fab fa-twitter text-blue-400 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              <a>
+                <i className="fab fa-twitter text-blue-400 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              </a>
             </Link>
           </div>
           <div>
@@ -47,9 +49,10 @@ export default function Social() {
               title="emirates car parts"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
-              passHref
             >
-              <i className="fab fa-tumblr text-black text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              <a>
+                <i className="fab fa-tumblr text-black text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              </a>
             </Link>
           </div>
           <div>
@@ -58,9 +61,10 @@ export default function Social() {
               title="emirates car parts"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
-              passHref
             >
-              <i className="fab fa-pinterest text-red-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              <a>
+                <i className="fab fa-pinterest text-red-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              </a>
             </Link>
           </div>
           <div>
@@ -69,9 +73,10 @@ export default function Social() {
               title="emirates car parts career"
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
-              passHref
             >
-              <i className="fab fa-linkedin text-blue-500 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              <a>
+                <i className="fab fa-linkedin text-blue-500 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
+              </a>
             </Link>
           </div>
         </div>

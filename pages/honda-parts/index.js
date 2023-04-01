@@ -65,12 +65,13 @@ export default function HondaParts() {
           Buy Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket
           Honda spare parts from Dubai Dealer to all over UAE and world Online
         </h1>
-        <Link
-          href={`/search-by-make/Honda`}
-          className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-          target="_newtab"
-        >
-          Get Prices Now
+        <Link href={`/search-by-make/Honda`}>
+          <a
+            className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+            target="_newtab"
+          >
+            Get Prices Now
+          </a>
         </Link>
 
         <p className="text-xl font-mono text-gray-700 mx-auto">
@@ -88,11 +89,8 @@ export default function HondaParts() {
           parts, 10th gen honda parts, 11th gen honda parts. You can order and
           buy japanese car parts Online. You can order Honda spare parts by
           simply submitting the online inquiry form{' '}
-          <Link
-            href="https://emirates-car.com"
-            className="text-blue-500 underline hover:text-blue-900"
-          >
-            here
+          <Link href="https://emirates-car.com">
+            <a className="text-blue-500 underline hover:text-blue-900">here</a>
           </Link>
           . You can get callback or whatsapp chat or email after submitting your
           form inquiry.
@@ -126,12 +124,13 @@ export default function HondaParts() {
                 height={250}
                 width={250}
               />
-              <Link
-                href="/search-by-part-name/Ring%20Gear%20and%20Pinion"
-                title="Honda cam gear"
-                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-              >
-                Inquire Now
+              <Link href="/search-by-part-name/Ring%20Gear%20and%20Pinion">
+                <a
+                  title="Honda cam gear"
+                  className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                >
+                  Inquire Now
+                </a>
               </Link>
             </div>
           </div>
@@ -145,12 +144,13 @@ export default function HondaParts() {
                 height={250}
                 width={250}
               />
-              <Link
-                href="/search-by-part-name/Intake%20Manifold"
-                title="Honda cold air intakes"
-                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-              >
-                Inquire Now
+              <Link href="/search-by-part-name/Intake%20Manifold">
+                <a
+                  title="Honda cold air intakes"
+                  className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                >
+                  Inquire Now
+                </a>
               </Link>
             </div>
           </div>
@@ -164,12 +164,13 @@ export default function HondaParts() {
                 height={250}
                 width={250}
               />
-              <Link
-                href="/search-by-make/Intake%20Manifold"
-                title="Honda intake manifold"
-                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-              >
-                Inquire Now
+              <Link href="/search-by-make/Intake%20Manifold">
+                <a
+                  title="Honda intake manifold"
+                  className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                >
+                  Inquire Now
+                </a>
               </Link>
             </div>
           </div>
@@ -183,12 +184,13 @@ export default function HondaParts() {
                 height={250}
                 width={250}
               />
-              <Link
-                href="/search-by-make/Honda/CR-V"
-                title="Honda crv parts"
-                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-              >
-                Inquire Now
+              <Link href="/search-by-make/Honda/CR-V">
+                <a
+                  title="Honda crv parts"
+                  className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                >
+                  Inquire Now
+                </a>
               </Link>
             </div>
           </div>
@@ -202,12 +204,13 @@ export default function HondaParts() {
                 height={250}
                 width={250}
               />
-              <Link
-                href="/search-by-part-name/Radiator"
-                title="Honda radiator caps"
-                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-              >
-                Inquire Now
+              <Link href="/search-by-part-name/Radiator">
+                <a
+                  title="Honda radiator caps"
+                  className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                >
+                  Inquire Now
+                </a>
               </Link>
             </div>
           </div>
@@ -221,12 +224,13 @@ export default function HondaParts() {
                 height={250}
                 width={250}
               />
-              <Link
-                href="/get-in-touch"
-                title="honda oxygen sensors"
-                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-              >
-                Inquire Now
+              <Link href="/get-in-touch">
+                <a
+                  title="honda oxygen sensors"
+                  className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                >
+                  Inquire Now
+                </a>
               </Link>
             </div>
           </div>
@@ -240,12 +244,13 @@ export default function HondaParts() {
                 height={250}
                 width={250}
               />
-              <Link
-                href="/search-by-part-name/Throttle%20Body%20Assembly"
-                title="throttle body"
-                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-              >
-                Inquire Now
+              <Link href="/search-by-part-name/Throttle%20Body%20Assembly">
+                <a
+                  title="throttle body"
+                  className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                >
+                  Inquire Now
+                </a>
               </Link>
             </div>
           </div>
@@ -257,12 +262,13 @@ export default function HondaParts() {
             </p>
 
             <FeaturedHonda />
-            <Link
-              href={`/get-in-touch`}
-              className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-              target="_newtab"
-            >
-              View All Parts
+            <Link href={`/get-in-touch`}>
+              <a
+                className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+                target="_newtab"
+              >
+                View All Parts
+              </a>
             </Link>
           </div>
         </div>
@@ -393,122 +399,108 @@ export default function HondaParts() {
           electrical parts, honda engine parts, honda replacement parts, honda
           AC parts and more
         </p>
-        <div className="grid grid-cols-3 xs:grid-cols-1">
+        <div className="grid grid-cols-3 xs:grid-cols-1 place-content-center">
           <div>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
               Honda Engine parts
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Assembly"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine Assembly
+                <Link href="/search-by-part-name/Engine%20Assembly">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine Assembly
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Block"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine Block
+                <Link href="/search-by-part-name/Engine%20Block">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine Block
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Mount"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine Mount
+                <Link href="/search-by-part-name/Engine%20Mount">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine Mount
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Block"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine Block
+                <Link href="/search-by-part-name/Engine%20Block">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine Block
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Cylinder%20Head"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Cylinder Head
+                <Link href="/search-by-part-name/Cylinder%20Head">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Cylinder Head
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Cylinder%20Block"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Cylinder Block
+                <Link href="/search-by-part-name/Cylinder%20Block">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Cylinder Block
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Crankshaft"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Crankshaft
+                <Link href="/search-by-part-name/Crankshaft">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Crankshaft
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Camshaft"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Camshaft
+                <Link href="/search-by-part-name/Camshaft">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Camshaft
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Piston"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Piston
+                <Link href="/search-by-part-name/Piston">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Piston
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Exhaust%20Manifold"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Exhaust Manifold
+                <Link href="/search-by-part-name/Exhaust%20Manifold">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Exhaust Manifold
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Intake%20Manifold"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Intake Manifold
+                <Link href="/search-by-part-name/Intake%20Manifold">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Intake Manifold
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Ignition%20Switch"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Ignition Switch
+                <Link href="/search-by-part-name/Ignition%20Switch">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Ignition Switch
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Ignition%20Control%20Module"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Ignition Control Module
+                <Link href="/search-by-part-name/Ignition%20Control%20Module">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Ignition Control Module
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Transmission%20Control%20Module"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  TCM
+                <Link href="/search-by-part-name/Transmission%20Control%20Module">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    TCM
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -520,75 +512,74 @@ export default function HondaParts() {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Assembly"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine
+                <Link href="/search-by-part-name/Engine%20Assembly">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Assembly"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Battery
+                <Link href="/search-by-part-name/Engine%20Assembly">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Battery
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Assembly"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Alternator
+                <Link href="/search-by-part-name/Engine%20Assembly">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Alternator
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Brake%20Pads"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Brake Pads
+                <Link href="/search-by-part-name/Brake%20Pads">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Brake Pads
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Radiator"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Radiator
+                <Link href="/search-by-part-name/Radiator">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Radiator
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Transmission%20Control%20Module"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Transmission
+                <Link href="/search-by-part-name/Transmission%20Control%20Module">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Transmission
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Shock%20Absorber"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Shock Absorber
+                <Link href="/search-by-part-name/Shock%20Absorber">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Shock Absorber
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Convertible%20Top%20Motor"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Catalytic Converter
+                <Link href="/search-by-part-name/Convertible%20Top%20Motor">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    {' '}
+                    Catalytic Converter
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Power%20Steering%20Box"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Power Steering
+                <Link href="/search-by-part-name/Power%20Steering%20Box">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Power Steering
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/get-in-touch">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Pump
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -600,43 +591,38 @@ export default function HondaParts() {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/Bonnet"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Bonnet
+                <Link href="/search-by-part-name/Bonnet">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Bonnet
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Fender%20(Front)"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Fender
+                <Link href="/search-by-part-name/Fender%20(Front)">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Fender
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Decklid"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Decklid
+                <Link href="/search-by-part-name/Decklid">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Decklid
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Grille"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Grille
+                <Link href="/search-by-part-name/Grille">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Grille
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Wheel"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Wheel
+                <Link href="/search-by-part-name/Wheel">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Wheel
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -648,43 +634,38 @@ export default function HondaParts() {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/Spark%20Plug"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Spark Plug
+                <Link href="/search-by-part-name/Spark%20Plug">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Spark Plug
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Alternator"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Alternator
+                <Link href="/search-by-part-name/Alternator">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Alternator
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Battery"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Battery
+                <Link href="/search-by-part-name/Battery">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Battery
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Ignition%20Switch"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Ignition Switch
+                <Link href="/search-by-part-name/Ignition%20Switch">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Ignition Switch
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/get-in-touch"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Many more...
+                <Link href="/get-in-touch">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Many more...
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -696,43 +677,31 @@ export default function HondaParts() {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/AC%20Compressor"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  AC Compressor
+                <Link href="/search-by-part-name/AC%20Compressor">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    AC Compressor
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/AC%20Condenser"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  AC Condenser
+                <Link href="/search-by-part-name/AC%20Condenser">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    AC Condenser
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/AC%20Selector"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  AC Selector
+                <Link href="/search-by-part-name/AC%20Selector">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    AC Selector
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/AC%20Controls"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  AC Controls
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/get-in-touch"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Many more...
+                <Link href="/search-by-part-name/AC%20Controls">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    AC Controls
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -797,12 +766,13 @@ export default function HondaParts() {
           So there is plenty of website and options. Emirates-car.com is one
           such website which accept online inquiries. It deals with parts and
           accessories for honda accord, Honda civic and{' '}
-          <Link
-            href="/search-by-make/Honda"
-            className="text-blue-500 underline hover:text-blue-900"
-          ></Link>
-          other honda models, Infiniti models, BMW models, Audi models and many
-          other brands. Visit to search parts you need.
+          <Link href="/search-by-make/Honda">
+            <a className="text-blue-500 underline hover:text-blue-900">
+              other honda models
+            </a>
+          </Link>
+          , Infiniti models, BMW models, Audi models and many other brands.
+          Visit to search parts you need.
         </div>
 
         <OtherHondaModels />

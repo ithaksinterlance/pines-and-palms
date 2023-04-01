@@ -363,13 +363,14 @@ export default function City({ cities, data, posts, pos }) {
                     <Link
                       href={`/search-by-cities-in-uae/[city]`}
                       as={`/search-by-cities-in-uae/${post.city}`}
-                      title={'car spare parts ' + post.city}
                     >
-                      <main className="border border-blue-800 h-full p-3 ">
-                        <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
-                          {post.city}
-                        </p>
-                      </main>
+                      <a title={'car spare parts ' + post.city}>
+                        <main className="border border-blue-800 h-full p-3 ">
+                          <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
+                            {post.city}
+                          </p>
+                        </main>
+                      </a>
                     </Link>
                   </div>
                 ))}
@@ -613,20 +614,12 @@ export default function City({ cities, data, posts, pos }) {
                     </button>
                   </div>
                   <div className="flex float-left text-xs text-gray-400">
-                    <Link
-                      href={`/privacy-policy`}
-                      className="underline"
-                      target="_newtab"
-                    >
-                      Privacy policy
+                    <Link href={`/privacy-policy`} target="_newtab">
+                      <a className="underline">Privacy policy</a>
                     </Link>
                     &nbsp;
-                    <Link
-                      href={`/terms-and-condition`}
-                      className="underline"
-                      target="_newtab"
-                    >
-                      Terms and conditions
+                    <Link href={`/terms-and-condition`} target="_newtab">
+                      <a className="underline">Terms and conditions</a>
                     </Link>
                   </div>
 
@@ -638,29 +631,26 @@ export default function City({ cities, data, posts, pos }) {
                   <Social />
                   <div>
                     <span>
-                      <Link
-                        href={`/search-by-part-name`}
-                        className="underline hover:text-blue-500 xs:text-sm"
-                      >
-                        SEARCH BY PART NAME
+                      <Link href={`/search-by-part-name`}>
+                        <a className="underline hover:text-blue-500 xs:text-sm">
+                          SEARCH BY PART NAME
+                        </a>
                       </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
-                      <Link
-                        href={`/search-by-cities-in-uae`}
-                        className="underline hover:text-blue-500  xs:text-sm"
-                      >
-                        SEARCH BY CITY
+                      <Link href={`/search-by-cities-in-uae`}>
+                        <a className="underline hover:text-blue-500  xs:text-sm">
+                          SEARCH BY CITY
+                        </a>
                       </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
-                      <Link
-                        href={`/search-by-make`}
-                        className="underline hover:text-blue-500  xs:text-sm"
-                      >
-                        SEARCH BY MAKE
+                      <Link href={`/search-by-make`}>
+                        <a className="underline hover:text-blue-500  xs:text-sm">
+                          SEARCH BY MAKE
+                        </a>
                       </Link>{' '}
                       &nbsp;
                     </span>
@@ -677,11 +667,10 @@ export default function City({ cities, data, posts, pos }) {
                   UAE. We also operate in main cities such as dubai, sharjah,
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
-                  <Link
-                    href={`https://emirates-car.com/search-by-part-name`}
-                    className="text-blue-400 underline"
-                  >
-                    https://emirates-car.com/search-by-part-name
+                  <Link href={`https://emirates-car.com/search-by-part-name`}>
+                    <a className="text-blue-400 underline">
+                      https://emirates-car.com/search-by-part-name
+                    </a>
                   </Link>
                   .We also deal in brands such as{' '}
                   {data.map(p => (
@@ -735,12 +724,13 @@ export default function City({ cities, data, posts, pos }) {
                 <Link
                   href={`/search-by-make/[make]`}
                   as={`/search-by-make/${post.make}`}
-                  title={post.make + ' spare parts sharjah'}
                 >
-                  <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
-                    <i className="fa fa-mars-stroke" aria-hidden="true"></i>{' '}
-                    {post.make}
-                  </p>
+                  <a title={post.make + ' spare parts sharjah'}>
+                    <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
+                      <i className="fa fa-mars-stroke" aria-hidden="true"></i>{' '}
+                      {post.make}
+                    </p>
+                  </a>
                 </Link>
               </div>
             ))}

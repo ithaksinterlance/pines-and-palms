@@ -287,29 +287,26 @@ export default function Forms({ posts, pos, po }) {
           <div>
             &nbsp;
             <span>
-              <Link
-                href={`/search-by-part-name`}
-                className="underline xs:no-underline hover:text-blue-500"
-              >
-                SEARCH BY PART NAME
+              <Link href={`/search-by-part-name`}>
+                <a className="underline xs:no-underline hover:text-blue-500">
+                  SEARCH BY PART NAME
+                </a>
               </Link>{' '}
             </span>
             | &nbsp;
             <span>
-              <Link
-                href={`/search-by-cities-in-uae`}
-                className="underline xs:no-underline hover:text-blue-500"
-              >
-                SEARCH BY CITY{' '}
+              <Link href={`/search-by-cities-in-uae`}>
+                <a className="underline xs:no-underline hover:text-blue-500">
+                  SEARCH BY CITY
+                </a>
               </Link>{' '}
             </span>
             | &nbsp;
             <span>
-              <Link
-                href={`/search-by-make`}
-                className="underline xs:no-underline hover:text-blue-500"
-              >
-                SEARCH BY MAKE
+              <Link href={`/search-by-make`}>
+                <a className="underline xs:no-underline hover:text-blue-500">
+                  SEARCH BY MAKE
+                </a>
               </Link>{' '}
             </span>
           </div>
@@ -665,20 +662,12 @@ export default function Forms({ posts, pos, po }) {
                 </div>
               </div>
               <div className="flex float-left text-xs text-gray-400">
-                <Link
-                  href={`/privacy-policy`}
-                  className="underline"
-                  target="_newtab"
-                >
-                  Privacy policy
+                <Link href={`/privacy-policy`} target="_newtab">
+                  <a className="underline">Privacy policy</a>
                 </Link>
                 &nbsp;
-                <Link
-                  href={`/terms-and-condition`}
-                  className="underline"
-                  target="_newtab"
-                >
-                  Terms and conditions
+                <Link href={`/terms-and-condition`} target="_newtab">
+                  <a className="underline">Terms and conditions</a>
                 </Link>
               </div>
 
@@ -693,8 +682,8 @@ export default function Forms({ posts, pos, po }) {
         <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
           <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
             COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-            <Link href={`/contact`} className="underline text-blue-900">
-              CONTACT US NOW
+            <Link href={`/contact`}>
+              <a className="underline text-blue-900">CONTACT US NOW</a>
             </Link>
           </h1>
         </div>
@@ -769,25 +758,22 @@ export default function Forms({ posts, pos, po }) {
 
             <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
               <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
-              <Link
-                href={`/search-by-part-name`}
-                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-              >
-                Search parts by part name in UAE
+              <Link href={`/search-by-part-name`}>
+                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+                  Search parts by part name in UAE
+                </a>
               </Link>
               <br />
-              <Link
-                href={`/search-by-make`}
-                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-              >
-                Search parts by Car make in UAE
+              <Link href={`/search-by-make`}>
+                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+                  Search parts by Car make in UAE
+                </a>
               </Link>
               <br />
-              <Link
-                href={`/search-by-cities-in-uae`}
-                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-              >
-                Search parts by cities in UAE
+              <Link href={`/search-by-cities-in-uae`}>
+                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+                  Search parts by cities in UAE
+                </a>
               </Link>
             </div>
           </div>
@@ -800,24 +786,24 @@ export default function Forms({ posts, pos, po }) {
                 <Link
                   href={`/search-by-make/[make]`}
                   as={`/search-by-make/${post.make}`}
-                  passHref
                 >
-                  <p className="text-xs text-white font-medium hover:text-gray-800 underline">
+                  <a className="text-xs text-white font-medium hover:text-gray-800 underline">
                     {post.make + ' spare parts'}{' '}
-                  </p>
+                  </a>
                 </Link>
               </div>
             ))}
           </div>
 
           <div className="text-center text-purple-200 py-10">
-            <Link
-              href={`https://emirates-car.com`} title="buy car parts online"
-              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-              target="_newtab"
-            >
-              <i className="fa fa-copyright" aria-hidden="true"></i>
-              Copyright © 2023 Emirates-car. All rights reserved.
+            <Link href={`/`} target="_newtab">
+              <a
+                title="buy car parts online"
+                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              >
+                <i className="fa fa-copyright" aria-hidden="true"></i>
+                Copyright © 2023 Emirates-car. All rights reserved.
+              </a>
             </Link>
           </div>
         </div>

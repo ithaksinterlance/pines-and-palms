@@ -329,12 +329,11 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
               </nobr>
               index{'>>>'}
-              <Link
-                href={`/search-by-cities-in-uae/${data.city}`}
-                passHref
-              >
-                search-by-cities-in-uae{'/'}
-                {data.city}
+              <Link href={`/search-by-cities-in-uae/${data.city}`} passHref>
+                <a>
+                  search-by-cities-in-uae{'/'}
+                  {data.city}
+                </a>
               </Link>
               {'>>>'}
             </p>
@@ -605,21 +604,13 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link
-                    href={`/privacy-policy`}
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Privacy policy
+                  <Link href={`/privacy-policy`} target="_newtab">
+                    <a className="underline">Privacy policy</a>
                   </Link>
                   &nbsp;
-                  <Link
-                    href={`/terms-and-condition`}
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Terms and conditions
-                  </Link>
+                  <Link href={`/terms-and-condition`} target="_newtab">
+                    <a className="underline">Terms and conditions</a>
+</Link>
                 </div>
 
                 <div className="flex float-right text-xs text-gray-400 ">
@@ -630,29 +621,26 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <Social />
                 <div>
                   <span>
-                    <Link
-                      href={`/search-by-part-name`}
-                      className="underline hover:text-blue-500 xs:text-sm"
-                    >
-                      SEARCH BY PART NAME
+                    <Link href={`/search-by-part-name`}>
+                      <a className="underline hover:text-blue-500 xs:text-sm">
+                        SEARCH BY PART NAME
+                      </a>
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link
-                      href={`/search-by-cities-in-uae`}
-                      className="underline hover:text-blue-500  xs:text-sm"
-                    >
-                      SEARCH BY CITY
+                    <Link href={`/search-by-cities-in-uae`}>
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY CITY
+                      </a>
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link
-                      href={`/search-by-make`}
-                      className="underline hover:text-blue-500  xs:text-sm"
-                    >
-                      SEARCH BY MAKE
+                    <Link href={`/search-by-make`}>
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY MAKE
+                      </a>
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -671,11 +659,10 @@ export default function City({ data, partspost, posts, makedatas }) {
                 coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles,
                 Used spare parts, After market parts, Genuine spare parts and
                 New parts etc. You can check our catalogue at{' '}
-                <Link
-                  href={`https://emirates-car.com/search-by-part-name`}
-                  className="text-blue-400 underline"
-                >
-                  https://emirates-car.com/search-by-part-name
+                <Link href={`https://emirates-car.com/search-by-part-name`}>
+                  <a className="text-blue-400 underline">
+                    https://emirates-car.com/search-by-part-name
+                  </a>
                 </Link>
                 . Contact us for any inquiry. We also deal in brands such as{' '}
                 {makedatas.map(p => (
@@ -724,24 +711,25 @@ export default function City({ data, partspost, posts, makedatas }) {
                   <Link
                     href={`/search-by-make/[make]`}
                     as={`/search-by-make/${makedata.make}`}
-                    title={makedata.make + ' spare parts ' + data.city}
                     passHref
                   >
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt={makedata.make + ' spare parts ' + data.city}
-                          src={'/img/car-logos/' + makedata.img}
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-700 font-medium hover:text-gray-800">
-                        {makedata.make.toUpperCase()}
-                      </p>
-                    </main>
+                    <a title={makedata.make + ' spare parts ' + data.city}>
+                      <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                        <div className="flex justify-center">
+                          <Image
+                            alt={makedata.make + ' spare parts ' + data.city}
+                            src={'/img/car-logos/' + makedata.img}
+                            className="object-scale-down shadow-xl"
+                            height={30}
+                            width={30}
+                          />
+                          <br />
+                        </div>
+                        <p className="text-xs text-center text-gray-700 font-medium hover:text-gray-800">
+                          {makedata.make.toUpperCase()}
+                        </p>
+                      </main>
+                    </a>
                   </Link>
                 </div>
               ))}
@@ -761,13 +749,14 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <Link
                   href={`/search-by-part-name/[parts]`}
                   as={`/search-by-part-name/${post.parts}`}
-                  title={post.parts + ' in ' + data.city}
                   passHref
                 >
-                  <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-700 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
-                    <i className="far fa-compass"></i>{' '}
-                    {post.parts + ' in ' + data.city}
-                  </p>
+                  <a title={post.parts + ' in ' + data.city}>
+                    <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-700 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
+                      <i className="far fa-compass"></i>{' '}
+                      {post.parts + ' in ' + data.city}
+                    </p>
+                  </a>
                 </Link>
               </div>
             ))}

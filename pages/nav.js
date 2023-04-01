@@ -17,11 +17,10 @@ export default function Navbar() {
     <nav className="flex relative flex-wrap items-center justify-between px-2 py-2 bg-purple-800">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full flex justify-between">
-          <Link
-            className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1"
-            href={`/#spare_parts`}
-          >
-            Emirates-car
+          <Link href={`/#spare_parts`}>
+            <a className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1">
+              Emirates-car
+            </a>
           </Link>
           <button
             type="button"
@@ -41,107 +40,75 @@ export default function Navbar() {
         >
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
-              <Link
-                href={`/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <span className="ml-2 text-base leading-xl text-white opacity-75">
+              <Link href={`/`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
                   Home
-                </span>
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                href={`/blog`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <span className="ml-2 text-base leading-xl text-white opacity-75">
+              <Link href={`/blog`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
                   Blog
-                </span>
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                href={`/contact`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <span className="ml-2 text-base leading-xl text-white opacity-75">
+              <Link href={`/contact`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-755">
                   Contact
-                </span>
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                href={`/search-by-make`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <span className="ml-2 text-base leading-xl text-white opacity-75">
+              <Link href={`/search-by-make`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
                   Search parts by make
-                </span>
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                href={`/search-by-cities-in-uae`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <span className="ml-2 text-base leading-xl text-white opacity-75">
+              <Link href={`/search-by-cities-in-uae`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
                   Search parts in your cities
-                </span>
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                href={`/search-by-part-name`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              ><span className="ml-2 text-base leading-xl text-white opacity-75">
-              Search parts by Part name
-            </span>
-
+              <Link href={`/search-by-part-name`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  Search parts by Part name
+                </a>
               </Link>
             </li>
           </ul>
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
-              <Link
-                href={`https://www.facebook.com/emirates.auto.parts/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <i className="fab fa-facebook ml-2 text-xl leading-xl text-white opacity-75"></i>
+              <Link href={`https://www.facebook.com/emirates.auto.parts/`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <i className="fab fa-2x fa-facebook ml-2 text-xl leading-xl text-white opacity-75 "></i>
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                href={`https://www.instagram.com/emiratescar_parts/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <i className="fab fa-instagram ml-2 text-xl leading-xl text-white opacity-75 "></i>
+              <Link href={`https://www.instagram.com/emiratescar_parts/`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <i className="fab fa-instagram ml-2 text-xl leading-xl text-white opacity-75 "></i>
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                href={`https://twitter.com/emiratescarpart`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <i className="fab fa-twitter ml-2 text-xl leading-xl text-white opacity-75 "></i>
+              <Link href={`https://twitter.com/emiratescarpart`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <i className="fab fa-twitter ml-2 text-xl leading-xl text-white opacity-75 "></i>
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                href={`https://emirates-car.tumblr.com/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                passHref
-              >
-                <i className="fab fa-tumblr ml-2 text-xl leading-xl text-white opacity-75"></i>
+              <Link href={`https://emirates-car.tumblr.com/`}>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <i className="fab fa-tumblr ml-2 text-xl leading-xl text-white opacity-75"></i>
+                </a>
               </Link>
             </li>
           </ul>

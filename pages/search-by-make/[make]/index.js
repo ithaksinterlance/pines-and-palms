@@ -519,555 +519,553 @@ export default function Car({ car, cities, make, partspost, posts }) {
         />
       </Head>
 
-          <main className="d-flex justify-center  pt-10 xs:pt-5 mx-8">
-            <article>
-              <div>
-                <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center">
-                  Buy {make} Car Parts - Used, Genuine, OEM (Original parts) and
-                  Aftermarket {make} spare parts from Dubai Dealer to all over
-                  UAE and world Online - Body Parts, Performance Parts,
-                  Mechanical parts, Electronic parts, Engine parts and more..
-                </h1>
-                <Link
-                  href={`/search-by-make/${make}/#myForm}`}
-                  className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-                >
-                  Inquire Now
-                </Link>
-              </div>
+      <main className="d-flex justify-center  pt-10 xs:pt-5 mx-8">
+        <article>
+          <div>
+            <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center">
+              Buy {make} Car Parts - Used, Genuine, OEM (Original parts) and
+              Aftermarket {make} spare parts from Dubai Dealer to all over UAE
+              and world Online - Body Parts, Performance Parts, Mechanical
+              parts, Electronic parts, Engine parts and more..
+            </h1>
+            <Link href={`/search-by-make/${make}/#myForm}`}>
+              <a className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
+                Inquire Now
+              </a>
+            </Link>
+          </div>
 
-              <div>
-                <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5 text-justify">
-                  CHOOSE YOUR
-                  <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                    &nbsp;{make}{' '}
-                  </nobr>
-                  MODEL
-                </div>
+          <div>
+            <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5 text-justify">
+              CHOOSE YOUR
+              <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
+                &nbsp;{make}{' '}
+              </nobr>
+              MODEL
+            </div>
 
-                <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
-                  <nobr className="text-blue-400 no-underline">
-                    <i className="fal fa-car-garage"></i>
-                    Current path:&nbsp;&nbsp;
-                  </nobr>
-                  index{'>>>'}
-                  {make}
-                  {'>>>'}
-                </p>
-                <div className="flex justify-center">
-                  <div className="pt-3">
-                    <input
-                      className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
-                      id="partname"
-                      type="search"
-                      placeholder={'Search Your ' + make + ' Model'}
-                      onChange={e => onModelFormChange(e.target.value)}
-                      value={searchModel}
-                      autoComplete="off"
-                      required
-                    />
-                    <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
-                      {recommend &&
-                        recommend.map((recommend, i) => (
-                          <div
-                            key={i}
-                            className="cursor-pointer  text-base p-1 bg-white"
-                            onClick={() => onModelSuggestionHandler(recommend)}
-                            width="100%"
-                          >
-                            <Link
-                              href={`https://emirates-car.com/search-by-make/${make}/${recommend}`}
-                              rel="noopener noreferrer"
-                              target="_newtab"
-                            >
-                              {recommend}
-                            </Link>
-                          </div>
-                        ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {car.map(post => (
-                  <div key={post.id}>
-                    <Link
-                      href={`/search-by-make/[make]/[model]`}
-                      as={`/search-by-make/${post.make}/${post.model}`}
-                      title={post.make + post.model + ' spare parts'}
-                      passHref
-                    >
-                      <main className="border border-blue-800 h-full p-3 ">
-                        <p className="text-center text-lg xs:text-xl xs:text-center font-mono text-blue-800 underline hover:text-gray-800 focus:text-gray-800 font-bold ">
-                          {make +
-                            ' ' +
-                            post.model.replace('%2F', '/') +
-                            ' parts'}{' '}
-                        </p>
-                      </main>
-                    </Link>
-                  </div>
-                ))}{' '}
-              </div>
-            </article>
-            <div className="text-center mt-2 text-red-400 text-sm xs:text-xs py-5">
-              **Model not found above?
-              <Link href={`/get-in-touch`} passHref>
-                <nobr className="text-blue-500 text-sm underline">
-                  {' '}
-                  Get in touch with us {'>>'}**
-                </nobr>
-              </Link>{' '}
-            </div>
-            <div className="text-center">
-              <HondaOfferButton />
-            </div>
-            <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 md:grid md:grid-cols-1 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-              <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 text-red-600">
-                Want to Get Prices for {make} spare parts uae online? Submit your
-                inquiry here
-              </p>
-              <form
-                id="myForm"
-                className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
-                method="POST"
-                onSubmit={handleSubmit}
-                target="hidden_iframe"
-              >
-                <div className="grid grid-cols-1 pt-3">
-                  <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                    htmlFor="model"
-                  >
-                    Name
-                  </label>
-                  <div className="relative">
-                    <input
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                      id="name"
-                      type="text"
-                      placeholder="Name"
-                      onChange={handleNameChange}
-                      value={Name}
-                      autoComplete="off"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-                  <div>
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="year"
-                    >
-                      Year
-                    </label>
-                    <div className="relative">
-                      <input
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                        id="year"
-                        type="text"
-                        placeholder="Year"
-                        name="entry.902626710"
-                        onChange={handleYearChange}
-                        value={Year}
-                        autoComplete="off"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="make"
-                    >
-                      Make
-                    </label>
-                    <div className="relative">
-                      <select
-                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 xs:py-1 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                        id="make"
-                        name="entry.741646505"
-                        required="required"
-                        onChange={handleMakeChange}
-                        value={Make}
-                      >
-                        <option value="" disabled>
-                          Select your Make
-                        </option>
-                        {mke.map(m => (
-                          <option key={m}>{m}</option>
-                        ))}{' '}
-                      </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg
-                          className="fill-current h-4 w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="model"
-                    >
-                      Model
-                    </label>
-                    <div className="relative">
-                      <select
-                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                        id="model"
-                        name="entry.402947466"
-                        required
-                        onChange={handleModelChange}
-                        value={Model}
-                      >
-                        <option value="" disabled>
-                          Select your Model
-                        </option>
-                        {posts
-                          .filter(s => s.make === Make)
-                          .map(s => (
-                            <option key={s.id} value={s.model}>
-                              {s.model}{' '}
-                            </option>
-                          ))}{' '}
-                      </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg
-                          className="fill-current h-4 w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-                  <div className="flex flex-wrap -mx-3 mb-2">
-                    <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                      <label
-                        htmlFor="Code"
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      >
-                        CODE
-                      </label>
-                      <input
-                        id="Code"
-                        name="entry.44547744"
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                        type="text"
-                        placeholder="Eg. +971, +27 ..."
-                        onChange={handleCodeChange}
-                        value={Code}
-                        required
-                      />
-                    </div>
-                    <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                      <label
-                        htmlFor="whatsappno"
-                        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      >
-                        WhatsApp no
-                      </label>
-                      <input
-                        id="whatsappno"
-                        name="entry.902626710"
-                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                        type="text"
-                        placeholder="WhatsApp No"
-                        onChange={handleWhatsAppNoChange}
-                        value={Whatsappno}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="city"
-                    >
-                      Location
-                    </label>
-                    <input
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                      id="city"
-                      type="text"
-                      placeholder="(Area, Emirates) or (City, Country)"
-                      onChange={handleAddressChange}
-                      value={Address}
-                      autoComplete="off"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="email"
-                    >
-                      Email(Optional)
-                    </label>
-                    <input
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                      id="email"
-                      type="text"
-                      placeholder="Mail ID"
-                      onChange={handleEmailChange}
-                      value={Email}
-                      autoComplete="off"
-                      name="entry.113755516"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 pt-3">
-                  <div>
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                      htmlFor="partname"
-                    >
-                      PART NAME
-                    </label>
-                    <textarea
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                      id="partname"
-                      type="text"
-                      placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
-                      rows={5}
-                      name="entry.1660104041"
-                      onChange={e => onPartFormChange(e.target.value)}
-                      value={text}
-                      autoComplete="off"
-                      required
-                    />{' '}
-                    {suggestion &&
-                      suggestion.map((suggestion, i) => (
-                        <div
-                          key={i}
-                          className="cursor-pointer border-gray-400 p-4"
-                          onClick={() => onSuggestionHandler(suggestion)}
-                        >
-                          {suggestion}{' '}
-                        </div>
-                      ))}{' '}
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 pt-3">
-                  <button
-                    type="submit"
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl xs:text-xs"
-                  >
-                    Submit
-                  </button>
-                </div>
-                <div className="flex float-left text-xs text-gray-400">
-                  <Link
-                    href={`/privacy-policy}`}
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Privacy policy
-                  </Link>
-                  &nbsp;
-                  <Link
-                    href={`/terms-and-condition`}
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Terms and conditions
-                  </Link>
-                </div>
-
-                <div className="flex float-right text-xs text-gray-400 ">
-                  100% secure and trusted
-                </div>
-              </form>
-              <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
-                <Social />
-                <div>
-                  <span>
-                    <Link
-                      href={`/search-by-part-name`}
-                      className="underline hover:text-blue-500 xs:text-sm"
-                    >
-                      SEARCH BY PART NAME
-                    </Link>{' '}
-                    &nbsp;|
-                  </span>
-                  <span>
-                    <Link
-                      href={`/search-by-cities-in-uae`}
-                      className="underline hover:text-blue-500 xs:text-sm"
-                    >
-                      SEARCH BY CITY
-                    </Link>{' '}
-                    &nbsp;|
-                  </span>
-                  <span>
-                    <Link
-                      href={`/search-by-make`}
-                      className="underline hover:text-blue-500 xs:text-sm"
-                    >
-                      SEARCH BY MAKE
-                    </Link>{' '}
-                    &nbsp;
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="text-xl font-mono text-gray-700 mx-auto xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5">
-              Emirates-car.com is the online Dealers specialist in {make} spare
-              parts running on roads of UAE. We find pleasure is finding the
-              best genuine (otherwise called OEM parts) and aftermarket parts
-              for any cars. We have experienced professional who can find the
-              parts at affordable and reasonable price. We deal in genuine{' '}
+            <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 underline pb-3">
+              <nobr className="text-blue-400 no-underline">
+                <i className="fal fa-car-garage"></i>
+                Current path:&nbsp;&nbsp;
+              </nobr>
+              index{'>>>'}
               {make}
-              parts and aftermarket {make} parts such as engine parts,
-              mechanical parts, electrical and electronic parts, body parts and
-              lights, AC parts and service and maintenance parts. You can order{' '}
-              {make} spare parts by simply submitting the online inquiry form{' '}
-              <Link
-                href="https://emirates-car.com"
-                className="underline text-blue-500 hover:text-blue-900" title="auto spare parts"
-              >
-                here
-              </Link>
-              . You can get callback or whatsapp chat or email after submitting
-              your form inquiry.
-            </div>
-            <p className="text-xl font-mono text-gray-700 mx-auto font-extrabold xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10">
-              Availability of {make} parts in UAE:
+              {'>>>'}
             </p>
-            <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
-              <div>
-                <Link
-                  href="/search-by-cities-in-uae/Dubai"
-                  title={make + ' spare parts dubai'}
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                  {make} Parts Dubai
-                </Link>
-              </div>
-              <div>
-                {' '}
-                <Link
-                  href="/search-by-cities-in-uae/Sharjah"
-                  title={make + ' spare parts dubai'}
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                  {make} Parts Sharjah
-                </Link>
-              </div>
-              <div>
-                {' '}
-                <Link
-                  href="/search-by-cities-in-uae/Ajman"
-                  title={make + ' spare parts ajman'}
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  {make} Parts Ajman
-                </Link>
-              </div>
-              <div>
-                {' '}
-                <Link
-                  href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
-                  title={make + ' spare parts ras al khaimah'}
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  {make} Parts Ras Al Khaimah
-                </Link>
-              </div>
-              <div>
-                <Link
-                  href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
-                  title={make + ' spare parts al quoz'}
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  {make} Parts Al Quoz
-                </Link>
-              </div>
-              <div>
-                <Link
-                  href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
-                  title={make + ' spare parts dubai sheikh zayed road'}
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  {make} Parts Sheikh Zayed Road, Dubai
-                </Link>
-              </div>
-              <div>
-                <Link
-                  href="/search-by-cities-in-uae/Deira%20(Dubai)"
-                  title={make + ' spare parts deira'}
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  {make} Parts Deira
-                </Link>
-              </div>
-            </div>
-            <div className="d-flex justify-center pt-10 xs:pt-5 mx-8 xs:mx-3">
-              <div>
-                <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center">
-                  Popular Used, Genuine and Aftermarket {make} spare parts for sale in UAE
-                </p>
-
-                <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
-                  {images.map(i => (
-                    <div key={i.name} className="border-2 p-5 relative">
-                      <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
-                        Sale!
-                      </sup>
-                      <div className="h-50">
-                        <div className="text-xl font-bold font-sans xs:text-base">
-                          {i.name}
-                        </div>
-                      </div>
-
-                      <hr className="py-1" />
-                      <Image
-                        src={i.images}
-                        alt={i.alt}
-                        height={250}
-                        width={250}
-                        className="object-none object-center p-1"
-                        priority
-                      />
-
-                      <Link
-                        href={i.link}
-                        title={make + i.name}
-                        className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+            <div className="flex justify-center">
+              <div className="pt-3">
+                <input
+                  className="border-2 border-gray-300 w-96 xs:w-full sm:mx-2 2xs:w-auto 2xs:mx-2 bg-white h-10 xs:h-6 2xs:h-6 rounded-lg text-sm focus:outline-none px-2"
+                  id="partname"
+                  type="search"
+                  placeholder={'Search Your ' + make + ' Model'}
+                  onChange={e => onModelFormChange(e.target.value)}
+                  value={searchModel}
+                  autoComplete="off"
+                  required
+                />
+                <div className="overflow-y-hidden grid grid-cols-5 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:w-auto xs:mx-2 sm:w-auto sm:mx-2 2xs:w-auto 2xs:mx-2 ">
+                  {recommend &&
+                    recommend.map((recommend, i) => (
+                      <div
+                        key={i}
+                        className="cursor-pointer  text-base p-1 bg-white"
+                        onClick={() => onModelSuggestionHandler(recommend)}
+                        width="100%"
                       >
-                        Inquire Now
-                      </Link>
-                    </div>
-                  ))}
+                        <Link
+                          href={`https://emirates-car.com/search-by-make/${make}/${recommend}`}
+                          rel="noopener noreferrer"
+                          target="_newtab"
+                        >
+                          <a title={`${recommend}`}>{recommend}</a>
+                        </Link>
+                      </div>
+                    ))}
                 </div>
-                <Link
-                  href={`/get-in-touch`}
-                  className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-                  target="_newtab"
-                >
-                  View All Parts
-                </Link>
               </div>
             </div>
-            <p className="text-3xl font-extrabold mx-auto my-5 xs:text-xl md:text-2xl">
-          Shop for {make} performance parts, {make} genuine parts, {make+" "}
-          aftermarket parts, {make} body parts, {make} mechanical parts, {make+" "}
-          electrical parts, {make} engine parts, {make} replacement parts, {make+" "}
+          </div>
+          <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
+            {car.map(post => (
+              <div key={post.id}>
+                <Link
+                  href={`/search-by-make/[make]/[model]`}
+                  as={`/search-by-make/${post.make}/${post.model}`}
+                >
+                  <a title={post.make + post.model + ' spare parts'}>
+                    <main className="border border-blue-800 h-full p-3 ">
+                      <p className="text-center text-lg xs:text-xl xs:text-center font-mono text-blue-800 underline hover:text-gray-800 focus:text-gray-800 font-bold ">
+                        {make + ' ' + post.model.replace('%2F', '/') + ' parts'}{' '}
+                      </p>
+                    </main>
+                  </a>
+                </Link>
+              </div>
+            ))}{' '}
+          </div>
+        </article>
+        <div className="text-center mt-2 text-red-400 text-sm xs:text-xs py-5">
+          **Model not found above?
+          <Link href={`/get-in-touch`}>
+            <a>
+              <nobr className="text-blue-500 text-sm underline">
+                {' '}
+                Get in touch with us {'>>'}**
+              </nobr>
+            </a>
+          </Link>{' '}
+        </div>
+        <div className="text-center">
+          <HondaOfferButton />
+        </div>
+        <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 md:grid md:grid-cols-1 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+          <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 text-red-600">
+            Want to Get Prices for {make} spare parts uae online? Submit your
+            inquiry here
+          </p>
+          <form
+            id="myForm"
+            className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+            method="POST"
+            onSubmit={handleSubmit}
+            target="hidden_iframe"
+          >
+            <div className="grid grid-cols-1 pt-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                htmlFor="model"
+              >
+                Name
+              </label>
+              <div className="relative">
+                <input
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                  id="name"
+                  type="text"
+                  placeholder="Name"
+                  onChange={handleNameChange}
+                  value={Name}
+                  autoComplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
+              <div>
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  htmlFor="year"
+                >
+                  Year
+                </label>
+                <div className="relative">
+                  <input
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    id="year"
+                    type="text"
+                    placeholder="Year"
+                    name="entry.902626710"
+                    onChange={handleYearChange}
+                    value={Year}
+                    autoComplete="off"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  htmlFor="make"
+                >
+                  Make
+                </label>
+                <div className="relative">
+                  <select
+                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 xs:py-1 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    id="make"
+                    name="entry.741646505"
+                    required="required"
+                    onChange={handleMakeChange}
+                    value={Make}
+                  >
+                    <option value="" disabled>
+                      Select your Make
+                    </option>
+                    {mke.map(m => (
+                      <option key={m}>{m}</option>
+                    ))}{' '}
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg
+                      className="fill-current h-4 w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  htmlFor="model"
+                >
+                  Model
+                </label>
+                <div className="relative">
+                  <select
+                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    id="model"
+                    name="entry.402947466"
+                    required
+                    onChange={handleModelChange}
+                    value={Model}
+                  >
+                    <option value="" disabled>
+                      Select your Model
+                    </option>
+                    {posts
+                      .filter(s => s.make === Make)
+                      .map(s => (
+                        <option key={s.id} value={s.model}>
+                          {s.model}{' '}
+                        </option>
+                      ))}{' '}
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg
+                      className="fill-current h-4 w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
+              <div className="flex flex-wrap -mx-3 mb-2">
+                <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="Code"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    CODE
+                  </label>
+                  <input
+                    id="Code"
+                    name="entry.44547744"
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    type="text"
+                    placeholder="Eg. +971, +27 ..."
+                    onChange={handleCodeChange}
+                    value={Code}
+                    required
+                  />
+                </div>
+                <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                  <label
+                    htmlFor="whatsappno"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  >
+                    WhatsApp no
+                  </label>
+                  <input
+                    id="whatsappno"
+                    name="entry.902626710"
+                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                    type="text"
+                    placeholder="WhatsApp No"
+                    onChange={handleWhatsAppNoChange}
+                    value={Whatsappno}
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  htmlFor="city"
+                >
+                  Location
+                </label>
+                <input
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                  id="city"
+                  type="text"
+                  placeholder="(Area, Emirates) or (City, Country)"
+                  onChange={handleAddressChange}
+                  value={Address}
+                  autoComplete="off"
+                />
+              </div>
+              <div>
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  htmlFor="email"
+                >
+                  Email(Optional)
+                </label>
+                <input
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                  id="email"
+                  type="text"
+                  placeholder="Mail ID"
+                  onChange={handleEmailChange}
+                  value={Email}
+                  autoComplete="off"
+                  name="entry.113755516"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 pt-3">
+              <div>
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  htmlFor="partname"
+                >
+                  PART NAME
+                </label>
+                <textarea
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                  id="partname"
+                  type="text"
+                  placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
+                  rows={5}
+                  name="entry.1660104041"
+                  onChange={e => onPartFormChange(e.target.value)}
+                  value={text}
+                  autoComplete="off"
+                  required
+                />{' '}
+                {suggestion &&
+                  suggestion.map((suggestion, i) => (
+                    <div
+                      key={i}
+                      className="cursor-pointer border-gray-400 p-4"
+                      onClick={() => onSuggestionHandler(suggestion)}
+                    >
+                      {suggestion}{' '}
+                    </div>
+                  ))}{' '}
+              </div>
+            </div>
+            <div className="grid grid-cols-1 pt-3">
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl xs:text-xs"
+              >
+                Submit
+              </button>
+            </div>
+            <div className="flex float-left text-xs text-gray-400">
+              <Link href={`/privacy-policy}`} target="_newtab">
+                <a className="underline">Privacy policy</a>
+              </Link>
+              &nbsp;
+              <Link href={`/terms-and-condition`} target="_newtab">
+                <a className="underline">Terms and conditions</a>
+              </Link>
+            </div>
+
+            <div className="flex float-right text-xs text-gray-400 ">
+              100% secure and trusted
+            </div>
+          </form>
+          <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+            <Social />
+            <div>
+              <span>
+                <Link href={`/search-by-part-name`}>
+                  <a className="underline hover:text-blue-500 xs:text-sm">
+                    {' '}
+                    SEARCH BY PART NAME
+                  </a>
+                </Link>{' '}
+                &nbsp;|
+              </span>
+              <span>
+                <Link href={`/search-by-cities-in-uae`}>
+                  <a className="underline hover:text-blue-500 xs:text-sm">
+                    SEARCH BY CITY
+                  </a>
+                </Link>{' '}
+                &nbsp;|
+              </span>
+              <span>
+                <Link href={`/search-by-make`}>
+                  <a className="underline hover:text-blue-500 xs:text-sm">
+                    SEARCH BY MAKE
+                  </a>
+                </Link>{' '}
+                &nbsp;
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="text-xl font-mono text-gray-700 mx-auto xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5">
+          Emirates-car.com is the online Dealers specialist in {make} spare
+          parts running on roads of UAE. We find pleasure is finding the best
+          genuine (otherwise called OEM parts) and aftermarket parts for any
+          cars. We have experienced professional who can find the parts at
+          affordable and reasonable price. We deal in genuine {make}
+          parts and aftermarket {make} parts such as engine parts, mechanical
+          parts, electrical and electronic parts, body parts and lights, AC
+          parts and service and maintenance parts. You can order {make} spare
+          parts by simply submitting the online inquiry form{' '}
+          <Link href="https://emirates-car.com">
+            <a
+              className="underline text-blue-500 hover:text-blue-900"
+              title="auto spare parts"
+            >
+              here
+            </a>
+          </Link>
+          . You can get callback or whatsapp chat or email after submitting your
+          form inquiry.
+        </div>
+        <p className="text-xl font-mono text-gray-700 mx-auto font-extrabold xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10">
+          Availability of {make} parts in UAE:
+        </p>
+        <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+          <div>
+            <Link href="/search-by-cities-in-uae/Dubai">
+              <a
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={make + ' spare parts dubai'}
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                {make} Parts Dubai
+              </a>
+            </Link>
+          </div>
+          <div>
+            {' '}
+            <Link href="/search-by-cities-in-uae/Sharjah">
+              <a
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={make + ' spare parts dubai'}
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                {make} Parts Sharjah
+              </a>
+            </Link>
+          </div>
+          <div>
+            {' '}
+            <Link href="/search-by-cities-in-uae/Ajman">
+              <a
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={make + ' spare parts ajman'}
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                {make} Parts Ajman
+              </a>
+            </Link>
+          </div>
+          <div>
+            {' '}
+            <Link href="/search-by-cities-in-uae/Ras%20al%20Khaimah">
+              <a
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={make + ' spare parts ras al khaimah'}
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                {make} Parts Ras Al Khaimah
+              </a>
+            </Link>
+          </div>
+          <div>
+            <Link href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)">
+              <a
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={make + ' spare parts al quoz'}
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                {make} Parts Al Quoz
+              </a>
+            </Link>
+          </div>
+          <div>
+            <Link href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)">
+              <a
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={make + ' spare parts dubai sheikh zayed road'}
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                {make} Parts Sheikh Zayed Road, Dubai
+              </a>
+            </Link>
+          </div>
+          <div>
+            <Link href="/search-by-cities-in-uae/Deira%20(Dubai)">
+              <a
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={make + ' spare parts deira'}
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                {make} Parts Deira
+              </a>
+            </Link>
+          </div>
+        </div>
+        <div className="d-flex justify-center pt-10 xs:pt-5 mx-8 xs:mx-3">
+          <div>
+            <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center">
+              Popular Used, Genuine and Aftermarket {make} spare parts for sale
+              in UAE
+            </p>
+
+            <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
+              {images.map(i => (
+                <div key={i.name} className="border-2 p-5 relative">
+                  <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
+                    Sale!
+                  </sup>
+                  <div className="h-50">
+                    <div className="text-xl font-bold font-sans xs:text-base">
+                      {i.name}
+                    </div>
+                  </div>
+
+                  <hr className="py-1" />
+                  <Image
+                    src={i.images}
+                    alt={i.alt}
+                    height={250}
+                    width={250}
+                    className="object-none object-center p-1"
+                    priority
+                  />
+
+                  <Link href={i.link}>
+                    <a
+                      className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                      title={make + i.name}
+                    >
+                      Inquire Now
+                    </a>
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <Link href={`/get-in-touch`} target="_newtab">
+              <a className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
+                View All Parts
+              </a>
+            </Link>
+          </div>
+        </div>
+        <p className="text-3xl font-extrabold mx-auto my-5 xs:text-xl md:text-2xl">
+          Shop for {make} performance parts, {make} genuine parts, {make + ' '}
+          aftermarket parts, {make} body parts, {make} mechanical parts,{' '}
+          {make + ' '}
+          electrical parts, {make} engine parts, {make} replacement parts,{' '}
+          {make + ' '}
           AC parts and more
         </p>
         <div className="grid grid-cols-3 xs:grid-cols-1">
@@ -1077,115 +1075,101 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Assembly"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine Assembly
+                <Link href="/search-by-part-name/Engine%20Assembly">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine Assembly
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Block"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine Block
+                <Link href="/search-by-part-name/Engine%20Block">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine Block
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Mount"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine Mount
+                <Link href="/search-by-part-name/Engine%20Mount">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine Mount
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Block"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine Block
+                <Link href="/search-by-part-name/Engine%20Block">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine Block
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Cylinder%20Head"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Cylinder Head
+                <Link href="/search-by-part-name/Cylinder%20Head">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Cylinder Head
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Cylinder%20Block"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Cylinder Block
+                <Link href="/search-by-part-name/Cylinder%20Block">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Cylinder Block
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Crankshaft"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Crankshaft
+                <Link href="/search-by-part-name/Crankshaft">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Crankshaft
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Camshaft"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Camshaft
+                <Link href="/search-by-part-name/Camshaft">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Camshaft
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Piston"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Piston
+                <Link href="/search-by-part-name/Piston">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Piston
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Exhaust%20Manifold"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Exhaust Manifold
+                <Link href="/search-by-part-name/Exhaust%20Manifold">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Exhaust Manifold
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Intake%20Manifold"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Intake Manifold
+                <Link href="/search-by-part-name/Intake%20Manifold">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Intake Manifold
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Ignition%20Switch"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Ignition Switch
+                <Link href="/search-by-part-name/Ignition%20Switch">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Ignition Switch
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Ignition%20Control%20Module"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Ignition Control Module
+                <Link href="/search-by-part-name/Ignition%20Control%20Module">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Ignition Control Module
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Transmission%20Control%20Module"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  TCM
+                <Link href="/search-by-part-name/Transmission%20Control%20Module">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    TCM
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -1197,75 +1181,66 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Assembly"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Engine
+                <Link href="/search-by-part-name/Engine%20Assembly">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Engine
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Assembly"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Battery
+                <Link href="/search-by-part-name/Engine%20Assembly">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Battery
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Engine%20Assembly"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Alternator
+                <Link href="/search-by-part-name/Engine%20Assembly">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Alternator
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Brake%20Pads"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Brake Pads
+                <Link href="/search-by-part-name/Brake%20Pads">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Brake Pads
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Radiator"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Radiator
+                <Link href="/search-by-part-name/Radiator">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Radiator
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Transmission%20Control%20Module"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Transmission
+                <Link href="/search-by-part-name/Transmission%20Control%20Module">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Transmission
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Shock%20Absorber"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Shock Absorber
+                <Link href="/search-by-part-name/Shock%20Absorber">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Shock Absorber
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Convertible%20Top%20Motor"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Catalytic Converter
+                <Link href="/search-by-part-name/Convertible%20Top%20Motor">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Catalytic Converter
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Power%20Steering%20Box"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Power Steering
+                <Link href="/search-by-part-name/Power%20Steering%20Box">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Power Steering
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -1277,43 +1252,38 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/Bonnet"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Bonnet
+                <Link href="/search-by-part-name/Bonnet">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Bonnet
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Fender%20(Front)"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Fender
+                <Link href="/search-by-part-name/Fender%20(Front)">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Fender
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Decklid"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Decklid
+                <Link href="/search-by-part-name/Decklid">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Decklid
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Grille"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Grille
+                <Link href="/search-by-part-name/Grille">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Grille
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Wheel"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Wheel
+                <Link href="/search-by-part-name/Wheel">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Wheel
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -1325,43 +1295,38 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/Spark%20Plug"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Spark Plug
+                <Link href="/search-by-part-name/Spark%20Plug">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Spark Plug
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Alternator"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Alternator
+                <Link href="/search-by-part-name/Alternator">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Alternator
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Battery"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Battery
+                <Link href="/search-by-part-name/Battery">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Battery
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/Ignition%20Switch"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Ignition Switch
+                <Link href="/search-by-part-name/Ignition%20Switch">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Ignition Switch
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/get-in-touch"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Many more...
+                <Link href="/get-in-touch">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Many more...
+                  </a>
                 </Link>
               </li>
             </ol>
@@ -1373,90 +1338,88 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link
-                  href="/search-by-part-name/AC%20Compressor"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  AC Compressor
+                <Link href="/search-by-part-name/AC%20Compressor">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    {' '}
+                    AC Compressor
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/AC%20Condenser"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  AC Condenser
+                <Link href="/search-by-part-name/AC%20Condenser">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    AC Condenser
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/AC%20Selector"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  AC Selector
+                <Link href="/search-by-part-name/AC%20Selector">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    AC Selector
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/search-by-part-name/AC%20Controls"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  AC Controls
+                <Link href="/search-by-part-name/AC%20Controls">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    AC Controls
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/get-in-touch"
-                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                >
-                  Many more...
+                <Link href="/get-in-touch">
+                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                    Many more...
+                  </a>
                 </Link>
               </li>
             </ol>
           </div>
         </div>
-            <div className="place-content-center ">
-              <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center">
-                List of Genuine and Aftermarket {make} spare parts in UAE
-              </p>
-              <div className="grid grid-cols-5 gap-2 s:grid-cols-1 xs:grid-cols-1 md:grid-cols-3 font-medium text-gray-500 p-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-                  {partspost.map(p => (
-                    <div key={p.id}>
-                      <Link
-                        href={`/search-by-part-name/[parts]`}
-                        as={`/search-by-part-name/${p.parts}`}
-                        title={p.parts}
-                        className="text-blue-800 hover:text-gray-800 underline "
-                        passHref
-                      >
-                        {make + ' ' + p.parts + ' parts'}
-                      </Link>
-                    </div>
-                  ))}
-              </div>
-            </div>
-            <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-black font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
-            {make} spare parts Onine in UAE - Order Now and get best Quote
-            prices !
-          </div>
-            <div className="grid grid-cols-4 xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-              {cities.map(post => (
-                <div key={post.id}>
-                  <Link
-                    href={`/search-by-cities-in-uae/[city]`}
-                    as={`/search-by-cities-in-uae/${post.city}`}
-                    title={make + ' spare parts ' + post.city}
-                    passHref
+        <div className="place-content-center ">
+          <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center">
+            List of Genuine and Aftermarket {make} spare parts in UAE
+          </p>
+          <div className="grid grid-cols-5 gap-2 s:grid-cols-1 xs:grid-cols-1 md:grid-cols-3 font-medium text-gray-500 p-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+            {partspost.map(p => (
+              <div key={p.id}>
+                <Link
+                  href={`/search-by-part-name/[parts]`}
+                  as={`/search-by-part-name/${p.parts}`}
+                >
+                  <a
+                    className="text-blue-800 hover:text-gray-800 underline"
+                    title={p.parts}
                   >
-                    <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
-                      <i className="far fa-compass"></i>&nbsp;
-                      {post.city}{' '}
-                    </p>
-                  </Link>
-                </div>
-              ))}{' '}
+                    {make + ' ' + p.parts + ' parts'}
+                  </a>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-black font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  text-justify font-sans">
+          {make} spare parts Onine in UAE - Order Now and get best Quote prices
+          !
+        </div>
+        <div className="grid grid-cols-4 xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+          {cities.map(post => (
+            <div key={post.id}>
+              <Link
+                href={`/search-by-cities-in-uae/[city]`}
+                as={`/search-by-cities-in-uae/${post.city}`}
+              >
+                <a title={make + ' spare parts ' + post.city}>
+                  <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
+                    <i className="far fa-compass"></i>&nbsp;
+                    {post.city}{' '}
+                  </p>
+                </a>
+              </Link>
             </div>
-          </main>
+          ))}{' '}
+        </div>
+      </main>
 
       <Footer />
     </div>

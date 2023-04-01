@@ -282,11 +282,11 @@ export default function British({ partsposts, posts }) {
             <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
               <Image
                 src={Britain}
-                alt="genuine auto spare parts"
+                alt="used british car parts"
                 height={50}
                 width={50}
               />
-              British VEHICLE AUTO SPARE PARTS
+              Used, Genuine(original), Aftermarket British Car Parts Online UAE
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
@@ -294,167 +294,185 @@ export default function British({ partsposts, posts }) {
                   href={`https://emirates-car.com/search-by-make/Aston Martin`}
                   passHref
                 >
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="aston martin spare parts in uae"
-                        src="/img/car-logos/aston_martin.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Aston Martin
-                    </p>
-                  </main>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="aston martin spare parts in uae"
+                          src="/img/car-logos/aston_martin.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Aston Martin
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Bentley`} passHref>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="bentley spare parts in uae"
-                        src="/img/car-logos/bentley.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Bentley
-                    </p>
-                  </main>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="bentley spare parts in uae"
+                          src="/img/car-logos/bentley.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Bentley
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Jaguar`} passHref>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="Jaguar spare parts in uae"
-                        src="/img/car-logos/jaguar.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Jaguar
-                    </p>
-                  </main>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="Jaguar spare parts in uae"
+                          src="/img/car-logos/jaguar.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Jaguar
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Land Rover`} passHref>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="land rover spare parts in uae"
-                        src="/img/car-logos/land_rover.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Land Rover
-                    </p>
-                  </main>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="land rover spare parts in uae"
+                          src="/img/car-logos/land_rover.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Land Rover
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Lotus`} passHref>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="lotus spare parts in uae"
-                        src="/img/car-logos/lotus.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Lotus
-                    </p>
-                  </main>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="lotus spare parts in uae"
+                          src="/img/car-logos/lotus.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Lotus
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/McLaren`} passHref>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="Mclaren spare parts in uae"
-                        src="/img/car-logos/mclaren.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      McLaren
-                    </p>
-                  </main>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="Mclaren spare parts in uae"
+                          src="/img/car-logos/mclaren.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        McLaren
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Mini`} passHref>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="mini spare parts in uae"
-                        src="/img/car-logos/mini.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Mini
-                    </p>
-                  </main>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="mini spare parts in uae"
+                          src="/img/car-logos/mini.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Mini
+                      </p>
+                    </main>
+</a>
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Rolls-Royce`} passHref>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="rolls royce spare parts in uae"
-                        src="/img/car-logos/rolls-royce.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Rolls Royce
-                    </p>
-                  </main>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="rolls royce spare parts in uae"
+                          src="/img/car-logos/rolls-royce.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Rolls Royce
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
               <Link href={`/get-in-touch`} passHref>
-                <nobr className="text-blue-500 text-sm underline">
-                  {' '}
-                  Get in touch with us {'>>'}**
-                </nobr>
+                <a>
+                  <nobr className="text-blue-500 text-sm underline">
+                    {' '}
+                    Get in touch with us {'>>'}**
+                  </nobr>
+                </a>
               </Link>{' '}
             </div>
-            <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
+            <p className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
               Explore from our immensively large-scale auto spare part website,
               your Britain auto spare parts for your Vehicle needs - Car / Jeep
               / Van / Truck / Buses in Your city in UAE especially in Abu al
@@ -474,15 +492,14 @@ export default function British({ partsposts, posts }) {
               Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
               Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
               can check our catalogue at{' '}
-              <Link
-                href={`https://emirates-car.com/search-by-part-name`}
-                className="text-blue-400 underline"
-              >
-                https://emirates-car.com/search-by-part-name
+              <Link href={`https://emirates-car.com/search-by-part-name`}>
+                <a className="text-blue-400 underline">
+                  https://emirates-car.com/search-by-part-name
+                </a>
               </Link>
               . Submit your inquiry to us, our dealer will get back to you based
               on stock availability.
-            </h1>
+            </p>
             <div className="mx-auto">
               <Count />
             </div>
@@ -491,29 +508,32 @@ export default function British({ partsposts, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link
-                      href={`/search-by-part-name`}
-                      className="underline hover:text-blue-500 xs:text-sm"
-                    >
-                      SEARCH BY PART NAME
+                    <Link href={`/search-by-part-name`}>
+                      <a
+                        className="underline hover:text-blue-500 xs:text-sm"
+                        title="spare parts in uae"
+                      >
+                        SEARCH BY PART NAME
+                      </a>
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link
-                      href={`/search-by-cities-in-uae`}
-                      className="underline hover:text-blue-500  xs:text-sm"
-                    >
-                      SEARCH BY CITY
+                    <Link href={`/search-by-cities-in-uae`}>
+                      <a
+                        className="underline hover:text-blue-500  xs:text-sm"
+                        title="british car brand spare parts"
+                      >
+                        SEARCH BY CITY
+                      </a>
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link
-                      href={`/search-by-make`}
-                      className="underline hover:text-blue-500  xs:text-sm"
-                    >
-                      SEARCH BY MAKE
+                    <Link href={`/search-by-make`}>
+                      <a className="underline hover:text-blue-500  xs:text-sm">
+                        SEARCH BY MAKE
+                      </a>
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -757,20 +777,12 @@ export default function British({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link
-                    href={`/privacy-policy`}
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Privacy policy
+                  <Link href={`/privacy-policy`} target="_newtab">
+                    <a className="underline">Privacy policy</a>
                   </Link>
                   &nbsp;
-                  <Link
-                    href={`/terms-and-condition`}
-                    className="underline"
-                    target="_newtab"
-                  >
-                    Terms and conditions
+                  <Link href={`/terms-and-condition`} target="_newtab">
+                    <a className="underline">Terms and conditions</a>
                   </Link>
                 </div>
 
@@ -793,9 +805,9 @@ export default function British({ partsposts, posts }) {
         </div>
       </div>
 
-      <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+      <h4 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
         SEARCH FOR AUTO SPARE PARTS IN UAE
-      </h1>
+      </h4>
       <div className="flex justify-center">
         <div className="pt-3">
           <input
@@ -836,14 +848,15 @@ export default function British({ partsposts, posts }) {
             <Link
               href={`/search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/${post.parts}`}
-              title={post.parts + ' in uae'}
               passHref
             >
-              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                  {post.parts.toUpperCase()}{' '}
-                </p>
-              </main>
+              <a title={post.parts + ' in uae'}>
+                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                    {post.parts.toUpperCase()}{' '}
+                  </p>
+                </main>
+              </a>
             </Link>
           </div>
         ))}{' '}

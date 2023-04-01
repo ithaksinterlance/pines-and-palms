@@ -34,14 +34,15 @@ export default class relatedpost extends Component {
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto">
             <li className="nav-item">
               <Link
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 href={`https://www.facebook.com/emirates.auto.parts`}
                 passHref
               >
-                <FontAwesomeIcon
-                  icon={faFacebook}
-                  className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
-                />
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+                  <FontAwesomeIcon
+                    icon={faFacebook}
+                    className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
+                  />
+                </a>
               </Link>
             </li>
             <li className="nav-item">
@@ -50,22 +51,22 @@ export default class relatedpost extends Component {
                 href={`https://www.instagram.com/emiratescar_parts/`}
                 passHref
               >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
-                />
+                <a>
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
+                  />
+                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="px-3 py-2 flex items-center text-xl leading-snug text-blue-700 hover:opacity-75"
-                href={`https://twitter.com/emiratescarpart`}
-                passHref
-              >
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
-                />
+              <Link href={`https://twitter.com/emiratescarpart`} passHref>
+                <a className="px-3 py-2 flex items-center text-xl leading-snug text-blue-700 hover:opacity-75">
+                  <FontAwesomeIcon
+                    icon={faTwitter}
+                    className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
+                  />
+                </a>
               </Link>
             </li>
           </ul>
@@ -77,7 +78,8 @@ export default class relatedpost extends Component {
                 href={`/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons`}
                 passHref
               >
-                5 ways you can buy car spare parts
+                <a>5 ways you can buy car spare parts</a>
+
                 <p className="text-gray-300 text-xs font-bold uppercase pt-2">
                   12 days ago - 10 min read
                 </p>
@@ -88,7 +90,8 @@ export default class relatedpost extends Component {
                 href={`/blog/How%20to%20Buy%20Auto%20Parts%20Online`}
                 passHref
               >
-                How to Buy Car Spare Parts Online
+                <a>How to Buy Car Spare Parts Online</a>
+
                 <p className="text-gray-300 text-xs font-bold uppercase pt-2">
                   5 days ago - 10 min read
                 </p>

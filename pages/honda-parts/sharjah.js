@@ -65,12 +65,13 @@ export default function Sharjah() {
             Honda Car Parts in Sharjah Online for German, American, Japan,
             Korean and more models
           </h1>
-          <Link
-            href={`/search-by-cities-in-uae/Mussafah`}
-            className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-            target="_newtab"
-          >
-            Inquire Now
+          <Link href={`/search-by-cities-in-uae/Mussafah`}>
+            <a
+              className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+              target="_newtab"
+            >
+              Inquire Now
+            </a>
           </Link>
         </div>
       </div>
@@ -86,11 +87,9 @@ export default function Sharjah() {
             electrical and electronic parts, body parts and lights, AC parts and
             service and mainatenance parts. You can order Honda spare parts by
             simply submitting the online inquiry form{' '}
-            <Link
-              href="https://emirates-car.com"
-              className="underline text-blue-500 hover:text-blue-900"
-            >
-              here
+            <Link href="https://emirates-car.com">
+              <a className="underline text-blue-500 hover:text-blue-900">here</a>
+
             </Link>
             . You can get callback or whatsapp chat or email after submitting
             your form inquiry.
@@ -151,74 +150,88 @@ export default function Sharjah() {
             really need, you can come to the best conclusion yourself. And we
             can serve you with both kind of parts.
           </p>
-          <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
-            Availability of Honda parts in UAE:
+          <p className="text-xl font-mono text-gray-700 mx-auto font-extrabold xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10">
+            Availability of Honda parts in Sharjah:
           </p>
-          <div className="grid grid-cols-5 xs:grid-cols-1 gap-3 mx-auto p-5 border-2 border-gray-500">
+          <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
             <div>
-              <Link
-                href="/honda-parts/dubai"
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                DUBAI
+              <Link href="/search-by-cities-in-uae/Dubai">
+                <a
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'honda spare parts dubai'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                  Honda Parts Dubai
+                </a>
               </Link>
             </div>
             <div>
               {' '}
-              <Link
-                href="/search-by-cities-in-uae/Sharjah"
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                SHARJAH
+              <Link href="/search-by-cities-in-uae/Sharjah">
+                <a
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'Honda spare parts dubai'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                  Honda Parts Sharjah
+                </a>
               </Link>
             </div>
             <div>
               {' '}
-              <Link
-                href="/honda-parts/ajman"
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                &nbsp;AJMAN
+              <Link href="/search-by-cities-in-uae/Ajman">
+                <a
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'honda spare parts ajman'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  Honda Parts Ajman
+                </a>
               </Link>
             </div>
             <div>
               {' '}
-              <Link
-                href="/honda-parts/ras-al-khaimah"
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;RAS
-                AL KHAIMAH
+              <Link href="/search-by-cities-in-uae/Ras%20al%20Khaimah">
+                <a
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'Honda spare parts ras al khaimah'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  Honda Parts Ras Al Khaimah
+                </a>
               </Link>
             </div>
             <div>
-              <Link
-                href="/honda-parts/al-quoz"
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Al
-                QUOZ
+              <Link href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)">
+                <a
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'Honda spare parts al quoz'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  Honda Parts Al Quoz
+                </a>
               </Link>
             </div>
             <div>
-              <Link
-                href="/honda-parts/abu-dhabi"
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ABU
-                DHABI
+              <Link href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)">
+                <a
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'Honda spare parts dubai sheikh zayed road'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  Honda Parts Sheikh Zayed Road, Dubai
+                </a>
               </Link>
             </div>
             <div>
-              <Link
-                href="/honda-parts/deira"
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                &nbsp;DEIRA
+              <Link href="/search-by-cities-in-uae/Deira%20(Dubai)">
+                <a
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'honda spare parts deira'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  Honda Parts Deira
+                </a>
               </Link>
             </div>
           </div>
@@ -226,122 +239,108 @@ export default function Sharjah() {
             List of different Genuine and Aftermarket Honda spare parts in
             Sharjah, UAE
           </p>
-          <div className="grid grid-cols-3 xs:grid-cols-1">
+          <div className="grid grid-cols-3 xs:grid-cols-1 place-content-center">
             <div>
               <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
                 Honda Engine parts
               </p>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
-                  <Link
-                    href="/search-by-part-name/Engine%20Assembly"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Engine Assembly
+                  <Link href="/search-by-part-name/Engine%20Assembly">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Engine Assembly
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Engine%20Block"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Engine Block
+                  <Link href="/search-by-part-name/Engine%20Block">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Engine Block
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Engine%20Mount"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Engine Mount
+                  <Link href="/search-by-part-name/Engine%20Mount">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Engine Mount
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Engine%20Block"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Engine Block
+                  <Link href="/search-by-part-name/Engine%20Block">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Engine Block
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Cylinder%20Head"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Cylinder Head
+                  <Link href="/search-by-part-name/Cylinder%20Head">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Cylinder Head
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Cylinder%20Block"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Cylinder Block
+                  <Link href="/search-by-part-name/Cylinder%20Block">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Cylinder Block
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Crankshaft"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Crankshaft
+                  <Link href="/search-by-part-name/Crankshaft">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Crankshaft
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Camshaft"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Camshaft
+                  <Link href="/search-by-part-name/Camshaft">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Camshaft
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Piston"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Piston
+                  <Link href="/search-by-part-name/Piston">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Piston
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Exhaust%20Manifold"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Exhaust Manifold
+                  <Link href="/search-by-part-name/Exhaust%20Manifold">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Exhaust Manifold
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Intake%20Manifold"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Intake Manifold
+                  <Link href="/search-by-part-name/Intake%20Manifold">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Intake Manifold
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Ignition%20Switch"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Ignition Switch
+                  <Link href="/search-by-part-name/Ignition%20Switch">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Ignition Switch
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Ignition%20Control%20Module"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Ignition Control Module
+                  <Link href="/search-by-part-name/Ignition%20Control%20Module">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Ignition Control Module
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Transmission%20Control%20Module"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    TCM
+                  <Link href="/search-by-part-name/Transmission%20Control%20Module">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      TCM
+                    </a>
                   </Link>
                 </li>
               </ol>
@@ -353,75 +352,74 @@ export default function Sharjah() {
               </p>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
-                  <Link
-                    href="/search-by-part-name/Engine%20Assembly"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Engine
+                  <Link href="/search-by-part-name/Engine%20Assembly">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Engine
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Engine%20Assembly"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Battery
+                  <Link href="/search-by-part-name/Engine%20Assembly">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Battery
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Engine%20Assembly"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Alternator
+                  <Link href="/search-by-part-name/Engine%20Assembly">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Alternator
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Brake%20Pads"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Brake Pads
+                  <Link href="/search-by-part-name/Brake%20Pads">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Brake Pads
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Radiator"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Radiator
+                  <Link href="/search-by-part-name/Radiator">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Radiator
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Transmission%20Control%20Module"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Transmission
+                  <Link href="/search-by-part-name/Transmission%20Control%20Module">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Transmission
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Shock%20Absorber"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Shock Absorber
+                  <Link href="/search-by-part-name/Shock%20Absorber">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Shock Absorber
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Convertible%20Top%20Motor"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Catalytic Converter
+                  <Link href="/search-by-part-name/Convertible%20Top%20Motor">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      {' '}
+                      Catalytic Converter
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Power%20Steering%20Box"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Power Steering
+                  <Link href="/search-by-part-name/Power%20Steering%20Box">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Power Steering
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/get-in-touch">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Pump
+                    </a>
                   </Link>
                 </li>
               </ol>
@@ -433,43 +431,38 @@ export default function Sharjah() {
               </p>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
-                  <Link
-                    href="/search-by-part-name/Bonnet"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Bonnet
+                  <Link href="/search-by-part-name/Bonnet">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Bonnet
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Fender%20(Front)"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Fender
+                  <Link href="/search-by-part-name/Fender%20(Front)">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Fender
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Decklid"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Decklid
+                  <Link href="/search-by-part-name/Decklid">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Decklid
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Grille"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Grille
+                  <Link href="/search-by-part-name/Grille">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Grille
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Wheel"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Wheel
+                  <Link href="/search-by-part-name/Wheel">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Wheel
+                    </a>
                   </Link>
                 </li>
               </ol>
@@ -481,43 +474,38 @@ export default function Sharjah() {
               </p>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
-                  <Link
-                    href="/search-by-part-name/Spark%20Plug"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Spark Plug
+                  <Link href="/search-by-part-name/Spark%20Plug">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Spark Plug
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Alternator"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Alternator
+                  <Link href="/search-by-part-name/Alternator">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Alternator
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Battery"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Battery
+                  <Link href="/search-by-part-name/Battery">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Battery
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/Ignition%20Switch"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Ignition Switch
+                  <Link href="/search-by-part-name/Ignition%20Switch">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Ignition Switch
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/get-in-touch"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Many more...
+                  <Link href="/get-in-touch">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      Many more...
+                    </a>
                   </Link>
                 </li>
               </ol>
@@ -529,48 +517,41 @@ export default function Sharjah() {
               </p>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
-                  <Link
-                    href="/search-by-part-name/AC%20Compressor"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    AC Compressor
+                  <Link href="/search-by-part-name/AC%20Compressor">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      AC Compressor
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/AC%20Condenser"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    AC Condenser
+                  <Link href="/search-by-part-name/AC%20Condenser">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      AC Condenser
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/AC%20Selector"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    AC Selector
+                  <Link href="/search-by-part-name/AC%20Selector">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      AC Selector
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/search-by-part-name/AC%20Controls"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    AC Controls
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/get-in-touch"
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    Many more...
+                  <Link href="/search-by-part-name/AC%20Controls">
+                    <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                      AC Controls
+                    </a>
                   </Link>
                 </li>
               </ol>
             </div>
           </div>
+          <Link href={`/get-in-touch`} target="_newtab">
+            <a className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
+              View All Parts
+            </a>
+          </Link>
           <div className="grid grid-cols-1 place-content-center">
             <p className="text-3xl font-extrabold font-mono mx-auto my-5">
               5 ways you can find parts for your car.
@@ -631,10 +612,9 @@ export default function Sharjah() {
             do. So there is plenty of website and options.{' '}
             <Link
               href="/"
-              className="text-blue-500 hover:text-blue-900 underline
-          "
+              className="text-blue-500 hover:text-blue-900 underline"
             >
-              Emirates-car.com
+              <a>Emirates-car.com</a>
             </Link>{' '}
             is one such website which accept online inquiries. It deals with
             parts and accessories for honda accord, Honda civic and other honda
