@@ -24,7 +24,7 @@ class MyDocument extends Document {
           language="javascript"
           src={`https://www.exactseek.com/remote-submit.js`}
         />
-        <Script
+        <script
           id="myscript"
           dangerouslySetInnerHTML={{
             __html: `
@@ -32,7 +32,7 @@ class MyDocument extends Document {
               `
           }}
         />
-        <Script
+        <script
           id="myscript2"
           dangerouslySetInnerHTML={{
             __html: `
@@ -45,7 +45,7 @@ class MyDocument extends Document {
               `
           }}
         />
-        <Script
+        <script
           id="myscript3"
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-3E8C09YD12`}
