@@ -783,7 +783,7 @@ export default function German({ partsposts, posts }) {
                     rel="noopener noreferrer"
                     target="_newtab"
                   >
-                    {suggestion}{' '}
+                    <a>{suggestion}</a>
                   </Link>
                 </div>
               ))}{' '}

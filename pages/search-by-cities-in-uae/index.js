@@ -342,7 +342,7 @@ export default function City({ cities, data, posts, pos }) {
                             rel="noopener noreferrer"
                             target="_newtab"
                           >
-                            {recommend}
+                            <a>{recommend}</a>
                           </Link>
                         </div>
                       ))}
@@ -363,6 +363,7 @@ export default function City({ cities, data, posts, pos }) {
                     <Link
                       href={`/search-by-cities-in-uae/[city]`}
                       as={`/search-by-cities-in-uae/${post.city}`}
+                      passHref
                     >
                       <a title={'car spare parts ' + post.city}>
                         <main className="border border-blue-800 h-full p-3 ">
@@ -679,8 +680,10 @@ export default function City({ cities, data, posts, pos }) {
                       href={`https://emirates-car.com/search-by-make/${p.make}`}
                       passHref
                     >
-                      {p.make}
-                      {' in UAE, '}
+                      <a>
+                        {p.make}
+                        {' in UAE, '}
+                      </a>
                     </Link>
                   ))}
                 </h1>

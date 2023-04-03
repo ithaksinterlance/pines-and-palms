@@ -377,8 +377,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                       rel="noopener noreferrer"
                       target="_newtab"
-                    >
-                      {suggestion}
+                    ><a>{suggestion}</a>
+
                     </Link>
                   </div>
                 ))}{' '}
@@ -395,7 +395,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Ford`}
-              
+
             >
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -652,7 +652,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Ford`}
-              
+
             >
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -883,7 +883,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Aston Martin`}
-              
+
             >
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1054,7 +1054,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Peugeot`}
-              
+
             ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1867,7 +1867,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Toyota`}
-              
+
             ><a>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -2206,7 +2206,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <Link
                 href={`/search-by-make/[make]`}
                 as={`/search-by-make/${post.make}`}
-                
+
               >
                 <main className="border h-full  hover:border-blue-600 py-3 ">
                   <div className="flex justify-center">
@@ -2270,7 +2270,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <Link
                 href="/search-by-cities-in-uae/[city]"
                 as={`${'/search-by-cities-in-uae/' + post.city}`}
-                
+
               >
                 <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
                   <p className="text-center text-blue-600 font-medium hover:text-gray-800">
@@ -2498,7 +2498,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <Link
               href={`/contact`}
               className="underline text-blue-900"
-              
+
             >
              <a> CONTACT US NOW {'>>'}</a>
             </Link>
@@ -2606,7 +2606,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <Link
                   href={`/search-by-make/[make]`}
                   as={'/search-by-make/' + post.make}
-                  
+
                 >
                   <p className="text-xs text-white font-medium hover:text-gray-800 underline">
                     {post.make + ' spare parts'}{' '}
@@ -2620,7 +2620,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <Link
               href={`https://emirates-car.com`}
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-              
+
             ><a>
               <i className="fa fa-copyright" aria-hidden="true"></i>
               Copyright © 2023 Emirates-car. All rights reserved.</a>

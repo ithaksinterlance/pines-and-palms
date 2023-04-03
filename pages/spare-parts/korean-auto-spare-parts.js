@@ -288,74 +288,77 @@ export default function Korean({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href={`/search-by-make/Hyundai`} >
+                <Link href={`/search-by-make/Hyundai`}>
                   <a>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="hyundai spare parts in uae"
-                        src="/img/car-logos/hyundai.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Hyundai
-                    </p>
-                  </main></a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="hyundai spare parts in uae"
+                          src="/img/car-logos/hyundai.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Hyundai
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Kia`} >
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="kia spare parts in uae"
-                        src="/img/car-logos/kia.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Kia
-                    </p>
-                  </main>
+                <Link href={`/search-by-make/Kia`}>
+                  <a>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="kia spare parts in uae"
+                          src="/img/car-logos/kia.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Kia
+                      </p>
+                    </main>
+                  </a>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Daewoo`} >
+                <Link href={`/search-by-make/Daewoo`}>
                   <a>
-                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                    <div className="flex justify-center">
-                      <Image
-                        alt="daewoo spare parts in uae"
-                        src="/img/car-logos/daewoo.webp"
-                        className="object-scale-down shadow-xl"
-                        height={30}
-                        width={30}
-                      />
-                      <br />
-                    </div>
-                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                      Daewoo
-                    </p>
-                  </main>
+                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                      <div className="flex justify-center">
+                        <Image
+                          alt="daewoo spare parts in uae"
+                          src="/img/car-logos/daewoo.webp"
+                          className="object-scale-down shadow-xl"
+                          height={30}
+                          width={30}
+                        />
+                        <br />
+                      </div>
+                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                        Daewoo
+                      </p>
+                    </main>
                   </a>
                 </Link>
               </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`} >
+              <Link href={`/get-in-touch`}>
                 <a>
-                <nobr className="text-blue-500 text-sm underline">
-                  {' '}
-                  Get in touch with us {'>>'}**
-                </nobr>
+                  <nobr className="text-blue-500 text-sm underline">
+                    {' '}
+                    Get in touch with us {'>>'}**
+                  </nobr>
                 </a>
               </Link>{' '}
             </div>
@@ -400,7 +403,7 @@ export default function Korean({ partsposts, posts }) {
                       href={`/search-by-part-name`}
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
-                     <a> SEARCH BY PART NAME</a>
+                      <a>SEARCH BY PART NAME</a>
                     </Link>{' '}
                     &nbsp;|
                   </span>
@@ -699,20 +702,12 @@ export default function Korean({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link
-                    href={`/privacy-policy`}
-                    className="underline"
-                    target="_newtab"
-                  >
-                    <a>Privacy policy</a>
+                  <Link href={`/privacy-policy`} target="_newtab">
+                    <a className="underline">Privacy policy</a>
                   </Link>
                   &nbsp;
-                  <Link
-                    href={`/terms-and-condition`}
-                    className="underline"
-                    target="_newtab"
-                  >
-                    <a>Terms and conditions</a>
+                  <Link href={`/terms-and-condition`} target="_newtab">
+                    <a className="underline">Terms and conditions</a>
                   </Link>
                 </div>
 
@@ -763,9 +758,8 @@ export default function Korean({ partsposts, posts }) {
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
-
                   >
-                    {suggestion}
+                    <a>{suggestion}</a>
                   </Link>
                 </div>
               ))}{' '}
@@ -779,15 +773,14 @@ export default function Korean({ partsposts, posts }) {
               href={`/search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/${post.parts}`}
               title={post.parts + ' in uae'}
-
-            ><a>
-              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                  {post.parts.toUpperCase()}{' '}
-                </p>
-              </main>
-            </a>
-
+            >
+              <a>
+                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                    {post.parts.toUpperCase()}{' '}
+                  </p>
+                </main>
+              </a>
             </Link>
           </div>
         ))}{' '}

@@ -407,7 +407,7 @@ export default function France({ partsposts, posts }) {
                 </a>
               </Link>{' '}
             </div>
-            <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
+            <h6 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
               Explore from our immensively large-scale auto spare part website,
               your french auto spare parts for your Vehicle needs - Car / Jeep /
               Van / Truck / Buses in Your city in UAE especially in Abu al
@@ -434,7 +434,7 @@ export default function France({ partsposts, posts }) {
               </Link>
               . Submit your inquiry to us, our dealer will get back to you based
               on stock availability.
-            </h1>
+            </h6>
             <div className="mx-auto">
               <Count />
             </div>
@@ -762,8 +762,8 @@ export default function France({ partsposts, posts }) {
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
-                  >
-                    {suggestion}{' '}
+                  ><a>{suggestion}</a>
+
                   </Link>
                 </div>
               ))}{' '}

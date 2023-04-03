@@ -914,8 +914,8 @@ export default function America({ partsposts, posts }) {
                     rel="noopener noreferrer"
                     target="_newtab"
                     passHref
-                  >
-                    {suggestion}{' '}
+                  ><a>{suggestion}</a>
+
                   </Link>
                 </div>
               ))}{' '}

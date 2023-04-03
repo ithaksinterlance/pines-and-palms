@@ -610,7 +610,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                   &nbsp;
                   <Link href={`/terms-and-condition`} target="_newtab">
                     <a className="underline">Terms and conditions</a>
-</Link>
+                  </Link>
                 </div>
 
                 <div className="flex float-right text-xs text-gray-400 ">
@@ -670,8 +670,10 @@ export default function City({ data, partspost, posts, makedatas }) {
                     key={p.id}
                     href={`https://emirates-car.com/search-by-cities-in-uae/${p.make}`}
                   >
-                    {p.make}
-                    {' spare parts in ' + data.city + ', '}
+                    <a>
+                      {p.make}
+                      {' spare parts in ' + data.city + ', '}
+                    </a>
                   </Link>
                 ))}
                 .<br />

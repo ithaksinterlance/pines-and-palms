@@ -436,7 +436,7 @@ export default function British({ partsposts, posts }) {
                         Mini
                       </p>
                     </main>
-</a>
+                  </a>
                 </Link>
               </div>
               <div>
@@ -835,7 +835,7 @@ export default function British({ partsposts, posts }) {
                     target="_newtab"
                     passHref
                   >
-                    {suggestion}{' '}
+                    <a>{suggestion}</a>
                   </Link>
                 </div>
               ))}{' '}

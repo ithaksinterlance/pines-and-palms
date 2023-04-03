@@ -890,8 +890,8 @@ export default function Japan({ partsposts, posts }) {
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
-                  >
-                    {suggestion}
+                  ><a>{suggestion}</a>
+
                   </Link>
                 </div>
               ))}{' '}
