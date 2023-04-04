@@ -86,11 +86,10 @@ export default function Dubai() {
             electrical and electronic parts, body parts and lights, AC parts and
             service and maintenance parts. You can order Honda spare parts by
             simply submitting the online inquiry form{' '}
-            <Link
-              href="https://emirates-car.com"
-              className="underline text-blue-500 hover:text-blue-900"
-            >
-              here
+            <Link href="https://emirates-car.com">
+              <a className="underline text-blue-500 hover:text-blue-900">
+                here
+              </a>
             </Link>
             . You can get callback or whatsapp chat or email after submitting
             your form inquiry.
@@ -403,7 +402,6 @@ export default function Dubai() {
                 <li>
                   <Link href="/search-by-part-name/Convertible%20Top%20Motor">
                     <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                      {' '}
                       Catalytic Converter
                     </a>
                   </Link>
@@ -605,9 +603,7 @@ export default function Dubai() {
             dealers will contact you back through the contact information you
             submitted. If one website didnt reply you, then other website will
             do. So there is plenty of website and options.{' '}
-            <Link
-              href="/"
-            >
+            <Link href="/">
               <a className="text-blue-500 hover:text-blue-900 underline">
                 Emirates-car.com
               </a>

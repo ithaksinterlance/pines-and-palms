@@ -324,72 +324,83 @@ export default function HondaParts() {
 
         <div className="grid grid-cols-5 xs:grid-cols-1 gap-3 mx-auto p-5 border-2 border-gray-500">
           <div>
-            <Link
-              href="/honda-parts/dubai"
-              title="honda spare parts dubai sheikh zayed road"
-              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-            >
-              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-              DUBAI
+            <Link href="/honda-parts/dubai">
+              <a
+                title="honda spare parts dubai sheikh zayed road"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                DUBAI
+              </a>
             </Link>
           </div>
           <div>
             {' '}
-            <Link
-              href="/honda-parts/sharjah"
-              title="honda spare parts sharjah"
-              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-            >
-              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-              SHARJAH
+            <Link href="/honda-parts/sharjah">
+              <a
+                title="honda spare parts sharjah"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                SHARJAH
+              </a>
             </Link>
           </div>
           <div>
             {' '}
-            <Link
-              href="/honda-parts/ajman"
-              title="honda spare parts ajman"
-              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-            >
-              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;AJMAN
+            <Link href="/honda-parts/ajman">
+              <a
+                title="honda spare parts ajman"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                &nbsp;AJMAN
+              </a>
             </Link>
           </div>
           <div>
             {' '}
-            <Link
-              href="/honda-parts/ras-al-khaimah"
-              title="honda spare parts abu dhabi"
-              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-            >
-              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;RAS
-              AL KHAIMAH
+            <Link href="/honda-parts/ras-al-khaimah">
+              <a
+                title="honda spare parts abu dhabi"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;RAS
+                AL KHAIMAH
+              </a>
             </Link>
           </div>
           <div>
-            <Link
-              href="/honda-parts/al-quoz"
-              title="honda spare parts al quoz"
-              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-            >
-              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Al
-              QUOZ
+            <Link href="/honda-parts/al-quoz">
+              <a
+                title="honda spare parts al quoz"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Al
+                QUOZ
+              </a>
             </Link>
           </div>
           <div>
-            <Link
-              href="/honda-parts/abu-dhabi"
-              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-            >
-              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ABU
-              DHABI
+            <Link href="/honda-parts/abu-dhabi">
+              <a
+                title="honda spare parts abu dhabi"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ABU
+                DHABI
+              </a>
             </Link>
           </div>
           <div>
-            <Link
-              href="/honda-parts/deira"
-              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-            >
-              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;DEIRA
+            <Link href="/honda-parts/deira">
+              <a
+                title="honda spare parts deira"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                &nbsp;DEIRA
+              </a>
             </Link>
           </div>
         </div>
@@ -563,7 +574,6 @@ export default function HondaParts() {
               <li>
                 <Link href="/search-by-part-name/Convertible%20Top%20Motor">
                   <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    {' '}
                     Catalytic Converter
                   </a>
                 </Link>

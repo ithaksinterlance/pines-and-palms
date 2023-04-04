@@ -62,12 +62,13 @@ export default function Ajman() {
             Honda spare parts in Ajman - Buy Premium High Quality Used, Genuine,
             OEM and Aftermarket from Dubai to all over UAE and World from Dubai
           </h1>
-          <Link
-            href={`/search-by-cities-in-uae/Ajman`}
-            className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-            target="_newtab"
-          >
-            Inquire Now
+          <Link href={`/search-by-cities-in-uae/Ajman`}>
+            <a
+              className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+              target="_newtab"
+            >
+              Inquire Now
+            </a>
           </Link>
         </div>
       </div>
@@ -400,7 +401,6 @@ export default function Ajman() {
                 <li>
                   <Link href="/search-by-part-name/Convertible%20Top%20Motor">
                     <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                      {' '}
                       Catalytic Converter
                     </a>
                   </Link>
@@ -602,12 +602,10 @@ export default function Ajman() {
             dealers will contact you back through the contact information you
             submitted. If one website didnt reply you, then other website will
             do. So there is plenty of website and options.{' '}
-            <Link
-              href="/"
-              className="text-blue-500 hover:text-blue-900 underline
-    "
-            >
-              Emirates-car.com
+            <Link href="/">
+              <a className="text-blue-500 hover:text-blue-900 underline">
+                Emirates-car.com
+              </a>
             </Link>{' '}
             is one such website which accept online inquiries. It deals with
             parts and accessories for honda accord, Honda civic and other honda

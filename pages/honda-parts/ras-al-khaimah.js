@@ -413,7 +413,6 @@ export default function RasAlKhaimah() {
                   <li>
                     <Link href="/search-by-part-name/Convertible%20Top%20Motor">
                       <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        {' '}
                         Catalytic Converter
                       </a>
                     </Link>
@@ -615,13 +614,11 @@ export default function RasAlKhaimah() {
               and dealers will contact you back through the contact information
               you submitted. If one website didnt reply you, then other website
               will do. So there is plenty of website and options.{' '}
-              <Link
-                href="/"
-                className="text-blue-500 hover:text-blue-900 underline
-          "
-              >
-                Emirates-car.com
-              </Link>{' '}
+              <Link href="/">
+                <a className="text-blue-500 hover:text-blue-900 underline">
+                  Emirates-car.com
+                </a>
+              </Link>
               is one such website which accept online inquiries. It deals with
               parts and accessories for honda accord, Honda civic and other
               honda models, Infiniti models, BMW models, Audi models and many

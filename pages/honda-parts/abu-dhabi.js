@@ -65,12 +65,13 @@ export default function AbuDhabi() {
             Honda Car Parts in Mussafah, Abu Dhabi Online for German, American,
             Japan, Korean and more models
           </h1>
-          <Link
-            href={`/search-by-cities-in-uae/Mussafah`}
-            className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-            target="_newtab"
-          >
-            Inquire Now
+          <Link href={`/search-by-cities-in-uae/Mussafah`}>
+            <a
+              className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+              target="_newtab"
+            >
+              Inquire Now
+            </a>
           </Link>
         </div>
       </div>
@@ -86,11 +87,10 @@ export default function AbuDhabi() {
             electrical and electronic parts, body parts and lights, AC parts and
             service and mainatenance parts. You can order Honda spare parts by
             simply submitting the online inquiry form{' '}
-            <Link
-              href="https://emirates-car.com"
-              className="underline text-blue-500 hover:text-blue-900"
-            >
-              here
+            <Link href="https://emirates-car.com">
+              <a className="underline text-blue-500 hover:text-blue-900">
+                here
+              </a>
             </Link>
             . You can get callback or whatsapp chat or email after submitting
             your form inquiry.
@@ -404,7 +404,6 @@ export default function AbuDhabi() {
                 <li>
                   <Link href="/search-by-part-name/Convertible%20Top%20Motor">
                     <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                      {' '}
                       Catalytic Converter
                     </a>
                   </Link>
@@ -606,12 +605,10 @@ export default function AbuDhabi() {
             dealers will contact you back through the contact information you
             submitted. If one website didnt reply you, then other website will
             do. So there is plenty of website and options.{' '}
-            <Link
-              href="/"
-              className="text-blue-500 hover:text-blue-900 underline
-          "
-            >
-              Emirates-car.com
+            <Link href="/">
+              <a className="text-blue-500 hover:text-blue-900 underline">
+                Emirates-car.com
+              </a>
             </Link>{' '}
             is one such website which accept online inquiries. It deals with
             parts and accessories for honda accord, Honda civic and other honda
