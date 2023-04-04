@@ -833,18 +833,18 @@ export default function Car({
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
                     href={`/privacy-policy`}
-                    className="underline"
+
                     target="_newtab"
                   >
-                    <a>Privacy policy</a>
+                    <a className="underline">Privacy policy</a>
                   </Link>
                   &nbsp;
                   <Link
                     href={`/terms-and-condition`}
-                    className="underline"
+
                     target="_newtab"
                   >
-                    <a>Terms and conditions</a>
+                    <a className="underline">Terms and conditions</a>
                   </Link>
                 </div>
 
