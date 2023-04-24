@@ -105,9 +105,8 @@ function MyApp({ Component, pageProps }) {
         async
       ></Script>
 
-      <Script
-        id="myscript4"
-        type="text/javascript" // eslint-disable-next-line react/no-danger
+      <script
+        type="text/javascript"
         dangerouslySetInnerHTML={{
           __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -121,7 +120,7 @@ function MyApp({ Component, pageProps }) {
               })();
               `
         }}
-      ></Script>
+      ></script>
 
       <Component {...pageProps}/>
     </>
