@@ -356,12 +356,12 @@ export default function Make({ car, cities, posts, pos }) {
             </p>
             <article>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {car.map(post => (
-                  <div key={post.id}>
+                {car.map((post,i) => (
+                  <div key={i}>
                     <Link
                       href={`/search-by-make/[make]`}
                       as={`/search-by-make/${post.make}`}
-                      
+
                     >
                       <a title={`${post.make} spare parts`}>
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
@@ -494,8 +494,8 @@ export default function Make({ car, cities, posts, pos }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map(m => (
-                          <option key={m}>{m}</option>
+                        {make.map((m,i) => (
+                          <option key={i}>{m}</option>
                         ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -530,8 +530,8 @@ export default function Make({ car, cities, posts, pos }) {
                         </option>
                         {pos
                           .filter(s => s.make === Make)
-                          .map(s => (
-                            <option key={s.id} value={s.model}>
+                          .map((s,i) => (
+                            <option key={i} value={s.model}>
                               {s.model}{' '}
                             </option>
                           ))}{' '}
@@ -702,11 +702,11 @@ export default function Make({ car, cities, posts, pos }) {
                   </a>
                 </Link>
                 . We deal in auto spare parts such as{' '}
-                {posts.map(p => (
+                {posts.map((p,i) => (
                   <Link
                     href={`/search-by-part-name/[parts]`}
                     as={`/search-by-part-name/${p.parts}`}
-                    key={p.id}
+                    key={i}
                   >
                     <a title={p.parts}>{p.parts + ' , '}</a>
                   </Link>
@@ -747,12 +747,12 @@ export default function Make({ car, cities, posts, pos }) {
             SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  font-sans">
-            {cities.map(post => (
-              <div key={post.id}>
+            {cities.map((post,i) => (
+              <div key={i}>
                 <Link
                   href={`/search-by-cities-in-uae/[city]`}
                   as={`/search-by-cities-in-uae/${post.city}`}
-                  
+
                 >
                   <a title={'car parts ' + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 h-full text-gray-500">

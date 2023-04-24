@@ -659,8 +659,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       <option value="" disabled>
                         Select your Make
                       </option>
-                      {mke.map(m => (
-                        <option key={m}>{m}</option>
+                      {mke.map((m,i) => (
+                        <option key={i}>{m}</option>
                       ))}{' '}
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -695,8 +695,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       </option>
                       {posts
                         .filter(s => s.make === Make)
-                        .map(s => (
-                          <option key={s.id} value={s.model}>
+                        .map((s,i) => (
+                          <option key={i} value={s.model}>
                             {s.model}{' '}
                           </option>
                         ))}{' '}
@@ -991,8 +991,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
             Visit to search parts you need.
           </div>
           <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-            {car.map(post => (
-              <div key={post.id}>
+            {car.map((post,i) => (
+              <div key={i}>
                 <Link
                   href={`/search-by-make/[make]/[model]`}
                   as={`/search-by-make/${post.make}/${post.model}`}
@@ -1138,8 +1138,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
 
             <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
-              {images.map(i => (
-                <div key={i.name} className="border-2 p-5 relative">
+              {images.map((i,k) => (
+                <div key={k} className="border-2 p-5 relative">
                   <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
                     Sale!
                   </sup>
@@ -1498,8 +1498,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
             List of Genuine and Aftermarket {make} spare parts in UAE
           </p>
           <div className="grid grid-cols-5 gap-2 s:grid-cols-1 xs:grid-cols-1 md:grid-cols-3 font-medium text-gray-500 p-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-            {partspost.map(p => (
-              <div key={p.id}>
+            {partspost.map((p,i) => (
+              <div key={i}>
                 <Link
                   href={`/search-by-part-name/[parts]`}
                   as={`/search-by-part-name/${p.parts}`}
@@ -1520,8 +1520,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
           !
         </div>
         <div className="grid grid-cols-4 xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-          {cities.map(post => (
-            <div key={post.id}>
+          {cities.map((post,i) => (
+            <div key={i}>
               <Link
                 href={`/search-by-cities-in-uae/[city]`}
                 as={`/search-by-cities-in-uae/${post.city}`}

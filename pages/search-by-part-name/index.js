@@ -326,8 +326,8 @@ export default function Make({ posts, cities, post }) {
                 </div>
               </div>
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 m-1 my-10">
-                {posts.map(post => (
-                  <div key={post.id}>
+                {posts.map((post,i) => (
+                  <div key={i}>
                     <Link
                       href={`/search-by-part-name/[parts]`}
                       as={`/search-by-part-name/${post.parts}`}
@@ -443,8 +443,8 @@ export default function Make({ posts, cities, post }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map(m => (
-                          <option key={m}>{m}</option>
+                        {make.map((m,i) => (
+                          <option key={i}>{m}</option>
                         ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -479,8 +479,8 @@ export default function Make({ posts, cities, post }) {
                         </option>
                         {post
                           .filter(s => s.make === Make)
-                          .map(s => (
-                            <option key={s.id} value={s.model}>
+                          .map((s,i) => (
+                            <option key={i} value={s.model}>
                               {s.model}{' '}
                             </option>
                           ))}{' '}
@@ -666,8 +666,8 @@ export default function Make({ posts, cities, post }) {
             SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  font-sans">
-            {cities.map(post => (
-              <div key={post.id}>
+            {cities.map((post,i) => (
+              <div key={i}>
                 <Link
                   href={`/search-by-cities-in-uae/[city]`}
                   as={`/search-by-cities-in-uae/${post.city}`}

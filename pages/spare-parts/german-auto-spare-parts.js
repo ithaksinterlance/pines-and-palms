@@ -556,8 +556,8 @@ export default function German({ partsposts, posts }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map(m => (
-                          <option key={m}>{m}</option>
+                        {make.map((m,i) => (
+                          <option key={i}>{m}</option>
                         ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -592,8 +592,8 @@ export default function German({ partsposts, posts }) {
                         </option>
                         {posts
                           .filter(s => s.make === Make)
-                          .map(s => (
-                            <option key={s.id} value={s.model}>
+                          .map((s,i) => (
+                            <option key={i} value={s.model}>
                               {s.model}{' '}
                             </option>
                           ))}{' '}
@@ -791,8 +791,8 @@ export default function German({ partsposts, posts }) {
         </div>
       </div>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-        {partsposts.map(post => (
-          <div key={post.id}>
+        {partsposts.map((post,i) => (
+          <div key={i}>
             <Link
               href={`search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/${post.parts}`}

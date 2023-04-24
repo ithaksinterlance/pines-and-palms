@@ -577,8 +577,8 @@ export default function Parts({ data, cities, posts }) {
                 SEARCH BY MAKE
               </div>
               <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
-                {posts.map(post => (
-                  <div key={post.id}>
+                {posts.map((post,i) => (
+                  <div key={i}>
                     <Link
                       href={`/search-by-make/[make]`}
                       as={`/search-by-make/${post.make}`}
@@ -654,8 +654,8 @@ export default function Parts({ data, cities, posts }) {
             SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
           <div className="xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 2xs:w-full s:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 px-5 s:px-3">
-            {cities.map(post => (
-              <div key={post.id}>
+            {cities.map((post,i) => (
+              <div key={i}>
                 <Link
                   href={`/search-by-cities-in-uae/[city]'}`}
                   as={`/search-by-cities-in-uae/${post.city}`}

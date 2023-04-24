@@ -868,8 +868,8 @@ export default function Car({
                     Spare parts for All {make} Models:
                   </h3>
                   <div className="grid grid-cols-4 xs:grid xs:grid-cols-1  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 ">
-                    {uniqueMakeArray.map(post => (
-                      <div key={post.id}>
+                    {uniqueMakeArray.map((post,i) => (
+                      <div key={i}>
                         <Link
                           href={`/search-by-make/[make]/[model]`}
                           as={`${'/search-by-make/' +
@@ -916,8 +916,8 @@ export default function Car({
                   WE ALSO DEAL IN OTHER BRANDS
                 </p>
                 <div className="grid grid-cols-12 md:grid md:grid-cols-7 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 mx-5 2xs:mx-4 md:mx-5 my-10">
-                  {makeArray.map(p => (
-                    <div key={p.id}>
+                  {makeArray.map((p,i) => (
+                    <div key={i}>
                       <Link
                         href={`/search-by-make/[make]`}
                         as={`/search-by-make/${p.make}`}
@@ -1138,8 +1138,8 @@ export default function Car({
               Special Deals on the following parts for {make} {model}
             </p>
             <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
-              {images.map(i => (
-                <div key={i.name} className="border-2 p-5 relative">
+              {images.map((i,k) => (
+                <div key={k} className="border-2 p-5 relative">
                   <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
                     Sale!
                   </sup>
@@ -1179,8 +1179,8 @@ export default function Car({
               <div className="xs:grid xs:grid-cols-1 text-gray-900 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
                 SEARCH BY PART NAME
               </div>
-              {partspost.map(post => (
-                <div key={post.id}>
+              {partspost.map((post,i) => (
+                <div key={i}>
                   <Link
                     href={`/search-by-part-name/[parts]`}
                     as={`/search-by-part-name/${post.parts}`}

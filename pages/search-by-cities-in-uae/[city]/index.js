@@ -433,8 +433,8 @@ export default function City({ data, partspost, posts, makedatas }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map(m => (
-                          <option key={m}>{m}</option>
+                        {make.map((m,i) => (
+                          <option key={i}>{m}</option>
                         ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -469,8 +469,8 @@ export default function City({ data, partspost, posts, makedatas }) {
                         </option>
                         {posts
                           .filter(s => s.make === Make)
-                          .map(s => (
-                            <option key={s.id} value={s.model}>
+                          .map((s,i) => (
+                            <option key={i} value={s.model}>
                               {s.model}{' '}
                             </option>
                           ))}{' '}
@@ -665,9 +665,9 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </a>
                 </Link>
                 . Contact us for any inquiry. We also deal in brands such as{' '}
-                {makedatas.map(p => (
+                {makedatas.map((p,i) => (
                   <Link
-                    key={p.id}
+                    key={i}
                     href={`https://emirates-car.com/search-by-cities-in-uae/${p.make}`}
                   >
                     <a>
@@ -708,8 +708,8 @@ export default function City({ data, partspost, posts, makedatas }) {
               SEARCH BY MAKE
             </h1>
             <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
-              {makedatas.map(makedata => (
-                <div key={makedata.id}>
+              {makedatas.map((makedata,i) => (
+                <div key={i}>
                   <Link
                     href={`/search-by-make/[make]`}
                     as={`/search-by-make/${makedata.make}`}
@@ -746,8 +746,8 @@ export default function City({ data, partspost, posts, makedatas }) {
             SEARCH BY PART NAME
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 sm:mt-5 lg:mx-2 ">
-            {partspost.map(post => (
-              <div key={post.id}>
+            {partspost.map((post,i) => (
+              <div key={i}>
                 <Link
                   href={`/search-by-part-name/[parts]`}
                   as={`/search-by-part-name/${post.parts}`}

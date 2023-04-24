@@ -1574,8 +1574,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map(m => (
-                          <option key={m}>{m}</option>
+                        {make.map((m,i) => (
+                          <option key={i}>{m}</option>
                         ))}{' '}
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -1613,8 +1613,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
                         </option>
                         {forms
                           .filter(s => s.make === Make)
-                          .map(s => (
-                            <option key={s.id} value={s.model}>
+                          .map((s,i) => (
+                            <option key={i} value={s.model}>
                               {s.model}{' '}
                             </option>
                           ))}{' '}
@@ -1834,7 +1834,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             and Our team will get back to you with best price quote through
             whatsapp.
           </p>
-          <p className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
+          <div className="text-lg text-gray-800 py-4 sm:mt-5 sm:text-base md:mt-5 md:text-sm lg:mx-0 lg:text-base xs:text-sm 2xs:text-sm s:text-sm xs:mx-2">
             You can search Your spare parts by:
             <ul>
               <li className="text-blue-700 hover:text-blue-900 list-none underline">
@@ -1855,7 +1855,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 </Link>
               </li>
             </ul>
-          </p>
+          </div>
         </div>
         <div className="mx-auto py-10">
           <Count />
@@ -2201,8 +2201,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         </div>
         <div className="grid grid-cols-9 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
-          {posts.map(post => (
-            <div key={post.id}>
+          {posts.map((post,i) => (
+            <div key={i}>
               <Link
                 href={`/search-by-make/[make]`}
                 as={`/search-by-make/${post.make}`}
@@ -2265,8 +2265,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         </div>
         <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-          {cities.map(post => (
-            <div key={post.id}>
+          {cities.map((post,i) => (
+            <div key={i}>
               <Link
                 href="/search-by-cities-in-uae/[city]"
                 as={`${'/search-by-cities-in-uae/' + post.city}`}
@@ -2319,8 +2319,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
         </div>
         <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-          {partsposts.map(post => (
-            <div key={post.id}>
+          {partsposts.map((post,i) => (
+            <div key={i}>
               <Link
                 href={`/search-by-part-name/[parts]`}
                 as={`/search-by-part-name/${post.parts}`}
@@ -2601,8 +2601,8 @@ export default function Home({ forms, partsposts, posts, cities }) {
             Auto spare parts
           </p>
           <div className="grid grid-cols-10 md:grid-cols-7 xs:hidden sm:hidden 2xs:hidden p-3">
-            {posts.map(post => (
-              <div key={post.id}>
+            {posts.map((post,i) => (
+              <div key={i}>
                 <Link
                   href={`/search-by-make/[make]`}
                   as={'/search-by-make/' + post.make}

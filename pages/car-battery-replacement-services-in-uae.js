@@ -450,8 +450,8 @@ export default function CarBatteryDubai({ forms }) {
                   <option value="" disabled>
                     Select your Make
                   </option>
-                  {make.map(m => (
-                    <option key={m}>{m}</option>
+                  {make.map((m,i) => (
+                    <option key={i}>{m}</option>
                   ))}{' '}
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -486,8 +486,8 @@ export default function CarBatteryDubai({ forms }) {
                   </option>
                   {forms
                     .filter(s => s.make === Make)
-                    .map(s => (
-                      <option key={s.id} value={s.model}>
+                    .map((s,i) => (
+                      <option key={i} value={s.model}>
                         {s.model}{' '}
                       </option>
                     ))}{' '}

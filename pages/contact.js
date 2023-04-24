@@ -486,8 +486,8 @@ export default function Forms({ posts, pos, po }) {
                       <option value="" disabled>
                         Select your Make
                       </option>
-                      {make.map(m => (
-                        <option key={m}>{m}</option>
+                      {make.map((m,i) => (
+                        <option key={i}>{m}</option>
                       ))}
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -524,8 +524,8 @@ export default function Forms({ posts, pos, po }) {
                       </option>
                       {posts
                         .filter(s => s.make === Make)
-                        .map(s => (
-                          <option key={s.id} value={s.model}>
+                        .map((s,i) => (
+                          <option key={i} value={s.model}>
                             {s.model}
                           </option>
                         ))}
@@ -781,8 +781,8 @@ export default function Forms({ posts, pos, po }) {
             Auto spare parts
           </p>
           <div className="grid grid-cols-10 md:grid-cols-7 xs:hidden sm:hidden 2xs:hidden p-3">
-            {po.map(post => (
-              <div key={post.id}>
+            {po.map((post,i) => (
+              <div key={i}>
                 <Link
                   href={`/search-by-make/[make]`}
                   as={`/search-by-make/${post.make}`}
