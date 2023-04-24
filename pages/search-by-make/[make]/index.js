@@ -46,14 +46,12 @@ export default function Car({ car, cities, make, partspost, posts }) {
       alt: `${make} air filter`,
       link: 'https://emirates-car.com/get-in-touch'
     },
-
     {
       images: AirSuspension,
       name: `${make} Air Suspension`,
       alt: `${make} Air suspension`,
       link: 'https://emirates-car.com/get-in-touch'
     },
-
     {
       images: AxleAssembly,
       name: `${make} Axle`,
@@ -522,13 +520,13 @@ export default function Car({ car, cities, make, partspost, posts }) {
       <main className="d-flex justify-center  pt-10 xs:pt-5 mx-8">
         <article>
           <div>
-            <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center">
+            <h1 className="text-blue-600 text-4xl md:text-md lg:text-md font-extrabold  xs:text-base 2xs:text-xs text-center">
               Buy {make} Car Parts - Used, Genuine, OEM (Original parts) and
               Aftermarket {make} spare parts from Dubai Dealer to all over UAE
               and world Online - Body Parts, Performance Parts, Mechanical
               parts, Electronic parts, Engine parts and more..
             </h1>
-            <Link href={`/search-by-make/${make}/#myForm}`}>
+            <Link href={`/search-by-make/${make}#myForm`}>
               <a className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
                 Inquire Now
               </a>
@@ -587,6 +585,411 @@ export default function Car({ car, cities, make, partspost, posts }) {
               </div>
             </div>
           </div>
+
+          <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 md:grid md:grid-cols-1 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+            <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 text-red-600">
+              Want to Get Prices for {make} spare parts uae online? Submit your
+              inquiry here
+            </p>
+            <form
+              id="myForm"
+              className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+              method="POST"
+              onSubmit={handleSubmit}
+              target="hidden_iframe"
+            >
+              <div className="grid grid-cols-1 pt-3">
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                  htmlFor="model"
+                >
+                  Name
+                </label>
+                <div className="relative">
+                  <input
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    id="name"
+                    type="text"
+                    placeholder="Name"
+                    onChange={handleNameChange}
+                    value={Name}
+                    autoComplete="off"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
+                <div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="year"
+                  >
+                    Year
+                  </label>
+                  <div className="relative">
+                    <input
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="year"
+                      type="text"
+                      placeholder="Year"
+                      name="entry.902626710"
+                      onChange={handleYearChange}
+                      value={Year}
+                      autoComplete="off"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="make"
+                  >
+                    Make
+                  </label>
+                  <div className="relative">
+                    <select
+                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 xs:py-1 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="make"
+                      name="entry.741646505"
+                      required="required"
+                      onChange={handleMakeChange}
+                      value={Make}
+                    >
+                      <option value="" disabled>
+                        Select your Make
+                      </option>
+                      {mke.map(m => (
+                        <option key={m}>{m}</option>
+                      ))}{' '}
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg
+                        className="fill-current h-4 w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="model"
+                  >
+                    Model
+                  </label>
+                  <div className="relative">
+                    <select
+                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      id="model"
+                      name="entry.402947466"
+                      required
+                      onChange={handleModelChange}
+                      value={Model}
+                    >
+                      <option value="" disabled>
+                        Select your Model
+                      </option>
+                      {posts
+                        .filter(s => s.make === Make)
+                        .map(s => (
+                          <option key={s.id} value={s.model}>
+                            {s.model}{' '}
+                          </option>
+                        ))}{' '}
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg
+                        className="fill-current h-4 w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
+                <div className="flex flex-wrap -mx-3 mb-2">
+                  <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                    <label
+                      htmlFor="Code"
+                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    >
+                      CODE
+                    </label>
+                    <input
+                      id="Code"
+                      name="entry.44547744"
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                      type="text"
+                      placeholder="Eg. +971, +27 ..."
+                      onChange={handleCodeChange}
+                      value={Code}
+                      required
+                    />
+                  </div>
+                  <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
+                    <label
+                      htmlFor="whatsappno"
+                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    >
+                      WhatsApp no
+                    </label>
+                    <input
+                      id="whatsappno"
+                      name="entry.902626710"
+                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
+                      type="text"
+                      placeholder="WhatsApp No"
+                      onChange={handleWhatsAppNoChange}
+                      value={Whatsappno}
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="city"
+                  >
+                    Location
+                  </label>
+                  <input
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    id="city"
+                    type="text"
+                    placeholder="(Area, Emirates) or (City, Country)"
+                    onChange={handleAddressChange}
+                    value={Address}
+                    autoComplete="off"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="email"
+                  >
+                    Email(Optional)
+                  </label>
+                  <input
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    id="email"
+                    type="text"
+                    placeholder="Mail ID"
+                    onChange={handleEmailChange}
+                    value={Email}
+                    autoComplete="off"
+                    name="entry.113755516"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-1 pt-3">
+                <div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
+                    htmlFor="partname"
+                  >
+                    PART NAME
+                  </label>
+                  <textarea
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
+                    id="partname"
+                    type="text"
+                    placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
+                    rows={5}
+                    name="entry.1660104041"
+                    onChange={e => onPartFormChange(e.target.value)}
+                    value={text}
+                    autoComplete="off"
+                    required
+                  />{' '}
+                  {suggestion &&
+                    suggestion.map((suggestion, i) => (
+                      <div
+                        key={i}
+                        className="cursor-pointer border-gray-400 p-4"
+                        onClick={() => onSuggestionHandler(suggestion)}
+                      >
+                        {suggestion}{' '}
+                      </div>
+                    ))}{' '}
+                </div>
+              </div>
+              <div className="grid grid-cols-1 pt-3">
+                <button
+                  type="submit"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl xs:text-xs"
+                >
+                  Submit
+                </button>
+              </div>
+              <div className="flex float-left text-xs text-gray-400">
+                <Link href={`/privacy-policy}`} target="_newtab">
+                  <a className="underline">Privacy policy</a>
+                </Link>
+                &nbsp;
+                <Link href={`/terms-and-condition`} target="_newtab">
+                  <a className="underline">Terms and conditions</a>
+                </Link>
+              </div>
+
+              <div className="flex float-right text-xs text-gray-400 ">
+                100% secure and trusted
+              </div>
+            </form>
+            <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+              <Social />
+              <div>
+                <span>
+                  <Link href={`/search-by-part-name`}>
+                    <a className="underline hover:text-blue-500 xs:text-sm">
+                      {' '}
+                      SEARCH BY PART NAME
+                    </a>
+                  </Link>{' '}
+                  &nbsp;|
+                </span>
+                <span>
+                  <Link href={`/search-by-cities-in-uae`}>
+                    <a className="underline hover:text-blue-500 xs:text-sm">
+                      SEARCH BY CITY
+                    </a>
+                  </Link>{' '}
+                  &nbsp;|
+                </span>
+                <span>
+                  <Link href={`/search-by-make`}>
+                    <a className="underline hover:text-blue-500 xs:text-sm">
+                      SEARCH BY MAKE
+                    </a>
+                  </Link>{' '}
+                  &nbsp;
+                </span>
+              </div>
+            </div>
+          </div>
+          <h3
+            className="text-3xl font-extrabold mx-auto my-5"
+            id="oemvsaftermarket1"
+          >
+            Why choose {make} genuine parts ?
+          </h3>
+          <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
+            <li>
+              Aftermarket parts are not regularized or standardized because it
+              is manufactured as a duplicate to genuine parts.
+            </li>
+            <li>Genuine parts are best in quality than aftermarket parts. </li>
+            <li>
+              Genuine parts have warranty unlike aftermarket parts which has no
+              Warranty
+            </li>
+          </ol>
+          <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+            {make} Genuine parts are better to buy for many reasons:
+          </p>
+          <p className="text-xl font-mono text-gray-700 mx-auto">
+            However, if you weigh your pros and cons and which kind of parts you
+            really need, you can come to the best conclusion yourself. And we
+            can serve you with both kind of parts.
+          </p>
+          <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
+            Availability of {make} parts in UAE:
+          </p>
+          <h3
+            className="text-3xl font-extrabold mx-auto my-5"
+            id="oemvsaftermarket"
+          >
+            Why choose {make} aftermarket parts ?
+          </h3>
+          <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+            {make} aftermarket parts are better to buy for many reasons:
+          </p>
+          <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
+            <li>It is more affordable than genuine parts</li>
+            <li>Some genuine parts are similar to genuine parts itself.</li>
+            <li>
+              It is readily available because it is equivalently manufactured to
+              genuine parts.
+            </li>
+            <li>
+              Aftermarket parts can have more manufacturers than genuine parts
+              which can be only from one main manufacturer
+            </li>
+          </ol>
+          <div>
+            <p className="text-3xl font-extrabold mx-auto my-5">
+              5 ways you can find parts for your car.
+            </p>
+            There are 5 ways you can try finding spare parts for your car.
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              Traditional way its pros and cons
+            </p>
+            You find a spare parts shop nearby and go and purchase and the work
+            is done. In this case, the pros is that you find nearby shop to have
+            similar brands you have and thats it you purchase it with ease. But
+            the cons is when you don't find the nearby shop to have the car
+            brand which you are using. There are shop who only deal with certain
+            parts like the shop A sells only in honda, Mazda, BMW and shop B
+            sells only Audi, Lincoln and Ferrari. So to see for next option, you
+            can opt for shopping from Giant E-commerce company like Amazon,
+            EBay, Flipkart etc.
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              Giant E-commerce Company its pros and cons:
+            </p>
+            If you don't find spare parts nearby your house location, generally
+            we move on to search on internet. You search for top companies
+            selling spare parts online and you end up in giant e-commerce
+            company like Amazon, Flipkart,Ebay etc. Now you see the review of
+            person who has already ordered spare parts. Most of the reviews says
+            the parts were broken. These giant company has a very big logistics
+            that they are vulnerable to be broken during or even get lost during
+            the check-in process. So it is not always safe to buy spare parts
+            from giant e-commerce company. Hence we see for other option which
+            is the Local dealers.
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              Local Dealers
+            </p>
+            Local dealers are known through other person like through friends
+            and family. Or he gives you his business card and he explains you
+            directly the car brands he deals with. However with the current
+            digital advancement, the local dealers are decreasing gradually. So
+            we move to the next option to search on online marketplace.
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              Online Marketplace (Only CONS!)
+            </p>
+            Through Online marketplace we find spare parts for our car easily.
+            But it also has lots of cons. If you search for very latest model
+            used spare parts, it will not be available on marketplace. In this
+            case you have to contact the car brand company directly. If you
+            search for very old model, it will not be available with most of the
+            car brands company itself. And also there are more spam issues
+            reported from those who purchase from small vendor marketplace and
+            also the larger companies. In this case you should go for Online
+            dealer website.
+            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              Online Dealer Website ONLY PROS!
+            </p>
+            Online dealers website is the easiest way to order spare parts. You
+            visit a bunch of site online and submit your inquiries therein and
+            dealers will contact you back through the contact information you
+            submitted. If one website didnt reply you, then other website will
+            do. So there is plenty of website and options. Emirates-car.com is
+            one such website which accept online inquiries. It deals with parts
+            and accessories for honda accord, Honda civic and{' '}
+            <Link href="/search-by-make/Honda">
+              <a className="text-blue-500 underline hover:text-blue-900">
+                other honda models
+              </a>
+            </Link>
+            , Infiniti models, BMW models, Audi models and many other brands.
+            Visit to search parts you need.
+          </div>
           <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
             {car.map(post => (
               <div key={post.id}>
@@ -620,293 +1023,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
         <div className="text-center">
           <HondaOfferButton />
         </div>
-        <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 md:grid md:grid-cols-1 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-          <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 text-red-600">
-            Want to Get Prices for {make} spare parts uae online? Submit your
-            inquiry here
-          </p>
-          <form
-            id="myForm"
-            className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
-            method="POST"
-            onSubmit={handleSubmit}
-            target="hidden_iframe"
-          >
-            <div className="grid grid-cols-1 pt-3">
-              <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                htmlFor="model"
-              >
-                Name
-              </label>
-              <div className="relative">
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="name"
-                  type="text"
-                  placeholder="Name"
-                  onChange={handleNameChange}
-                  value={Name}
-                  autoComplete="off"
-                  required
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-              <div>
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="year"
-                >
-                  Year
-                </label>
-                <div className="relative">
-                  <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="year"
-                    type="text"
-                    placeholder="Year"
-                    name="entry.902626710"
-                    onChange={handleYearChange}
-                    value={Year}
-                    autoComplete="off"
-                    required
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="make"
-                >
-                  Make
-                </label>
-                <div className="relative">
-                  <select
-                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 xs:py-1 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="make"
-                    name="entry.741646505"
-                    required="required"
-                    onChange={handleMakeChange}
-                    value={Make}
-                  >
-                    <option value="" disabled>
-                      Select your Make
-                    </option>
-                    {mke.map(m => (
-                      <option key={m}>{m}</option>
-                    ))}{' '}
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg
-                      className="fill-current h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="model"
-                >
-                  Model
-                </label>
-                <div className="relative">
-                  <select
-                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    id="model"
-                    name="entry.402947466"
-                    required
-                    onChange={handleModelChange}
-                    value={Model}
-                  >
-                    <option value="" disabled>
-                      Select your Model
-                    </option>
-                    {posts
-                      .filter(s => s.make === Make)
-                      .map(s => (
-                        <option key={s.id} value={s.model}>
-                          {s.model}{' '}
-                        </option>
-                      ))}{' '}
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg
-                      className="fill-current h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
-              <div className="flex flex-wrap -mx-3 mb-2">
-                <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                  <label
-                    htmlFor="Code"
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  >
-                    CODE
-                  </label>
-                  <input
-                    id="Code"
-                    name="entry.44547744"
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                    type="text"
-                    placeholder="Eg. +971, +27 ..."
-                    onChange={handleCodeChange}
-                    value={Code}
-                    required
-                  />
-                </div>
-                <div className="w-3/5 px-3 mb-6 xs:mb-0 md:mb-0">
-                  <label
-                    htmlFor="whatsappno"
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  >
-                    WhatsApp no
-                  </label>
-                  <input
-                    id="whatsappno"
-                    name="entry.902626710"
-                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 xs:py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs "
-                    type="text"
-                    placeholder="WhatsApp No"
-                    onChange={handleWhatsAppNoChange}
-                    value={Whatsappno}
-                    required
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="city"
-                >
-                  Location
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="city"
-                  type="text"
-                  placeholder="(Area, Emirates) or (City, Country)"
-                  onChange={handleAddressChange}
-                  value={Address}
-                  autoComplete="off"
-                />
-              </div>
-              <div>
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="email"
-                >
-                  Email(Optional)
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="email"
-                  type="text"
-                  placeholder="Mail ID"
-                  onChange={handleEmailChange}
-                  value={Email}
-                  autoComplete="off"
-                  name="entry.113755516"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 pt-3">
-              <div>
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
-                  htmlFor="partname"
-                >
-                  PART NAME
-                </label>
-                <textarea
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 xs:py-1 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 xs:text-xs"
-                  id="partname"
-                  type="text"
-                  placeholder="Eg. AC Compressor, Radiator, Gearbox, Antenna, Door glass, Driving light..."
-                  rows={5}
-                  name="entry.1660104041"
-                  onChange={e => onPartFormChange(e.target.value)}
-                  value={text}
-                  autoComplete="off"
-                  required
-                />{' '}
-                {suggestion &&
-                  suggestion.map((suggestion, i) => (
-                    <div
-                      key={i}
-                      className="cursor-pointer border-gray-400 p-4"
-                      onClick={() => onSuggestionHandler(suggestion)}
-                    >
-                      {suggestion}{' '}
-                    </div>
-                  ))}{' '}
-              </div>
-            </div>
-            <div className="grid grid-cols-1 pt-3">
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl xs:text-xs"
-              >
-                Submit
-              </button>
-            </div>
-            <div className="flex float-left text-xs text-gray-400">
-              <Link href={`/privacy-policy}`} target="_newtab">
-                <a className="underline">Privacy policy</a>
-              </Link>
-              &nbsp;
-              <Link href={`/terms-and-condition`} target="_newtab">
-                <a className="underline">Terms and conditions</a>
-              </Link>
-            </div>
 
-            <div className="flex float-right text-xs text-gray-400 ">
-              100% secure and trusted
-            </div>
-          </form>
-          <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
-            <Social />
-            <div>
-              <span>
-                <Link href={`/search-by-part-name`}>
-                  <a className="underline hover:text-blue-500 xs:text-sm">
-                    {' '}
-                    SEARCH BY PART NAME
-                  </a>
-                </Link>{' '}
-                &nbsp;|
-              </span>
-              <span>
-                <Link href={`/search-by-cities-in-uae`}>
-                  <a className="underline hover:text-blue-500 xs:text-sm">
-                    SEARCH BY CITY
-                  </a>
-                </Link>{' '}
-                &nbsp;|
-              </span>
-              <span>
-                <Link href={`/search-by-make`}>
-                  <a className="underline hover:text-blue-500 xs:text-sm">
-                    SEARCH BY MAKE
-                  </a>
-                </Link>{' '}
-                &nbsp;
-              </span>
-            </div>
-          </div>
-        </div>
         <div className="text-xl font-mono text-gray-700 mx-auto xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5">
           Emirates-car.com is the online Dealers specialist in {make} spare
           parts running on roads of UAE. We find pleasure is finding the best

@@ -289,6 +289,9 @@ export default function HondaParts() {
             Warranty
           </li>
         </ol>
+        <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+          Honda Genuine parts are better to buy for many reasons:
+        </p>
         <p className="text-xl font-mono text-gray-700 mx-auto">
           However, if you weigh your pros and cons and which kind of parts you
           really need, you can come to the best conclusion yourself. And we can
@@ -318,9 +321,7 @@ export default function HondaParts() {
             which can be only from one main manufacturer
           </li>
         </ol>
-        <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-          Honda Genuine parts are better to buy for many reasons:
-        </p>
+
 
         <div className="grid grid-cols-5 xs:grid-cols-1 gap-3 mx-auto p-5 border-2 border-gray-500">
           <div>
