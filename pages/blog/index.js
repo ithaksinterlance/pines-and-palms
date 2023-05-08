@@ -38,7 +38,7 @@ export default function Blog({ posts }) {
                 {posts.map(post => (
                   <div key={post.TITLE}>
                     <Link href={`/blog/${post.TITLE}`}>
-                      <a>
+
                         <div className="py-3">
                           <div className="border border-gray-200 p-3 rounded-sm">
                             <div className="w-full bg-blue-200 h-80 rounded-xl text-white items-center text-center flex justify-center font-bold">
@@ -72,7 +72,7 @@ export default function Blog({ posts }) {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      
                     </Link>
                   </div>
                 ))}
@@ -81,7 +81,7 @@ export default function Blog({ posts }) {
                 </div>
                 <div className="grid grid-cols-2 gap-4 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 py-5">
                   <Link href={`/blog/Ferrari%20Portofino%20M`}>
-                    <a>
+
                       <div className="shadow-2xl rounded-sm">
                         <div className="flex">
                           <div className="w-1/2 bg-blue-300 flex items-center justify-center text-center">
@@ -100,10 +100,10 @@ export default function Blog({ posts }) {
                           </div>
                         </div>
                       </div>
-                    </a>
+                    
                   </Link>
                   <Link href={`/blog/Ferrari%20F8%20Spider%202022`}>
-                    <a>
+
                       <div className="shadow-2xl rounded-sm">
                         <div className="flex">
                           <div className="w-1/2 bg-purple-300 flex items-center justify-center text-center">
@@ -121,7 +121,7 @@ export default function Blog({ posts }) {
                           </div>
                         </div>
                       </div>
-                    </a>
+                    
                   </Link>
                 </div>
               </div>

@@ -256,101 +256,112 @@ export default function RasAlKhaimah() {
                 </p>
                 <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                   <li>
-                    <Link href="/search-by-part-name/Engine%20Assembly">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Engine Assembly
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Engine%20Assembly"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Engine Assembly
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Engine%20Block">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Engine Block
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Engine%20Block"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Engine Block
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Engine%20Mount">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Engine Mount
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Engine%20Mount"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Engine Mount
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Engine%20Block">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Engine Block
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Engine%20Block"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Engine Block
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Cylinder%20Head">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Cylinder Head
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Cylinder%20Head"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Cylinder Head
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Cylinder%20Block">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Cylinder Block
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Cylinder%20Block"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Cylinder Block
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Crankshaft">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Crankshaft
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Crankshaft"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Crankshaft
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Camshaft">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Camshaft
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Camshaft"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Camshaft
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Piston">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Piston
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Piston"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Piston
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Exhaust%20Manifold">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Exhaust Manifold
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Exhaust%20Manifold"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Exhaust Manifold
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Intake%20Manifold">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Intake Manifold
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Intake%20Manifold"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Intake Manifold
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Ignition%20Switch">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Ignition Switch
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Ignition%20Switch"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Ignition Switch
                     </Link>
                   </li>
                   <li>
                     <Link href="/search-by-part-name/Ignition%20Control%20Module">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Ignition Control Module
-                      </a>
+                      Ignition Control Module
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Transmission%20Control%20Module">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        TCM
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Transmission%20Control%20Module"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      TCM
                     </Link>
                   </li>
                 </ol>
@@ -362,73 +373,84 @@ export default function RasAlKhaimah() {
                 </p>
                 <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                   <li>
-                    <Link href="/search-by-part-name/Engine%20Assembly">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Engine
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Engine%20Assembly"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Engine
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Engine%20Assembly">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Battery
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Engine%20Assembly"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Battery
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Engine%20Assembly">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Alternator
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Engine%20Assembly"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Alternator
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Brake%20Pads">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Brake Pads
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Brake%20Pads"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Brake Pads
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Radiator">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Radiator
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Radiator"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Radiator
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Transmission%20Control%20Module">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Transmission
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Transmission%20Control%20Module"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Transmission
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Shock%20Absorber">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Shock Absorber
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Shock%20Absorber"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Shock Absorber
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Convertible%20Top%20Motor">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Catalytic Converter
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Convertible%20Top%20Motor"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      {' '}
+                      Catalytic Converter
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Power%20Steering%20Box">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Power Steering
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Power%20Steering%20Box"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Power Steering
                     </Link>
                   </li>
                   <li>
-                    <Link href="/get-in-touch">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Pump
-                      </a>
+                    <Link
+                      href="/get-in-touch"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Pump
                     </Link>
                   </li>
                 </ol>
@@ -440,38 +462,43 @@ export default function RasAlKhaimah() {
                 </p>
                 <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                   <li>
-                    <Link href="/search-by-part-name/Bonnet">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Bonnet
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Bonnet"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Bonnet
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Fender%20(Front)">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Fender
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Fender%20(Front)"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Fender
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Decklid">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Decklid
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Decklid"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Decklid
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Grille">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Grille
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Grille"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Grille
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Wheel">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Wheel
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Wheel"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Wheel
                     </Link>
                   </li>
                 </ol>
@@ -483,38 +510,43 @@ export default function RasAlKhaimah() {
                 </p>
                 <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                   <li>
-                    <Link href="/search-by-part-name/Spark%20Plug">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Spark Plug
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Spark%20Plug"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Spark Plug
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Alternator">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Alternator
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Alternator"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Alternator
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Battery">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Battery
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Battery"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Battery
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/Ignition%20Switch">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Ignition Switch
-                      </a>
+                    <Link
+                      href="/search-by-part-name/Ignition%20Switch"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Ignition Switch
                     </Link>
                   </li>
                   <li>
-                    <Link href="/get-in-touch">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        Many more...
-                      </a>
+                    <Link
+                      href="/get-in-touch"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      Many more...
                     </Link>
                   </li>
                 </ol>
@@ -526,31 +558,35 @@ export default function RasAlKhaimah() {
                 </p>
                 <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                   <li>
-                    <Link href="/search-by-part-name/AC%20Compressor">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        AC Compressor
-                      </a>
+                    <Link
+                      href="/search-by-part-name/AC%20Compressor"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      AC Compressor
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/AC%20Condenser">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        AC Condenser
-                      </a>
+                    <Link
+                      href="/search-by-part-name/AC%20Condenser"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      AC Condenser
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/AC%20Selector">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        AC Selector
-                      </a>
+                    <Link
+                      href="/search-by-part-name/AC%20Selector"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      AC Selector
                     </Link>
                   </li>
                   <li>
-                    <Link href="/search-by-part-name/AC%20Controls">
-                      <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                        AC Controls
-                      </a>
+                    <Link
+                      href="/search-by-part-name/AC%20Controls"
+                      className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                    >
+                      AC Controls
                     </Link>
                   </li>
                 </ol>

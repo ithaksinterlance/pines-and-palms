@@ -283,10 +283,11 @@ export default function CarBatteryDubai({ forms }) {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex lg:justify-start xs:pb-20 s:pb-20">
                 <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
-                  <Link href={`/#myForm`}>
-                    <a className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125">
-                      Order Now
-                    </a>
+                  <Link
+                    href={`/#myForm`}
+                    className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                  >
+                    Order Now
                   </Link>
                 </div>
               </div>
@@ -450,7 +451,7 @@ export default function CarBatteryDubai({ forms }) {
                   <option value="" disabled>
                     Select your Make
                   </option>
-                  {make.map((m,i) => (
+                  {make.map((m, i) => (
                     <option key={i}>{m}</option>
                   ))}{' '}
                 </select>
@@ -486,7 +487,7 @@ export default function CarBatteryDubai({ forms }) {
                   </option>
                   {forms
                     .filter(s => s.make === Make)
-                    .map((s,i) => (
+                    .map((s, i) => (
                       <option key={i} value={s.model}>
                         {s.model}{' '}
                       </option>
@@ -577,12 +578,20 @@ export default function CarBatteryDubai({ forms }) {
             </div>
           </div>
           <div className="flex float-left text-xs text-gray-400">
-            <Link href={`/privacy-policy`} target="_newtab">
-              <a className="underline">Privacy policy</a>
+            <Link
+              href={`/privacy-policy`}
+              target="_newtab"
+              className="underline"
+            >
+              Privacy policy
             </Link>
             &nbsp;
-            <Link href={`/terms-and-condition`} target="_newtab">
-              <a className="underline">Terms and conditions</a>
+            <Link
+              href={`/terms-and-condition`}
+              target="_newtab"
+              className="underline"
+            >
+              Terms and conditions
             </Link>
           </div>
 
@@ -593,11 +602,9 @@ export default function CarBatteryDubai({ forms }) {
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
           **Make not found above?{' '}
           <Link href={`/get-in-touch`} passHref>
-            <a>
-              <nobr className="text-blue-500 text-sm underline">
-                Get in touch with us {'>>'}**
-              </nobr>
-            </a>
+            <nobr className="text-blue-500 text-sm underline">
+              Get in touch with us {'>>'}**
+            </nobr>
           </Link>{' '}
         </div>
       </div>
@@ -607,26 +614,30 @@ export default function CarBatteryDubai({ forms }) {
         <div>
           &nbsp;
           <span>
-            <Link href={`/search-by-part-name`}>
-              <a className="underline xs:no-underline hover:text-blue-500">
-                SEARCH BY PART NAME
-              </a>
+            <Link
+              href={`/search-by-part-name`}
+              className="underline xs:no-underline hover:text-blue-500"
+            >
+              SEARCH BY PART NAME
             </Link>{' '}
           </span>
           | &nbsp;
           <span>
-            <Link href={`/search-by-cities-in-uae`} passHref>
-              <a className="underline xs:no-underline hover:text-blue-500">
-                SEARCH BY CITY
-              </a>
+            <Link
+              href={`/search-by-cities-in-uae`}
+              passHref
+              className="underline xs:no-underline hover:text-blue-500"
+            >
+              SEARCH BY CITY
             </Link>{' '}
           </span>
           | &nbsp;
           <span>
-            <Link href={`/search-by-make`}>
-              <a className="underline xs:no-underline hover:text-blue-500">
-                SEARCH BY MAKE
-              </a>
+            <Link
+              href={`/search-by-make`}
+              className="underline xs:no-underline hover:text-blue-500"
+            >
+              SEARCH BY MAKE
             </Link>{' '}
           </span>
         </div>

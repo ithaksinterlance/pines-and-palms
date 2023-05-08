@@ -36,13 +36,14 @@ export default class relatedpost extends Component {
               <Link
                 href={`https://www.facebook.com/emirates.auto.parts`}
                 passHref
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               >
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+
                   <FontAwesomeIcon
                     icon={faFacebook}
                     className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
                   />
-                </a>
+                
               </Link>
             </li>
             <li className="nav-item">
@@ -51,22 +52,26 @@ export default class relatedpost extends Component {
                 href={`https://www.instagram.com/emiratescar_parts/`}
                 passHref
               >
-                <a>
+
                   <FontAwesomeIcon
                     icon={faInstagram}
                     className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
                   />
-                </a>
+                
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`https://twitter.com/emiratescarpart`} passHref>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-blue-700 hover:opacity-75">
+              <Link
+                href={`https://twitter.com/emiratescarpart`}
+                passHref
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+
                   <FontAwesomeIcon
                     icon={faTwitter}
                     className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
                   />
-                </a>
+                
               </Link>
             </li>
           </ul>
@@ -78,12 +83,12 @@ export default class relatedpost extends Component {
                 href={`/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons`}
                 passHref
               >
-                <a>
+
                   5 ways you can buy car spare parts
                   <p className="text-gray-300 text-xs font-bold uppercase pt-2">
                     12 days ago - 10 min read
                   </p>
-                </a>
+                
               </Link>
             </li>
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
@@ -91,12 +96,12 @@ export default class relatedpost extends Component {
                 href={`/blog/How%20to%20Buy%20Auto%20Parts%20Online`}
                 passHref
               >
-                <a>
+
                   How to Buy Car Spare Parts Online
                   <p className="text-gray-300 text-xs font-bold uppercase pt-2">
                     5 days ago - 10 min read
                   </p>
-                </a>
+                
               </Link>
             </li>
           </ul>

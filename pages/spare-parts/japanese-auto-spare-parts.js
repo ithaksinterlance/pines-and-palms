@@ -292,7 +292,7 @@ export default function Japan({ partsposts, posts }) {
                   href={`https://emirates-car.com/search-by-make/Toyota`}
                   passHref
                 >
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -308,12 +308,12 @@ export default function Japan({ partsposts, posts }) {
                         Toyota
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Mitsubishi`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -329,12 +329,12 @@ export default function Japan({ partsposts, posts }) {
                         Mitsubishi
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Lexus`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -350,12 +350,12 @@ export default function Japan({ partsposts, posts }) {
                         Lexus
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Nissan`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -371,12 +371,12 @@ export default function Japan({ partsposts, posts }) {
                         Nissan
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Infiniti`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -392,12 +392,12 @@ export default function Japan({ partsposts, posts }) {
                         Infiniti
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Honda`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -413,12 +413,12 @@ export default function Japan({ partsposts, posts }) {
                         Honda
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Mazda`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -434,13 +434,13 @@ export default function Japan({ partsposts, posts }) {
                         Mazda
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
 
               <div>
                 <Link href={`/search-by-make/Subaru`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -456,12 +456,12 @@ export default function Japan({ partsposts, posts }) {
                         Subaru
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Suzuki`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -477,12 +477,12 @@ export default function Japan({ partsposts, posts }) {
                         Suzuki
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Daihatsu`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -498,12 +498,12 @@ export default function Japan({ partsposts, posts }) {
                         Daihatsu
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Isuzu`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -519,19 +519,19 @@ export default function Japan({ partsposts, posts }) {
                         Isuzu
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
               <Link href={`/get-in-touch`} passHref>
-                <a>
+
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
                     Get in touch with us {'>>'}**
                   </nobr>
-                </a>
+
               </Link>{' '}
             </div>
             <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
@@ -554,10 +554,11 @@ export default function Japan({ partsposts, posts }) {
               Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
               Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
               can check our catalogue at{' '}
-              <Link href={`https://emirates-car.com/search-by-part-name`}>
-                <a className="text-blue-400 underline">
-                  https://emirates-car.com/search-by-part-name
-                </a>
+              <Link
+                href={`https://emirates-car.com/search-by-part-name`}
+                className="text-blue-400 underline"
+              >
+                https://emirates-car.com/search-by-part-name
               </Link>
               . Submit your inquiry to us, our dealer will get back to you based
               on stock availability.
@@ -570,27 +571,29 @@ export default function Japan({ partsposts, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href={`/search-by-part-name`}>
-                      <a className="underline hover:text-blue-500 xs:text-sm">
-                        SEARCH BY PART NAME
-                      </a>
+                    <Link
+                      href={`/search-by-part-name`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY PART NAME
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-cities-in-uae`}>
-                      <a className="underline hover:text-blue-500 xs:text-sm">
-                        {' '}
-                        SEARCH BY CITY
-                      </a>
+                    <Link
+                      href={`/search-by-cities-in-uae`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                       SEARCH BY CITY
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-make`}>
-                      <a className="underline hover:text-blue-500 xs:text-sm">
-                        SEARCH BY MAKE
-                      </a>
+                    <Link
+                      href={`/search-by-make`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY MAKE
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -664,7 +667,7 @@ export default function Japan({ partsposts, posts }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map((m,i) => (
+                        {make.map((m, i) => (
                           <option key={i}>{m}</option>
                         ))}{' '}
                       </select>
@@ -700,7 +703,7 @@ export default function Japan({ partsposts, posts }) {
                         </option>
                         {posts
                           .filter(s => s.make === Make)
-                          .map((s,i) => (
+                          .map((s, i) => (
                             <option key={i} value={s.model}>
                               {s.model}{' '}
                             </option>
@@ -834,12 +837,20 @@ export default function Japan({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link href={`/privacy-policy`} target="_newtab">
-                    <a className="underline"> Privacy policy</a>
+                  <Link
+                    href={`/privacy-policy`}
+                    target="_newtab"
+                    className="underline"
+                  >
+                     Privacy policy
                   </Link>
                   &nbsp;
-                  <Link href={`/terms-and-condition`} target="_newtab">
-                    <a className="underline">Terms and conditions</a>
+                  <Link
+                    href={`/terms-and-condition`}
+                    target="_newtab"
+                    className="underline"
+                  >
+                    Terms and conditions
                   </Link>
                 </div>
 
@@ -890,8 +901,8 @@ export default function Japan({ partsposts, posts }) {
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
-                  ><a>{suggestion}</a>
-
+                  >
+                    {suggestion}
                   </Link>
                 </div>
               ))}{' '}
@@ -899,20 +910,19 @@ export default function Japan({ partsposts, posts }) {
         </div>
       </div>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-        {partsposts.map((post,i) => (
+        {partsposts.map((post, i) => (
           <div key={i}>
             <Link
               href={`/search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/ ${post.parts}`}
-              passHref
+              passHref title={post.parts + ' in uae'}
             >
-              <a title={post.parts + ' in uae'}>
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                     {post.parts.toUpperCase()}{' '}
                   </p>
                 </main>
-              </a>
+
             </Link>
           </div>
         ))}{' '}

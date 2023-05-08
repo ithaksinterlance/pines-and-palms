@@ -5,49 +5,49 @@ export default function Counter() {
     <div>
       <div className="grid grid-cols-4 text-center gap-2 xs:grid xs:grid-cols-2 xs:gap-1 2xs:text-sm 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 md:px-2 pt-10 xs:pt-5 mx-8 2xs:mx-5 s:mx-4 xs:mx-5">
         <div className="font-extrabold uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:shadow-none sm:shadow-none xs:text-xs text-center">
-          <h1 className="text-2xl text-blue-800 lg:text-base  font-semibold font-mono">
+          <p className="text-2xl text-blue-800 lg:text-base  font-semibold font-mono">
             <i className="fab fa-wpforms fa-2x"></i>
-          </h1>
+          </p>
           <p className="text-xl lg:text-base sm:text-xs xs:text-xs s:text-xs md:text-sm font-semibold font-mono py-3">
             STEP-1
           </p>
-          <h1 className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold p-1">
+          <p className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold p-1">
             Send Inquiries
-          </h1>
+          </p>
         </div>
         <div className="font-extrabold  uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:shadow-none sm:shadow-none xs:text-xs text-center">
-          <h1 className="text-2xl text-blue-800 lg:text-base sm:text-xs md:text-sm font-extrabold">
+          <p className="text-2xl text-blue-800 lg:text-base sm:text-xs md:text-sm font-extrabold">
             <i className="fas fa-handshake fa-2x"></i>{" "}
-          </h1>
+          </p>
 
           <p className="text-xl lg:text-base sm:text-xs xs:text-xs s:text-xs md:text-sm font-semibold font-mono py-3">
           STEP-2
           </p>
-          <h1 className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
+          <p className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
             Get Quoted and Dealt
-          </h1>
+          </p>
         </div>
         <div className="font-extrabold uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:shadow-none sm:shadow-none xs:text-xs text-center">
-          <h1 className="text-2xl text-blue-800 lg:text-base  font-semibold font-mono">
+          <p className="text-2xl text-blue-800 lg:text-base  font-semibold font-mono">
             <i className="fas fa-truck fa-2x"></i>
-          </h1>
+          </p>
           <p className="text-xl lg:text-base sm:text-xs md:text-sm xs:text-xs s:text-xs font-semibold font-mono py-3">
             STEP-3
           </p>
-          <h1 className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
+          <p className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
             Get parts Delivered
-          </h1>
+          </p>
         </div>
         <div className="font-extrabold uppercase bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-xl lg:mx-6 py-2 shadow-2xl xs:shadow-none sm:shadow-none xs:text-xs text-center">
-          <h1 className="text-2xl text-blue-800 lg:text-base font-semibold">
+          <p className="text-2xl text-blue-800 lg:text-base font-semibold">
             <i className="fas fa-smile fa-2x"></i>{" "}
-          </h1>
+          </p>
           <p className="text-xl lg:text-base sm:text-xs md:text-sm xs:text-xs s:text-xs font-semibold font-mono py-3">
           STEP-4
           </p>
-          <h1 className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
+          <p className="text-xl lg:text-xl sm:text-base xs:text-base s:text-base 2xs:text-base md:text-sm font-extrabold">
             Happy Customers !
-          </h1>
+          </p>
         </div>
       </div>
     </div>

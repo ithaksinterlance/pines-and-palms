@@ -526,10 +526,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
               and world Online - Body Parts, Performance Parts, Mechanical
               parts, Electronic parts, Engine parts and more..
             </h1>
-            <Link href={`/search-by-make/${make}#myForm`}>
-              <a className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
+            <Link href={`/search-by-make/${make}#myForm`} className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
                 Inquire Now
-              </a>
+
             </Link>
           </div>
 
@@ -575,9 +574,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
                         <Link
                           href={`https://emirates-car.com/search-by-make/${make}/${recommend}`}
                           rel="noopener noreferrer"
-                          target="_newtab"
+                          target="_newtab" title={`${recommend}`}
                         >
-                          <a title={`${recommend}`}>{recommend}</a>
+                         {recommend}
                         </Link>
                       </div>
                     ))}
@@ -659,7 +658,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       <option value="" disabled>
                         Select your Make
                       </option>
-                      {mke.map((m,i) => (
+                      {mke.map((m, i) => (
                         <option key={i}>{m}</option>
                       ))}{' '}
                     </select>
@@ -695,7 +694,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                       </option>
                       {posts
                         .filter(s => s.make === Make)
-                        .map((s,i) => (
+                        .map((s, i) => (
                           <option key={i} value={s.model}>
                             {s.model}{' '}
                           </option>
@@ -829,12 +828,12 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </button>
               </div>
               <div className="flex float-left text-xs text-gray-400">
-                <Link href={`/privacy-policy}`} target="_newtab">
-                  <a className="underline">Privacy policy</a>
+                <Link href={`/privacy-policy}`} target="_newtab" className="underline">
+                  Privacy policy
                 </Link>
                 &nbsp;
-                <Link href={`/terms-and-condition`} target="_newtab">
-                  <a className="underline">Terms and conditions</a>
+                <Link href={`/terms-and-condition`} target="_newtab" className="underline">
+                  Terms and conditions
                 </Link>
               </div>
 
@@ -846,27 +845,24 @@ export default function Car({ car, cities, make, partspost, posts }) {
               <Social />
               <div>
                 <span>
-                  <Link href={`/search-by-part-name`}>
-                    <a className="underline hover:text-blue-500 xs:text-sm">
+                  <Link href={`/search-by-part-name`} className="underline hover:text-blue-500 xs:text-sm">
                       {' '}
                       SEARCH BY PART NAME
-                    </a>
+
                   </Link>{' '}
                   &nbsp;|
                 </span>
                 <span>
-                  <Link href={`/search-by-cities-in-uae`}>
-                    <a className="underline hover:text-blue-500 xs:text-sm">
+                  <Link href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500 xs:text-sm">
                       SEARCH BY CITY
-                    </a>
+
                   </Link>{' '}
                   &nbsp;|
                 </span>
                 <span>
-                  <Link href={`/search-by-make`}>
-                    <a className="underline hover:text-blue-500 xs:text-sm">
+                  <Link href={`/search-by-make`} className="underline hover:text-blue-500 xs:text-sm">
                       SEARCH BY MAKE
-                    </a>
+
                   </Link>{' '}
                   &nbsp;
                 </span>
@@ -982,28 +978,26 @@ export default function Car({ car, cities, make, partspost, posts }) {
             do. So there is plenty of website and options. Emirates-car.com is
             one such website which accept online inquiries. It deals with parts
             and accessories for honda accord, Honda civic and{' '}
-            <Link href="/search-by-make/Honda">
-              <a className="text-blue-500 underline hover:text-blue-900">
+            <Link href="/search-by-make/Honda" className="text-blue-500 underline hover:text-blue-900">
                 other honda models
-              </a>
+
             </Link>
             , Infiniti models, BMW models, Audi models and many other brands.
             Visit to search parts you need.
           </div>
           <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-            {car.map((post,i) => (
+            {car.map((post, i) => (
               <div key={i}>
                 <Link
                   href={`/search-by-make/[make]/[model]`}
-                  as={`/search-by-make/${post.make}/${post.model}`}
+                  as={`/search-by-make/${post.make}/${post.model}`} title={post.make + post.model + ' spare parts'}
                 >
-                  <a title={post.make + post.model + ' spare parts'}>
                     <main className="border border-blue-800 h-full p-3 ">
                       <p className="text-center text-lg xs:text-xl xs:text-center font-mono text-blue-800 underline hover:text-gray-800 focus:text-gray-800 font-bold ">
                         {make + ' ' + post.model.replace('%2F', '/') + ' parts'}{' '}
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
             ))}{' '}
@@ -1012,12 +1006,10 @@ export default function Car({ car, cities, make, partspost, posts }) {
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs py-5">
           **Model not found above?
           <Link href={`/get-in-touch`}>
-            <a>
-              <nobr className="text-blue-500 text-sm underline">
-                {' '}
-                Get in touch with us {'>>'}**
-              </nobr>
-            </a>
+            <nobr className="text-blue-500 text-sm underline">
+              {' '}
+              Get in touch with us {'>>'}**
+            </nobr>
           </Link>{' '}
         </div>
         <div className="text-center">
@@ -1034,13 +1026,12 @@ export default function Car({ car, cities, make, partspost, posts }) {
           parts, electrical and electronic parts, body parts and lights, AC
           parts and service and maintenance parts. You can order {make} spare
           parts by simply submitting the online inquiry form{' '}
-          <Link href="https://emirates-car.com">
-            <a
-              className="underline text-blue-500 hover:text-blue-900"
-              title="auto spare parts"
-            >
-              here
-            </a>
+          <Link
+            href="https://emirates-car.com"
+            className="underline text-blue-500 hover:text-blue-900"
+            title="auto spare parts"
+          >
+            here
           </Link>
           . You can get callback or whatsapp chat or email after submitting your
           form inquiry.
@@ -1050,83 +1041,87 @@ export default function Car({ car, cities, make, partspost, posts }) {
         </p>
         <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
           <div>
-            <Link href="/search-by-cities-in-uae/Dubai">
-              <a
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                title={make + ' spare parts dubai'}
-              >
+            <Link
+              href="/search-by-cities-in-uae/Dubai"
+              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              title={make + ' spare parts dubai'}
+            >
+
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                 {make} Parts Dubai
-              </a>
+
             </Link>
           </div>
           <div>
             {' '}
-            <Link href="/search-by-cities-in-uae/Sharjah">
-              <a
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                title={make + ' spare parts dubai'}
-              >
+            <Link
+              href="/search-by-cities-in-uae/Sharjah"
+              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              title={make + ' spare parts dubai'}
+            >
+
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                 {make} Parts Sharjah
-              </a>
+
             </Link>
           </div>
           <div>
             {' '}
-            <Link href="/search-by-cities-in-uae/Ajman">
-              <a
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                title={make + ' spare parts ajman'}
-              >
+            <Link
+              href="/search-by-cities-in-uae/Ajman"
+              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              title={make + ' spare parts ajman'}
+            >
+
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Ajman
-              </a>
+
             </Link>
           </div>
           <div>
             {' '}
-            <Link href="/search-by-cities-in-uae/Ras%20al%20Khaimah">
-              <a
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                title={make + ' spare parts ras al khaimah'}
-              >
+            <Link
+              href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
+              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              title={make + ' spare parts ras al khaimah'}
+            >
+
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Ras Al Khaimah
-              </a>
+
             </Link>
           </div>
           <div>
-            <Link href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)">
-              <a
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                title={make + ' spare parts al quoz'}
-              >
+            <Link href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={make + ' spare parts al quoz'}>
+
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Al Quoz
-              </a>
+
             </Link>
           </div>
           <div>
-            <Link href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)">
-              <a
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                title={make + ' spare parts dubai sheikh zayed road'}
-              >
+            <Link
+              href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
+              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              title={make + ' spare parts dubai sheikh zayed road'}
+            >
+
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Sheikh Zayed Road, Dubai
-              </a>
+
             </Link>
           </div>
           <div>
-            <Link href="/search-by-cities-in-uae/Deira%20(Dubai)">
-              <a
-                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                title={make + ' spare parts deira'}
-              >
+            <Link
+              href="/search-by-cities-in-uae/Deira%20(Dubai)"
+              className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+              title={make + ' spare parts deira'}
+            >
+
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Deira
-              </a>
+
             </Link>
           </div>
         </div>
@@ -1138,7 +1133,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
 
             <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
-              {images.map((i,k) => (
+              {images.map((i, k) => (
                 <div key={k} className="border-2 p-5 relative">
                   <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
                     Sale!
@@ -1159,21 +1154,22 @@ export default function Car({ car, cities, make, partspost, posts }) {
                     priority
                   />
 
-                  <Link href={i.link}>
-                    <a
-                      className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                      title={make + i.name}
-                    >
-                      Inquire Now
-                    </a>
+                  <Link
+                    href={i.link}
+                    className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+                    title={make + i.name}
+                  >
+                    Inquire Now
                   </Link>
                 </div>
               ))}
             </div>
-            <Link href={`/get-in-touch`} target="_newtab">
-              <a className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
-                View All Parts
-              </a>
+            <Link
+              href={`/get-in-touch`}
+              target="_newtab"
+              className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+            >
+              View All Parts
             </Link>
           </div>
         </div>
@@ -1192,101 +1188,113 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link href="/search-by-part-name/Engine%20Assembly">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Engine Assembly
-                  </a>
+                <Link
+                  href="/search-by-part-name/Engine%20Assembly"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine Assembly
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Engine%20Block">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Engine Block
-                  </a>
+                <Link
+                  href="/search-by-part-name/Engine%20Block"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine Block
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Engine%20Mount">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Engine Mount
-                  </a>
+                <Link
+                  href="/search-by-part-name/Engine%20Mount"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine Mount
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Engine%20Block">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Engine Block
-                  </a>
+                <Link
+                  href="/search-by-part-name/Engine%20Block"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine Block
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Cylinder%20Head">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Cylinder Head
-                  </a>
+                <Link
+                  href="/search-by-part-name/Cylinder%20Head"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Cylinder Head
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Cylinder%20Block">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Cylinder Block
-                  </a>
+                <Link
+                  href="/search-by-part-name/Cylinder%20Block"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Cylinder Block
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Crankshaft">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/Crankshaft" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     Crankshaft
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Camshaft">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Camshaft
-                  </a>
+                <Link
+                  href="/search-by-part-name/Camshaft"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Camshaft
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Piston">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Piston
-                  </a>
+                <Link
+                  href="/search-by-part-name/Piston"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Piston
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Exhaust%20Manifold">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Exhaust Manifold
-                  </a>
+                <Link
+                  href="/search-by-part-name/Exhaust%20Manifold"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Exhaust Manifold
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Intake%20Manifold">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Intake Manifold
-                  </a>
+                <Link
+                  href="/search-by-part-name/Intake%20Manifold"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Intake Manifold
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Ignition%20Switch">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Ignition Switch
-                  </a>
+                <Link
+                  href="/search-by-part-name/Ignition%20Switch"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Ignition Switch
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Ignition%20Control%20Module">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Ignition Control Module
-                  </a>
+                <Link
+                  href="/search-by-part-name/Ignition%20Control%20Module"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Ignition Control Module
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Transmission%20Control%20Module">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    TCM
-                  </a>
+                <Link
+                  href="/search-by-part-name/Transmission%20Control%20Module"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  TCM
                 </Link>
               </li>
             </ol>
@@ -1298,66 +1306,73 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link href="/search-by-part-name/Engine%20Assembly">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/Engine%20Assembly" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     Engine
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Engine%20Assembly">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Battery
-                  </a>
+                <Link
+                  href="/search-by-part-name/Engine%20Assembly"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Battery
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Engine%20Assembly">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Alternator
-                  </a>
+                <Link
+                  href="/search-by-part-name/Engine%20Assembly"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Alternator
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Brake%20Pads">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Brake Pads
-                  </a>
+                <Link
+                  href="/search-by-part-name/Brake%20Pads"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Brake Pads
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Radiator">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Radiator
-                  </a>
+                <Link
+                  href="/search-by-part-name/Radiator"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Radiator
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Transmission%20Control%20Module">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Transmission
-                  </a>
+                <Link
+                  href="/search-by-part-name/Transmission%20Control%20Module"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Transmission
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Shock%20Absorber">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Shock Absorber
-                  </a>
+                <Link
+                  href="/search-by-part-name/Shock%20Absorber"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Shock Absorber
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Convertible%20Top%20Motor">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Catalytic Converter
-                  </a>
+                <Link
+                  href="/search-by-part-name/Convertible%20Top%20Motor"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Catalytic Converter
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Power%20Steering%20Box">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Power Steering
-                  </a>
+                <Link
+                  href="/search-by-part-name/Power%20Steering%20Box"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Power Steering
                 </Link>
               </li>
             </ol>
@@ -1369,38 +1384,43 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link href="/search-by-part-name/Bonnet">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Bonnet
-                  </a>
+                <Link
+                  href="/search-by-part-name/Bonnet"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Bonnet
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Fender%20(Front)">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Fender
-                  </a>
+                <Link
+                  href="/search-by-part-name/Fender%20(Front)"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Fender
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Decklid">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Decklid
-                  </a>
+                <Link
+                  href="/search-by-part-name/Decklid"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Decklid
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Grille">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Grille
-                  </a>
+                <Link
+                  href="/search-by-part-name/Grille"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Grille
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Wheel">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Wheel
-                  </a>
+                <Link
+                  href="/search-by-part-name/Wheel"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Wheel
                 </Link>
               </li>
             </ol>
@@ -1412,38 +1432,33 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link href="/search-by-part-name/Spark%20Plug">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/Spark%20Plug" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     Spark Plug
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Alternator">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/Alternator" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     Alternator
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Battery">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/Battery" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     Battery
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Ignition%20Switch">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/Ignition%20Switch" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     Ignition Switch
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/get-in-touch">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/get-in-touch" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     Many more...
-                  </a>
+
                 </Link>
               </li>
             </ol>
@@ -1455,39 +1470,34 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link href="/search-by-part-name/AC%20Compressor">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/AC%20Compressor" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     {' '}
                     AC Compressor
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/AC%20Condenser">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/AC%20Condenser" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     AC Condenser
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/AC%20Selector">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/AC%20Selector" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     AC Selector
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/AC%20Controls">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/search-by-part-name/AC%20Controls" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     AC Controls
-                  </a>
+
                 </Link>
               </li>
               <li>
-                <Link href="/get-in-touch">
-                  <a className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                <Link href="/get-in-touch" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
                     Many more...
-                  </a>
+
                 </Link>
               </li>
             </ol>
@@ -1498,18 +1508,15 @@ export default function Car({ car, cities, make, partspost, posts }) {
             List of Genuine and Aftermarket {make} spare parts in UAE
           </p>
           <div className="grid grid-cols-5 gap-2 s:grid-cols-1 xs:grid-cols-1 md:grid-cols-3 font-medium text-gray-500 p-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-            {partspost.map((p,i) => (
+            {partspost.map((p, i) => (
               <div key={i}>
                 <Link
                   href={`/search-by-part-name/[parts]`}
-                  as={`/search-by-part-name/${p.parts}`}
-                >
-                  <a
-                    className="text-blue-800 hover:text-gray-800 underline"
+                  as={`/search-by-part-name/${p.parts}`}  className="text-blue-800 hover:text-gray-800 underline"
                     title={p.parts}
-                  >
+                >
                     {make + ' ' + p.parts + ' parts'}
-                  </a>
+
                 </Link>
               </div>
             ))}
@@ -1520,18 +1527,17 @@ export default function Car({ car, cities, make, partspost, posts }) {
           !
         </div>
         <div className="grid grid-cols-4 xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-          {cities.map((post,i) => (
+          {cities.map((post, i) => (
             <div key={i}>
               <Link
                 href={`/search-by-cities-in-uae/[city]`}
-                as={`/search-by-cities-in-uae/${post.city}`}
+                as={`/search-by-cities-in-uae/${post.city}`} title={make + ' spare parts ' + post.city}
               >
-                <a title={make + ' spare parts ' + post.city}>
                   <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
                     <i className="far fa-compass"></i>&nbsp;
                     {post.city}{' '}
                   </p>
-                </a>
+
               </Link>
             </div>
           ))}{' '}

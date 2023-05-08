@@ -287,26 +287,29 @@ export default function Forms({ posts, pos, po }) {
           <div>
             &nbsp;
             <span>
-              <Link href={`/search-by-part-name`}>
-                <a className="underline xs:no-underline hover:text-blue-500">
-                  SEARCH BY PART NAME
-                </a>
+              <Link
+                href={`/search-by-part-name`}
+                className="underline xs:no-underline hover:text-blue-500"
+              >
+                SEARCH BY PART NAME
               </Link>{' '}
             </span>
             | &nbsp;
             <span>
-              <Link href={`/search-by-cities-in-uae`}>
-                <a className="underline xs:no-underline hover:text-blue-500">
-                  SEARCH BY CITY
-                </a>
+              <Link
+                href={`/search-by-cities-in-uae`}
+                className="underline xs:no-underline hover:text-blue-500"
+              >
+                SEARCH BY CITY
               </Link>{' '}
             </span>
             | &nbsp;
             <span>
-              <Link href={`/search-by-make`}>
-                <a className="underline xs:no-underline hover:text-blue-500">
-                  SEARCH BY MAKE
-                </a>
+              <Link
+                href={`/search-by-make`}
+                className="underline xs:no-underline hover:text-blue-500"
+              >
+                SEARCH BY MAKE
               </Link>{' '}
             </span>
           </div>
@@ -486,7 +489,7 @@ export default function Forms({ posts, pos, po }) {
                       <option value="" disabled>
                         Select your Make
                       </option>
-                      {make.map((m,i) => (
+                      {make.map((m, i) => (
                         <option key={i}>{m}</option>
                       ))}
                     </select>
@@ -524,7 +527,7 @@ export default function Forms({ posts, pos, po }) {
                       </option>
                       {posts
                         .filter(s => s.make === Make)
-                        .map((s,i) => (
+                        .map((s, i) => (
                           <option key={i} value={s.model}>
                             {s.model}
                           </option>
@@ -662,12 +665,20 @@ export default function Forms({ posts, pos, po }) {
                 </div>
               </div>
               <div className="flex float-left text-xs text-gray-400">
-                <Link href={`/privacy-policy`} target="_newtab">
-                  <a className="underline">Privacy policy</a>
+                <Link
+                  href={`/privacy-policy`}
+                  target="_newtab"
+                  className="underline"
+                >
+                  Privacy policy
                 </Link>
                 &nbsp;
-                <Link href={`/terms-and-condition`} target="_newtab">
-                  <a className="underline">Terms and conditions</a>
+                <Link
+                  href={`/terms-and-condition`}
+                  target="_newtab"
+                  className="underline"
+                >
+                  Terms and conditions
                 </Link>
               </div>
 
@@ -682,8 +693,8 @@ export default function Forms({ posts, pos, po }) {
         <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
           <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
             COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-            <Link href={`/contact`}>
-              <a className="underline text-blue-900">CONTACT US NOW</a>
+            <Link href={`/contact`} className="underline text-blue-900">
+              CONTACT US NOW
             </Link>
           </h1>
         </div>
@@ -712,68 +723,71 @@ export default function Forms({ posts, pos, po }) {
             <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
               <p className="pt-5 text-white font-extrabold">SOCIAL LINKS</p>
               <p>
-                <a
+                <Link
                   className="text-xl leading-xl text-blue-900"
                   href="https://www.facebook.com/emirates.auto.parts"
                 >
-                  <i className="fab fa-2x fa-facebook"></i>
-                </a>
+                  <i className="fab fa-2x fa-facebook"></i></Link>
+
                 &nbsp;
-                <a
+                <Link
                   className="text-xl leading-xl text-purple-900"
                   href="https://www.instagram.com/emiratescar_parts/"
                 >
-                  <i className="fab fa-2x fa-instagram"></i>
-                </a>
+                  <i className="fab fa-2x fa-instagram"></i></Link>
+
                 &nbsp;
-                <a
+                <Link
                   className="text-xl leading-xl text-black"
                   href="https://emirates-car.tumblr.com/"
                 >
-                  <i className="fab fa-2x fa-tumblr"></i>
-                </a>
+                  <i className="fab fa-2x fa-tumblr"></i></Link>
+
                 &nbsp;
-                <a
+                <Link
                   className="text-xl leading-xl text-blue-300"
                   href="https://twitter.com/uaeautoparts"
                 >
-                  <i className="fab fa-2x fa-twitter"></i>
-                </a>
+                  <i className="fab fa-2x fa-twitter"></i></Link>
+
                 &nbsp;
-                <a
+                <Link
                   className="text-xl leading-xl text-red-700"
                   href="https://in.pinterest.com/emiratesautomobileparts/"
                 >
-                  <i className="fab fa-2x fa-pinterest"></i>
-                </a>
+                  <i className="fab fa-2x fa-pinterest"></i></Link>
+
                 &nbsp;
-                <a
+                <Link
                   className="text-xl leading-xl text-blue-500"
                   href="https://in.pinterest.com/emiratesautomobileparts/"
                 >
-                  <i className="fab fa-2x fa-linkedin"></i>
-                </a>
+                  <i className="fab fa-2x fa-linkedin"></i></Link>
+
               </p>
             </div>
 
             <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
               <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
-              <Link href={`/search-by-part-name`}>
-                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                  Search parts by part name in UAE
-                </a>
+              <Link
+                href={`/search-by-part-name`}
+                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              >
+                Search parts by part name in UAE
               </Link>
               <br />
-              <Link href={`/search-by-make`}>
-                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                  Search parts by Car make in UAE
-                </a>
+              <Link
+                href={`/search-by-make`}
+                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              >
+                Search parts by Car make in UAE
               </Link>
               <br />
-              <Link href={`/search-by-cities-in-uae`}>
-                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-                  Search parts by cities in UAE
-                </a>
+              <Link
+                href={`/search-by-cities-in-uae`}
+                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              >
+                Search parts by cities in UAE
               </Link>
             </div>
           </div>
@@ -781,29 +795,26 @@ export default function Forms({ posts, pos, po }) {
             Auto spare parts
           </p>
           <div className="grid grid-cols-10 md:grid-cols-7 xs:hidden sm:hidden 2xs:hidden p-3">
-            {po.map((post,i) => (
+            {po.map((post, i) => (
               <div key={i}>
                 <Link
                   href={`/search-by-make/[make]`}
                   as={`/search-by-make/${post.make}`}
+                  className="text-xs text-white font-medium hover:text-gray-800 underline"
                 >
-                  <a className="text-xs text-white font-medium hover:text-gray-800 underline">
-                    {post.make + ' spare parts'}{' '}
-                  </a>
+                  {post.make + ' spare parts'}
                 </Link>
               </div>
             ))}
           </div>
 
           <div className="text-center text-purple-200 py-10">
-            <Link href={`/`} target="_newtab">
-              <a
-                title="buy car parts online"
-                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-              >
+            <Link href={`/`} target="_newtab" title="buy car parts online"
+                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+
                 <i className="fa fa-copyright" aria-hidden="true"></i>
                 Copyright © 2023 Emirates-car. All rights reserved.
-              </a>
+
             </Link>
           </div>
         </div>

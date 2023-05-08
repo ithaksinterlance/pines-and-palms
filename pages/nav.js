@@ -17,10 +17,11 @@ export default function Navbar() {
     <nav className="flex relative flex-wrap items-center justify-between px-2 py-2 bg-purple-800">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full flex justify-between">
-          <Link href={`/#spare_parts`}>
-            <a className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1">
-              Emirates-car
-            </a>
+          <Link
+            href={`/#spare_parts`}
+            className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1"
+          >
+            Emirates-car
           </Link>
           <button
             type="button"
@@ -40,75 +41,93 @@ export default function Navbar() {
         >
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
-              <Link href={`/`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
-                  Home
-                </a>
+              <Link
+                href={`/`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+                Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`/blog`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
-                  Blog
-                </a>
+              <Link
+                href={`/blog`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+                Blog
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`/contact`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-755">
-                  Contact
-                </a>
+              <Link
+                href={`/contact`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+                Contact
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`/search-by-make`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
-                  Search parts by make
-                </a>
+              <Link
+                href={`/search-by-make`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+                Search parts by make
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`/search-by-cities-in-uae`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+              <Link
+                href={`/search-by-cities-in-uae`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
                   Search parts in your cities
-                </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`/search-by-part-name`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
-                  Search parts by Part name
-                </a>
+              <Link
+                href={`/search-by-part-name`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+                Search parts by Part name
               </Link>
             </li>
           </ul>
           <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
             <li className="nav-item">
-              <Link href={`https://www.facebook.com/emirates.auto.parts/`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+              <Link
+                href={`https://www.facebook.com/emirates.auto.parts/`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+
                   <i className="fab fa-2x fa-facebook ml-2 text-xl leading-xl text-white opacity-75 "></i>
-                </a>
+
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`https://www.instagram.com/emiratescar_parts/`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+              <Link
+                href={`https://www.instagram.com/emiratescar_parts/`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+
                   <i className="fab fa-instagram ml-2 text-xl leading-xl text-white opacity-75 "></i>
-                </a>
+
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`https://twitter.com/emiratescarpart`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+              <Link
+                href={`https://twitter.com/emiratescarpart`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+
                   <i className="fab fa-twitter ml-2 text-xl leading-xl text-white opacity-75 "></i>
-                </a>
+
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`https://emirates-car.tumblr.com/`}>
-                <a className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75">
+              <Link
+                href={`https://emirates-car.tumblr.com/`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+
                   <i className="fab fa-tumblr ml-2 text-xl leading-xl text-white opacity-75"></i>
-                </a>
+
               </Link>
             </li>
           </ul>

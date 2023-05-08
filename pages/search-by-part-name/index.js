@@ -318,7 +318,7 @@ export default function Make({ posts, cities, post }) {
                             rel="noopener noreferrer"
                             target="_newtab"
                           >
-                            <a>{suggestion}</a>
+                            {suggestion}
                           </Link>
                         </div>
                       ))}
@@ -331,15 +331,14 @@ export default function Make({ posts, cities, post }) {
                     <Link
                       href={`/search-by-part-name/[parts]`}
                       as={`/search-by-part-name/${post.parts}`}
-                      passHref
+                      passHref title={post.parts + ' in uae'}
                     >
-                      <a title={post.parts + ' in uae'}>
                         <main className="border border-blue-800 h-full p-3 ">
                           <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
                             {post.parts}
                           </p>
                         </main>
-                      </a>
+
                     </Link>
                   </div>
                 ))}
@@ -350,26 +349,23 @@ export default function Make({ posts, cities, post }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href={`/search-by-part-name`}>
-                      <a className="underline hover:text-blue-500  xs:text-sm">
+                    <Link href={`/search-by-part-name`} className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY PART NAME
-                      </a>
+
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-cities-in-uae`}>
-                      <a className="underline hover:text-blue-500  xs:text-sm">
+                    <Link href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY CITY
-                      </a>
+
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-make`}>
-                      <a className="underline hover:text-blue-500  xs:text-sm">
+                    <Link href={`/search-by-make`} className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY MAKE
-                      </a>
+
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -625,10 +621,9 @@ export default function Make({ posts, cities, post }) {
                 UAE. We also operate in main cities such as dubai, sharjah, abu
                 dhabi, ajman, al quoz, jumeirah, deira etc. You can check our
                 catalogue at{' '}
-                <Link href={`https://emirates-car.com/search-by-part-name`}>
-                  <a className="text-blue-400 underline">
+                <Link href={`https://emirates-car.com/search-by-part-name`} className="text-blue-400 underline">
                     https://emirates-car.com/search-by-part-name
-                  </a>
+
                 </Link>
                 .
               </p>
@@ -671,13 +666,12 @@ export default function Make({ posts, cities, post }) {
                 <Link
                   href={`/search-by-cities-in-uae/[city]`}
                   as={`/search-by-cities-in-uae/${post.city}`}
-                  passHref
+                  passHref title={'car spare parts ' + post.city}
                 >
-                  <a title={'car spare parts ' + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
                       <i className="far fa-compass"></i> {post.city}
                     </p>
-                  </a>
+
                 </Link>
               </div>
             ))}

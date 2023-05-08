@@ -10,13 +10,14 @@ export default function Social() {
         </div>
         <div className="grid grid-cols-6 gap-4 py-2">
           <div>
-            <Link href={`https://www.facebook.com/emirates.auto.parts`}>
-              <a
-                title="used car parts"
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-              >
+            <Link
+              href={`https://www.facebook.com/emirates.auto.parts`}
+              title="used car parts"
+              className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+            >
+
                 <i className="fab fa-facebook text-blue-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+              
             </Link>
           </div>
           <div>
@@ -26,9 +27,9 @@ export default function Social() {
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
             >
-              <a>
+
                 <i className="fab fa-instagram text-purple-800 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+              
             </Link>
           </div>
           <div>
@@ -38,9 +39,9 @@ export default function Social() {
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
             >
-              <a>
+
                 <i className="fab fa-twitter text-blue-400 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+              
             </Link>
           </div>
           <div>
@@ -50,9 +51,9 @@ export default function Social() {
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
             >
-              <a>
+
                 <i className="fab fa-tumblr text-black text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+              
             </Link>
           </div>
           <div>
@@ -62,9 +63,9 @@ export default function Social() {
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
             >
-              <a>
+
                 <i className="fab fa-pinterest text-red-700 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+              
             </Link>
           </div>
           <div>
@@ -74,9 +75,9 @@ export default function Social() {
               className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               target="_newtab"
             >
-              <a>
+
                 <i className="fab fa-linkedin text-blue-500 text-4xl xs:text-3xl sm:text-xl md:text-4xl lg:text-4xl"></i>
-              </a>
+              
             </Link>
           </div>
         </div>

@@ -339,9 +339,9 @@ export default function Make({ car, cities, posts, pos }) {
                         <Link
                           href={`https://emirates-car.com/search-by-make/${recommend}`}
                           rel="noopener noreferrer"
-                          target="_newtab"
+                          target="_newtab" title={recommend}
                         >
-                          <a title={recommend}>{recommend}</a>
+                          {recommend}
                         </Link>
                       </div>
                     ))}
@@ -360,10 +360,9 @@ export default function Make({ car, cities, posts, pos }) {
                   <div key={i}>
                     <Link
                       href={`/search-by-make/[make]`}
-                      as={`/search-by-make/${post.make}`}
+                      as={`/search-by-make/${post.make}`} title={`${post.make} spare parts`}
 
                     >
-                      <a title={`${post.make} spare parts`}>
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
                           <div className="flex justify-center">
                             <Image
@@ -377,7 +376,7 @@ export default function Make({ car, cities, posts, pos }) {
                           </div>
                           {post.make.toUpperCase()}
                         </main>
-                      </a>
+
                     </Link>
                   </div>
                 ))}
@@ -386,11 +385,11 @@ export default function Make({ car, cities, posts, pos }) {
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?{' '}
               <Link href={`/get-in-touch`}>
-                <a>
+
                   <nobr className="text-blue-500 text-sm underline">
                     Get in touch with us {'>>'}**
                   </nobr>
-                </a>
+
               </Link>{' '}
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
@@ -399,28 +398,26 @@ export default function Make({ car, cities, posts, pos }) {
                 <div>
                   <span>
                     <Link
-                      href={`/search-by-part-name`}
+                      href={`/search-by-part-name`} className="underline hover:text-blue-500 xs:text-sm"
 
-                    >
-                      <a  className="underline hover:text-blue-500 xs:text-sm">SEARCH BY PART NAME</a>
+                    >SEARCH BY PART NAME
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-cities-in-uae`}
+                      href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500  xs:text-sm" title={"spare parts near me"}
 
                     >
-                      <a className="underline hover:text-blue-500  xs:text-sm" title={"spare parts near me"}>SEARCH BY CITY</a>
+                      SEARCH BY CITY
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-make`}
+                      href={`/search-by-make`} className="underline hover:text-blue-500  xs:text-sm" title={"automobile spare parts"}
 
-                    >
-                      <a className="underline hover:text-blue-500  xs:text-sm" title={"automobile spare parts"}>SEARCH BY MAKE</a>
+                    >SEARCH BY MAKE
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -667,17 +664,16 @@ export default function Make({ car, cities, posts, pos }) {
                   <Link
                     href={`/privacy-policy`}
 
-                    target="_newtab"
-                  >
-                    <a className="underline">Privacy policy</a>
+                    target="_newtab" className="underline"
+                  >Privacy policy
                   </Link>
                   &nbsp;
                   <Link
                     href={`/terms-and-condition`}
 
-                    target="_newtab"
+                    target="_newtab" className="underline"
                   >
-                    <a className="underline">Terms and conditions</a>
+                    Terms and conditions
                   </Link>
                 </div>
                 <div className="flex float-right text-xs text-gray-400 ">
@@ -695,20 +691,19 @@ export default function Make({ car, cities, posts, pos }) {
                 UAE.You can check our catalogue at{' '}
                 <Link
                   href="https://emirates-car.com/search-by-part-name"
+                  title="spare parts" className="text-blue-400 underline"
 
                 >
-                  <a title="spare parts" className="text-blue-400 underline">
                     https://emirates-car.com/search-by-part-name
-                  </a>
+
                 </Link>
                 . We deal in auto spare parts such as{' '}
                 {posts.map((p,i) => (
                   <Link
                     href={`/search-by-part-name/[parts]`}
                     as={`/search-by-part-name/${p.parts}`}
-                    key={i}
-                  >
-                    <a title={p.parts}>{p.parts + ' , '}</a>
+                    key={i} title={p.parts}
+                  >{p.parts + ' , '}
                   </Link>
                 ))}
               </p>
@@ -751,14 +746,13 @@ export default function Make({ car, cities, posts, pos }) {
               <div key={i}>
                 <Link
                   href={`/search-by-cities-in-uae/[city]`}
-                  as={`/search-by-cities-in-uae/${post.city}`}
+                  as={`/search-by-cities-in-uae/${post.city}`} title={'car parts ' + post.city}
 
                 >
-                  <a title={'car parts ' + post.city}>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 h-full text-gray-500">
                       <i className="fas fa-map-marker-alt"></i> {post.city}
                     </p>
-                  </a>
+
                 </Link>
               </div>
             ))}

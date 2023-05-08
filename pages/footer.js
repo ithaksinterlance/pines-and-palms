@@ -7,8 +7,8 @@ export default function footer() {
       <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
         <h3 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
           COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-          <Link href={`/contact`} >
-            <a className="underline text-blue-900">CONTACT US NOW {'>>'}</a>
+          <Link href={`/contact`} className="underline text-blue-900">
+            CONTACT US NOW {'>>'}
           </Link>
         </h3>
       </div>
@@ -34,63 +34,63 @@ export default function footer() {
                 <i className="fab fa-2x fa-facebook"></i>
               </Link>
               &nbsp;
-              <a
+              <Link
                 className="text-xl leading-xl text-purple-900"
                 href="https://www.instagram.com/emiratescar_parts/"
               >
                 <i className="fab fa-2x fa-instagram"></i>
-              </a>
+              </Link>
               &nbsp;
-              <a
+              <Link
                 className="text-xl leading-xl text-black"
                 href="https://emirates-car.tumblr.com/"
               >
-                <i className="fab fa-2x fa-tumblr"></i>
-              </a>
+                <i className="fab fa-2x fa-tumblr"></i></Link>
+
               &nbsp;
-              <a
+              <Link
                 className="text-xl leading-xl text-blue-300"
                 href="https://twitter.com/emiratescarpart"
               >
-                <i className="fab fa-2x fa-twitter"></i>
-              </a>
+                <i className="fab fa-2x fa-twitter"></i></Link>
+
               &nbsp;
-              <a
+              <Link
                 className="text-xl leading-xl text-red-700"
                 href="https://in.pinterest.com/emiratesautomobileparts/"
               >
-                <i className="fab fa-2x fa-pinterest"></i>
-              </a>
+                <i className="fab fa-2x fa-pinterest"></i></Link>
+
               &nbsp;
-              <a
+              <Link
                 className="text-xl leading-xl text-blue-500"
                 href="https://in.pinterest.com/emiratesautomobileparts/"
               >
-                <i className="fab fa-2x fa-linkedin"></i>
-              </a>
+                <i className="fab fa-2x fa-linkedin"></i></Link>
+
             </p>
           </div>
           <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
             <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
             <Link
               href={`/search-by-part-name`}
-
-            ><a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-              Search parts by part name in UAE</a>
+              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+            >
+              Search parts by part name in UAE
             </Link>
             <br />
             <Link
               href={`/search-by-make`}
-
-            ><a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-            Search parts by car brands in uae</a>
+              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+            >
+              Search parts by car brands in uae
             </Link>
             <br />
             <Link
               href={`/search-by-cities-in-uae`}
-              >
-                <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
-              Search parts by cities in UAE</a>
+              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+            >
+              Search parts by cities in UAE
             </Link>
           </div>
         </div>
@@ -104,10 +104,13 @@ export default function footer() {
         </div>
 
         <div className="text-center text-purple-200 py-10">
-          <Link href={`https://emirates-car.com`}>
-            <a className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+          <Link
+            href={`https://emirates-car.com`}
+            className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+          >
+
               <i className="fa fa-copyright" aria-hidden="true"></i>
-            </a>
+
           </Link>
         </div>
       </div>

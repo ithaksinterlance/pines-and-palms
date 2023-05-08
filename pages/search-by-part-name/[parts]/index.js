@@ -231,28 +231,28 @@ export default function Parts({ data, cities, posts }) {
                 <div>
                   <span>
                     <Link
-                      href={`/search-by-part-name`}
+                      href={`/search-by-part-name`} className="underline hover:text-blue-500 xs:text-sm" title="car spare parts online"
 
-                    ><a className="underline hover:text-blue-500 xs:text-sm" title="car spare parts online">
-                      SEARCH BY PART NAME</a>
+                    >
+                      SEARCH BY PART NAME
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-cities-in-uae`}
+                      href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500 xs:text-sm"
 
-                    ><a className="underline hover:text-blue-500 xs:text-sm">
-                      Spare parts near me</a>
+                    >
+                      Spare parts near me
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-make`}
+                      href={`/search-by-make`} className="underline hover:text-blue-500 xs:text-sm"
 
-                    ><a className="underline hover:text-blue-500 xs:text-sm">
-                      SEARCH BY MAKE</a>
+                    >
+                      SEARCH BY MAKE
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -554,17 +554,17 @@ export default function Parts({ data, cities, posts }) {
                       <Link
                         href={`/privacy-policy`}
 
-                        target="_newtab"
-                      ><a className="underline">
-                        Privacy policy</a>
+                        target="_newtab" className="underline"
+                      >
+                        Privacy policy
                       </Link>
                       &nbsp;
                       <Link
                         href={`/terms-and-condition`}
 
-                        target="_newtab"
-                      ><a className="underline">
-                        Terms and conditions</a>
+                        target="_newtab" className="underline"
+                      >
+                        Terms and conditions
                       </Link>
                     </div>
                     <div className="flex float-right text-xs text-gray-400">
@@ -581,10 +581,10 @@ export default function Parts({ data, cities, posts }) {
                   <div key={i}>
                     <Link
                       href={`/search-by-make/[make]`}
-                      as={`/search-by-make/${post.make}`}
+                      as={`/search-by-make/${post.make}`} title={data.parts + ' for ' + post.make}
 
                       passHref
-                    ><a title={data.parts + ' for ' + post.make}>
+                    >
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                         <div className="flex justify-center">
                           <Image
@@ -601,7 +601,7 @@ export default function Parts({ data, cities, posts }) {
                           {post.make.toUpperCase()}
                         </div>
                       </main>
-                      </a>
+
                     </Link>
                   </div>
                 ))}
@@ -615,9 +615,10 @@ export default function Parts({ data, cities, posts }) {
                   our catalogue at{' '}
                   <Link
                     href={`https://emirates-car.com/search-by-part-name`}
+                    className="text-blue-400 underline"
 
-                  ><a className="text-blue-400 underline">
-                    https://emirates-car.com/search-by-part-name</a>
+                  >
+                    https://emirates-car.com/search-by-part-name
                   </Link>
                   . We provide auto spare parts for any vehicles including :
                   <ul className="list-disc">
@@ -660,12 +661,11 @@ export default function Parts({ data, cities, posts }) {
                   href={`/search-by-cities-in-uae/[city]'}`}
                   as={`/search-by-cities-in-uae/${post.city}`}
 
-                  passHref
-                ><a title={data.parts +" in"+post.city}>
+                  passHref title={data.parts +" in"+post.city}>
                   <div className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
                     <i className="far fa-compass"></i> {data.parts} in{' '}
                     {post.city}
-                  </div></a>
+                  </div>
                 </Link>
               </div>
             ))}

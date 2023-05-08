@@ -293,7 +293,7 @@ export default function America({ partsposts, posts }) {
                   href={`https://emirates-car.com/search-by-make/Ford`}
                   passHref
                 >
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -309,12 +309,12 @@ export default function America({ partsposts, posts }) {
                         Ford
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/GMC`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -330,12 +330,12 @@ export default function America({ partsposts, posts }) {
                         GMC
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Chevrolet`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -351,12 +351,12 @@ export default function America({ partsposts, posts }) {
                         Chevrolet
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Jeep`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -372,12 +372,12 @@ export default function America({ partsposts, posts }) {
                         Jeep
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Hummer`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -393,12 +393,12 @@ export default function America({ partsposts, posts }) {
                         Hummer
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Cadillac`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -414,12 +414,12 @@ export default function America({ partsposts, posts }) {
                         Cadillac
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Lincoln`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -435,12 +435,12 @@ export default function America({ partsposts, posts }) {
                         Lincoln
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Dodge`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -456,12 +456,12 @@ export default function America({ partsposts, posts }) {
                         Dodge
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Chrysler`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -477,12 +477,12 @@ export default function America({ partsposts, posts }) {
                         Chrysler
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Mercury`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -498,12 +498,12 @@ export default function America({ partsposts, posts }) {
                         Mercury
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Buick`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -519,12 +519,12 @@ export default function America({ partsposts, posts }) {
                         Buick
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
               <div>
                 <Link href={`/search-by-make/Ram`} passHref>
-                  <a>
+
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
                         <Image
@@ -540,19 +540,19 @@ export default function America({ partsposts, posts }) {
                         Ram
                       </p>
                     </main>
-                  </a>
+
                 </Link>
               </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
               <Link href={`/get-in-touch`} passHref>
-                <a>
+
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
                     Get in touch with us {'>>'}**
                   </nobr>
-                </a>
+
               </Link>{' '}
             </div>
             <p className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
@@ -577,11 +577,10 @@ export default function America({ partsposts, posts }) {
               can check our catalogue at{' '}
               <Link
                 href={`https://emirates-car.com/search-by-part-name`}
-                passHref
+                passHref className="text-blue-400 underline"
               >
-                <a className="text-blue-400 underline">
                   https://emirates-car.com/search-by-part-name
-                </a>
+
               </Link>
               . Submit your inquiry to us, our dealer will get back to you based
               on stock availability.
@@ -594,26 +593,24 @@ export default function America({ partsposts, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href={`/search-by-part-name`} passHref>
-                      <a className="underline hover:text-blue-500 xs:text-sm">
+                    <Link href={`/search-by-part-name`} passHref className="underline hover:text-blue-500 xs:text-sm">
                         SEARCH BY PART NAME
-                      </a>
+
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-cities-in-uae`} passHref>
-                      <a className="underline hover:text-blue-500 xs:text-sm">
+                    <Link href={`/search-by-cities-in-uae`} passHref className="underline hover:text-blue-500 xs:text-sm">
+
                         SEARCH BY CITY
-                      </a>
+
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-make`} passHref>
-                      <a className="underline hover:text-blue-500  xs:text-sm">
+                    <Link href={`/search-by-make`} passHref className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY MAKE
-                      </a>
+
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -857,12 +854,12 @@ export default function America({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link href={`/privacy-policy`} target="_newtab" passHref>
-                    <a className="underline">Privacy policy</a>
+                  <Link href={`/privacy-policy`} target="_newtab" passHref className="underline">
+                    Privacy policy
                   </Link>
                   &nbsp;
-                  <Link href={`/terms-and-condition`} target="_newtab" passHref>
-                    <a className="underline">Terms and conditions</a>
+                  <Link href={`/terms-and-condition`} target="_newtab" passHref className="underline">
+                   Terms and conditions
                   </Link>
                 </div>
 
@@ -914,7 +911,7 @@ export default function America({ partsposts, posts }) {
                     rel="noopener noreferrer"
                     target="_newtab"
                     passHref
-                  ><a>{suggestion}</a>
+                  >{suggestion}
 
                   </Link>
                 </div>
@@ -928,15 +925,14 @@ export default function America({ partsposts, posts }) {
             <Link
               href={`/search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/${post.parts}`}
-              passHref
+              passHref title={post.parts + ' in uae'}
             >
-              <a title={post.parts + ' in uae'}>
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                     {post.parts.toUpperCase()}{' '}
                   </p>
                 </main>
-              </a>
+
             </Link>
           </div>
         ))}{' '}
