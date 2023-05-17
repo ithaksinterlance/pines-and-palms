@@ -188,7 +188,7 @@ export default function Honda() {
         {images.map((i, m) => (
           <div key={m} className="border-2 p-5 relative">
             <sup className="absolute top-0 right-0 text-sm font-bold text-white bg-red-600 rounded-l-xl rounded-r-xl p-1">
-              Sale!
+              Sale!!
             </sup>
             <div className="h-50">
               <h1 className="text-xl font-bold font-sans">{i.name}</h1>
