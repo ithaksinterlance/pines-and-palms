@@ -156,8 +156,11 @@ export default function AbuDhabi() {
           </p>
           <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
             <div>
-              <Link href="/search-by-cities-in-uae/Dubai" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  title={'honda spare parts dubai'}>
+              <Link
+                href="/search-by-cities-in-uae/Dubai"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={'honda spare parts dubai'}
+                legacyBehavior>
 
                   <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                   Honda Parts Dubai
@@ -166,8 +169,11 @@ export default function AbuDhabi() {
             </div>
             <div>
               {' '}
-              <Link href="/search-by-cities-in-uae/Sharjah" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  title={'Honda spare parts dubai'}>
+              <Link
+                href="/search-by-cities-in-uae/Sharjah"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={'Honda spare parts dubai'}
+                legacyBehavior>
 
                   <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                   Honda Parts Sharjah
@@ -176,8 +182,11 @@ export default function AbuDhabi() {
             </div>
             <div>
               {' '}
-              <Link href="/search-by-cities-in-uae/Ajman" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  title={'honda spare parts ajman'}>
+              <Link
+                href="/search-by-cities-in-uae/Ajman"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={'honda spare parts ajman'}
+                legacyBehavior>
                 
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
                   Honda Parts Ajman
@@ -186,8 +195,11 @@ export default function AbuDhabi() {
             </div>
             <div>
               {' '}
-              <Link href="/search-by-cities-in-uae/Ras%20al%20Khaimah" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  title={'Honda spare parts ras al khaimah'}>
+              <Link
+                href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={'Honda spare parts ras al khaimah'}
+                legacyBehavior>
 
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
                   Honda Parts Ras Al Khaimah
@@ -195,8 +207,11 @@ export default function AbuDhabi() {
               </Link>
             </div>
             <div>
-              <Link href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  title={'Honda spare parts al quoz'}>
+              <Link
+                href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={'Honda spare parts al quoz'}
+                legacyBehavior>
 
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
                   Honda Parts Al Quoz
@@ -204,8 +219,11 @@ export default function AbuDhabi() {
               </Link>
             </div>
             <div>
-              <Link href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  title={'Honda spare parts dubai sheikh zayed road'}>
+              <Link
+                href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={'Honda spare parts dubai sheikh zayed road'}
+                legacyBehavior>
 
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
                   Honda Parts Sheikh Zayed Road, Dubai
@@ -213,8 +231,11 @@ export default function AbuDhabi() {
               </Link>
             </div>
             <div>
-              <Link href="/search-by-cities-in-uae/Deira%20(Dubai)" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  title={'honda spare parts deira'}>
+              <Link
+                href="/search-by-cities-in-uae/Deira%20(Dubai)"
+                className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                title={'honda spare parts deira'}
+                legacyBehavior>
 
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
                   Honda Parts Deira

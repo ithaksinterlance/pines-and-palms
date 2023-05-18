@@ -73,13 +73,13 @@ export default function RasAlKhaimah() {
           Honda Car Parts in Ras al Khaimah Online for German, American, Japan,
           Korean and more models
         </h1>
-        <Link href={`/search-by-cities-in-uae/Ras%20al%20Khaimah`}>
-          <a
-            className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-            target="_newtab"
-          >
+        <Link
+          href={`/search-by-cities-in-uae/Ras%20al%20Khaimah`}
+          className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+          target="_newtab">
+          
             Inquire Now
-          </a>
+          
         </Link>
 
         <div className="grid grid-cols-1 place-content-center pt-10 xs:pt-5 mx-8">
@@ -94,10 +94,12 @@ export default function RasAlKhaimah() {
               parts, electrical and electronic parts, body parts and lights, AC
               parts and service and mainatenance parts. You can order Honda
               spare parts by simply submitting the online inquiry form{' '}
-              <Link href="https://emirates-car.com">
-                <a className="underline text-blue-500 hover:text-blue-900">
+              <Link
+                href="https://emirates-car.com"
+                className="underline text-blue-500 hover:text-blue-900">
+                
                   here
-                </a>
+                
               </Link>
               . You can get callback or whatsapp chat or email after submitting
               your form inquiry.
@@ -165,83 +167,69 @@ export default function RasAlKhaimah() {
             </p>
             <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
               <div>
-                <Link href="/search-by-cities-in-uae/Dubai">
-                  <a
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    title={'honda spare parts dubai'}
-                  >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp; Honda Parts Dubai
-                  </a>
+                <Link
+                  href="/search-by-cities-in-uae/Dubai"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'honda spare parts dubai'}>
+
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Dubai
                 </Link>
               </div>
               <div>
                 {' '}
-                <Link href="/search-by-cities-in-uae/Sharjah">
-                  <a
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    title={'Honda spare parts dubai'}
-                  >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp; Honda Parts Sharjah
-                  </a>
+                <Link
+                  href="/search-by-cities-in-uae/Sharjah"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'Honda spare parts dubai'}>
+
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Sharjah
                 </Link>
               </div>
               <div>
                 {' '}
-                <Link href="/search-by-cities-in-uae/Ajman">
-                  <a
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    title={'honda spare parts ajman'}
-                  >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    Honda Parts Ajman
-                  </a>
+                <Link
+                  href="/search-by-cities-in-uae/Ajman"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'honda spare parts ajman'}>
+
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Ajman
                 </Link>
               </div>
               <div>
                 {' '}
-                <Link href="/search-by-cities-in-uae/Ras%20al%20Khaimah">
-                  <a
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    title={'Honda spare parts ras al khaimah'}
-                  >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    Honda Parts Ras Al Khaimah
-                  </a>
+                <Link
+                  href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'Honda spare parts ras al khaimah'}>
+
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Ras Al Khaimah
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)">
-                  <a
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    title={'Honda spare parts al quoz'}
-                  >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    Honda Parts Al Quoz
-                  </a>
+                <Link
+                  href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'Honda spare parts al quoz'}>
+
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Al Quoz
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)">
-                  <a
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    title={'Honda spare parts dubai sheikh zayed road'}
-                  >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    Honda Parts Sheikh Zayed Road, Dubai
-                  </a>
+                <Link
+                  href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'Honda spare parts dubai sheikh zayed road'}>
+
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Sheikh Zayed Road, Dubai
                 </Link>
               </div>
               <div>
-                <Link href="/search-by-cities-in-uae/Deira%20(Dubai)">
-                  <a
-                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    title={'honda spare parts deira'}
-                  >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    Honda Parts Deira
-                  </a>
+                <Link
+                  href="/search-by-cities-in-uae/Deira%20(Dubai)"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'honda spare parts deira'}>
+
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Deira
                 </Link>
               </div>
             </div>
@@ -432,7 +420,7 @@ export default function RasAlKhaimah() {
                     <Link
                       href="/search-by-part-name/Convertible%20Top%20Motor"
                       className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                      legacyBehavior>
                       {' '}
                       Catalytic Converter
                     </Link>
@@ -650,10 +638,10 @@ export default function RasAlKhaimah() {
               and dealers will contact you back through the contact information
               you submitted. If one website didnt reply you, then other website
               will do. So there is plenty of website and options.{' '}
-              <Link href="/">
-                <a className="text-blue-500 hover:text-blue-900 underline">
+              <Link href="/" className="text-blue-500 hover:text-blue-900 underline">
+                
                   Emirates-car.com
-                </a>
+                
               </Link>
               is one such website which accept online inquiries. It deals with
               parts and accessories for honda accord, Honda civic and other

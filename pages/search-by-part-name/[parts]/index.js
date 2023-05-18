@@ -581,10 +581,10 @@ export default function Parts({ data, cities, posts }) {
                   <div key={i}>
                     <Link
                       href={`/search-by-make/[make]`}
-                      as={`/search-by-make/${post.make}`} title={data.parts + ' for ' + post.make}
-
+                      as={`/search-by-make/${post.make}`}
+                      title={data.parts + ' for ' + post.make}
                       passHref
-                    >
+                      legacyBehavior>
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                         <div className="flex justify-center">
                           <Image
@@ -660,8 +660,9 @@ export default function Parts({ data, cities, posts }) {
                 <Link
                   href={`/search-by-cities-in-uae/[city]'}`}
                   as={`/search-by-cities-in-uae/${post.city}`}
-
-                  passHref title={data.parts +" in"+post.city}>
+                  passHref
+                  title={data.parts +" in"+post.city}
+                  legacyBehavior>
                   <div className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
                     <i className="far fa-compass"></i> {data.parts} in{' '}
                     {post.city}

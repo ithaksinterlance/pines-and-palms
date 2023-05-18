@@ -339,8 +339,9 @@ export default function Make({ car, cities, posts, pos }) {
                         <Link
                           href={`https://emirates-car.com/search-by-make/${recommend}`}
                           rel="noopener noreferrer"
-                          target="_newtab" title={recommend}
-                        >
+                          target="_newtab"
+                          title={recommend}
+                          legacyBehavior>
                           {recommend}
                         </Link>
                       </div>
@@ -360,9 +361,9 @@ export default function Make({ car, cities, posts, pos }) {
                   <div key={i}>
                     <Link
                       href={`/search-by-make/[make]`}
-                      as={`/search-by-make/${post.make}`} title={`${post.make} spare parts`}
-
-                    >
+                      as={`/search-by-make/${post.make}`}
+                      title={`${post.make} spare parts`}
+                      legacyBehavior>
                         <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
                           <div className="flex justify-center">
                             <Image
@@ -384,7 +385,7 @@ export default function Make({ car, cities, posts, pos }) {
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?{' '}
-              <Link href={`/get-in-touch`}>
+              <Link href={`/get-in-touch`} legacyBehavior>
 
                   <nobr className="text-blue-500 text-sm underline">
                     Get in touch with us {'>>'}**
@@ -702,8 +703,9 @@ export default function Make({ car, cities, posts, pos }) {
                   <Link
                     href={`/search-by-part-name/[parts]`}
                     as={`/search-by-part-name/${p.parts}`}
-                    key={i} title={p.parts}
-                  >{p.parts + ' , '}
+                    key={i}
+                    title={p.parts}
+                    legacyBehavior>{p.parts + ' , '}
                   </Link>
                 ))}
               </p>
@@ -746,9 +748,9 @@ export default function Make({ car, cities, posts, pos }) {
               <div key={i}>
                 <Link
                   href={`/search-by-cities-in-uae/[city]`}
-                  as={`/search-by-cities-in-uae/${post.city}`} title={'car parts ' + post.city}
-
-                >
+                  as={`/search-by-cities-in-uae/${post.city}`}
+                  title={'car parts ' + post.city}
+                  legacyBehavior>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 h-full text-gray-500">
                       <i className="fas fa-map-marker-alt"></i> {post.city}
                     </p>

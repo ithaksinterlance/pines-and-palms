@@ -7,7 +7,7 @@ export default function footer() {
       <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
         <h3 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
           COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-          <Link href={`/contact`} className="underline text-blue-900">
+          <Link href={`/contact`} className="underline text-blue-900" legacyBehavior>
             CONTACT US NOW {'>>'}
           </Link>
         </h3>
@@ -30,42 +30,42 @@ export default function footer() {
                 className="text-xl leading-xl text-blue-900"
                 href={`https://www.facebook.com/emirates.auto.parts`}
                 passHref
-              >
+                legacyBehavior>
                 <i className="fab fa-2x fa-facebook"></i>
               </Link>
               &nbsp;
               <Link
                 className="text-xl leading-xl text-purple-900"
                 href="https://www.instagram.com/emiratescar_parts/"
-              >
+                legacyBehavior>
                 <i className="fab fa-2x fa-instagram"></i>
               </Link>
               &nbsp;
               <Link
                 className="text-xl leading-xl text-black"
                 href="https://emirates-car.tumblr.com/"
-              >
+                legacyBehavior>
                 <i className="fab fa-2x fa-tumblr"></i></Link>
 
               &nbsp;
               <Link
                 className="text-xl leading-xl text-blue-300"
                 href="https://twitter.com/emiratescarpart"
-              >
+                legacyBehavior>
                 <i className="fab fa-2x fa-twitter"></i></Link>
 
               &nbsp;
               <Link
                 className="text-xl leading-xl text-red-700"
                 href="https://in.pinterest.com/emiratesautomobileparts/"
-              >
+                legacyBehavior>
                 <i className="fab fa-2x fa-pinterest"></i></Link>
 
               &nbsp;
               <Link
                 className="text-xl leading-xl text-blue-500"
                 href="https://in.pinterest.com/emiratesautomobileparts/"
-              >
+                legacyBehavior>
                 <i className="fab fa-2x fa-linkedin"></i></Link>
 
             </p>
@@ -107,7 +107,7 @@ export default function footer() {
           <Link
             href={`https://emirates-car.com`}
             className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-          >
+            legacyBehavior>
 
               <i className="fa fa-copyright" aria-hidden="true"></i>
 

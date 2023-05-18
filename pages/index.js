@@ -377,7 +377,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                       rel="noopener noreferrer"
                       target="_newtab"
-                    >{suggestion}
+                      legacyBehavior>{suggestion}
 
                     </Link>
                   </div>
@@ -393,10 +393,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link
-              href={`https://emirates-car.com/search-by-make/Ford`}
-
-            >
+            <Link href={`https://emirates-car.com/search-by-make/Ford`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -415,7 +412,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/GMC`} >
+            <Link href={`/search-by-make/GMC`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -434,7 +431,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Chevrolet`} >
+            <Link href={`/search-by-make/Chevrolet`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -453,7 +450,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Jeep`} >
+            <Link href={`/search-by-make/Jeep`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -472,7 +469,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Hummer`} >
+            <Link href={`/search-by-make/Hummer`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -491,7 +488,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Cadillac`} >
+            <Link href={`/search-by-make/Cadillac`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -510,7 +507,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Lincoln`} >
+            <Link href={`/search-by-make/Lincoln`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -529,7 +526,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Dodge`} >
+            <Link href={`/search-by-make/Dodge`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -548,7 +545,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Chrysler`} >
+            <Link href={`/search-by-make/Chrysler`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -567,7 +564,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mercury`} >
+            <Link href={`/search-by-make/Mercury`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -586,7 +583,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Buick`} >
+            <Link href={`/search-by-make/Buick`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -605,7 +602,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Ram`} >
+            <Link href={`/search-by-make/Ram`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -630,10 +627,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link
-              href={`https://emirates-car.com/search-by-make/Ford`}
-
-            >
+            <Link href={`https://emirates-car.com/search-by-make/Ford`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -652,7 +646,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mitsubishi`} >
+            <Link href={`/search-by-make/Mitsubishi`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -671,7 +665,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Lexus`} >
+            <Link href={`/search-by-make/Lexus`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -690,7 +684,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Nissan`} >
+            <Link href={`/search-by-make/Nissan`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -709,7 +703,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Infiniti`} >
+            <Link href={`/search-by-make/Infiniti`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -728,7 +722,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Honda`} >
+            <Link href={`/search-by-make/Honda`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -749,7 +743,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mazda`} >
+            <Link href={`/search-by-make/Mazda`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -771,7 +765,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           </div>
 
           <div>
-            <Link href={`/search-by-make/Subaru`} >
+            <Link href={`/search-by-make/Subaru`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -792,7 +786,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Suzuki`} >
+            <Link href={`/search-by-make/Suzuki`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -812,7 +806,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Daihatsu`} >
+            <Link href={`/search-by-make/Daihatsu`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -833,7 +827,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Isuzu`} >
+            <Link href={`/search-by-make/Isuzu`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -863,8 +857,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
           <div>
             <Link
               href={`https://emirates-car.com/search-by-make/Aston Martin`}
-
-            >
+              legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -883,7 +876,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Bentley`} >
+            <Link href={`/search-by-make/Bentley`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -903,7 +896,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Jaguar`} >
+            <Link href={`/search-by-make/Jaguar`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -923,7 +916,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Land Rover`} >
+            <Link href={`/search-by-make/Land Rover`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -943,7 +936,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Lotus`} >
+            <Link href={`/search-by-make/Lotus`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -963,7 +956,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/McLaren`} >
+            <Link href={`/search-by-make/McLaren`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -984,7 +977,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mini`} >
+            <Link href={`/search-by-make/Mini`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1005,7 +998,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Rolls-Royce`} >
+            <Link href={`/search-by-make/Rolls-Royce`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1032,10 +1025,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link
-              href={`https://emirates-car.com/search-by-make/Peugeot`}
-
-            >
+            <Link href={`https://emirates-car.com/search-by-make/Peugeot`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1055,7 +1045,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Citroen`} >
+            <Link href={`/search-by-make/Citroen`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1076,7 +1066,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Renault`} >
+            <Link href={`/search-by-make/Renault`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1097,7 +1087,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mobility Ventures LLC`} >
+            <Link href={`/search-by-make/Mobility Ventures LLC`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1118,7 +1108,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Bugatti`} >
+            <Link href={`/search-by-make/Bugatti`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1143,7 +1133,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href={`/search-by-make/Mercedes-Benz`} >
+            <Link href={`/search-by-make/Mercedes-Benz`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1164,7 +1154,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/BMW`} >
+            <Link href={`/search-by-make/BMW`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1185,7 +1175,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Volkswagen`} >
+            <Link href={`/search-by-make/Volkswagen`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1208,7 +1198,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </div>
         <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href={`/search-by-make/Jaguar`} >
+            <Link href={`/search-by-make/Jaguar`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1229,7 +1219,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Land%20Rover`} >
+            <Link href={`/search-by-make/Land%20Rover`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1250,7 +1240,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Porsche`} >
+            <Link href={`/search-by-make/Porsche`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1277,7 +1267,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href={`/search-by-make/Hyundai`} >
+            <Link href={`/search-by-make/Hyundai`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1299,7 +1289,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
 
           </div>
           <div>
-            <Link href={`/search-by-make/Kia`} >
+            <Link href={`/search-by-make/Kia`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1320,7 +1310,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Daewoo`} >
+            <Link href={`/search-by-make/Daewoo`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1845,10 +1835,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </p>
         <div className="grid grid-cols-7 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link
-              href={`https://emirates-car.com/search-by-make/Toyota`}
-
-            >
+            <Link href={`https://emirates-car.com/search-by-make/Toyota`} legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1868,7 +1855,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mitsubishi`} >
+            <Link href={`/search-by-make/Mitsubishi`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1889,7 +1876,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Mercedes-benz`} >
+            <Link href={`/search-by-make/Mercedes-benz`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1910,7 +1897,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Nissan`} >
+            <Link href={`/search-by-make/Nissan`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1931,7 +1918,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Ford`} >
+            <Link href={`/search-by-make/Ford`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1952,7 +1939,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Hyundai`} >
+            <Link href={`/search-by-make/Hyundai`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1973,7 +1960,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Volkswagen`} >
+            <Link href={`/search-by-make/Volkswagen`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -1994,7 +1981,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Honda`} >
+            <Link href={`/search-by-make/Honda`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -2015,7 +2002,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Lexus`} >
+            <Link href={`/search-by-make/Lexus`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -2036,7 +2023,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Acura`} >
+            <Link href={`/search-by-make/Acura`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -2057,7 +2044,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Kia`} >
+            <Link href={`/search-by-make/Kia`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -2078,7 +2065,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Porsche`} >
+            <Link href={`/search-by-make/Porsche`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -2100,7 +2087,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Chevrolet`} >
+            <Link href={`/search-by-make/Chevrolet`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -2121,7 +2108,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             </Link>
           </div>
           <div>
-            <Link href={`/search-by-make/Land Rover`} >
+            <Link href={`/search-by-make/Land Rover`} legacyBehavior>
 
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
@@ -2172,7 +2159,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       href={`https://emirates-car.com/search-by-make/${recommendmake}`}
                       rel="noopener noreferrer"
                       target="_newtab"
-                    >
+                      legacyBehavior>
                       {recommendmake}
                     </Link>
                   </div>
@@ -2186,8 +2173,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <Link
                 href={`/search-by-make/[make]`}
                 as={`/search-by-make/${post.make}`}
-
-              >
+                legacyBehavior>
                 <main className="border h-full  hover:border-blue-600 py-3 ">
                   <div className="flex justify-center">
                     <Image
@@ -2236,7 +2222,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       rel="noopener noreferrer"
                       title={'spare parts online in ' + recommendcities}
                       target="_newtab"
-                    >
+                      legacyBehavior>
                       {recommendcities}
                     </Link>
                   </div>
@@ -2250,8 +2236,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <Link
                 href="/search-by-cities-in-uae/[city]"
                 as={`${'/search-by-cities-in-uae/' + post.city}`}
-
-              >
+                legacyBehavior>
                 <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
                   <p className="text-center text-blue-600 font-medium hover:text-gray-800">
                     {post.city.toUpperCase()}{' '}
@@ -2290,7 +2275,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                       href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                       rel="noopener noreferrer"
                       target="_newtab"
-                    >
+                      legacyBehavior>
                       {suggestion}
                     </Link>
                   </div>
@@ -2305,7 +2290,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 href={`/search-by-part-name/[parts]`}
                 as={`/search-by-part-name/${post.parts}`}
                 title={post.parts}
-              >
+                legacyBehavior>
                 <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
                   <p className="text-lg text-center text-blue-500 font-medium hover:text-gray-800">
                     {post.parts.toUpperCase()}{' '}
@@ -2475,11 +2460,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
           <h3 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
             COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-            <Link
-              href={`/contact`}
-              className="underline text-blue-900"
-
-            >
+            <Link href={`/contact`} className="underline text-blue-900" legacyBehavior>
               CONTACT US NOW {'>>'}
             </Link>
           </h3>
@@ -2512,42 +2493,42 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <Link
                   className="text-xl leading-xl text-blue-900"
                   href={`https://www.facebook.com/emirates.auto.parts`}
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-facebook"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-purple-900"
                   href={`https://www.instagram.com/emiratescar_parts/`}
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-instagram"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-black"
                   href={`https://emirates-car.tumblr.com/`}
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-tumblr"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-blue-300"
                   href={`https://twitter.com/emiratescarpart`}
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-twitter"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-red-700"
                   href={`https://in.pinterest.com/emiratesautomobileparts/`}
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-pinterest"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-blue-500"
                   href={`https://in.pinterest.com/emiratesautomobileparts/`}
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-linkedin"></i>
                 </Link>
               </p>
@@ -2586,8 +2567,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                 <Link
                   href={`/search-by-make/[make]`}
                   as={'/search-by-make/' + post.make}
-
-                >
+                  legacyBehavior>
                   <p className="text-xs text-white font-medium hover:text-gray-800 underline">
                     {post.make + ' spare parts'}{' '}
                   </p>
@@ -2600,8 +2580,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <Link
               href={`https://emirates-car.com`}
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-
-            >
+              legacyBehavior>
               <i className="fa fa-copyright" aria-hidden="true"></i>
               Copyright © 2023 Emirates-car. All rights reserved.
             </Link>

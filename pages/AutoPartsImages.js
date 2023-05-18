@@ -14,7 +14,7 @@ export default class AutoPartImages extends Component {
     return this.state.AutoPartsData.map(image => {
       return (
         <main key={image.title} className="border p-1 py-5 px-5">
-          <Link href={image.href} passHref>
+          <Link href={image.href} passHref legacyBehavior>
 
             <Image
               alt={image.title}

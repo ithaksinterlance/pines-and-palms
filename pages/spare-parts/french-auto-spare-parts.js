@@ -291,7 +291,7 @@ export default function France({ partsposts, posts }) {
                 <Link
                   href={`https://emirates-car.com/search-by-make/Peugeot`}
                   passHref
-                >
+                  legacyBehavior>
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -312,7 +312,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Citroen`} passHref>
+                <Link href={`/search-by-make/Citroen`} passHref legacyBehavior>
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -333,7 +333,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Renault`} passHref>
+                <Link href={`/search-by-make/Renault`} passHref legacyBehavior>
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -354,7 +354,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Mobility Ventures LLC`} passHref>
+                <Link href={`/search-by-make/Mobility Ventures LLC`} passHref legacyBehavior>
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -375,7 +375,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Bugatti`} passHref>
+                <Link href={`/search-by-make/Bugatti`} passHref legacyBehavior>
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -398,7 +398,7 @@ export default function France({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`} passHref>
+              <Link href={`/get-in-touch`} passHref legacyBehavior>
 
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
@@ -759,7 +759,7 @@ export default function France({ partsposts, posts }) {
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
-                  >{suggestion}
+                    legacyBehavior>{suggestion}
 
                   </Link>
                 </div>
@@ -773,8 +773,9 @@ export default function France({ partsposts, posts }) {
             <Link
               href={`/search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/${post.parts}`}
-              passHref title={post.parts + ' in uae'}
-            >
+              passHref
+              title={post.parts + ' in uae'}
+              legacyBehavior>
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                     {post.parts.toUpperCase()}{' '}

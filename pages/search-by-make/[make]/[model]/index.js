@@ -875,7 +875,7 @@ export default function Car({
                             post.make +
                             '/' +
                             post.model}`}
-                        >
+                          legacyBehavior>
 
                             <main className=" xs:text-center font-mono text-blue-800 underline hover:text-blue-700 focus:text-blue-700">
                               {post.make}&nbsp;{post.model.replace('%2F', '/')}
@@ -920,7 +920,7 @@ export default function Car({
                         href={`/search-by-make/[make]`}
                         as={`/search-by-make/${p.make}`}
                         title={`${p.make} spare parts`}
-                      >
+                        legacyBehavior>
 
                           <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                             <div className="flex justify-center">
@@ -1006,7 +1006,7 @@ export default function Car({
                   <Link
                     href="/search-by-cities-in-uae/Dubai"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
+                    legacyBehavior>
 
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                       &nbsp; DUBAI
@@ -1018,7 +1018,7 @@ export default function Car({
                   <Link
                     href="/search-by-cities-in-uae/Sharjah"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
+                    legacyBehavior>
 
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                       &nbsp; SHARJAH
@@ -1030,7 +1030,7 @@ export default function Car({
                   <Link
                     href="search-by-cities-in-uae/Ajman"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
+                    legacyBehavior>
 
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                       &nbsp;AJMAN
@@ -1042,7 +1042,7 @@ export default function Car({
                   <Link
                     href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
+                    legacyBehavior>
 
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                       &nbsp;RAS AL KHAIMAH
@@ -1053,7 +1053,7 @@ export default function Car({
                   <Link
                     href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
+                    legacyBehavior>
 
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                       &nbsp;Al QUOZ
@@ -1064,7 +1064,7 @@ export default function Car({
                   <Link
                     href="/search-by-cities-in-uae/Abu%20Dhabi"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
+                    legacyBehavior>
 
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                       &nbsp;ABU DHABI
@@ -1075,7 +1075,7 @@ export default function Car({
                   <Link
                     href="/search-by-cities-in-uae/Deira%20(Dubai)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
+                    legacyBehavior>
 
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                       &nbsp;DEIRA
@@ -1205,7 +1205,7 @@ export default function Car({
                     href={`/search-by-part-name/[parts]`}
                     as={`/search-by-part-name/${post.parts}`}
                     title={make + ' ' + model + ' ' + post.parts}
-                  >
+                    legacyBehavior>
 
                       <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                         <i className="far fa-compass"></i>

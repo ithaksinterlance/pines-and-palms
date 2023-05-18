@@ -726,42 +726,42 @@ export default function Forms({ posts, pos, po }) {
                 <Link
                   className="text-xl leading-xl text-blue-900"
                   href="https://www.facebook.com/emirates.auto.parts"
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-facebook"></i></Link>
 
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-purple-900"
                   href="https://www.instagram.com/emiratescar_parts/"
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-instagram"></i></Link>
 
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-black"
                   href="https://emirates-car.tumblr.com/"
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-tumblr"></i></Link>
 
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-blue-300"
                   href="https://twitter.com/uaeautoparts"
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-twitter"></i></Link>
 
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-red-700"
                   href="https://in.pinterest.com/emiratesautomobileparts/"
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-pinterest"></i></Link>
 
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-blue-500"
                   href="https://in.pinterest.com/emiratesautomobileparts/"
-                >
+                  legacyBehavior>
                   <i className="fab fa-2x fa-linkedin"></i></Link>
 
               </p>
@@ -801,7 +801,7 @@ export default function Forms({ posts, pos, po }) {
                   href={`/search-by-make/[make]`}
                   as={`/search-by-make/${post.make}`}
                   className="text-xs text-white font-medium hover:text-gray-800 underline"
-                >
+                  legacyBehavior>
                   {post.make + ' spare parts'}
                 </Link>
               </div>
@@ -809,8 +809,12 @@ export default function Forms({ posts, pos, po }) {
           </div>
 
           <div className="text-center text-purple-200 py-10">
-            <Link href={`/`} target="_newtab" title="buy car parts online"
-                className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline">
+            <Link
+              href={`/`}
+              target="_newtab"
+              title="buy car parts online"
+              className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
+              legacyBehavior>
 
                 <i className="fa fa-copyright" aria-hidden="true"></i>
                 Copyright © 2023 Emirates-car. All rights reserved.
