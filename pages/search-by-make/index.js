@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Footer from '../footer';
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Social from '../Social';
 import HondaOfferButton from '../HondaOfferButton';
 

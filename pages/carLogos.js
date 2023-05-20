@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { produc } from "../car-logos";
 
 export default class AutoPartImages extends Component {

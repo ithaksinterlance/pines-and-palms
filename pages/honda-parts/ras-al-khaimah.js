@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Footer from '../footer';
 import Head from 'next/head';
 import Navbar from '../nav';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 export default function RasAlKhaimah() {
   return (

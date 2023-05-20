@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Footer from '../footer';
 import RelatedPost from './relatedpost';
 import Nav from '../nav';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Head from 'next/head';
 
 export default function Blog({ posts }) {

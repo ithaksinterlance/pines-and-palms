@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Hero_img from '../public/img/car-spare-parts.png';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import NewCar from '../public/img/icons/new-car.png';
 import UsedCar from '../public/img/icons/used-car.png';
 import Genuine from '../public/img/icons/genuine.png';

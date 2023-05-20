@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Britain from '../public/img/icons/united-kingdom.png';
 import Indian from '../public/img/icons/india.png';
 import Japan from '../public/img/icons/japan.png';

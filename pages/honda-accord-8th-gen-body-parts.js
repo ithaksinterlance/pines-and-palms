@@ -5,7 +5,7 @@ import Footer from './footer';
 import Head from 'next/head';
 import OtherHondaModels from './OtherHondaModels';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 export default function HondaAccord8thGen() {
   return (

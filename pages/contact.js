@@ -6,7 +6,7 @@ import avatar1 from '../public/img/avatar1.jpeg';
 import avatar2 from '../public/img/avatar2.jpg';
 import avatar3 from '../public/img/avatar3.jpg';
 import Hero_img from '../public/img/car-spare-parts.png';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Head from 'next/head';
 import Social from './Social';
 

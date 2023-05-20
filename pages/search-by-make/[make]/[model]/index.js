@@ -2,7 +2,7 @@ import Nav from '../../../nav';
 import Footer from '../../../footer';
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import Slider from 'react-slick';
 import avatar1 from '../../../../public/img/avatar1.jpeg';

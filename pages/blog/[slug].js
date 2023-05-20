@@ -1,7 +1,7 @@
 import RelatedPost from "./relatedpost";
 import Navbar from "../nav";
 import Footer from "../footer";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head";
 
 export default function Post({ data }) {

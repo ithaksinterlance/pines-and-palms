@@ -4,7 +4,7 @@ import Hero_img from '../public/img/car-spare-parts.png';
 import Hero from './home_hero';
 import Featured from './featured';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Count from './service-countup';
 import Head from 'next/head';
 import Social from './Social';

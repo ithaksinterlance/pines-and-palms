@@ -5,7 +5,7 @@ import Footer from '../../footer';
 import React, { useState, useEffect } from 'react';
 import Social from '../../Social';
 import HondaOfferButton from '../../HondaOfferButton';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import ABS from '../../../public/img/honda-eighth-gen/Anti_Lock_Braking_System.webp';
 import AirFilter from '../../../public/img/honda-eighth-gen/Air_Filter.webp';
 import AirSuspension from '../../../public/img/honda-eighth-gen/Air_Suspension_Module.webp';

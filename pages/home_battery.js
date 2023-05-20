@@ -1,6 +1,6 @@
 import React from 'react';
 import Battery from '../public/img/car-auto-parts/battery.png';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import Slider from 'react-slick';
 

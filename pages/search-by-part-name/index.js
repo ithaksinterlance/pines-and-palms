@@ -1,6 +1,6 @@
 import Nav from '../nav';
 import Footer from '../footer';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Spare from '../../public/img/car-spare-parts.png';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';

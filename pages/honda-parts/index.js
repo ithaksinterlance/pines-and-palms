@@ -4,7 +4,7 @@ import Navbar from '../nav';
 import Footer from '../footer';
 import Link from 'next/link';
 import OtherHondaModels from '../OtherHondaModels';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import FeaturedHonda from '../8th-gen-Honda';
 
 export default function HondaParts() {

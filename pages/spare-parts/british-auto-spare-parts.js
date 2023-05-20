@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../nav';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import Britain from '../../public/img/icons/united-kingdom.png';
 import Footer from '../footer';

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Footer from './footer';
 import Slider from 'react-slick';
 import Battery from '../public/img/car-auto-parts/battery.png';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Social from './Social';
 import 'react-accessible-accordion/dist/fancy-example.css';
 
