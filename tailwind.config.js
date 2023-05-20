@@ -1,8 +1,19 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
+  ],
   media: false,
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        green: colors.emerald,
+        yellow: colors.amber,
+        purple: colors.violet
+      }
+    },
     screens: {
       s: { min: '220px', max: '315px' },
       xs: { min: '316px', max: '413px' },
@@ -14,8 +25,6 @@ module.exports = {
       '2xl': { min: '1536px', max: '2563px' }
     }
   },
-  variants: {
-    extend: {}
-  },
+
   plugins: []
 };
