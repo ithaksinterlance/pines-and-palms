@@ -185,7 +185,7 @@ export default function Forms() {
                 className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base"
               >
                 SEARCH BY PART NAME
-              </Link>{' '}
+              </Link>
             </span>
             | &nbsp;
             <span>
@@ -193,8 +193,8 @@ export default function Forms() {
                 href={`/search-by-cities-in-uae`}
                 className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base"
               >
-                SEARCH BY CITY 
-              </Link>{' '}
+                SEARCH BY CITY
+              </Link>
             </span>
             | &nbsp;
             <span>
@@ -203,7 +203,7 @@ export default function Forms() {
                 className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base "
               >
                 SEARCH BY MAKE
-              </Link>{' '}
+              </Link>
             </span>
           </div>
         </div>
@@ -525,7 +525,7 @@ export default function Forms() {
                   target="_newtab"
                   className="underline"
                 >
-                  Privacy policy
+                  <div>Privacy policy</div>
                 </Link>
                 &nbsp;
                 <Link
@@ -533,7 +533,7 @@ export default function Forms() {
                   target="_newtab"
                   className="underline"
                 >
-                  Terms and conditions
+                  <div>Terms and conditions</div>
                 </Link>
               </div>
 

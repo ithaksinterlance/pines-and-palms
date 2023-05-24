@@ -292,8 +292,8 @@ export default function British({ partsposts, posts }) {
               <div>
                 <Link
                   href={`https://emirates-car.com/search-by-make/Aston Martin`}
-                  passHref
-                  legacyBehavior
+
+
                 >
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
@@ -313,7 +313,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Bentley`} passHref legacyBehavior>
+                <Link href={`/search-by-make/Bentley`}>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -332,7 +332,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Jaguar`} passHref legacyBehavior>
+                <Link href={`/search-by-make/Jaguar`}>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -353,8 +353,6 @@ export default function British({ partsposts, posts }) {
               <div>
                 <Link
                   href={`/search-by-make/Land Rover`}
-                  passHref
-                  legacyBehavior
                 >
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
@@ -374,7 +372,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Lotus`} passHref legacyBehavior>
+                <Link href={`/search-by-make/Lotus`}>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -393,7 +391,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/McLaren`} passHref legacyBehavior>
+                <Link href={`/search-by-make/McLaren`}>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -412,7 +410,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Mini`} passHref legacyBehavior>
+                <Link href={`/search-by-make/Mini`}>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -433,8 +431,8 @@ export default function British({ partsposts, posts }) {
               <div>
                 <Link
                   href={`/search-by-make/Rolls-Royce`}
-                  passHref
-                  legacyBehavior
+
+
                 >
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
@@ -456,7 +454,7 @@ export default function British({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`} passHref legacyBehavior>
+              <Link href={`/get-in-touch`}>
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**
@@ -832,8 +830,8 @@ export default function British({ partsposts, posts }) {
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
-                    passHref
-                    legacyBehavior
+
+
                   >
                     {suggestion}
                   </Link>
@@ -848,9 +846,9 @@ export default function British({ partsposts, posts }) {
             <Link
               href={`/search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/${post.parts}`}
-              passHref
+
               title={post.parts + ' in uae'}
-              legacyBehavior
+
             >
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">

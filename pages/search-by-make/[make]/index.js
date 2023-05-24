@@ -576,7 +576,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                           rel="noopener noreferrer"
                           target="_newtab"
                           title={`${recommend}`}
-                          legacyBehavior>
+                          >
                          {recommend}
                         </Link>
                       </div>
@@ -849,7 +849,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   <Link
                     href={`/search-by-part-name`}
                     className="underline hover:text-blue-500 xs:text-sm"
-                    legacyBehavior>
+                    >
                       {' '}
                       SEARCH BY PART NAME
 
@@ -996,7 +996,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   href={`/search-by-make/[make]/[model]`}
                   as={`/search-by-make/${post.make}/${post.model}`}
                   title={post.make + post.model + ' spare parts'}
-                  legacyBehavior>
+                  >
                     <main className="border border-blue-800 h-full p-3 ">
                       <p className="text-center text-lg xs:text-xl xs:text-center font-mono text-blue-800 underline hover:text-gray-800 focus:text-gray-800 font-bold ">
                         {make + ' ' + post.model.replace('%2F', '/') + ' parts'}{' '}
@@ -1010,7 +1010,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
         </article>
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs py-5">
           **Model not found above?
-          <Link href={`/get-in-touch`} legacyBehavior>
+          <Link href={`/get-in-touch`} >
             <nobr className="text-blue-500 text-sm underline">
               {' '}
               Get in touch with us {'>>'}**
@@ -1050,7 +1050,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Dubai"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts dubai'}
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                 {make} Parts Dubai
@@ -1063,7 +1063,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Sharjah"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts dubai'}
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                 {make} Parts Sharjah
@@ -1076,7 +1076,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Ajman"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts ajman'}
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Ajman
@@ -1089,7 +1089,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts ras al khaimah'}
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Ras Al Khaimah
@@ -1101,7 +1101,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts al quoz'}
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Al Quoz
@@ -1113,7 +1113,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts dubai sheikh zayed road'}
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Sheikh Zayed Road, Dubai
@@ -1125,7 +1125,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Deira%20(Dubai)"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts deira'}
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 {make} Parts Deira
@@ -1481,7 +1481,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 <Link
                   href="/search-by-part-name/AC%20Compressor"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  legacyBehavior>
+                  >
                     {' '}
                     AC Compressor
 
@@ -1526,7 +1526,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   as={`/search-by-part-name/${p.parts}`}
                   className="text-blue-800 hover:text-gray-800 underline"
                   title={p.parts}
-                  legacyBehavior>
+                  >
                     {make + ' ' + p.parts + ' parts'}
 
                 </Link>
@@ -1545,7 +1545,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 href={`/search-by-cities-in-uae/[city]`}
                 as={`/search-by-cities-in-uae/${post.city}`}
                 title={make + ' spare parts ' + post.city}
-                legacyBehavior>
+                >
                   <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
                     <i className="far fa-compass"></i>&nbsp;
                     {post.city}{' '}

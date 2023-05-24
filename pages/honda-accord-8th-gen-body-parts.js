@@ -406,7 +406,7 @@ export default function HondaAccord8thGen() {
                   href="/search-by-part-name/Suspension%20Control%20Module"
                   title="Honda accord air suspension"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                  legacyBehavior>
+                  >
                   {' '}
                   Inquire Now
                 </Link>
@@ -558,7 +558,7 @@ export default function HondaAccord8thGen() {
         <Link
           href="/honda-parts#oemvsaftermarket"
           className="text-white text-4xl xs:text-xl font-mono italic"
-          legacyBehavior>
+          >
           <div className="h-60 xs:h-14 grid grid-cols-1 content-center bg-gradient-to-r from-yellow-500 to-red-800 text-center font-extrabold rounded-3xl underline">
             <i className="fa-solid fa-link"></i>Team Genuine VS Team Aftermarket{' '}
             {'>>'}
@@ -968,7 +968,7 @@ export default function HondaAccord8thGen() {
                 href="/search-by-cities-in-uae/Dubai"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts dubai'}
-                legacyBehavior>
+                >
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                 Honda Accord Parts Dubai
               </Link>
@@ -979,7 +979,7 @@ export default function HondaAccord8thGen() {
                 href="/search-by-cities-in-uae/Sharjah"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda Accord spare parts dubai'}
-                legacyBehavior>
+                >
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                 Honda Accord Parts Sharjah
               </Link>
@@ -990,7 +990,7 @@ export default function HondaAccord8thGen() {
                 href="/search-by-cities-in-uae/Ajman"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda Accord spare parts ajman'}
-                legacyBehavior>
+                >
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 Honda Accord Parts Ajman
               </Link>
@@ -1001,7 +1001,7 @@ export default function HondaAccord8thGen() {
                 href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda Accord spare parts ras al khaimah'}
-                legacyBehavior>
+                >
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 Honda Accord Parts Ras Al Khaimah
               </Link>
@@ -1011,7 +1011,7 @@ export default function HondaAccord8thGen() {
                 href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda Accord spare parts al quoz'}
-                legacyBehavior>
+                >
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 Honda Accord Parts Al Quoz
               </Link>
@@ -1021,7 +1021,7 @@ export default function HondaAccord8thGen() {
                 href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda Accord spare parts sheikh zayed road'}
-                legacyBehavior>
+                >
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 Honda Accord Parts Sheikh Zayed Road, Dubai
               </Link>
@@ -1031,7 +1031,7 @@ export default function HondaAccord8thGen() {
                 href="/search-by-cities-in-uae/Deira%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda Accord spare parts deira'}
-                legacyBehavior>
+                >
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 Honda Accord Parts Deira
               </Link>

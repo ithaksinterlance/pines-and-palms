@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../nav';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import American from '../../public/img/icons/usa.png';
 import Footer from '../footer';
@@ -289,268 +289,241 @@ export default function America({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link
-                  href={`https://emirates-car.com/search-by-make/Ford`}
-                  passHref
-                  legacyBehavior>
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="ford spare parts dubai"
-                          src="/img/car-logos/ford.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Ford
-                      </p>
-                    </main>
+                <Link href={`https://emirates-car.com/search-by-make/Ford`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="ford spare parts dubai"
+                        src="/img/car-logos/ford.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Ford
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/GMC`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="GMC spare parts in uae"
-                          src="/img/car-logos/gmc.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        GMC
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/GMC`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="GMC spare parts in uae"
+                        src="/img/car-logos/gmc.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      GMC
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Chevrolet`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Chevrolet spare parts in uae"
-                          src="/img/car-logos/chevrolet.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Chevrolet
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Chevrolet`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Chevrolet spare parts in uae"
+                        src="/img/car-logos/chevrolet.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Chevrolet
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Jeep`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="jeep spare parts in uae"
-                          src="/img/car-logos/jeep.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Jeep
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Jeep`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="jeep spare parts in uae"
+                        src="/img/car-logos/jeep.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Jeep
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Hummer`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="hummer parts online"
-                          src="/img/car-logos/hummer.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Hummer
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Hummer`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="hummer parts online"
+                        src="/img/car-logos/hummer.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Hummer
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Cadillac`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Cadillac spare parts sharjah"
-                          src="/img/car-logos/cadillac.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Cadillac
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Cadillac`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Cadillac spare parts sharjah"
+                        src="/img/car-logos/cadillac.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Cadillac
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Lincoln`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="lincoln spare parts sharjah"
-                          src="/img/car-logos/lincoln.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Lincoln
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Lincoln`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="lincoln spare parts sharjah"
+                        src="/img/car-logos/lincoln.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Lincoln
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Dodge`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="dodge spare parts dubai"
-                          src="/img/car-logos/dodge.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Dodge
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Dodge`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="dodge spare parts dubai"
+                        src="/img/car-logos/dodge.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Dodge
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Chrysler`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Chrysler spare parts in uae"
-                          src="/img/car-logos/chrysler.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Chrysler
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Chrysler`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Chrysler spare parts in uae"
+                        src="/img/car-logos/chrysler.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Chrysler
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Mercury`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="mercury spare parts in dubai"
-                          src="/img/car-logos/mercury.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Mercury
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Mercury`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="mercury spare parts in dubai"
+                        src="/img/car-logos/mercury.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Mercury
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Buick`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="buick spare parts in uae"
-                          src="/img/car-logos/buick.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Buick
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Buick`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="buick spare parts in uae"
+                        src="/img/car-logos/buick.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Buick
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Ram`} passHref legacyBehavior>
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="ram spare parts in uae"
-                          src="/img/car-logos/ram.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Ram
-                      </p>
-                    </main>
-
+                <Link href={`/search-by-make/Ram`}>
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="ram spare parts in uae"
+                        src="/img/car-logos/ram.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Ram
+                    </p>
+                  </main>
                 </Link>
               </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`} passHref legacyBehavior>
-
-                  <nobr className="text-blue-500 text-sm underline">
-                    {' '}
-                    Get in touch with us {'>>'}**
-                  </nobr>
-
+              <Link href={`/get-in-touch`}>
+                <nobr className="text-blue-500 text-sm underline">
+                  {' '}
+                  Get in touch with us {'>>'}**
+                </nobr>
               </Link>{' '}
             </div>
             <p className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
@@ -575,10 +548,9 @@ export default function America({ partsposts, posts }) {
               can check our catalogue at{' '}
               <Link
                 href={`https://emirates-car.com/search-by-part-name`}
-                passHref className="text-blue-400 underline"
+                className="text-blue-400 underline"
               >
-                  https://emirates-car.com/search-by-part-name
-
+                https://emirates-car.com/search-by-part-name
               </Link>
               . Submit your inquiry to us, our dealer will get back to you based
               on stock availability.
@@ -591,24 +563,29 @@ export default function America({ partsposts, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href={`/search-by-part-name`} passHref className="underline hover:text-blue-500 xs:text-sm">
-                        SEARCH BY PART NAME
-
+                    <Link
+                      href={`/search-by-part-name`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY PART NAME
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-cities-in-uae`} passHref className="underline hover:text-blue-500 xs:text-sm">
-
-                        SEARCH BY CITY
-
+                    <Link
+                      href={`/search-by-cities-in-uae`}
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY CITY
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-make`} passHref className="underline hover:text-blue-500  xs:text-sm">
-                        SEARCH BY MAKE
-
+                    <Link
+                      href={`/search-by-make`}
+                      className="underline hover:text-blue-500  xs:text-sm"
+                    >
+                      SEARCH BY MAKE
                     </Link>{' '}
                     &nbsp;
                   </span>
@@ -682,7 +659,7 @@ export default function America({ partsposts, posts }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map((m,i) => (
+                        {make.map((m, i) => (
                           <option key={i}>{m}</option>
                         ))}{' '}
                       </select>
@@ -718,7 +695,7 @@ export default function America({ partsposts, posts }) {
                         </option>
                         {posts
                           .filter(s => s.make === Make)
-                          .map((s,i) => (
+                          .map((s, i) => (
                             <option key={i} value={s.model}>
                               {s.model}{' '}
                             </option>
@@ -852,12 +829,20 @@ export default function America({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link href={`/privacy-policy`} target="_newtab" passHref className="underline">
+                  <Link
+                    href={`/privacy-policy`}
+                    target="_newtab"
+                    className="underline"
+                  >
                     Privacy policy
                   </Link>
                   &nbsp;
-                  <Link href={`/terms-and-condition`} target="_newtab" passHref className="underline">
-                   Terms and conditions
+                  <Link
+                    href={`/terms-and-condition`}
+                    target="_newtab"
+                    className="underline"
+                  >
+                    Terms and conditions
                   </Link>
                 </div>
 
@@ -908,9 +893,8 @@ export default function America({ partsposts, posts }) {
                     href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
                     rel="noopener noreferrer"
                     target="_newtab"
-                    passHref
-                    legacyBehavior>{suggestion}
-
+                  >
+                    {suggestion}
                   </Link>
                 </div>
               ))}{' '}
@@ -918,20 +902,18 @@ export default function America({ partsposts, posts }) {
         </div>
       </div>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-        {partsposts.map((post,i) => (
+        {partsposts.map((post, i) => (
           <div key={i}>
             <Link
               href={`/search-by-cities-in-uae/[city]`}
               as={`/search-by-part-name/${post.parts}`}
-              passHref
               title={post.parts + ' in uae'}
-              legacyBehavior>
-                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                    {post.parts.toUpperCase()}{' '}
-                  </p>
-                </main>
-
+            >
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  {post.parts.toUpperCase()}{' '}
+                </p>
+              </main>
             </Link>
           </div>
         ))}{' '}

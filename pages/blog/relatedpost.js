@@ -35,43 +35,43 @@ export default class relatedpost extends Component {
             <li className="nav-item">
               <Link
                 href={`https://www.facebook.com/emirates.auto.parts`}
-                passHref
+                
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                legacyBehavior>
+                >
 
                   <FontAwesomeIcon
                     icon={faFacebook}
                     className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
                   />
-                
+
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 href={`https://www.instagram.com/emiratescar_parts/`}
-                passHref
-                legacyBehavior>
+                
+                >
 
                   <FontAwesomeIcon
                     icon={faInstagram}
                     className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
                   />
-                
+
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 href={`https://twitter.com/emiratescarpart`}
-                passHref
+                
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                legacyBehavior>
+                >
 
                   <FontAwesomeIcon
                     icon={faTwitter}
                     className="ml-2 text-xl leading-xl text-blue-900 opacity-75"
                   />
-                
+
               </Link>
             </li>
           </ul>
@@ -81,27 +81,27 @@ export default class relatedpost extends Component {
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
               <Link
                 href={`/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons`}
-                passHref
-                legacyBehavior>
+                
+                >
 
                   5 ways you can buy car spare parts
                   <p className="text-gray-300 text-xs font-bold uppercase pt-2">
                     12 days ago - 10 min read
                   </p>
-                
+
               </Link>
             </li>
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
               <Link
                 href={`/blog/How%20to%20Buy%20Auto%20Parts%20Online`}
-                passHref
-                legacyBehavior>
+                
+                >
 
                   How to Buy Car Spare Parts Online
                   <p className="text-gray-300 text-xs font-bold uppercase pt-2">
                     5 days ago - 10 min read
                   </p>
-                
+
               </Link>
             </li>
           </ul>

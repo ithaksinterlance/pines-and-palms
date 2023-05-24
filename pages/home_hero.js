@@ -159,7 +159,7 @@ export default class home_hero extends Component {
             </div>
             <div className="grid grid-cols-3 xs:grid xs:grid-cols-3 s:grid s:grid-cols-3 ml-8 xs:py-10 sm:py-10 s:py-10 2xs:py-10 s:mx-5 xs:mx-3 2xs:mx-5">
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:shadow-none s:border-none">
-                <Link href={`/spare-parts/british-auto-spare-parts`} legacyBehavior>
+                <Link href={`/spare-parts/british-auto-spare-parts`} >
 
                     <Image
                       src={Britain}
@@ -185,7 +185,7 @@ export default class home_hero extends Component {
                 <p className="text-gray-500 text-sm">INDIAN</p>
               </div>
               <div className="text-center border-l-2 border-b-2 border-gray-800 xs:border-none shadow-lg xs:shadow-none s:border-none s:shadow-none">
-                <Link href={`/spare-parts/japanese-auto-spare-parts`} legacyBehavior>
+                <Link href={`/spare-parts/japanese-auto-spare-parts`} >
 
                     <Image
                       src={Japan}
@@ -200,7 +200,7 @@ export default class home_hero extends Component {
                 </Link>
               </div>
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
-                <Link href={`/spare-parts/korean-auto-spare-parts`} legacyBehavior>
+                <Link href={`/spare-parts/korean-auto-spare-parts`} >
 
                     <Image
                       src={Korean}
@@ -215,7 +215,7 @@ export default class home_hero extends Component {
                 </Link>
               </div>
               <div className="text-center border-b-2 border-r-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
-                <Link href={`/spare-parts/american-auto-spare-parts`} legacyBehavior>
+                <Link href={`/spare-parts/american-auto-spare-parts`} >
 
                     <Image
                       src={USA}
@@ -230,7 +230,7 @@ export default class home_hero extends Component {
                 </Link>
               </div>
               <div className="text-center border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
-                <Link href={`/spare-parts/german-auto-spare-parts`} legacyBehavior>
+                <Link href={`/spare-parts/german-auto-spare-parts`} >
 
                     <Image
                       src={Germany}
@@ -256,7 +256,7 @@ export default class home_hero extends Component {
                 <p className="text-gray-500 text-sm">CHINESE</p>
               </div>
               <div className="text-center shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
-                <Link href={`/spare-parts/french-auto-spare-parts`} legacyBehavior>
+                <Link href={`/spare-parts/french-auto-spare-parts`} >
 
                     <Image
                       src={France}
