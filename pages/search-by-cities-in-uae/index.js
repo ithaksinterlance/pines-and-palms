@@ -338,7 +338,7 @@ export default function City({ cities, data, posts, pos }) {
                           width="100%"
                         >
                           <Link
-                            href={`https://emirates-car.com/search-by-cities-in-uae/${recommend}`}
+                            href={"https://emirates-car.com/search-by-cities-in-uae/"+recommend}
                             rel="noopener noreferrer"
                             target="_newtab"
                             >
@@ -361,9 +361,9 @@ export default function City({ cities, data, posts, pos }) {
                 {cities.map((post,i) => (
                   <div key={i}>
                     <Link
-                      href={`/search-by-cities-in-uae/[city]`}
-                      as={`/search-by-cities-in-uae/${post.city}`}
-                      passHref
+                      href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+                      as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
+
                       title={'car spare parts ' + post.city}
                       >
                         <main className="border border-blue-800 h-full p-3 ">
@@ -615,11 +615,11 @@ export default function City({ cities, data, posts, pos }) {
                     </button>
                   </div>
                   <div className="flex float-left text-xs text-gray-400">
-                    <Link href={`/privacy-policy`} target="_newtab" className="underline">
+                    <Link href="https://emirates-car.com/privacy-policy" target="_newtab" className="underline">
                       Privacy policy
                     </Link>
                     &nbsp;
-                    <Link href={`/terms-and-condition`} target="_newtab" className="underline">
+                    <Link href="https://emirates-car.com/terms-and-condition" target="_newtab" className="underline">
                       Terms and conditions
                     </Link>
                   </div>
@@ -632,21 +632,21 @@ export default function City({ cities, data, posts, pos }) {
                   <Social />
                   <div>
                     <span>
-                      <Link href={`/search-by-part-name`} className="underline hover:text-blue-500 xs:text-sm">
+                      <Link href="https://emirates-car.com/search-by-part-name" className="underline hover:text-blue-500 xs:text-sm">
                           SEARCH BY PART NAME
 
                       </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
-                      <Link href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500  xs:text-sm">
+                      <Link href="https://emirates-car.com/search-by-cities-in-uae" className="underline hover:text-blue-500  xs:text-sm">
                           SEARCH BY CITY
 
                       </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
-                      <Link href={`/search-by-make`} className="underline hover:text-blue-500  xs:text-sm">
+                      <Link href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500  xs:text-sm">
                           SEARCH BY MAKE
 
                       </Link>{' '}
@@ -665,7 +665,7 @@ export default function City({ cities, data, posts, pos }) {
                   UAE. We also operate in main cities such as dubai, sharjah,
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
-                  <Link href={`https://emirates-car.com/search-by-part-name`} className="text-blue-400 underline">
+                  <Link href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">
                       https://emirates-car.com/search-by-part-name
 
                   </Link>
@@ -673,8 +673,8 @@ export default function City({ cities, data, posts, pos }) {
                   {data.map((p,i) => (
                     <Link
                       key={i}
-                      href={`https://emirates-car.com/search-by-make/${p.make}`}
-                      passHref
+                      href="https://emirates-car.com/search-by-make/${p.make}"
+
                       >
 
                         {p.make}
@@ -721,8 +721,8 @@ export default function City({ cities, data, posts, pos }) {
             {data.map((post,i) => (
               <div key={i}>
                 <Link
-                  href={`/search-by-make/[make]`}
-                  as={`/search-by-make/${post.make}`}
+                  href="https://emirates-car.com/search-by-make/[make]"
+                  as="/search-by-make/${post.make}"
                   title={post.make + ' spare parts sharjah'}
                   >
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">

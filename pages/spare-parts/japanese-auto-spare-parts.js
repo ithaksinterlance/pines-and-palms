@@ -289,8 +289,8 @@ export default function Japan({ partsposts, posts }) {
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
                 <Link
-                  href={`https://emirates-car.com/search-by-make/Toyota`}
-                  
+                  href="https://emirates-car.com/search-by-make/Toyota"
+
                   >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -312,7 +312,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Mitsubishi`}  >
+                <Link href="https://emirates-car.com/search-by-make/Mitsubishi"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -333,7 +333,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Lexus`}  >
+                <Link href="https://emirates-car.com/search-by-make/Lexus"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -354,7 +354,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Nissan`}  >
+                <Link href="https://emirates-car.com/search-by-make/Nissan"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -375,7 +375,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Infiniti`}  >
+                <Link href="https://emirates-car.com/search-by-make/Infiniti"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -396,7 +396,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Honda`}  >
+                <Link href="https://emirates-car.com/search-by-make/Honda"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -417,7 +417,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Mazda`}  >
+                <Link href="https://emirates-car.com/search-by-make/Mazda"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -439,7 +439,7 @@ export default function Japan({ partsposts, posts }) {
               </div>
 
               <div>
-                <Link href={`/search-by-make/Subaru`}  >
+                <Link href="https://emirates-car.com/search-by-make/Subaru"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -460,7 +460,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Suzuki`}  >
+                <Link href="https://emirates-car.com/search-by-make/Suzuki"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -481,7 +481,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Daihatsu`}  >
+                <Link href="https://emirates-car.com/search-by-make/Daihatsu"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -502,7 +502,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Isuzu`}  >
+                <Link href="https://emirates-car.com/search-by-make/Isuzu"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -525,7 +525,7 @@ export default function Japan({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`}  >
+              <Link href="https://emirates-car.com/get-in-touch"  >
 
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
@@ -555,7 +555,7 @@ export default function Japan({ partsposts, posts }) {
               Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
               can check our catalogue at{' '}
               <Link
-                href={`https://emirates-car.com/search-by-part-name`}
+                href="https://emirates-car.com/search-by-part-name"
                 className="text-blue-400 underline"
               >
                 https://emirates-car.com/search-by-part-name
@@ -572,7 +572,7 @@ export default function Japan({ partsposts, posts }) {
                 <div>
                   <span>
                     <Link
-                      href={`/search-by-part-name`}
+                      href="https://emirates-car.com/search-by-part-name"
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -581,7 +581,7 @@ export default function Japan({ partsposts, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-cities-in-uae`}
+                      href="https://emirates-car.com/search-by-cities-in-uae"
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                        SEARCH BY CITY
@@ -590,7 +590,7 @@ export default function Japan({ partsposts, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-make`}
+                      href="https://emirates-car.com/search-by-make"
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -838,7 +838,7 @@ export default function Japan({ partsposts, posts }) {
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
-                    href={`/privacy-policy`}
+                    href="https://emirates-car.com/privacy-policy"
                     target="_newtab"
                     className="underline"
                   >
@@ -846,7 +846,7 @@ export default function Japan({ partsposts, posts }) {
                   </Link>
                   &nbsp;
                   <Link
-                    href={`/terms-and-condition`}
+                    href="https://emirates-car.com/terms-and-condition"
                     target="_newtab"
                     className="underline"
                   >
@@ -898,7 +898,7 @@ export default function Japan({ partsposts, posts }) {
                   width="100%"
                 >
                   <Link
-                    href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
+                    href="https://emirates-car.com/search-by-part-name/${suggestion}"
                     rel="noopener noreferrer"
                     target="_newtab"
                     >
@@ -913,9 +913,8 @@ export default function Japan({ partsposts, posts }) {
         {partsposts.map((post, i) => (
           <div key={i}>
             <Link
-              href={`/search-by-cities-in-uae/[city]`}
-              as={`/search-by-part-name/ ${post.parts}`}
-              
+              href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+              as={"https://emirates-car.com/search-by-part-name/"+ post.parts}
               title={post.parts + ' in uae'}
               >
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">

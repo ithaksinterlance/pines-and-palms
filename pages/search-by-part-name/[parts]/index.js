@@ -231,8 +231,7 @@ export default function Parts({ data, cities, posts }) {
                 <div>
                   <span>
                     <Link
-                      href={`/search-by-part-name`} className="underline hover:text-blue-500 xs:text-sm" title="car spare parts online"
-
+                      href="https://emirates-car.com/search-by-part-name" className="underline hover:text-blue-500 xs:text-sm" title="car spare parts online"
                     >
                       SEARCH BY PART NAME
                     </Link>{' '}
@@ -240,7 +239,7 @@ export default function Parts({ data, cities, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500 xs:text-sm"
+                      href="https://emirates-car.com/search-by-cities-in-uae" className="underline hover:text-blue-500 xs:text-sm"
 
                     >
                       Spare parts near me
@@ -249,7 +248,7 @@ export default function Parts({ data, cities, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-make`} className="underline hover:text-blue-500 xs:text-sm"
+                      href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500 xs:text-sm"
 
                     >
                       SEARCH BY MAKE
@@ -552,7 +551,7 @@ export default function Parts({ data, cities, posts }) {
                     </div>
                     <div className="flex float-left text-xs text-gray-400">
                       <Link
-                        href={`/privacy-policy`}
+                        href="https://emirates-car.com/privacy-policy"
 
                         target="_newtab" className="underline"
                       >
@@ -560,7 +559,7 @@ export default function Parts({ data, cities, posts }) {
                       </Link>
                       &nbsp;
                       <Link
-                        href={`/terms-and-condition`}
+                        href="https://emirates-car.com/terms-and-condition"
 
                         target="_newtab" className="underline"
                       >
@@ -580,9 +579,9 @@ export default function Parts({ data, cities, posts }) {
                 {posts.map((post,i) => (
                   <div key={i}>
                     <Link
-                      href={`/search-by-make/[make]`}
-                      as={`/search-by-make/${post.make}`}
-                      title={data.parts + ' for ' + post.make}
+                      href="https://emirates-car.com/search-by-make/[make]"
+                      as={"https://emirates-car.com/search-by-make/"+ post.make}
+                      title={ post.make +" "+ data.parts}
 
                       >
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -614,7 +613,7 @@ export default function Parts({ data, cities, posts }) {
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
                   <Link
-                    href={`https://emirates-car.com/search-by-part-name`}
+                    href="https://emirates-car.comhttps://emirates-car.com/search-by-part-name"
                     className="text-blue-400 underline"
 
                   >
@@ -658,8 +657,8 @@ export default function Parts({ data, cities, posts }) {
             {cities.map((post,i) => (
               <div key={i}>
                 <Link
-                  href={`/search-by-cities-in-uae/[city]'}`}
-                  as={`/search-by-cities-in-uae/${post.city}`}
+                  href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+                  as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
                   title={data.parts +" in "+post.city}
                   >
                   <div className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">

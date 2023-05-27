@@ -36,7 +36,7 @@ export default function Blog({ posts }) {
             <div className="w-3/4 xs:w-full sm:w-full 2xs:w-full">
               {posts.map(post => (
                 <div key={post.TITLE}>
-                  <Link href={`/blog/${post.TITLE}`} legacyBehavior>
+                  <Link href="https://emirates-car.com/blog/${post.TITLE}" >
 
                       <div className="py-3">
                         <div className="border border-gray-200 p-3 rounded-sm">
@@ -48,10 +48,10 @@ export default function Blog({ posts }) {
                               height={350}
                             />
                           </div>{' '}
-                          <h1 className="text-4xl xs:text-lg sm:text-md md:text-lg font-bold font-sans pt-5 text-blue-500">
+                          <h6 className="text-4xl xs:text-lg sm:text-md md:text-lg font-bold font-sans pt-5 text-blue-500">
                             {post.TITLE}{' '}
                             <i className="fa fa-link" aria-hidden="true"></i>{' '}
-                          </h1>{' '}
+                          </h6>{' '}
                           <p className="text-sm text-gray-400 font-semibold uppercase pb-5 xs:pb-3 xs:text-xs">
                             {post.TIME} - {post.DATE_PUBLISHED}
                           </p>
@@ -71,7 +71,7 @@ export default function Blog({ posts }) {
                           </div>
                         </div>
                       </div>
-                    
+
                   </Link>
                 </div>
               ))}
@@ -79,7 +79,7 @@ export default function Blog({ posts }) {
                 Popular Posts
               </div>
               <div className="grid grid-cols-2 gap-4 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 py-5">
-                <Link href={`/blog/Ferrari%20Portofino%20M`} legacyBehavior>
+                <Link href="https://emirates-car.com/blog/Ferrari%20Portofino%20M" >
 
                     <div className="shadow-2xl rounded-sm">
                       <div className="flex">
@@ -99,9 +99,9 @@ export default function Blog({ posts }) {
                         </div>
                       </div>
                     </div>
-                  
+
                 </Link>
-                <Link href={`/blog/Ferrari%20F8%20Spider%202022`} legacyBehavior>
+                <Link href="https://emirates-car.com/blog/Ferrari%20F8%20Spider%202022" >
 
                     <div className="shadow-2xl rounded-sm">
                       <div className="flex">
@@ -120,7 +120,7 @@ export default function Blog({ posts }) {
                         </div>
                       </div>
                     </div>
-                  
+
                 </Link>
               </div>
             </div>

@@ -65,7 +65,7 @@ export default function Dubai() {
             and more models
           </h1>
           <Link
-            href={`/search-by-cities-in-uae/Dubai`}
+            href="https://emirates-car.com/search-by-cities-in-uae/Dubai"
             className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
             target="_newtab"
           >
@@ -156,7 +156,7 @@ export default function Dubai() {
           <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
             <div>
               <Link
-                href="/search-by-cities-in-uae/Dubai"
+                href="https://emirates-car.com/search-by-cities-in-uae/Dubai"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts dubai'}
                 >
@@ -169,7 +169,7 @@ export default function Dubai() {
             <div>
               {' '}
               <Link
-                href="/search-by-cities-in-uae/Sharjah"
+                href="https://emirates-car.com/search-by-cities-in-uae/Sharjah"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts dubai'}
                 >
@@ -182,7 +182,7 @@ export default function Dubai() {
             <div>
               {' '}
               <Link
-                href="/search-by-cities-in-uae/Ajman"
+                href="https://emirates-car.com/search-by-cities-in-uae/Ajman"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts ajman'}
                 >
@@ -195,7 +195,7 @@ export default function Dubai() {
             <div>
               {' '}
               <Link
-                href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
+                href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts ras al khaimah'}
                 >
@@ -207,7 +207,7 @@ export default function Dubai() {
             </div>
             <div>
               <Link
-                href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
+                href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts al quoz'}
                 >
@@ -219,7 +219,7 @@ export default function Dubai() {
             </div>
             <div>
               <Link
-                href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
+                href="https://emirates-car.com/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts dubai sheikh zayed road'}
                 >
@@ -231,7 +231,7 @@ export default function Dubai() {
             </div>
             <div>
               <Link
-                href="/search-by-cities-in-uae/Deira%20(Dubai)"
+                href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts deira'}
                 >
@@ -253,7 +253,7 @@ export default function Dubai() {
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
                   <Link
-                    href="/search-by-part-name/Engine%20Assembly"
+                    href="https://emirates-car.com/search-by-part-name/Engine%20Assembly"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Engine Assembly
@@ -261,7 +261,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Engine%20Block"
+                    href="https://emirates-car.com/search-by-part-name/Engine%20Block"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Engine Block
@@ -269,7 +269,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Engine%20Mount"
+                    href="https://emirates-car.com/search-by-part-name/Engine%20Mount"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Engine Mount
@@ -277,7 +277,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Engine%20Block"
+                    href="https://emirates-car.com/search-by-part-name/Engine%20Block"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Engine Block
@@ -285,7 +285,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Cylinder%20Head"
+                    href="https://emirates-car.com/search-by-part-name/Cylinder%20Head"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Cylinder Head
@@ -293,7 +293,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Cylinder%20Block"
+                    href="https://emirates-car.com/search-by-part-name/Cylinder%20Block"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Cylinder Block
@@ -301,7 +301,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Crankshaft"
+                    href="https://emirates-car.com/search-by-part-name/Crankshaft"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Crankshaft
@@ -309,7 +309,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Camshaft"
+                    href="https://emirates-car.com/search-by-part-name/Camshaft"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Camshaft
@@ -317,7 +317,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Piston"
+                    href="https://emirates-car.com/search-by-part-name/Piston"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Piston
@@ -325,7 +325,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Exhaust%20Manifold"
+                    href="https://emirates-car.com/search-by-part-name/Exhaust%20Manifold"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Exhaust Manifold
@@ -333,7 +333,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Intake%20Manifold"
+                    href="https://emirates-car.com/search-by-part-name/Intake%20Manifold"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Intake Manifold
@@ -341,20 +341,20 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Ignition%20Switch"
+                    href="https://emirates-car.com/search-by-part-name/Ignition%20Switch"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Ignition Switch
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search-by-part-name/Ignition%20Control%20Module">
+                  <Link href="https://emirates-car.com/search-by-part-name/Ignition%20Control%20Module">
                     Ignition Control Module
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Transmission%20Control%20Module"
+                    href="https://emirates-car.com/search-by-part-name/Transmission%20Control%20Module"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     TCM
@@ -370,7 +370,7 @@ export default function Dubai() {
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
                   <Link
-                    href="/search-by-part-name/Engine%20Assembly"
+                    href="https://emirates-car.com/search-by-part-name/Engine%20Assembly"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Engine
@@ -378,7 +378,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Engine%20Assembly"
+                    href="https://emirates-car.com/search-by-part-name/Engine%20Assembly"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Battery
@@ -386,7 +386,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Engine%20Assembly"
+                    href="https://emirates-car.com/search-by-part-name/Engine%20Assembly"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Alternator
@@ -394,7 +394,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Brake%20Pads"
+                    href="https://emirates-car.com/search-by-part-name/Brake%20Pads"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Brake Pads
@@ -402,7 +402,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Radiator"
+                    href="https://emirates-car.com/search-by-part-name/Radiator"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Radiator
@@ -410,7 +410,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Transmission%20Control%20Module"
+                    href="https://emirates-car.com/search-by-part-name/Transmission%20Control%20Module"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Transmission
@@ -418,7 +418,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Shock%20Absorber"
+                    href="https://emirates-car.com/search-by-part-name/Shock%20Absorber"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Shock Absorber
@@ -426,7 +426,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Convertible%20Top%20Motor"
+                    href="https://emirates-car.com/search-by-part-name/Convertible%20Top%20Motor"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                     >
                     {' '}
@@ -435,7 +435,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Power%20Steering%20Box"
+                    href="https://emirates-car.com/search-by-part-name/Power%20Steering%20Box"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Power Steering
@@ -443,7 +443,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/get-in-touch"
+                    href="https://emirates-car.com/get-in-touch"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Pump
@@ -459,7 +459,7 @@ export default function Dubai() {
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
                   <Link
-                    href="/search-by-part-name/Bonnet"
+                    href="https://emirates-car.com/search-by-part-name/Bonnet"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Bonnet
@@ -467,7 +467,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Fender%20(Front)"
+                    href="https://emirates-car.com/search-by-part-name/Fender%20(Front)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Fender
@@ -475,7 +475,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Decklid"
+                    href="https://emirates-car.com/search-by-part-name/Decklid"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Decklid
@@ -483,7 +483,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Grille"
+                    href="https://emirates-car.com/search-by-part-name/Grille"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Grille
@@ -491,7 +491,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Wheel"
+                    href="https://emirates-car.com/search-by-part-name/Wheel"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Wheel
@@ -507,7 +507,7 @@ export default function Dubai() {
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
                   <Link
-                    href="/search-by-part-name/Spark%20Plug"
+                    href="https://emirates-car.com/search-by-part-name/Spark%20Plug"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Spark Plug
@@ -515,7 +515,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Alternator"
+                    href="https://emirates-car.com/search-by-part-name/Alternator"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Alternator
@@ -523,7 +523,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Battery"
+                    href="https://emirates-car.com/search-by-part-name/Battery"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Battery
@@ -531,7 +531,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/Ignition%20Switch"
+                    href="https://emirates-car.com/search-by-part-name/Ignition%20Switch"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Ignition Switch
@@ -539,7 +539,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/get-in-touch"
+                    href="https://emirates-car.com/get-in-touch"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Many more...
@@ -555,7 +555,7 @@ export default function Dubai() {
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
                   <Link
-                    href="/search-by-part-name/AC%20Compressor"
+                    href="https://emirates-car.com/search-by-part-name/AC%20Compressor"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     AC Compressor
@@ -563,7 +563,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/AC%20Condenser"
+                    href="https://emirates-car.com/search-by-part-name/AC%20Condenser"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     AC Condenser
@@ -571,7 +571,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/AC%20Selector"
+                    href="https://emirates-car.com/search-by-part-name/AC%20Selector"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     AC Selector
@@ -579,7 +579,7 @@ export default function Dubai() {
                 </li>
                 <li>
                   <Link
-                    href="/search-by-part-name/AC%20Controls"
+                    href="https://emirates-car.com/search-by-part-name/AC%20Controls"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     AC Controls
@@ -647,7 +647,7 @@ export default function Dubai() {
             submitted. If one website didnt reply you, then other website will
             do. So there is plenty of website and options.{' '}
             <Link
-              href="/"
+              href="https://emirates-car.com/"
               className="text-blue-500 hover:text-blue-900 underline"
             >
               Emirates-car.com

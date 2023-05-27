@@ -288,7 +288,7 @@ export default function Forms({ posts, pos, po }) {
             &nbsp;
             <span>
               <Link
-                href={`/search-by-part-name`}
+                href="https://emirates-car.com/search-by-part-name"
                 className="underline xs:no-underline hover:text-blue-500"
               >
                 SEARCH BY PART NAME
@@ -297,7 +297,7 @@ export default function Forms({ posts, pos, po }) {
             | &nbsp;
             <span>
               <Link
-                href={`/search-by-cities-in-uae`}
+                href="https://emirates-car.com/search-by-cities-in-uae"
                 className="underline xs:no-underline hover:text-blue-500"
               >
                 SEARCH BY CITY
@@ -306,7 +306,7 @@ export default function Forms({ posts, pos, po }) {
             | &nbsp;
             <span>
               <Link
-                href={`/search-by-make`}
+                href="https://emirates-car.com/search-by-make"
                 className="underline xs:no-underline hover:text-blue-500"
               >
                 SEARCH BY MAKE
@@ -666,7 +666,7 @@ export default function Forms({ posts, pos, po }) {
               </div>
               <div className="flex float-left text-xs text-gray-400">
                 <Link
-                  href={`/privacy-policy`}
+                  href="https://emirates-car.com/privacy-policy"
                   target="_newtab"
                   className="underline"
                 >
@@ -674,7 +674,7 @@ export default function Forms({ posts, pos, po }) {
                 </Link>
                 &nbsp;
                 <Link
-                  href={`/terms-and-condition`}
+                  href="https://emirates-car.com/terms-and-condition"
                   target="_newtab"
                   className="underline"
                 >
@@ -693,7 +693,7 @@ export default function Forms({ posts, pos, po }) {
         <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
           <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
             COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-            <Link href={`/contact`} className="underline text-blue-900">
+            <Link href="https://emirates-car.com/contact" className="underline text-blue-900">
               CONTACT US NOW
             </Link>
           </h1>
@@ -770,21 +770,21 @@ export default function Forms({ posts, pos, po }) {
             <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
               <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
               <Link
-                href={`/search-by-part-name`}
+                href="https://emirates-car.com/search-by-part-name"
                 className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
               >
                 Search parts by part name in UAE
               </Link>
               <br />
               <Link
-                href={`/search-by-make`}
+                href="https://emirates-car.com/search-by-make"
                 className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
               >
                 Search parts by Car make in UAE
               </Link>
               <br />
               <Link
-                href={`/search-by-cities-in-uae`}
+                href="https://emirates-car.com/search-by-cities-in-uae"
                 className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
               >
                 Search parts by cities in UAE
@@ -798,8 +798,8 @@ export default function Forms({ posts, pos, po }) {
             {po.map((post, i) => (
               <div key={i}>
                 <Link
-                  href={`/search-by-make/[make]`}
-                  as={`/search-by-make/${post.make}`}
+                  href="https://emirates-car.com/search-by-make/[make]"
+                  as={"https://emirates-car.com/search-by-make/"+post.make}
                   className="text-xs text-white font-medium hover:text-gray-800 underline"
                   >
                   {post.make + ' spare parts'}
@@ -810,7 +810,7 @@ export default function Forms({ posts, pos, po }) {
 
           <div className="text-center text-purple-200 py-10">
             <Link
-              href={`/`}
+              href="https://emirates-car.com/"
               target="_newtab"
               title="buy car parts online"
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"

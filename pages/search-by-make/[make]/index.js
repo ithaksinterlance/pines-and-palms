@@ -435,8 +435,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
       <Nav />
       <Head>
         <title>
-          {`${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE -
-          Best Prices`}
+          "${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE -
+          Best Prices"
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
@@ -526,7 +526,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               and world Online - Body Parts, Performance Parts, Mechanical
               parts, Electronic parts, Engine parts and more..
             </h1>
-            <Link href={`/search-by-make/${make}#myForm`} className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
+            <Link href="https://emirates-car.com/search-by-make/${make}#myForm" className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
                 Inquire Now
 
             </Link>
@@ -572,10 +572,10 @@ export default function Car({ car, cities, make, partspost, posts }) {
                         width="100%"
                       >
                         <Link
-                          href={`https://emirates-car.com/search-by-make/${make}/${recommend}`}
+                          href="https://emirates-car.com/search-by-make/${make}/${recommend}"
                           rel="noopener noreferrer"
                           target="_newtab"
-                          title={`${recommend}`}
+                          title="${recommend}"
                           >
                          {recommend}
                         </Link>
@@ -829,11 +829,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </button>
               </div>
               <div className="flex float-left text-xs text-gray-400">
-                <Link href={`/privacy-policy}`} target="_newtab" className="underline">
+                <Link href="https://emirates-car.com/privacy-policy}" target="_newtab" className="underline">
                   Privacy policy
                 </Link>
                 &nbsp;
-                <Link href={`/terms-and-condition`} target="_newtab" className="underline">
+                <Link href="https://emirates-car.com/terms-and-condition" target="_newtab" className="underline">
                   Terms and conditions
                 </Link>
               </div>
@@ -847,7 +847,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               <div>
                 <span>
                   <Link
-                    href={`/search-by-part-name`}
+                    href="https://emirates-car.com/search-by-part-name"
                     className="underline hover:text-blue-500 xs:text-sm"
                     >
                       {' '}
@@ -857,14 +857,14 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   &nbsp;|
                 </span>
                 <span>
-                  <Link href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500 xs:text-sm">
+                  <Link href="https://emirates-car.com/search-by-cities-in-uae" className="underline hover:text-blue-500 xs:text-sm">
                       SEARCH BY CITY
 
                   </Link>{' '}
                   &nbsp;|
                 </span>
                 <span>
-                  <Link href={`/search-by-make`} className="underline hover:text-blue-500 xs:text-sm">
+                  <Link href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500 xs:text-sm">
                       SEARCH BY MAKE
 
                   </Link>{' '}
@@ -993,8 +993,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
             {car.map((post, i) => (
               <div key={i}>
                 <Link
-                  href={`/search-by-make/[make]/[model]`}
-                  as={`/search-by-make/${post.make}/${post.model}`}
+                  href="https://emirates-car.com/search-by-make/[make]/[model]"
+                  as={"https://emirates-car.com/search-by-make/${post.make}/"+post.model}
                   title={post.make + post.model + ' spare parts'}
                   >
                     <main className="border border-blue-800 h-full p-3 ">
@@ -1010,7 +1010,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
         </article>
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs py-5">
           **Model not found above?
-          <Link href={`/get-in-touch`} >
+          <Link href="https://emirates-car.com/get-in-touch" >
             <nobr className="text-blue-500 text-sm underline">
               {' '}
               Get in touch with us {'>>'}**
@@ -1173,7 +1173,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               ))}
             </div>
             <Link
-              href={`/get-in-touch`}
+              href="https://emirates-car.com/get-in-touch"
               target="_newtab"
               className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
             >
@@ -1522,8 +1522,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
             {partspost.map((p, i) => (
               <div key={i}>
                 <Link
-                  href={`/search-by-part-name/[parts]`}
-                  as={`/search-by-part-name/${p.parts}`}
+                  href="https://emirates-car.com/search-by-part-name/[parts]"
+                  as={"https://emirates-car.com/search-by-part-name/"+p.parts}
                   className="text-blue-800 hover:text-gray-800 underline"
                   title={p.parts}
                   >
@@ -1542,8 +1542,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
           {cities.map((post, i) => (
             <div key={i}>
               <Link
-                href={`/search-by-cities-in-uae/[city]`}
-                as={`/search-by-cities-in-uae/${post.city}`}
+                href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+                as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
                 title={make + ' spare parts ' + post.city}
                 >
                   <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">

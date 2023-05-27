@@ -181,7 +181,7 @@ export default function Forms() {
             &nbsp;
             <span>
               <Link
-                href={`/search-by-part-name`}
+                href="https://emirates-car.com/search-by-part-name"
                 className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base"
               >
                 SEARCH BY PART NAME
@@ -190,7 +190,7 @@ export default function Forms() {
             | &nbsp;
             <span>
               <Link
-                href={`/search-by-cities-in-uae`}
+                href="https://emirates-car.com/search-by-cities-in-uae"
                 className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base"
               >
                 SEARCH BY CITY
@@ -199,7 +199,7 @@ export default function Forms() {
             | &nbsp;
             <span>
               <Link
-                href={`/search-by-make`}
+                href="https://emirates-car.com/search-by-make"
                 className="underline xs:no-underline hover:text-blue-500 text-2xl text-blue-900 font-extrabold xs:text-base s:text-base 2xs:text-base "
               >
                 SEARCH BY MAKE
@@ -521,7 +521,7 @@ export default function Forms() {
               </div>
               <div className="flex float-left text-xs text-gray-400">
                 <Link
-                  href={`/privacy-policy`}
+                  href="https://emirates-car.com/privacy-policy"
                   target="_newtab"
                   className="underline"
                 >
@@ -529,7 +529,7 @@ export default function Forms() {
                 </Link>
                 &nbsp;
                 <Link
-                  href={`/terms-and-condition`}
+                  href="https://emirates-car.com/terms-and-condition"
                   target="_newtab"
                   className="underline"
                 >

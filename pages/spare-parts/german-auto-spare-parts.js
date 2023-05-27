@@ -287,7 +287,7 @@ export default function German({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href={`/search-by-make/Mercedes-Benz`} passHref >
+                <Link href="https://emirates-car.com/search-by-make/Mercedes-Benz"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -308,7 +308,7 @@ export default function German({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/BMW`} passHref >
+                <Link href="https://emirates-car.com/search-by-make/BMW"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -329,7 +329,7 @@ export default function German({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Volkswagen`} passHref >
+                <Link href="https://emirates-car.com/search-by-make/Volkswagen"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -352,7 +352,7 @@ export default function German({ partsposts, posts }) {
             </div>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href={`/search-by-make/Jaguar`} passHref >
+                <Link href="https://emirates-car.com/search-by-make/Jaguar"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -373,7 +373,7 @@ export default function German({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Land%20Rover`} passHref >
+                <Link href="https://emirates-car.com/search-by-make/Land%20Rover"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -394,7 +394,7 @@ export default function German({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Porsche`} passHref >
+                <Link href="https://emirates-car.com/search-by-make/Porsche"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -417,7 +417,7 @@ export default function German({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`} passHref >
+              <Link href="https://emirates-car.com/get-in-touch"  >
 
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
@@ -447,7 +447,7 @@ export default function German({ partsposts, posts }) {
               Nar,Umm al Quwain, Al Qurayyah, Yas Island, Zirku Island in UAE.
               You can check our catalogue at{' '}
               <Link
-                href={`https://emirates-car.com/search-by-part-name`}
+                href="https://emirates-car.com/search-by-part-name"
                 className="text-blue-400 underline"
                 >
                   https://emirates-car.com/search-by-part-name
@@ -464,7 +464,7 @@ export default function German({ partsposts, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href={`/search-by-part-name`} passHref className="underline hover:text-blue-500 xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-part-name"  className="underline hover:text-blue-500 xs:text-sm">
 
                         SEARCH BY PART NAME
 
@@ -472,7 +472,7 @@ export default function German({ partsposts, posts }) {
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-cities-in-uae`} passHref className="underline hover:text-blue-500  xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-cities-in-uae"  className="underline hover:text-blue-500  xs:text-sm">
 
                         SEARCH BY CITY
 
@@ -480,7 +480,7 @@ export default function German({ partsposts, posts }) {
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-make`} className="underline hover:text-blue-500  xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500  xs:text-sm">
 
                         SEARCH BY MAKE
 
@@ -727,11 +727,11 @@ export default function German({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link href={`/privacy-policy`} target="_newtab" className="underline">
+                  <Link href="https://emirates-car.com/privacy-policy" target="_newtab" className="underline">
                     Privacy policy
                   </Link>
                   &nbsp;
-                  <Link href={`/terms-and-condition`} target="_newtab" className="underline">
+                  <Link href="https://emirates-car.com/terms-and-condition" target="_newtab" className="underline">
                     Terms and conditions
                   </Link>
                 </div>
@@ -780,7 +780,7 @@ export default function German({ partsposts, posts }) {
                   width="100%"
                 >
                   <Link
-                    href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
+                    href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                     rel="noopener noreferrer"
                     target="_newtab"
                     >
@@ -795,9 +795,8 @@ export default function German({ partsposts, posts }) {
         {partsposts.map((post,i) => (
           <div key={i}>
             <Link
-              href={`search-by-cities-in-uae/[city]`}
-              as={`/search-by-part-name/${post.parts}`}
-              passHref
+              href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+              as={"https://emirates-car.com/search-by-part-name/"+post.parts}
               title={post.parts + ' in uae'}
               >
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -805,7 +804,6 @@ export default function German({ partsposts, posts }) {
                     {post.parts.toUpperCase()}{' '}
                   </p>
                 </main>
-
             </Link>
           </div>
         ))}{' '}

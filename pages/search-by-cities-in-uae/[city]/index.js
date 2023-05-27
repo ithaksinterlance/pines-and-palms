@@ -329,8 +329,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
               </nobr>
               index{'>>>'}
-              <Link href={`/search-by-cities-in-uae/${data.city}`} passHref >
-
+              <Link href={"https://emirates-car.com/search-by-cities-in-uae/"+data.city}  >
                   search-by-cities-in-uae{'/'}
                   {data.city}
 
@@ -604,11 +603,11 @@ export default function City({ data, partspost, posts, makedatas }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link href={`/privacy-policy`} target="_newtab" className="underline">
+                  <Link href="https://emirates-car.com/privacy-policy" target="_newtab" className="underline">
                     Privacy policy
                   </Link>
                   &nbsp;
-                  <Link href={`/terms-and-condition`} target="_newtab" className="underline">
+                  <Link href="https://emirates-car.com/terms-and-condition" target="_newtab" className="underline">
                    Terms and conditions
                   </Link>
                 </div>
@@ -621,21 +620,21 @@ export default function City({ data, partspost, posts, makedatas }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href={`/search-by-part-name`} className="underline hover:text-blue-500 xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-part-name" className="underline hover:text-blue-500 xs:text-sm">
                         SEARCH BY PART NAME
 
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500  xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-cities-in-uae" className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY CITY
 
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-make`}  className="underline hover:text-blue-500  xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-make"  className="underline hover:text-blue-500  xs:text-sm">
                         SEARCH BY MAKE
 
                     </Link>{' '}
@@ -656,7 +655,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                 coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles,
                 Used spare parts, After market parts, Genuine spare parts and
                 New parts etc. You can check our catalogue at{' '}
-                <Link href={`https://emirates-car.com/search-by-part-name`} className="text-blue-400 underline">
+                <Link href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">
                     https://emirates-car.com/search-by-part-name
 
                 </Link>
@@ -664,7 +663,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                 {makedatas.map((p,i) => (
                   <Link
                     key={i}
-                    href={`https://emirates-car.com/search-by-cities-in-uae/${p.make}`}
+                    href={"https://emirates-car.com/search-by-cities-in-uae/"+p.make}
                     >
 
                       {p.make}
@@ -707,9 +706,8 @@ export default function City({ data, partspost, posts, makedatas }) {
               {makedatas.map((makedata,i) => (
                 <div key={i}>
                   <Link
-                    href={`/search-by-make/[make]`}
-                    as={`/search-by-make/${makedata.make}`}
-                    passHref
+                    href="https://emirates-car.com/search-by-make/[make]"
+                    as={"https://emirates-car.com/search-by-make/"+makedata.make}
                     title={makedata.make + ' spare parts ' + data.city}
                     >
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -745,9 +743,9 @@ export default function City({ data, partspost, posts, makedatas }) {
             {partspost.map((post,i) => (
               <div key={i}>
                 <Link
-                  href={`/search-by-part-name/[parts]`}
-                  as={`/search-by-part-name/${post.parts}`}
-                  passHref
+                  href="https://emirates-car.com/search-by-part-name/[parts]"
+                  as={"https://emirates-car.com/search-by-part-name/"+post.parts}
+
                   title={post.parts + ' in ' + data.city}
                   >
                     <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-700 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">

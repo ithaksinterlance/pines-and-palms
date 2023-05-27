@@ -289,8 +289,8 @@ export default function France({ partsposts, posts }) {
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
                 <Link
-                  href={`https://emirates-car.com/search-by-make/Peugeot`}
-                  
+                  href="https://emirates-car.com/search-by-make/Peugeot"
+
                   >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -312,7 +312,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Citroen`}  >
+                <Link href="https://emirates-car.com/search-by-make/Citroen"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -333,7 +333,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Renault`}  >
+                <Link href="https://emirates-car.com/search-by-make/Renault"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -354,7 +354,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Mobility Ventures LLC`}  >
+                <Link href="https://emirates-car.com/search-by-make/Mobility Ventures LLC"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -375,7 +375,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Bugatti`}  >
+                <Link href="https://emirates-car.com/search-by-make/Bugatti"  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -398,7 +398,7 @@ export default function France({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`}  >
+              <Link href="https://emirates-car.com/get-in-touch"  >
 
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
@@ -427,7 +427,7 @@ export default function France({ partsposts, posts }) {
               Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
               Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
               can check our catalogue at{' '}
-              <Link href={`https://emirates-car.com/search-by-part-name`} className="text-blue-400 underline">
+              <Link href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">
                   https://emirates-car.com/search-by-part-name
 
               </Link>
@@ -442,7 +442,7 @@ export default function France({ partsposts, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <Link href={`/search-by-part-name`} className="underline hover:text-blue-500 xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-part-name" className="underline hover:text-blue-500 xs:text-sm">
 
                         SEARCH BY PART NAME
 
@@ -450,14 +450,14 @@ export default function France({ partsposts, posts }) {
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-cities-in-uae`} className="underline hover:text-blue-500 xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-cities-in-uae" className="underline hover:text-blue-500 xs:text-sm">
                         SEARCH BY CITY
 
                     </Link>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <Link href={`/search-by-make`} className="underline hover:text-blue-500 xs:text-sm">
+                    <Link href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500 xs:text-sm">
                         SEARCH BY MAKE
 
                     </Link>{' '}
@@ -703,11 +703,11 @@ export default function France({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <Link href={`/privacy-policy`} target="_newtab" className="underline">
+                  <Link href="https://emirates-car.com/privacy-policy" target="_newtab" className="underline">
                     Privacy policy
                   </Link>
                   &nbsp;
-                  <Link href={`/terms-and-condition`} target="_newtab" className="underline">
+                  <Link href="https://emirates-car.com/terms-and-condition" target="_newtab" className="underline">
                     Terms and conditions
                   </Link>
                 </div>
@@ -731,9 +731,9 @@ export default function France({ partsposts, posts }) {
         </div>
       </div>
 
-      <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+      <h6 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
         SEARCH FOR AUTO SPARE PARTS IN UAE
-      </h1>
+      </h6>
       <div className="flex justify-center">
         <div className="pt-3">
           <input
@@ -756,7 +756,7 @@ export default function France({ partsposts, posts }) {
                   width="100%"
                 >
                   <Link
-                    href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
+                    href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                     rel="noopener noreferrer"
                     target="_newtab"
                     >{suggestion}
@@ -771,9 +771,9 @@ export default function France({ partsposts, posts }) {
         {partsposts.map((post,i) => (
           <div key={i}>
             <Link
-              href={`/search-by-cities-in-uae/[city]`}
-              as={`/search-by-part-name/${post.parts}`}
-              
+              href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+              as={"https://emirates-car.com/search-by-part-name/"+post.parts}
+
               title={post.parts + ' in uae'}
               >
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">

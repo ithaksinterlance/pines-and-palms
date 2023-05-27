@@ -291,7 +291,7 @@ export default function British({ partsposts, posts }) {
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
                 <Link
-                  href={`https://emirates-car.com/search-by-make/Aston Martin`}
+                  href="https://emirates-car.com/search-by-make/Aston Martin"
 
 
                 >
@@ -313,7 +313,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Bentley`}>
+                <Link href="https://emirates-car.com/search-by-make/Bentley">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -332,7 +332,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Jaguar`}>
+                <Link href="https://emirates-car.com/search-by-make/Jaguar">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -352,7 +352,7 @@ export default function British({ partsposts, posts }) {
               </div>
               <div>
                 <Link
-                  href={`/search-by-make/Land Rover`}
+                  href="https://emirates-car.com/search-by-make/Land Rover"
                 >
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
@@ -372,7 +372,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Lotus`}>
+                <Link href="https://emirates-car.com/search-by-make/Lotus">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -391,7 +391,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/McLaren`}>
+                <Link href="https://emirates-car.com/search-by-make/McLaren">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -410,7 +410,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href={`/search-by-make/Mini`}>
+                <Link href="https://emirates-car.com/search-by-make/Mini">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -430,7 +430,7 @@ export default function British({ partsposts, posts }) {
               </div>
               <div>
                 <Link
-                  href={`/search-by-make/Rolls-Royce`}
+                  href="https://emirates-car.com/search-by-make/Rolls-Royce"
 
 
                 >
@@ -454,7 +454,7 @@ export default function British({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href={`/get-in-touch`}>
+              <Link href="https://emirates-car.com/get-in-touch">
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**
@@ -482,7 +482,7 @@ export default function British({ partsposts, posts }) {
               Nar,Umm al Quwain,Al Qurayyah,Yas Island,Zirku Island in UAE. You
               can check our catalogue at{' '}
               <Link
-                href={`https://emirates-car.com/search-by-part-name`}
+                href="https://emirates-car.com/search-by-part-name"
                 className="text-blue-400 underline"
               >
                 https://emirates-car.com/search-by-part-name
@@ -499,7 +499,7 @@ export default function British({ partsposts, posts }) {
                 <div>
                   <span>
                     <Link
-                      href={`/search-by-part-name`}
+                      href="https://emirates-car.com/search-by-part-name"
                       className="underline hover:text-blue-500 xs:text-sm"
                       title="spare parts in uae"
                     >
@@ -509,7 +509,7 @@ export default function British({ partsposts, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-cities-in-uae`}
+                      href="https://emirates-car.com/search-by-cities-in-uae"
                       className="underline hover:text-blue-500  xs:text-sm"
                       title="british car brand spare parts"
                     >
@@ -519,7 +519,7 @@ export default function British({ partsposts, posts }) {
                   </span>
                   <span>
                     <Link
-                      href={`/search-by-make`}
+                      href="https://emirates-car.com/search-by-make"
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -767,7 +767,7 @@ export default function British({ partsposts, posts }) {
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
                   <Link
-                    href={`/privacy-policy`}
+                    href="https://emirates-car.com/privacy-policy"
                     target="_newtab"
                     className="underline"
                   >
@@ -775,7 +775,7 @@ export default function British({ partsposts, posts }) {
                   </Link>
                   &nbsp;
                   <Link
-                    href={`/terms-and-condition`}
+                    href="https://emirates-car.com/terms-and-condition"
                     target="_newtab"
                     className="underline"
                   >
@@ -827,7 +827,7 @@ export default function British({ partsposts, posts }) {
                   width="100%"
                 >
                   <Link
-                    href={`https://emirates-car.com/search-by-part-name/${suggestion}`}
+                    href="https://emirates-car.com/search-by-part-name/${suggestion}"
                     rel="noopener noreferrer"
                     target="_newtab"
 
@@ -844,8 +844,8 @@ export default function British({ partsposts, posts }) {
         {partsposts.map((post, i) => (
           <div key={i}>
             <Link
-              href={`/search-by-cities-in-uae/[city]`}
-              as={`/search-by-part-name/${post.parts}`}
+              href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+              as="https://emirates-car.com/search-by-part-name/${post.parts}"
 
               title={post.parts + ' in uae'}
 

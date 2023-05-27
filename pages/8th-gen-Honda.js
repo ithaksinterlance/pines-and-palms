@@ -191,7 +191,7 @@ export default function Honda() {
               Sale!!
             </sup>
             <div className="h-50">
-              <h1 className="text-xl font-bold font-sans">{i.name}</h1>
+              <h6 className="text-xl font-bold font-sans">{i.name}</h6>
             </div>
 
             <hr className="py-1" />
