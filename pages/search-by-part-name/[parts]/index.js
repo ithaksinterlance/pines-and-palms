@@ -613,7 +613,7 @@ export default function Parts({ data, cities, posts }) {
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
                   <Link
-                    href="https://emirates-car.comhttps://emirates-car.com/search-by-part-name"
+                    href="https://emirates-car.com/search-by-part-name"
                     className="text-blue-400 underline"
 
                   >

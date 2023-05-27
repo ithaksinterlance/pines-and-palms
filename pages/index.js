@@ -350,7 +350,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             property="twitter:image"
             content="https://emirates-car.com/img/car-spare-parts.png"
           />
-          <link rel="canonical" href="https://emirates-car.comhttps://www.emirates-car.com" />
+          <link rel="canonical" href="https://www.emirates-car.com" />
         </Head>
 
         <div className="flex justify-center">
@@ -374,7 +374,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     width="100%"
                   >
                     <Link
-                      href="https://emirates-car.comhttps://emirates-car.com/search-by-part-name/${suggestion}"
+                      href="https://emirates-car.com/search-by-part-name/${suggestion}"
                       target="_newtab"
                     >
                       <div>{suggestion}</div>
@@ -626,7 +626,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href="https://emirates-car.comhttps://emirates-car.com/search-by-make/Ford">
+            <Link href="https://emirates-car.com/search-by-make/Ford">
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -843,7 +843,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href="https://emirates-car.comhttps://emirates-car.com/search-by-make/Aston Martin">
+            <Link href="https://emirates-car.com/search-by-make/Aston Martin">
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1001,7 +1001,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </h3>
         <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href="https://emirates-car.comhttps://emirates-car.com/search-by-make/Peugeot">
+            <Link href="https://emirates-car.com/search-by-make/Peugeot">
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -1783,7 +1783,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
         </p>
         <div className="grid grid-cols-7 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
           <div>
-            <Link href="https://emirates-car.comhttps://emirates-car.com/search-by-make/Toyota">
+            <Link href="https://emirates-car.com/search-by-make/Toyota">
               <main className="border h-full  hover:border-blue-600 py-3 ">
                 <div className="flex justify-center">
                   <Image
@@ -2076,7 +2076,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     width="100%"
                   >
                     <Link
-                      href={"https://emirates-car.comhttps://emirates-car.com/search-by-make/"+recommendmake}
+                      href={"https://emirates-car.com/search-by-make/"+recommendmake}
                       target="_newtab"
                     >
                       {recommendmake}
@@ -2409,42 +2409,42 @@ export default function Home({ forms, partsposts, posts, cities }) {
               <p>
                 <Link
                   className="text-xl leading-xl text-blue-900"
-                  href="https://emirates-car.comhttps://www.facebook.com/emirates.auto.parts"
+                  href="https://www.facebook.com/emirates.auto.parts"
                 >
                   <i className="fab fa-2x fa-facebook"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-purple-900"
-                  href="https://emirates-car.comhttps://www.instagram.com/emiratescar_parts/"
+                  href="https://www.instagram.com/emiratescar_parts/"
                 >
                   <i className="fab fa-2x fa-instagram"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-black"
-                  href="https://emirates-car.comhttps://emirates-car.tumblr.com/"
+                  href="https://emirates-car.tumblr.com/"
                 >
                   <i className="fab fa-2x fa-tumblr"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-blue-300"
-                  href="https://emirates-car.comhttps://twitter.com/emiratescarpart"
+                  href="https://twitter.com/emiratescarpart"
                 >
                   <i className="fab fa-2x fa-twitter"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-red-700"
-                  href="https://emirates-car.comhttps://in.pinterest.com/emiratesautomobileparts/"
+                  href="https://in.pinterest.com/emiratesautomobileparts/"
                 >
                   <i className="fab fa-2x fa-pinterest"></i>
                 </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-blue-500"
-                  href="https://emirates-car.comhttps://in.pinterest.com/emiratesautomobileparts/"
+                  href="https://in.pinterest.com/emiratesautomobileparts/"
                 >
                   <i className="fab fa-2x fa-linkedin"></i>
                 </Link>
@@ -2495,7 +2495,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
 
           <div className="text-center text-purple-200 py-10">
             <Link
-              href="https://emirates-car.comhttps://emirates-car.com"
+              href="https://emirates-car.com"
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
             >
               <i className="fa fa-copyright" aria-hidden="true"></i>
