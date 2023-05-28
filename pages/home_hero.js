@@ -48,7 +48,7 @@ export default class home_hero extends Component {
                   </p>
                   <p className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xs md:mt-5 md:text-sm lg:mx-0 xs:text-sm xl:text-lg s:text-sm 2xs:text-sm font-serif">
                     We are the best dealer in Auto Spare parts for Cars in UAE.
-                    If you are in need of any Spare parts click on Inquire Now.
+                    If you are in need of any Spare parts click on Get Free Quote Now.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex lg:justify-start xs:pb-20 s:pb-20">
                     <div className="w-1/2 lg:w-40 xs:w-48 xs:mx-auto s:w-48 s:mx-auto 2xs:w-auto 2xs:mx-auto rounded-lg shadow-md">
