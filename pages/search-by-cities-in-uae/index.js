@@ -673,8 +673,7 @@ export default function City({ cities, data, posts, pos }) {
                   {data.map((p,i) => (
                     <Link
                       key={i}
-                      href="https://emirates-car.com/search-by-make/${p.make}"
-
+                      href={"https://emirates-car.com/search-by-make/"+p.make}
                       >
 
                         {p.make}
@@ -722,7 +721,7 @@ export default function City({ cities, data, posts, pos }) {
               <div key={i}>
                 <Link
                   href="https://emirates-car.com/search-by-make/[make]"
-                  as="/search-by-make/${post.make}"
+                  as={"https://emirates-car.com/search-by-make/"+post.make}
                   title={post.make + ' spare parts sharjah'}
                   >
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">

@@ -435,7 +435,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
       <Nav />
       <Head>
         <title>
-          "${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE -
+          "{make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE -
           Best Prices"
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -526,7 +526,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               and world Online - Body Parts, Performance Parts, Mechanical
               parts, Electronic parts, Engine parts and more..
             </h1>
-            <Link href="https://emirates-car.com/search-by-make/${make}#myForm" className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
+            <Link href={"https://emirates-car.com/search-by-make/"+make+"#myForm"} className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
                 Inquire Now
 
             </Link>
@@ -572,10 +572,10 @@ export default function Car({ car, cities, make, partspost, posts }) {
                         width="100%"
                       >
                         <Link
-                          href="https://emirates-car.com/search-by-make/${make}/${recommend}"
+                          href={"https://emirates-car.com/search-by-make/"+make+"/"+recommend}
                           rel="noopener noreferrer"
                           target="_newtab"
-                          title="${recommend}"
+                          title={recommend}
                           >
                          {recommend}
                         </Link>
@@ -994,7 +994,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
               <div key={i}>
                 <Link
                   href="https://emirates-car.com/search-by-make/[make]/[model]"
-                  as={"https://emirates-car.com/search-by-make/${post.make}/"+post.model}
+                  as={"https://emirates-car.com/search-by-make/"+post.make+"/"+post.model}
                   title={post.make + post.model + ' spare parts'}
                   >
                     <main className="border border-blue-800 h-full p-3 ">

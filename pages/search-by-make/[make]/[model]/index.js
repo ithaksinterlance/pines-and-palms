@@ -339,7 +339,7 @@ export default function Car({
       <Nav />
       <Head>
         <title>
-          "${make} - ${model} Car Auto Spare Parts Order Online in UAE from
+          "{make} - {model} Car Auto Spare Parts Order Online in UAE from
           Dubai - Best Prices"
         </title>
         <meta
@@ -455,7 +455,7 @@ export default function Car({
       </Head>
       <div className="w-3/4 xs:w-4/5 mx-auto">
         <Image
-          src="${'/img/car-logos/' + imageMake}"
+          src={'/img/car-logos/' + imageMake}
           alt={make + ' spare parts'}
           className="mx-auto"
           priority
@@ -469,7 +469,7 @@ export default function Car({
         <Link
           href="#makemodelform"
           className="w-1/4 xs:w-4/5 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-base xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-          title="${'spare parts for ' + make + ' ' + model}"
+          title={'spare parts for ' + make + ' ' + model}
         >
           Inquire Now
         </Link>
@@ -487,7 +487,7 @@ export default function Car({
             href="https://emirates-car.com"
             target="_newtab"
             className="text-blue-500 underline hover:text-blue-900"
-            title="${make + ' ' + model + ' parts'}"
+            title={make + ' ' + model + ' parts'}
           >
             here
           </Link>
@@ -897,7 +897,7 @@ export default function Car({
                     <Link
                       href="https://emirates-car.com/search-by-part-name"
                       className="text-blue-400 underline"
-                      title="${make + ' ' + model}"
+                      title={make + ' ' + model}
                     >
                       https://emirates-car.com/search-by-part-name
                     </Link>
@@ -1130,7 +1130,7 @@ export default function Car({
             one such website which accept online inquiries. It deals with parts
             and accessories for honda accord, Honda civic and{' '}
             <Link
-              href="https://emirates-car.com/search-by-make/${make}"
+              href={"https://emirates-car.com/search-by-make/"+make}
               className="text-blue-500 underline hover:text-blue-900"
             >
               other honda models
@@ -1187,7 +1187,7 @@ export default function Car({
                 <div key={i}>
                   <Link
                     href="https://emirates-car.com/search-by-part-name/[parts]"
-                    as="/search-by-part-name/${post.parts}"
+                    as={"https://emirates-car.com/search-by-part-name/"+post.parts}
                     title={make + ' ' + model + ' ' + post.parts}
                   >
                     <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">

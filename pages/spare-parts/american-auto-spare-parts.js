@@ -890,7 +890,7 @@ export default function America({ partsposts, posts }) {
                   width="100%"
                 >
                   <Link
-                    href="https://emirates-car.com/search-by-part-name/${suggestion}"
+                    href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                     rel="noopener noreferrer"
                     target="_newtab"
                   >
@@ -906,7 +906,7 @@ export default function America({ partsposts, posts }) {
           <div key={i}>
             <Link
               href="https://emirates-car.com/search-by-cities-in-uae/[city]"
-              as="https://emirates-car.com/search-by-part-name/${post.parts}"
+              as={"https://emirates-car.com/search-by-part-name/"+post.parts}
               title={post.parts + ' in uae'}
             >
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">

@@ -337,7 +337,7 @@ export default function Make({ car, cities, posts, pos }) {
                         width="100%"
                       >
                         <Link
-                          href="https://emirates-car.com/search-by-make/${recommend}"
+                          href={"https://emirates-car.com/search-by-make/"+recommend}
                           rel="noopener noreferrer"
                           target="_newtab"
                           title={recommend}

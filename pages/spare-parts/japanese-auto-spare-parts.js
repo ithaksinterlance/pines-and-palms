@@ -898,7 +898,7 @@ export default function Japan({ partsposts, posts }) {
                   width="100%"
                 >
                   <Link
-                    href="https://emirates-car.com/search-by-part-name/${suggestion}"
+                    href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                     rel="noopener noreferrer"
                     target="_newtab"
                     >

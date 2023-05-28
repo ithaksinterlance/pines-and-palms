@@ -374,7 +374,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
                     width="100%"
                   >
                     <Link
-                      href="https://emirates-car.com/search-by-part-name/${suggestion}"
+                      href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                       target="_newtab"
                     >
                       <div>{suggestion}</div>
@@ -2091,7 +2091,7 @@ export default function Home({ forms, partsposts, posts, cities }) {
             <div key={i}>
               <Link
                 href="https://emirates-car.com/search-by-make/[make]"
-                as={"https://emirates-car.com//search-by-make/"+ post.make}
+                as={"https://emirates-car.com/search-by-make/"+ post.make}
               >
                 <main className="border h-full  hover:border-blue-600 py-3 ">
                   <div className="flex justify-center">
@@ -2508,7 +2508,6 @@ export default function Home({ forms, partsposts, posts, cities }) {
   );
 }
 export async function getStaticProps() {
-  // forms
   const respo = await fetch(`https://rozy.vercel.app/api/palms`);
   const forms = await respo.json();
 

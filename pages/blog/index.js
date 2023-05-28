@@ -36,7 +36,7 @@ export default function Blog({ posts }) {
             <div className="w-3/4 xs:w-full sm:w-full 2xs:w-full">
               {posts.map(post => (
                 <div key={post.TITLE}>
-                  <Link href="https://emirates-car.com/blog/${post.TITLE}" >
+                  <Link href={"https://emirates-car.com/blog/"+post.TITLE} >
 
                       <div className="py-3">
                         <div className="border border-gray-200 p-3 rounded-sm">
