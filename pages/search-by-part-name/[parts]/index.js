@@ -582,7 +582,7 @@ export default function Parts({ data, cities, posts }) {
                       href="https://emirates-car.com/search-by-make/[make]"
                       as={"https://emirates-car.com/search-by-make/"+ post.make}
                       title={ post.make +" "+ data.parts}
-                      legacyBehavior>
+                      >
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                         <div className="flex justify-center">
                           <Image
@@ -659,7 +659,7 @@ export default function Parts({ data, cities, posts }) {
                   href="https://emirates-car.com/search-by-cities-in-uae/[city]"
                   as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
                   title={data.parts +" in "+post.city}
-                  legacyBehavior>
+                  >
                   <div className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
                     <i className="far fa-compass"></i> {data.parts} in{' '}
                     {post.city}

@@ -36,7 +36,7 @@ export default function Blog({ posts }) {
             <div className="w-3/4 xs:w-full sm:w-full 2xs:w-full">
               {posts.map(post => (
                 <div key={post.TITLE}>
-                  <Link href={"https://emirates-car.com/blog/"+post.TITLE} legacyBehavior>
+                  <Link href={"https://emirates-car.com/blog/"+post.TITLE}>
 
                       <div className="py-3">
                         <div className="border border-gray-200 p-3 rounded-sm">
@@ -81,7 +81,7 @@ export default function Blog({ posts }) {
               <div className="grid grid-cols-2 gap-4 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 py-5">
                 <Link
                   href="https://emirates-car.com/blog/Ferrari%20Portofino%20M"
-                  legacyBehavior>
+                >
 
                     <div className="shadow-2xl rounded-sm">
                       <div className="flex">
@@ -105,7 +105,7 @@ export default function Blog({ posts }) {
                 </Link>
                 <Link
                   href="https://emirates-car.com/blog/Ferrari%20F8%20Spider%202022"
-                  legacyBehavior>
+                >
 
                     <div className="shadow-2xl rounded-sm">
                       <div className="flex">

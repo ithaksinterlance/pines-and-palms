@@ -288,7 +288,7 @@ export default function Japan({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Toyota" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Toyota" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -309,7 +309,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Mitsubishi" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Mitsubishi" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -330,7 +330,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Lexus" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Lexus" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -351,7 +351,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Nissan" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Nissan" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -372,7 +372,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Infiniti" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Infiniti" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -393,7 +393,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Honda" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Honda" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -414,7 +414,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Mazda" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Mazda" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -436,7 +436,7 @@ export default function Japan({ partsposts, posts }) {
               </div>
 
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Subaru" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Subaru" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -457,7 +457,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Suzuki" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Suzuki" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -478,7 +478,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Daihatsu" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Daihatsu" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -499,7 +499,7 @@ export default function Japan({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Isuzu" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Isuzu" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -522,7 +522,7 @@ export default function Japan({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href="https://emirates-car.com/get-in-touch" legacyBehavior>
+              <Link href="https://emirates-car.com/get-in-touch" >
 
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
@@ -898,7 +898,7 @@ export default function Japan({ partsposts, posts }) {
                     href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                     rel="noopener noreferrer"
                     target="_newtab"
-                    legacyBehavior>
+                    >
                     {suggestion}
                   </Link>
                 </div>
@@ -913,7 +913,7 @@ export default function Japan({ partsposts, posts }) {
               href="https://emirates-car.com/search-by-cities-in-uae/[city]"
               as={"https://emirates-car.com/search-by-part-name/"+ post.parts}
               title={post.parts + ' in uae'}
-              legacyBehavior>
+              >
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                     {post.parts.toUpperCase()}{' '}

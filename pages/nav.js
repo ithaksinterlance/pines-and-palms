@@ -91,7 +91,7 @@ export default function Navbar() {
               <Link
                 href={`https://www.facebook.com/emirates.auto.parts/`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                legacyBehavior>
+                >
 
                   <i className="fab fa-2x fa-facebook ml-2 text-xl leading-xl text-white opacity-75 "></i>
 
@@ -101,7 +101,7 @@ export default function Navbar() {
               <Link
                 href={`https://www.instagram.com/emiratescar_parts/`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                legacyBehavior>
+                >
 
                   <i className="fab fa-instagram ml-2 text-xl leading-xl text-white opacity-75 "></i>
 
@@ -111,7 +111,7 @@ export default function Navbar() {
               <Link
                 href={`https://twitter.com/emiratescarpart`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                legacyBehavior>
+                >
 
                   <i className="fab fa-twitter ml-2 text-xl leading-xl text-white opacity-75 "></i>
 
@@ -121,7 +121,7 @@ export default function Navbar() {
               <Link
                 href={`https://emirates-car.tumblr.com/`}
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                legacyBehavior>
+                >
 
                   <i className="fab fa-tumblr ml-2 text-xl leading-xl text-white opacity-75"></i>
 

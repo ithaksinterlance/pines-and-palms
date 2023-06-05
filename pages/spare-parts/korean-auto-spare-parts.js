@@ -288,7 +288,7 @@ export default function Korean({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Hyundai" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Hyundai" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -309,7 +309,7 @@ export default function Korean({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Kia" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Kia" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -330,7 +330,7 @@ export default function Korean({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Daewoo" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Daewoo" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -353,7 +353,7 @@ export default function Korean({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href="https://emirates-car.com/get-in-touch" legacyBehavior>
+              <Link href="https://emirates-car.com/get-in-touch" >
 
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
@@ -758,7 +758,7 @@ export default function Korean({ partsposts, posts }) {
                     href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                     rel="noopener noreferrer"
                     target="_newtab"
-                    legacyBehavior>
+                    >
                     {suggestion}
                   </Link>
                 </div>
@@ -773,7 +773,7 @@ export default function Korean({ partsposts, posts }) {
               href="https://emirates-car.com/search-by-cities-in-uae/[city]"
               as={"https://emirates-car.com/search-by-part-name/"+post.parts}
               title={post.parts + ' in uae'}
-              legacyBehavior>
+              >
 
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">

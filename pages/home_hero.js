@@ -161,7 +161,7 @@ export default class home_hero extends Component {
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:shadow-none s:border-none">
                 <Link
                   href="https://emirates-car.com/spare-parts/british-auto-spare-parts"
-                  legacyBehavior>
+                  >
                     <Image
                       src={Britain}
                       alt="british car auto spare parts"
@@ -187,7 +187,7 @@ export default class home_hero extends Component {
               <div className="text-center border-l-2 border-b-2 border-gray-800 xs:border-none shadow-lg xs:shadow-none s:border-none s:shadow-none">
                 <Link
                   href="https://emirates-car.com/spare-parts/japanese-auto-spare-parts"
-                  legacyBehavior>
+                  >
 
                     <Image
                       src={Japan}
@@ -204,7 +204,7 @@ export default class home_hero extends Component {
               <div className="text-center border-r-2 border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Link
                   href="https://emirates-car.com/spare-parts/korean-auto-spare-parts"
-                  legacyBehavior>
+                  >
 
                     <Image
                       src={Korean}
@@ -221,7 +221,7 @@ export default class home_hero extends Component {
               <div className="text-center border-b-2 border-r-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Link
                   href="https://emirates-car.com/spare-parts/american-auto-spare-parts"
-                  legacyBehavior>
+                  >
 
                     <Image
                       src={USA}
@@ -238,7 +238,7 @@ export default class home_hero extends Component {
               <div className="text-center border-b-2 border-gray-800 shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Link
                   href="https://emirates-car.com/spare-parts/german-auto-spare-parts"
-                  legacyBehavior>
+                  >
 
                     <Image
                       src={Germany}
@@ -266,7 +266,7 @@ export default class home_hero extends Component {
               <div className="text-center shadow-lg xs:border-none xs:shadow-none s:border-none s:shadow-none">
                 <Link
                   href="https://emirates-car.com/spare-parts/french-auto-spare-parts"
-                  legacyBehavior>
+                  >
 
                     <Image
                       src={France}

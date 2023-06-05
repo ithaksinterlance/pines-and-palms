@@ -36,7 +36,7 @@ export default class relatedpost extends Component {
               <Link
                 href="https://www.facebook.com/emirates.auto.parts"
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                legacyBehavior>
+                >
 
                   <FontAwesomeIcon
                     icon={faFacebook}
@@ -49,7 +49,7 @@ export default class relatedpost extends Component {
               <Link
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
                 href="https://www.instagram.com/emiratescar_parts/"
-                legacyBehavior>
+                >
 
                   <FontAwesomeIcon
                     icon={faInstagram}
@@ -62,7 +62,7 @@ export default class relatedpost extends Component {
               <Link
                 href="https://twitter.com/emiratescarpart"
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
-                legacyBehavior>
+                >
 
                   <FontAwesomeIcon
                     icon={faTwitter}
@@ -78,7 +78,7 @@ export default class relatedpost extends Component {
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
               <Link
                 href="https://emirates-car.com/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons"
-                legacyBehavior>
+                >
 
                   5 ways you can buy car spare parts
                   <p className="text-gray-300 text-xs font-bold uppercase pt-2">
@@ -90,7 +90,7 @@ export default class relatedpost extends Component {
             <li className="py-5 my-5 border-gray-400 shadow-md p-4">
               <Link
                 href="https://emirates-car.com/blog/How%20to%20Buy%20Auto%20Parts%20Online"
-                legacyBehavior>
+                >
 
                   How to Buy Car Spare Parts Online
                   <p className="text-gray-300 text-xs font-bold uppercase pt-2">

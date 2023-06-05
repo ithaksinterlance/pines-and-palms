@@ -288,7 +288,7 @@ export default function France({ partsposts, posts }) {
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Peugeot" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Peugeot" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -309,7 +309,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Citroen" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Citroen" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -330,7 +330,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Renault" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Renault" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -353,7 +353,7 @@ export default function France({ partsposts, posts }) {
               <div>
                 <Link
                   href="https://emirates-car.com/search-by-make/Mobility Ventures LLC"
-                  legacyBehavior>
+                  >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -374,7 +374,7 @@ export default function France({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Bugatti" legacyBehavior>
+                <Link href="https://emirates-car.com/search-by-make/Bugatti" >
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -397,7 +397,7 @@ export default function France({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href="https://emirates-car.com/get-in-touch" legacyBehavior>
+              <Link href="https://emirates-car.com/get-in-touch" >
 
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}
@@ -758,7 +758,7 @@ export default function France({ partsposts, posts }) {
                     href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                     rel="noopener noreferrer"
                     target="_newtab"
-                    legacyBehavior>{suggestion}
+                    >{suggestion}
 
                   </Link>
                 </div>
@@ -773,7 +773,7 @@ export default function France({ partsposts, posts }) {
               href="https://emirates-car.com/search-by-cities-in-uae/[city]"
               as={"https://emirates-car.com/search-by-part-name/"+post.parts}
               title={post.parts + ' in uae'}
-              legacyBehavior>
+              >
                 <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                   <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                     {post.parts.toUpperCase()}{' '}

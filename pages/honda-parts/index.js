@@ -321,7 +321,7 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/dubai"
               title="honda spare parts dubai sheikh zayed road"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                 DUBAI
@@ -334,7 +334,7 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/sharjah"
               title="honda spare parts sharjah"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
                 SHARJAH
@@ -347,7 +347,7 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/ajman"
               title="honda spare parts ajman"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 &nbsp;AJMAN
@@ -360,7 +360,7 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/ras-al-khaimah"
               title="honda spare parts abu dhabi"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;RAS
                 AL KHAIMAH
@@ -372,7 +372,7 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/al-quoz"
               title="honda spare parts al quoz"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Al
                 QUOZ
@@ -384,7 +384,7 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/abu-dhabi"
               title="honda spare parts abu dhabi"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ABU
                 DHABI
@@ -396,7 +396,7 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/deira"
               title="honda spare parts deira"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              legacyBehavior>
+              >
 
                 <i className="fa fa-map-marker" aria-hidden="true"></i>
                 &nbsp;DEIRA
@@ -593,7 +593,7 @@ export default function HondaParts() {
                 <Link
                   href="https://emirates-car.com/search-by-part-name/Convertible%20Top%20Motor"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  legacyBehavior>
+                  >
                   {' '}
                   Catalytic Converter
                 </Link>

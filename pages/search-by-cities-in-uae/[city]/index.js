@@ -331,7 +331,7 @@ export default function City({ data, partspost, posts, makedatas }) {
               index{'>>>'}
               <Link
                 href={"https://emirates-car.com/search-by-cities-in-uae/"+data.city}
-                legacyBehavior>
+                >
                   search-by-cities-in-uae{'/'}
                   {data.city}
 
@@ -666,7 +666,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                   <Link
                     key={i}
                     href={"https://emirates-car.com/search-by-cities-in-uae/"+p.make}
-                    legacyBehavior>
+                    >
 
                       {p.make}
                       {' spare parts in ' + data.city + ', '}
@@ -711,7 +711,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                     href="https://emirates-car.com/search-by-make/[make]"
                     as={"https://emirates-car.com/search-by-make/"+makedata.make}
                     title={makedata.make + ' spare parts ' + data.city}
-                    legacyBehavior>
+                    >
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                         <div className="flex justify-center">
                           <Image
@@ -748,7 +748,7 @@ export default function City({ data, partspost, posts, makedatas }) {
                   href="https://emirates-car.com/search-by-part-name/[parts]"
                   as={"https://emirates-car.com/search-by-part-name/"+post.parts}
                   title={post.parts + ' in ' + data.city}
-                  legacyBehavior>
+                  >
                     <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-700 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">
                       <i className="far fa-compass"></i>{' '}
                       {post.parts + ' in ' + data.city}
