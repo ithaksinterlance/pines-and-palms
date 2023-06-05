@@ -11,7 +11,7 @@ export default class about extends Component {
         </h3>
         <div className="grid grid-cols-6 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 2xs:grid 2xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 gap-1 shadow-2xl my-10 mx-5 xs:mx-3 s:mx-2 sm:mx-4 2xs:mx-4">
           <AutoPartsImages />
-          <Link href="https://emirates-car.com/search-by-part-name">
+          <Link href="https://emirates-car.com/search-by-part-name" legacyBehavior>
             <main className="border-4 p-1 py-5 px-5 border-blue-700">
               <i className="fas fa-car-garage fa-4x bg-blue-500 text-gray-900 font-thin p-1 rounded-lg"></i>
               <p className="text-base text-blue-600 py-2 font-semibold underline">

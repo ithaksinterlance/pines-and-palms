@@ -524,7 +524,7 @@ export default function Forms() {
                   href="https://emirates-car.com/privacy-policy"
                   target="_newtab"
                   className="underline"
-                >
+                  legacyBehavior>
                   <div>Privacy policy</div>
                 </Link>
                 &nbsp;
@@ -532,7 +532,7 @@ export default function Forms() {
                   href="https://emirates-car.com/terms-and-condition"
                   target="_newtab"
                   className="underline"
-                >
+                  legacyBehavior>
                   <div>Terms and conditions</div>
                 </Link>
               </div>

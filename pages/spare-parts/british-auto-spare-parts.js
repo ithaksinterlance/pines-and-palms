@@ -292,9 +292,7 @@ export default function British({ partsposts, posts }) {
               <div>
                 <Link
                   href="https://emirates-car.com/search-by-make/Aston Martin"
-
-
-                >
+                  legacyBehavior>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -313,7 +311,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Bentley">
+                <Link href="https://emirates-car.com/search-by-make/Bentley" legacyBehavior>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -332,7 +330,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Jaguar">
+                <Link href="https://emirates-car.com/search-by-make/Jaguar" legacyBehavior>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -351,9 +349,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link
-                  href="https://emirates-car.com/search-by-make/Land Rover"
-                >
+                <Link href="https://emirates-car.com/search-by-make/Land Rover" legacyBehavior>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -372,7 +368,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Lotus">
+                <Link href="https://emirates-car.com/search-by-make/Lotus" legacyBehavior>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -391,7 +387,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/McLaren">
+                <Link href="https://emirates-car.com/search-by-make/McLaren" legacyBehavior>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -410,7 +406,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Mini">
+                <Link href="https://emirates-car.com/search-by-make/Mini" legacyBehavior>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -429,11 +425,7 @@ export default function British({ partsposts, posts }) {
                 </Link>
               </div>
               <div>
-                <Link
-                  href="https://emirates-car.com/search-by-make/Rolls-Royce"
-
-
-                >
+                <Link href="https://emirates-car.com/search-by-make/Rolls-Royce" legacyBehavior>
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -454,7 +446,7 @@ export default function British({ partsposts, posts }) {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href="https://emirates-car.com/get-in-touch">
+              <Link href="https://emirates-car.com/get-in-touch" legacyBehavior>
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**
@@ -830,9 +822,7 @@ export default function British({ partsposts, posts }) {
                     href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                     rel="noopener noreferrer"
                     target="_newtab"
-
-
-                  >
+                    legacyBehavior>
                     {suggestion}
                   </Link>
                 </div>
@@ -846,10 +836,8 @@ export default function British({ partsposts, posts }) {
             <Link
               href="https://emirates-car.com/search-by-cities-in-uae/[city]"
               as={"https://emirates-car.com/search-by-part-name/"+post.parts}
-
               title={post.parts + ' in uae'}
-
-            >
+              legacyBehavior>
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                   {post.parts.toUpperCase()}{' '}

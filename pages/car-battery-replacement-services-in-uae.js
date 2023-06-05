@@ -601,7 +601,7 @@ export default function CarBatteryDubai({ forms }) {
         </form>
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
           **Make not found above?{' '}
-          <Link href="https://emirates-car.com/get-in-touch">
+          <Link href="https://emirates-car.com/get-in-touch" legacyBehavior>
             <nobr className="text-blue-500 text-sm underline">
               Get in touch with us {'>>'}**
             </nobr>

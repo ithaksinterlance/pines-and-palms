@@ -341,7 +341,7 @@ export default function Make({ car, cities, posts, pos }) {
                           rel="noopener noreferrer"
                           target="_newtab"
                           title={recommend}
-                        >
+                          legacyBehavior>
                           {recommend}
                         </Link>
                       </div>
@@ -363,7 +363,7 @@ export default function Make({ car, cities, posts, pos }) {
                       href="https://emirates-car.com/search-by-make/[make]"
                       as={"https://emirates-car.com/search-by-make/"+post.make}
                       title={post.make +" spare parts"}
-                    >
+                      legacyBehavior>
                       <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
                         <div className="flex justify-center">
                           <Image
@@ -384,7 +384,7 @@ export default function Make({ car, cities, posts, pos }) {
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?{' '}
-              <Link href="https://emirates-car.com/get-in-touch">
+              <Link href="https://emirates-car.com/get-in-touch" legacyBehavior>
                 <nobr className="text-blue-500 text-sm underline">
                   Get in touch with us {'>>'}**
                 </nobr>
@@ -706,7 +706,7 @@ export default function Make({ car, cities, posts, pos }) {
                     as={"https://emirates-car.com/search-by-part-name/"+p.parts}
                     key={i}
                     title={p.parts}
-                  >
+                    legacyBehavior>
                     {p.parts + ' , '}
                   </Link>
                 ))}
@@ -752,7 +752,7 @@ export default function Make({ car, cities, posts, pos }) {
                   href="https://emirates-car.com/search-by-cities-in-uae/[city]"
                   as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
                   title={'car parts ' + post.city}
-                >
+                  legacyBehavior>
                   <p className="text-base hover:text-blue-700 focus:text-blue-700 h-full text-gray-500">
                     <i className="fas fa-map-marker-alt"></i> {post.city}
                   </p>

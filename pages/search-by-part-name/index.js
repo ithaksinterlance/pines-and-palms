@@ -317,7 +317,7 @@ export default function Make({ posts, cities, post }) {
                             href={"https://emirates-car.com/search-by-part-name/"+suggestion}
                             rel="noopener noreferrer"
                             target="_newtab"
-                            >
+                            legacyBehavior>
                             {suggestion}
                           </Link>
                         </div>
@@ -332,7 +332,7 @@ export default function Make({ posts, cities, post }) {
                       href="https://emirates-car.com/search-by-part-name/[parts]"
                       as={"https://emirates-car.comsearch-by-part-name/"+post.parts}
                       title={post.parts + ' in uae'}
-                      >
+                      legacyBehavior>
                         <main className="border border-blue-800 h-full p-3 ">
                           <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
                             {post.parts}
@@ -665,9 +665,8 @@ export default function Make({ posts, cities, post }) {
                 <Link
                   href="https://emirates-car.com/search-by-cities-in-uae/[city]"
                   as={"https://emirates-car.comsearch-by-cities-in-uae/"+post.city}
-
                   title={'car spare parts ' + post.city}
-                  >
+                  legacyBehavior>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700  text-gray-500">
                       <i className="far fa-compass"></i> {post.city}
                     </p>

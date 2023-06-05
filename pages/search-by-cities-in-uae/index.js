@@ -341,7 +341,7 @@ export default function City({ cities, data, posts, pos }) {
                             href={"https://emirates-car.com/search-by-cities-in-uae/"+recommend}
                             rel="noopener noreferrer"
                             target="_newtab"
-                            >
+                            legacyBehavior>
                             {recommend}
                           </Link>
                         </div>
@@ -363,9 +363,8 @@ export default function City({ cities, data, posts, pos }) {
                     <Link
                       href="https://emirates-car.com/search-by-cities-in-uae/[city]"
                       as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
-
                       title={'car spare parts ' + post.city}
-                      >
+                      legacyBehavior>
                         <main className="border border-blue-800 h-full p-3 ">
                           <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
                             {post.city}
@@ -674,7 +673,7 @@ export default function City({ cities, data, posts, pos }) {
                     <Link
                       key={i}
                       href={"https://emirates-car.com/search-by-make/"+p.make}
-                      >
+                      legacyBehavior>
 
                         {p.make}
                         {' in UAE, '}
@@ -723,7 +722,7 @@ export default function City({ cities, data, posts, pos }) {
                   href="https://emirates-car.com/search-by-make/[make]"
                   as={"https://emirates-car.com/search-by-make/"+post.make}
                   title={post.make + ' spare parts sharjah'}
-                  >
+                  legacyBehavior>
                     <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
                       <i className="fa fa-mars-stroke" aria-hidden="true"></i>{' '}
                       {post.make}
