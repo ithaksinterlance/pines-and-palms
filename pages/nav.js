@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
-  faFacebook,
-  faInstagram,
-  faWhatsapp,
-  faTwitter,
   fab
 } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Link from 'next/link';
+
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);

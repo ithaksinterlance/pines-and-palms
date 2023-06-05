@@ -435,8 +435,8 @@ export default function Car({ car, cities, make, partspost, posts }) {
       <Nav />
       <Head>
         <title>
-          "{make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE -
-          Best Prices"
+          {make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE -
+          Best Prices
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
