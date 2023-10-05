@@ -5,7 +5,7 @@ import Footer from '../../footer';
 import React, { useState, useEffect } from 'react';
 import Social from '../../Social';
 import HondaOfferButton from '../../HondaOfferButton';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import ABS from '../../../public/img/honda-eighth-gen/Anti_Lock_Braking_System.webp';
 import AirFilter from '../../../public/img/honda-eighth-gen/Air_Filter.webp';
 import AirSuspension from '../../../public/img/honda-eighth-gen/Air_Suspension_Module.webp';
@@ -526,9 +526,13 @@ export default function Car({ car, cities, make, partspost, posts }) {
               and world Online - Body Parts, Performance Parts, Mechanical
               parts, Electronic parts, Engine parts and more..
             </h1>
-            <Link href={"https://emirates-car.com/search-by-make/"+make+"#myForm"} className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5">
-                Inquire Now
-
+            <Link
+              href={
+                'https://emirates-car.com/search-by-make/' + make + '#myForm'
+              }
+              className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+            >
+              Inquire Now
             </Link>
           </div>
 
@@ -572,12 +576,17 @@ export default function Car({ car, cities, make, partspost, posts }) {
                         width="100%"
                       >
                         <Link
-                          href={"https://emirates-car.com/search-by-make/"+make+"/"+recommend}
+                          href={
+                            'https://emirates-car.com/search-by-make/' +
+                            make +
+                            '/' +
+                            recommend
+                          }
                           rel="noopener noreferrer"
                           target="_newtab"
                           title={recommend}
-                          >
-                         {recommend}
+                        >
+                          {recommend}
                         </Link>
                       </div>
                     ))}
@@ -829,11 +838,19 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </button>
               </div>
               <div className="flex float-left text-xs text-gray-400">
-                <Link href="https://emirates-car.com/privacy-policy}" target="_newtab" className="underline">
+                <Link
+                  href="https://emirates-car.com/privacy-policy}"
+                  target="_newtab"
+                  className="underline"
+                >
                   Privacy policy
                 </Link>
                 &nbsp;
-                <Link href="https://emirates-car.com/terms-and-condition" target="_newtab" className="underline">
+                <Link
+                  href="https://emirates-car.com/terms-and-condition"
+                  target="_newtab"
+                  className="underline"
+                >
                   Terms and conditions
                 </Link>
               </div>
@@ -849,24 +866,27 @@ export default function Car({ car, cities, make, partspost, posts }) {
                   <Link
                     href="https://emirates-car.com/search-by-part-name"
                     className="underline hover:text-blue-500 xs:text-sm"
-                    >
-                      {' '}
-                      SEARCH BY PART NAME
-
+                  >
+                    {' '}
+                    SEARCH BY PART NAME
                   </Link>{' '}
                   &nbsp;|
                 </span>
                 <span>
-                  <Link href="https://emirates-car.com/search-by-cities-in-uae" className="underline hover:text-blue-500 xs:text-sm">
-                      SEARCH BY CITY
-
+                  <Link
+                    href="https://emirates-car.com/search-by-cities-in-uae"
+                    className="underline hover:text-blue-500 xs:text-sm"
+                  >
+                    SEARCH BY CITY
                   </Link>{' '}
                   &nbsp;|
                 </span>
                 <span>
-                  <Link href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500 xs:text-sm">
-                      SEARCH BY MAKE
-
+                  <Link
+                    href="https://emirates-car.com/search-by-make"
+                    className="underline hover:text-blue-500 xs:text-sm"
+                  >
+                    SEARCH BY MAKE
                   </Link>{' '}
                   &nbsp;
                 </span>
@@ -982,9 +1002,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
             do. So there is plenty of website and options. Emirates-car.com is
             one such website which accept online inquiries. It deals with parts
             and accessories for honda accord, Honda civic and{' '}
-            <Link href="/search-by-make/Honda" className="text-blue-500 underline hover:text-blue-900">
-                other honda models
-
+            <Link
+              href="/search-by-make/Honda"
+              className="text-blue-500 underline hover:text-blue-900"
+            >
+              other honda models
             </Link>
             , Infiniti models, BMW models, Audi models and many other brands.
             Visit to search parts you need.
@@ -994,15 +1016,19 @@ export default function Car({ car, cities, make, partspost, posts }) {
               <div key={i}>
                 <Link
                   href="https://emirates-car.com/search-by-make/[make]/[model]"
-                  as={"https://emirates-car.com/search-by-make/"+post.make+"/"+post.model}
+                  as={
+                    'https://emirates-car.com/search-by-make/' +
+                    post.make +
+                    '/' +
+                    post.model
+                  }
                   title={post.make + post.model + ' spare parts'}
-                  >
-                    <main className="border border-blue-800 h-full p-3 ">
-                      <p className="text-center text-lg xs:text-xl xs:text-center font-mono text-blue-800 underline hover:text-gray-800 focus:text-gray-800 font-bold ">
-                        {make + ' ' + post.model.replace('%2F', '/') + ' parts'}{' '}
-                      </p>
-                    </main>
-
+                >
+                  <main className="border border-blue-800 h-full p-3 ">
+                    <p className="text-center text-lg xs:text-xl xs:text-center font-mono text-blue-800 underline hover:text-gray-800 focus:text-gray-800 font-bold ">
+                      {make + ' ' + post.model.replace('%2F', '/') + ' parts'}{' '}
+                    </p>
+                  </main>
                 </Link>
               </div>
             ))}{' '}
@@ -1010,7 +1036,7 @@ export default function Car({ car, cities, make, partspost, posts }) {
         </article>
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs py-5">
           **Model not found above?
-          <Link href="https://emirates-car.com/get-in-touch" >
+          <Link href="https://emirates-car.com/get-in-touch">
             <nobr className="text-blue-500 text-sm underline">
               {' '}
               Get in touch with us {'>>'}**
@@ -1050,11 +1076,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Dubai"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts dubai'}
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                {make} Parts Dubai
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+              {make} Parts Dubai
             </Link>
           </div>
           <div>
@@ -1063,11 +1087,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Sharjah"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts dubai'}
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                {make} Parts Sharjah
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+              {make} Parts Sharjah
             </Link>
           </div>
           <div>
@@ -1076,11 +1098,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Ajman"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts ajman'}
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                {make} Parts Ajman
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
+              {make} Parts Ajman
             </Link>
           </div>
           <div>
@@ -1089,11 +1109,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts ras al khaimah'}
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                {make} Parts Ras Al Khaimah
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
+              {make} Parts Ras Al Khaimah
             </Link>
           </div>
           <div>
@@ -1101,11 +1119,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts al quoz'}
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                {make} Parts Al Quoz
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
+              {make} Parts Al Quoz
             </Link>
           </div>
           <div>
@@ -1113,11 +1129,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts dubai sheikh zayed road'}
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                {make} Parts Sheikh Zayed Road, Dubai
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
+              {make} Parts Sheikh Zayed Road, Dubai
             </Link>
           </div>
           <div>
@@ -1125,11 +1139,9 @@ export default function Car({ car, cities, make, partspost, posts }) {
               href="/search-by-cities-in-uae/Deira%20(Dubai)"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
               title={make + ' spare parts deira'}
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                {make} Parts Deira
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
+              {make} Parts Deira
             </Link>
           </div>
         </div>
@@ -1244,9 +1256,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Crankshaft" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Crankshaft
-
+                <Link
+                  href="/search-by-part-name/Crankshaft"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Crankshaft
                 </Link>
               </li>
               <li>
@@ -1314,9 +1328,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link href="/search-by-part-name/Engine%20Assembly" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Engine
-
+                <Link
+                  href="/search-by-part-name/Engine%20Assembly"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Engine
                 </Link>
               </li>
               <li>
@@ -1440,33 +1456,43 @@ export default function Car({ car, cities, make, partspost, posts }) {
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
-                <Link href="/search-by-part-name/Spark%20Plug" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Spark Plug
-
+                <Link
+                  href="/search-by-part-name/Spark%20Plug"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Spark Plug
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Alternator" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Alternator
-
+                <Link
+                  href="/search-by-part-name/Alternator"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Alternator
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Battery" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Battery
-
+                <Link
+                  href="/search-by-part-name/Battery"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Battery
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/Ignition%20Switch" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Ignition Switch
-
+                <Link
+                  href="/search-by-part-name/Ignition%20Switch"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Ignition Switch
                 </Link>
               </li>
               <li>
-                <Link href="/get-in-touch" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Many more...
-
+                <Link
+                  href="/get-in-touch"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Many more...
                 </Link>
               </li>
             </ol>
@@ -1481,34 +1507,41 @@ export default function Car({ car, cities, make, partspost, posts }) {
                 <Link
                   href="/search-by-part-name/AC%20Compressor"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
-                    {' '}
-                    AC Compressor
-
+                >
+                  {' '}
+                  AC Compressor
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/AC%20Condenser" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    AC Condenser
-
+                <Link
+                  href="/search-by-part-name/AC%20Condenser"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  AC Condenser
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/AC%20Selector" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    AC Selector
-
+                <Link
+                  href="/search-by-part-name/AC%20Selector"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  AC Selector
                 </Link>
               </li>
               <li>
-                <Link href="/search-by-part-name/AC%20Controls" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    AC Controls
-
+                <Link
+                  href="/search-by-part-name/AC%20Controls"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  AC Controls
                 </Link>
               </li>
               <li>
-                <Link href="/get-in-touch" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
-                    Many more...
-
+                <Link
+                  href="/get-in-touch"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                >
+                  Many more...
                 </Link>
               </li>
             </ol>
@@ -1523,12 +1556,11 @@ export default function Car({ car, cities, make, partspost, posts }) {
               <div key={i}>
                 <Link
                   href="https://emirates-car.com/search-by-part-name/[parts]"
-                  as={"https://emirates-car.com/search-by-part-name/"+p.parts}
+                  as={'https://emirates-car.com/search-by-part-name/' + p.parts}
                   className="text-blue-800 hover:text-gray-800 underline"
                   title={p.parts}
-                  >
-                    {make + ' ' + p.parts + ' parts'}
-
+                >
+                  {make + ' ' + p.parts + ' parts'}
                 </Link>
               </div>
             ))}
@@ -1543,14 +1575,16 @@ export default function Car({ car, cities, make, partspost, posts }) {
             <div key={i}>
               <Link
                 href="https://emirates-car.com/search-by-cities-in-uae/[city]"
-                as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
+                as={
+                  'https://emirates-car.com/search-by-cities-in-uae/' +
+                  post.city
+                }
                 title={make + ' spare parts ' + post.city}
-                >
-                  <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
-                    <i className="far fa-compass"></i>&nbsp;
-                    {post.city}{' '}
-                  </p>
-
+              >
+                <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
+                  <i className="far fa-compass"></i>&nbsp;
+                  {post.city}{' '}
+                </p>
               </Link>
             </div>
           ))}{' '}
