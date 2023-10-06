@@ -84,30 +84,17 @@ async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: 'jsafroze@gmail.com',
+        user: 'emiratesautomobileparts@gmail.com',
         pass: process.env.PASSKEY
       }
     });
 
     // Prepare email message
     const mailOptions = {
-      from: 'jsafroze@gmail.com',
+      from: 'emiratesautomobileparts@gmail.com',
       to: 'haksinterlance@gmail.com',
-      subject: `${RefNo +'New Order Received'}`,
-      text: `${'Ticket: ' +
-        Timestamp +
-        '\n' +
-        description}`
-    };
-    const mailOpt = {
-      from: 'jsafroze@gmail.com',
-      to: `${email}`,
-      subject: 'Emirates-car.com | Your Order is Confirmed',
-      text: `${'Ticket: ' +
-        Date.now +
-        Timestamp +
-        '\n' +
-        description}`
+      subject: `${RefNo + ' New Order Received'}`,
+      text: `${'Ticket: ' + Timestamp + '\n' + description}`
     };
 
     await transporter.sendMail(mailOptions);
