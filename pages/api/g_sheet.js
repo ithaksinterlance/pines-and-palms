@@ -94,7 +94,7 @@ async function handler(req, res) {
       from: 'emiratesautomobileparts@gmail.com',
       to: 'haksinterlance@gmail.com',
       subject: `${RefNo + ' New Order Received'}`,
-      text: `${'Ticket: ' + Timestamp + '\n' + description}`
+      text: `${'Ticket: ' + Timestamp + '\n' + description +'\n' + `https://wa.me/${contact}`}`
     };
 
     await transporter.sendMail(mailOptions);
