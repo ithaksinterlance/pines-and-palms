@@ -88,13 +88,28 @@ async function handler(req, res) {
         pass: process.env.PASSKEY
       }
     });
+    var details = `${RefNo +
+      '\n' +
+      'We received an inquiry for ' +
+      '\n' +
+      description +
+      'Do you still require it?'}`;
+    var detailEncode = encodeURI(details);
 
     // Prepare email message
     const mailOptions = {
       from: 'emiratesautomobileparts@gmail.com',
       to: 'haksinterlance@gmail.com',
       subject: `${RefNo + ' New Order Received'}`,
-      text: `${'Ticket: ' + Timestamp + '\n' + description +'\n' + `https://wa.me/${contact}`}`
+      text: `${Timestamp +
+        '\n' +
+        RefNo +
+        '\n' +
+        description +
+        '\n' +
+        `https://api.whatsapp.com/send?phone=${contact}&text=${encodeURI(
+          description
+        )}`}`
     };
 
     await transporter.sendMail(mailOptions);
