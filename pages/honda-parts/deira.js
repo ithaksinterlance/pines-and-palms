@@ -10,12 +10,12 @@ export default function Deira() {
     <div>
       <Head>
         <title>
-          Honda Car Parts in Dubai from Dubai dealers Online | Emirates-car.com
+          Honda Car spare Parts in Deira from Dubai dealers Online | Emirates-car.com
         </title>
         <meta
           name="description"
           content={
-            'Used, Genuine, Aftermarket, OEM auto car spare parts Online for any car brands models'
+            'Used, Genuine, Aftermarket, OEM auto car spare parts Online for any car brands models in deira'
           }
         />
         <meta
