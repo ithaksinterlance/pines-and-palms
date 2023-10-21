@@ -799,7 +799,7 @@ export default function German({ partsposts, posts }) {
         {partsposts.map((post,i) => (
           <div key={i}>
             <a
-              href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+              href="https://emirates-car.com/search-by-part-name/[parts]"
               as={"https://emirates-car.com/search-by-part-name/"+post.parts}
               title={post.parts + ' in uae'}
               >
