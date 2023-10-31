@@ -1005,17 +1005,17 @@ export default function German({ partsposts, posts }) {
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
         {partsposts.map((post, i) => (
           <div key={i}>
-            <a
+            <Link
               href="https://emirates-car.com/search-by-part-name/[parts]"
               as={'https://emirates-car.com/search-by-part-name/' + post.parts}
-              title={post.parts + ' in uae'}
+              title={'german '+post.parts} prefetch={false}
             >
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
                   {post.parts.toUpperCase()}{' '}
                 </p>
               </main>
-            </a>
+            </Link>
           </div>
         ))}{' '}
       </div>
