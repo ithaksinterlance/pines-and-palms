@@ -7,6 +7,15 @@ import Footer from '../footer';
 import Head from 'next/head';
 import Count from '../service-countup';
 import Social from '../Social';
+import 'react-accessible-accordion/dist/fancy-example.css';
+
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel
+} from 'react-accessible-accordion';
 
 export default function German({ partsposts, posts }) {
   const [Year, setYear] = useState('');
@@ -76,7 +85,7 @@ export default function German({ partsposts, posts }) {
     'Mercedes-Benz',
     'MG',
     'Nissan',
-    'Honda',
+    'German',
     'Mazda',
     'Renault',
     'Audi',
@@ -224,9 +233,7 @@ export default function German({ partsposts, posts }) {
   return (
     <div>
       <Head>
-        <title>
-          German Auto Spare Parts in UAE from Dubai dealer
-        </title>
+        <title>German Auto Spare Parts in UAE from Dubai dealer</title>
         <meta
           name="description"
           content={
@@ -283,183 +290,290 @@ export default function German({ partsposts, posts }) {
                 height={50}
                 width={50}
               />
-              GERMAN AUTO SPARE PARTS - Body Parts, Performance Parts, Mechanical parts, Electronic parts, Engine parts and more
+              GERMAN AUTO SPARE PARTS - Body Parts, Performance Parts,
+              Mechanical parts, Electronic parts, Engine parts and more
             </h1>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <a
-                  href="https://emirates-car.com/search-by-make/Mercedes-Benz"
-                  >
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Mercedes Benz spare parts in uae"
-                          src="/img/car-logos/mercedesbenz.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Mercedes Benz
-                      </p>
-                    </main>
-
+                <a href="https://emirates-car.com/search-by-make/Mercedes-Benz">
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Mercedes Benz spare parts in uae"
+                        src="/img/car-logos/mercedesbenz.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Mercedes Benz
+                    </p>
+                  </main>
                 </a>
               </div>
               <div>
-                <a href="https://emirates-car.com/search-by-make/BMW" >
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="BMW spare parts in uae"
-                          src="/img/car-logos/BMW.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        BMW
-                      </p>
-                    </main>
-
+                <a href="https://emirates-car.com/search-by-make/BMW">
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="BMW spare parts in uae"
+                        src="/img/car-logos/BMW.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      BMW
+                    </p>
+                  </main>
                 </a>
               </div>
               <div>
-                <a href="https://emirates-car.com/search-by-make/Volkswagen" >
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Volkswagen spare parts in uae"
-                          src="/img/car-logos/volkswagon.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Volkswagen
-                      </p>
-                    </main>
-
+                <a href="https://emirates-car.com/search-by-make/Volkswagen">
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Volkswagen spare parts in uae"
+                        src="/img/car-logos/volkswagon.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Volkswagen
+                    </p>
+                  </main>
                 </a>
               </div>
             </div>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <a href="https://emirates-car.com/search-by-make/Jaguar" >
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Jaguar spare parts in uae"
-                          src="/img/car-logos/jaguar.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Jaguar
-                      </p>
-                    </main>
-
+                <a href="https://emirates-car.com/search-by-make/Jaguar">
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Jaguar spare parts in uae"
+                        src="/img/car-logos/jaguar.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Jaguar
+                    </p>
+                  </main>
                 </a>
               </div>
               <div>
-                <a
-                  href="https://emirates-car.com/search-by-make/Land%20Rover"
-                  >
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="land rover spare parts in uae"
-                          src="/img/car-logos/land_rover.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Land Rover
-                      </p>
-                    </main>
-
+                <a href="https://emirates-car.com/search-by-make/Land%20Rover">
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="land rover spare parts in uae"
+                        src="/img/car-logos/land_rover.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Land Rover
+                    </p>
+                  </main>
                 </a>
               </div>
               <div>
-                <a href="https://emirates-car.com/search-by-make/Porsche" >
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Porsche spare parts dubai"
-                          src="/img/car-logos/porsche.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Porsche
-                      </p>
-                    </main>
-
+                <a href="https://emirates-car.com/search-by-make/Porsche">
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Porsche spare parts dubai"
+                        src="/img/car-logos/porsche.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Porsche
+                    </p>
+                  </main>
                 </a>
               </div>
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <a href="https://emirates-car.com/get-in-touch" >
-
-                  <nobr className="text-blue-500 text-sm underline">
-                    {' '}
-                    Get in touch with us {'>>'}**
-                  </nobr>
-
+              <a href="https://emirates-car.com/get-in-touch">
+                <nobr className="text-blue-500 text-sm underline">
+                  {' '}
+                  Get in touch with us {'>>'}**
+                </nobr>
               </a>{' '}
             </div>
-            <h1 className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
-              Explore from our immensively large-scale auto spare parts website,
-              your GERMAN auto spare parts for your Vehicle needs - Car / Jeep /
-              Van / Truck / Buses in Your city in UAE especially in Abu al
-              Bukhoosh,Abu Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al
-              Barsha,Al Dhafra,Al Fujayrah,Al Hamriyah,Al Jazeera Port,Al Jeer
-              Port,Al Mafraq,Al Quoz,Al Sufouh,Ar Ruways,Arzanah Island,Das
-              Island,Deira,Dibba,Dubai,Dubai World Central Apt,Esnnad,Sea Port
-              (Fateh Terminal),Free Port,Habshan,Hail,Hamriya Free Zone Port,Al
-              Jarf (Hassyan),Hatta,Sea Port (Hulaylah Terminal),Sea Port
-              (Indooroodilly),Jebel Ali,Jebel Ali Free Zone,Jebel
-              Dhanna,Jumayrah,Kalba,Khalidia,Khor al Fakkan,Masfut,Khalid
-              Port,Khalifa City - Abu Dhabi,Mina Rashid Port,Mina Saqr,Mina
-              Zayed - Abu Dhabi, Minhad, Mirfa, Mubarek Terminal, Mubarras
-              Island,Musafa,Mussafah,Offshore Fujairah,Port Rashid,Rak Khor
-              Port, Rak Maritime City, Ras al Khaimah, Ras Al Khor,Al Ras,Reem
-              Island,Ruwais = Ar Ruways,Ruwais Port, Sadiyat
-              Island,Sharjah,Sila,Stevin Rock,Swaihan,The Palm Jumeirah,Umm Al
-              Nar,Umm al Quwain, Al Qurayyah, Yas Island, Zirku Island in UAE.
-              You can check our catalogue at{' '}
+            <p className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base  xs:text-sm md:text-base p-5 mx-10">
+              Used parts? New parts? Aftermarket Parts? Genuine parts? Yes we
+              are dealing with all german brands including{' '}
               <a
-                href="https://emirates-car.com/search-by-part-name"
+                href="https://emirates-car.com/search-by-make"
                 className="text-blue-400 underline"
-                >
-                  https://emirates-car.com/search-by-part-name
-
+              >
+                BMW
               </a>
-              . Submit your inquiry to us, our dealer will get back to you based
-              on stock availability.
-            </h1>
+              <nobr />
+              <a
+                href="https://emirates-car.com/search-by-make/Mercedes-Benz"
+                className="text-blue-400 underline"
+              >
+                Mercedes-Benz
+              </a>
+              ,<nobr />
+              <a
+                href="https://emirates-car.com/get-in-touch"
+                className="text-blue-400 underline"
+              >
+                Bosch
+              </a>
+              ,<nobr />
+              <a
+                href="https://emirates-car.com/search-by-make/BMW"
+                className="text-blue-400 underline"
+              >
+                BMW
+              </a>
+              ,<nobr />
+              <a
+                href="https://emirates-car.com/search-by-make/Volkswagen"
+                className="text-blue-400 underline"
+              >
+                Volkswagen
+              </a>
+              ,<nobr />
+              <a
+                href="https://emirates-car.com/search-by-make/Land%20Rover"
+                className="text-blue-400 underline"
+              >
+                Land Rover
+              </a>
+              ,<nobr />
+              <a
+                href="https://emirates-car.com/search-by-make/Porsche"
+                className="text-blue-400 underline"
+              >
+                Porsche
+              </a>
+              ,<nobr />
+              <a
+                href="https://emirates-car.com/search-by-make/Jaguar"
+                className="text-blue-400 underline"
+              >
+                Jaguar
+              </a>
+              ,<nobr />
+              <a
+                href="https://emirates-car.com/search-by-make/Mini%20Cooper"
+                className="text-blue-400 underline"
+              >
+                Mini Cooper
+              </a>
+              . In recent years, there has been an high interest in car
+              modification and Upgrade. If you are interested too, then simply
+              submit your inquiry at our website. Our Part finding Professionals
+              has the largest database of supplier and stockist as well. We
+              offer shipping to Dubai, Sharjah, Ajman, Ras al Khaimah and other
+              places in UAE. Have a look at our return and refund policy{' '}
+              <a
+                href="https://emirates-car.com/return-and-refund-policy"
+                className="text-blue-400 underline"
+              >
+                here
+              </a>
+              .
+            </p>
+            <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+              <div>
+                <Link
+                  href="https://emirates-car.com/search-by-cities-in-uae/Dubai"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'German spare parts dubai'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                  German Parts Dubai
+                </Link>
+              </div>
+              <div>
+                {' '}
+                <Link
+                  href="https://emirates-car.com/search-by-cities-in-uae/Sharjah"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'German spare parts dubai'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                  German Parts Sharjah
+                </Link>
+              </div>
+              <div>
+                {' '}
+                <Link
+                  href="https://emirates-car.com/search-by-cities-in-uae/Ajman"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'german parts ajman'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  German Parts Ajman
+                </Link>
+              </div>
+              <div>
+                {' '}
+                <Link
+                  href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'German spare parts ras al khaimah'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  German Parts Ras Al Khaimah
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'German spare parts al quoz'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  German Parts Al Quoz
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="https://emirates-car.com/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'German spare parts dubai sheikh zayed road'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  German Parts Sheikh Zayed Road, Dubai
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
+                  className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  title={'German spare parts deira'}
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  German Parts Deira
+                </Link>
+              </div>
+            </div>
             <div className="mx-auto">
               <Count />
             </div>
@@ -468,26 +582,29 @@ export default function German({ partsposts, posts }) {
                 <Social />
                 <div>
                   <span>
-                    <a href="https://emirates-car.com/search-by-part-name"  className="underline hover:text-blue-500 xs:text-sm">
-
-                        SEARCH BY PART NAME
-
+                    <a
+                      href="https://emirates-car.com/search-by-part-name"
+                      className="underline hover:text-blue-500 xs:text-sm"
+                    >
+                      SEARCH BY PART NAME
                     </a>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <a href="https://emirates-car.com/search-by-cities-in-uae"  className="underline hover:text-blue-500  xs:text-sm">
-
-                        SEARCH BY CITY
-
+                    <a
+                      href="https://emirates-car.com/search-by-cities-in-uae"
+                      className="underline hover:text-blue-500  xs:text-sm"
+                    >
+                      SEARCH BY CITY
                     </a>{' '}
                     &nbsp;|
                   </span>
                   <span>
-                    <a href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500  xs:text-sm">
-
-                        SEARCH BY MAKE
-
+                    <a
+                      href="https://emirates-car.com/search-by-make"
+                      className="underline hover:text-blue-500  xs:text-sm"
+                    >
+                      SEARCH BY MAKE
                     </a>{' '}
                     &nbsp;
                   </span>
@@ -561,7 +678,7 @@ export default function German({ partsposts, posts }) {
                         <option value="" disabled>
                           Select your Make
                         </option>
-                        {make.map((m,i) => (
+                        {make.map((m, i) => (
                           <option key={i}>{m}</option>
                         ))}{' '}
                       </select>
@@ -597,7 +714,7 @@ export default function German({ partsposts, posts }) {
                         </option>
                         {posts
                           .filter(s => s.make === Make)
-                          .map((s,i) => (
+                          .map((s, i) => (
                             <option key={i} value={s.model}>
                               {s.model}{' '}
                             </option>
@@ -731,11 +848,19 @@ export default function German({ partsposts, posts }) {
                   </button>
                 </div>
                 <div className="flex float-left text-xs text-gray-400">
-                  <a href="https://emirates-car.com/privacy-policy" target="_newtab" className="underline">
+                  <a
+                    href="https://emirates-car.com/privacy-policy"
+                    target="_newtab"
+                    className="underline"
+                  >
                     Privacy policy
                   </a>
                   &nbsp;
-                  <a href="https://emirates-car.com/terms-and-condition" target="_newtab" className="underline">
+                  <a
+                    href="https://emirates-car.com/terms-and-condition"
+                    target="_newtab"
+                    className="underline"
+                  >
                     Terms and conditions
                   </a>
                 </div>
@@ -755,13 +880,92 @@ export default function German({ partsposts, posts }) {
                 <li>Aftermarket German vehicle auto spare parts</li>
               </ul>
             </h3>
+            <div className="place-content-center text-center pt-10 xl:mx-36 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+              <p className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
+                FAQ SESSION
+              </p>
+              <Accordion className="my-10">
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      How can I place order?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      You can simply place order by Submitting your details in the form.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Do you provide international shipping?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Yes, we do provide.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      What is the return policy?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                     Check out the return policy here <a href="https://emirates-car.com/return-an-refund-policy">here</a>
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Do you offer warranties for the parts?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      We do provide warrantees only for some parts.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Can I return a part if it doesn't fit my vehicle?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Yes you can return or also replace withe other one.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Can i place order for brands and parts that are not included in the website?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Yes, the forms are designed in a way that accepts any parts for any cars. If you dont find your desired parts or brand in the dropdown in the form, then submit your inquiries at <a href="https://emirates-car.com/get-in-touch">here.</a>
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
         </div>
       </div>
 
-      <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+      <div className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
         SEARCH FOR AUTO SPARE PARTS IN UAE
-      </h1>
+      </div>
       <div className="flex justify-center">
         <div className="pt-3">
           <input
@@ -784,10 +988,13 @@ export default function German({ partsposts, posts }) {
                   width="100%"
                 >
                   <a
-                    href={"https://emirates-car.com/search-by-part-name/"+suggestion}
+                    href={
+                      'https://emirates-car.com/search-by-part-name/' +
+                      suggestion
+                    }
                     rel="noopener noreferrer"
                     target="_newtab"
-                    >
+                  >
                     {suggestion}
                   </a>
                 </div>
@@ -796,18 +1003,18 @@ export default function German({ partsposts, posts }) {
         </div>
       </div>
       <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10">
-        {partsposts.map((post,i) => (
+        {partsposts.map((post, i) => (
           <div key={i}>
             <a
               href="https://emirates-car.com/search-by-part-name/[parts]"
-              as={"https://emirates-car.com/search-by-part-name/"+post.parts}
+              as={'https://emirates-car.com/search-by-part-name/' + post.parts}
               title={post.parts + ' in uae'}
-              >
-                <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                  <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                    {post.parts.toUpperCase()}{' '}
-                  </p>
-                </main>
+            >
+              <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                  {post.parts.toUpperCase()}{' '}
+                </p>
+              </main>
             </a>
           </div>
         ))}{' '}
