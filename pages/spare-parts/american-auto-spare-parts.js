@@ -273,6 +273,10 @@ export default function America({ partsposts, posts }) {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.jpg"
         />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/american-auto-spare-parts"
+        />
       </Head>
       <Navbar />
       <div className="bg-cover">

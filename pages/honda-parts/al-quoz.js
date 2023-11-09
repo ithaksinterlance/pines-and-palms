@@ -57,6 +57,10 @@ export default function AlQuoz() {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/honda-parts/al-quoz"
+        />
       </Head>
       <Navbar />
       <div className="w-3/4 mx-auto">
@@ -65,11 +69,12 @@ export default function AlQuoz() {
             Honda Car Parts in Al Quoz Online for German, American, Japan,
             Korean and more models
           </h1>
-          <Link href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz" className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-              target="_newtab">
-
-              Inquire Now
-
+          <Link
+            href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz"
+            className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+            target="_newtab"
+          >
+            Inquire Now
           </Link>
         </div>
       </div>
@@ -159,11 +164,9 @@ export default function AlQuoz() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Dubai"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts dubai'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                  Honda Parts Dubai
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                Honda Parts Dubai
               </Link>
             </div>
             <div>
@@ -172,11 +175,9 @@ export default function AlQuoz() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Sharjah"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts dubai'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                  Honda Parts Sharjah
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                Honda Parts Sharjah
               </Link>
             </div>
             <div>
@@ -185,11 +186,9 @@ export default function AlQuoz() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Ajman"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts ajman'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Ajman
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Ajman
               </Link>
             </div>
             <div>
@@ -198,11 +197,9 @@ export default function AlQuoz() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts ras al khaimah'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Ras Al Khaimah
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Ras Al Khaimah
               </Link>
             </div>
             <div>
@@ -210,11 +207,9 @@ export default function AlQuoz() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts al quoz'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Al Quoz
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Al Quoz
               </Link>
             </div>
             <div>
@@ -222,11 +217,9 @@ export default function AlQuoz() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts dubai sheikh zayed road'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Sheikh Zayed Road, Dubai
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Sheikh Zayed Road, Dubai
               </Link>
             </div>
             <div>
@@ -234,11 +227,9 @@ export default function AlQuoz() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts deira'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Deira
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Deira
               </Link>
             </div>
           </div>
@@ -374,9 +365,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Engine%20Assembly"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Engine
-
+                    Engine
                   </Link>
                 </li>
                 <li>
@@ -384,9 +373,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Engine%20Assembly"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Battery
-
+                    Battery
                   </Link>
                 </li>
                 <li>
@@ -394,9 +381,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Engine%20Assembly"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Alternator
-
+                    Alternator
                   </Link>
                 </li>
                 <li>
@@ -404,9 +389,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Brake%20Pads"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Brake Pads
-
+                    Brake Pads
                   </Link>
                 </li>
                 <li>
@@ -414,9 +397,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Radiator"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Radiator
-
+                    Radiator
                   </Link>
                 </li>
                 <li>
@@ -424,9 +405,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Transmission%20Control%20Module"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Transmission
-
+                    Transmission
                   </Link>
                 </li>
                 <li>
@@ -434,20 +413,16 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Shock%20Absorber"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Shock Absorber
-
+                    Shock Absorber
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="https://emirates-car.com/search-by-part-name/Convertible%20Top%20Motor"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
-
-                      {' '}
-                      Catalytic Converter
-
+                  >
+                    {' '}
+                    Catalytic Converter
                   </Link>
                 </li>
                 <li>
@@ -455,9 +430,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Power%20Steering%20Box"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Power Steering
-
+                    Power Steering
                   </Link>
                 </li>
                 <li>
@@ -465,9 +438,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/get-in-touch"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Pump
-
+                    Pump
                   </Link>
                 </li>
               </ol>
@@ -483,9 +454,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Bonnet"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Bonnet
-
+                    Bonnet
                   </Link>
                 </li>
                 <li>
@@ -493,9 +462,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Fender%20(Front)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Fender
-
+                    Fender
                   </Link>
                 </li>
                 <li>
@@ -503,9 +470,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Decklid"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Decklid
-
+                    Decklid
                   </Link>
                 </li>
                 <li>
@@ -513,9 +478,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Grille"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Grille
-
+                    Grille
                   </Link>
                 </li>
                 <li>
@@ -523,9 +486,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Wheel"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Wheel
-
+                    Wheel
                   </Link>
                 </li>
               </ol>
@@ -541,9 +502,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Spark%20Plug"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Spark Plug
-
+                    Spark Plug
                   </Link>
                 </li>
                 <li>
@@ -551,9 +510,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Alternator"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Alternator
-
+                    Alternator
                   </Link>
                 </li>
                 <li>
@@ -561,9 +518,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Battery"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Battery
-
+                    Battery
                   </Link>
                 </li>
                 <li>
@@ -571,9 +526,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/Ignition%20Switch"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Ignition Switch
-
+                    Ignition Switch
                   </Link>
                 </li>
                 <li>
@@ -581,9 +534,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/get-in-touch"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      Many more...
-
+                    Many more...
                   </Link>
                 </li>
               </ol>
@@ -599,9 +550,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/AC%20Compressor"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      AC Compressor
-
+                    AC Compressor
                   </Link>
                 </li>
                 <li>
@@ -609,9 +558,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/AC%20Condenser"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      AC Condenser
-
+                    AC Condenser
                   </Link>
                 </li>
                 <li>
@@ -619,9 +566,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/AC%20Selector"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      AC Selector
-
+                    AC Selector
                   </Link>
                 </li>
                 <li>
@@ -629,9 +574,7 @@ export default function AlQuoz() {
                     href="https://emirates-car.com/search-by-part-name/AC%20Controls"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-
-                      AC Controls
-
+                    AC Controls
                   </Link>
                 </li>
               </ol>
@@ -695,9 +638,11 @@ export default function AlQuoz() {
             dealers will contact you back through the contact information you
             submitted. If one website didnt reply you, then other website will
             do. So there is plenty of website and options.{' '}
-            <Link href="https://emirates-car.com/" className="text-blue-500 hover:text-blue-900 underline">
-                Emirates-car.com
-
+            <Link
+              href="https://emirates-car.com/"
+              className="text-blue-500 hover:text-blue-900 underline"
+            >
+              Emirates-car.com
             </Link>{' '}
             is one such website which accept online inquiries. It deals with
             parts and accessories for honda accord, Honda civic and other honda

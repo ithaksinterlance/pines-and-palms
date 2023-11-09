@@ -9,7 +9,6 @@ import Slider from 'react-slick';
 import Footer from './footer';
 import Head from 'next/head';
 import Social from './Social';
-import HondaOfferButton from './HondaOfferButton';
 
 export default function Forms() {
   const [Make, setMake] = useState('');
@@ -172,6 +171,14 @@ export default function Forms() {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <meta
+          property="og:url"
+          content="https://www.emirates-car.com/get-in-touch"
+        />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/get-in-touch"
+        />
       </Head>
       <Nav />
       <div className="container place-content-center mx-auto py-6">
@@ -208,7 +215,13 @@ export default function Forms() {
           </div>
         </div>
         <div className="text-center">
-          <HondaOfferButton />
+          <Link
+            href="/honda-accord-8th-gen-parts"
+            className="underline animate-pulse text-red-600 hover:text-red-800"
+          >
+            Check Offers On Honda Accord 8th Generation 2008, 2009, 2010, 2011,
+            2012
+          </Link>
         </div>
 
         <div className="flex s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 shadow-2xl ">
@@ -524,14 +537,16 @@ export default function Forms() {
                   href="/privacy-policy"
                   target="_newtab"
                   className="underline"
-                  >Privacy policy
+                >
+                  Privacy policy
                 </Link>
                 &nbsp;
                 <Link
                   href="/terms-and-condition"
                   target="_newtab"
                   className="underline"
-                  >Terms and conditions
+                >
+                  Terms and conditions
                 </Link>
               </div>
 

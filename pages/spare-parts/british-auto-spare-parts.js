@@ -247,7 +247,7 @@ export default function British({ partsposts, posts }) {
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
-          content="https://www.emirates-car.com/country-vehicles-spare-parts/British-auto-spare-parts"
+          content="https://www.emirates-car.com/spare-parts/British-auto-spare-parts"
         />
         <meta
           property="og:description"
@@ -260,7 +260,7 @@ export default function British({ partsposts, posts }) {
         />
         <meta
           property="twitter:url"
-          content="https://www.emirates-car.com/country-vehicles-spare-parts/British-auto-spare-parts"
+          content="https://www.emirates-car.com/spare-parts/British-auto-spare-parts"
         />
         <meta
           property="twitter:title"
@@ -273,6 +273,10 @@ export default function British({ partsposts, posts }) {
         <meta
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/spare-parts/british-auto-spare-parts"
         />
       </Head>
       <Navbar />

@@ -279,6 +279,10 @@ export default function Forms({ posts, pos, po }) {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/contact"
+        />
       </Head>
       <Nav />
       <div className="container place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
@@ -693,7 +697,10 @@ export default function Forms({ posts, pos, po }) {
         <div className="pb-6 xs:pb-3 p-2 sm:pb-3 2xs:pb-3">
           <h1 className="text-3xl xs:text-sm text-white uppercase text-center font-bold 2xs:text-base md:text-xl lg:text-2xl s:text-sm">
             COULD&apos;NT FIND YOUR DESIRED AUTO PARTS?{' '}
-            <Link href="https://emirates-car.com/contact" className="underline text-blue-900">
+            <Link
+              href="https://emirates-car.com/contact"
+              className="underline text-blue-900"
+            >
               CONTACT US NOW
             </Link>
           </h1>
@@ -726,44 +733,44 @@ export default function Forms({ posts, pos, po }) {
                 <Link
                   className="text-xl leading-xl text-blue-900"
                   href="https://www.facebook.com/emirates.auto.parts"
-                  >
-                  <i className="fab fa-2x fa-facebook"></i></Link>
-
+                >
+                  <i className="fab fa-2x fa-facebook"></i>
+                </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-purple-900"
                   href="https://www.instagram.com/emiratescar_parts/"
-                  >
-                  <i className="fab fa-2x fa-instagram"></i></Link>
-
+                >
+                  <i className="fab fa-2x fa-instagram"></i>
+                </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-black"
                   href="https://emirates-car.tumblr.com/"
-                  >
-                  <i className="fab fa-2x fa-tumblr"></i></Link>
-
+                >
+                  <i className="fab fa-2x fa-tumblr"></i>
+                </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-blue-300"
                   href="https://twitter.com/uaeautoparts"
-                  >
-                  <i className="fab fa-2x fa-twitter"></i></Link>
-
+                >
+                  <i className="fab fa-2x fa-twitter"></i>
+                </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-red-700"
                   href="https://in.pinterest.com/emiratesautomobileparts/"
-                  >
-                  <i className="fab fa-2x fa-pinterest"></i></Link>
-
+                >
+                  <i className="fab fa-2x fa-pinterest"></i>
+                </Link>
                 &nbsp;
                 <Link
                   className="text-xl leading-xl text-blue-500"
                   href="https://in.pinterest.com/emiratesautomobileparts/"
-                  >
-                  <i className="fab fa-2x fa-linkedin"></i></Link>
-
+                >
+                  <i className="fab fa-2x fa-linkedin"></i>
+                </Link>
               </p>
             </div>
 
@@ -799,9 +806,9 @@ export default function Forms({ posts, pos, po }) {
               <div key={i}>
                 <Link
                   href="https://emirates-car.com/search-by-make/[make]"
-                  as={"https://emirates-car.com/search-by-make/"+post.make}
+                  as={'https://emirates-car.com/search-by-make/' + post.make}
                   className="text-xs text-white font-medium hover:text-gray-800 underline"
-                  >
+                >
                   {post.make + ' spare parts'}
                 </Link>
               </div>
@@ -814,11 +821,9 @@ export default function Forms({ posts, pos, po }) {
               target="_newtab"
               title="buy car parts online"
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
-              >
-
-                <i className="fa fa-copyright" aria-hidden="true"></i>
-                Copyright © 2023 Emirates-car. All rights reserved.
-
+            >
+              <i className="fa fa-copyright" aria-hidden="true"></i>
+              Copyright © 2023 Emirates-car. All rights reserved.
             </Link>
           </div>
         </div>

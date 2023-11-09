@@ -272,6 +272,10 @@ export default function Korean({ partsposts, posts }) {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/spare-parts/korean-auto-spare-parts"
+        />
       </Head>
       <Navbar />
       <div className="bg-cover">

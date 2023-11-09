@@ -339,8 +339,8 @@ export default function Car({
       <Nav />
       <Head>
         <title>
-          {make} - {model} Car Auto Spare Parts Order Online in UAE from
-          Dubai - Best Prices"
+          {make} - {model} Car Auto Spare Parts Order Online in UAE from Dubai -
+          Best Prices"
         </title>
         <meta
           name="description"
@@ -451,6 +451,12 @@ export default function Car({
         <meta
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <link
+          rel="canonical"
+          href={
+            'https://www.emirates-car.com/search-by-make/' + make + '/' + model
+          }
         />
       </Head>
       <div className="w-3/4 xs:w-4/5 mx-auto">
@@ -877,7 +883,7 @@ export default function Car({
                             '/' +
                             post.model
                           }
-                          >
+                        >
                           <main className=" xs:text-center font-mono text-blue-800 underline hover:text-blue-700 focus:text-blue-700">
                             {post.make}&nbsp;{post.model.replace('%2F', '/')}
                             &nbsp;Parts
@@ -918,9 +924,9 @@ export default function Car({
                     <div key={i}>
                       <Link
                         href="https://emirates-car.com/search-by-make/[make]"
-                        as={"https://emirates-car.com/search-by-make/"+p.make}
-                        title={p.make +" spare parts"}
-                        >
+                        as={'https://emirates-car.com/search-by-make/' + p.make}
+                        title={p.make + ' spare parts'}
+                      >
                         <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                           <div className="flex justify-center">
                             <Image
@@ -1004,7 +1010,7 @@ export default function Car({
                   <Link
                     href="https://emirates-car.com/search-by-cities-in-uae/Dubai"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                  >
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                     &nbsp; DUBAI
                   </Link>
@@ -1014,7 +1020,7 @@ export default function Car({
                   <Link
                     href="https://emirates-car.com/search-by-cities-in-uae/Sharjah"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                  >
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                     &nbsp; SHARJAH
                   </Link>
@@ -1024,7 +1030,7 @@ export default function Car({
                   <Link
                     href="search-by-cities-in-uae/Ajman"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                  >
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                     &nbsp;AJMAN
                   </Link>
@@ -1034,7 +1040,7 @@ export default function Car({
                   <Link
                     href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                  >
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                     &nbsp;RAS AL KHAIMAH
                   </Link>
@@ -1043,7 +1049,7 @@ export default function Car({
                   <Link
                     href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                  >
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                     &nbsp;Al QUOZ
                   </Link>
@@ -1052,7 +1058,7 @@ export default function Car({
                   <Link
                     href="https://emirates-car.com/search-by-cities-in-uae/Abu%20Dhabi"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                  >
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                     &nbsp;ABU DHABI
                   </Link>
@@ -1061,7 +1067,7 @@ export default function Car({
                   <Link
                     href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                  >
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                     &nbsp;DEIRA
                   </Link>
@@ -1130,7 +1136,7 @@ export default function Car({
             one such website which accept online inquiries. It deals with parts
             and accessories for honda accord, Honda civic and{' '}
             <Link
-              href={"https://emirates-car.com/search-by-make/"+make}
+              href={'https://emirates-car.com/search-by-make/' + make}
               className="text-blue-500 underline hover:text-blue-900"
             >
               other honda models
@@ -1187,9 +1193,12 @@ export default function Car({
                 <div key={i}>
                   <Link
                     href="https://emirates-car.com/search-by-part-name/[parts]"
-                    as={"https://emirates-car.com/search-by-part-name/"+post.parts}
+                    as={
+                      'https://emirates-car.com/search-by-part-name/' +
+                      post.parts
+                    }
                     title={make + ' ' + model + ' ' + post.parts}
-                    >
+                  >
                     <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                       <i className="far fa-compass"></i>
                       {' ' + make} {' ' + model} {post.parts} price list

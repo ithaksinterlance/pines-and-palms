@@ -303,6 +303,12 @@ export default function City({ cities, data, posts, pos }) {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link
+          rel="canonical"
+          href=
+            "https://www.emirates-car.com/search-by-cities-in-uae"
+
+        />
       </Head>
       <Nav />
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
@@ -338,10 +344,13 @@ export default function City({ cities, data, posts, pos }) {
                           width="100%"
                         >
                           <Link
-                            href={"https://emirates-car.com/search-by-cities-in-uae/"+recommend}
+                            href={
+                              'https://emirates-car.com/search-by-cities-in-uae/' +
+                              recommend
+                            }
                             rel="noopener noreferrer"
                             target="_newtab"
-                            >
+                          >
                             {recommend}
                           </Link>
                         </div>
@@ -358,19 +367,21 @@ export default function City({ cities, data, posts, pos }) {
               </p>
 
               <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
-                {cities.map((post,i) => (
+                {cities.map((post, i) => (
                   <div key={i}>
                     <Link
                       href="https://emirates-car.com/search-by-cities-in-uae/[city]"
-                      as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
+                      as={
+                        'https://emirates-car.com/search-by-cities-in-uae/' +
+                        post.city
+                      }
                       title={'car spare parts ' + post.city}
-                      >
-                        <main className="border border-blue-800 h-full p-3 ">
-                          <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
-                            {post.city}
-                          </p>
-                        </main>
-
+                    >
+                      <main className="border border-blue-800 h-full p-3 ">
+                        <p className="text-center text-lg xs:text-2xl xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 ">
+                          {post.city}
+                        </p>
+                      </main>
                     </Link>
                   </div>
                 ))}
@@ -444,7 +455,7 @@ export default function City({ cities, data, posts, pos }) {
                           <option value="" disabled>
                             Select your Make
                           </option>
-                          {make.map((m,i) => (
+                          {make.map((m, i) => (
                             <option key={i}>{m}</option>
                           ))}{' '}
                         </select>
@@ -480,7 +491,7 @@ export default function City({ cities, data, posts, pos }) {
                           </option>
                           {posts
                             .filter(s => s.make === Make)
-                            .map((s,i) => (
+                            .map((s, i) => (
                               <option key={i} value={s.model}>
                                 {s.model}{' '}
                               </option>
@@ -614,11 +625,19 @@ export default function City({ cities, data, posts, pos }) {
                     </button>
                   </div>
                   <div className="flex float-left text-xs text-gray-400">
-                    <Link href="https://emirates-car.com/privacy-policy" target="_newtab" className="underline">
+                    <Link
+                      href="https://emirates-car.com/privacy-policy"
+                      target="_newtab"
+                      className="underline"
+                    >
                       Privacy policy
                     </Link>
                     &nbsp;
-                    <Link href="https://emirates-car.com/terms-and-condition" target="_newtab" className="underline">
+                    <Link
+                      href="https://emirates-car.com/terms-and-condition"
+                      target="_newtab"
+                      className="underline"
+                    >
                       Terms and conditions
                     </Link>
                   </div>
@@ -631,23 +650,29 @@ export default function City({ cities, data, posts, pos }) {
                   <Social />
                   <div>
                     <span>
-                      <Link href="https://emirates-car.com/search-by-part-name" className="underline hover:text-blue-500 xs:text-sm">
-                          SEARCH BY PART NAME
-
+                      <Link
+                        href="https://emirates-car.com/search-by-part-name"
+                        className="underline hover:text-blue-500 xs:text-sm"
+                      >
+                        SEARCH BY PART NAME
                       </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
-                      <Link href="https://emirates-car.com/search-by-cities-in-uae" className="underline hover:text-blue-500  xs:text-sm">
-                          SEARCH BY CITY
-
+                      <Link
+                        href="https://emirates-car.com/search-by-cities-in-uae"
+                        className="underline hover:text-blue-500  xs:text-sm"
+                      >
+                        SEARCH BY CITY
                       </Link>{' '}
                       &nbsp;|
                     </span>
                     <span>
-                      <Link href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500  xs:text-sm">
-                          SEARCH BY MAKE
-
+                      <Link
+                        href="https://emirates-car.com/search-by-make"
+                        className="underline hover:text-blue-500  xs:text-sm"
+                      >
+                        SEARCH BY MAKE
                       </Link>{' '}
                       &nbsp;
                     </span>
@@ -664,20 +689,20 @@ export default function City({ cities, data, posts, pos }) {
                   UAE. We also operate in main cities such as dubai, sharjah,
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
-                  <Link href="https://emirates-car.com/search-by-part-name" className="text-blue-400 underline">
-                      https://emirates-car.com/search-by-part-name
-
+                  <Link
+                    href="https://emirates-car.com/search-by-part-name"
+                    className="text-blue-400 underline"
+                  >
+                    https://emirates-car.com/search-by-part-name
                   </Link>
                   .We also deal in brands such as{' '}
-                  {data.map((p,i) => (
+                  {data.map((p, i) => (
                     <Link
                       key={i}
-                      href={"https://emirates-car.com/search-by-make/"+p.make}
-                      >
-
-                        {p.make}
-                        {' in UAE, '}
-
+                      href={'https://emirates-car.com/search-by-make/' + p.make}
+                    >
+                      {p.make}
+                      {' in UAE, '}
                     </Link>
                   ))}
                 </h1>
@@ -716,18 +741,17 @@ export default function City({ cities, data, posts, pos }) {
             SEARCH PART BY MAKE
           </div>
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 pb-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  text-justify font-sans">
-            {data.map((post,i) => (
+            {data.map((post, i) => (
               <div key={i}>
                 <Link
                   href="https://emirates-car.com/search-by-make/[make]"
-                  as={"https://emirates-car.com/search-by-make/"+post.make}
+                  as={'https://emirates-car.com/search-by-make/' + post.make}
                   title={post.make + ' spare parts sharjah'}
-                  >
-                    <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
-                      <i className="fa fa-mars-stroke" aria-hidden="true"></i>{' '}
-                      {post.make}
-                    </p>
-
+                >
+                  <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">
+                    <i className="fa fa-mars-stroke" aria-hidden="true"></i>{' '}
+                    {post.make}
+                  </p>
                 </Link>
               </div>
             ))}

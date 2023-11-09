@@ -58,6 +58,10 @@ export default function RasAlKhaimah() {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/honda-parts/ras-al-khaimah"
+        />
       </Head>
       <Navbar />
       <div className="w-3/4 mx-auto">
@@ -76,10 +80,9 @@ export default function RasAlKhaimah() {
         <Link
           href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
           className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-          target="_newtab">
-
-            Inquire Now
-
+          target="_newtab"
+        >
+          Inquire Now
         </Link>
 
         <div className="grid grid-cols-1 place-content-center pt-10 xs:pt-5 mx-8">
@@ -96,10 +99,9 @@ export default function RasAlKhaimah() {
               spare parts by simply submitting the online inquiry form{' '}
               <Link
                 href="https://emirates-car.com"
-                className="underline text-blue-500 hover:text-blue-900">
-
-                  here
-
+                className="underline text-blue-500 hover:text-blue-900"
+              >
+                here
               </Link>
               . You can get callback or whatsapp chat or email after submitting
               your form inquiry.
@@ -171,9 +173,9 @@ export default function RasAlKhaimah() {
                   href="https://emirates-car.com/search-by-cities-in-uae/Dubai"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   title={'honda spare parts dubai'}
-                  >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Dubai
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda
+                  Parts Dubai
                 </Link>
               </div>
               <div>
@@ -182,9 +184,9 @@ export default function RasAlKhaimah() {
                   href="https://emirates-car.com/search-by-cities-in-uae/Sharjah"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   title={'Honda spare parts dubai'}
-                  >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Sharjah
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda
+                  Parts Sharjah
                 </Link>
               </div>
               <div>
@@ -193,9 +195,9 @@ export default function RasAlKhaimah() {
                   href="https://emirates-car.com/search-by-cities-in-uae/Ajman"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   title={'honda spare parts ajman'}
-                  >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Ajman
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda
+                  Parts Ajman
                 </Link>
               </div>
               <div>
@@ -204,9 +206,9 @@ export default function RasAlKhaimah() {
                   href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   title={'Honda spare parts ras al khaimah'}
-                  >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Ras Al Khaimah
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda
+                  Parts Ras Al Khaimah
                 </Link>
               </div>
               <div>
@@ -214,9 +216,9 @@ export default function RasAlKhaimah() {
                   href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   title={'Honda spare parts al quoz'}
-                  >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Al Quoz
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda
+                  Parts Al Quoz
                 </Link>
               </div>
               <div>
@@ -224,9 +226,9 @@ export default function RasAlKhaimah() {
                   href="https://emirates-car.com/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   title={'Honda spare parts dubai sheikh zayed road'}
-                  >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Sheikh Zayed Road, Dubai
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda
+                  Parts Sheikh Zayed Road, Dubai
                 </Link>
               </div>
               <div>
@@ -234,9 +236,9 @@ export default function RasAlKhaimah() {
                   href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   title={'honda spare parts deira'}
-                  >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda Parts Deira
+                >
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Honda
+                  Parts Deira
                 </Link>
               </div>
             </div>
@@ -427,7 +429,7 @@ export default function RasAlKhaimah() {
                     <Link
                       href="https://emirates-car.com/search-by-part-name/Convertible%20Top%20Motor"
                       className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                      >
+                    >
                       {' '}
                       Catalytic Converter
                     </Link>
@@ -645,10 +647,11 @@ export default function RasAlKhaimah() {
               and dealers will contact you back through the contact information
               you submitted. If one website didnt reply you, then other website
               will do. So there is plenty of website and options.{' '}
-              <Link href="https://emirates-car.com/" className="text-blue-500 hover:text-blue-900 underline">
-
-                  Emirates-car.com
-
+              <Link
+                href="https://emirates-car.com/"
+                className="text-blue-500 hover:text-blue-900 underline"
+              >
+                Emirates-car.com
               </Link>
               is one such website which accept online inquiries. It deals with
               parts and accessories for honda accord, Honda civic and other

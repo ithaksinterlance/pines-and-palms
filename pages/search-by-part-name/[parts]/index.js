@@ -200,6 +200,12 @@ export default function Parts({ data, cities, posts }) {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link
+          rel="canonical"
+          href={
+            'https://www.emirates-car.com/search-by-part-name/' + data.parts
+          }
+        />
       </Head>
       <div className="flex place-content-center mx-auto">
         <h1 className="text-3xl font-extrabold mx-auto my-5 xs:text-xl">
@@ -231,7 +237,9 @@ export default function Parts({ data, cities, posts }) {
                 <div>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-part-name" className="underline hover:text-blue-500 xs:text-sm" title="car spare parts online"
+                      href="https://emirates-car.com/search-by-part-name"
+                      className="underline hover:text-blue-500 xs:text-sm"
+                      title="car spare parts online"
                     >
                       SEARCH BY PART NAME
                     </Link>{' '}
@@ -239,8 +247,8 @@ export default function Parts({ data, cities, posts }) {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-cities-in-uae" className="underline hover:text-blue-500 xs:text-sm"
-
+                      href="https://emirates-car.com/search-by-cities-in-uae"
+                      className="underline hover:text-blue-500 xs:text-sm"
                     >
                       Spare parts near me
                     </Link>{' '}
@@ -248,8 +256,8 @@ export default function Parts({ data, cities, posts }) {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-make" className="underline hover:text-blue-500 xs:text-sm"
-
+                      href="https://emirates-car.com/search-by-make"
+                      className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY MAKE
                     </Link>{' '}
@@ -552,16 +560,16 @@ export default function Parts({ data, cities, posts }) {
                     <div className="flex float-left text-xs text-gray-400">
                       <Link
                         href="https://emirates-car.com/privacy-policy"
-
-                        target="_newtab" className="underline"
+                        target="_newtab"
+                        className="underline"
                       >
                         Privacy policy
                       </Link>
                       &nbsp;
                       <Link
                         href="https://emirates-car.com/terms-and-condition"
-
-                        target="_newtab" className="underline"
+                        target="_newtab"
+                        className="underline"
                       >
                         Terms and conditions
                       </Link>
@@ -576,13 +584,15 @@ export default function Parts({ data, cities, posts }) {
                 SEARCH BY MAKE
               </div>
               <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-6 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
-                {posts.map((post,i) => (
+                {posts.map((post, i) => (
                   <div key={i}>
                     <Link
                       href="https://emirates-car.com/search-by-make/[make]"
-                      as={"https://emirates-car.com/search-by-make/"+ post.make}
-                      title={ post.make +" "+ data.parts}
-                      >
+                      as={
+                        'https://emirates-car.com/search-by-make/' + post.make
+                      }
+                      title={post.make + ' ' + data.parts}
+                    >
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                         <div className="flex justify-center">
                           <Image
@@ -599,7 +609,6 @@ export default function Parts({ data, cities, posts }) {
                           {post.make.toUpperCase()}
                         </div>
                       </main>
-
                     </Link>
                   </div>
                 ))}
@@ -614,7 +623,6 @@ export default function Parts({ data, cities, posts }) {
                   <Link
                     href="https://emirates-car.com/search-by-part-name"
                     className="text-blue-400 underline"
-
                   >
                     https://emirates-car.com/search-by-part-name
                   </Link>
@@ -653,13 +661,16 @@ export default function Parts({ data, cities, posts }) {
             SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
           <div className="xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 2xs:w-full s:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 px-5 s:px-3">
-            {cities.map((post,i) => (
+            {cities.map((post, i) => (
               <div key={i}>
                 <Link
                   href="https://emirates-car.com/search-by-cities-in-uae/[city]"
-                  as={"https://emirates-car.com/search-by-cities-in-uae/"+post.city}
-                  title={data.parts +" in "+post.city}
-                  >
+                  as={
+                    'https://emirates-car.com/search-by-cities-in-uae/' +
+                    post.city
+                  }
+                  title={data.parts + ' in ' + post.city}
+                >
                   <div className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
                     <i className="far fa-compass"></i> {data.parts} in{' '}
                     {post.city}

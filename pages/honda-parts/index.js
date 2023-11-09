@@ -58,6 +58,10 @@ export default function HondaParts() {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/honda-parts"
+        />
       </Head>
       <Navbar />
       <div className="w-3/4 mx-auto">
@@ -240,11 +244,12 @@ export default function HondaParts() {
                 height={250}
                 width={250}
               />
-              <Link href="https://emirates-car.com/search-by-part-name/Throttle%20Body%20Assembly" title="throttle body"
-                  className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125">
-
-                  Inquire Now
-
+              <Link
+                href="https://emirates-car.com/search-by-part-name/Throttle%20Body%20Assembly"
+                title="throttle body"
+                className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
+              >
+                Inquire Now
               </Link>
             </div>
           </div>
@@ -321,11 +326,9 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/dubai"
               title="honda spare parts dubai sheikh zayed road"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                DUBAI
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+              DUBAI
             </Link>
           </div>
           <div>
@@ -334,11 +337,9 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/sharjah"
               title="honda spare parts sharjah"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                SHARJAH
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+              SHARJAH
             </Link>
           </div>
           <div>
@@ -347,11 +348,9 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/ajman"
               title="honda spare parts ajman"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                &nbsp;AJMAN
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
+              &nbsp;AJMAN
             </Link>
           </div>
           <div>
@@ -360,11 +359,9 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/ras-al-khaimah"
               title="honda spare parts abu dhabi"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;RAS
-                AL KHAIMAH
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;RAS
+              AL KHAIMAH
             </Link>
           </div>
           <div>
@@ -372,11 +369,9 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/al-quoz"
               title="honda spare parts al quoz"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Al
-                QUOZ
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Al
+              QUOZ
             </Link>
           </div>
           <div>
@@ -384,11 +379,9 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/abu-dhabi"
               title="honda spare parts abu dhabi"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ABU
-                DHABI
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ABU
+              DHABI
             </Link>
           </div>
           <div>
@@ -396,11 +389,9 @@ export default function HondaParts() {
               href="https://emirates-car.com/honda-parts/deira"
               title="honda spare parts deira"
               className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-              >
-
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                &nbsp;DEIRA
-
+            >
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
+              &nbsp;DEIRA
             </Link>
           </div>
         </div>
@@ -593,7 +584,7 @@ export default function HondaParts() {
                 <Link
                   href="https://emirates-car.com/search-by-part-name/Convertible%20Top%20Motor"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                  >
+                >
                   {' '}
                   Catalytic Converter
                 </Link>

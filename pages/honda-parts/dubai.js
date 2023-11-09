@@ -56,6 +56,10 @@ export default function Dubai() {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/honda-parts/dubai"
+        />
       </Head>
       <Navbar />
       <div className="w-3/4 mx-auto">
@@ -159,11 +163,9 @@ export default function Dubai() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Dubai"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts dubai'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                  Honda Parts Dubai
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                Honda Parts Dubai
               </Link>
             </div>
             <div>
@@ -172,11 +174,9 @@ export default function Dubai() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Sharjah"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts dubai'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
-                  Honda Parts Sharjah
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                Honda Parts Sharjah
               </Link>
             </div>
             <div>
@@ -185,11 +185,9 @@ export default function Dubai() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Ajman"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts ajman'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Ajman
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Ajman
               </Link>
             </div>
             <div>
@@ -198,11 +196,9 @@ export default function Dubai() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts ras al khaimah'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Ras Al Khaimah
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Ras Al Khaimah
               </Link>
             </div>
             <div>
@@ -210,11 +206,9 @@ export default function Dubai() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts al quoz'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Al Quoz
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Al Quoz
               </Link>
             </div>
             <div>
@@ -222,11 +216,9 @@ export default function Dubai() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Sheikh%20Zayed%20Road%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'Honda spare parts dubai sheikh zayed road'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Sheikh Zayed Road, Dubai
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Sheikh Zayed Road, Dubai
               </Link>
             </div>
             <div>
@@ -234,11 +226,9 @@ export default function Dubai() {
                 href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
                 className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 title={'honda spare parts deira'}
-                >
-
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Honda Parts Deira
-
+              >
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                Honda Parts Deira
               </Link>
             </div>
           </div>
@@ -428,7 +418,7 @@ export default function Dubai() {
                   <Link
                     href="https://emirates-car.com/search-by-part-name/Convertible%20Top%20Motor"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
-                    >
+                  >
                     {' '}
                     Catalytic Converter
                   </Link>

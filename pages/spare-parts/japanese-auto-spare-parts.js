@@ -245,7 +245,7 @@ export default function Japan({ partsposts, posts }) {
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
-          content="https://www.emirates-car.com/country-vehicles-spare-parts/japanese-auto-spare-parts"
+          content="https://www.emirates-car.com/spare-parts/japanese-auto-spare-parts"
         />
         <meta
           property="og:description"
@@ -258,7 +258,7 @@ export default function Japan({ partsposts, posts }) {
         />
         <meta
           property="twitter:url"
-          content="https://www.emirates-car.com/country-vehicles-spare-parts/japanese-auto-spare-parts"
+          content="https://www.emirates-car.com/spare-parts/japanese-auto-spare-parts"
         />
         <meta
           property="twitter:title"
@@ -271,6 +271,10 @@ export default function Japan({ partsposts, posts }) {
         <meta
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/spare-parts/japanese-auto-spare-parts"
         />
       </Head>
       <Navbar />

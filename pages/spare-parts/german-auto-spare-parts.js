@@ -251,7 +251,7 @@ export default function German({ partsposts, posts }) {
         <meta property="og:site_name" content="Emirates-car" />
         <meta
           property="og:url"
-          content="https://www.emirates-car.com/country-vehicles-spare-parts/german-auto-spare-parts"
+          content="https://www.emirates-car.com/spare-parts/german-auto-spare-parts"
         />
         <meta
           property="og:description"
@@ -264,7 +264,7 @@ export default function German({ partsposts, posts }) {
         />
         <meta
           property="twitter:url"
-          content="https://www.emirates-car.com/country-vehicles-spare-parts/german-auto-spare-parts"
+          content="https://www.emirates-car.com/spare-parts/german-auto-spare-parts"
         />
         <meta
           property="twitter:title"
@@ -277,6 +277,10 @@ export default function German({ partsposts, posts }) {
         <meta
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
+        />
+        <link
+          rel="canonical"
+          href="https://www.emirates-car.com/spare-parts/german-auto-spare-parts"
         />
       </Head>
       <Navbar />
@@ -893,7 +897,8 @@ export default function German({ partsposts, posts }) {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      You can simply place order by Submitting your details in the form.
+                      You can simply place order by Submitting your details in
+                      the form.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -904,9 +909,7 @@ export default function German({ partsposts, posts }) {
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
-                    <p>
-                      Yes, we do provide.
-                    </p>
+                    <p>Yes, we do provide.</p>
                   </AccordionItemPanel>
                 </AccordionItem>
                 <AccordionItem>
@@ -917,7 +920,10 @@ export default function German({ partsposts, posts }) {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                     Check out the return policy here <a href="https://emirates-car.com/return-an-refund-policy">here</a>
+                      Check out the return policy here{' '}
+                      <a href="https://emirates-car.com/return-an-refund-policy">
+                        here
+                      </a>
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -928,9 +934,7 @@ export default function German({ partsposts, posts }) {
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
-                    <p>
-                      We do provide warrantees only for some parts.
-                    </p>
+                    <p>We do provide warrantees only for some parts.</p>
                   </AccordionItemPanel>
                 </AccordionItem>
                 <AccordionItem>
@@ -940,20 +944,23 @@ export default function German({ partsposts, posts }) {
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
-                    <p>
-                      Yes you can return or also replace withe other one.
-                    </p>
+                    <p>Yes you can return or also replace withe other one.</p>
                   </AccordionItemPanel>
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Can i place order for brands and parts that are not included in the website?
+                      Can i place order for brands and parts that are not
+                      included in the website?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Yes, the forms are designed in a way that accepts any parts for any cars. If you dont find your desired parts or brand in the dropdown in the form, then submit your inquiries at <a href="https://emirates-car.com/get-in-touch">here.</a>
+                      Yes, the forms are designed in a way that accepts any
+                      parts for any cars. If you dont find your desired parts or
+                      brand in the dropdown in the form, then submit your
+                      inquiries at{' '}
+                      <a href="https://emirates-car.com/get-in-touch">here.</a>
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -1008,7 +1015,8 @@ export default function German({ partsposts, posts }) {
             <Link
               href="https://emirates-car.com/search-by-part-name/[parts]"
               as={'https://emirates-car.com/search-by-part-name/' + post.parts}
-              title={'german '+post.parts} prefetch={false}
+              title={'german ' + post.parts}
+              prefetch={false}
             >
               <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                 <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">

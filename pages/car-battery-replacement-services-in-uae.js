@@ -239,7 +239,10 @@ export default function CarBatteryDubai({ forms }) {
           content="Quick Car Battery Replacement services in UAE | Emirates-car.com"
         />
         <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content="https://www.emirates-car.com" />
+        <meta
+          property="og:url"
+          content="https://www.emirates-car.com/car-battery-replacement-services-in-uae"
+        />
         <meta
           property="og:description"
           content="Don't panic, we know your car battery dead. Contact us right away to get your helping hands in Dubai, sharjah, Abu dhabi, Ajman, Al quoz and other cities irrespective of any car brands."
@@ -262,6 +265,7 @@ export default function CarBatteryDubai({ forms }) {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link rel="canonical" href="https://www.emirates-car.com/car-battery-replacement-services-in-uae" />
       </Head>
       <Navbar />
       <div className="grid grid-cols-2 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto xs:text-center sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
@@ -601,7 +605,7 @@ export default function CarBatteryDubai({ forms }) {
         </form>
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
           **Make not found above?{' '}
-          <Link href="https://emirates-car.com/get-in-touch" >
+          <Link href="https://emirates-car.com/get-in-touch">
             <nobr className="text-blue-500 text-sm underline">
               Get in touch with us {'>>'}**
             </nobr>
@@ -813,17 +817,23 @@ export default function CarBatteryDubai({ forms }) {
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-car"></i>{' '}
-            <Link href="https://emirates-car.com/search-by-make">Car Make Model</Link>
+            <Link href="https://emirates-car.com/search-by-make">
+              Car Make Model
+            </Link>
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-bolt"></i>{' '}
-            <Link href="https://emirates-car.com/search-by-part-name">Car Spare parts</Link>
+            <Link href="https://emirates-car.com/search-by-part-name">
+              Car Spare parts
+            </Link>
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-map-pin"></i>{' '}
-            <Link href="https://emirates-car.com/search-by-cities-in-uae">Location in UAE</Link>
+            <Link href="https://emirates-car.com/search-by-cities-in-uae">
+              Location in UAE
+            </Link>
           </li>
         </p>
       </div>

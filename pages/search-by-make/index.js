@@ -306,6 +306,8 @@ export default function Make({ car, cities, posts, pos }) {
           property="twitter:image"
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
+        <link rel="canonical" href="https://www.assafadelicacy.com/search-by-make" />
+
       </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
