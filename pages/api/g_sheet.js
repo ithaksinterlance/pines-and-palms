@@ -100,7 +100,7 @@ async function handler(req, res) {
     const mailOptions = {
       from: 'emiratesautomobileparts@gmail.com',
       to: 'haksinterlance@gmail.com',
-      subject: `${RefNo + ' New Order Received'}`,
+      subject: `${brand +" "+ RefNo + ' New Order Received'}`,
       text: `${Timestamp +
         '\n' +
         RefNo +
