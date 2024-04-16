@@ -1,6 +1,6 @@
 import '../../styles/globals.css';
-import Navbar from "../nav";
-import Head from "next/head";
+import Navbar from '../nav';
+import Head from 'next/head';
 
 export default function RootLayout({ children }) {
   return (
@@ -26,7 +26,10 @@ export default function RootLayout({ children }) {
           content="https://emirates-car.com/img/car-spare-parts.png"
         />
       </Head>
-      <body><Navbar/>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

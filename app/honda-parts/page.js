@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import React from 'react';
-import Footer from '../../pages/footer';
+import Footer from '../footer';
 import Link from 'next/link';
 import OtherHondaModels from '../OtherHondaModels';
 import Image from 'next/image';
-import FeaturedHonda from '../../pages/8th-gen-Honda';
+import FeaturedHonda from '../8th-gen-Honda';
 
 export const metadata = {
   title: 'Honda spare parts UAE from Dubai dealers Online | Emirates-car.com',
