@@ -1,21 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import French from '../../public/img/icons/france.png';
+import French from '../../../public/img/icons/france.png';
 import Footer from '../../footer';
-import Head from 'next/head';
 import Count from '../../service-countup';
 import Social from '../../Social';
 import FormComponent from '../../FormComponent';
 import { getFormModel, getParts } from '../../page';
-import SearchPart from "../../SearchPart"
+import SearchPart from '../../SearchPart';
 
 export default async function France() {
-const modelforms = await getFormModel();
+  const modelforms = await getFormModel();
   const partsposts = await getParts();
   return (
     <div>
-
       <div className="bg-cover">
         <div className="grid grid-cols-1 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
           <div>
@@ -31,107 +29,97 @@ const modelforms = await getFormModel();
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Peugeot">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Peugeot spare parts in uae"
-                          src="/img/car-logos/peugeot.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Peugeot
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Peugeot spare parts in uae"
+                        src="/img/car-logos/peugeot.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Peugeot
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Citroen">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Citroen spare parts in uae"
-                          src="/img/car-logos/citroen.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Citroen
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Citroen spare parts in uae"
+                        src="/img/car-logos/citroen.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Citroen
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Renault">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Renault spare parts in uae"
-                          src="/img/car-logos/renault.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Renault
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Renault spare parts in uae"
+                        src="/img/car-logos/renault.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Renault
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Mobility Ventures LLC">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="venturi spare parts in uae"
-                          src="/img/car-logos/venturi.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Mobility Ventures LLC
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="venturi spare parts in uae"
+                        src="/img/car-logos/venturi.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Mobility Ventures LLC
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Bugatti">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Bugatti spare parts in uae"
-                          src="/img/car-logos/bugatti.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Bugatti
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Bugatti spare parts in uae"
+                        src="/img/car-logos/bugatti.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Bugatti
+                    </p>
+                  </main>
                 </Link>
               </div>
             </div>
@@ -146,8 +134,8 @@ const modelforms = await getFormModel();
             </div>
             <p className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
               Explore from our immensively large-scale auto spare parts website,
-              your French auto spare parts for your Vehicle needs - Car / Jeep
-              / Van / Truck / Buses in Your city in UAE especially in Abu al
+              your French auto spare parts for your Vehicle needs - Car / Jeep /
+              Van / Truck / Buses in Your city in UAE especially in Abu al
               Bukhoosh,Abu Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al
               Barsha,Al Dhafra,Al Fujayrah,Al Hamriyah,Al Jazeera Port,Al Jeer
               Port,Al Mafraq,Al Quoz,Al Sufouh,Ar Ruways,Arzanah Island,Das
@@ -250,5 +238,3 @@ const modelforms = await getFormModel();
     </div>
   );
 }
-
-
