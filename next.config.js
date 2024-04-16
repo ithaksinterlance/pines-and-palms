@@ -35,18 +35,30 @@ module.exports = withImages(withPWA({
         stream: false,
         request: false
       }),
-        config.module.rules.push({
-          test: /\.(eot|woff|woff2|ttf|svg)$/,
-          use: {
-            loader: 'url-loader',
-            options: {
-              limit: 100000,
-              name: '[name].[ext]'
+        config.module.rules.push(
+          {
+            test: /\.(eot|woff|woff2|ttf|svg)$/,
+            use: {
+              loader: 'url-loader',
+              options: {
+                limit: 100000,
+                name: '[name].[ext]'
+              }
             }
+          },
+          {
+            test: /\.(png|jpg|gif)$/,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {}
+              }
+            ]
           }
-        });
+        );
     }
     return config;
+
   },
   async redirects() {
     return [
