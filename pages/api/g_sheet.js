@@ -31,7 +31,11 @@ async function handler(req, res) {
     const brand = req.body.brand;
     const contact = req.body.contact;
     const description = 'Ref: ' + RefNo + '\n' + req.body.description;
+    const partList = req.body.partList;
     const email = req.body.email;
+    const year = req.body.year;
+    const model = req.body.model;
+    const address = req.body.address;
     const WApp = null;
     const SCnfD = null;
     const Y = null;
@@ -69,6 +73,10 @@ async function handler(req, res) {
             brand,
             contact,
             description,
+            partList,
+            year,
+            model,
+            address,
             WApp,
             SCnfD,
             Y,

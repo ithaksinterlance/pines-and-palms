@@ -6,7 +6,9 @@ const withPWA = require('next-pwa')({
   // sw: 'service-worker.js',
   //...
 });
-module.exports = withPWA({
+const withImages = require('next-images');
+
+module.exports = withImages(withPWA({
   reactStrictMode: true,
   swcMinify: true,
   serverRuntimeConfig: {
@@ -18,7 +20,7 @@ module.exports = withPWA({
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
-      config.resolve.fallback = {
+      (config.resolve.fallback = {
         fs: false,
         child_process: false,
         https: false,
@@ -32,7 +34,17 @@ module.exports = withPWA({
         http: false,
         stream: false,
         request: false
-      };
+      }),
+        config.module.rules.push({
+          test: /\.(eot|woff|woff2|ttf|svg)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 100000,
+              name: '[name].[ext]'
+            }
+          }
+        });
     }
     return config;
   },
@@ -60,5 +72,6 @@ module.exports = withPWA({
     skipWaiting: true,
     disable: process.env.NODE_ENV === 'development'
   },
+
   staticPageGenerationTimeout: 5000
-});
+}));
