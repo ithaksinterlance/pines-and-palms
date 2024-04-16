@@ -15,13 +15,12 @@ const modelforms = await getFormModel();
   const partsposts = await getParts();
   return (
     <div>
-      
       <div className="bg-cover">
         <div className="grid grid-cols-1 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
           <div>
             <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
               <Image
-                src={Japanese}
+                src="/img/icons/japan.png"
                 alt="used japanese car parts"
                 height={50}
                 width={50}
@@ -31,234 +30,212 @@ const modelforms = await getFormModel();
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Toyota">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="toyota spare parts in uae"
-                          src="/img/car-logos/toyota.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Toyota
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="toyota spare parts in uae"
+                        src="/img/car-logos/toyota.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Toyota
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Mitsubishi">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Mitsubishi spare parts in uae"
-                          src="/img/car-logos/mitsubishi.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Mitsubishi
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Mitsubishi spare parts in uae"
+                        src="/img/car-logos/mitsubishi.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Mitsubishi
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Lexus">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="lexus spare parts in uae"
-                          src="/img/car-logos/lexus.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Lexus
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="lexus spare parts in uae"
+                        src="/img/car-logos/lexus.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Lexus
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Nissan">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="toyota spare parts in uae"
-                          src="/img/car-logos/nissan.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Nissan
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="toyota spare parts in uae"
+                        src="/img/car-logos/nissan.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Nissan
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Infiniti">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="infinity spare parts in uae"
-                          src="/img/car-logos/infiniti.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Infiniti
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="infinity spare parts in uae"
+                        src="/img/car-logos/infiniti.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Infiniti
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Honda">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="Honda spare parts in uae"
-                          src="/img/car-logos/honda.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Honda
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="Honda spare parts in uae"
+                        src="/img/car-logos/honda.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Honda
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Mazda">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="mazda spare parts in uae"
-                          src="/img/car-logos/mazda.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Mazda
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="mazda spare parts in uae"
+                        src="/img/car-logos/mazda.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Mazda
+                    </p>
+                  </main>
                 </Link>
               </div>
 
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Subaru">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="subaru spare parts in uae"
-                          src="/img/car-logos/subaru.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Subaru
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="subaru spare parts in uae"
+                        src="/img/car-logos/subaru.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Subaru
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Suzuki">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="suzuki spare parts in uae"
-                          src="/img/car-logos/suzuki.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Suzuki
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="suzuki spare parts in uae"
+                        src="/img/car-logos/suzuki.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Suzuki
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Daihatsu">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="daihatsu spare parts in uae"
-                          src="/img/car-logos/daihat.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Daihatsu
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="daihatsu spare parts in uae"
+                        src="/img/car-logos/daihat.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Daihatsu
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Isuzu">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="isuzu spare parts in uae"
-                          src="/img/car-logos/isuzu.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Isuzu
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="isuzu spare parts in uae"
+                        src="/img/car-logos/isuzu.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Isuzu
+                    </p>
+                  </main>
                 </Link>
               </div>
             </div>
