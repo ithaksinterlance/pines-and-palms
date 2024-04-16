@@ -8,10 +8,9 @@ import {
   AccordionItemPanel
 } from 'react-accessible-accordion';
 
-
 import React from 'react'
 
-export default function Accordion() {
+export default function Accordon() {
   return (
     <div className="place-content-center text-center pt-10 xl:mx-36 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
       <div className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl">
