@@ -10,9 +10,7 @@ const withPWA = require('next-pwa')({
 module.exports = withPWA({
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    disableStaticImages: true
-  },
+
   serverRuntimeConfig: {
     GOOGLE_MAPS_API_KEY: process.env.MAP_API_KEY
   },
@@ -44,31 +42,29 @@ module.exports = withPWA({
             filename: 'static/chunks/[path][name].[hash][ext]'
           }
         });
-        config.module.rules.push({
-          test: /\.(png|jpe?g|gif)$/i,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'images', // Output path for the images
-                publicPath: '/_next/static/images/' // Public path for the images
-              }
-            }
-          ]
-        });
-      config.module.rules.push(
-        {
-          test: /\.(eot|woff|woff2|ttf|svg)$/,
-          use: {
+      config.module.rules.push({
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
             loader: 'file-loader',
             options: {
-              limit: 100000,
-              name: '[name].[ext]'
+              name: '[name].[ext]',
+              outputPath: 'images', // Output path for the images
+              publicPath: '/_next/static/images/' // Public path for the images
             }
           }
-        },
-      );
+        ]
+      });
+      config.module.rules.push({
+        test: /\.(eot|woff|woff2|ttf|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            limit: 100000,
+            name: '[name].[ext]'
+          }
+        }
+      });
     }
     return config;
   },
