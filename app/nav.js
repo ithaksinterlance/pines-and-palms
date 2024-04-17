@@ -11,7 +11,7 @@ import {
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import Iconpng from "/favicon-32x32.png"
+import Iconpng from "/public/favicon-32x32.png"
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
