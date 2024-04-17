@@ -44,6 +44,19 @@ module.exports = withPWA({
             filename: 'static/chunks/[path][name].[hash][ext]'
           }
         });
+        config.module.rules.push({
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: 'images', // Output path for the images
+                publicPath: '/_next/static/images/' // Public path for the images
+              }
+            }
+          ]
+        });
       config.module.rules.push(
         {
           test: /\.(eot|woff|woff2|ttf|svg)$/,
@@ -55,18 +68,6 @@ module.exports = withPWA({
             }
           }
         },
-        {
-          test: /\.(png|jpg|gif)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'images'
-              }
-            }
-          ]
-        }
       );
     }
     return config;
