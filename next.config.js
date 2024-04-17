@@ -23,57 +23,53 @@ module.exports = withImages(
     },
     webpack: (config, { isServer }) => {
       if (!isServer) {
-        config.module.rules.push({
-          test: /\.(png|jpe?g|gif)$/i,
-          use: [
+        // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
+        (config.resolve.fallback = {
+          fs: false,
+          child_process: false,
+          https: false,
+          os: false,
+          path: false,
+          crypto: false,
+          http2: false,
+          zlib: false,
+          net: false,
+          tls: false,
+          http: false,
+          stream: false,
+          request: false
+        }),
+          config.module.rules.push({
+            test: /\.(jpe?g|png|svg|gif|ico|eot|ttf|woff|woff2|mp4|pdf|webm|txt)$/,
+            type: 'asset/resource',
+            generator: {
+              filename: 'static/chunks/[path][name].[hash][ext]'
+            }
+          });
+          config.module.rules.push(
             {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'images', // Output path for the images
-                publicPath: '/_next/static/images/' // Public path for the images
+              test: /\.(eot|woff|woff2|ttf|svg)$/,
+              use: {
+                loader: 'file-loader',
+                options: {
+                  limit: 100000,
+                  name: '[name].[ext]'
+                }
               }
             },
             {
-              loader: 'image-webpack-loader',
-              options: {
-                mozjpeg: {
-                  progressive: true,
-                  quality: 65
-                },
-                optipng: {
-                  enabled: false
-                },
-                pngquant: {
-                  quality: [0.65, 0.9],
-                  speed: 4
-                },
-                gifsicle: {
-                  interlaced: false
-                },
-                webp: {
-                  quality: 75 // Adjust the quality as needed
+              test: /\.(png|jpg|gif)$/,
+              use: [
+                {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[name].[ext]',
+                    outputPath: 'images'
+                  }
                 }
-              }
+              ]
             }
-          ]
-        });
-
-        // For fonts
-        config.module.rules.push({
-          test: /\.(eot|woff|woff2|ttf|svg)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'fonts', // Output path for the fonts
-                publicPath: '/_next/static/fonts/' // Public path for the fonts
-              }
-            }
-          ]
-        });
-
+          );
       }
       return config;
     },
