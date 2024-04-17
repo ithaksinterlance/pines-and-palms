@@ -15,7 +15,6 @@ export default async function korean() {
   const partsposts = await getParts();
   return (
     <div>
-     
       <div className="bg-cover">
         <div className="grid grid-cols-1 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
           <div>
@@ -31,65 +30,59 @@ export default async function korean() {
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Hyundai">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="hyundai spare parts in uae"
-                          src="/img/car-logos/hyundai.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Hyundai
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="hyundai spare parts in uae"
+                        src="/img/car-logos/hyundai.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Hyundai
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Kia">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="kia spare parts in uae"
-                          src="/img/car-logos/kia.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Kia
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="kia spare parts in uae"
+                        src="/img/car-logos/kia.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Kia
+                    </p>
+                  </main>
                 </Link>
               </div>
               <div>
                 <Link href="https://emirates-car.com/search-by-make/Daewoo">
-
-                    <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
-                      <div className="flex justify-center">
-                        <Image
-                          alt="daewoo spare parts in uae"
-                          src="/img/car-logos/daewoo.webp"
-                          className="object-scale-down shadow-xl"
-                          height={30}
-                          width={30}
-                        />
-                        <br />
-                      </div>
-                      <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                        Daewoo
-                      </p>
-                    </main>
-
+                  <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                    <div className="flex justify-center">
+                      <Image
+                        alt="daewoo spare parts in uae"
+                        src="/img/car-logos/daewoo.webp"
+                        className="object-scale-down shadow-xl"
+                        height={30}
+                        width={30}
+                      />
+                      <br />
+                    </div>
+                    <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                      Daewoo
+                    </p>
+                  </main>
                 </Link>
               </div>
             </div>
@@ -104,8 +97,8 @@ export default async function korean() {
             </div>
             <p className="place-content-center grid grid-cols-1 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 text-base text-gray-500 xs:text-sm md:text-base p-5 mx-10">
               Explore from our immensively large-scale auto spare parts website,
-              your korean auto spare parts for your Vehicle needs - Car / Jeep
-              / Van / Truck / Buses in Your city in UAE especially in Abu al
+              your korean auto spare parts for your Vehicle needs - Car / Jeep /
+              Van / Truck / Buses in Your city in UAE especially in Abu al
               Bukhoosh,Abu Dhabi,Abu Musa,Ahmed Bin Rashid Port,Ajman,Al Ain,Al
               Barsha,Al Dhafra,Al Fujayrah,Al Hamriyah,Al Jazeera Port,Al Jeer
               Port,Al Mafraq,Al Quoz,Al Sufouh,Ar Ruways,Arzanah Island,Das

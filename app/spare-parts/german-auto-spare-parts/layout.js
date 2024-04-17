@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import '../../../styles/globals.css';
+import Navbar from "../../nav"
 
 export default function RootLayout({ children }) {
   return (
@@ -60,6 +61,7 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body>
+        <Navbar/>
         {children}
       </body>
     </html>

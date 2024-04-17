@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Japanese from '../../public/img/icons/japan.png';
 import Footer from '../../footer';
-import Head from 'next/head';
 import Count from '../../service-countup';
 import Social from '../../Social';
 import FormComponent from '../../FormComponent';
@@ -20,7 +19,7 @@ const modelforms = await getFormModel();
           <div>
             <h1 className="place-content-center text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
               <Image
-                src="/img/icons/japan.png"
+                src={Japanese}
                 alt="used japanese car parts"
                 height={50}
                 width={50}

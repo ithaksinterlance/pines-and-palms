@@ -23,43 +23,57 @@ module.exports = withImages(
     },
     webpack: (config, { isServer }) => {
       if (!isServer) {
-        // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
-        (config.resolve.fallback = {
-          fs: false,
-          child_process: false,
-          https: false,
-          os: false,
-          path: false,
-          crypto: false,
-          http2: false,
-          zlib: false,
-          net: false,
-          tls: false,
-          http: false,
-          stream: false,
-          request: false
-        }),
-          config.module.rules.push(
+        config.module.rules.push({
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
             {
-              test: /\.(eot|woff|woff2|ttf|svg)$/,
-              use: {
-                loader: 'url-loader',
-                options: {
-                  limit: 100000,
-                  name: '[name].[ext]'
-                }
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: 'images', // Output path for the images
+                publicPath: '/_next/static/images/' // Public path for the images
               }
             },
             {
-              test: /\.(png|jpg|gif)$/,
-              use: [
-                {
-                  loader: 'file-loader',
-                  options: {}
+              loader: 'image-webpack-loader',
+              options: {
+                mozjpeg: {
+                  progressive: true,
+                  quality: 65
+                },
+                optipng: {
+                  enabled: false
+                },
+                pngquant: {
+                  quality: [0.65, 0.9],
+                  speed: 4
+                },
+                gifsicle: {
+                  interlaced: false
+                },
+                webp: {
+                  quality: 75 // Adjust the quality as needed
                 }
-              ]
+              }
             }
-          );
+          ]
+        });
+
+        // For fonts
+        config.module.rules.push({
+          test: /\.(eot|woff|woff2|ttf|svg)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: 'fonts', // Output path for the fonts
+                publicPath: '/_next/static/fonts/' // Public path for the fonts
+              }
+            }
+          ]
+        });
+
       }
       return config;
     },

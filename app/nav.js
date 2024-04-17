@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className="flex relative flex-wrap items-center justify-between px-2 py-2 bg-purple-800">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full flex justify-between">
-          <img src={Iconpng} width={32} height={32} />
+          <Image src={Iconpng} width={32} height={32} />
           <Link
             href={`/#spare_parts`}
             className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1"
