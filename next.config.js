@@ -10,7 +10,7 @@ const withPWA = require('next-pwa')({
 module.exports = withPWA({
   reactStrictMode: true,
   swcMinify: true,
-
+  webpack5: false,
   serverRuntimeConfig: {
     GOOGLE_MAPS_API_KEY: process.env.MAP_API_KEY
   },
