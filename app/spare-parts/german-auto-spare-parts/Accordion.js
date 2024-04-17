@@ -1,5 +1,5 @@
+"use client";
 import 'react-accessible-accordion/dist/fancy-example.css';
-
 import {
   Accordion,
   AccordionItem,

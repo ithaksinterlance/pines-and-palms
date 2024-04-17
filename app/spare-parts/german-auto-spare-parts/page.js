@@ -9,7 +9,7 @@ import Social from '../../Social';
 import FormComponent from '../../FormComponent';
 import { getFormModel, getParts } from '../../page';
 import SearchPart from "../../SearchPart"
-import Accordion from './Accordion';
+import Accordon from './Accordion';
 
 export default async function German() {
 const modelforms = await getFormModel();
@@ -312,7 +312,7 @@ const modelforms = await getFormModel();
                 <li>Aftermarket German vehicle auto spare parts</li>
               </ul>
             </h3>
-            <Accordion />
+            <Accordon />
           </div>
         </div>
       </div>
