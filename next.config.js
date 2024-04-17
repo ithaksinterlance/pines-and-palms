@@ -6,9 +6,8 @@ const withPWA = require('next-pwa')({
   // sw: 'service-worker.js',
   //...
 });
-const withImages = require('next-images');
 
-module.exports = withImages(
+module.exports =
   withPWA({
     reactStrictMode: true,
     swcMinify: true,
@@ -97,7 +96,5 @@ module.exports = withImages(
       skipWaiting: true,
       disable: process.env.NODE_ENV === 'development'
     },
-
     staticPageGenerationTimeout: 5000
-  })
-);
+  });
