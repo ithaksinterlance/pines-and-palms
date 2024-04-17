@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Link from "next/link";
 
 export default function SearchModel({car, make}) {
   const [searchModel, setSearchModel] = useState('');
@@ -18,7 +19,7 @@ export default function SearchModel({car, make}) {
     };
     loadPart();
   });
-  
+
    const onModelFormChange = searchModel => {
      let matches = [];
      if (searchModel.length > 0) {

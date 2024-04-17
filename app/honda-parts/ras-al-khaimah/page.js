@@ -3,6 +3,7 @@ import React from 'react';
 import Footer from '../../footer';
 import OtherHondaModels from '../../OtherHondaModels';
 import Link from 'next/link';
+import Image from "next/image";
 
 export const metadata = {
   title:
