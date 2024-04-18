@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { Sitemap } from '../links';
 
 const SitemapComponent = () => {
@@ -28,3 +28,4 @@ const SitemapComponent = () => {
 };
 
 export default SitemapComponent;
+ */
