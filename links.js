@@ -1,3 +1,4 @@
+ "use client";
  export const Sitemap = [
   {
     "links": "https://emirates-car.com"
