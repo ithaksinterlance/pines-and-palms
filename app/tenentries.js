@@ -30,12 +30,12 @@ export default function TenEntries() {
           {data.map((h, i) => (
             <tbody key={i}>
               <tr>
-                <td className="border px-4 py-2">
-                  {h.Year} - {h.BRAND} - {h.Model}
+                <td className="border font-semibold px-4 py-2">
+                  {h.Year} {h.BRAND} {h.Model}
                 </td>
                 <td className="border px-4 py-2">{h.PartList}</td>
                 <td className="border px-4 py-2">
-                  Location: {h.Location}
+                  {h.Location}
                 </td>
               </tr>
             </tbody>

@@ -28,7 +28,8 @@ import SideMirror from '../../../../public/img/honda-eighth-gen/Side_Mirror.webp
 import SteeringWheel from '../../../../public/img/honda-eighth-gen/Steering_Wheel.webp';
 import Wheel from '../../../../public/img/honda-eighth-gen/Wheel.webp';
 import MudFlap from '../../../../public/img/honda-eighth-gen/Mud_Flap.webp';
-import { getParts } from '../../../page';
+import { getFormModel, getParts } from '../../../page';
+import FormComponent from '../../../FormComponent';
 
 export async function generateStaticParams({ make, model }) {
   const posts = await fetch(
@@ -94,6 +95,7 @@ export default async function Model({ params }) {
   const uniqueMakeArray = await getModel(make, model);
   const makeArray = await getMake();
   const partspost = await getParts();
+  const modelsform = await getFormModel();
   const images = [
     {
       images: ABS,
@@ -385,7 +387,7 @@ export default async function Model({ params }) {
         and Aftermarket from Dubai to all over UAE and World
       </h1>
       <Link
-        href="#makemodelform"
+        href="#myForm"
         className="w-1/4 xs:w-4/5 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-base xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
         title={'spare parts for ' + make + ' ' + model}
       >
@@ -418,7 +420,12 @@ export default async function Model({ params }) {
           &nbsp;{make} {model}{' '}
         </nobr>
         BELOW
+        <FormComponent
+          formsData={modelsform}
+          postFilter={partspost}
+        />
       </div>
+
       <p
         className="text-xl font-mono text-gray-700 mx-auto my-5"
         dangerouslySetInnerHTML={{ __html: description || '' }}
