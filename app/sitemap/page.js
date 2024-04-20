@@ -22,7 +22,7 @@ export default async function Sitemap() {
     <div key={url}>
       {'<url>'}
       <br />
-      {`<loc>${url.encodeURIComponent()}</loc>`}
+      {`<loc>${encodeURIComponent(url)}</loc>`}
       <br />
       {`<lastmod>${new Date().toISOString()}</lastmod>`}
       <br />
