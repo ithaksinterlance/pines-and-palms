@@ -11,7 +11,7 @@ export default async function Sitemap() {
   const uniqueURLs = {};
   sitemap.forEach(car => {
     const { make, model, year } = car;
-    const url = `https://emirates-car.com/${make}/${model}/${year}`;
+    const url = `https://emirates-car.com/${encodeURIComponent(make)}/${encodeURIComponent(model)}/${encodeURIComponent(year)}`;
 
     // Use the URL as a key to ensure uniqueness
     uniqueURLs[url] = true;
@@ -22,7 +22,7 @@ export default async function Sitemap() {
     <div key={url}>
       {'<url>'}
       <br />
-      {`<loc>${encodeURIComponent(url)}</loc>`}
+      {`<loc>${url}</loc>`}
       <br />
       {`<lastmod>${new Date().toISOString()}</lastmod>`}
       <br />
