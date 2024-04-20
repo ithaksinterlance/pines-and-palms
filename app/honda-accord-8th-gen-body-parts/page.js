@@ -1,67 +1,15 @@
 import React from 'react';
-import FeaturedHonda from '../pages/8th-gen-Honda';
-import Navbar from '../pages/nav';
-import Footer from './footer';
+import FeaturedHonda from '../8th-gen-Honda';
+import Navbar from '../nav';
+import Footer from '../footer';
 import Head from 'next/head';
-import OtherHondaModels from './OtherHondaModels';
+import OtherHondaModels from '../OtherHondaModels';
 import Link from 'next/link';
-import Image from "next/image";
+import Image from 'next/image';
 
-export default function HondaAccord8thGen() {
+export default function HondaAccord() {
   return (
     <div>
-      <Head>
-        <title>
-          8TH Generation Honda Accord 2008 - 2012 parts - Used / Genuine / OEM /
-          Aftermarket | Emirates-car.com
-        </title>
-        <meta
-          name="description"
-          content={
-            'Engines for 2.4L, 3.5L, 2.2L VTEC, DTEC, V6 engines , Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more'
-          }
-        />
-        <meta
-          name="keywords"
-          content="honda body parts, honda accord spare parts, 8th gen accord parts, performance parts for honda accord, headlight, tailight, suspension parts"
-        />
-        <meta
-          property="og:title"
-          content="2008 - 2012 8TH Generation Honda Accord  parts - Used , Genuine / OEM / Aftermarket parts"
-        />
-        <meta property="og:site_name" content="Emirates-car" />
-        <meta
-          property="og:url"
-          content="https://www.emirates-car.com/honda-accord-8th-gen-body-parts"
-        />
-        <meta
-          property="og:description"
-          content="Engines for 2.4L, 3.5L, 2.2L VTEC, DTEC, V6 engines , Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <meta
-          property="twitter:url"
-          content="https://www.emirates-car.com/honda-accord-8th-gen-body-parts"
-        />
-        <meta
-          property="twitter:title"
-          content="8TH Generation Honda Accord 2008 - 2012 parts - Used / Genuine / OEM /
-          Aftermarket parts"
-        />
-        <meta
-          property="twitter:description"
-          content="Engines for 2.4L, 3.5L, 2.2L VTEC, DTEC, V6 engines , Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more"
-        />
-        <meta
-          property="twitter:image"
-          content="https://emirates-car.com/img/car-logos/Honda.webp"
-        />
-      </Head>
-      <Navbar />
       <div className="d-flex justify-center  pt-10 xs:pt-5 mx-8">
         <h1 className="text-4xl md:text-lg lg:text-2xl text-center font-extrabold xs:text-base 2xs:text-xs">
           2008 - 2012 8TH Generation Honda Accord Spare Parts parts - Used /
@@ -80,7 +28,7 @@ export default function HondaAccord8thGen() {
             href="https://emirates-car.com/"
             className="text-blue-500 underline hover:text-blue-700"
           >
-            <a>Emirates-car.com</a>
+          Emirates-car.com
           </Link>
           , We are Car parts dealers from Dubai. We deal in Auto spare parts for
           honda accord spare parts for honda body parts, honda mechanical parts,
@@ -89,8 +37,8 @@ export default function HondaAccord8thGen() {
           <Link
             href="https://emirates-car.com/search-by-make"
             className="text-blue-500 underline hover:text-blue-900"
-          ><a>
-            other car brands in UAE.</a>
+          >
+            other car brands in UAE.
           </Link>
           . For any spare parts inquiries, submit your inquiry at our website.
         </p>
@@ -98,8 +46,8 @@ export default function HondaAccord8thGen() {
           href={`/#myForm`}
           target="_newtab"
           className="w-1/4 xs:w-full mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-        ><a>
-          Inquire Now</a>
+        >
+          Inquire Now
         </Link>
         <div className="py-10 xs:py-5">
           <p className="text-blue-600 text-2xl md:text-sm lg:text-lg font-extrabold xs:text-xl 2xs:text-xs py-5 text-center">
@@ -122,8 +70,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="Honda accord bonnet"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -141,8 +89,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Bumper%20Assembly%20(Front)"
                   title="Honda accord front bumper"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -160,8 +108,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Bumper%20Assembly%20(Rear)"
                   title="Honda accord rear bumper"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -179,8 +127,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Spoiler%20(Front)"
                   title="Honda spoiler"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -200,8 +148,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="Honda accord front bumper"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -221,8 +169,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="Honda accord rear bumper lips"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -240,8 +188,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="Honda accord side skirts"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -264,8 +212,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Ring%20Gear%20and%20Pinion"
                   title="Honda accord cam gear"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -285,8 +233,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Intake%20Manifold"
                   title="Honda accord cold air intakes"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -304,8 +252,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-make/Intake%20Manifold"
                   title="Honda intake manifold"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -323,8 +271,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-make/Honda/CR-V"
                   title="Honda crv parts"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -342,8 +290,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Radiator"
                   title="Honda radiator caps"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -361,8 +309,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="honda oxygen sensors"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -380,8 +328,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Throttle%20Body%20Assembly"
                   title="throttle body"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -406,9 +354,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Suspension%20Control%20Module"
                   title="Honda accord air suspension"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  {' '}
-                  Inquire Now</a>
+                >
+                   Inquire Now
                 </Link>
               </div>
             </div>
@@ -426,8 +373,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="8th gen accord cambers"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -445,8 +392,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="Honda coilovers"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -464,8 +411,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="Honda accord 8th gen control arms"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -485,8 +432,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/get-in-touch"
                   title="Honda accord lowering springs"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -504,8 +451,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Strut%20Assembly%20(Front)"
                   title="Honda strut bars"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -523,8 +470,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Toe%20Arms"
                   title="Honda accord toe arms"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -542,8 +489,8 @@ export default function HondaAccord8thGen() {
                   href="https://emirates-car.com/search-by-part-name/Traction%20Control%20Module"
                   title="traction rod honda accord price"
                   className="flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125"
-                ><a>
-                  Inquire Now</a>
+                >
+                  Inquire Now
                 </Link>
               </div>
             </div>
@@ -645,7 +592,10 @@ export default function HondaAccord8thGen() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://emirates-car.com/search-by-part-name/Cylinder%20Block" className="font-mono font-semibold text-blue-600 underline hover:text-blue-900">
+                  <Link
+                    href="https://emirates-car.com/search-by-part-name/Cylinder%20Block"
+                    className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
+                  >
                     Cylinder Block
                   </Link>
                 </li>

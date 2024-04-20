@@ -19,6 +19,16 @@ export async function getMake() {
   return uniqueMakeArray;
 }
 
+export async function getYear() {
+  const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const data = await resp.json();
+  let uniqueYearArray = [
+    ...new Map(data.map(item => [item['year'], item])).values()
+  ];
+  return uniqueYearArray;
+}
+
+
 export async function getFormModel() {
   //Pass it to forms to get appropriate model for make
   const respo = await fetch(`https://rozy.vercel.app/api/palms`);
