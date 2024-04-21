@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileColor" content="#2B5797" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#2563eb" />
-        <link rel="icon" href="/favicon.png" sizes="any" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link
           rel="icon"
           type="image/png"
