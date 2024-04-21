@@ -27,13 +27,13 @@ export default async function Blog({ params }) {
                   height={350}
                 />
               </div>
-              <h3 className="font-bold mb-2 text-5xl xs:text-md pt-10">
+              <h3 className="font-bold mb-2 text-5xl sm:text-2xl xs:text-2xl pt-10">
                 {data.TITLE}
               </h3>
               <p className="text-sm text-gray-400 font-semibold uppercase pb-5 xs:text-xs">
                 {data.TIME} - {data.DATE_PUBLISHED}
               </p>
-              <div className="text-base text-justify font-mono">
+              <div className="text-base font-mono">
                 <div dangerouslySetInnerHTML={{ __html: data.CONTENT }}></div>
               </div>
               <div className="flex py-5">
