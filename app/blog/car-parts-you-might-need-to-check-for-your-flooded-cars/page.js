@@ -14,7 +14,7 @@ export default function FloodedCars() {
               <div className="bg-blue-200 h-72 text-center rounded-xl text-white text-base font-extrabold flex items-center justify-center">
                 <Image
                   alt="flood"
-                  src={'/img/blog/flooded-cars'}
+                  src="/img/blog/flooded-cars.png"
                   width={940}
                   height={350}
                 />
