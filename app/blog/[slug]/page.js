@@ -19,7 +19,7 @@ export default async function Blog({ params }) {
         <div className="w-full p-4">
           <div className="flex xs:grid xs:grid-cols-1 md:grid md:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
             <div className="w-3/4 xs:w-full sm:w-full md:w-full 2xs:w-full shadow-md xs:shadow-none p-5 xs:p-2">
-              <div className="bg-blue-200 h-72 text-center rounded-xl text-white text-base font-extrabold flex items-center justify-center">
+              <div className="bg-blue-200 text-center rounded-xl text-white text-base font-extrabold flex items-center justify-center">
                 <Image
                   alt={data.ALT}
                   src={'/img/blog/' + data.IMG}
