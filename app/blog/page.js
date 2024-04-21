@@ -23,7 +23,7 @@ export default async function Blog() {
                   <Link href={'https://emirates-car.com/blog/' + post.TITLE}>
                     <div className="py-3">
                       <div className="border border-gray-200 p-3 rounded-sm">
-                        <div className="w-full bg-blue-200 h-80 rounded-xl text-white items-center text-center flex justify-center font-bold">
+                        <div className="w-full bg-blue-200 rounded-xl text-white items-center text-center flex justify-center font-bold">
                           <Image
                             alt={post.ALT}
                             src={'/img/blog/' + post.IMG}
