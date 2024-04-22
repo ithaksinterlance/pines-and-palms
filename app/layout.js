@@ -5,11 +5,36 @@ import Script from 'next/script';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 export const metadata = {
-  title:
-    'Auto Spare Parts Order Online in UAE from Dubai dealers |Emirates-car.com',
-  description:
-    'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE for German, American, Korean, Japanese models'
-};
+         title:
+           'Auto Spare Parts Order Online in UAE from Dubai dealers |Emirates-car.com',
+         description:
+           'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE for German, American, Korean, Japanese models',
+         manifest: 'https://emirates-car.com/manifest.json',
+         icon: [
+           { url: '/favicon.ico' },
+           new URL('/favicon.ico', 'https://emirates-car.com')
+         ],
+         shortcut: ['/favicon.png'],
+         apple: [
+           {
+             url: '/icons/icon-192x192.png',
+             sizes: '192x192',
+             type: 'image/png'
+           },
+           { url: '/apple-icon-x3.png', sizes: '180x180', type: 'image/png' }
+         ],
+         twitter: {
+           card: 'app',
+           title: 'Car spare parts',
+           description:
+             'Car spare parts from Dubai dealer to all Middle east countries',
+           creator: '@emiratescarpart',
+           images: {
+             url: 'https://emirates-car.com/favicon.png',
+             alt: 'Emirates car part logo'
+           },
+         }
+       };
 
 export default function RootLayout({ children }) {
   return (
@@ -62,29 +87,12 @@ export default function RootLayout({ children }) {
           sizes="16x16"
           href="/icons/favicon-16x16.png"
         />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="shortcut icon" href="/favicon.png" />
         <link
           rel="stylesheet"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
           crossOrigin="anonymous"
         />
-        <meta name="twitter:card" content="summary" />
-        <meta
-          name="twitter:url"
-          content="https://twitter.com/emiratescarpart"
-        />
-        <meta name="twitter:title" content="Emirates Auto Parts" />
-        <meta
-          name="twitter:description"
-          content="We help people Find used , genuine, aftermarket spare parts for their car."
-        />
-        <meta
-          name="twitter:image"
-          content="https://emirates-car.com/icon-192x192.png"
-        />
-        <meta name="twitter:creator" content="@emiratescarpart" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Car spare parts App" />
         <meta
