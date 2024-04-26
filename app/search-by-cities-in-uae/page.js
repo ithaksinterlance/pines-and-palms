@@ -45,9 +45,9 @@ export default async function Cities() {
                 {cities.map((post, i) => (
                   <div key={i}>
                     <Link
-                      href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+                      href="/search-by-cities-in-uae/[city]"
                       as={
-                        'https://emirates-car.com/search-by-cities-in-uae/' +
+                        '/search-by-cities-in-uae/' +
                         post.city
                       }
                       title={'car spare parts ' + post.city}
@@ -68,7 +68,7 @@ export default async function Cities() {
                   <div>
                     <span>
                       <Link
-                        href="https://emirates-car.com/search-by-part-name"
+                        href="/search-by-part-name"
                         className="underline hover:text-blue-500 xs:text-sm"
                       >
                         SEARCH BY PART NAME
@@ -77,7 +77,7 @@ export default async function Cities() {
                     </span>
                     <span>
                       <Link
-                        href="https://emirates-car.com/search-by-cities-in-uae"
+                        href="/search-by-cities-in-uae"
                         className="underline hover:text-blue-500  xs:text-sm"
                       >
                         SEARCH BY CITY
@@ -86,7 +86,7 @@ export default async function Cities() {
                     </span>
                     <span>
                       <Link
-                        href="https://emirates-car.com/search-by-make"
+                        href="/search-by-make"
                         className="underline hover:text-blue-500  xs:text-sm"
                       >
                         SEARCH BY MAKE
@@ -107,16 +107,16 @@ export default async function Cities() {
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
                   <Link
-                    href="https://emirates-car.com/search-by-part-name"
+                    href="/search-by-part-name"
                     className="text-blue-400 underline"
                   >
-                    https://emirates-car.com/search-by-part-name
+                    /search-by-part-name
                   </Link>
                   .We also deal in brands such as{' '}
                   {makeData.map((p, i) => (
                     <Link
                       key={i}
-                      href={'https://emirates-car.com/search-by-make/' + p.make}
+                      href={'/search-by-make/' + p.make}
                     >
                       {p.make}
                       {' in UAE, '}
@@ -161,8 +161,8 @@ export default async function Cities() {
             {makeData.map((post, i) => (
               <div key={i}>
                 <Link
-                  href="https://emirates-car.com/search-by-make/[make]"
-                  as={'https://emirates-car.com/search-by-make/' + post.make}
+                  href="/search-by-make/[make]"
+                  as={'/search-by-make/' + post.make}
                   title={post.make + ' spare parts sharjah'}
                 >
                   <p className="text-base hover:text-blue-700 focus:text-blue-700 xs:px-3 h-full text-gray-500">

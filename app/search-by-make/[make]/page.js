@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import React from 'react';
 import SearchModel from '../../SearchModel';
 import FormComponent from '../../FormComponent';
@@ -47,7 +46,53 @@ export async function generateMetadata({ params }) {
   return {
     title: `${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE - Best Prices`,
     description: `Buy ${make} Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket
-    ${make} spare parts from Dubai Dealer to all over UAE and world Online'`
+    ${make} spare parts from Dubai Dealer to all over UAE and world Online`,
+    openGraph: {
+      images: '/favicon.png',
+      title: `${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE - Best Prices`,
+      description: `Buy ${make} Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket
+    ${make} spare parts from Dubai Dealer to all over UAE and world Online`,
+      url: 'https://emirates-car.com/search-by-make/' + make,
+      image: 'https://emirates-car.com/img/car-spare-parts.png',
+      siteName: 'Emirates Auto Parts',
+      images: [
+        {
+          url: 'https://emirates-car.com/icon-192x192.png',
+          width: 192,
+          height: 192
+        },
+        {
+          url: 'https://emirates-car.com/icons/icon-512x512.png',
+          width: 512,
+          height: 512,
+          alt: 'car parts'
+        }
+      ],
+      locale: 'en_US',
+      type: 'website'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE - Best Prices`,
+      url: 'https://emirates-car.com/search-by-make/' + make,
+      description: `Buy ${make} Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket
+    ${make} spare parts from Dubai Dealer to all over UAE and world Online`,
+      images: ['https://emirates-car.com/favicon.png']
+    },
+    icons: {
+      icon: '/favicon.png',
+      shortcut: '/icons/icon-96x96.png',
+      apple: '/icons/icon-192x192.png',
+      other: {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/icons/icon-152x152.png'
+      }
+    },
+    category: `${make} auto spare parts`,
+    alternates: {
+      canonical: `https://emirates-car.com/search-by-make/${make}`
+    },
+    keywords: `${make} spare parts sharjah, ${make} spare parts dubai, ${make} spare parts ras al khaimah, ${make} spare parts ajman, ${make} spare parts deira, ${make} spare parts ras al khor, ${make} spare parts al quoz, ${make} spare parts uae, ${make} spare parts online, ${make} used spare parts dubai, ${make} spare parts near me`
   };
 }
 
@@ -223,80 +268,6 @@ export default async function MakePage({ params }) {
 
   return (
     <div>
-      <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          property="og:title"
-          content={
-            make +
-            ' - Auto Spare Parts Order Online in UAE - Best Prices | Emirates-car.com'
-          }
-        />
-        <meta
-          name="keywords"
-          content={
-            make +
-            ' spare parts dubai' +
-            make +
-            ' car spare parts' +
-            make +
-            ' parts uae' +
-            make +
-            ' ' +
-            ' uae' +
-            make +
-            ' parts' +
-            make +
-            ' spare part prices in uae'
-          }
-        />
-        <meta property="og:site_name" content="Emirates-car" />
-        <meta
-          property="og:url"
-          content={'https://www.emirates-car.com/search-by-make/' + make}
-        />
-        <meta
-          property="og:description"
-          content={
-            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your' +
-            make +
-            "'s needs - Car / Jeep / Van / Truck / Buses in Your city."
-          }
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <meta
-          property="twitter:url"
-          content={'https://www.emirates-car.com/search-by-make/' + make}
-        />
-        <meta
-          property="twitter:title"
-          content={
-            make +
-            ' - Car Auto Spare Parts Order Online in UAE - Best Prices | Emirates-car.com'
-          }
-        />
-        <meta
-          property="twitter:description"
-          content={
-            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your' +
-            make +
-            "'s needs - Car / Jeep / Van / Truck / Buses in Your city."
-          }
-        />
-        <meta
-          property="twitter:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-
-        <link
-          rel="canonical"
-          href={'https://www.emirates-car.com/search-by-make/' + make}
-        />
-      </Head>
       <main className="d-flex justify-center  pt-10 xs:pt-5 mx-8">
         <div>
           <h1 className="text-blue-600 text-4xl md:text-md lg:text-md font-extrabold  xs:text-base 2xs:text-xs text-center">

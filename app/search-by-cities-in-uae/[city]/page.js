@@ -20,10 +20,63 @@ export async function generateStaticParams({ city }) {
 export async function generateMetadata({ params }) {
   const { city } = params;
   return {
-    title: `Quick Car Auto Spare Parts Order Online in ${city} (UAE) |
+    title: `Quick Car Auto Spare Parts Order Online in ${city} (UAE) | Emirates-car.com`,
+    description: `Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in ${city}  uae`,
+    openGraph: {
+      images: '/favicon.png',
+      title: `Quick Car Auto Spare Parts Order Online in ${city} (UAE) |
           Emirates-car.com`,
-    description: `Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in
-            ${city}  uae`
+      description: `Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in ${city}  uae`,
+      url: 'https://emirates-car.com/search-by-cities-in-uae/' + city,
+      image: 'https://emirates-car.com/img/car-spare-parts.png',
+      siteName: 'Emirates Auto Parts',
+      images: [
+        {
+          url: 'https://emirates-car.com/icon-192x192.png',
+          width: 192,
+          height: 192
+        },
+        {
+          url: 'https://emirates-car.com/icons/icon-512x512.png',
+          width: 512,
+          height: 512,
+          alt: 'car parts'
+        }
+      ],
+      locale: 'en_US',
+      type: 'website'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Quick Car Auto Spare Parts Order Online in ${city} (UAE) |
+          Emirates-car.com`,
+      url: 'https://emirates-car.com/search-by-cities-in-uae/' + city,
+      description: `Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in ${city}  uae`,
+      images: ['https://emirates-car.com/favicon.png']
+    },
+    icons: {
+      icon: '/favicon.png',
+      shortcut: '/icons/icon-96x96.png',
+      apple: '/icons/icon-192x192.png',
+      other: {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/icons/icon-152x152.png'
+      }
+    },
+    category: `Auto spare parts in ${city}`,
+    alternates: {
+      canonical: `https://emirates-car.com/search-by-cities-in-uae/${city}`
+    },
+    keywords:
+      'auto parts in ' +
+      city +
+      ', ' +
+      'car parts ' +
+      city +
+      ', ' +
+      'Spare parts in ' +
+      city +
+      ', auto spare parts, emirates auto parts'
   };
 }
 async function getCityData(city) {
@@ -58,7 +111,7 @@ export default async function City({ params }) {
               index{'>>>'}
               <Link
                 href={
-                  'https://emirates-car.com/search-by-cities-in-uae/' +
+                  '/search-by-cities-in-uae/' +
                   cityData.city
                 }
               >
@@ -101,7 +154,7 @@ export default async function City({ params }) {
                 <div>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-part-name"
+                      href="/search-by-part-name"
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -110,7 +163,7 @@ export default async function City({ params }) {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-cities-in-uae"
+                      href="/search-by-cities-in-uae"
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY CITY
@@ -119,7 +172,7 @@ export default async function City({ params }) {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-make"
+                      href="/search-by-make"
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -142,17 +195,17 @@ export default async function City({ params }) {
                 Used spare parts, After market parts, Genuine spare parts and
                 New parts etc. You can check our catalogue at{' '}
                 <Link
-                  href="https://emirates-car.com/search-by-part-name"
+                  href="/search-by-part-name"
                   className="text-blue-400 underline"
                 >
-                  https://emirates-car.com/search-by-part-name
+                  /search-by-part-name
                 </Link>
                 . Contact us for any inquiry. We also deal in brands such as{' '}
                 {makedatas.map((p, i) => (
                   <Link
                     key={i}
                     href={
-                      'https://emirates-car.com/search-by-cities-in-uae/' +
+                      '/search-by-cities-in-uae/' +
                       p.make
                     }
                   >
@@ -195,9 +248,9 @@ export default async function City({ params }) {
               {makedatas.map((makedata, i) => (
                 <div key={i}>
                   <Link
-                    href="https://emirates-car.com/search-by-make/[make]"
+                    href="/search-by-make/[make]"
                     as={
-                      'https://emirates-car.com/search-by-make/' + makedata.make
+                      '/search-by-make/' + makedata.make
                     }
                     title={makedata.make + ' spare parts ' + city}
                   >
@@ -233,9 +286,9 @@ export default async function City({ params }) {
             {partsposts.map((post, i) => (
               <div key={i}>
                 <Link
-                  href="https://emirates-car.com/search-by-part-name/[parts]"
+                  href="/search-by-part-name/[parts]"
                   as={
-                    'https://emirates-car.com/search-by-part-name/' + post.parts
+                    '/search-by-part-name/' + post.parts
                   }
                   title={post.parts + ' in ' + city}
                 >

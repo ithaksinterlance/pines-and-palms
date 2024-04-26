@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import HondaOfferButton from '../../../HondaOfferButton';
@@ -46,7 +45,53 @@ export async function generateMetadata({ params }) {
   return {
     title: `${make} - ${model} Car Auto Spare Parts Order Online in UAE from Dubai -
     Best Prices`,
-    description: `Buy ${make} - ${model} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`
+    description: `Buy ${make} - ${model} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`,
+    openGraph: {
+      images: '/favicon.png',
+      title: `${make} - ${model} Car Auto Spare Parts Order Online in UAE from Dubai -
+    Best Prices`,
+      description: `Buy ${make} - ${model} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`,
+      url: 'https://emirates-car.com/search-by-make/' + make + '/' + model,
+      image: 'https://emirates-car.com/img/car-spare-parts.png',
+      siteName: 'Emirates Auto Parts',
+      images: [
+        {
+          url: 'https://emirates-car.com/icon-192x192.png',
+          width: 192,
+          height: 192
+        },
+        {
+          url: 'https://emirates-car.com/icons/icon-512x512.png',
+          width: 512,
+          height: 512,
+          alt: 'car parts'
+        }
+      ],
+      locale: 'en_US',
+      type: 'website'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${make} - ${model} Car Auto Spare Parts Order Online in UAE from Dubai -
+    Best Prices`,
+      url: 'https://emirates-car.com/search-by-make/' + make + '/' + model,
+      description: `Buy ${make} - ${model} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`,
+      images: ['https://emirates-car.com/favicon.png']
+    },
+    icons: {
+      icon: '/favicon.png',
+      shortcut: '/icons/icon-96x96.png',
+      apple: '/icons/icon-192x192.png',
+      other: {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/icons/icon-152x152.png'
+      }
+    },
+    alternates: {
+      canonical: `https://emirates-car.com/search-by-make/${make}/${model}`
+    },
+    category: `${make} ${model} auto spare parts`,
+    keywords: `${make} ${model} spare parts sharjah, used ${make} ${model} spare parts, ${make} ${model} spare parts online, ${make} ${model} spare parts near me, ${make} ${model} wheels, ${make} ${model} distributor, ${make} ${model} shock absorber, ${make} ${model} spark plugs, ${make} ${model} fuse box, ${make} ${model} radiator, ${make} ${model} fuel pump`
   };
 }
 async function getYear(make, model) {
@@ -60,7 +105,9 @@ async function getYear(make, model) {
   return uniqueYearArray;
 }
 async function getMakeImage(make, model) {
-  const re = await fetch(`https://rozy.vercel.app/api/palms/${make}/${model}`);
+  const re = await fetch(
+    `https://rozy.vercel.app/api/grooves/${make}/${model}`
+  );
   const reDat = await re.json();
   let uniqueMkeArray = [
     ...new Map(reDat.map(item => [item['img'], item])).values()
@@ -68,6 +115,7 @@ async function getMakeImage(make, model) {
   const imageMake = uniqueMkeArray.map(function(i) {
     return i.img;
   });
+  return imageMake;
 }
 
 async function getDescription(make, model) {
@@ -91,7 +139,6 @@ async function getModel(make, model) {
   ];
   return uniqueMakeArray;
 }
-
 
 async function getMake() {
   const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
@@ -265,128 +312,6 @@ export default async function Model({ params }) {
   ];
   return (
     <div>
-      <Head>
-        <title>
-          {make} - {model} Car Auto Spare Parts Order Online in UAE from Dubai -
-          Best Prices"
-        </title>
-        <meta
-          name="description"
-          content={
-            'Buy' +
-            make +
-            ' ' +
-            model +
-            '  auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket ' +
-            ' in UAE'
-          }
-        />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          property="og:title"
-          content={
-            make +
-            ' - ' +
-            model +
-            ' Car Auto Spare Parts in UAE from Dubai - Best Prices | Emirates-car.com'
-          }
-        />
-        <meta
-          name="keywords"
-          content={
-            make +
-            ' ' +
-            model +
-            ' spare parts,' +
-            make +
-            ' ' +
-            model +
-            ' spare parts sharjah,' +
-            make +
-            ' ' +
-            model +
-            ' used spare parts dubai,' +
-            'sharjah ' +
-            make +
-            ' ' +
-            model +
-            ' spare parts,' +
-            'used ' +
-            make +
-            ' ' +
-            model +
-            ' spare parts,' +
-            make +
-            ' ' +
-            model +
-            ' car spare parts,' +
-            model +
-            ' auto parts,' +
-            model +
-            ' auto parts,' +
-            make +
-            ' ' +
-            model +
-            ' auto parts in uae '
-          }
-        />
-        <meta property="og:site_name" content="Emirates-car" />
-        <meta
-          property="og:url"
-          content={
-            'https://www.emirates-car.com/search-by-make/' + make + '/' + model
-          }
-        />
-        <meta
-          property="og:description"
-          content={
-            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your' +
-            make +
-            model +
-            ' automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city.'
-          }
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <meta
-          property="twitter:url"
-          content={
-            'https://www.emirates-car.com/search-by-make/' + make + '/' + model
-          }
-        />
-        <meta
-          property="twitter:title"
-          content={
-            make +
-            ' - ' +
-            model +
-            ' Car Auto Spare Parts in UAE Order Online from Dubai - Best Prices | Emirates-car.com'
-          }
-        />
-        <meta
-          property="twitter:description"
-          content={
-            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your ' +
-            make +
-            ' ' +
-            model +
-            ' automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city.'
-          }
-        />
-        <meta
-          property="twitter:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <link
-          rel="canonical"
-          href={
-            'https://www.emirates-car.com/search-by-make/' + make + '/' + model
-          }
-        />
-      </Head>
       <Image
         src={'/img/car-logos/' + imageMake}
         alt={make + ' spare parts'}
@@ -482,11 +407,14 @@ export default async function Model({ params }) {
                           'https://emirates-car.com/search-by-make/' +
                           post.make +
                           '/' +
-                          post.model+'/'+ post.year
+                          post.model +
+                          '/' +
+                          post.year
                         }
                       >
                         <main className=" xs:text-center font-mono text-blue-800 underline hover:text-blue-700 focus:text-blue-700">
-                          {post.make}&nbsp;{post.model.replace('%2F', '/')}&nbsp;{post.year}
+                          {post.make}&nbsp;{post.model.replace('%2F', '/')}
+                          &nbsp;{post.year}
                           &nbsp;Parts
                         </main>
                       </Link>

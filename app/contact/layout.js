@@ -2,52 +2,70 @@ import Head from 'next/head';
 import React from 'react'
 import Navbar from '../nav';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#2563eb'
+};
+
+export const metadata = {
+         title: 'Auto spare parts in UAE |  Emirates-car.com',
+         description:
+           'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city.',
+         openGraph: {
+           images: '/favicon.png',
+           title: 'Quick Auto Spare Parts Hunt in UAE | Emirates-car.com',
+           description:
+             'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city.',
+           url: 'https://emirates-car.com/contact',
+           image: 'https://emirates-car.com/img/car-spare-parts.png',
+           siteName: 'Emirates Auto Parts',
+           images: [
+             {
+               url: 'https://emirates-car.com/icon-192x192.png',
+               width: 192,
+               height: 192
+             },
+             {
+               url: 'https://emirates-car.com/icons/icon-512x512.png',
+               width: 512,
+               height: 512,
+               alt: 'car parts'
+             }
+           ],
+           locale: 'en_US',
+           type: 'website',
+           alternates: {
+             canonical: 'https://emirates-car.com/contact'
+           }
+         },
+         twitter: {
+           card: 'summary_large_image',
+           title: 'Quick Auto Spare Parts Hunt in UAE | Emirates-car.com',
+           url:
+             'https://emirates-car.com/blog/car-parts-you-might-need-to-check-for-your-flooded-cars',
+           description:
+             'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city.',
+           images: ['https://emirates-car.com/favicon.png']
+         },
+         icons: {
+           icon: '/favicon.png',
+           shortcut: '/icons/icon-96x96.png',
+           apple: '/icons/icon-192x192.png',
+           other: {
+             rel: 'apple-touch-icon-precomposed',
+             url: '/icons/icon-152x152.png'
+           }
+         },
+         category: 'car parts'
+       };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Head>
-          <title>Auto spare parts in UAE</title>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-          <meta
-            property="og:title"
-            content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
-          />
-          <meta property="og:site_name" content="Emirates-car" />
-          <meta
-            property="og:url"
-            content="https://www.emirates-car.com/contact"
-          />
-          <meta
-            property="og:description"
-            content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
-          />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:image"
-            content="https://emirates-car.com/img/car-spare-parts.png"
-          />
-          <meta
-            property="twitter:url"
-            content="https://www.emirates-car.com/contact"
-          />
-          <meta
-            property="twitter:title"
-            content="Quick Auto Spare Parts Hunt in UAE | Emirates-car.com"
-          />
-          <meta
-            property="twitter:description"
-            content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
-          />
-          <meta
-            property="twitter:image"
-            content="https://emirates-car.com/img/car-spare-parts.png"
-          />
-          <link rel="canonical" href="https://www.emirates-car.com/contact" />
-        </Head>
         <Navbar />
         {children}
       </body>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Social from './Social';
 import Hero from './home_hero';
 import Count from './service-countup';
@@ -55,37 +54,6 @@ export default async function Home() {
   const cities = await getCity();
   return (
     <div className="max-w-7xl mx-auto">
-      <Head>
-        <meta
-          name="keywords"
-          content="spare parts dealers in dubai, spare parts online, auto spare parts online, best auto parts, auto spare parts in dubai, auto spare parts uae, honda accord parts, used engine parts, headlight parts, genuine parts, aftermarket spare parts, bumper parts, sensors, camera"
-        />
-        <meta property="og:site_name" content="Emirates-car" />
-        <meta property="og:url" content="https://www.emirates-car.com" />
-        <meta
-          property="og:description"
-          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <meta property="twitter:url" content="https://www.emirates-car.com" />
-        <meta
-          property="twitter:title"
-          content="Quick Auto Spare Part Order Online in UAE from Dubai dealers | Emirates-car.com"
-        />
-        <meta
-          property="twitter:description"
-          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
-        />
-        <meta
-          property="twitter:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <link rel="canonical" href="https://www.emirates-car.com" />
-      </Head>
       <Hero />
       <div className="place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
         <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">

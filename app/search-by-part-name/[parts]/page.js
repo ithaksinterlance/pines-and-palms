@@ -6,36 +6,80 @@ import Social from '../../Social';
 import FormComponent from '../../FormComponent';
 import Footer from '../../footer';
 
-export async function generateStaticParams({ city }) {
-  const posts = await fetch(
-    `https://rozy.vercel.app/api/palms/${city}`
-  ).then(res => res.json());
-  return posts.map(post => ({
-    city: post.city
-  }));
-}
-
 export async function generateMetadata({ params }) {
   const { parts } = params;
   return {
     title: `${parts} Car Auto Spare Parts Order Online in UAE |
           Emirates-car.com`,
-    description: `Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in
-            ${parts}  uae`
+    description: `Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in ${parts}  uae`,
+    openGraph: {
+      images: '/favicon.png',
+      title: `${parts} Car Auto Spare Parts Order Online in UAE |
+          Emirates-car.com`,
+      description: `Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in ${parts}  uae`,
+      url: 'https://emirates-car.com/search-by-part-name/' + parts,
+      image: 'https://emirates-car.com/img/car-spare-parts.png',
+      siteName: 'Emirates Auto Parts',
+      images: [
+        {
+          url: 'https://emirates-car.com/icon-192x192.png',
+          width: 192,
+          height: 192
+        },
+        {
+          url: 'https://emirates-car.com/icons/icon-512x512.png',
+          width: 512,
+          height: 512,
+          alt: 'car parts'
+        }
+      ],
+      locale: 'en_US',
+      type: 'website'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${parts} Car Auto Spare Parts Order Online in UAE |
+          Emirates-car.com`,
+      url: 'https://emirates-car.com/search-by-part-name/' + parts,
+      description: `Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in ${parts}  uae`,
+      images: ['https://emirates-car.com/favicon.png']
+    },
+    icons: {
+      icon: '/favicon.png',
+      shortcut: '/icons/icon-96x96.png',
+      apple: '/icons/icon-192x192.png',
+      other: {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/icons/icon-152x152.png'
+      }
+    },
+    category: `${parts}`,
+    alternates: {
+      canonical: `https://emirates-car.com/search-by-part-name/${parts}`
+    },
+    keywords: `${parts} for honda, ${parts} in  dubai, ${parts} for porsche, ${parts} for volkswagen, ${parts} for volvo, ${parts} online, ${parts} for ford, ${parts} spare parts uae, ${parts} spare parts online, ${parts} used spare parts dubai, ${parts} spare parts near me`
   };
+}
+
+async function getPartsData(parts) {
+  const res = await fetch(`https://rozy.vercel.app/api/parts/${parts}`);
+  const data = await res.json();
+  console.log(data.parts);
+  return data;
 }
 
 export default async function Parts({ params }) {
   const { parts } = params;
   const cities = await getCity();
   const makedatas = await getMake();
+  const partsData = await getPartsData(parts);
   const partsposts = await getParts();
   const modelsform = await getFormModel();
   return (
     <div>
       <div className="flex place-content-center mx-auto">
         <h1 className="text-3xl font-extrabold mx-auto my-5 xs:text-xl">
-          {parts}
+          {partsData.parts}
         </h1>
       </div>
       <div className="flex xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1">
@@ -45,7 +89,7 @@ export default async function Parts({ params }) {
               <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
                 FILL OUT THE INQUIRY FOR
                 <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                  &nbsp;{parts}{' '}
+                  &nbsp;{partsData.parts}{' '}
                 </nobr>
                 BELOW
               </div>
@@ -55,7 +99,7 @@ export default async function Parts({ params }) {
                   path:&nbsp;&nbsp;
                 </nobr>
                 index{'>>>'}
-                {parts}
+                {partsData.parts}
                 {'>>>'}
               </div>
               <div className="uppercase xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 mx-10 bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
@@ -63,7 +107,7 @@ export default async function Parts({ params }) {
                 <div>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-part-name"
+                      href="/search-by-part-name"
                       className="underline hover:text-blue-500 xs:text-sm"
                       title="car spare parts online"
                     >
@@ -73,7 +117,7 @@ export default async function Parts({ params }) {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-cities-in-uae"
+                      href="/search-by-cities-in-uae"
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       Spare parts near me
@@ -82,7 +126,7 @@ export default async function Parts({ params }) {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-make"
+                      href="/search-by-make"
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -93,8 +137,8 @@ export default async function Parts({ params }) {
               </div>
               <div className="grid grid-cols-1 s:grid s:grid-cols-1 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 xs:mx-4 s:mx-4 2xs:mx-4 md:mx-5 mx-auto">
                 <div className="text-base font-medium  xs:text-sm md:text-base p-5 s:p-2">
-                  Searching for {parts.toUpperCase()} Auto Spare Parts in U.A.E?
-                  Fill out the inquiry down below.
+                  Searching for {decodeURIComponent(partsData.parts)} Auto Spare
+                  Parts in U.A.E? Fill out the inquiry down below.
                 </div>
                 <FormComponent formsData={modelsform} postFilter={partsposts} />
                 <div className="p-5 pt-10">
@@ -116,11 +160,11 @@ export default async function Parts({ params }) {
                 {makedatas.map((post, i) => (
                   <div key={i}>
                     <Link
-                      href="https://emirates-car.com/search-by-make/[make]"
-                      as={
-                        'https://emirates-car.com/search-by-make/' + post.make
+                      href="/search-by-make/[make]"
+                      as={'/search-by-make/' + post.make}
+                      title={
+                        post.make + ' ' + decodeURIComponent(partsData.parts)
                       }
-                      title={post.make + ' ' + parts}
                     >
                       <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                         <div className="flex justify-center">
@@ -134,7 +178,8 @@ export default async function Parts({ params }) {
                           <br />
                         </div>
                         <div className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
-                          {parts.toUpperCase()} for {post.make.toUpperCase()}
+                          {decodeURIComponent(partsData.parts)} for{' '}
+                          {post.make.toUpperCase()}
                         </div>
                       </main>
                     </Link>
@@ -149,17 +194,29 @@ export default async function Parts({ params }) {
                   abu dhabi, ajman, al quoz, jumeirah, deira etc. You can check
                   our catalogue at{' '}
                   <Link
-                    href="https://emirates-car.com/search-by-part-name"
+                    href="/search-by-part-name"
                     className="text-blue-400 underline"
                   >
                     https://emirates-car.com/search-by-part-name
                   </Link>
                   . We provide auto spare parts for any vehicles including :
                   <ul className="list-disc">
-                    <li>{parts} New auto spare parts in uae</li>
-                    <li>{parts} Used auto spare parts in uae</li>
-                    <li>{parts} Genuine auto spare parts in uae</li>
-                    <li>{parts} Aftermarket auto spare parts in uae</li>
+                    <li>
+                      {decodeURIComponent(partsData.parts)} New auto spare parts
+                      in uae
+                    </li>
+                    <li>
+                      {decodeURIComponent(partsData.parts)} Used auto spare
+                      parts in uae
+                    </li>
+                    <li>
+                      {decodeURIComponent(partsData.parts)} Genuine auto spare
+                      parts in uae
+                    </li>
+                    <li>
+                      {decodeURIComponent(partsData.parts)} Aftermarket auto
+                      spare parts in uae
+                    </li>
                   </ul>
                 </div>
                 <div className="text-base font-medium text-gray-500 p-5">
@@ -192,15 +249,15 @@ export default async function Parts({ params }) {
             {cities.map((post, i) => (
               <div key={i}>
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae/[city]"
-                  as={
-                    'https://emirates-car.com/search-by-cities-in-uae/' +
-                    post.city
+                  href="/search-by-cities-in-uae/[city]"
+                  as={'/search-by-cities-in-uae/' + post.city}
+                  title={
+                    decodeURIComponent(partsData.parts) + ' in ' + post.city
                   }
-                  title={parts + ' in ' + post.city}
                 >
                   <div className="text-base hover:text-blue-700 focus:text-blue-700 xs:text-sm xl:text-lg 2xs:text-xs text-gray-500 font-sans s:text-xs underline">
-                    <i className="far fa-compass"></i> {parts} in {post.city}
+                    <i className="far fa-compass"></i>{' '}
+                    {decodeURIComponent(parts)} in {post.city}
                   </div>
                 </Link>
               </div>

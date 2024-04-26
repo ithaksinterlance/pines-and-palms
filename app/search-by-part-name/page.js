@@ -8,14 +8,6 @@ import Spare from '../../public/img/car-spare-parts.png';
 import SearchPartsComponent from '../SearchPart';
 import Footer from '../footer';
 
-export async function generateMetadata() {
-  return {
-    title: `Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com`,
-    description:
-      'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE'
-  };
-}
-
 export default async function PartPage() {
   const cities = await getCity();
   const partsposts = await getParts();
@@ -48,9 +40,9 @@ export default async function PartPage() {
                 {partsposts.map((post, i) => (
                   <div key={i}>
                     <Link
-                      href="https://emirates-car.com/search-by-part-name/[parts]"
+                      href="/search-by-part-name/[parts]"
                       as={
-                        'https://emirates-car.comsearch-by-part-name/' +
+                        '/search-by-part-name/' +
                         post.parts
                       }
                       title={post.parts + ' in uae'}
@@ -71,7 +63,7 @@ export default async function PartPage() {
                 <div>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-part-name"
+                      href="/search-by-part-name"
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -80,7 +72,7 @@ export default async function PartPage() {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-cities-in-uae"
+                      href="/search-by-cities-in-uae"
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY CITY
@@ -89,7 +81,7 @@ export default async function PartPage() {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-make"
+                      href="/search-by-make"
                       className="underline hover:text-blue-500  xs:text-sm"
                     >
                       SEARCH BY MAKE
@@ -108,7 +100,7 @@ export default async function PartPage() {
                 dhabi, ajman, al quoz, jumeirah, deira etc. You can check our
                 catalogue at{' '}
                 <Link
-                  href="https://emirates-car.com/search-by-part-name"
+                  href="/search-by-part-name"
                   className="text-blue-400 underline"
                 >
                   https://emirates-car.com/search-by-part-name
@@ -152,9 +144,9 @@ export default async function PartPage() {
             {cities.map((post, i) => (
               <div key={i}>
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+                  href="/search-by-cities-in-uae/[city]"
                   as={
-                    'https://emirates-car.comsearch-by-cities-in-uae/' +
+                    '/search-by-cities-in-uae/' +
                     post.city
                   }
                   title={'car spare parts ' + post.city}

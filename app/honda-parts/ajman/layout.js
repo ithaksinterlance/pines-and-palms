@@ -1,4 +1,5 @@
-import '../../styles/globals.css';
+import '../../../styles/globals.css';
+import Navbar from '../../nav';
 
 export const viewport = {
   width: 'device-width',
@@ -10,16 +11,16 @@ export const viewport = {
 
 export const metadata = {
          title:
-           'Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com',
+           'Honda Car spare Parts in Ajman from Dubai dealers Online |Emirates-car.com',
          description:
-           'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more',
+           'Buy Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket Honda spare parts from Dubai Dealer in Ajman',
          openGraph: {
            images: '/favicon.png',
            title:
-             'Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com',
+             'Honda Car spare Parts in Ajman from Dubai dealers Online |Emirates-car.com',
            description:
-             'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more',
-           url: 'https://www.emirates-car.com/spare-parts',
+             'Buy Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket Honda spare parts from Dubai Dealer in Ajman',
+           url: 'https://emirates-car.com/honda-parts/ajman',
            image: 'https://emirates-car.com/img/car-spare-parts.png',
            siteName: 'Emirates Auto Parts',
            images: [
@@ -41,10 +42,10 @@ export const metadata = {
          twitter: {
            card: 'summary_large_image',
            title:
-             'Quick Car Auto Spare Part Order Online in UAE | Emirates-car.com',
-           url: 'https://www.emirates-car.com/spare-parts',
+             'Honda Car Parts in Ajman from Dubai dealers Online | Emirates-car.com',
+           url: 'https://emirates-car.com/honda-parts/ajman',
            description:
-             'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more',
+             'Buy Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket Honda spare parts from Dubai Dealer in Ajman',
            images: ['https://emirates-car.com/favicon.png']
          },
          icons: {
@@ -57,14 +58,18 @@ export const metadata = {
            }
          },
          category: 'car parts',
-         keyword:
-           'car parts online, spare parts online,auto spare parts sharjah, auto spare parts dubai, brake pads, body parts, bumper parts, spare parts, 8th gen accord parts, performance parts, headlight, tailight, suspension parts'
+         alternates: {
+           canonical: 'https://emirates-car.com/honda-parts/ajman'
+         },
+         keywords:
+           'honda accord spare parts sharjah, honda accord spare parts, honda accord 2008 brake pads, honda accord 2009 distributor, honda accord wheel, honda accord 2012 abs, honda accord engine, honda accord gearbox, honda accord axle, honda accord air filter, honda accord carburetor'
        };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Navbar />
         {children}
       </body>
     </html>

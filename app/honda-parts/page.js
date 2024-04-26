@@ -6,63 +6,10 @@ import OtherHondaModels from '../OtherHondaModels';
 import Image from 'next/image';
 import FeaturedHonda from '../8th-gen-Honda';
 
-export const metadata = {
-  title: 'Honda spare parts UAE from Dubai dealers Online | Emirates-car.com',
-  description:
-    'Buy Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket Honda spare parts from Dubai Dealer to all over UAE and world Online'
-};
-
 export default function HondaParts() {
   return (
     <div>
       <Head>
-        <title>
-          Honda spare parts UAE from Dubai dealers Online | Emirates-car.com
-        </title>
-        <meta
-          name="description"
-          content={
-            'Buy Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket Honda spare parts from Dubai Dealer to all over UAE and world Online'
-          }
-        />
-        <meta
-          name="keywords"
-          content="honda spare parts sharjah, honda spare parts, honda brake pads, honda distributor, honda  wheel, honda abs, honda engine, honda gearbox, honda axle, honda air filter, honda accord carburetor"
-        />
-        <meta
-          property="og:title"
-          content="Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com"
-        />
-        <meta property="og:site_name" content="Emirates-car" />
-        <meta
-          property="og:url"
-          content="https://www.emirates-car.com/honda-parts/abu-dhabi"
-        />
-        <meta
-          property="og:description"
-          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <meta
-          property="twitter:url"
-          content="https://www.emirates-car.com/honda-parts"
-        />
-        <meta
-          property="twitter:title"
-          content="Quick Car Auto Spare Parts Order Online in  UAE | Emirates-car.com"
-        />
-        <meta
-          property="twitter:description"
-          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
-        />
-        <meta
-          property="twitter:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
         <link rel="canonical" href="https://www.emirates-car.com/honda-parts" />
       </Head>
       <div className="w-3/4 mx-auto">

@@ -1,6 +1,5 @@
-import Head from 'next/head';
 import React from 'react';
-import Link from "next/link";
+import Link from 'next/link';
 import ABS from '../../../../../public/img/honda-eighth-gen/ABS.webp';
 import AirFilter from '../../../../../public/img/honda-eighth-gen/Air_Filter.webp';
 import AirSuspension from '../../../../../public/img/honda-eighth-gen/Air_Suspension_Module.webp';
@@ -29,7 +28,7 @@ import FormComponent from '../../../../FormComponent';
 import { getFormModel, getParts } from '../../../../page';
 import HondaOfferButton from '../../../../HondaOfferButton';
 import Image from 'next/image';
-import Footer from "../../../../footer"
+import Footer from '../../../../footer';
 
 export async function generateStaticParams({ make, model, year }) {
   const posts = await fetch(
@@ -44,9 +43,76 @@ export async function generateStaticParams({ make, model, year }) {
 export async function generateMetadata({ params }) {
   const { make, model, year } = params;
   return {
-    title: `${make} - ${model} - ${year} Car Auto Spare Parts Order Online in UAE from Dubai -
+    title: `${year} - ${make} - ${model}  Auto Spare Parts Order Online in UAE from Dubai -
     Best Prices`,
-    description: `Buy ${make} - ${model} - ${year} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`
+    description: `Buy ${year} - ${make} - ${model} and Get delivered Used, New, Genuine / OEM, Aftermarket Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more`
+  };
+}
+
+export async function generateMetadata({ params }) {
+  const { make, model, year } = params;
+  return {
+    title: `${year} - ${make} - ${model}  Auto Spare Parts Order Online in UAE from Dubai -
+    Best Prices`,
+    description: `Buy ${year} - ${make} - ${model} and Get delivered Used, New, Genuine / OEM, Aftermarket Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more`,
+    openGraph: {
+      images: '/favicon.png',
+      title: `${year} - ${make} - ${model}  Auto Spare Parts Order Online in UAE from Dubai -
+    Best Prices`,
+      description: `Buy ${year} - ${make} - ${model} and Get delivered Used, New, Genuine / OEM, Aftermarket Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more`,
+      url:
+        'https://emirates-car.com/search-by-make/' +
+        make +
+        '/' +
+        model +
+        '/' +
+        year,
+      image: 'https://emirates-car.com/img/car-spare-parts.png',
+      siteName: 'Emirates Auto Parts',
+      images: [
+        {
+          url: 'https://emirates-car.com/icon-192x192.png',
+          width: 192,
+          height: 192
+        },
+        {
+          url: 'https://emirates-car.com/icons/icon-512x512.png',
+          width: 512,
+          height: 512,
+          alt: 'car parts'
+        }
+      ],
+      locale: 'en_US',
+      type: 'website'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${year} - ${make} - ${model}  Auto Spare Parts Order Online in UAE from Dubai -
+    Best Prices`,
+      url:
+        'https://emirates-car.com/search-by-make/' +
+        make +
+        '/' +
+        model +
+        '/' +
+        year,
+      description: `Buy ${year} - ${make} - ${model} and Get delivered Used, New, Genuine / OEM, Aftermarket Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more`,
+      images: ['https://emirates-car.com/favicon.png']
+    },
+    icons: {
+      icon: '/favicon.png',
+      shortcut: '/icons/icon-96x96.png',
+      apple: '/icons/icon-192x192.png',
+      other: {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/icons/icon-152x152.png'
+      }
+    },
+    alternates: {
+      canonical: `https://emirates-car.com/search-by-make/${make}/${model}/${year}`
+    },
+    category: `${year} ${make} ${model} auto spare parts`,
+    keywords: `${year} ${make} ${model} auto spare parts,${year}  ${make} ${model} spare parts sharjah, used ${year}  ${make} ${model} spare parts, ${year} ${make} ${model} spare parts online,${year}  ${make} ${model} compressor,${year}  ${make} ${model} wheels,${year}  ${make} ${model} distributor,${year}  ${make} ${model} shock absorber,${year}  ${make} ${model} spark plugs,${year}  ${make} ${model} fuse box,${year}  ${make} ${model} radiator,${year}  ${make} ${model} fuel pump`
   };
 }
 
@@ -102,58 +168,58 @@ async function getMake() {
 export default async function Year({ params }) {
   const { make, model, year } = params;
   const yearData = await getYear(make, model, year);
-   const imageMake = await getMakeImage(make, model);
-   const description = await getDescription(make, model);
-   const uniqueMakeArray = await getModel(make, model);
-   const makeArray = await getMake();
-   const partspost = await getParts();
-   const modelsform = await getFormModel();
+  const imageMake = await getMakeImage(make, model);
+  const description = await getDescription(make, model);
+  const uniqueMakeArray = await getModel(make, model);
+  const makeArray = await getMake();
+  const partspost = await getParts();
+  const modelsform = await getFormModel();
 
   const images = [
     {
       images: ABS,
       name: 'ABS',
-      alt: `${make} ${model} "anti lock braking system"`,
+      alt: `${year} ${make} ${model} "anti lock braking system"`,
       link:
         'https://emirates-car.com/search-by-part-name/Anti-Lock%20Brake%20Control%20Module%20(ABS)'
     },
     {
       images: AirFilter,
       name: 'Air Filter',
-      alt: `${make} ${model} "air filter"`,
+      alt: `${year} ${make} ${model} "air filter"`,
       link: 'https://emirates-car.com/get-in-touch'
     },
 
     {
       images: AirSuspension,
       name: 'Air Suspension',
-      alt: `${make} ${model} "air suspension"`,
+      alt: `${year} ${make} ${model} "air suspension"`,
       link: 'https://emirates-car.com/get-in-touch'
     },
 
     {
       images: AxleAssembly,
       name: 'Axle',
-      alt: `${make} ${model} " axle"`,
+      alt: `${year} ${make} ${model} " axle"`,
       link:
         'https://emirates-car.com/search-by-part-name/Axle%20Assembly%20(Front,%204WD)'
     },
     {
       images: BrakePads,
       name: 'Brake Pads',
-      alt: `${make} ${model} "brake pads"`,
+      alt: `${year} ${make} ${model} "brake pads"`,
       link: 'https://emirates-car.com/get-in-touch'
     },
     {
       images: CatalyticConverter,
       name: 'Catalytic Convertor',
-      alt: `${make} ${model} "catalytic convertor"`,
+      alt: `${year} ${make} ${model} "catalytic convertor"`,
       link: 'https://emirates-car.com/get-in-touch'
     },
     {
       images: CylinderHead,
       name: 'Cylinder Head',
-      alt: `${make} ${model} "cylinder"`,
+      alt: `${year} ${make} ${model} "cylinder"`,
       link: 'https://emirates-car.com/search-by-part-name/Cylinder%20Head)'
     },
     {
@@ -165,250 +231,106 @@ export default async function Year({ params }) {
     {
       images: Engine,
       name: 'Engine',
-      alt: `${make} ${model} "engine"`,
+      alt: `${year} ${make} ${model} "engine"`,
       link: 'https://emirates-car.com/search-by-part-name/Engine%20Assembly'
     },
     {
       images: ExhaustManifold,
       name: 'Exhaust Manifold',
-      alt: `${make} ${model} "exhaust system"`,
+      alt: `${year} ${make} ${model} "exhaust system"`,
       link: 'https://emirates-car.com/search-by-part-name/Exhaust%20Manifold'
     },
     {
       images: GearBox,
       name: 'Gearbox / Transmission',
-      alt: `${make} ${model} "gearbox"`,
+      alt: `${year} ${make} ${model} "gearbox"`,
       link:
         'https://emirates-car.com/search-by-part-name/Transmission%20Control%20Module'
     },
     {
       images: Grille,
       name: 'Grille',
-      alt: `${make} ${model} " grill"`,
+      alt: `${year} ${make} ${model} " grill"`,
       link: 'https://emirates-car.com/search-by-part-name/Grille'
     },
     {
       images: Headlight,
       name: 'Headlight',
-      alt: `${make} ${model} " headlight bulb"`,
+      alt: `${year} ${make} ${model} " headlight bulb"`,
       link: 'https://emirates-car.com/search-by-part-name/Headlight%20Assembly'
     },
     {
       images: MasterCylinderKit,
       name: 'Master Cylinder',
-      alt: `${make} ${model} " master cylinder"`,
+      alt: `${year} ${make} ${model} " master cylinder"`,
       link:
         'https://emirates-car.com/search-by-part-name/Master%20Cylinder%20(Clutch)'
     },
     {
       images: MudFlap,
       name: 'Mud Flap',
-      alt: `${make} ${model} " mud flaps"`,
+      alt: `${year} ${make} ${model} " mud flaps"`,
       link: 'https://emirates-car.com/get-in-touch'
     },
     {
       images: Radiator,
       name: 'Radiator',
-      alt: `${make} ${model} " radiator"`,
+      alt: `${year} ${make} ${model} " radiator"`,
       link: 'https://emirates-car.com/search-by-part-name/Radiator'
     },
     {
       images: RearBumper,
       name: 'Rear Bumper',
-      alt: `${make} ${model}" rear bumper"`,
+      alt: `${year} ${make} ${model}" rear bumper"`,
       link:
         'https://emirates-car.com/search-by-part-name/Bumper%20Assembly%20(Rear)'
     },
     {
       images: ReverseLight,
       name: 'Reverse Light',
-      alt: `${make} ${model} " reverse light bulb"`,
+      alt: `${year} ${make} ${model} " reverse light bulb"`,
       link: 'https://emirates-car.com/search-by-part-name/Reverse%20Light'
     },
     {
       images: Rim,
       name: 'Rims',
-      alt: `${make} ${model} " rims for sale"`,
+      alt: `${year} ${make} ${model} " rims for sale"`,
       link: 'https://emirates-car.com/search-by-part-name/Rim'
     },
     {
       images: SeatBelt,
       name: 'Seat Belt',
-      alt: `${make} ${model} " seat belt"`,
+      alt: `${year} ${make} ${model} " seat belt"`,
       link: 'https://emirates-car.com/search-by-part-name/Seat%20Belt'
     },
     {
       images: ShockAbsorber,
       name: 'Shock Absorber',
-      alt: `${make} ${model} " shock absorber"`,
+      alt: `${year} ${make} ${model} " shock absorber"`,
       link: 'https://emirates-car.com/search-by-part-name/Shock%20Absorber'
     },
     {
       images: SideMirror,
       name: 'Mirror',
-      alt: `${make} ${model}" mirrors"`,
+      alt: `${year} ${make} ${model}" mirrors"`,
       link:
         'https://emirates-car.com/search-by-part-name/Mirror%20(Rear%20View)'
     },
     {
       images: SteeringWheel,
       name: 'Steering Wheel',
-      alt: `${make} ${model} " steering wheel"`,
+      alt: `${year} ${make} ${model} " steering wheel"`,
       link: 'https://emirates-car.com/search-by-part-name/Steering%20Wheel'
     },
     {
       images: Wheel,
       name: 'Wheels',
-      alt: `${make} ${model} " wheels"`,
+      alt: `${year} ${make} ${model} " wheels"`,
       link: 'https://emirates-car.com/search-by-part-name/Wheel'
     }
   ];
   return (
     <div>
-      <Head>
-        <title>
-          {year} - {make} - {model} Car Auto Spare Parts Order Online in UAE
-          from Dubai - Best Prices"
-        </title>
-        <meta
-          name="description"
-          content={
-            'Buy' +
-            year +
-            make +
-            ' ' +
-            model +
-            '  auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket ' +
-            ' in UAE'
-          }
-        />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          property="og:title"
-          content={
-            year +
-            make +
-            ' - ' +
-            model +
-            ' Car Auto Spare Parts in UAE from Dubai - Best Prices | Emirates-car.com'
-          }
-        />
-        <meta
-          name="keywords"
-          content={
-            make +
-            ' ' +
-            model +
-            ' spare parts,' +
-            make +
-            ' ' +
-            model +
-            ' spare parts sharjah,' +
-            make +
-            ' ' +
-            model +
-            ' used spare parts dubai,' +
-            'sharjah ' +
-            make +
-            ' ' +
-            model +
-            ' spare parts,' +
-            'used ' +
-            make +
-            ' ' +
-            model +
-            ' spare parts,' +
-            make +
-            ' ' +
-            model +
-            ' car spare parts,' +
-            model +
-            ' auto parts,' +
-            model +
-            ' auto parts,' +
-            make +
-            ' ' +
-            model +
-            ' auto parts in uae '
-          }
-        />
-        <meta property="og:site_name" content="Emirates-car" />
-        <meta
-          property="og:url"
-          content={
-            'https://www.emirates-car.com/search-by-make/' +
-            make +
-            '/' +
-            model +
-            '/' +
-            year
-          }
-        />
-        <meta
-          property="og:description"
-          content={
-            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your' +
-            make +
-            model +
-            year +
-            ' automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city.'
-          }
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <meta
-          property="twitter:url"
-          content={
-            'https://www.emirates-car.com/search-by-make/' +
-            make +
-            '/' +
-            model +
-            '/' +
-            year
-          }
-        />
-        <meta
-          property="twitter:title"
-          content={
-            make +
-            ' - ' +
-            model +
-            ' - ' +
-            year +
-            ' Car Auto Spare Parts in UAE Order Online from Dubai - Best Prices | Emirates-car.com'
-          }
-        />
-        <meta
-          property="twitter:description"
-          content={
-            'Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your ' +
-            make +
-            ' ' +
-            model +
-            ' ' +
-            year +
-            ' automobile spare parts needs - Car / Jeep / Van / Truck / Buses in Your city.'
-          }
-        />
-        <meta
-          property="twitter:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <link
-          rel="canonical"
-          href={
-            'https://www.emirates-car.com/search-by-make/' +
-            make +
-            '/' +
-            model +
-            '/' +
-            year
-          }
-        />
-      </Head>
       <h1 className="text-4xl font-extrabold mx-auto my-5 xs:text-lg 2xs:text-xs">
         {year} {make} {model} spare parts - Buy Premium High Quality Used,
         Genuine, OEM and Aftermarket from Dubai to all over UAE and World
@@ -573,8 +495,8 @@ export default async function Year({ params }) {
               className="text-3xl font-extrabold mx-auto my-5"
               id="oemvsaftermarket"
             >
-              Team Genuine {year} {make} {model}part VS Team Aftermarket {year} {make} {model}{' '}
-              part
+              Team Genuine {year} {make} {model}part VS Team Aftermarket {year}{' '}
+              {make} {model} part
             </h3>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
               {year} {make} {model} aftermarket parts are better to buy for many
@@ -593,7 +515,8 @@ export default async function Year({ params }) {
               </li>
             </ol>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              {year} {make} {model} Genuine parts are better to buy for many reasons:
+              {year} {make} {model} Genuine parts are better to buy for many
+              reasons:
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
@@ -811,11 +734,12 @@ export default async function Year({ params }) {
                   as={
                     'https://emirates-car.com/search-by-part-name/' + post.parts
                   }
-                  title={make + ' ' + model + ' ' + year + + post.parts}
+                  title={make + ' ' + model + ' ' + year + +post.parts}
                 >
                   <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                     <i className="far fa-compass"></i>
-                     {post.parts} for {year + ' '}{' ' + make} {' ' + model} prices
+                    {post.parts} for {year + ' '}
+                    {' ' + make} {' ' + model} prices
                   </p>
                 </Link>
               </div>
@@ -843,8 +767,8 @@ export default async function Year({ params }) {
           </Link>
         </div>
       ))}
-      
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }

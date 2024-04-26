@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import FormComponent from '../FormComponent';
 import { getMake, getFormModel, getParts, getCity } from '../page';
 import Image from 'next/image';
@@ -16,52 +15,6 @@ export default async function Make() {
   const cities = await getCity();
   return (
     <div>
-      <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-        <meta
-          property="og:title"
-          content="Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com"
-        />
-        <meta
-          name="keywords"
-          content="emirates car, emirates auto parts, emirates car parts, dubai, sharjah, ajman, ras al khaimah, abu dhabi"
-        />
-        <meta property="og:site_name" content="Emirates-car" />
-        <meta
-          property="og:url"
-          content="https://www.emirates-car.com/search-by-make"
-        />
-        <meta
-          property="og:description"
-          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <meta
-          property="twitter:url"
-          content="https://www.emirates-car.com/search-by-make"
-        />
-        <meta
-          property="twitter:title"
-          content="Quick Car Auto Spare Parts Order Online in UAE | Emirates-car.com"
-        />
-        <meta
-          property="twitter:description"
-          content="Explore from our immensively large-scale auto spare parts website, your New / Used / Genuine / Aftermarket auto spare parts for your Vehicle needs - Car / Jeep / Van / Truck / Buses in Your city."
-        />
-        <meta
-          property="twitter:image"
-          content="https://emirates-car.com/img/car-spare-parts.png"
-        />
-        <link
-          rel="canonical"
-          href="https://www.emirates-car.com/search-by-make"
-        />
-      </Head>
       <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
           <main className="mx-10 xs:mx-4 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
@@ -108,7 +61,7 @@ export default async function Make() {
             </article>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?{' '}
-              <Link href="https://emirates-car.com/get-in-touch">
+              <Link href="/get-in-touch">
                 <nobr className="text-blue-500 text-sm underline">
                   Get in touch with us {'>>'}**
                 </nobr>

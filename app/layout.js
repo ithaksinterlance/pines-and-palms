@@ -1,111 +1,83 @@
 import '../styles/globals.css';
 import Navbar from './nav';
-import Head from 'next/head';
 import Script from 'next/script';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#2563eb'
+};
+
 export const metadata = {
-         title:
-           'Auto Spare Parts Order Online in UAE from Dubai dealers |Emirates-car.com',
-         description:
-           'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE for German, American, Korean, Japanese models',
-         manifest: 'https://emirates-car.com/manifest.json',
-         icon: [
-           { url: '/favicon.ico' },
-           new URL('/favicon.ico', 'https://emirates-car.com')
-         ],
-         shortcut: ['/favicon.png'],
-         apple: [
-           {
-             url: '/icons/icon-192x192.png',
-             sizes: '192x192',
-             type: 'image/png'
-           },
-           { url: '/apple-icon-x3.png', sizes: '180x180', type: 'image/png' }
-         ],
-         twitter: {
-           card: 'app',
-           title: 'Car spare parts',
-           description:
-             'Car spare parts from Dubai dealer to all Middle east countries',
-           creator: '@emiratescarpart',
-           images: {
-             url: 'https://emirates-car.com/favicon.png',
-             alt: 'Emirates car part logo'
-           },
-         }
-       };
+  title:
+    'Auto Spare Parts Order Online in UAE from Dubai dealers | Emirates-car.com',
+  description:
+    'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE for German, American, Korean, Japanese models',
+  metadataBase: new URL('https://emirates-car.com'),
+  manifest: 'https://emirates-car.com/manifest.json',
+  verification: {
+    google: '2dbXrKrxCBjzz1bLwaw_6nd4YEhhviwPLiGq6fLXPoU',
+    yandex: '1a59e5a3d5ee0eeb',
+    naver: 'naver0db31bf474cde5117209785bc5c104ab.html',
+    yahoo: 'yahoo',
+    other: {
+      me: ['emiratesautomobileparts@gmail.com', 'https://emirates-car.com']
+    }
+  },
+  openGraph: {
+    images: '/favicon.png',
+    title:
+      'Auto Spare Parts Order Online in UAE from Dubai dealers | Emirates-car.com',
+    description:
+      'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE for German, American, Korean, Japanese models',
+    url: 'https://emirates-car.com',
+    siteName: 'Emirates Auto Parts',
+    images: [
+      {
+        url: 'https://emirates-car.com/icon-192x192.png',
+        width: 192,
+        height: 192
+      },
+      {
+        url: 'https://emirates-car.com/icons/icon-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'car parts'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+    alternates: {
+      canonical: 'https://emirates-car.com'
+    }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Car spare parts',
+    description:
+      'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE for German, American, Korean, Japanese models',
+    images: ['https://emirates-car.com/favicon.png']
+  },
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/icons/icon-96x96.png',
+    apple: '/icons/icon-192x192.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/icons/icon-152x152.png'
+    }
+  },
+  category: 'car parts',
+  keywords:
+    'spare parts dealers in dubai, spare parts online, auto spare parts online, best auto parts, auto spare parts in dubai, auto spare parts uae, honda accord parts, used engine parts, headlight parts, genuine parts, aftermarket spare parts, bumper parts, sensors, camera'
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-        />
-        <meta
-          name="google-site-verification"
-          content="2dbXrKrxCBjzz1bLwaw_6nd4YEhhviwPLiGq6fLXPoU"
-        />
-        <meta name="yandex-verification" content="1a59e5a3d5ee0eeb" />
-        <meta
-          name="naver-site-verification"
-          content="naver0db31bf474cde5117209785bc5c104ab.html"
-        />
-        <meta
-          name="application-name"
-          content="Car spare parts App | Emirates-car.com"
-        />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Car spare parts App" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-config" content="/icons/browserconfig.xml" />
-        <meta name="msapplication-TileColor" content="#2B5797" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="theme-color" content="#2563eb" />
-        <link rel="icon" href="/favicon.ico"/>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/icons/favicon-32x32.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          type="image/png"
-          size="192x192"
-          href="/icons/icon-192x192.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/icons/favicon-16x16.png"
-        />
-        <link
-          rel="stylesheet"
-          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-          crossOrigin="anonymous"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Car spare parts App" />
-        <meta
-          property="og:description"
-          content="Quick Auto spare parts hunt for any vehicle's need."
-        />
-        <meta property="og:site_name" content="Emirates auto parts" />
-        <meta property="og:url" content="https://emirates-car.com" />
-        <meta
-          property="og:image"
-          content="https://emirates-car.com/icon-192x192.png"
-        />
-      </Head>
       <Script
         id="myscript6"
         dangerouslySetInnerHTML={{
