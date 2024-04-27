@@ -322,7 +322,7 @@ export default async function Year({ params }) {
     }
   ];
   return (
-    <div>
+    <div className="d-flex justify-center pt-10 xs:pt-5 mx-8">
       <h1 className="text-4xl font-extrabold mx-auto my-5 xs:text-lg 2xs:text-xs">
         {year} {make} {model} spare parts - Buy Premium High Quality Used,
         Genuine, OEM and Aftermarket from Dubai to all over UAE and World

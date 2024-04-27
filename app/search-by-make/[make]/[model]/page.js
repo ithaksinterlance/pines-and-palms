@@ -137,7 +137,7 @@ async function getModel(make, model) {
   let uniqueMakeArray = [
     ...new Map(dat.map(item => [item['model'], item])).values()
   ];
-  return uniqueMakeArray;
+  return decodeURIComponent(uniqueMakeArray);
 }
 
 async function getMake() {
@@ -311,7 +311,7 @@ export default async function Model({ params }) {
     }
   ];
   return (
-    <div>
+    <div className="d-flex justify-center pt-10 xs:pt-5 mx-8">
       <Image
         src={'/img/car-logos/' + imageMake}
         alt={make + ' spare parts'}
@@ -320,7 +320,7 @@ export default async function Model({ params }) {
         width={100}
         height={100}
       />
-      <h1 className="text-4xl font-extrabold mx-auto my-5 xs:text-lg 2xs:text-xs">
+      <h1 className="text-4xl font-extrabold mx-auto my-5 xs:text-lg 2xs:text-xs ">
         {make} {model} spare parts - Buy Premium High Quality Used, Genuine, OEM
         and Aftermarket from Dubai to all over UAE and World
       </h1>

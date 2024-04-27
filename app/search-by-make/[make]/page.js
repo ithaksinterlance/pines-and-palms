@@ -268,7 +268,7 @@ export default async function MakePage({ params }) {
 
   return (
     <div>
-      <main className="d-flex justify-center  pt-10 xs:pt-5 mx-8">
+      <main className="d-flex justify-center pt-10 xs:pt-5 mx-8">
         <div>
           <h1 className="text-blue-600 text-4xl md:text-md lg:text-md font-extrabold  xs:text-base 2xs:text-xs text-center">
             Buy {make} Car Parts - Used, Genuine, OEM (Original parts) and
