@@ -1,3 +1,4 @@
+/* eslint-disable-next-line padded-blocks */
 import React from 'react';
 
 export default function ReturnRefundPolicy() {
