@@ -116,7 +116,7 @@ export default function PrivacyP() {
               rel="nofollow noopener noreferrer"
               target="_blank"
             >
-              <a>https://emirates-car.com</a>
+              https://emirates-car.com
             </Link>
           </p>
         </li>
@@ -552,7 +552,7 @@ export default function PrivacyP() {
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
-              <a>https://emirates-car.com/contact</a>
+              https://emirates-car.com/contact
             </Link>
           </p>
         </li>
