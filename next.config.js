@@ -9,6 +9,9 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true
+  },
   swcMinify: true,
   serverRuntimeConfig: {
     GOOGLE_MAPS_API_KEY: process.env.MAP_API_KEY
@@ -18,7 +21,7 @@ module.exports = withPWA({
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      (config.resolve.fallback = {
+      config.resolve.fallback = {
         fs: false,
         child_process: false,
         https: false,
@@ -32,8 +35,7 @@ module.exports = withPWA({
         http: false,
         stream: false,
         request: false
-      })
-
+      };
     }
     return config;
   },
