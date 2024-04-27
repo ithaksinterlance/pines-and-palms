@@ -40,14 +40,6 @@ export async function generateStaticParams({ make, model, year }) {
     year: post.year
   }));
 }
-export async function generateMetadata({ params }) {
-  const { make, model, year } = params;
-  return {
-    title: `${year} - ${make} - ${model}  Auto Spare Parts Order Online in UAE from Dubai -
-    Best Prices`,
-    description: `Buy ${year} - ${make} - ${model} and Get delivered Used, New, Genuine / OEM, Aftermarket Body parts, Interior and exterior parts, suspension parts, headlight, fog lights and other lighting parts, performance parts and more`
-  };
-}
 
 export async function generateMetadata({ params }) {
   const { make, model, year } = params;
