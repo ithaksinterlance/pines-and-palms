@@ -1,13 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 
 export default function PrivacyP() {
   return (
     <div className="mx-10 xs:mx-2 s:mx-2 md:mx-5 sm:mx-5">
-      <Head>
-        <title>Privacy Policy</title>
-      </Head>
       <h1>
         <strong>Privacy Policy</strong>
       </h1>
