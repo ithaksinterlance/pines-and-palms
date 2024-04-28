@@ -137,7 +137,7 @@ async function getModel(make, model) {
   let uniqueMakeArray = [
     ...new Map(dat.map(item => [item['model'], item])).values()
   ];
-  return decodeURIComponent(uniqueMakeArray);
+  return uniqueMakeArray;
 }
 
 async function getMake() {

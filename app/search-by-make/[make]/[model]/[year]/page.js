@@ -324,13 +324,14 @@ export default async function Year({ params }) {
   return (
     <div className="d-flex justify-center pt-10 xs:pt-5 mx-8">
       <h1 className="text-4xl font-extrabold mx-auto my-5 xs:text-lg 2xs:text-xs">
-        {year} {make} {model} spare parts - Buy Premium High Quality Used,
-        Genuine, OEM and Aftermarket from Dubai to all over UAE and World
+        {year} {decodeURIComponent(make)} {decodeURIComponent(model)} spare
+        parts - Buy Premium High Quality Used, Genuine, OEM and Aftermarket from
+        Dubai to all over UAE and World
       </h1>
       <Link
         href="#myForm"
         className="w-1/4 xs:w-4/5 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-base xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
-        title={'spare parts for ' + make + ' ' + model}
+        title={'spare parts for ' + make + ' ' + decodeURIComponent(model)}
       >
         Inquire Now
       </Link>
@@ -373,7 +374,7 @@ export default async function Year({ params }) {
             <div className="container place-content-center py-6">
               <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10 ">
                 <h3 className="text-center font-bold text-4xl">
-                  Spare parts for All {make} Models:
+                  Spare parts for All {decodeURIComponent(make)} Models:
                 </h3>
                 <div className="grid grid-cols-4 xs:grid xs:grid-cols-1  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 ">
                   {uniqueMakeArray.map((post, i) => (
@@ -388,7 +389,8 @@ export default async function Year({ params }) {
                         }
                       >
                         <main className=" xs:text-center font-mono text-blue-800 underline hover:text-blue-700 focus:text-blue-700">
-                          {post.make}&nbsp;{post.model.replace('%2F', '/')}
+                          {post.make}&nbsp;
+                          {post.model.replace('%2F', '/')}
                           &nbsp;Parts
                         </main>
                       </Link>
@@ -398,7 +400,8 @@ export default async function Year({ params }) {
               </div>
               <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10 ">
                 <h3 className="text-center font-bold text-4xl">
-                  Search your {make} {model} parts by Years
+                  Search your {decodeURIComponent(make)}{' '}
+                  {decodeURIComponent(model)} parts by Years
                 </h3>
                 <div className="grid grid-cols-4 xs:grid xs:grid-cols-1  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 ">
                   {yearData.map((post, i) => (
@@ -487,12 +490,13 @@ export default async function Year({ params }) {
               className="text-3xl font-extrabold mx-auto my-5"
               id="oemvsaftermarket"
             >
-              Team Genuine {year} {make} {model}part VS Team Aftermarket {year}{' '}
-              {make} {model} part
+              Team Genuine {year} {decodeURIComponent(make)}{' '}
+              {decodeURIComponent(model)}part VS Team Aftermarket {year}{' '}
+              {decodeURIComponent(make)} {decodeURIComponent(model)} part
             </h3>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              {year} {make} {model} aftermarket parts are better to buy for many
-              reasons:
+              {year} {decodeURIComponent(make)} {decodeURIComponent(model)}{' '}
+              aftermarket parts are better to buy for many reasons:
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>It is more affordable than genuine parts</li>
@@ -507,8 +511,8 @@ export default async function Year({ params }) {
               </li>
             </ol>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              {year} {make} {model} Genuine parts are better to buy for many
-              reasons:
+              {year} {decodeURIComponent(make)} {decodeURIComponent(model)}{' '}
+              Genuine parts are better to buy for many reasons:
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
@@ -534,7 +538,7 @@ export default async function Year({ params }) {
         <div className="d-flex justify-center text-center py-10 xs:pt-5 mx-8 xs:mx-5">
           <div>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
-              Availability of {make} parts in UAE:
+              Availability of {decodeURIComponent(make)} parts in UAE:
             </p>
             <div className="grid grid-cols-5 xs:grid-cols-1 gap-3 mx-auto p-5 border-2 border-gray-500">
               <div>
@@ -549,7 +553,7 @@ export default async function Year({ params }) {
               <div>
                 {' '}
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae/Sharjah"
+                  href="/search-by-cities-in-uae/Sharjah"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 >
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
@@ -569,7 +573,7 @@ export default async function Year({ params }) {
               <div>
                 {' '}
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
+                  href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 >
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
@@ -578,7 +582,7 @@ export default async function Year({ params }) {
               </div>
               <div>
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
+                  href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 >
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
@@ -587,7 +591,7 @@ export default async function Year({ params }) {
               </div>
               <div>
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae/Abu%20Dhabi"
+                  href="/search-by-cities-in-uae/Abu%20Dhabi"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 >
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
@@ -596,7 +600,7 @@ export default async function Year({ params }) {
               </div>
               <div>
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
+                  href="/search-by-cities-in-uae/Deira%20(Dubai)"
                   className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                 >
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
@@ -676,7 +680,8 @@ export default async function Year({ params }) {
         </div>
         <div>
           <div className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
-            Special Deals on the following parts for {year} {make} {model}
+            Special Deals on the following parts for {year}{' '}
+            {decodeURIComponent(make)} {decodeURIComponent(model)}
           </div>
           <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
             {images.map((i, k) => (
@@ -731,7 +736,8 @@ export default async function Year({ params }) {
                   <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                     <i className="far fa-compass"></i>
                     {post.parts} for {year + ' '}
-                    {' ' + make} {' ' + model} prices
+                    {' ' + decodeURIComponent(make)}{' '}
+                    {' ' + decodeURIComponent(model)} prices
                   </p>
                 </Link>
               </div>
@@ -742,9 +748,9 @@ export default async function Year({ params }) {
       {yearData.map((post, i) => (
         <div key={i}>
           <Link
-            href="https://emirates-car.com/search-by-make/[make]/[model]"
+            href="/search-by-make/[make]/[model]"
             as={
-              'https://emirates-car.com/search-by-make/' +
+              '/search-by-make/' +
               post.make +
               '/' +
               post.model +
