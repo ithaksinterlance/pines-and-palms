@@ -35,8 +35,8 @@ async function getPartsData(parts) {
   const data = await res.json();
   return data;
 }
-async function getGrooves() {
-  const res = await fetch(`https://rozy.vercel.app/api/grooves`);
+async function getGrooves(make, model, year) {
+  const res = await fetch(`https://rozy.vercel.app/api/grooves/${make}/${model}/${year}`);
   const data = await res.json();
   return data;
 }
@@ -100,6 +100,7 @@ export default async function Parts({ params }) {
   const modelsform = await getFormModel();
   const yearData = await getYear(make, model);
   const partspost = await getPartsData(parts);
+  const getGroovesData = await getGrooves(make, model, year);
 
   const imgpartspost = await partspost.img;
 
@@ -676,7 +677,7 @@ export default async function Parts({ params }) {
               <div className="xs:grid xs:grid-cols-1 text-gray-900 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
                 SEARCH BY PART NAME
               </div>
-              {partsposts.map((post, i) => (
+              {getGroovesData.map((post, i) => (
                 <div key={i}>
                   <Link
                     href="/search-by-make/[make]/[model/[year]/[parts]"
