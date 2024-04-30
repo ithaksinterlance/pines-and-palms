@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
     )} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`,
     openGraph: {
       images: '/favicon.png',
-      title: `${decodeURIComponent(parts)} for ${make} - ${decodeURIComponent(
+      title: `${decodeURIComponent(parts)} for ${year} ${make} - ${decodeURIComponent(
         model
       )} Car Auto Spare Parts Order Online in UAE from Dubai -
     Best Prices`,
