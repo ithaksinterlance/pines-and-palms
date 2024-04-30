@@ -68,8 +68,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function RootLayout({ children, params }) {
-  const { slug } = params;
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>

@@ -64,7 +64,6 @@ export async function generateMetadata({ params }) {
 async function getPartsData(parts) {
   const res = await fetch(`https://rozy.vercel.app/api/parts/${parts}`);
   const data = await res.json();
-  console.log(data.parts);
   return data;
 }
 
