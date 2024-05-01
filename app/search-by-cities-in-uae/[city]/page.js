@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 export async function generateStaticParams({ city }) {
   const posts = await fetch(
-    `https://rozy.vercel.app/api/palms/${city}`
+    `https://rozy.vercel.app/api/cities/${city}`
   ).then(res => res.json());
   return posts.map(post => ({
     city: post.city
