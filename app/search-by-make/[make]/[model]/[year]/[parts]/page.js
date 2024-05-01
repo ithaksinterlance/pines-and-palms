@@ -262,10 +262,7 @@ export default async function Parts({ params }) {
     <div>
       <div className="d-flex justify-center pt-10 xs:pt-5 mx-8">
         <Image
-          src={
-            '/img/parts/' +
-            (imgpartspost ? imgpartspost : '/img/car-logos/' + imageMake)
-          }
+          src={'/img/car-logos/' + imageMake}
           alt={make + ' spare parts'}
           className="mx-auto"
           priority
@@ -274,8 +271,7 @@ export default async function Parts({ params }) {
         />
         <h1 className="text-4xl font-extrabold mx-auto my-5 xs:text-lg 2xs:text-xs ">
           {decodeURIComponent(parts)} for {year} {make}{' '}
-          {decodeURIComponent(model)} - Buy Premium High Quality Used, Genuine,
-          OEM and Aftermarket from Dubai dealers to Dubai, Sharjah, Abu dhabi,
+          {decodeURIComponent(model)} - Buy Premium High Quality Used, Genuine/OEM and Aftermarket from Dubai dealers to Dubai, Sharjah, Abu dhabi,
           Ras al Khaimah and Ajman and World
         </h1>
         <Link
@@ -352,7 +348,7 @@ export default async function Parts({ params }) {
                 </div>
                 <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10 ">
                   <h3 className="text-center font-bold text-4xl">
-                    Search your {parts} for {make} {decodeURIComponent(model)}{' '}
+                    Search your {decodeURIComponent(parts)} for {make} {decodeURIComponent(model)}{' '}
                     parts by Years
                   </h3>
                   <div className="grid grid-cols-4 xs:grid xs:grid-cols-1  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 ">
@@ -402,9 +398,9 @@ export default async function Parts({ params }) {
                     </ul>
                   </h3>
                 </div>
-                <p className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 xs:hidden sm:hidden s:hidden 2xs:hidden">
+                <h3 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs text-center py-5 xs:hidden sm:hidden s:hidden 2xs:hidden">
                   WE ALSO DEAL IN OTHER BRANDS
-                </p>
+                </h3>
                 <div className="grid grid-cols-12 md:grid md:grid-cols-7 sm:ml-0 xs:hidden sm:hidden s:hidden 2xs:hidden gap-1 mx-5 2xs:mx-4 md:mx-5 my-10">
                   {makeArray.map((p, i) => (
                     <div key={i}>
@@ -445,10 +441,10 @@ export default async function Parts({ params }) {
                 Team Genuine {make} {decodeURIComponent(model)}part VS Team
                 Aftermarket {make} {decodeURIComponent(model)} part
               </h3>
-              <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              <h3 className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
                 {make} {decodeURIComponent(model)} aftermarket parts are better
                 to buy for many reasons:
-              </p>
+              </h3>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>It is more affordable than genuine parts</li>
                 <li>Some genuine parts are similar to genuine parts itself.</li>
@@ -461,10 +457,10 @@ export default async function Parts({ params }) {
                   parts which can be only from one main manufacturer
                 </li>
               </ol>
-              <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+              <h6 className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
                 {make} {decodeURIComponent(model)} Genuine parts are better to
                 buy for many reasons:
-              </p>
+              </h6>
               <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
                 <li>
                   Aftermarket parts are not regularized or standardized because
@@ -488,17 +484,16 @@ export default async function Parts({ params }) {
 
           <div className="d-flex justify-center text-center py-10 xs:pt-5 mx-8 xs:mx-5">
             <div>
-              <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
+              <h6 className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
                 Availability of {make} parts in UAE:
-              </p>
+              </h6>
               <div className="grid grid-cols-5 xs:grid-cols-1 gap-3 mx-auto p-5 border-2 border-gray-500">
                 <div>
                   <Link
                     href="https://emirates-car.com/search-by-cities-in-uae/Dubai"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp; DUBAI
+                     DUBAI
                   </Link>
                 </div>
                 <div>
@@ -507,8 +502,7 @@ export default async function Parts({ params }) {
                     href="https://emirates-car.com/search-by-cities-in-uae/Sharjah"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp; SHARJAH
+                     SHARJAH
                   </Link>
                 </div>
                 <div>
@@ -517,8 +511,7 @@ export default async function Parts({ params }) {
                     href="search-by-cities-in-uae/Ajman"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp;AJMAN
+                    AJMAN
                   </Link>
                 </div>
                 <div>
@@ -527,8 +520,7 @@ export default async function Parts({ params }) {
                     href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp;RAS AL KHAIMAH
+                    RAS AL KHAIMAH
                   </Link>
                 </div>
                 <div>
@@ -536,8 +528,7 @@ export default async function Parts({ params }) {
                     href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp;Al QUOZ
+                    Al QUOZ
                   </Link>
                 </div>
                 <div>
@@ -545,8 +536,7 @@ export default async function Parts({ params }) {
                     href="https://emirates-car.com/search-by-cities-in-uae/Abu%20Dhabi"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp;ABU DHABI
+                    ABU DHABI
                   </Link>
                 </div>
                 <div>
@@ -554,21 +544,20 @@ export default async function Parts({ params }) {
                     href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    &nbsp;DEIRA
+                    DEIRA
                   </Link>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <p className="text-3xl font-extrabold mx-auto my-5">
+            <h3 className="text-3xl font-extrabold mx-auto my-5">
               5 ways you can find parts for your car.
-            </p>
+            </h3>
             There are 5 ways you can try finding spare parts for your car.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+            <h6 className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
               Traditional way its pros and cons
-            </p>
+            </h6>
             You find a spare parts shop nearby and go and purchase and the work
             is done. In this case, the pros is that you find nearby shop to have
             similar brands you have and thats it you purchase it with ease. But
@@ -578,9 +567,9 @@ export default async function Parts({ params }) {
             sells only Audi, Lincoln and Ferrari. So to see for next option, you
             can opt for shopping from Giant E-commerce company like Amazon,
             EBay, Flipkart etc.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+            <h6 className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
               Giant E-commerce Company its pros and cons:
-            </p>
+            </h6>
             If you don't find spare parts nearby your house location, generally
             we move on to search on internet. You search for top companies
             selling spare parts online and you end up in giant e-commerce
@@ -591,17 +580,17 @@ export default async function Parts({ params }) {
             the check-in process. So it is not always safe to buy spare parts
             from giant e-commerce company. Hence we see for other option which
             is the Local dealers.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+            <h6 className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
               Local Dealers
-            </p>
+            </h6>
             Local dealers are known through other person like through friends
             and family. Or he gives you his business card and he explains you
             directly the car brands he deals with. However with the current
             digital advancement, the local dealers are decreasing gradually. So
             we move to the next option to search on online marketplace.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+            <h6 className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
               Online Marketplace (Only CONS!)
-            </p>
+            </h6>
             Through Online marketplace we find spare parts for our car easily.
             But it also has lots of cons. If you search for very latest model
             used spare parts, it will not be available on marketplace. In this
@@ -611,9 +600,9 @@ export default async function Parts({ params }) {
             reported from those who purchase from small vendor marketplace and
             also the larger companies. In this case you should go for Online
             dealer website.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
+            <h6 className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
               Online Dealer Website ONLY PROS!
-            </p>
+            </h6>
             Online dealers website is the easiest way to order spare parts. You
             visit a bunch of site online and submit your inquiries therein and
             dealers will contact you back through the contact information you
@@ -631,11 +620,11 @@ export default async function Parts({ params }) {
             Visit to search parts you need.
           </div>
           <div>
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
+            <h3 className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
               Special Deals on the following parts for{' '}
               {decodeURIComponent(parts)} for {year}
               {make} {decodeURIComponent(model)}
-            </p>
+            </h3>
             <div className="grid grid-cols-5 gap-2 s:grid-cols-2 xs:grid-cols-2 md:grid-cols-3">
               {images.map((i, k) => (
                 <div key={k} className="border-2 p-5 relative">
@@ -677,29 +666,29 @@ export default async function Parts({ params }) {
               <div className="xs:grid xs:grid-cols-1 text-gray-900 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
                 SEARCH BY PART NAME
               </div>
-              {getGroovesData.map((post, i) => (
-                <div key={i}>
+
+              {partsposts.map((post, i) => (
+                <ul key={i}>
                   <Link
                     href="/search-by-make/[make]/[model/[year]/[parts]"
                     as={
                       '/search-by-make/' +
-                      post.make +
+                      make +
                       '/' +
-                      post.model +
+                      model +
                       '/' +
-                      post.year +
+                      year +
                       '/' +
-                      parts
+                      post.parts
                     }
                     title={year + ' ' + make + ' ' + model + ' ' + parts}
                   >
-                    <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
-                      <i className="far fa-compass"></i>
+                    <li className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                       {post.parts} for {' ' + year}
                       {' ' + make} {' ' + decodeURIComponent(model)} price list
-                    </p>
+                    </li>
                   </Link>
-                </div>
+                </ul>
               ))}
             </div>
           </div>

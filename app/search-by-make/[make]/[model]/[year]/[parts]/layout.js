@@ -14,8 +14,7 @@ export async function generateMetadata({ params }) {
       parts
     )} for ${year} ${make} - ${decodeURIComponent(
       model
-    )} Car Auto Spare Parts Order Online in UAE from Dubai -
-    Best Prices`,
+    )} Car Auto Spare Parts Order Online in UAE from Dubai - Best Prices`,
     description: `Buy ${decodeURIComponent(
       parts
     )} for ${year} ${make} - ${decodeURIComponent(
@@ -23,7 +22,9 @@ export async function generateMetadata({ params }) {
     )} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`,
     openGraph: {
       images: '/favicon.png',
-      title: `${decodeURIComponent(parts)} for ${year} ${make} - ${decodeURIComponent(
+      title: `${decodeURIComponent(
+        parts
+      )} for ${year} ${make} - ${decodeURIComponent(
         model
       )} Car Auto Spare Parts Order Online in UAE from Dubai -
     Best Prices`,

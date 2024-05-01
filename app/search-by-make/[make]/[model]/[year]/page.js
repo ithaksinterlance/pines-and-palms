@@ -727,9 +727,16 @@ export default async function Year({ params }) {
             {partspost.map((post, i) => (
               <div key={i}>
                 <Link
-                  href="https://emirates-car.com/search-by-part-name/[parts]"
+                  href="/search-by-make/[make]/[model]/[year]/[parts]"
                   as={
-                    'https://emirates-car.com/search-by-part-name/' + post.parts
+                    '/search-by-make/' +
+                    make +
+                    '/' +
+                    model +
+                    '/' +
+                    year +
+                    '/' +
+                    post.parts
                   }
                   title={make + ' ' + model + ' ' + year + +post.parts}
                 >

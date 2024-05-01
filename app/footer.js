@@ -1,5 +1,17 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  fab,
+  faFacebook,
+  faInstagram,
+  faTumblr,
+  faTwitter, faPinterest,
+  faLinkedin
+} from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 
 export default function footer() {
   return (
@@ -18,7 +30,7 @@ export default function footer() {
       <div className=" bg-purple-700 py-10 xs:py-5 2xs:py-5 sm:py-5">
         <div className="grid grid-cols-3 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 sm:grid sm:grid-cols-1 ">
           <div className="text-center">
-            <p className="pt-5 text-white font-extrabold">ABOUT Emirates-car</p>
+            <h3 className="pt-5 text-white font-extrabold">ABOUT Emirates-car</h3>
             <p className="text-sm xs:text-xs pt-5 m-1 text-center font-medium text-yellow-400">
               We are dealing with auto spare parts for car, heavy truck, van,
               buses, coupe, SUV, prime, Petrol based vehicles, Diesel based
@@ -27,49 +39,61 @@ export default function footer() {
             </p>
           </div>
           <div className="pt-10 xs:pt-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
-            <p className="pt-5 text-white font-extrabold">SOCIAL LINKS</p>
+            <h3 className="pt-5 text-white font-extrabold">SOCIAL LINKS</h3>
             <p>
               <Link
                 className="text-xl leading-xl text-blue-900"
                 href="https://www.facebook.com/emirates.auto.parts"
                 passHref
               >
-                <i className="fab fa-2x fa-facebook"></i>
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="text-xl leading-xl"
+                />
               </Link>
               &nbsp;
               <Link
                 className="text-xl leading-xl text-purple-900"
                 href="https://www.instagram.com/emiratescar_parts/"
               >
-                <i className="fab fa-2x fa-instagram"></i>
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="text-xl leading-xl"
+                />
               </Link>
               &nbsp;
               <Link
                 className="text-xl leading-xl text-black"
                 href="https://emirates-car.tumblr.com/"
               >
-                <i className="fab fa-2x fa-tumblr"></i>
+                <FontAwesomeIcon
+                  icon={faTumblr}
+                  className="text-xl leading-xl"
+                />
               </Link>
               &nbsp;
               <Link
                 className="text-xl leading-xl text-blue-300"
                 href="https://twitter.com/emiratescarpart"
               >
-                <i className="fab fa-2x fa-twitter"></i>
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  className="text-xl leading-xl"
+                />
               </Link>
               &nbsp;
               <Link
                 className="text-xl leading-xl text-red-700"
                 href="https://in.pinterest.com/emiratesautomobileparts/"
               >
-                <i className="fab fa-2x fa-pinterest"></i>
+                <FontAwesomeIcon icon={faPinterest} className="text-xl leading-xl" />
               </Link>
               &nbsp;
               <Link
                 className="text-xl leading-xl text-blue-500"
                 href="https://in.pinterest.com/emiratesautomobileparts/"
               >
-                <i className="fab fa-2x fa-linkedin"></i>
+                <FontAwesomeIcon icon={faLinkedin} className="text-xl leading-xl" />
               </Link>
             </p>
             <div className="p-5 pt-10">
@@ -85,7 +109,7 @@ export default function footer() {
             </div>
           </div>
           <div className="pt-10 xs:py-5 2xs:pt-5 sm:pt-5 mx-auto text-center">
-            <p className="pt-5 text-white font-extrabold">SHORTCUT LINKS</p>
+            <h6 className="pt-5 text-white font-extrabold">SHORTCUT LINKS</h6>
             <Link
               href="https://emirates-car.com/search-by-part-name"
               className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
@@ -122,7 +146,7 @@ export default function footer() {
             href="https://emirates-car.com"
             className="text-base xs:text-sm 2xs:text-sm sm:text-base text-white underline"
           >
-            <i className="fa fa-copyright" aria-hidden="true"></i>
+            <FontAwesomeIcon icon={faCopyright} className="text-xl leading-xl" />
           </Link>
         </div>
       </div>
