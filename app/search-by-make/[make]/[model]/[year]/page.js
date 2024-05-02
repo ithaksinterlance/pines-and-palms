@@ -738,7 +738,7 @@ export default async function Year({ params }) {
                     '/' +
                     post.parts
                   }
-                  title={make + ' ' + model + ' ' + year + +post.parts}
+                  title={make + ' ' + model + ' ' + year + ' ' + post.parts}
                 >
                   <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                     <i className="far fa-compass"></i>
@@ -747,6 +747,25 @@ export default async function Year({ params }) {
                     {' ' + decodeURIComponent(model)} prices
                   </p>
                 </Link>
+              </div>
+            ))}
+            {partspost.map((post, i) => (
+              <div key={i}>
+                {'<url>'}
+                <br />
+                {`<loc>https://emirates-car.com/${encodeURIComponent(
+                  make
+                )}/${encodeURIComponent(model)}/${encodeURIComponent(
+                  year
+                )}/${encodeURIComponent(post.parts)}</loc>`}
+                <br />
+                {`<lastmod>${new Date().toISOString()}</lastmod>`}
+                <br />
+                {`<changefreq>monthly</changefreq>`}
+                <br />
+                {`<priority>1.0</priority>`}
+                <br />
+                {`</url>`}
               </div>
             ))}
           </div>
