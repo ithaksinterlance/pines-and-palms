@@ -2,11 +2,11 @@ import React from 'react';
 import SearchModel from '../../SearchModel';
 import FormComponent from '../../FormComponent';
 import Social from '../../Social';
-import Link from "next/link";
+import Link from 'next/link';
 import HondaOfferButton from '../../HondaOfferButton';
-import Image from "next/image";
+import Image from 'next/image';
 import { getParts, getCity, getFormModel } from '../../page';
-import Footer from "../../footer"
+import Footer from '../../footer';
 import ABS from '../../../public/img/honda-eighth-gen/Anti_Lock_Braking_System.webp';
 import AirFilter from '../../../public/img/honda-eighth-gen/Air_Filter.webp';
 import AirSuspension from '../../../public/img/honda-eighth-gen/Air_Suspension_Module.webp';
@@ -104,15 +104,48 @@ async function getModel(make) {
     ...new Map(data.map(item => [item['model'], item])).values()
   ];
   return uniqueObjectArray;
+}
 
+async function getModelwithYear(make) {
+  try {
+    const res = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
+    const data = await res.json();
+
+    // Extract unique models along with their respective years
+    const uniqueModels = [...new Set(data.map(item => item.model))];
+    const uniqueObjectArray = [];
+
+    // For each unique model, fetch its associated years
+    for (const model of uniqueModels) {
+      const modelYears = data
+        .filter(item => item.model === model)
+        .map(item => item.year);
+      const uniqueYears = [...new Set(modelYears)];
+
+      // Create an object containing unique model and its associated unique years
+      uniqueObjectArray.push({
+        model: model,
+        years: uniqueYears
+      });
+    }
+
+    return uniqueObjectArray;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return [];
+  }
 }
 
 export default async function MakePage({ params }) {
   const { make } = params;
   const carmodel = await getModel(make);
+
   const partspost = await getParts();
   const cities = await getCity();
-  const modelsform = await getFormModel()
+  const modelsform = await getFormModel();
+  const resultList = [];
+  const caryearmodel = await getModelwithYear(make);
+
   const images = [
     {
       images: ABS,
@@ -308,7 +341,7 @@ export default async function MakePage({ params }) {
               Want to Get Prices for {make} spare parts uae online? Submit your
               inquiry here
             </p>
-            <FormComponent formsData={modelsform} postFilter={partspost}/>
+            <FormComponent formsData={modelsform} postFilter={partspost} />
             <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
               <Social />
               <div>
@@ -1039,7 +1072,7 @@ export default async function MakePage({ params }) {
           ))}{' '}
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

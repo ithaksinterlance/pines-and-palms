@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
 import HondaOfferButton from '../../HondaOfferButton';
@@ -82,6 +81,7 @@ export async function generateMetadata({ params }) {
 async function getCityData(city) {
   const res = await fetch(`https://rozy.vercel.app/api/cities/${city}`);
   const data = await res.json();
+  console.log(data);
   return data;
 }
 
@@ -109,12 +109,7 @@ export default async function City({ params }) {
                 <i className="fal fa-car-garage"></i> Current path:&nbsp;&nbsp;
               </nobr>
               index{'>>>'}
-              <Link
-                href={
-                  '/search-by-cities-in-uae/' +
-                  cityData.city
-                }
-              >
+              <Link href={'/search-by-cities-in-uae/' + cityData.city}>
                 search-by-cities-in-uae{'/'}
                 {cityData.city}
               </Link>
@@ -202,13 +197,7 @@ export default async function City({ params }) {
                 </Link>
                 . Contact us for any inquiry. We also deal in brands such as{' '}
                 {makedatas.map((p, i) => (
-                  <Link
-                    key={i}
-                    href={
-                      '/search-by-cities-in-uae/' +
-                      p.make
-                    }
-                  >
+                  <Link key={i} href={'/search-by-cities-in-uae/' + p.make}>
                     {p.make}
                     {' spare parts in ' + city + ', '}
                   </Link>
@@ -249,9 +238,7 @@ export default async function City({ params }) {
                 <div key={i}>
                   <Link
                     href="/search-by-make/[make]"
-                    as={
-                      '/search-by-make/' + makedata.make
-                    }
+                    as={'/search-by-make/' + makedata.make}
                     title={makedata.make + ' spare parts ' + city}
                   >
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
@@ -287,9 +274,7 @@ export default async function City({ params }) {
               <div key={i}>
                 <Link
                   href="/search-by-part-name/[parts]"
-                  as={
-                    '/search-by-part-name/' + post.parts
-                  }
+                  as={'/search-by-part-name/' + post.parts}
                   title={post.parts + ' in ' + city}
                 >
                   <p className="text-sm hover:text-blue-700 focus:text-blue-700 text-gray-700 xs:text-sm xl:text-base 2xs:text-base s:text-xx px-5 font-sans underline">

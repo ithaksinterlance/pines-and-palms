@@ -166,6 +166,7 @@ export default async function Year({ params }) {
   const makeArray = await getMake();
   const partspost = await getParts();
   const modelsform = await getFormModel();
+  
 
   const images = [
     {
@@ -784,7 +785,7 @@ export default async function Year({ params }) {
               post.year
             }
           >
-            <main className=" xs:text-center font-mono text-blue-800 underline hover:text-blue-700 focus:text-blue-700">
+            <main className="xs:text-center font-mono text-blue-800 underline hover:text-blue-700 focus:text-blue-700">
               {post.make}&nbsp;{post.model.replace('%2F', '/')}&nbsp;{post.year}
               &nbsp;Parts
             </main>
