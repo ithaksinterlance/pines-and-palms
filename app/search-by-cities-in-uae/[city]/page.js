@@ -81,7 +81,6 @@ export async function generateMetadata({ params }) {
 async function getCityData(city) {
   const res = await fetch(`https://rozy.vercel.app/api/cities/${city}`);
   const data = await res.json();
-  console.log(data);
   return data;
 }
 
@@ -100,7 +99,7 @@ export default async function City({ params }) {
             <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg 2xs:text-xs px-5">
               FILL OUT THE INQUIRY FOR PARTS IN
               <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                &nbsp;{cityData.city}{' '}
+                &nbsp;{cityData?.city}{' '}
               </nobr>
               BELOW
             </div>
@@ -111,16 +110,16 @@ export default async function City({ params }) {
               index{'>>>'}
               <Link href={'/search-by-cities-in-uae/' + cityData.city}>
                 search-by-cities-in-uae{'/'}
-                {cityData.city}
+                {cityData?.city}
               </Link>
               {'>>>'}
             </div>
             <div className="text-gray-700 font-semibold text-xl md:text-lg lg:text-2xl font-sans xs:text-xs 2xs:text-xs mx-10 xs:ml-3 pb-3">
-              {cityData.description}
+              {cityData?.description}
               {'>>>'}
             </div>
             <iframe
-              src={cityData.link}
+              src={cityData?.link}
               height={300}
               width="100%"
               allowFullScreen="null"
@@ -131,12 +130,12 @@ export default async function City({ params }) {
                 <h1 className="text-md font-bold text-blue-500">
                   SEARCH YOUR PARTS IN
                   <nobr className="text-gray-700  text-2xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-                    &nbsp;{cityData.city}.
+                    &nbsp;{cityData?.city}.
                   </nobr>{' '}
                 </h1>
               </p>
               <p className="text-base font-medium text-gray-700 xs:text-sm md:text-base p-5">
-                To buy Auto spare parts online near {cityData.city}. , fill in
+                To buy Auto spare parts online near {cityData?.city}. , fill in
                 the spare part forms below, get inquired through whatsapp and
                 get quote for your spare parts and we also offer delivery to
                 your convinient area.
@@ -184,7 +183,7 @@ export default async function City({ params }) {
               <h1 className="text-base font-medium text-gray-700 p-5">
                 We deal with any country auto spare parts including japanese,
                 american, german, chinese, indian, Korean, french, british in
-                UAE. Looking for Auto spare parts in {cityData.city}?. We are
+                UAE. Looking for Auto spare parts in {cityData?.city}?. We are
                 dealing with auto spare parts for car, heavy truck, van, buses,
                 coupe, SUV, prime, Petrol based vehicles, Diesel based vehicles,
                 Used spare parts, After market parts, Genuine spare parts and
@@ -206,10 +205,10 @@ export default async function City({ params }) {
                 <br />
                 We provide auto spare parts for any vehicles including :
                 <ul className="list-disc">
-                  <li>New auto spare parts in {cityData.city}</li>
-                  <li>Used auto spare parts in {cityData.city}</li>
-                  <li>Genuine auto spare parts in {cityData.city}</li>
-                  <li>Aftermarket auto spare parts in {cityData.city}</li>
+                  <li>New auto spare parts in {cityData?.city}</li>
+                  <li>Used auto spare parts in {cityData?.city}</li>
+                  <li>Genuine auto spare parts in {cityData?.city}</li>
+                  <li>Aftermarket auto spare parts in {cityData?.city}</li>
                 </ul>
               </h1>
               <p className="text-base font-medium text-gray-700 p-5">
@@ -264,7 +263,7 @@ export default async function City({ params }) {
         </div>
         <div className="w-1/4 text-sm font-sans xs:w-full 2xs:w-full sm:w-full my-10">
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5  font-sans">
-            PARTS IN {cityData.city}
+            PARTS IN {cityData?.city}
           </div>
           <div className="xs:grid xs:grid-cols-1 text-gray-600 font-bold 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
             SEARCH BY PART NAME
