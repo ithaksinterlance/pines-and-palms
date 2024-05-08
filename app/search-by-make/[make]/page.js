@@ -106,45 +106,13 @@ async function getModel(make) {
   return uniqueObjectArray;
 }
 
-async function getModelwithYear(make) {
-  try {
-    const res = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
-    const data = await res.json();
-
-    // Extract unique models along with their respective years
-    const uniqueModels = [...new Set(data.map(item => item.model))];
-    const uniqueObjectArray = [];
-
-    // For each unique model, fetch its associated years
-    for (const model of uniqueModels) {
-      const modelYears = data
-        .filter(item => item.model === model)
-        .map(item => item.year);
-      const uniqueYears = [...new Set(modelYears)];
-
-      // Create an object containing unique model and its associated unique years
-      uniqueObjectArray.push({
-        model: model,
-        years: uniqueYears
-      });
-    }
-
-    return uniqueObjectArray;
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return [];
-  }
-}
-
 export default async function MakePage({ params }) {
   const { make } = params;
   const carmodel = await getModel(make);
-
   const partspost = await getParts();
   const cities = await getCity();
   const modelsform = await getFormModel();
   const resultList = [];
-  const caryearmodel = await getModelwithYear(make);
 
   const images = [
     {
@@ -301,7 +269,7 @@ export default async function MakePage({ params }) {
 
   return (
     <div>
-      <main className="d-flex justify-center pt-10 xs:pt-5 mx-8">
+       <main className="d-flex justify-center pt-10 xs:pt-5 mx-8">
         <div>
           <h1 className="text-blue-600 text-4xl md:text-md lg:text-md font-extrabold  xs:text-base 2xs:text-xs text-center">
             Buy {make} Car Parts - Used, Genuine, OEM (Original parts) and
