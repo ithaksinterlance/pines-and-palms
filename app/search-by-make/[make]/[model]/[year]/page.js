@@ -166,7 +166,7 @@ export default async function Year({ params }) {
   const makeArray = await getMake();
   const partspost = await getParts();
   const modelsform = await getFormModel();
-  
+
 
   const images = [
     {
@@ -339,7 +339,7 @@ export default async function Year({ params }) {
       <div className="text-xl font-mono text-gray-700 mx-auto xs:text-base xl:text-lg 2xs:text-xs">
         Emirates-car.com is the online Dealers specialist in {year} {make}{' '}
         {model} and almost any car brands running on roads of UAE. We find
-        pleasure in finding the best used, genuine (otherwise called OEM parts)
+        satisfaction in finding the best used, genuine (otherwise called OEM parts)
         and aftermarket parts for any cars. We have experienced professional who
         can find the parts at affordable and reasonable price. We deal in
         genuine honda parts and aftermarket honda parts such as engine parts,
@@ -349,7 +349,7 @@ export default async function Year({ params }) {
         <Link
           href="https://emirates-car.com"
           target="_newtab"
-          className="text-blue-500 underline hover:text-blue-900"
+          className="text-blue-800 underline hover:text-blue-900"
           title={year + ' ' + make + ' ' + model + ' parts'}
         >
           here

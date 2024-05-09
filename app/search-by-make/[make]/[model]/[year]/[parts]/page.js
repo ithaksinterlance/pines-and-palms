@@ -296,7 +296,7 @@ export default async function Parts({ params }) {
           <Link
             href="https://emirates-car.com"
             target="_newtab"
-            className="text-blue-500 underline hover:text-blue-900"
+            className="text-blue-800 underline hover:text-blue-900"
             title={make + ' ' + model + ' parts'}
           >
             here
@@ -304,7 +304,7 @@ export default async function Parts({ params }) {
           . You can get callback or whatsapp chat or email after submitting your
           form inquiry.
         </p>
-        <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-base xl:text-lg 2xs:text-xs px-5">
+        <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-base xl:text-lg 2xs:text-xs px-5">
           FILL OUT THE INQUIRY FOR &nbsp;
           <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
             {decodeURIComponent(parts)} for &nbsp;{year} {make}{' '}
@@ -409,7 +409,7 @@ export default async function Parts({ params }) {
                         as={'https://emirates-car.com/search-by-make/' + p.make}
                         title={p.make + ' spare parts'}
                       >
-                        <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
+                        <main className="border h-full  hover:border-blue-900 py-3 bg-gray-300">
                           <div className="flex justify-center">
                             <Image
                               alt={p.make + ' parts'}
@@ -421,7 +421,7 @@ export default async function Parts({ params }) {
                             />
                             <br />
                           </div>
-                          <p className="text-xs text-center text-gray-500 font-medium hover:text-gray-800">
+                          <p className="text-xs text-center font-medium hover:text-gray-800">
                             {p.make.toUpperCase()}
                           </p>
                         </main>
@@ -612,7 +612,7 @@ export default async function Parts({ params }) {
             and accessories for honda accord, Honda civic and{' '}
             <Link
               href={'https://emirates-car.com/search-by-make/' + make}
-              className="text-blue-500 underline hover:text-blue-900"
+              className="text-black underline hover:text-blue-900"
             >
               other honda models
             </Link>
@@ -669,6 +669,7 @@ export default async function Parts({ params }) {
 
               {partsposts.map((post, i) => (
                 <ul key={i}>
+                  <li className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                   <Link
                     href="/search-by-make/[make]/[model/[year]/[parts]"
                     as={
@@ -683,11 +684,10 @@ export default async function Parts({ params }) {
                     }
                     title={year + ' ' + make + ' ' + model + ' ' + parts}
                   >
-                    <li className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">
                       {post.parts} for {' ' + year}
                       {' ' + make} {' ' + decodeURIComponent(model)} price list
-                    </li>
                   </Link>
+                  </li>
                 </ul>
               ))}
             </div>

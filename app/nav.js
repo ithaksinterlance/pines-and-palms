@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className="flex relative flex-wrap items-center justify-between px-2 py-2 bg-purple-800">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full flex justify-between">
-          <Image src={Iconpng} width={32} height={32} />
+          <Image src={Iconpng} width={32} height={32} alt="car spare parts"/>
           <Link
             href={`/#spare_parts`}
             className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1"
@@ -97,17 +97,17 @@ export default function Navbar() {
             <li className="nav-item">
               <Link
                 href={`https://www.facebook.com/emirates.auto.parts/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75" ariaLabel="Facebook"
               >
                 <FontAwesomeIcon icon={faFacebook} />
 
-                <i className="fab fa-2x fa-facebook ml-2 text-xl leading-xl text-white opacity-75 "></i>
+                <i className="fab fa-2x fa-facebook ml-2 text-xl leading-xl text-white opacity-75"></i>
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 href={`https://www.instagram.com/emiratescar_parts/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75" ariaLabel="Instagram"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </Link>
@@ -115,7 +115,7 @@ export default function Navbar() {
             <li className="nav-item">
               <Link
                 href={`https://twitter.com/emiratescarpart`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75" ariaLabel="Twitter"
               >
                 <FontAwesomeIcon icon={faTwitter} />
               </Link>
@@ -123,7 +123,7 @@ export default function Navbar() {
             <li className="nav-item">
               <Link
                 href={`https://emirates-car.tumblr.com/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75" ariaLabel="Tumblr"
               >
                 <FontAwesomeIcon icon={faTumblr} />
               </Link>

@@ -486,12 +486,12 @@ export default function FormComponent({ formsData, postFilter }) {
         <div className="grid grid-cols-1 pt-3">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl xs:text-xs"
+            className="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-xl xs:text-xs"
           >
             Submit
           </button>
         </div>
-        <div className="flex float-left text-xs text-gray-400">
+        <div className="flex float-left text-xs">
           <Link
             href="https://emirates-car.com/privacy-policy"
             target="_newtab"
@@ -509,7 +509,7 @@ export default function FormComponent({ formsData, postFilter }) {
           </Link>
         </div>
 
-        <div className="flex float-right text-xs text-gray-400 ">
+        <div className="flex float-right text-xs">
           100% secure and trusted
         </div>
       </form>
