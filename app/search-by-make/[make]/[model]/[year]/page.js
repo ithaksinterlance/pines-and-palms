@@ -323,7 +323,8 @@ export default async function Year({ params }) {
     }
   ];
   return (
-    <div className="d-flex justify-center pt-10 xs:pt-5 mx-8">
+    <div>
+      <div className="d-flex justify-center pt-10 xs:pt-5 mx-8">
       <h1 className="text-4xl font-extrabold mx-auto my-5 xs:text-lg 2xs:text-xs">
         {year} {decodeURIComponent(make)} {decodeURIComponent(model)} spare
         parts - Buy Premium High Quality Used, Genuine, OEM and Aftermarket from
@@ -750,50 +751,12 @@ export default async function Year({ params }) {
                 </Link>
               </div>
             ))}
-            {partspost.map((post, i) => (
-              <div key={i}>
-                {'<url>'}
-                <br />
-                {`<loc>https://emirates-car.com/${encodeURIComponent(
-                  make
-                )}/${encodeURIComponent(model)}/${encodeURIComponent(
-                  year
-                )}/${encodeURIComponent(post.parts)}</loc>`}
-                <br />
-                {`<lastmod>${new Date().toISOString()}</lastmod>`}
-                <br />
-                {`<changefreq>monthly</changefreq>`}
-                <br />
-                {`<priority>1.0</priority>`}
-                <br />
-                {`</url>`}
-              </div>
-            ))}
           </div>
         </div>
       </div>
-      {yearData.map((post, i) => (
-        <div key={i}>
-          <Link
-            href="/search-by-make/[make]/[model]"
-            as={
-              '/search-by-make/' +
-              post.make +
-              '/' +
-              post.model +
-              '/' +
-              post.year
-            }
-          >
-            <main className="xs:text-center font-mono text-blue-800 underline hover:text-blue-700 focus:text-blue-700">
-              {post.make}&nbsp;{post.model.replace('%2F', '/')}&nbsp;{post.year}
-              &nbsp;Parts
-            </main>
-          </Link>
-        </div>
-      ))}
 
-      <Footer />
+    </div><Footer />
     </div>
+
   );
 }

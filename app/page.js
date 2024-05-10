@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import FormComponent from './FormComponent';
 import TenEntries from './tenentries';
+import Footer from "./footer"
 
 export async function getMake() {
   const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
@@ -53,7 +54,8 @@ export default async function Home() {
   const partsposts = await getParts();
   const cities = await getCity();
   return (
-    <div className="max-w-7xl mx-auto">
+    <div>
+      <div className="max-w-7xl mx-auto">
       <Hero />
       <div className="place-content-center py-6 xl:mx-auto lg:mx-auto md:mx-auto xs:py-0">
         <div className="uppercase bg-blue-200 font-serif xl:mx-10 lg:mx-7 md:mx-5 s:mx-3 2xs:mx-4 xs:mx-4 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
@@ -1688,6 +1690,8 @@ export default async function Home() {
           </div>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }
