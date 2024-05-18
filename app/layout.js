@@ -15,7 +15,7 @@ export const metadata = {
   title:
     'Auto Spare Parts Order Online in UAE from Dubai dealers | Emirates-car.com',
   description:
-    'Buy Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE for German, American, Korean, Japanese models',
+    'Buy Car spare parts Online and Get delivered Used, New, Genuine / Original / OEM, Aftermarket auto spare parts Online in UAE for German, American, Korean, Japanese models',
   metadataBase: new URL('https://emirates-car.com'),
   manifest: 'https://emirates-car.com/manifest.json',
   verification: {
@@ -138,7 +138,7 @@ export default function RootLayout({ children }) {
         async
         src={`https://www.googletagmanager.com/gtag/js?id=G-3E8C09YD12`}
       />
-      <body>
+      <body className="font-sans">
         <Navbar />
         {children}
       </body>

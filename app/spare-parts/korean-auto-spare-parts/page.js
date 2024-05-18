@@ -28,7 +28,7 @@ export default async function korean() {
             </h1>
             <div className="grid grid-cols-3 md:grid md:grid-cols-3 lg:grid-cols-3 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 s:grid s:grid-cols-1 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Hyundai">
+                <Link href="/search-by-make/Hyundai">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -47,7 +47,7 @@ export default async function korean() {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Kia">
+                <Link href="/search-by-make/Kia">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -66,7 +66,7 @@ export default async function korean() {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Daewoo">
+                <Link href="/search-by-make/Daewoo">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -87,7 +87,7 @@ export default async function korean() {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href="https://emirates-car.com/get-in-touch">
+              <Link href="/get-in-touch">
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**

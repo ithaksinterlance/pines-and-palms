@@ -35,7 +35,7 @@ export default async function Make() {
                 {posts.map((post, i) => (
                   <div key={i}>
                     <Link
-                      href="https://emirates-car.com/search-by-make/[make]"
+                      href="/search-by-make/[make]"
                       as={
                         'https://emirates-car.com/search-by-make/' + post.make
                       }
@@ -73,7 +73,7 @@ export default async function Make() {
                 <div>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-part-name"
+                      href="/search-by-part-name"
                       className="underline hover:text-blue-500 xs:text-sm"
                     >
                       SEARCH BY PART NAME
@@ -82,7 +82,7 @@ export default async function Make() {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-cities-in-uae"
+                      href="/search-by-cities-in-uae"
                       className="underline hover:text-blue-500  xs:text-sm"
                       title={'spare parts near me'}
                     >
@@ -92,7 +92,7 @@ export default async function Make() {
                   </span>
                   <span>
                     <Link
-                      href="https://emirates-car.com/search-by-make"
+                      href="/search-by-make"
                       className="underline hover:text-blue-500  xs:text-sm"
                       title={'automobile spare parts'}
                     >

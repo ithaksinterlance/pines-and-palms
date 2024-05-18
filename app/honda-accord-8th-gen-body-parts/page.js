@@ -23,7 +23,7 @@ export default function HondaAccord() {
         <p className="text-xl font-mono text-gray-700 mx-auto">
           Welcome to{' '}
           <Link
-            href="https://emirates-car.com/"
+            href="/"
             className="text-blue-500 underline hover:text-blue-700"
           >
           Emirates-car.com
@@ -33,7 +33,7 @@ export default function HondaAccord() {
           electrical parts, service and maintainance parts, AC Parts, Engine and
           related parts, headlight and other lights{' '}
           <Link
-            href="https://emirates-car.com/search-by-make"
+            href="/search-by-make"
             className="text-blue-500 underline hover:text-blue-900"
           >
             other car brands in UAE.

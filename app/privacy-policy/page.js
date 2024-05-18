@@ -542,7 +542,7 @@ export default function PrivacyP() {
           <p>
             By visiting this page on our website:{' '}
             <Link
-              href="https://emirates-car.com/contact"
+              href="/contact"
               target="_blank"
               rel="nofollow noopener noreferrer"
             >

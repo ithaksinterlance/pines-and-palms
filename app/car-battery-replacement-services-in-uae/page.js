@@ -108,7 +108,7 @@ export default async function CarBatteryDubai() {
 
         <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
           **Make not found above?{' '}
-          <Link href="https://emirates-car.com/get-in-touch">
+          <Link href="/get-in-touch">
             <nobr className="text-blue-500 text-sm underline">
               Get in touch with us {'>>'}**
             </nobr>
@@ -122,7 +122,7 @@ export default async function CarBatteryDubai() {
           &nbsp;
           <span>
             <Link
-              href="https://emirates-car.com/search-by-part-name"
+              href="/search-by-part-name"
               className="underline xs:no-underline hover:text-blue-500"
             >
               SEARCH BY PART NAME
@@ -131,7 +131,7 @@ export default async function CarBatteryDubai() {
           | &nbsp;
           <span>
             <Link
-              href="https://emirates-car.com/search-by-cities-in-uae"
+              href="/search-by-cities-in-uae"
               passHref
               className="underline xs:no-underline hover:text-blue-500"
             >
@@ -141,7 +141,7 @@ export default async function CarBatteryDubai() {
           | &nbsp;
           <span>
             <Link
-              href="https://emirates-car.com/search-by-make"
+              href="/search-by-make"
               className="underline xs:no-underline hover:text-blue-500"
             >
               SEARCH BY MAKE
@@ -237,21 +237,21 @@ export default async function CarBatteryDubai() {
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-car"></i>{' '}
-            <Link href="https://emirates-car.com/search-by-make">
+            <Link href="/search-by-make">
               Car Make Model
             </Link>
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-bolt"></i>{' '}
-            <Link href="https://emirates-car.com/search-by-part-name">
+            <Link href="/search-by-part-name">
               Car Spare parts
             </Link>
           </li>
           <li className="text-blue-500 hover:text-blue-800 list-none underline">
             {' '}
             <i className="fas fa-map-pin"></i>{' '}
-            <Link href="https://emirates-car.com/search-by-cities-in-uae">
+            <Link href="/search-by-cities-in-uae">
               Location in UAE
             </Link>
           </li>

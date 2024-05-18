@@ -61,7 +61,7 @@ export default async function Blog() {
                 Popular Posts
               </div>
               <div className="grid grid-cols-2 gap-4 xs:grid xs:grid-cols-1 2xs:grid 2xs:grid-cols-1 py-5">
-                <Link href="https://emirates-car.com/blog/Ferrari%20Portofino%20M">
+                <Link href="/blog/Ferrari%20Portofino%20M">
                   <div className="shadow-2xl rounded-sm">
                     <div className="flex">
                       <div className="w-1/2 bg-blue-300 flex items-center justify-center text-center">
@@ -80,7 +80,7 @@ export default async function Blog() {
                     </div>
                   </div>
                 </Link>
-                <Link href="https://emirates-car.com/blog/Ferrari%20F8%20Spider%202022">
+                <Link href="/blog/Ferrari%20F8%20Spider%202022">
                   <div className="shadow-2xl rounded-sm">
                     <div className="flex">
                       <div className="w-1/2 bg-purple-300 flex items-center justify-center text-center">

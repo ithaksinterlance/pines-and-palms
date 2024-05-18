@@ -28,7 +28,7 @@ export default async function France() {
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Peugeot">
+                <Link href="/search-by-make/Peugeot">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -47,7 +47,7 @@ export default async function France() {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Citroen">
+                <Link href="/search-by-make/Citroen">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -66,7 +66,7 @@ export default async function France() {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Renault">
+                <Link href="/search-by-make/Renault">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -85,7 +85,7 @@ export default async function France() {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Mobility Ventures LLC">
+                <Link href="/search-by-make/Mobility Ventures LLC">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -104,7 +104,7 @@ export default async function France() {
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Bugatti">
+                <Link href="/search-by-make/Bugatti">
                   <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                     <div className="flex justify-center">
                       <Image
@@ -125,7 +125,7 @@ export default async function France() {
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href="https://emirates-car.com/get-in-touch">
+              <Link href="/get-in-touch">
                 <nobr className="text-blue-500 text-sm underline">
                   {' '}
                   Get in touch with us {'>>'}**

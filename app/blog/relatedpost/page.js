@@ -70,7 +70,7 @@ export default function RelatedPosts() {
         <div className="text-xs text-center uppercase">RELATED POST</div>
         <ul>
           <li className="py-5 my-5 border-gray-400 shadow-md p-4">
-            <Link href="https://emirates-car.com/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons">
+            <Link href="/blog/5%20Ways%20to%20Buy%20car%20spare%20parts%20Online%20Its%20Pros%20and%20Cons">
               5 ways you can buy car spare parts
               <p className="text-gray-300 text-xs font-bold uppercase pt-2">
                 10 min read
@@ -78,7 +78,7 @@ export default function RelatedPosts() {
             </Link>
           </li>
           <li className="py-5 my-5 border-gray-400 shadow-md p-4">
-            <Link href="https://emirates-car.com/blog/How%20to%20Buy%20Auto%20Parts%20Online">
+            <Link href="/blog/How%20to%20Buy%20Auto%20Parts%20Online">
               How to Buy Car Spare Parts Online
               <p className="text-gray-300 text-xs font-bold uppercase pt-2">
                 10 min read

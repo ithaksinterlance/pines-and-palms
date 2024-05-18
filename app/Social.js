@@ -15,11 +15,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 export default function Social() {
   return (
     <div>
-      <div className="container mx-auto">
-        <div className="text-blue-600 text-center text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-xl 2xs:text-xl s:text-xl pb-5">
-          FOLLOW US ON SOCIAL MEDIA
-        </div>
-        <div className="grid grid-cols-6 gap-4 py-2">
+      <div className="container mx-0">
+        <div className="grid grid-cols-6 gap-4 text-center py-2">
           <div>
             <Link
               href="https://www.facebook.com/emirates.auto.parts"

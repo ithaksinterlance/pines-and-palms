@@ -18,7 +18,7 @@ export default function HondaParts() {
           Honda spare parts from Dubai Dealer to all over UAE and world Online
         </h1>
         <Link
-          href="https://emirates-car.com/search-by-make/Honda"
+          href="/search-by-make/Honda"
           className="w-1/4 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-xs xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
           target="_newtab"
         >

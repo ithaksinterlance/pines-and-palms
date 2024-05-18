@@ -14,7 +14,7 @@ export default class AutoPartImages extends React.Component {
   render() {
     return this.state.AutoPartsData.map(image => {
       return (
-        <main key={image.title} className="border p-1 py-5 px-5">
+        <main key={image.title} className="border p-1 py-5 px-5 mx-auto items-center justify-center">
           <Link href={image.href}>
             <Image
               alt={image.title}

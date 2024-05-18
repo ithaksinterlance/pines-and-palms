@@ -15,7 +15,7 @@ const modelforms = await getFormModel();
   const partsposts = await getParts();
   return (
     <div>
-      
+
       <div className="bg-cover">
         <div className="grid grid-cols-1 xs:grid xs:grid-cols-1 s:grid s:grid-cols-1 xs:mx-auto sm:grid sm:grid-cols-2  2xs:grid 2xs:grid-cols-1 xs:pt-5 s:pt-5">
           <div>
@@ -30,7 +30,7 @@ const modelforms = await getFormModel();
             </h1>
             <div className="grid grid-cols-4 md:grid md:grid-cols-5 lg:grid-cols-7 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 2xs:grid 2xs:grid-cols-2 s:grid s:grid-cols-2 gap-1 xs:mx-4 s:mx-4 2xs:mx-4 md:ml-11 my-10 mx-10">
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Ford">
+                <Link href="/search-by-make/Ford">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -51,7 +51,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/GMC">
+                <Link href="/search-by-make/GMC">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -72,7 +72,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Chevrolet">
+                <Link href="/search-by-make/Chevrolet">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -93,7 +93,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Jeep">
+                <Link href="/search-by-make/Jeep">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -114,7 +114,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Hummer">
+                <Link href="/search-by-make/Hummer">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -135,7 +135,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Cadillac">
+                <Link href="/search-by-make/Cadillac">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -156,7 +156,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Lincoln">
+                <Link href="/search-by-make/Lincoln">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -177,7 +177,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Dodge">
+                <Link href="/search-by-make/Dodge">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -198,7 +198,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Chrysler">
+                <Link href="/search-by-make/Chrysler">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -219,7 +219,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Mercury">
+                <Link href="/search-by-make/Mercury">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -240,7 +240,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Buick">
+                <Link href="/search-by-make/Buick">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -261,7 +261,7 @@ const modelforms = await getFormModel();
                 </Link>
               </div>
               <div>
-                <Link href="https://emirates-car.com/search-by-make/Ram">
+                <Link href="/search-by-make/Ram">
 
                     <main className="border h-full  hover:border-blue-600 py-3 bg-gray-100">
                       <div className="flex justify-center">
@@ -284,7 +284,7 @@ const modelforms = await getFormModel();
             </div>
             <div className="text-center mt-2 text-red-400 text-sm xs:text-xs">
               **Make not found above?
-              <Link href="https://emirates-car.com/get-in-touch">
+              <Link href="/get-in-touch">
 
                   <nobr className="text-blue-500 text-sm underline">
                     {' '}

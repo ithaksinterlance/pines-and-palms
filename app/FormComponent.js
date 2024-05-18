@@ -254,12 +254,12 @@ export default function FormComponent({ formsData, postFilter }) {
     setWhatsappno('');
   }
   return (
-    <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
+    <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
       <form
         id="myForm"
         method="POST"
         onSubmit={handleSubmit}
-        className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 2xs:px-4 sm:px-4"
+        className="w-full shadow-xl px-8 py-8 xs:px-4 xs:py-3 xxs:px-4 sm:px-4"
       >
         <div className="grid grid-cols-1 pt-3">
           <label
@@ -281,7 +281,7 @@ export default function FormComponent({ formsData, postFilter }) {
             />
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
+        <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 sm:grid sm:grid-cols-1 xs:grid xxs:grid xxs:grid-cols-1 s:grid s:grid-cols-1 pt-3">
           <div>
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 xs:mt-3"
@@ -376,7 +376,7 @@ export default function FormComponent({ formsData, postFilter }) {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 pt-3">
+        <div className="grid grid-cols-3 gap-3 xs:grid-cols-1 sm:grid sm:grid-cols-1 xs:grid xxs:grid xxs:grid-cols-1 s:grid s:grid-cols-1 pt-3">
           <div className="flex flex-wrap -mx-3 mb-2">
             <div className="w-2/5 px-3 mb-6 xs:mb-0 md:mb-0">
               <label
@@ -509,9 +509,7 @@ export default function FormComponent({ formsData, postFilter }) {
           </Link>
         </div>
 
-        <div className="flex float-right text-xs">
-          100% secure and trusted
-        </div>
+        <div className="flex float-right text-xs">100% secure and trusted</div>
       </form>
     </div>
   );

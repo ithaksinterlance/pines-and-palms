@@ -17,13 +17,13 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   return (
-    <nav className="flex relative flex-wrap items-center justify-between px-2 py-2 bg-purple-800">
+    <nav className="flex relative flex-wrap items-center justify-between px-2 py-2 bg-purple-800 font-sans">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full flex justify-between">
-          <Image src={Iconpng} width={32} height={32} alt="car spare parts"/>
+          <Image src={Iconpng} width={32} height={32} alt="car spare parts" />
           <Link
             href={`/#spare_parts`}
-            className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 2xs:ml-1"
+            className="text-md leading-snug inline-block mr-4 py-2 whitespace-nowrap uppercase text-white xs:-ml-2 xxs:ml-1"
           >
             Emirates-car.com
           </Link>
@@ -38,12 +38,12 @@ export default function Navbar() {
 
         <div
           className={
-            'xl:flex flex-grow items-center lg:flex 2xl:flex' +
+            'xl:flex lg:flex sm:flex xxl:flex flex-grow items-center' +
             (navbarOpen ? 'flex' : ' hidden')
           }
           id="example-navbar-danger"
         >
-          <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
+          <ul className="flex flex-col xl:flex-row lg:flex-row list-none xl:ml-auto xxs:ml-auto xs:ml-auto">
             <li className="nav-item">
               <Link
                 href={`/`}
@@ -66,6 +66,14 @@ export default function Navbar() {
                 className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
               >
                 Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                href={`/about`}
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+              >
+                About
               </Link>
             </li>
             <li className="nav-item">
@@ -93,11 +101,12 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <ul className="flex flex-col xl:flex-row list-none xl:ml-auto 2xs:ml-auto xs:ml-auto">
+          <ul className="flex flex-col xl:flex-row lg:flex-row list-none xl:ml-auto xxs:ml-auto xs:ml-auto">
             <li className="nav-item">
               <Link
                 href={`https://www.facebook.com/emirates.auto.parts/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75" ariaLabel="Facebook"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                ariaLabel="Facebook"
               >
                 <FontAwesomeIcon icon={faFacebook} />
 
@@ -107,7 +116,8 @@ export default function Navbar() {
             <li className="nav-item">
               <Link
                 href={`https://www.instagram.com/emiratescar_parts/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75" ariaLabel="Instagram"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                ariaLabel="Instagram"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </Link>
@@ -115,7 +125,8 @@ export default function Navbar() {
             <li className="nav-item">
               <Link
                 href={`https://twitter.com/emiratescarpart`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75" ariaLabel="Twitter"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                ariaLabel="Twitter"
               >
                 <FontAwesomeIcon icon={faTwitter} />
               </Link>
@@ -123,7 +134,8 @@ export default function Navbar() {
             <li className="nav-item">
               <Link
                 href={`https://emirates-car.tumblr.com/`}
-                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75" ariaLabel="Tumblr"
+                className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                ariaLabel="Tumblr"
               >
                 <FontAwesomeIcon icon={faTumblr} />
               </Link>
