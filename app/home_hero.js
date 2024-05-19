@@ -31,7 +31,7 @@ export default class home_hero extends Component {
                       <span class="block text-blue-600 xl:inline">in UAE</span>
                     </span>
                   </h1>
-                  <p className="mt-3 text-lg font-extralight">
+                  <p className="mt-3 text-lg font-normal">
                     Buy Premium High Quality Used, Genuine, OEM and Aftermarket
                     parts in Dubai, Sharjah, Ajman, Ras al khaimah, Abu dhabi
                     and all over the world. We are dealers in Auto Spare parts
