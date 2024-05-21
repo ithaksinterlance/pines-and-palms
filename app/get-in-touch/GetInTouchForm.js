@@ -82,7 +82,10 @@ export default function GetInTouchForm() {
           'Part List: ' +
           Partname,
         partList: Partname,
-        email: Email
+        email: Email,
+        year: Year,
+        model: Model,
+        address: Address
       }),
       headers: {
         'Content-Type': 'application/json'
