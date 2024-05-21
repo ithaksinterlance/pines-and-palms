@@ -1,61 +1,71 @@
-import React from 'react';
-import SearchModel from '../../SearchModel';
-import FormComponent from '../../FormComponent';
-import Social from '../../Social';
-import Link from 'next/link';
-import HondaOfferButton from '../../HondaOfferButton';
 import Image from 'next/image';
-import { getParts, getCity, getFormModel } from '../../page';
-import Footer from '../../footer';
-import ABS from '../../../public/img/honda-eighth-gen/Anti_Lock_Braking_System.webp';
-import AirFilter from '../../../public/img/honda-eighth-gen/Air_Filter.webp';
-import AirSuspension from '../../../public/img/honda-eighth-gen/Air_Suspension_Module.webp';
-import AxleAssembly from '../../../public/img/honda-eighth-gen/Axle_Assembly_Rear.webp';
-import BrakePads from '../../../public/img/honda-eighth-gen/Brake_Pads.webp';
-import CatalyticConverter from '../../../public/img/honda-eighth-gen/Catalytic_Converter.webp';
-import CylinderHead from '../../../public/img/honda-eighth-gen/Cylinder_Head.webp';
-import Distributor from '../../../public/img/honda-eighth-gen/Distributor.webp';
-import Engine from '../../../public/img/honda-eighth-gen/Engine.webp';
-import ExhaustManifold from '../../../public/img/honda-eighth-gen/Exhaust_Manifold.webp';
-import GearBox from '../../../public/img/honda-eighth-gen/Gearbox.webp';
-import Grille from '../../../public/img/honda-eighth-gen/Grille.webp';
-import Headlight from '../../../public/img/honda-eighth-gen/Headlight.webp';
-import MasterCylinderKit from '../../../public/img/honda-eighth-gen/Master_Cylinder.webp';
-import Radiator from '../../../public/img/honda-eighth-gen/Radiator.webp';
-import RearBumper from '../../../public/img/honda-eighth-gen/Rear_Bumper_Assembly.webp';
-import ReverseLight from '../../../public/img/honda-eighth-gen/Reverse_Light.webp';
-import Rim from '../../../public/img/honda-eighth-gen/Rim.webp';
-import SeatBelt from '../../../public/img/honda-eighth-gen/Seat_Belt.webp';
-import ShockAbsorber from '../../../public/img/honda-eighth-gen/Shock_Absorber.webp';
-import SideMirror from '../../../public/img/honda-eighth-gen/Side_Mirror.webp';
-import SteeringWheel from '../../../public/img/honda-eighth-gen/Steering_Wheel.webp';
-import Wheel from '../../../public/img/honda-eighth-gen/Wheel.webp';
-import MudFlap from '../../../public/img/honda-eighth-gen/Mud_Flap.webp';
-import HondaProducts from '../../HondaProducts';
-
-export async function generateStaticParams({ make }) {
-  const posts = await fetch(
-    `https://rozy.vercel.app/api/palms/${make}`
-  ).then(res => res.json());
-  return posts.map(post => ({
-    make: post.make
-  }));
-}
+import Link from 'next/link';
+import React from 'react';
+import SearchModel from '../../../../../SearchModel';
+import FormComponent from '../../../../../FormComponent';
+import { getCity, getFormModel, getParts } from '../../../../../page';
+import Social from '../../../../../Social';
+import ABS from '../../../../../../public/img/honda-eighth-gen/Anti_Lock_Braking_System.webp';
+import AirFilter from '../../../../../../public/img/honda-eighth-gen/Air_Filter.webp';
+import AirSuspension from '../../../../../../public/img/honda-eighth-gen/Air_Suspension_Module.webp';
+import AxleAssembly from '../../../../../../public/img/honda-eighth-gen/Axle_Assembly_Rear.webp';
+import BrakePads from '../../../../../../public/img/honda-eighth-gen/Brake_Pads.webp';
+import CatalyticConverter from '../../../../../../public/img/honda-eighth-gen/Catalytic_Converter.webp';
+import CylinderHead from '../../../../../../public/img/honda-eighth-gen/Cylinder_Head.webp';
+import Distributor from '../../../../../../public/img/honda-eighth-gen/Distributor.webp';
+import Engine from '../../../../../../public/img/honda-eighth-gen/Engine.webp';
+import ExhaustManifold from '../../../../../../public/img/honda-eighth-gen/Exhaust_Manifold.webp';
+import GearBox from '../../../../../../public/img/honda-eighth-gen/Gearbox.webp';
+import Grille from '../../../../../../public/img/honda-eighth-gen/Grille.webp';
+import Headlight from '../../../../../../public/img/honda-eighth-gen/Headlight.webp';
+import MasterCylinderKit from '../../../../../../public/img/honda-eighth-gen/Master_Cylinder.webp';
+import Radiator from '../../../../../../public/img/honda-eighth-gen/Radiator.webp';
+import RearBumper from '../../../../../../public/img/honda-eighth-gen/Rear_Bumper_Assembly.webp';
+import ReverseLight from '../../../../../../public/img/honda-eighth-gen/Reverse_Light.webp';
+import Rim from '../../../../../../public/img/honda-eighth-gen/Rim.webp';
+import SeatBelt from '../../../../../../public/img/honda-eighth-gen/Seat_Belt.webp';
+import ShockAbsorber from '../../../../../../public/img/honda-eighth-gen/Shock_Absorber.webp';
+import SideMirror from '../../../../../../public/img/honda-eighth-gen/Side_Mirror.webp';
+import SteeringWheel from '../../../../../../public/img/honda-eighth-gen/Steering_Wheel.webp';
+import Wheel from '../../../../../../public/img/honda-eighth-gen/Wheel.webp';
+import MudFlap from '../../../../../../public/img/honda-eighth-gen/Mud_Flap.webp';
+import HondaOfferButton from '../../../../../HondaOfferButton';
+import Contents from '../../../../../Contents';
+import Footer from "../../../../../footer";
 
 export async function generateMetadata({ params }) {
-  const { make } = params;
+  const { make, model, parts } = params;
   return {
-    title: `${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE - Best Prices`,
-    description: `Buy ${make} Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket
-    ${make} spare parts from Dubai Dealer to all over UAE and world Online`,
+    title: `${make} ${decodeURIComponent(model)} ${decodeURIComponent(
+      parts
+    )} Car Auto Spare Parts Order Online in UAE from Dubai -
+    Best Prices`,
+    description: `Buy ${make} - ${decodeURIComponent(
+      model
+    )} ${decodeURIComponent(
+      parts
+    )} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`,
     openGraph: {
       images: '/favicon.png',
-      title: `${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE - Best Prices`,
-      description: `Buy ${make} Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket
-    ${make} spare parts from Dubai Dealer to all over UAE and world Online`,
-      url: 'https://emirates-car.com/search-by-make/' + make,
+      title: `${make} - ${decodeURIComponent(model)} ${decodeURIComponent(
+        parts
+      )} Car Auto Spare Parts Order Online in UAE from Dubai -
+    Best Prices`,
+      description: `Buy ${make} - ${decodeURIComponent(
+        model
+      )} ${decodeURIComponent(
+        parts
+      )} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`,
+      url:
+        'https://emirates-car.com/search-by-make/' +
+        make +
+        model +
+        '/' +
+        'parts' +
+        '/' +
+        parts,
       image: 'https://emirates-car.com/img/car-spare-parts.png',
-      siteName: 'Emirates Auto Parts',
+      siteName: 'Emirates car Auto spare Parts',
       images: [
         {
           url: 'https://emirates-car.com/icon-192x192.png',
@@ -74,10 +84,16 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${make} - Car Auto Spare Parts Order Online from Dubai Dealers in UAE - Best Prices`,
-      url: 'https://emirates-car.com/search-by-make/' + make,
-      description: `Buy ${make} Car Parts - Used, Genuine, OEM (Original parts) and Aftermarket
-    ${make} spare parts from Dubai Dealer to all over UAE and world Online`,
+      title: `${make} - ${decodeURIComponent(model)} ${decodeURIComponent(
+        parts
+      )} Car Auto Spare Parts Order Online in UAE from Dubai -
+    Best Prices`,
+      url: 'https://emirates-car.com/search-by-make/' + make + '/' + model,
+      description: `Buy ${make} - ${decodeURIComponent(
+        model
+      )} ${decodeURIComponent(
+        parts
+      )} auto spare parts Online and Get delivered Used, New, Genuine / OEM, Aftermarket in UAE`,
       images: ['https://emirates-car.com/favicon.png']
     },
     icons: {
@@ -89,14 +105,49 @@ export async function generateMetadata({ params }) {
         url: '/icons/icon-152x152.png'
       }
     },
-    category: `${make} auto spare parts`,
     alternates: {
-      canonical: `https://emirates-car.com/search-by-make/${make}`
+      canonical: `https://emirates-car.com/search-by-make/${make}/${model}/parts/${parts}`
     },
-    keywords: `${make} spare parts sharjah, ${make} spare parts dubai, ${make} spare parts ras al khaimah, ${make} spare parts ajman, ${make} spare parts deira, ${make} spare parts ras al khor, ${make} spare parts al quoz, ${make} spare parts uae, ${make} spare parts online, ${make} used spare parts dubai, ${make} spare parts near me`
+    category: `${make} ${decodeURIComponent(model)} ${decodeURIComponent(
+      parts
+    )} parts`,
+    keywords: `${make} ${decodeURIComponent(model)} ${decodeURIComponent(
+      parts
+    )} ${decodeURIComponent(
+      parts
+    )} sharjah, used ${make} ${model} spare parts, ${make} ${decodeURIComponent(
+      model
+    )} ${decodeURIComponent(parts)} parts online, ${make} ${decodeURIComponent(
+      model
+    )} spare parts near me, ${make} ${decodeURIComponent(
+      model
+    )} ${decodeURIComponent(parts)}, ${make} ${decodeURIComponent(
+      model
+    )} distributor, ${make} ${decodeURIComponent(
+      model
+    )} shock absorber, ${make} ${decodeURIComponent(
+      model
+    )} spark plugs, ${make} ${decodeURIComponent(
+      model
+    )} fuse box, ${make} ${decodeURIComponent(
+      model
+    )} radiator, ${make} ${decodeURIComponent(model)} fuel pump`
   };
 }
 
+async function getMakeImage(make, model) {
+  const re = await fetch(
+    `https://rozy.vercel.app/api/grooves/${make}/${model}`
+  );
+  const reDat = await re.json();
+  let uniqueMkeArray = [
+    ...new Map(reDat.map(item => [item['img'], item])).values()
+  ];
+  const imageMake = uniqueMkeArray.map(function(i) {
+    return i.img;
+  });
+  return imageMake;
+}
 async function getModel(make) {
   const res = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
   const data = await res.json();
@@ -106,21 +157,19 @@ async function getModel(make) {
   ];
   return uniqueObjectArray;
 }
-
-export default async function MakePage({ params }) {
-  const { make } = params;
+export default async function Parts({ params }) {
+  const { make, model, parts } = params;
   const carmodel = await getModel(make);
+  const imageMake = await getMakeImage(make, model);
   const partspost = await getParts();
   const cities = await getCity();
   const modelsform = await getFormModel();
-
   const images = [
     {
       images: ABS,
       name: `${make} ABS`,
       alt: `${make} anti lock braking system`,
-      link:
-        '/search-by-part-name/Anti-Lock%20Brake%20Control%20Module%20(ABS)'
+      link: '/search-by-part-name/Anti-Lock%20Brake%20Control%20Module%20(ABS)'
     },
     {
       images: AirFilter,
@@ -138,8 +187,7 @@ export default async function MakePage({ params }) {
       images: AxleAssembly,
       name: `${make} Axle`,
       alt: `${make} axle`,
-      link:
-        '/search-by-part-name/Axle%20Assembly%20(Front,%204WD)'
+      link: '/search-by-part-name/Axle%20Assembly%20(Front,%204WD)'
     },
     {
       images: BrakePads,
@@ -181,8 +229,7 @@ export default async function MakePage({ params }) {
       images: GearBox,
       name: `${make} Gearbox / Transmission`,
       alt: `${make} gearbox`,
-      link:
-        '/search-by-part-name/Transmission%20Control%20Module'
+      link: '/search-by-part-name/Transmission%20Control%20Module'
     },
     {
       images: Grille,
@@ -200,8 +247,7 @@ export default async function MakePage({ params }) {
       images: MasterCylinderKit,
       name: `${make} Master Cylinder`,
       alt: `${make} master cylinder`,
-      link:
-        '/search-by-part-name/Master%20Cylinder%20(Clutch)'
+      link: '/search-by-part-name/Master%20Cylinder%20(Clutch)'
     },
     {
       images: MudFlap,
@@ -219,8 +265,7 @@ export default async function MakePage({ params }) {
       images: RearBumper,
       name: `${make} Rear Bumper`,
       alt: `${make} rear bumper`,
-      link:
-        '/search-by-part-name/Bumper%20Assembly%20(Rear)'
+      link: '/search-by-part-name/Bumper%20Assembly%20(Rear)'
     },
     {
       images: ReverseLight,
@@ -250,8 +295,7 @@ export default async function MakePage({ params }) {
       images: SideMirror,
       name: `${make} Mirror`,
       alt: `${make} mirrors`,
-      link:
-        '/search-by-part-name/Mirror%20(Rear%20View)'
+      link: '/search-by-part-name/Mirror%20(Rear%20View)'
     },
     {
       images: SteeringWheel,
@@ -266,54 +310,77 @@ export default async function MakePage({ params }) {
       link: '/search-by-part-name/Wheel'
     }
   ];
-
   return (
     <div>
-      <main className="d-flex justify-center pt-10 xs:pt-5 mx-2 font-sans">
-        <div>
-          <h1 className="block text-3xl font-bold sm:text-4xl xs:text-4xl xxs:text-4xl md:text-6xl lg:text-6xl lg:leading-tight dark:text-white text-center">
-            <span className="block">
-              {make} spare parts&nbsp;
-              <span className="block text-blue-600 xl:inline">in UAE</span>
-            </span>
-          </h1>
-          <p className="w-3/4 md:w-4/5 mx-auto xs:w-full xs:mx-1 xxs:w-full xxs:mx-1 sm:w-full sm:mx-1 mt-3 text-lg font-normal">
-            Buy Premium High Quality {make} Used, Genuine, OEM and Aftermarket
-            parts in Dubai, Sharjah, Ajman, Ras al khaimah, Abu dhabi and all
-            over the world. We are dealers in Auto Spare parts in UAE. If you
-            are in need of any Spare parts Submit your inquiry now.
-          </p>
+      <div className="d-flex justify-center pt-10 xs:pt-5 mx-8">
+        <Image
+          src={'/img/car-logos/' + imageMake}
+          alt={make + ' spare parts'}
+          className="mx-auto"
+          priority
+          width={100}
+          height={100}
+        />
+        <h1 className="block text-3xl font-bold sm:text-4xl xs:text-4xl xxs:text-4xl md:text-6xl lg:text-6xl lg:leading-tight dark:text-white text-center">
+          <span className="block">
+            {make} {model} {decodeURIComponent(parts)} spare parts&nbsp;
+            <span className="block text-blue-600 xl:inline">in UAE</span>
+          </span>
+        </h1>
+        <p className="w-3/4 md:w-4/5 mx-auto xs:w-full xs:mx-1 xxs:w-full xxs:mx-1 sm:w-full sm:mx-1 mt-3 text-lg font-normal">
+          Buy Premium High Quality {decodeURIComponent(parts)} for {make}{' '}
+          {model} Used, Genuine, OEM and Aftermarket parts in Dubai, Sharjah,
+          Ajman, Ras al khaimah, Abu dhabi and all over the world. We are
+          dealers in Auto Spare parts in UAE. If you are in need of any Spare
+          parts Submit your inquiry now.
+        </p>
+        <Link
+          href="#myForm"
+          className="w-1/4 xs:w-4/5 mx-auto flex items-center justify-center px-8 py-2 xl:text-xl border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md mg:text-lg md:px-5 xs:py-2 xs:text-base xs:my-2 2xs:text-sm 2xs:my-2 s:text-sm s:my-2 focus:filter brightness-125 my-5"
+          title={decodeURIComponent(parts) + make + ' ' + model}
+        >
+          Inquire Now
+        </Link>
+        <p className="text-xl font-mono text-gray-700 mx-auto xs:text-base xl:text-lg 2xs:text-xs">
+          Emirates-car.com is the online Dealers specialist in{' '}
+          {decodeURIComponent(parts)} for {make} {decodeURIComponent(model)} and
+          almost any car brands running on roads of UAE. We find pleasure in
+          finding the best used, genuine (otherwise called OEM parts) and
+          aftermarket parts for any cars. We have experienced professional who
+          can find the parts at affordable and reasonable price. We deal in
+          genuine honda parts and aftermarket honda parts such as engine parts,
+          mechanical parts, electrical and electronic parts, body parts and
+          lights, AC parts and service and maintenance parts. You can order
+          Honda spare parts by simply submitting the online inquiry form{' '}
           <Link
-            href={'/search-by-make/' + make + '#myForm'}
-            className="w-40 xs:w-full xxs:w-full mx-auto flex items-center justify-center px-4 py-2 xl:text-lg border border-transparent font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-lg  md:px-5 xs:py-2 xs:text-lg xs:my-2 xxs:text-lg xxs:my-2 s:text-lg s:my-2 focus:filter brightness-125 my-5"
+            href="/"
+            target="_newtab"
+            className="text-blue-500 underline hover:text-blue-900"
+            title={decodeURIComponent(parts) + make + ' ' + model + ' parts'}
           >
-            Inquire Now
+            here
           </Link>
-        </div>
-
+          . You can get callback or whatsapp chat or email after submitting your
+          form inquiry.
+        </p>
         <div>
-          <div className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-black font-bold py-4 sm:mt-5 md:mt-5 lg:mx-0 xs:text-xs xl:text-lg xxs:text-xs px-5 text-justify">
-            CHOOSE YOUR
-            <nobr className="text-blue-700 text-3xl md:text-4xl xs:text-sm lg:text-2xl sm:text-xl">
-              &nbsp;{make}{' '}
-            </nobr>
-            MODEL
-          </div>
-
-          <p className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs xxs:text-xs mx-10 xs:ml-3 underline pb-3">
+          <div className="text-gray-600 text-base md:text-lg lg:text-2xl font-normal font-sans xs:text-xs xxs:text-xs mx-10 xs:ml-3 underline pb-3">
             <nobr className="text-blue-400 no-underline">
               <i className="fal fa-car-garage"></i>
               Current path:&nbsp;&nbsp;
             </nobr>
-            index{'>>>'}
+            Home{'/'}
             {make}
-            {'>>>'}
-          </p>
-          <SearchModel make={make} car={carmodel} />
+            {'/'}
+            {model}
+            {'/'}
+            {parts}
+          </div>
+
           <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 md:grid md:grid-cols-1 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
             <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 text-red-600">
-              Want to Get Prices for {make} spare parts uae online? Submit your
-              inquiry here
+              Want to Get Prices for {make} {model} {decodeURIComponent(parts)}{' '}
+              spare parts uae online? Submit your inquiry here
             </p>
             <FormComponent formsData={modelsform} postFilter={partspost} />
             <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto xxs:w-auto s:w-auto s:text-2xl xxs:text-2xl p-3">
@@ -354,7 +421,8 @@ export default async function MakePage({ params }) {
             className="text-3xl font-extrabold mx-auto my-5"
             id="oemvsaftermarket1"
           >
-            Why choose {make} genuine parts ?
+            Why choose {make} {model} genuine {decodeURIComponent(parts)} parts
+            ?
           </h3>
           <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
             <li>
@@ -368,7 +436,9 @@ export default async function MakePage({ params }) {
             </li>
           </ol>
           <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-            {make} Genuine parts are better to buy for many reasons:
+            {make} {model}
+            {decodeURIComponent(parts)} Genuine parts are better to buy for many
+            reasons:
           </p>
           <p className="text-xl font-mono text-gray-700 mx-auto">
             However, if you weigh your pros and cons and which kind of parts you
@@ -376,16 +446,19 @@ export default async function MakePage({ params }) {
             can serve you with both kind of parts.
           </p>
           <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-extrabold">
-            Availability of {make} parts in UAE:
+            Availability of {make} {model} {decodeURIComponent(parts)} parts in
+            UAE:
           </p>
           <h3
             className="text-3xl font-extrabold mx-auto my-5"
             id="oemvsaftermarket"
           >
-            Why choose {make} aftermarket parts ?
+            Why choose {make} {model} {decodeURIComponent(parts)} aftermarket
+            parts ?
           </h3>
           <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-            {make} aftermarket parts are better to buy for many reasons:
+            {make} {model} {decodeURIComponent(parts)} aftermarket parts are
+            better to buy for many reasons:
           </p>
           <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
             <li>It is more affordable than genuine parts</li>
@@ -399,75 +472,11 @@ export default async function MakePage({ params }) {
               which can be only from one main manufacturer
             </li>
           </ol>
-          <div>
-            <p className="text-3xl font-extrabold mx-auto my-5">
-              5 ways you can find parts for your car.
-            </p>
-            There are 5 ways you can try finding spare parts for your car.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              Traditional way its pros and cons
-            </p>
-            You find a spare parts shop nearby and go and purchase and the work
-            is done. In this case, the pros is that you find nearby shop to have
-            similar brands you have and thats it you purchase it with ease. But
-            the cons is when you don't find the nearby shop to have the car
-            brand which you are using. There are shop who only deal with certain
-            parts like the shop A sells only in honda, Mazda, BMW and shop B
-            sells only Audi, Lincoln and Ferrari. So to see for next option, you
-            can opt for shopping from Giant E-commerce company like Amazon,
-            EBay, Flipkart etc.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              Giant E-commerce Company its pros and cons:
-            </p>
-            If you don't find spare parts nearby your house location, generally
-            we move on to search on internet. You search for top companies
-            selling spare parts online and you end up in giant e-commerce
-            company like Amazon, Flipkart,Ebay etc. Now you see the review of
-            person who has already ordered spare parts. Most of the reviews says
-            the parts were broken. These giant company has a very big logistics
-            that they are vulnerable to be broken during or even get lost during
-            the check-in process. So it is not always safe to buy spare parts
-            from giant e-commerce company. Hence we see for other option which
-            is the Local dealers.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              Local Dealers
-            </p>
-            Local dealers are known through other person like through friends
-            and family. Or he gives you his business card and he explains you
-            directly the car brands he deals with. However with the current
-            digital advancement, the local dealers are decreasing gradually. So
-            we move to the next option to search on online marketplace.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              Online Marketplace (Only CONS!)
-            </p>
-            Through Online marketplace we find spare parts for our car easily.
-            But it also has lots of cons. If you search for very latest model
-            used spare parts, it will not be available on marketplace. In this
-            case you have to contact the car brand company directly. If you
-            search for very old model, it will not be available with most of the
-            car brands company itself. And also there are more spam issues
-            reported from those who purchase from small vendor marketplace and
-            also the larger companies. In this case you should go for Online
-            dealer website.
-            <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              Online Dealer Website ONLY PROS!
-            </p>
-            Online dealers website is the easiest way to order spare parts. You
-            visit a bunch of site online and submit your inquiries therein and
-            dealers will contact you back through the contact information you
-            submitted. If one website didnt reply you, then other website will
-            do. So there is plenty of website and options. Emirates-car.com is
-            one such website which accept online inquiries. It deals with parts
-            and accessories for honda accord, Honda civic and{' '}
-            <Link
-              href="/search-by-make/Honda"
-              className="text-blue-500 underline hover:text-blue-900"
-            >
-              other honda models
-            </Link>
-            , Infiniti models, BMW models, Audi models and many other brands.
-            Visit to search parts you need.
-          </div>
+          <Contents />
+          <SearchModel make={make} car={carmodel} />
+          <h6 className="text-3xl font-extrabold mx-auto my-5 xs:text-xl md:text-2xl text-center">
+            {decodeURIComponent(parts)} for All {make} models
+          </h6>
           <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2  sm:grid sm:grid-cols-4 md:grid md:grid-cols-3 xxs:grid xxs:grid-cols-3 gap-1 xxs:mx-4 md:ml-11 mr-3 my-10 ">
             {carmodel.map((post, i) => (
               <div key={i}>
@@ -477,13 +486,21 @@ export default async function MakePage({ params }) {
                     '/search-by-make/' +
                     post.make +
                     '/' +
-                    post.model
+                    post.model +
+                    '/' +
+                    'parts' +
+                    '/' +
+                    parts
                   }
                   title={post.make + post.model + ' spare parts'}
                 >
                   <main className="border border-blue-800 h-full p-3 ">
                     <p className="text-center text-lg xs:text-xl xs:text-center font-mono text-blue-800 underline hover:text-gray-800 focus:text-gray-800 font-bold ">
-                      {make + ' ' + post.model.replace('%2F', '/') + ' parts'}{' '}
+                      {make +
+                        ' ' +
+                        post.model.replace('%2F', '/') +
+                        ' ' +
+                        decodeURIComponent(parts)}
                     </p>
                   </main>
                 </Link>
@@ -505,10 +522,10 @@ export default async function MakePage({ params }) {
         </div>
         <div className="text-xl font-mono text-gray-700 mx-auto xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 my-5">
           Emirates-car.com is the online Dealers specialist in {make} spare
-          parts. We find pleasure is finding the best
-          genuine (otherwise called OEM parts) and aftermarket parts for any
-          cars. We have experienced professional who can find the parts at
-          affordable and reasonable price. We deal in genuine {make}
+          parts. We find pleasure is finding the best genuine (otherwise called
+          OEM parts) and aftermarket parts for any cars. We have experienced
+          professional who can find the parts at affordable and reasonable
+          price. We deal in genuine {make}
           parts and aftermarket {make} parts such as engine parts, mechanical
           parts, electrical and electronic parts, body parts and lights, AC
           parts and service and maintenance parts. You can order {make} spare
@@ -523,9 +540,9 @@ export default async function MakePage({ params }) {
           . You can get callback or whatsapp chat or email after submitting your
           form inquiry.
         </div>
-        <p className="text-xl font-mono text-gray-700 mx-auto font-extrabold xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 my-10">
-          Availability of {make} parts in UAE:
-        </p>
+        <h6 className="text-xl font-mono text-gray-700 mx-auto font-extrabold xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 my-10">
+          Availability of {make} {model} {decodeURIComponent(parts)} in UAE:
+        </h6>
         <div className="grid grid-cols-4 xs:grid-cols-1 gap-3 p-5 border-2 border-gray-500 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
           <div>
             <Link
@@ -649,18 +666,19 @@ export default async function MakePage({ params }) {
             </Link>
           </div>
         </div>
-        <p className="text-3xl font-extrabold mx-auto my-5 xs:text-xl md:text-2xl">
-          Shop for {make} performance parts, {make} genuine parts, {make + ' '}
-          aftermarket parts, {make} body parts, {make} mechanical parts,{' '}
-          {make + ' '}
-          electrical parts, {make} engine parts, {make} replacement parts,{' '}
-          {make + ' '}
+        <h6 className="text-3xl font-extrabold mx-auto my-5 xs:text-xl md:text-2xl">
+          Shop for {make} {model} performance parts, {make} {model} genuine parts,{' '}
+          {make} {model}
+          aftermarket parts, {make} {model} body parts, {make} {model} mechanical
+          parts, {make} {model}
+          electrical parts, {make} {model} engine parts, {make} {model}{' '}
+          replacement parts, {make} {model}
           AC parts and more
-        </p>
+        </h6>
         <div className="grid grid-cols-3 xs:grid-cols-1">
           <div>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              {make} Engine parts
+              {make} {model} Engine parts
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
@@ -780,7 +798,7 @@ export default async function MakePage({ params }) {
 
           <div>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              {make} Mechanical parts
+              {make} {model} Mechanical parts
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
@@ -860,7 +878,7 @@ export default async function MakePage({ params }) {
 
           <div>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              {make} Body Parts
+              {make} {model} Body Parts
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
@@ -908,7 +926,7 @@ export default async function MakePage({ params }) {
 
           <div>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              {make} Electrical Parts
+              {make} {model} Electrical Parts
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
@@ -956,7 +974,7 @@ export default async function MakePage({ params }) {
 
           <div>
             <p className="text-xl font-mono text-gray-700 mx-auto my-5 font-bold">
-              {make} AC Parts
+              {make} {model} AC Parts
             </p>
             <ol className="list-disc text-xl font-mono text-gray-700 mx-auto">
               <li>
@@ -1005,48 +1023,51 @@ export default async function MakePage({ params }) {
         </div>
         <div className="place-content-center ">
           <p className="text-3xl font-extrabold mx-auto my-5 justify-center text-center">
-            List of Genuine and Aftermarket {make} spare parts in UAE
+            List of Genuine and Aftermarket {make} {model} spare parts in UAE
           </p>
           <div className="grid grid-cols-5 gap-2 s:grid-cols-1 xs:grid-cols-1 md:grid-cols-3 font-medium text-gray-500 p-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
             {partspost.map((p, i) => (
               <div key={i}>
                 <Link
-                  href="/search-by-part-name/[parts]"
-                  as={'/search-by-part-name/' + p.parts}
+                  href={
+                    '/search-by-make/[make]/[model]' +
+                    '/' +
+                    'parts' +
+                    '/' +
+                    '[parts]'
+                  }
+                  as={'/search-by-make/' + make + '/' + model + '/' + p.parts}
                   className="text-blue-800 hover:text-gray-800 underline"
                   title={p.parts}
                 >
-                  {make + ' ' + p.parts + ' parts'}
+                  {make + ' ' + model + ' ' + p.parts + ' parts'}
                 </Link>
               </div>
             ))}
           </div>
         </div>
         <div className="xs:grid xs:grid-cols-1 xxs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-black font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg xxs:text-2xl px-5  text-justify font-sans">
-          {make} spare parts Onine in UAE - Order Now and get best Quote prices
-          !
+          {make} {model} {decodeURIComponent(parts)} Onine in UAE - Order Now and
+          get best Quote prices !
         </div>
         <div className="grid grid-cols-4 xs:grid xs:grid-cols-1 xxs:w-full sm:w-full md:w-full xxs:grid xxs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 xs:text-xs xl:text-lg xxs:text-xs px-5 font-sans xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 xxs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
           {cities.map((post, i) => (
             <div key={i}>
               <Link
                 href="/search-by-cities-in-uae/[city]"
-                as={
-                  '/search-by-cities-in-uae/' +
-                  post.city
-                }
+                as={'/search-by-cities-in-uae/' + post.city}
                 title={make + ' spare parts ' + post.city}
               >
                 <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
                   <i className="far fa-compass"></i>&nbsp;
-                  {post.city}{' '}
+                  {decodeURIComponent(parts)} in{post.city}{' '}
                 </p>
               </Link>
             </div>
           ))}{' '}
         </div>
-      </main>
-      <Footer />
+      </div>
+      <Footer/>
     </div>
   );
 }

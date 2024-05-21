@@ -186,7 +186,7 @@ export default async function Model({ params }) {
   const partspost = await getParts();
   const modelsform = await getFormModel();
   const yearData = await getYear(make, model);
-  
+
   const images = [
     {
       images: ABS,
@@ -757,8 +757,8 @@ export default async function Model({ params }) {
               {partspost.map((post, i) => (
                 <div key={i}>
                   <Link
-                    href="/search-by-part-name/[parts]"
-                    as={'/search-by-part-name/' + post.parts}
+                    href="/search-by-make/[make]/[model]/parts/[parts]"
+                    as={'/search-by-make/'+make+'/'+model+"/parts/" + post.parts}
                     title={make + ' ' + model + ' ' + post.parts}
                   >
                     <p className="text-gray-700 hover:text-blue-700 focus:text-blue-700 text-xl xs:text-lg font-mono mx-auto my-5 xs:my-0">

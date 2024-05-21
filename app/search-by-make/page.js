@@ -15,7 +15,7 @@ export default async function Make() {
   const cities = await getCity();
   return (
     <div>
-      <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1  xs:mx-auto">
+      <div className="flex xs:grid xs:grid-cols-1 sm:grid sm:grid-cols-1 2xs:grid 2xs:grid-cols-1 xs:mx-auto font-sans">
         <div className="w-3/4 2xs:w-full xs:w-full sm:w-full">
           <main className="mx-10 xs:mx-4 2xs:mx-4 sm:mx-4 md:mx-5 mt-10 border border-gray-100 shadow-sm">
             <h1 className="text-blue-600 text-4xl md:text-lg lg:text-2xl font-extrabold xs:text-base 2xs:text-xs mx-10">
@@ -31,13 +31,13 @@ export default async function Make() {
               index{'>>>'}
             </p>
             <article>
-              <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 ">
+              <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 font-sans">
                 {posts.map((post, i) => (
                   <div key={i}>
                     <Link
                       href="/search-by-make/[make]"
                       as={
-                        'https://emirates-car.com/search-by-make/' + post.make
+                        '/search-by-make/' + post.make
                       }
                       title={post.make + ' spare parts'}
                     >
@@ -68,7 +68,7 @@ export default async function Make() {
               </Link>{' '}
             </div>
             <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-5 mx-10">
-              <div className="uppercase bg-blue-200 font-serif text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
+              <div className="uppercase bg-blue-200 text-center text-3xl text-blue-900 font-extrabold xs:text-xl xs:w-auto 2xs:w-auto s:w-auto s:text-2xl 2xs:text-2xl p-3">
                 <Social />
                 <div>
                   <span>
@@ -107,13 +107,13 @@ export default async function Make() {
             <div className="text-center">
               <HondaOfferButton />
             </div>
-            <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10">
+            <div className="place-content-center grid grid-cols-1 gap-3 xs:grid-cols-1 xs:grid s:grid s:grid-cols-1 py-5 xl:mx-10 lg:mx-10 md:mx-10 sm:mx-5 xs:mx-2 xs:py-0 2xs:mx-2 s:mx-2  md:ml-11 my-10 mx-10 font-sans">
               <p className="text-base font-medium text-gray-500 p-5">
                 We deal with any country auto spare parts including japanese,
                 american, german, chinese, indian, Korean, french, british in
                 UAE.You can check our catalogue at{' '}
                 <Link
-                  href="https://emirates-car.com/search-by-part-name"
+                  href="/search-by-part-name"
                   title="spare parts"
                   className="text-blue-400 underline"
                 >
@@ -122,9 +122,9 @@ export default async function Make() {
                 . We deal in auto spare parts such as{' '}
                 {partsposts.map((p, i) => (
                   <Link
-                    href="https://emirates-car.com/search-by-part-name/[parts]"
+                    href="/search-by-part-name/[parts]"
                     as={
-                      'https://emirates-car.com/search-by-part-name/' + p.parts
+                      '/search-by-part-name/' + p.parts
                     }
                     key={i}
                     title={p.parts}
@@ -166,13 +166,13 @@ export default async function Make() {
           <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full text-5xl lg:text-4xl md:text-base sm:text-2xl text-blue-400 font-bold py-4 sm:mt-5 md:mt-5 lg:mx-2 xs:text-xl  xl:text-lg 2xs:text-2xl px-5 font-sans">
             SEARCH PARTS BY COUNTRIES (U.A.E)
           </div>
-          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5  font-sans">
+          <div className="xs:grid xs:grid-cols-1 2xs:w-full sm:w-full md:w-full 2xs:grid 2xs:grid-cols-1 sm:grid sm:grid-cols-1 py-4 sm:mt-5 lg:mx-2 xs:text-xs xl:text-lg 2xs:text-xs px-5 font-sans">
             {cities.map((post, i) => (
               <div key={i}>
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae/[city]"
+                  href="/search-by-cities-in-uae/[city]"
                   as={
-                    'https://emirates-car.com/search-by-cities-in-uae/' +
+                    '/search-by-cities-in-uae/' +
                     post.city
                   }
                   title={'car parts ' + post.city}
