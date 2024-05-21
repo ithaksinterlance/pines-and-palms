@@ -311,7 +311,7 @@ export default async function Parts({ params }) {
             {decodeURIComponent(model)}{' '}
           </nobr>
           BELOW
-          <FormComponent formsData={modelsform} postFilter={partspost} />
+          <FormComponent formsData={modelsform} postFilter={partsposts} />
         </div>
         <p
           className="text-xl font-mono text-gray-700 mx-auto my-5"

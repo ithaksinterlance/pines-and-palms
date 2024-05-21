@@ -672,7 +672,7 @@ export default async function Year({ params }) {
           such website which accept online inquiries. It deals with parts and
           accessories for honda accord, Honda civic and{' '}
           <Link
-            href={'https://emirates-car.com/search-by-make/' + make}
+            href={'/search-by-make/' + make}
             className="text-blue-500 underline hover:text-blue-900"
           >
             other honda models
