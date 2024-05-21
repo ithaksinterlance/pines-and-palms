@@ -1,4 +1,4 @@
-import '../../../../../../styles/globa;s.css';
+import '../../../../../../styles/globals.css';
 import Navbar from '../../../../../nav';
 
 export default function RootLayout({ children }) {
