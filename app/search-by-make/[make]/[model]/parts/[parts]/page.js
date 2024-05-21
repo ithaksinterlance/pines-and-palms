@@ -1058,9 +1058,9 @@ export default async function Parts({ params }) {
                 as={'/search-by-cities-in-uae/' + post.city}
                 title={make + ' spare parts ' + post.city}
               >
-                <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700  text-blue-800 m-2 p-2">
+                <p className="text-base hover:text-gray-800 focus:text-gray-800 border border-gray-700 text-blue-800 m-2 p-2">
                   <i className="far fa-compass"></i>&nbsp;
-                  {decodeURIComponent(parts)} in{post.city}{' '}
+                  {decodeURIComponent(parts)} in &nbsp;{post.city}{' '}
                 </p>
               </Link>
             </div>
