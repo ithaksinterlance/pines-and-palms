@@ -10,6 +10,7 @@ import FormComponent from './FormComponent';
 import TenEntries from './tenentries';
 import Contents from './Contents';
 import Footer from './footer';
+import StaticCities from './StaticCities';
 
 export async function getMake() {
   const resp = await fetch(`https://rozy.vercel.app/api/grooves`, {
@@ -62,7 +63,6 @@ export default async function Home() {
   const posts = await getMake();
   const modelforms = await getFormModel();
   const partsposts = await getParts();
-  const cities = await getCity();
   return (
     <div>
       <div className="max-w-7xl mx-auto font-sans">
@@ -73,7 +73,7 @@ export default async function Home() {
             <div>
               <span>
                 <Link
-                  href="https://emirates-car.com/search-by-part-name"
+                  href="/search-by-part-name"
                   className="underline hover:text-blue-500 xs:text-sm"
                 >
                   SEARCH BY PART NAME
@@ -82,7 +82,7 @@ export default async function Home() {
               </span>
               <span>
                 <Link
-                  href="https://emirates-car.com/search-by-cities-in-uae"
+                  href="/search-by-cities-in-uae"
                   className="underline hover:text-blue-500 xs:text-sm"
                 >
                   SEARCH BY CITY
@@ -91,7 +91,7 @@ export default async function Home() {
               </span>
               <span>
                 <Link
-                  href="https://emirates-car.com/search-by-make"
+                  href="/search-by-make"
                   className="underline hover:text-blue-500 xs:text-sm"
                 >
                   SEARCH BY MAKE
@@ -1278,7 +1278,7 @@ export default async function Home() {
           {partsposts.map((post, i) => (
             <div key={i}>
               <Link
-                href="https://emirates-car.com/search-by-part-name/[parts]"
+                href="/search-by-part-name/[parts]"
                 as={'/search-by-part-name/' + post.parts}
                 title={post.parts + ' in uae'}
               >
@@ -1294,23 +1294,7 @@ export default async function Home() {
         <div className="text-black text-4xl text-center md:text-2xl lg:text-2xl font-extrabold xs:text-xl xxs:text-2xl pt-10 uppercase">
           SEARCH AUTO SPARE PARTS ANYWHERE IN UAE
         </div>
-
-        <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-5 xxs:grid xxs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 xxs:mx-4 md:ml-11 my-10">
-          {cities.map((post, i) => (
-            <div key={i}>
-              <Link
-                href="https://emirates-car.com/search-by-cities-in-uae/[city]"
-                as={'/search-by-cities-in-uae/' + post.city}
-              >
-                <main className="border-blue-800 h-full  hover:border-blue-900 py-3 bg-gray-100">
-                  <p className="text-center text-blue-600 font-medium hover:text-gray-800">
-                    {post.city.toUpperCase()}{' '}
-                  </p>
-                </main>
-              </Link>
-            </div>
-          ))}{' '}
-        </div>
+        <StaticCities/>
 
         <Featured />
         <Contents />
