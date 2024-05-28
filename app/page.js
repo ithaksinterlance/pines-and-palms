@@ -9,10 +9,12 @@ import Image from 'next/image';
 import FormComponent from './FormComponent';
 import TenEntries from './tenentries';
 import Contents from './Contents';
-import Footer from "./footer";
+import Footer from './footer';
 
 export async function getMake() {
-  const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const resp = await fetch(`https://rozy.vercel.app/api/grooves`, {
+    cache: 'no-store'
+  });
   const data = await resp.json();
   let uniqueMakeArray = [
     ...new Map(data.map(item => [item['make'], item])).values()
@@ -21,7 +23,9 @@ export async function getMake() {
 }
 
 export async function getYear() {
-  const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const resp = await fetch(`https://rozy.vercel.app/api/grooves`, {
+    cache: 'no-store'
+  });
   const data = await resp.json();
   let uniqueYearArray = [
     ...new Map(data.map(item => [item['year'], item])).values()
@@ -29,22 +33,27 @@ export async function getYear() {
   return uniqueYearArray;
 }
 
-
 export async function getFormModel() {
   //Pass it to forms to get appropriate model for make
-  const respo = await fetch(`https://rozy.vercel.app/api/palms`);
+  const respo = await fetch(`https://rozy.vercel.app/api/palms`, {
+    cache: 'no-store'
+  });
   const forms = await respo.json();
   return forms;
 }
 
 export async function getCity() {
-  const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`);
+  const cityresponse = await fetch(`https://rozy.vercel.app/api/cities`, {
+    cache: 'no-store'
+  });
   const cities = await cityresponse.json();
   return cities;
 }
 
 export async function getParts() {
-  const respnse = await fetch(`https://rozy.vercel.app/api/parts`);
+  const respnse = await fetch(`https://rozy.vercel.app/api/parts`, {
+    cache: 'no-store'
+  });
   const partsposts = await respnse.json();
   return partsposts;
 }
@@ -1305,10 +1314,8 @@ export default async function Home() {
 
         <Featured />
         <Contents />
-
-        
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

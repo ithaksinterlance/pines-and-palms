@@ -90,7 +90,9 @@ export async function generateMetadata({ params }) {
 }
 
 async function getPartsData(parts) {
-  const res = await fetch(`https://rozy.vercel.app/api/parts/${parts}`);
+  const res = await fetch(`https://rozy.vercel.app/api/parts/${parts}`, {
+    cache: 'no-store'
+  });
   const data = await res.json();
   return data;
 }

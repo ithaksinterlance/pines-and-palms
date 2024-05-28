@@ -32,7 +32,8 @@ import FormComponent from '../../../FormComponent';
 
 export async function generateStaticParams({ make, model }) {
   const posts = await fetch(
-    `https://rozy.vercel.app/api/palms/${make}/${model}`
+    `https://rozy.vercel.app/api/palms/${make}/${model}`,
+    { cache: 'no-store' }
   ).then(res => res.json());
   return posts.map(post => ({
     make: post.make,
@@ -126,7 +127,8 @@ export async function generateMetadata({ params }) {
 }
 async function getYear(make, model) {
   const response = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}`
+    `https://rozy.vercel.app/api/grooves/${make}/${model}`,
+    { cache: 'no-store' }
   );
   const dat = await response.json();
   let uniqueYearArray = [
@@ -136,7 +138,8 @@ async function getYear(make, model) {
 }
 async function getMakeImage(make, model) {
   const re = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}`
+    `https://rozy.vercel.app/api/grooves/${make}/${model}`,
+    { cache: 'no-store' }
   );
   const reDat = await re.json();
   let uniqueMkeArray = [
@@ -150,7 +153,8 @@ async function getMakeImage(make, model) {
 
 async function getDescription(make, model) {
   const re = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}`
+    `https://rozy.vercel.app/api/grooves/${make}/${model}`,
+    { cache: 'no-store' }
   );
   const reDat = await re.json();
   let uniqueDescriptionArray = [
@@ -162,7 +166,9 @@ async function getDescription(make, model) {
 }
 
 async function getModel(make, model) {
-  const response = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
+  const response = await fetch(`https://rozy.vercel.app/api/grooves/${make}`, {
+    cache: 'no-store'
+  });
   const dat = await response.json();
   let uniqueMakeArray = [
     ...new Map(dat.map(item => [item['model'], item])).values()
@@ -171,7 +177,9 @@ async function getModel(make, model) {
 }
 
 async function getMake() {
-  const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const resp = await fetch(`https://rozy.vercel.app/api/grooves`, {
+    cache: 'no-store'
+  });
   const data = await resp.json();
   let makeArray = [...new Map(data.map(item => [item['make'], item])).values()];
   return makeArray;

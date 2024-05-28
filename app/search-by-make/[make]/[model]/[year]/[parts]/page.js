@@ -31,18 +31,24 @@ import Footer from '../../../../../footer';
 import { getFormModel, getParts } from '../../../../../page';
 
 async function getPartsData(parts) {
-  const res = await fetch(`https://rozy.vercel.app/api/parts/${parts}`);
+  const res = await fetch(`https://rozy.vercel.app/api/parts/${parts}`, {
+    cache: 'no-store'
+  });
   const data = await res.json();
   return data;
 }
 async function getGrooves(make, model, year) {
-  const res = await fetch(`https://rozy.vercel.app/api/grooves/${make}/${model}/${year}`);
+  const res = await fetch(
+    `https://rozy.vercel.app/api/grooves/${make}/${model}/${year}`,
+    { cache: 'no-store' }
+  );
   const data = await res.json();
   return data;
 }
 async function getMakeImage(make, model) {
   const re = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}`
+    `https://rozy.vercel.app/api/grooves/${make}/${model}`,
+    { cache: 'no-store' }
   );
   const reDat = await re.json();
   let uniqueMkeArray = [
@@ -65,7 +71,8 @@ async function getYear(make, model) {
 }
 async function getDescription(make, model, year) {
   const re = await fetch(
-    `https://rozy.vercel.app/api/grooves/${make}/${model}/${year}`
+    `https://rozy.vercel.app/api/grooves/${make}/${model}/${year}`,
+    { cache: 'no-store' }
   );
   const reDat = await re.json();
   let uniqueDescriptionArray = [
@@ -76,7 +83,9 @@ async function getDescription(make, model, year) {
   });
 }
 async function getModel(make, model) {
-  const response = await fetch(`https://rozy.vercel.app/api/grooves/${make}`);
+  const response = await fetch(`https://rozy.vercel.app/api/grooves/${make}`, {
+    cache: 'no-store'
+  });
   const dat = await response.json();
   let uniqueMakeArray = [
     ...new Map(dat.map(item => [item['model'], item])).values()
@@ -84,7 +93,9 @@ async function getModel(make, model) {
   return uniqueMakeArray;
 }
 async function getMake() {
-  const resp = await fetch(`https://rozy.vercel.app/api/grooves`);
+  const resp = await fetch(`https://rozy.vercel.app/api/grooves`, {
+    cache: 'no-store'
+  });
   const data = await resp.json();
   let makeArray = [...new Map(data.map(item => [item['make'], item])).values()];
   return makeArray;
@@ -508,7 +519,7 @@ export default async function Parts({ params }) {
                 <div>
                   {' '}
                   <Link
-                    href="search-by-cities-in-uae/Ajman"
+                    href="/search-by-cities-in-uae/Ajman"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     AJMAN
@@ -517,7 +528,7 @@ export default async function Parts({ params }) {
                 <div>
                   {' '}
                   <Link
-                    href="https://emirates-car.com/search-by-cities-in-uae/Ras%20al%20Khaimah"
+                    href="/search-by-cities-in-uae/Ras%20al%20Khaimah"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     RAS AL KHAIMAH
@@ -525,7 +536,7 @@ export default async function Parts({ params }) {
                 </div>
                 <div>
                   <Link
-                    href="https://emirates-car.com/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
+                    href="/search-by-cities-in-uae/Al%20Quoz%20(Dubai)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     Al QUOZ
@@ -533,7 +544,7 @@ export default async function Parts({ params }) {
                 </div>
                 <div>
                   <Link
-                    href="https://emirates-car.com/search-by-cities-in-uae/Abu%20Dhabi"
+                    href="/search-by-cities-in-uae/Abu%20Dhabi"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     ABU DHABI
@@ -541,7 +552,7 @@ export default async function Parts({ params }) {
                 </div>
                 <div>
                   <Link
-                    href="https://emirates-car.com/search-by-cities-in-uae/Deira%20(Dubai)"
+                    href="/search-by-cities-in-uae/Deira%20(Dubai)"
                     className="font-mono font-semibold text-blue-600 underline hover:text-blue-900"
                   >
                     DEIRA

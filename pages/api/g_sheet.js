@@ -109,8 +109,7 @@ async function handler(req, res) {
       from: 'emiratesautomobileparts@gmail.com',
       to: 'haksinterlance@gmail.com',
       subject: `${year +
-        ' ' +
-        brand +
+        ' ' +        brand +
         ' ' +
         model +
         ' ' +

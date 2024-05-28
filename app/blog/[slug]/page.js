@@ -32,7 +32,7 @@ export default async function Blog({ params }) {
               <p className="text-sm text-gray-400 font-semibold uppercase pb-5 xs:text-xs">
                 {data.TIME} - {data.DATE_PUBLISHED}
               </p>
-              <div className="text-base font-mono">
+              <div className="text-base font-sans">
                 <div dangerouslySetInnerHTML={{ __html: data.CONTENT }}></div>
               </div>
               <div className="flex py-5">
